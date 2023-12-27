@@ -2,10 +2,10 @@
 
 ## Title: |CFFEE7600[团队]|RBigWigs |cffcccccc[Turtle-WoW]|R
 ## Title-zhCN: |CFFEE7600[团队]|RBigWigs |cffcccccc[Turtle-WoW]|R
-## Notes: |CFFEE7600BigWigs|R|N团队首领战信息提示插件，带有计时条，预警并提示BOSS技能。|N命令：/BigWigs
-## Notes-zhCN: |CFFEE7600BigWigs|R|N团队首领战信息提示插件，带有计时条，预警并提示BOSS技能。|N命令：/BigWigs
+## Notes: |CFFEE7600BigWigs|R|N团队首领警报插件，预警并提示BOSS技能和显示计时条，由|cff33ffccNineTears(Wind)|R汉化并修复。|N命令：/BigWigs
+## Notes-zhCN: |CFFEE7600BigWigs|R|N团队首领警报插件，预警并提示BOSS技能和显示计时条，由|cff33ffccNineTears(Wind)|R汉化并修复。|N命令：/BigWigs
 ## X-Repple: 团队
-## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq & Others
+## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq, NineTears(Wind)
 ## Version: 2.0.0
 ## X-Website: https://github.com/madScripting
 ## X-Category: Raid
