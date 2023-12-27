@@ -20,6 +20,20 @@ L:RegisterTranslations("enUS", function() return {
 	["Starts a custom bar with the given parameters."] = true,
 	["%s: %s"] = true,
 	["%s: Timer [%s] finished."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["bwcb"] = "bwcb",
+	["bwlcb"] = "bwlcb",
+	["custombar"] = "自制时间条",
+	["Custom Bars"] = "自制时间条",
+	["Start a custom bar, either local or global."] = "激活一条自制时间条，本地或者全局",
+	["Local"] = "本地",
+	["Global"] = "全局",
+	["<seconds> <bar text>"] = "<seconds> <bar text>",
+	["Starts a custom bar with the given parameters."] = "激活一条带参数的自制时间条",
+	["%s: %s"] = "%s: %s",
+	["%s: Timer [%s] finished."] = "%s: 计时器 [%s] 到时间",
 } end)
 
 L:RegisterTranslations("koKR", function() return {

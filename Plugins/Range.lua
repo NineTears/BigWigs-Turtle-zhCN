@@ -40,6 +40,36 @@ L:RegisterTranslations("enUS", function() return {
 	["reset"] = true,
 	["Reset to defaults"] = true,
 	["Resets all ranges to defaults."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Range"] = "范围",
+	["range"] = "范围",
+	["Options for the combat log's range."] = "设置战斗记录范围",
+
+	["party"] = "队伍",
+	["Party"] = "队伍",
+	["Party combat log range."] = "队伍战斗记录范围",
+
+	["friend"] = "友方",
+	["Friendlies"] = "友方",
+	["Friendly players combat log range."] = "友方玩家战斗记录范围",
+
+	["hostile"] = "敌对",
+	["Hostiles"] = "敌对",
+	["Hostile players combat log range."] = "敌对玩家战斗记录范围",
+
+	["mob"] = "怪物",
+	["Creatures"] = "怪物",
+	["Creature combat log range."] = "怪物战斗记录范围",
+
+	["death"] = "死亡",
+	["Deaths"] = "死亡",
+	["Death message range."] = "死亡信息范围",
+
+	["reset"] = "重置",
+	["Reset to defaults"] = "重置为默认设置",
+	["Resets all ranges to defaults."] = "重置所有为默认设置",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -94,24 +124,32 @@ L:RegisterTranslations("koKR", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	["Range"] = "范围",
-	["Options for the combat log's range."] = "设置战斗记录范围。",
+	["range"] = "范围",
+	["Options for the combat log's range."] = "设置战斗记录范围",
 
-	-- 	["party"] = "",
-	-- 	["Party"] = "",
-	-- 	["Party combat log range."] = "",
+	["party"] = "队伍",
+	["Party"] = "队伍",
+	["Party combat log range."] = "队伍战斗记录范围",
 
-	-- 	["friend"] = "",
-	-- 	["Friendlies"] = "",
-	--	["Friendly players combat log range."] = "",
+	["friend"] = "友方",
+	["Friendlies"] = "友方",
+	["Friendly players combat log range."] = "友方玩家战斗记录范围",
 
-	["Creatures"] = "生物",
-	["Creature combat log range."] = "生物战斗记录范围。",
+	["hostile"] = "敌对",
+	["Hostiles"] = "敌对",
+	["Hostile players combat log range."] = "敌对玩家战斗记录范围",
 
+	["mob"] = "怪物",
+	["Creatures"] = "怪物",
+	["Creature combat log range."] = "怪物战斗记录范围",
+
+	["death"] = "死亡",
 	["Deaths"] = "死亡",
-	["Death message range."] = "死亡信息范围。",
+	["Death message range."] = "死亡信息范围",
 
-	["Reset to defaults"] = "重置",
-	["Resets all ranges to defaults."] = "重置为默认设置。",
+	["reset"] = "重置",
+	["Reset to defaults"] = "重置为默认设置",
+	["Resets all ranges to defaults."] = "重置所有为默认设置",
 } end)
 
 L:RegisterTranslations("zhTW", function() return {

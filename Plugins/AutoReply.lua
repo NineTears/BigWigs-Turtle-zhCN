@@ -25,16 +25,37 @@ local c = {
 L:RegisterTranslations("enUS", function() return {
 
 		statusRequest_cmd = "statusRequest",
-		statusRequest_name = "Status Request",
-		statusRequest_desc = "Allow querying the Boss Status",
+		statusRequest_name = "状态请求",
+		statusRequest_desc = "允许查询Boss状态",
 
 		healthStatus_cmd = "healthStatus",
-		healthStatus_name = "Health Status",
-		healthStatus_desc = "Allow Players to know the current Boss HP",
+		healthStatus_name = "生命值状态",
+		healthStatus_desc = "允许玩家了解当前Boss的生命值",
 
 		playersAlive_cmd = "playersAlive",
-		playersAlive_name = "Players Alive",
-		playersAlive_desc = "Allow Players to know how many Raidmembers are alive",
+		playersAlive_name = "存活的玩家",
+		playersAlive_desc = "允许玩家了解有多少团队成员存活",
+
+
+
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+		-- Wind汉化修复Turtle-WOW中文数据
+		-- Last update: 2023-12-21
+		statusRequest_cmd = "statusRequest",
+		statusRequest_name = "状态请求",
+		statusRequest_desc = "允许查询Boss状态",
+
+		healthStatus_cmd = "healthStatus",
+		healthStatus_name = "生命值状态",
+		healthStatus_desc = "允许玩家了解当前Boss的生命值",
+
+		playersAlive_cmd = "playersAlive",
+		playersAlive_name = "存活的玩家",
+		playersAlive_desc = "允许玩家了解有多少团队成员存活",
+
+		
 
 } end )
 

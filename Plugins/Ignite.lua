@@ -63,6 +63,90 @@ L:RegisterTranslations("enUS", function() return {
 	["Blastwave"] = true,
 	["Flamestrike"] = true,
 	["Pyroblast"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Show Warnings"] = "显示警告",
+	["Show Warnings from other players even if the frame is hidden."] = "显示警告从其他玩家，即使框架是隐藏的.",
+	["Ignite"] = "点燃",
+	["Disabled"] = "禁用",
+	["Options for the ignite Display."] = "法师点燃显示选项.",
+	["Show frame"] = "显示框架",
+	["Show the ignite frame."] = "显示点燃框架.",
+	["Lock frame"] = "锁定框架.",
+	["Lock the ignite frame."] = "锁定点燃框架",
+	["Reset position"] = "重置位置",
+	["Reset the frame position."] = "重置框架位置.",
+	["Send Stop"] = "发送停止",
+	["Send Stop messages to all raid members"] = "发送停止消息给所有团队成员",
+	["font"] = "Fonts\\FZXHLJW.TTF",
+	["Always show in raid"] = "总是在团队中显示",
+	["Always show in raid after ignite tick"] = "点燃总是在团队中显示",
+	
+	["Stacks"] = "层数",
+	["Damage"] = "伤害",
+	["Owner"] = "归属",
+	["Threat"] = "仇恨",
+	["n/a"] = "n/a", 
+	["Stop"]= "停止",
+	["your"] = "你",
+	["Your"] = "你",
+
+	fire_test = "[^%s]的([^%s]+)致命一击对([^%s]+)造成([%d]+)点([%w]+)伤害。", 
+	ignite_stack_test = "^([^%s]+)受到了点燃效果的影响（([%d]*)）。",
+	ignite_damage_test = "([^%s]+)的点燃使([^%s]+)受到了([%d]+)点火焰伤害。",
+	ignite_resist = "([%d]+)点被抵抗",
+	ignite_fade_test = "^效果从(.+)身上消失。",
+
+	["Fireball"] = "火球术",
+	["Scorch"] = "灼烧",
+	["Fire Blast"] = "火焰冲击",
+	["Blastwave"] = "冲击波",
+	["Flamestrike"] = "烈焰风暴",
+	["Pyroblast"] = "炎爆术",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Show Warnings"] = "显示警告",
+	["Show Warnings from other players even if the frame is hidden."] = "显示警告从其他玩家，即使框架是隐藏的.",
+	["Ignite"] = "点燃",
+	["Disabled"] = "禁用",
+	["Options for the ignite Display."] = "法师点燃显示选项.",
+	["Show frame"] = "显示框架",
+	["Show the ignite frame."] = "显示点燃框架.",
+	["Lock frame"] = "锁定框架.",
+	["Lock the ignite frame."] = "锁定点燃框架",
+	["Reset position"] = "重置位置",
+	["Reset the frame position."] = "重置框架位置.",
+	["Send Stop"] = "发送停止",
+	["Send Stop messages to all raid members"] = "发送停止消息给所有团队成员",
+	["font"] = "Fonts\\FZXHLJW.TTF",
+	["Always show in raid"] = "总是在团队中显示",
+	["Always show in raid after ignite tick"] = "点燃总是在团队中显示",
+	
+	["Stacks"] = "层数",
+	["Damage"] = "伤害",
+	["Owner"] = "归属",
+	["Threat"] = "仇恨",
+	["n/a"] = "n/a", 
+	["Stop"]= "停止",
+	["your"] = "你",
+	["Your"] = "你",
+
+	fire_test = "[^%s]的([^%s]+)致命一击对([^%s]+)造成([%d]+)点([%w]+)伤害。", 
+	ignite_stack_test = "^([^%s]+)受到了点燃效果的影响（([%d]*)）。",
+	ignite_damage_test = "([^%s]+)的点燃使([^%s]+)受到了([%d]+)点火焰伤害。",
+	ignite_resist = "([%d]+)点被抵抗",
+	ignite_fade_test = "^效果从(.+)身上消失。",
+
+	["Fireball"] = "火球术",
+	["Scorch"] = "灼烧",
+	["Fire Blast"] = "火焰冲击",
+	["Blastwave"] = "冲击波",
+	["Flamestrike"] = "烈焰风暴",
+	["Pyroblast"] = "炎爆术",
 } end)
 
 L:RegisterTranslations("esES", function() return {

@@ -99,6 +99,62 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Reset position"] = true,
 	["Reset the anchor position, moving it to the center of your screen."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Proximity"] = "附近玩家",
+	["Close Players"] = "附近玩家",
+	["Options for the Proximity Display."] = "显示附近玩家显示",
+	["|cff777777Nobody|r"] = "|cff777777无人|r",
+	["Lock frame"] = "锁定框架",
+	["Lock the proximity frame."] = "锁定附近玩家框架",
+	["Sound"] = "声音",
+	["Play sound on proximity."] = "接近时播放声音",
+	["Disabled"] = "禁用",
+	["Disable the proximity display for all modules that use it."] = "禁用使用它的所有模块的接近显示。",
+	["The proximity display has been disabled for %s, please use the boss modules options to enable it again."] = "近距离显示已停用 %s，请使用BOSS模块选项再次启用.",
+
+	["Has Debuff"] = "有Dubff",
+
+	proximity = "附近的显示",
+	proximity_desc = "显示附近窗口时，列出玩家谁站得离你太近.",
+
+	font = "Fonts\\FZXHLJW.TTF",
+
+	["Test"] = "测试",
+	["Perform a Proximity test."] = "进行附近测试.",
+            
+    ["Reset position"] = "重置位置",
+	["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移动到屏幕中央.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Proximity"] = "附近玩家",
+	["Close Players"] = "附近玩家",
+	["Options for the Proximity Display."] = "显示附近玩家显示",
+	["|cff777777Nobody|r"] = "|cff777777无人|r",
+	["Lock frame"] = "锁定框架",
+	["Lock the proximity frame."] = "锁定附近玩家框架",
+	["Sound"] = "声音",
+	["Play sound on proximity."] = "接近时播放声音",
+	["Disabled"] = "禁用",
+	["Disable the proximity display for all modules that use it."] = "禁用使用它的所有模块的接近显示。",
+	["The proximity display has been disabled for %s, please use the boss modules options to enable it again."] = "近距离显示已停用 %s，请使用BOSS模块选项再次启用.",
+
+	["Has Debuff"] = "有Dubff",
+
+	proximity = "附近的显示",
+	proximity_desc = "显示附近窗口时，列出玩家谁站得离你太近.",
+
+	font = "Fonts\\FZXHLJW.TTF",
+
+	["Test"] = "测试",
+	["Perform a Proximity test."] = "进行附近测试.",
+            
+    ["Reset position"] = "重置位置",
+	["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移动到屏幕中央.",
 } end)
 
 L:RegisterTranslations("esES", function() return {

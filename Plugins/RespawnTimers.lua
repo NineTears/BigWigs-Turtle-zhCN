@@ -63,6 +63,102 @@ L:RegisterTranslations("enUS", function() return {
 	["Death Talon"] = true,
 	["Taskmaster"] = true,
 
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["respawntimers"] = "respawntimers",
+	["Respawn Timers"] = "怪物刷新时间",
+	["Respawn timer bars and warnings for trash mobs."] = "复活的计时条和警告小怪.",
+	["bars"] = "计时条",
+	["Bars"] = "计时条",
+	["Toggles showing bars for respawn times."] = "切换显示怪物刷新时间条.",
+	["messages"] = "消息",
+	["Messages"] = "发送消息",
+	["Toggles showing messages for respawn times."] = "是否显示为复活消息.",
+
+	["%s %d respawns in %d sec"] = "%s %d 刷新 %d 秒",
+	["%s %d respawned!"] = "%s %d 刷新!",
+	["Respawn: %s %d"] = "刷新: %s %d",
+
+	--[[不汉化怪物名称
+	-- Molten Core Triggers
+	["Ancient Core Hound"] = "上古熔火恶犬",
+	["Lava Annihilator"] = "熔岩歼灭者",
+	["Lava Surger"] = "熔岩奔腾者",
+	["Firelord"] = "火焰之王",
+	["Firewalker"] = "火焰行者", ]]
+	
+	["%s collapses and begins to smolder."] = "%s 倒下并开始冒烟。", 
+
+	--[[不汉化怪物名称
+	-- Molten Core Messages
+	["Corehound"] = "\231\134\148\231\129\171\230\129\182\231\138\172",
+	["Annihilator"] = "\230\173\188\231\129\173\232\128\133",
+	["Surger"] = "\229\165\148\232\133\190\232\128\133",
+	-- Firelord == Firelord.
+	["Lavapack"] = "\231\134\148\229\178\169\231\190\164",
+	["Houndpack"] = "\230\129\182\231\138\172\231\190\164",
+
+	-- AQ Triggers
+	["Obsidian Eradicator"] = "黑曜石清除者",
+	["Anubisath Sentinel"] = "阿努比萨斯哨兵",
+	-- AQ Messages
+	["Eradicator"] = "黑曜石清除者",
+	["Sentinel"] = "阿努比萨斯哨兵",
+
+	-- BWL Triggers
+	["Death Talon Hatcher"] = "死爪地卜师",
+	["Blackwing Taskmaster"] = "黑翼工头",
+	-- BWL Messages
+	["Death Talon"] = "地卜师",
+	["Taskmaster"] = "工头",]]
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["respawntimers"] = "respawntimers",
+	["Respawn Timers"] = "怪物刷新时间",
+	["Respawn timer bars and warnings for trash mobs."] = "复活的计时条和警告小怪.",
+	["bars"] = "计时条",
+	["Bars"] = "计时条",
+	["Toggles showing bars for respawn times."] = "切换显示怪物刷新时间条.",
+	["messages"] = "消息",
+	["Messages"] = "发送消息",
+	["Toggles showing messages for respawn times."] = "是否显示为复活消息.",
+
+	["%s %d respawns in %d sec"] = "%s %d 刷新 %d 秒",
+	["%s %d respawned!"] = "%s %d 刷新!",
+	["Respawn: %s %d"] = "刷新: %s %d",
+
+	-- Molten Core Triggers
+	["Ancient Core Hound"] = "上古熔火恶犬",
+	["Lava Annihilator"] = "熔岩歼灭者",
+	["Lava Surger"] = "熔岩奔腾者",
+	["Firelord"] = "火焰之王",
+	["Firewalker"] = "火焰行者", 
+	["%s collapses and begins to smolder."] = "%s 倒下并开始冒烟。", 
+	-- Molten Core Messages
+	["Corehound"] = "\231\134\148\231\129\171\230\129\182\231\138\172",
+	["Annihilator"] = "\230\173\188\231\129\173\232\128\133",
+	["Surger"] = "\229\165\148\232\133\190\232\128\133",
+	-- Firelord == Firelord.
+	["Lavapack"] = "\231\134\148\229\178\169\231\190\164",
+	["Houndpack"] = "\230\129\182\231\138\172\231\190\164",
+
+	-- AQ Triggers
+	["Obsidian Eradicator"] = "黑曜石清除者",
+	["Anubisath Sentinel"] = "阿努比萨斯哨兵",
+	-- AQ Messages
+	["Eradicator"] = "黑曜石清除者",
+	["Sentinel"] = "阿努比萨斯哨兵",
+
+	-- BWL Triggers
+	["Death Talon Hatcher"] = "死爪地卜师",
+	["Blackwing Taskmaster"] = "黑翼工头",
+	-- BWL Messages
+	["Death Talon"] = "地卜师",
+	["Taskmaster"] = "工头",
+
 } end )
 
 L:RegisterTranslations("esES", function() return {

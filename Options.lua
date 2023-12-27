@@ -31,6 +31,49 @@ L:RegisterTranslations("enUS", function() return {
 	["%s icon is now %s."] = true,
 	["Show it again with /bw plugin minimap."] = true,
 	["You need to be an assistant or raid leader to use this function."] = true,
+
+	--汉显端汉化，wind
+	["|cff00ff00Module running|r"] = "|cff00ff00模块运行|r",
+	["|cffeda55fClick|r to reset all running modules. |cffeda55fCtrl+Click|r to force reboot for everyone (Requires assistant or higher). |cffeda55fAlt+Click|r to disable them. |cffeda55fCtrl+Alt+Click|r to disable Big Wigs completely."] = "|cffeda55f点击|r 重置所有模块. |cffeda55fCtrl+点击|r 强制重新启动 (需要L或A). |cffeda55fAlt+点击|r 禁用. |cffeda55fCtrl+Alt+点击|r 完全禁用 BigWigs.",
+	["|cffeda55fClick|r to enable."] = "|cffeda55f点击|r 开启.",
+	["Big Wigs is currently disabled."] = "BigWigs 当前被禁用.",
+	["Active boss modules"] = "激活的BOSS模块",
+	["hidden"] = "隐藏",
+	["shown"] = "显示",
+	["minimap"] = "迷你地图",
+	["Minimap"] = "迷你地图",
+	["Toggle the minimap button."] = "切换小地图按钮.",
+	["All running modules have been reset."] = "所有运行模块已重置.",
+	["All running modules have been rebooted for all raid members."] = "所有运行的模块已经为团队成员重新启动.",
+	["All running modules have been disabled."] = "所有运行模块已被禁用.",
+	["%s reset."] = "%s 重置.",
+	["%s disabled."] = "%s 禁用.",
+	["%s icon is now %s."] = "%s 图标现在是 %s.",
+	["Show it again with /bw plugin minimap."] = "再次显示 /bw 小地图插件.",
+	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+
+	--中文端汉化，wind
+	["|cff00ff00Module running|r"] = "|cff00ff00模块运行|r",
+	["|cffeda55fClick|r to reset all running modules. |cffeda55fCtrl+Click|r to force reboot for everyone (Requires assistant or higher). |cffeda55fAlt+Click|r to disable them. |cffeda55fCtrl+Alt+Click|r to disable Big Wigs completely."] = "|cffeda55f点击|r 重置所有模块. |cffeda55fCtrl+点击|r 强制重新启动 (需要L或A). |cffeda55fAlt+点击|r 禁用. |cffeda55fCtrl+Alt+点击|r 完全禁用 BigWigs.",
+	["|cffeda55fClick|r to enable."] = "|cffeda55f点击|r 开启.",
+	["Big Wigs is currently disabled."] = "BigWigs 当前被禁用.",
+	["Active boss modules"] = "激活的BOSS模块",
+	["hidden"] = "隐藏",
+	["shown"] = "显示",
+	["minimap"] = "迷你地图",
+	["Minimap"] = "迷你地图",
+	["Toggle the minimap button."] = "切换小地图按钮.",
+	["All running modules have been reset."] = "所有运行模块已重置.",
+	["All running modules have been rebooted for all raid members."] = "所有运行的模块已经为团队成员重新启动.",
+	["All running modules have been disabled."] = "所有运行模块已被禁用.",
+	["%s reset."] = "%s 重置.",
+	["%s disabled."] = "%s 禁用.",
+	["%s icon is now %s."] = "%s 图标现在是 %s.",
+	["Show it again with /bw plugin minimap."] = "再次显示 /bw 小地图插件.",
+	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A.",
 } end)
 
 L:RegisterTranslations("esES", function() return {

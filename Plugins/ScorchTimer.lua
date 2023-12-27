@@ -70,6 +70,99 @@ L:RegisterTranslations("enUS", function() return {
 	firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
 	scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
 	resist_test = "^Your Fire Vulnerability was resisted by (.+).",
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Bars"] = "计时条",
+
+	["Gives timer for Scorch Fire Vulnerability."] = "为烈焰风暴脆弱性提供计时器。",
+	["Enable"] = "启用",
+	["Enable timers."] = "启用计时器。",
+	["Target only"] = "仅目标",
+	["Only show timer for the current target."] = "仅显示当前目标的计时器。",
+	["Show the bar anchor frame."] = "显示计时条锚点框架。",
+	["Set the bar scale."] = "设置计时条缩放。",
+	["Group upwards"] = "向上分组",
+	["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
+
+	["Timer bars"] = "计时条",
+	["Show anchor"] = "显示锚点",
+	["Grow bars upwards"] = "计时条向上增长",
+	["Scale"] = "缩放",
+	["Bar scale"] = "计时条缩放",
+
+	["Bars now grow %2$s"] = "计时条现在向%2$s增长",
+	["Scale is set to %2$s"] = "缩放设置为%2$s",
+
+	["Up"] = "向上",
+	["Down"] = "向下",
+
+	["Test"] = "测试",
+	["Close"] = "关闭",
+
+	["Texture"] = "纹理",
+	["Set the texture for the timer bars."] = "为计时条设置纹理。",
+
+	["Reset position"] = "重置位置",
+	["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移动到屏幕中央.",
+	["Reverse"] = "颠倒",
+	["Toggles if bars are reversed (fill up instead of emptying)."] = "切换是否反转进度条（填充而不是清空）.",
+
+	["ScorchTimer"] = "烈焰风暴计时器",
+
+	["Scorch Timer"] = "烈焰风暴计时器",
+
+	firevuln_test = "(.+) 受到火焰抗性影响.",
+	scorch_test	= "^你的烈焰风暴 (%a%a?)伤害了 (.+) ",
+	resist_test = "^你的火焰抗性抵抗了 (.+).",
+
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Bars"] = "计时条",
+
+	["Gives timer for Scorch Fire Vulnerability."] = "为烈焰风暴脆弱性提供计时器。",
+	["Enable"] = "启用",
+	["Enable timers."] = "启用计时器。",
+	["Target only"] = "仅目标",
+	["Only show timer for the current target."] = "仅显示当前目标的计时器。",
+	["Show the bar anchor frame."] = "显示计时条锚点框架。",
+	["Set the bar scale."] = "设置计时条缩放。",
+	["Group upwards"] = "向上分组",
+	["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
+
+	["Timer bars"] = "计时条",
+	["Show anchor"] = "显示锚点",
+	["Grow bars upwards"] = "计时条向上增长",
+	["Scale"] = "缩放",
+	["Bar scale"] = "计时条缩放",
+
+	["Bars now grow %2$s"] = "计时条现在向%2$s增长",
+	["Scale is set to %2$s"] = "缩放设置为%2$s",
+
+	["Up"] = "向上",
+	["Down"] = "向下",
+
+	["Test"] = "测试",
+	["Close"] = "关闭",
+
+	["Texture"] = "纹理",
+	["Set the texture for the timer bars."] = "为计时条设置纹理。",
+
+	["Reset position"] = "重置位置",
+	["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移动到屏幕中央.",
+	["Reverse"] = "颠倒",
+	["Toggles if bars are reversed (fill up instead of emptying)."] = "切换是否反转进度条（填充而不是清空）.",
+
+	["ScorchTimer"] = "烈焰风暴计时器",
+
+	["Scorch Timer"] = "烈焰风暴计时器",
+
+	firevuln_test = "(.+) 受到火焰抗性影响.",
+	scorch_test	= "^你的烈焰风暴 (%a%a?)伤害了 (.+) ",
+	resist_test = "^你的火焰抗性抵抗了 (.+).",
 } end)
 
 L:RegisterTranslations("esES", function() return {

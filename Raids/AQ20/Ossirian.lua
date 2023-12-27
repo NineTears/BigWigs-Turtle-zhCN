@@ -9,58 +9,118 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Ossirian",
 	
 	bigicon_cmd = "bigicon",
-	bigicon_name = "Big icon warnings signs",
-	bigicon_desc = "Big warning signs for Sandstorm, Weakness and Shaman's grounding totem",
-	
+	bigicon_name = "大图标警告标志",
+	bigicon_desc = "用于沙尘暴、虚弱和萨满的根基图腾的大标志警告",
+
 	warstomp_cmd = "warstomp",
-	warstomp_name = "Warstomp bars",
-	warstomp_desc = "Timers for Ossirian's Warstomp ability",
-	
+	warstomp_name = "战争践踏计时条",
+	warstomp_desc = "奥斯里安的战争践踏计时条",
+
 	cyclone_cmd = "cyclone",
-	cyclone_name = "Cyclone bars",
-	cyclone_desc = "Timers for Ossirian's Cyclone ability",
-	
+	cyclone_name = "飓风术计时条",
+	cyclone_desc = "奥斯里安的飓风术计时条",
+
 	sandstorm_cmd = "sandstorm",
-	sandstorm_name = "Sand tornado damage warning",
-	sandstorm_desc = "Warn if you are taking damage from a Sand tornado",
+	sandstorm_name = "沙尘暴伤害警告",
+	sandstorm_desc = "如果你受到沙尘暴的伤害，发出警告",
 	
 	supreme_cmd = "supreme",
-	supreme_name = "Supreme Alert",
-	supreme_desc = "Warn for Supreme Mode",
+	supreme_name = "无敌警报",
+	supreme_desc = "无敌模式警报",
 	
 	weakness_cmd = "weakness",
-	weakness_name = "Ossirian's weakness alert",
-	weakness_desc = "Warns what Ossirian's new weakness is",
-	
+	weakness_name = "奥斯里安的弱点警报",
+	weakness_desc = "警告奥斯里安的新弱点是什么",
+
 	clickit_cmd = "clickit",
-	clickit_name = "Click a crystal now",
-	clickit_desc = "Timers for if you click after this timer, he will go supreme",
+	clickit_name = "现在点击水晶",
+	clickit_desc = "计时器，如果在此计时器后点击，他将变为无敌状态",
 
 	supreme_trigger = "Ossirian the Unscarred gains Strength of Ossirian.",
 	supreme_trigger2 = "Ossirian the Unscarred is afflicted by Strength of Ossirian.",
-	supreme_bar = "Supreme",
-	supremewarn = "Ossirian Supreme Mode!",
-	supremedelaywarn = "Supreme in %d seconds!",
+	supreme_bar = "无敌模式",
+	supremewarn = "无疤者奥斯里安无敌模式!",
+	supremedelaywarn = "无敌模式 %d 秒",
 
 	debuff_trigger = "Ossirian the Unscarred is afflicted by (.+) Weakness.",
 	debuff_trigger2 = "Ossirian the Unscarred gains (.+) Weakness.",
-	debuffwarn = "Ossirian now weak to ",
+	debuffwarn = "奥斯里安现在弱点 %s!",
 
 	ossiLostSupreme = "Strength of Ossirian fades from Ossirian the Unscarred.",-- CHAT_MSG_SPELL_AURA_GONE_OTHER",
 
-	expose = "Expose",
+	expose = "虚弱",
 	
 	cyclone_trigger = "Enveloping Winds",
-	cyclone_bar = "Cyclone",
+	cyclone_bar = "飓风术",
 	warstomp_trigger = "War Stomp",
-	warstomp_bar = "War Stomp",
+	warstomp_bar = "战争践踏",
 	
 	sandstorm_trigger = "Sand Vortex's Harsh Winds hits you for",
 	
-	clickit_bar = "Crystal or die",
+	clickit_bar = "点击水晶或死亡",
+
+	firstcrystal_bar = "在0秒点击第一个水晶",
+	firstcrystal_warn = "现在点击它！！！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	cmd = "Ossirian",
 	
-	firstcrystal_bar = "Click 1st crystal at 0",
-	firstcrystal_warn = "CLICK IT NOW!!!",
+	bigicon_cmd = "bigicon",
+	bigicon_name = "大图标警告标志",
+	bigicon_desc = "用于沙尘暴、虚弱和萨满的根基图腾的大标志警告",
+
+	warstomp_cmd = "warstomp",
+	warstomp_name = "战争践踏计时条",
+	warstomp_desc = "奥斯里安的战争践踏计时条",
+
+	cyclone_cmd = "cyclone",
+	cyclone_name = "飓风术计时条",
+	cyclone_desc = "奥斯里安的飓风术计时条",
+
+	sandstorm_cmd = "sandstorm",
+	sandstorm_name = "沙尘暴伤害警告",
+	sandstorm_desc = "如果你受到沙尘暴的伤害，发出警告",
+	
+	supreme_cmd = "supreme",
+	supreme_name = "无敌警报",
+	supreme_desc = "无敌模式警报",
+	
+	weakness_cmd = "weakness",
+	weakness_name = "奥斯里安的弱点警报",
+	weakness_desc = "警告奥斯里安的新弱点是什么",
+
+	clickit_cmd = "clickit",
+	clickit_name = "现在点击水晶",
+	clickit_desc = "计时器，如果在此计时器后点击，他将变为无敌状态",
+
+	supreme_trigger = "Ossirian the Unscarred gains Strength of Ossirian.",
+	supreme_trigger2 = "Ossirian the Unscarred is afflicted by Strength of Ossirian.",
+	supreme_bar = "无敌模式",
+	supremewarn = "无疤者奥斯里安无敌模式!",
+	supremedelaywarn = "无敌模式 %d 秒",
+
+	debuff_trigger = "Ossirian the Unscarred is afflicted by (.+) Weakness.",
+	debuff_trigger2 = "Ossirian the Unscarred gains (.+) Weakness.",
+	debuffwarn = "奥斯里安现在弱点 %s!",
+
+	ossiLostSupreme = "Strength of Ossirian fades from Ossirian the Unscarred.",-- CHAT_MSG_SPELL_AURA_GONE_OTHER",
+
+	expose = "虚弱",
+	
+	cyclone_trigger = "Enveloping Winds",
+	cyclone_bar = "飓风术",
+	warstomp_trigger = "War Stomp",
+	warstomp_bar = "战争践踏",
+	
+	sandstorm_trigger = "Sand Vortex's Harsh Winds hits you for",
+	
+	clickit_bar = "点击水晶或死亡",
+
+	firstcrystal_bar = "在0秒点击第一个水晶",
+	firstcrystal_warn = "现在点击它！！！",
 } end )
 
 local timer = {

@@ -35,6 +35,32 @@ L:RegisterTranslations("enUS", function() return {
 	["Toggle using the raid channel instead of the raid warning channel for boss messages."] = true,
 
 	["Options for RaidWarning."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["RaidWarning"] = "团队警报",
+
+	["raidwarn"] = "团队警报",
+	["broadcast"] = "广播",
+	["whisper"] = "密语",
+	["showwhispers"] = "显示密语",
+	["useraidchannel"] = "使用团队聊天",
+
+	["Broadcast over RaidWarning"] = "通过团队通知频道发送警报信息",
+	["Broadcast"] = "广播",
+	["Toggle broadcasting over Raidwarning."] = "切换是否通过团队通知频道发送信息",
+
+	["Whisper"] = "密语",
+	["Whisper warnings"] = "密语警报",
+	["Toggle whispering warnings to players."] = "切换是否通过密语向玩家发送信息",
+
+	["Show whispers"] = "显示密语",
+	["Toggle showing whispers sent by BigWigs locally."] = "切换显示由BigWigs本地发送的密语。",
+
+	["Use Raidchannel"] = "使用团队聊天",
+	["Toggle using the raid channel instead of the raid warning channel for boss messages."] = "切换是否使用团队聊天来代替团队警告频道来播放BOSS信息",
+
+	["Options for RaidWarning."] = "团队警告设置",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -87,6 +113,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["raidwarn"] = "团队警报",
 	["broadcast"] = "广播",
 	["whisper"] = "密语",
+	["showwhispers"] = "显示密语",
 	["useraidchannel"] = "使用团队聊天",
 
 	["Broadcast over RaidWarning"] = "通过团队警告频道发送信息",
@@ -97,12 +124,14 @@ L:RegisterTranslations("zhCN", function() return {
 	["Whisper warnings"] = "密语警报",
 	["Toggle whispering warnings to players."] = "切换是否通过密语向玩家发送信息",
 
+	["Show whispers"] = "显示密语",
+	["Toggle showing whispers sent by BigWigs locally."] = "切换显示由BigWigs本地发送的密语。",
+
 	["Use Raidchannel"] = "使用团队聊天",
-	["Toggle using the raid channel instead of the raid warning channel for boss messages."] = "切换是否使用团队聊天来代替团队警告频道来播放boss的信息",
+	["Toggle using the raid channel instead of the raid warning channel for boss messages."] = "切换是否使用团队聊天来代替团队警告频道来播放Boss的信息",
 
 	["Options for RaidWarning."] = "团队警告设置",
 } end )
-
 
 L:RegisterTranslations("zhTW", function() return {
 	["RaidWarning"] = "團隊警報",

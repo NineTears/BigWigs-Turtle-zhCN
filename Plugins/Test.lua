@@ -28,6 +28,50 @@ L:RegisterTranslations("enUS", function() return {
 	["Sync test"] = true,
 	["Perform a sync test of BigWigs."] = true,
 	["Testing Sync"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["test"] = "测试",
+	["Test"] = "测试",
+	["Test Bar"] = "测试计时条",
+	["Test Bar 2"] = "测试计时条 2",
+	["Test Bar 3"] = "测试计时条 3",
+	["Test Bar 4"] = "测试计时条 4",
+	["Testing"] = "测试中…",
+	["OMG Bear!"] = "天啊! 熊!",
+	["*RAWR*"] = "*团队通知*",
+	["Victory!"] = "胜利了!",
+	["Options for testing."] = "测试设置.",
+	["local"] = "本地测试",
+	["Local test"] = "本地测试",
+	["Perform a local test of BigWigs."] = "执行BigWigs本地测试.",
+	["sync"] = "同步测试",
+	["Sync test"] = "同步测试",
+	["Perform a sync test of BigWigs."] = "执行BigWigs同步测试.",
+	["Testing Sync"] = "同步测试中...",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["test"] = "测试",
+	["Test"] = "测试",
+	["Test Bar"] = "测试计时条",
+	["Test Bar 2"] = "测试计时条 2",
+	["Test Bar 3"] = "测试计时条 3",
+	["Test Bar 4"] = "测试计时条 4",
+	["Testing"] = "测试中…",
+	["OMG Bear!"] = "天啊! 熊!",
+	["*RAWR*"] = "*团队通知*",
+	["Victory!"] = "胜利了!",
+	["Options for testing."] = "测试设置.",
+	["local"] = "本地测试",
+	["Local test"] = "本地测试",
+	["Perform a local test of BigWigs."] = "执行BigWigs本地测试.",
+	["sync"] = "同步测试",
+	["Sync test"] = "同步测试",
+	["Perform a sync test of BigWigs."] = "执行BigWigs同步测试.",
+	["Testing Sync"] = "同步测试中...",
 } end)
 
 L:RegisterTranslations("esES", function() return {

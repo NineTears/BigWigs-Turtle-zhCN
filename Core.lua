@@ -66,7 +66,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Zul'Gurub"] = "ZG",
 	["Molten Core"] = "MC",
 	["Blackwing Lair"] = "BWL",
-	["Ahn'Qiraj"] = "AQ40",
+	["Temple of Ahn'Qiraj"] = "AQ40",
 	["Ruins of Ahn'Qiraj"] = "AQ20",
 	["Onyxia's Lair"] = "Onyxia",
 	["Naxxramas"] = "Naxxramas",
@@ -90,6 +90,150 @@ L:RegisterTranslations("enUS", function() return {
 	["Lieutenant General Andorov"] = true,
 
 	["You have slain %s!"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-27
+	["%s mod enabled"] = "%s 模块开启",
+	["Target monitoring enabled"] = "启用目标监视",
+	["Target monitoring disabled"] = "禁用目标监视",
+	["%s engaged!"] = "%s 触发战斗!大吉大利!今晚吃鸡!",
+	["%s has been defeated"] = "%s 已被击败",     -- "<boss> has been defeated"
+	["%s have been defeated"] = "%s 已被击败",    -- "<bosses> have been defeated"
+
+	-- AceConsole strings
+	["boss"] = "Boss",
+	["Bosses"] = "Boss模块",
+	["Options for boss modules."] = "Boss模块设置.",
+	["Options for bosses in %s."] = "Boss模块设置 %s.", -- "Options for bosses in <zone>"
+	["Options for %s (r%s)."] = "设置 %s (r%s).",     -- "Options for <boss> (<revision>)"
+	["plugin"] = "插件",
+	["Plugins"] = "插件模块",
+	["Options for plugins."] = "插件模块设置.",
+	["extra"] = "额外",
+	["Extras"] = "额外功能",
+	["Options for extras."] = "额外功能设置",
+	["toggle"] = "切换",
+	["Active"] = "激活",
+	["Activate or deactivate this module."] = "激活或停用此模块。",
+	["reboot"] = "重新启动",
+	["rebootall"] = "重新启动所有",
+	["Reboot"] = "重新启动",
+	["Reboot All"] = "重新启动所有",
+	["Reboot this module."] = "重新启动此模块.",
+	["debug"] = "调试",
+	["Debugging"] = "调试中",
+	["Show debug messages."] = "显示调试消息.",
+	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或者有A)",
+	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
+	bosskill_cmd = "kill",
+	bosskill_name = "首领死亡",
+	bosskill_desc = "当Boss被击败时进行通告",
+
+	["Other"] = "其他",
+	["Load"] = "加载",
+	["Load All"] = "加载所有",
+	["Load all %s modules."] = "加载所有 %s 模块.",
+
+	-- AceConsole zone commands
+	["Zul'Gurub"] = "祖尔格拉布",
+	["Molten Core"] = "熔火之心",
+	["Blackwing Lair"] = "黑翼之巢",
+	["Temple of Ahn'Qiraj"] = "安其拉神殿",
+	["Ruins of Ahn'Qiraj"] = "安其拉废墟",
+	["Onyxia's Lair"] = "奥妮克希亚的巢穴",
+	["Naxxramas"] = "纳克萨玛斯",
+	["Emerald Sanctum"] = "翡翠圣境",
+	["Karazhan"] = "卡拉赞下层大厅",
+	["Dire Maul"] = "厄运之槌(北)",
+	["Blackrock Spire"] = "黑石塔上层",
+	["The Black Morass"] = "时光之穴:黑色沼泽",
+	["Silithus"] = "希利苏斯",
+	["Outdoor Raid Bosses"] = "世界Boss",
+	["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+
+	["Battlegrounds"] = "战场",
+	["Alterac Valley"] = "奥特兰克山谷",
+	["Arathi Basin"] = "阿拉希盆地",
+
+	--Name for exception bosses (neutrals that enable modules)
+	["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
+	["Lord Victor Nefarius"] = "维克多·奈法里奥斯",
+	["Solnius"] = "索尔纽斯",
+	["Lieutenant General Andorov"] = "安多洛夫中将",
+
+	["You have slain %s!"] = "你已击败%s!",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	["%s mod enabled"] = "%s 模块开启",
+	["Target monitoring enabled"] = "启用目标监视",
+	["Target monitoring disabled"] = "禁用目标监视",
+	["%s engaged!"] = "%s 触发战斗!大吉大利!今晚吃鸡!",
+	["%s has been defeated"] = "%s 已被击败",     -- "<boss> has been defeated"
+	["%s have been defeated"] = "%s 已被击败",    -- "<bosses> have been defeated"
+
+	-- AceConsole strings
+	["boss"] = "Boss",
+	["Bosses"] = "Boss模块",
+	["Options for boss modules."] = "Boss模块设置.",
+	["Options for bosses in %s."] = "Boss模块设置 %s.", -- "Options for bosses in <zone>"
+	["Options for %s (r%s)."] = "设置 %s (r%s).",     -- "Options for <boss> (<revision>)"
+	["plugin"] = "插件",
+	["Plugins"] = "插件模块",
+	["Options for plugins."] = "插件模块设置.",
+	["extra"] = "额外",
+	["Extras"] = "额外功能",
+	["Options for extras."] = "额外功能设置",
+	["toggle"] = "切换",
+	["Active"] = "激活",
+	["Activate or deactivate this module."] = "激活或停用此模块。",
+	["reboot"] = "重新启动",
+	["rebootall"] = "重新启动所有",
+	["Reboot"] = "重新启动",
+	["Reboot All"] = "重新启动所有",
+	["Reboot this module."] = "重新启动此模块.",
+	["debug"] = "调试",
+	["Debugging"] = "调试中",
+	["Show debug messages."] = "显示调试消息.",
+	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或者有A)",
+	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
+	bosskill_cmd = "kill",
+	bosskill_name = "首领死亡",
+	bosskill_desc = "当Boss被击败时进行通告",
+
+	["Other"] = "其他",
+	["Load"] = "加载",
+	["Load All"] = "加载所有",
+	["Load all %s modules."] = "加载所有 %s 模块.",
+
+	-- AceConsole zone commands
+	["Zul'Gurub"] = "祖尔格拉布",
+	["Molten Core"] = "熔火之心",
+	["Blackwing Lair"] = "黑翼之巢",
+	["Temple of Ahn'Qiraj"] = "安其拉神殿",
+	["Ruins of Ahn'Qiraj"] = "安其拉废墟",
+	["Onyxia's Lair"] = "奥妮克希亚的巢穴",
+	["Naxxramas"] = "纳克萨玛斯",
+	["Emerald Sanctum"] = "翡翠圣境",
+	["Karazhan"] = "卡拉赞下层大厅",
+	["Dire Maul"] = "厄运之槌(北)",
+	["Blackrock Spire"] = "黑石塔上层",
+	["The Black Morass"] = "时光之穴:黑色沼泽",
+	["Silithus"] = "希利苏斯",
+	["Outdoor Raid Bosses"] = "世界Boss",
+	["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+
+	["Battlegrounds"] = "战场",
+	["Alterac Valley"] = "奥特兰克山谷",
+	["Arathi Basin"] = "阿拉希盆地",
+
+	--Name for exception bosses (neutrals that enable modules)
+	["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
+	["Lord Victor Nefarius"] = "维克多·奈法里奥斯",
+	["Solnius"] = "索尔纽斯",
+	["Lieutenant General Andorov"] = "安多洛夫中将",
+
+	["You have slain %s!"] = "你已击败%s!",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -138,7 +282,7 @@ L:RegisterTranslations("esES", function() return {
 	["Zul'Gurub"] = "ZG",
 	["Molten Core"] = "NM",
 	["Blackwing Lair"] = "GAN",
-	["Ahn'Qiraj"] = "AQ40",
+	["Temple of Ahn'Qiraj"] = "AQ40",
 	["Ruins of Ahn'Qiraj"] = "AQ20",
 	["Onyxia's Lair"] = "Onyxia",
 	["Naxxramas"] = "Naxxramas",
@@ -194,7 +338,7 @@ L:RegisterTranslations("deDE", function() return {
 	["Zul'Gurub"] = "ZG",
 	["Molten Core"] = "MC",
 	["Blackwing Lair"] = "BWL",
-	["Ahn'Qiraj"] = "AQ40",
+	["Temple of Ahn'Qiraj"] = "AQ40",
 	["Ruins of Ahn'Qiraj"] = "AQ20",
 	["Onyxia's Lair"] = "Onyxia",
 	["Naxxramas"] = "Naxxramas",
@@ -274,7 +418,7 @@ BigWigs.modulePrototype.bossSync = nil -- "Ouro"
 -- override
 BigWigs.modulePrototype.revision = 1 -- To be overridden by the module!
 BigWigs.modulePrototype.started = false
-BigWigs.modulePrototype.zonename = nil -- AceLibrary("Babble-Zone-2.2")["Ahn'Qiraj"]
+BigWigs.modulePrototype.zonename = nil -- AceLibrary("Babble-Zone-2.2")["Temple of Ahn'Qiraj"]
 BigWigs.modulePrototype.enabletrigger = nil -- boss
 BigWigs.modulePrototype.wipemobs = nil -- adds that will be considered in CheckForEngage
 BigWigs.modulePrototype.toggleoptions = nil -- {"sweep", "sandblast", "scarab", -1, "emerge", "submerge", -1, "berserk", "bosskill"}
@@ -756,7 +900,7 @@ function BigWigs:ModuleDeclaration(bossName, zoneName)
 	--module.translatedName = AceLibrary("Babble-Boss-2.2")[bossName]
 
 	-- zone
-	local raidZones = {"Blackwing Lair", "Ruins of Ahn'Qiraj", "Ahn'Qiraj", "Molten Core", "Naxxramas", "Emerald Sanctum", "Zul'Gurub"}
+	local raidZones = {"Blackwing Lair", "Ruins of Ahn'Qiraj", "Temple of Ahn'Qiraj", "Molten Core", "Naxxramas", "Emerald Sanctum", "Zul'Gurub"}
 	local isOutdoorraid = true
 	for i, value in ipairs(raidZones) do
 		if value == zoneName then

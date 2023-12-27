@@ -28,10 +28,19 @@ local prefix = "|cf75DE52f[BigWigs]|r - ";
 ----------------------------
 local L = AceLibrary("AceLocale-2.2"):new("BigWigsBossRecords")
 L:RegisterTranslations("enUS", function() return {
-	BOSS_ENGAGED    = "%s engaged. Good luck and have fun! :)",
-	BOSS_DOWN		= "%s down after %s!",
-	BOSS_DOWN_L		= "%s down after %s! Your last kill took %s and your fastest kill took %s. You have %d total victories.",
-	BOSS_DOWN_NR	= "%s down after %s! This is a new record! (Old record was %s). You have %d total victories.",
+    BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
+    BOSS_DOWN		= "%s 击败 %s!",
+    BOSS_DOWN_L		= "%s 击败 %s! 上一个是%s.最快记录是%s.你共有%d次胜利.",
+    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有%d次胜利.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+    -- Wind汉化修复Turtle-WOW中文数据
+    -- Last update: 2023-12-21
+    BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
+    BOSS_DOWN		= "%s 击败 %s!",
+    BOSS_DOWN_L		= "%s 击败 %s! 上一个是%s.最快记录是%s.你共有%d次胜利.",
+    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有%d次胜利.",
 } end)
 
 L:RegisterTranslations("esES", function() return {

@@ -44,6 +44,46 @@ L:RegisterTranslations("enUS", function() return {
 	["Set the warning sign scale."] = true,
 	["Transparency"] = true,
 	["Set the warning sign alpha value (0.1 to 1.0: transparent to opaque)."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["WarningSign"] = "WarningSign", -- console cmd
+	["Warning Sign"] = "警告图标", -- module name
+	["Options for the Warning Sign."] = "警告标志的选项.", 
+	["Show anchor"] = "显示锚点",
+	["Show the anchor frame."] = "显示锚点框架.",
+	["Reset"] = "复位",
+	["Reset the frame."] = "复位框架.",
+	["Test"] = "测试",
+	["Close"] = "关闭",
+            
+	["Disabled"] = "禁用",
+	["Disable the warning signs for all modules that use it."] = "禁用使用它的所有模块的警告标志.",
+	["Scale"] = "大小",
+	["Set the warning sign scale."] = "设置警告标志大小.",
+	["Transparency"] = "透明度",
+	["Set the warning sign alpha value (0.1 to 1.0: transparent to opaque)."] = "设置警告标志透明度 (0.1 到 1.0: 透明至不透明).",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["WarningSign"] = "WarningSign", -- console cmd
+	["Warning Sign"] = "警告图标", -- module name
+	["Options for the Warning Sign."] = "警告标志的选项.", 
+	["Show anchor"] = "显示锚点",
+	["Show the anchor frame."] = "显示锚点框架.",
+	["Reset"] = "复位",
+	["Reset the frame."] = "复位框架.",
+	["Test"] = "测试",
+	["Close"] = "关闭",
+            
+	["Disabled"] = "禁用",
+	["Disable the warning signs for all modules that use it."] = "禁用使用它的所有模块的警告标志.",
+	["Scale"] = "大小",
+	["Set the warning sign scale."] = "设置警告标志大小.",
+	["Transparency"] = "透明度",
+	["Set the warning sign alpha value (0.1 to 1.0: transparent to opaque)."] = "设置警告标志透明度 (0.1 到 1.0: 透明至不透明).",
 } end)
 
 L:RegisterTranslations("esES", function() return {

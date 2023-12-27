@@ -9,37 +9,76 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Kurinnaxx",
 	
 	bigicon_cmd = "bigicon",
-	bigicon_name = "Trap and stacks big icon alert",
-	bigicon_desc = "Shows a big icon when you are hit by a trap or have too many stacks",
+	bigicon_name = "陷阱和叠加图标警报",
+	bigicon_desc = "当你被陷阱击中或叠加过多时显示大图标",
 	
 	trap_cmd = "trap",
-	trap_name = "Trap alerts",
-	trap_desc = "Timer bars for everyone hit by a trap",
+	trap_name = "陷阱警报",
+	trap_desc = "每个被陷阱击中的人的计时条",
 	
 	wound_cmd = "wound",
-	wound_name = "Wound 5 stacks alerts",
-	wound_desc = "Alert for 5 stacks of Wound",
+	wound_name = "5层伤口警报",
+	wound_desc = "5层伤口的警报",
 	
 	enrage_cmd = "enrage",
-	enrage_name = "enrage alerts",
-	enrage_desc = "Alert for Enrage",
+	enrage_name = "狂怒警报",
+	enrage_desc = "狂怒的警报",
 	
 	sounds_cmd = "sounds",
-	sounds_name = "Too many stacks sound alert",
-	sounds_desc = "Sound effect when you have too many stacks",
+	sounds_name = "叠加过多声音警报",
+	sounds_desc = "当你叠加过多时播放声音效果",
 	
 	taunt_cmd = "taunt",
-	taunt_name = "Big icon for taunt alert",
-	taunt_desc = "Shows a big icon when you should taunt.",
+	taunt_name = "嘲讽大图标警报",
+	taunt_desc = "当你应该嘲讽时显示大图标",
 	
 	trap_trigger = "Sand Trap hits (.+) for",
-	trap_warn = "Sand Trap",
-	trap_bar = " Sand Trap",
+	trap_warn = "沙坑",
+	trap_bar = " 沙坑",
 	
 	wound_trigger = "(.+) (.+) afflicted by Mortal Wound %(5%)",
 	
 	enrage_trigger = "Kurinnaxx gains Enrage.",
-	enrage_warn = "Kurinnaxx is enraged!",
+	enrage_warn = "库林纳克斯进入狂怒状态！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	cmd = "Kurinnaxx",
+	
+	bigicon_cmd = "bigicon",
+	bigicon_name = "陷阱和叠加图标警报",
+	bigicon_desc = "当你被陷阱击中或叠加过多时显示大图标",
+	
+	trap_cmd = "trap",
+	trap_name = "陷阱警报",
+	trap_desc = "每个被陷阱击中的人的计时条",
+	
+	wound_cmd = "wound",
+	wound_name = "5层伤口警报",
+	wound_desc = "5层伤口的警报",
+	
+	enrage_cmd = "enrage",
+	enrage_name = "狂怒警报",
+	enrage_desc = "狂怒的警报",
+	
+	sounds_cmd = "sounds",
+	sounds_name = "叠加过多声音警报",
+	sounds_desc = "当你叠加过多时播放声音效果",
+	
+	taunt_cmd = "taunt",
+	taunt_name = "嘲讽大图标警报",
+	taunt_desc = "当你应该嘲讽时显示大图标",
+	
+	trap_trigger = "Sand Trap hits (.+) for",
+	trap_warn = "沙坑",
+	trap_bar = " 沙坑",
+	
+	wound_trigger = "(.+) (.+) afflicted by Mortal Wound %(5%)",
+	
+	enrage_trigger = "Kurinnaxx gains Enrage.",
+	enrage_warn = "库林纳克斯进入狂怒状态！",
 } end )
 
 local timer = {

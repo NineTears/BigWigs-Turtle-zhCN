@@ -9,7 +9,13 @@ module.trashMod = true
 L:RegisterTranslations("enUS", function() return {
 	cmd = "FleshHunter",
 	consumeother_trigger = "(.*) is afflicted by Consume",
-	consume_bar = " Consumed!",
+	consume_bar = " 已吞噬!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	cmd = "FleshHunter",
+	consumeother_trigger = "(.*) is afflicted by Consume",
+	consume_bar = " 已吞噬!",
 } end )
 
 module.defaultDB = {

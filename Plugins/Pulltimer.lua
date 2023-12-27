@@ -55,6 +55,52 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Enable"] = true,
 	["Enable pulltimer."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Pull Timer"] = "开怪计时",
+	
+	["pulltimer"] = "开怪计时",
+	["Options for Pull Timer"] = "开怪计时设置",
+	pullstart_message = "准备开怪,倒计时开始! %d 秒. (由 %s 发送)",
+	pullstop_message = "开怪停止 (由 %s 发送)",
+	pull1_message = "准备开怪 1",
+	pull2_message = "准备开怪 2",
+	pull3_message = "准备开怪 3",
+	pull4_message = "准备开怪 4",
+	pull5_message = "准备开怪 5",
+	pull0_message = "开怪!",
+	
+	["Pull"] = "开怪",
+	["pull"] = "pull",
+	["You have to be the raid leader or an assistant"] = "你必须是团长或有A权限",
+	
+	["Enable"] = "启用",
+	["Enable pulltimer."] = "启用开怪计时",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Pull Timer"] = "开怪计时",
+	
+	["pulltimer"] = "开怪计时",
+	["Options for Pull Timer"] = "开怪计时设置",
+	pullstart_message = "准备开怪,倒计时开始! %d 秒. (由 %s 发送)",
+	pullstop_message = "开怪停止 (由 %s 发送)",
+	pull1_message = "准备开怪 1",
+	pull2_message = "准备开怪 2",
+	pull3_message = "准备开怪 3",
+	pull4_message = "准备开怪 4",
+	pull5_message = "准备开怪 5",
+	pull0_message = "开怪!",
+	
+	["Pull"] = "开怪",
+	["pull"] = "pull",
+	["You have to be the raid leader or an assistant"] = "你必须是团长或有A权限",
+	
+	["Enable"] = "启用",
+	["Enable pulltimer."] = "启用开怪计时",
 } end )
 
 L:RegisterTranslations("esES", function() return {

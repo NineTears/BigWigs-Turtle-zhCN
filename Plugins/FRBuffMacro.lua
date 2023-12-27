@@ -3,6 +3,27 @@ frBuffTooltip:Hide()
 frBuffTooltip:SetFrameStrata("TOOLTIP")
 frBuffTooltip:SetOwner(WorldFrame, "ANCHOR_NONE")
 
+------------------------------
+--      Are you local?      --
+------------------------------
+local L = AceLibrary("AceLocale-2.2"):new("BigWigsFRBuffMacro")
+
+----------------------------
+--      Localization      --
+----------------------------
+
+L:RegisterTranslations("enUS", function() return {
+	["Resist Fire"] = "Resist Fire",
+	["phase shift"] = "phase shift",
+
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	["Resist Fire"] = "抵抗火焰",
+	["phase shift"] = "相位变换",
+
+} end)
+
 local function FR_FindBuff(obuff, unit)
 	local buff=strlower(obuff);
 	local tooltip=frBuffTooltip;

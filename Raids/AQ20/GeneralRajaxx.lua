@@ -10,89 +10,180 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Rajaxx",
 
 	wave_cmd = "wave",
-	wave_name = "Wave Alert",
-	wave_desc = "Warn for incoming waves",
+	wave_name = "来袭警报",
+	wave_desc = "当新一批敌人来袭时发出警报",
 	
 	fear_cmd = "fear",--1
-	fear_name = "Fear Alert",
-	fear_desc = "Warn for Fear",
+	fear_name = "恐惧警报",
+	fear_desc = "警报恐惧状态",
 	
 	attackorder_cmd = "attackorder",--2
-	attackorder_name = "Attack Order Alert",
-	attackorder_desc = "Warn for Attack Order",
+	attackorder_name = "攻击指令警报",
+	attackorder_desc = "警报攻击指令",
 	
 	lightningcloud_cmd = "lightningcloud",--3
-	lightningcloud_name = "Lightning Cloud Alert",
-	lightningcloud_desc = "Warn for Lightning Cloud",
+	lightningcloud_name = "闪电云警报",
+	lightningcloud_desc = "警报闪电云",
 	
 	shockwave_cmd = "shockwave",--4
-	shockwave_name = "Shockwave Alert",
-	shockwave_desc = "Warn for Shockwave",
+	shockwave_name = "震荡波警报",
+	shockwave_desc = "警报震荡波",
 	
 	shield_cmd = "shield",--5
-	shield_name = "Shield Alert",
-	shield_desc = "Warn for Shield",
+	shield_name = "护盾警报",
+	shield_desc = "警报护盾",
 	
 	knockback_cmd = "knockback",--6
-	knockback_name = "Knockback Alert",
-	knockback_desc = "Warn for Knockback",
+	knockback_name = "击退警报",
+	knockback_desc = "警报击退",
 	
 	enlarge_cmd = "enlarge",--7
-	enlarge_name = "Enlarge Alert",
-	enlarge_desc = "Warn for Enlarge",
+	enlarge_name = "巨化术警报",
+	enlarge_desc = "警报巨化术",
 	
 	thundercrash_cmd = "thundercrash",--2
-	thundercrash_name = "Thundercrash Alert",
-	thundercrash_desc = "Warn for Thundercrash",
+	thundercrash_name = "雷霆冲击警报",
+	thundercrash_desc = "警报雷霆冲击",
 	
 	trigger_eventStarted = "Remember, Rajaxx, when I said I'd kill you last?",--CHAT_MSG_MONSTER_YELL
-	bar_eventStart = "Encounter begins",
+	bar_eventStart = "战斗开始",
 	
 	--not using trigger_wave1 -> bc if you body pull, will cause the trigger to happen at wave 2
 	--trigger_wave1 = "Kill first, ask questions later... Incoming!",--CHAT_MSG_MONSTER_YELL
-	msg_wave1 = "Wave 1/8 -- 4 Warriors, 2 Needlers, Qeez -> Fear",
+	msg_wave1 = "第1/8波 -- 4名战士，2名钉刺者，奎兹上尉 -> 恐惧",
 	trigger_fear = "afflicted by Intimidating Shout.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_fear = "Fear CD",
+	bar_fear = "恐惧冷却",
 	
 	trigger_wave2 = "Captain Qeez dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-	msg_wave2 = "Wave 2/8 -- 3 Warriors, 3 Needlers, Tuubid -> Mark",
+	msg_wave2 = "第2/8波 -- 3名战士，3名钉刺者，图比德上尉 -> 标记",
 	trigger_attackOrder = "(.*) is afflicted by Attack Order.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
 	trigger_attackOrderYou = "You are afflicted by Attack Order.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_attackOrder = " Marked",
+	bar_attackOrder = " 已标记",
 	trigger_attackOrderFade = "Attack Order fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
 	
 	trigger_wave3 = "The time of our retribution is at hand! Let darkness reign in the hearts of our enemies!",--CHAT_MSG_MONSTER_YELL
-	msg_wave3 = "Wave 3/8 -- 1 Warrior, 5 Needlers, Drenn -> Lightning Cloud",
+	msg_wave3 = "第3/8波 -- 1名战士，5名钉刺者，德雷恩上尉 -> 闪电云",
 	trigger_lightningCloud = "You are afflicted by Lightning Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	msg_lightningCloud = "Lightning Cloud, Move!",
+	msg_lightningCloud = "闪电云，快躲开！",
 	trigger_lightningCloudFade = "Lightning Cloud fades from you",--CHAT_MSG_SPELL_AURA_GONE_SELF
 	
 	trigger_wave4 = "No longer will we wait behind barred doors and walls of stone! No longer will our vengeance be denied! The dragons themselves will tremble before our wrath!",--??\n?? CHAT_MSG_MONSTER_YELL
-	msg_wave4 = "Wave 4/8 -- 2 Warriors, 4 Needlers, Xurrem -> AoE Damage",
+	msg_wave4 = "第4/8波 -- 2名战士，4名钉刺者，库雷姆上尉 -> 范围伤害",
 	trigger_shockwave = "Captain Xurrem's Shockwave",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_shockwave = "Shockwave CD",
+	bar_shockwave = "震荡波冷却",
 	
 	trigger_wave5 = "Fear is for the enemy! Fear and death!",--CHAT_MSG_MONSTER_YELL
-	msg_wave5 = "Wave 5/8 -- 2 Warriors, 4 Needlers, Yeggeth -> Shield",
+	msg_wave5 = "第5/8波 -- 2名战士，4名钉刺者，耶吉斯少校 -> 护盾",
 	trigger_shield = "Major Yeggeth gains Shield of Rajaxx",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	bar_shield = "Immune",
+	bar_shield = "免疫魔法",
 	
 	trigger_wave6 = "Staghelm will whimper and beg for his life, just as his whelp of a son did! One thousand years of injustice will end this day!",--??\n?? CHAT_MSG_MONSTER_YELL
-	msg_wave6 = "Wave 6/8 -- 4 Warriors, 2 Needlers, Pakkon -> Knockback",
+	msg_wave6 = "第6/8波 -- 4名战士，2名钉刺者，帕库少校 -> 击退",
 	trigger_slam = "Major Pakkon's Sweeping Slam",--
-	bar_slam = "Slam CD",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	bar_slam = "重击冷却",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
 	trigger_wave7 = "Fandral! Your time has come! Go and hide in the Emerald Dream and pray we never find you!",--??\n?? CHAT_MSG_MONSTER_YELL
-	msg_wave7 = "Wave 7/8 -- 3 Warriors, 3 Needlers, Zerran -> Enlarge",
+	msg_wave7 = "第7/8波 -- 3名战士，3名钉刺者，泽兰上校 -> 扩大",
 	trigger_enlarge = "Colonel Zerran gains Enlarge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	bar_enlarge = "Enlarge, Purge!",
-	msg_enlarge = "Enlarge, Purge!",
+	bar_enlarge = "扩大，驱散！",
+	msg_enlarge = "扩大，驱散！",
 	trigger_enlargeFade = "Enlarge fades from Colonel Zerran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
 	
 	trigger_wave8 = "Impudent fool! I will kill you myself!",--CHAT_MSG_MONSTER_YELL
-	msg_wave8 = "Wave 8/8 -- General Rajaxx",
+	msg_wave8 = "第8/8波 -- 拉贾克斯将军",
 	trigger_thundercrash = "Thundercrash",
-	bar_thundercrash = "Thundercrash CD",
+	bar_thundercrash = "雷霆冲击冷却",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	cmd = "Rajaxx",
+
+	wave_cmd = "wave",
+	wave_name = "来袭警报",
+	wave_desc = "当新一批敌人来袭时发出警报",
+	
+	fear_cmd = "fear",--1
+	fear_name = "恐惧警报",
+	fear_desc = "警报恐惧状态",
+	
+	attackorder_cmd = "attackorder",--2
+	attackorder_name = "攻击指令警报",
+	attackorder_desc = "警报攻击指令",
+	
+	lightningcloud_cmd = "lightningcloud",--3
+	lightningcloud_name = "闪电云警报",
+	lightningcloud_desc = "警报闪电云",
+	
+	shockwave_cmd = "shockwave",--4
+	shockwave_name = "震荡波警报",
+	shockwave_desc = "警报震荡波",
+	
+	shield_cmd = "shield",--5
+	shield_name = "护盾警报",
+	shield_desc = "警报护盾",
+	
+	knockback_cmd = "knockback",--6
+	knockback_name = "击退警报",
+	knockback_desc = "警报击退",
+	
+	enlarge_cmd = "enlarge",--7
+	enlarge_name = "巨化术警报",
+	enlarge_desc = "警报巨化术",
+	
+	thundercrash_cmd = "thundercrash",--2
+	thundercrash_name = "雷霆冲击警报",
+	thundercrash_desc = "警报雷霆冲击",
+	
+	trigger_eventStarted = "Remember, Rajaxx, when I said I'd kill you last?",--CHAT_MSG_MONSTER_YELL
+	bar_eventStart = "战斗开始",
+	
+	--not using trigger_wave1 -> bc if you body pull, will cause the trigger to happen at wave 2
+	--trigger_wave1 = "Kill first, ask questions later... Incoming!",--CHAT_MSG_MONSTER_YELL
+	msg_wave1 = "第1/8波 -- 4名战士，2名钉刺者，奎兹上尉 -> 恐惧",
+	trigger_fear = "afflicted by Intimidating Shout.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	bar_fear = "恐惧冷却",
+	
+	trigger_wave2 = "Captain Qeez dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	msg_wave2 = "第2/8波 -- 3名战士，3名钉刺者，图比德上尉 -> 标记",
+	trigger_attackOrder = "(.*) is afflicted by Attack Order.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_attackOrderYou = "You are afflicted by Attack Order.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	bar_attackOrder = " 已标记",
+	trigger_attackOrderFade = "Attack Order fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	trigger_wave3 = "The time of our retribution is at hand! Let darkness reign in the hearts of our enemies!",--CHAT_MSG_MONSTER_YELL
+	msg_wave3 = "第3/8波 -- 1名战士，5名钉刺者，德雷恩上尉 -> 闪电云",
+	trigger_lightningCloud = "You are afflicted by Lightning Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	msg_lightningCloud = "闪电云，快躲开！",
+	trigger_lightningCloudFade = "Lightning Cloud fades from you",--CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	trigger_wave4 = "No longer will we wait behind barred doors and walls of stone! No longer will our vengeance be denied! The dragons themselves will tremble before our wrath!",--??\n?? CHAT_MSG_MONSTER_YELL
+	msg_wave4 = "第4/8波 -- 2名战士，4名钉刺者，库雷姆上尉 -> 范围伤害",
+	trigger_shockwave = "Captain Xurrem's Shockwave",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	bar_shockwave = "震荡波冷却",
+	
+	trigger_wave5 = "Fear is for the enemy! Fear and death!",--CHAT_MSG_MONSTER_YELL
+	msg_wave5 = "第5/8波 -- 2名战士，4名钉刺者，耶吉斯少校 -> 护盾",
+	trigger_shield = "Major Yeggeth gains Shield of Rajaxx",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	bar_shield = "免疫魔法",
+	
+	trigger_wave6 = "Staghelm will whimper and beg for his life, just as his whelp of a son did! One thousand years of injustice will end this day!",--??\n?? CHAT_MSG_MONSTER_YELL
+	msg_wave6 = "第6/8波 -- 4名战士，2名钉刺者，帕库少校 -> 击退",
+	trigger_slam = "Major Pakkon's Sweeping Slam",--
+	bar_slam = "重击冷却",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	
+	trigger_wave7 = "Fandral! Your time has come! Go and hide in the Emerald Dream and pray we never find you!",--??\n?? CHAT_MSG_MONSTER_YELL
+	msg_wave7 = "第7/8波 -- 3名战士，3名钉刺者，泽兰上校 -> 扩大",
+	trigger_enlarge = "Colonel Zerran gains Enlarge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	bar_enlarge = "扩大，驱散！",
+	msg_enlarge = "扩大，驱散！",
+	trigger_enlargeFade = "Enlarge fades from Colonel Zerran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_wave8 = "Impudent fool! I will kill you myself!",--CHAT_MSG_MONSTER_YELL
+	msg_wave8 = "第8/8波 -- 拉贾克斯将军",
+	trigger_thundercrash = "Thundercrash",
+	bar_thundercrash = "雷霆冲击冷却",
 } end )
 
 local timer = {

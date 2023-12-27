@@ -28,6 +28,38 @@ L:RegisterTranslations("enUS", function() return {
 
 	["%s has been Dazed!"] = true,
 	["Dazed"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Zombie Food"] = "眩晕监视",
+	["zombiefood"] = "眩晕监视",
+	["Optionally broadcast the raid when someone gets Dazed."] = "当有人眩晕时，可以随时广播.",
+	["broadcast"] = "广播",
+	["Broadcast"] = "广播",
+	["Toggle broadcasting."] = "切换广播.",
+	["On"] = "开",
+	["on"] = "开",
+	["Toggles the plugin on and off."] = "切换插件的开启和关闭.",
+
+	["%s has been Dazed!"] = "%s 已被眩晕!",
+	["Dazed"] = "眩晕",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Zombie Food"] = "眩晕监视",
+	["zombiefood"] = "眩晕监视",
+	["Optionally broadcast the raid when someone gets Dazed."] = "当有人眩晕时，可以随时广播.",
+	["broadcast"] = "广播",
+	["Broadcast"] = "广播",
+	["Toggle broadcasting."] = "切换广播.",
+	["On"] = "开",
+	["on"] = "开",
+	["Toggles the plugin on and off."] = "切换插件的开启和关闭.",
+
+	["%s has been Dazed!"] = "%s 已被眩晕!",
+	["Dazed"] = "眩晕",
 } end )
 
 L:RegisterTranslations("esES", function() return {

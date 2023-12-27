@@ -1,11 +1,10 @@
 ## Interface: 11200
 
-## Title: |cFFFF8080Relar|r Big Wigs |cff7fff7f30038|r |cffabd473Turtle-WoW|r
-## Title-zhCN: |cffabd473Turtle-WoW|r Big Wigs
-## Notes: Boss Mods with Timer bars.
-## Notes-esES: Módulos para Jefes con barras temporizadoras.
-## Notes-zhCN: 团队首领战信息提示插件，带有计时条。
-## Notes-zhTW: 團隊首領戰訊息提示插件，帶有計時條。
+## Title: |CFFEE7600[团队]|RBigWigs |cffcccccc[Turtle-WoW]|R
+## Title-zhCN: |CFFEE7600[团队]|RBigWigs |cffcccccc[Turtle-WoW]|R
+## Notes: |CFFEE7600BigWigs|R|N团队首领战信息提示插件，带有计时条，预警并提示BOSS技能。|N命令：/BigWigs
+## Notes-zhCN: |CFFEE7600BigWigs|R|N团队首领战信息提示插件，带有计时条，预警并提示BOSS技能。|N命令：/BigWigs
+## X-Repple: 团队
 ## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq & Others
 ## Version: 2.0.0
 ## X-Website: https://github.com/madScripting
@@ -14,40 +13,12 @@
 ## X-RelSite-Curse: 4356
 ## X-AceForum: 1222
 ## X-FlySpray: 1
-
-## OptionalDeps: Ace2, FuBar, FuBarPlugin-2.0, Babble-2.2, CandyBar, CompostLib, DewdropLib, PaintChipsLib, TabletLib, SurfaceLib, Surfaces, MikScrollingBattleText, sct, SpellStatusLib, SpellCacheLib, GratuityLib, Deformat, SpecialEventsEmbed
+## Dependencies: !Libs
+## OptionalDeps: !Libs
 ## X-Embeds: Ace2, FuBarPlugin-2.0, Babble-2.2, CandyBar, CompostLib, DewdropLib, PaintChipsLib, TabletLib, SurfaceLib
 
 ## SavedVariables: BigWigsDB, BigWigsFubarDB, BigWigsCommonAurasDB, BigWigsZombieFoodDB, BigWigsRespawnTimersDB, BigWigsContributeFlag
 ## SavedVariablesPerCharacter: BigWigsDBPerChar, BigWigsBarClick
-
-Libs\AceLibrary\AceLibrary.lua
-
-Libs\Compost-2.0\Compost-2.0.lua
-
-Libs\AceOO-2.0\AceOO-2.0.lua
-Libs\AceAddon-2.0\AceAddon-2.0.lua
-Libs\AceConsole-2.0\AceConsole-2.0.lua
-Libs\AceHook-2.1\AceHook-2.1.lua
-Libs\AceDB-2.0\AceDB-2.0.lua
-Libs\AceDebug-2.0\AceDebug-2.0.lua
-Libs\AceEvent-2.0\AceEvent-2.0.lua
-Libs\AceLocale-2.2\AceLocale-2.2.lua
-Libs\AceModuleCore-2.0\AceModuleCore-2.0.lua
-Libs\Babble-Boss-2.2\Babble-Boss-2.2.lua
-Libs\Babble-Spell-2.2\Babble-Spell-2.2.lua
-Libs\Babble-Zone-2.2\Babble-Zone-2.2.lua
-Libs\Dewdrop-2.0\Dewdrop-2.0.lua
-Libs\Tablet-2.0\Tablet-2.0.lua
-Libs\FuBarPlugin-2.0\FuBarPlugin-2.0.lua
-Libs\PaintChips-2.0\PaintChips-2.0.lua
-Libs\CandyBar-2.1\CandyBar-2.1.lua
-Libs\Surface-1.0\Surface-1.0.lua
-Libs\Deformat-2.0\Deformat-2.0.lua
-Libs\Gratuity-2.0\Gratuity-2.0.lua
-Libs\SpellCache-1.0\SpellCache-1.0.lua
-Libs\SpellStatus-1.0\SpellStatus-1.0.lua
-Libs\SpecialEvents-Aura-2.0\SpecialEvents-Aura-2.0.lua
 
 LoadOnDemand.lua
 Core.lua

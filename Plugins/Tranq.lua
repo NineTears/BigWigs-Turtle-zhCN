@@ -17,6 +17,18 @@ L:RegisterTranslations("enUS", function() return {
 	["Options for the tranq module."] = true,
 	["Toggle tranq bars on or off."] = true,
 	["Bars"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	CHAT_MSG_SPELL_SELF_BUFF = "你未能驱散(.+)的狂暴。",
+	CHAT_MSG_SPELL_SELF_DAMAGE = "你对(.+)施放了宁神射击。",
+
+	["Tranq - %s"] = "宁神射击 - %s",
+	["%s's Tranq failed!"] = "%s的宁神射击失败了！",
+	["Tranq"] = "宁神射击",
+	["Options for the tranq module."] = "设置宁神射击模块.",
+	["Toggle tranq bars on or off."] = "开启或禁用宁神射击计时条.",
+	["Bars"] = "宁神射击计时条",
 } end)
 
 L:RegisterTranslations("esES", function() return {

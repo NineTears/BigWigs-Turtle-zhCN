@@ -14,26 +14,52 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Buru",
 
 	you_cmd = "you",
-	you_name = "You're being watched alert",
-	you_desc = "Warn when you're being watched",
+	you_name = "凝视警报",
+	you_desc = "当你被凝视时发出警报",
 
 	other_cmd = "other",
-	other_name = "Others being watched alert",
-	other_desc = "Warn when others are being watched",
+	other_name = "队友凝视警报",
+	other_desc = "当队友被凝视时发出警报",
 
 	icon_cmd = "icon",
-	icon_name = "Place icon",
-	icon_desc = "Place raid icon on watched person (requires promoted or higher)",
+	icon_name = "头像图标",
+	icon_desc = "图标放在被监视头上 (你必须是团长或有A权限)",
 
 	watchtrigger = "sets eyes on (.+)!",
-	watchwarn = " is being watched!",
-	watchwarnyou = "You are being watched!",
-	you = "You",
+	watchwarn = " 被布鲁盯上了！",
+	watchwarnyou = "你被布鲁盯上了！",
+	you = "你",
 	
 	dismember1_trigger = "(.+) is afflicted by Dismember.",
 	dismember_trigger = "(.+) is afflicted by Dismember %((.+)%)",
-	dismember_bar = " Dismember",
-	p2 = "Phase2, DPS Buru!",
+	dismember_bar = " 肢解",
+	p2 = "第二阶段，DPS全力输出布鲁!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	cmd = "Buru",
+
+	you_cmd = "you",
+	you_name = "凝视警报",
+	you_desc = "当你被凝视时发出警报",
+
+	other_cmd = "other",
+	other_name = "队友凝视警报",
+	other_desc = "当队友被凝视时发出警报",
+
+	icon_cmd = "icon",
+	icon_name = "头像图标",
+	icon_desc = "图标放在被监视头上 (你必须是团长或有A权限)",
+
+	watchtrigger = "sets eyes on (.+)!",
+	watchwarn = " 被布鲁盯上了！",
+	watchwarnyou = "你被布鲁盯上了！",
+	you = "你",
+	
+	dismember1_trigger = "(.+) is afflicted by Dismember.",
+	dismember_trigger = "(.+) is afflicted by Dismember %((.+)%)",
+	dismember_bar = " 肢解",
+	p2 = "第二阶段，DPS全力输出布鲁!",
 } end )
 
 L:RegisterTranslations("deDE", function() return {

@@ -8,42 +8,42 @@ module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Guardian",
-
+	
 	reflect_cmd = "reflect",
-	reflect_name = "Spell reflect alert",
-	reflect_desc = "Shows bars for which reflect the Guardian has",
+	reflect_name = "法术反射警报",
+	reflect_desc = "显示守护者的反射计时条",
 	
 	plagueyou_cmd = "plagueyou",
-	plagueyou_name = "Plague on you alert",
-	plagueyou_desc = "Warn for plague on you",
+	plagueyou_name = "你中瘟疫警报",
+	plagueyou_desc = "警报你中了瘟疫",
 	
 	plagueother_cmd = "plagueother",
-	plagueother_name = "Plague on others alert",
-	plagueother_desc = "Warn for plague on others",
+	plagueother_name = "他人中瘟疫警报",
+	plagueother_desc = "警报他人中了瘟疫",
 	
 	icon_cmd = "icon",
-	icon_name = "Place icon",
-	icon_desc = "Place raid icon on the last plagued person (requires promoted or higher)",
+	icon_name = "放置标记",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（你需要是团长或有A权限）",
 	
 	thunderclap_cmd = "thunderclap",
-	thunderclap_name = "Thunderclap Alert",
-	thunderclap_desc = "Warn for Thunderclap",
+	thunderclap_name = "雷霆一击警报",
+	thunderclap_desc = "警报雷霆一击",
 	
 	shadowstorm_cmd = "shadowstorm",
-	shadowstorm_name = "Shadowstorm Alert",
-	shadowstorm_desc = "Warn for Shadowstorm",
+	shadowstorm_name = "暗影风暴警报",
+	shadowstorm_desc = "警报暗影风暴",
 	
 	meteor_cmd = "meteor",
-	meteor_name = "Meteor Alert",
-	meteor_desc = "Warn for meteor",
-
+	meteor_name = "流星警报",
+	meteor_desc = "警报流星",
+	
 	explode_cmd = "explode",
-	explode_name = "Explode Alert",
-	explode_desc = "Warn for incoming explosion",
-
+	explode_name = "爆炸警报",
+	explode_desc = "警报即将到来的爆炸",
+	
 	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warn for enrage",
+	enrage_name = "狂怒警报",
+	enrage_desc = "警报狂怒状态",
 	
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
@@ -52,37 +52,118 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_arcaneFireReflect4 = "Firebolt is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_arcaneFireReflect5 = "Flame Lash is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_arcaneFireReflect6 = "Detect Magic is reflected",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	arcrefwarn = "Fire & Arcane reflect",
+	arcrefwarn = "火焰和奥术反射",
 	
 	trigger_shadowFrostReflect1 = "Shadow Word: Pain is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_shadowFrostReflect2 = "Corruption is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_shadowFrostReflect3 = "Frostbolt is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_shadowFrostReflect4 = "Frost Shock is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_shadowFrostReflect5 = "Anubisath Guardian is afflicted by Detect Magic.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-	sharefwarn = "Shadow & Frost reflect",
+	sharefwarn = "暗影和冰霜反射",
 		
 	thunderclaptrigger = "Anubisath Guardian's Thunderclap hits",
-	thunderclap_split = "Thunderclap -- 2 GROUPS!!",
+	thunderclap_split = "雷霆一击 -- 分成两组！！",
 	
 	shadowstormtrigger = "Anubisath Guardian's Shadow Storm hits",
-	shadowstorm_stay = "!!STACK IN MELEE RANGE!!",
+	shadowstorm_stay = "！！站在近战范围内！！",
 
 	meteortrigger = "Anubisath Guardian's Meteor",
-	meteorbar = "Meteor CD",
-	meteorwarn = "Meteor!",
+	meteorbar = "流星冷却",
+	meteorwarn = "流星！",
 	
 	explodetrigger = "Anubisath Guardian gains Explode.",
-	explodewarn = "Exploding!",
+	explodewarn = "爆炸！",
 	
 	enragetrigger = "Anubisath Guardian gains Enrage.",
-	enragewarn = "Enraged!",
+	enragewarn = "狂怒！",
 	
 	plaguetrigger = "^([^%s]+) ([^%s]+) afflicted by Plague%.$",
-	plaguewarn = " has the Plague!",
-	plagueyouwarn = "You have the Plague!",
-	plagueyou = "You",
-	plagueare = "are",
-	plague_onme = "Plague on ",
+	plaguewarn = "中了瘟疫！快跑出人群！",
+	plagueyouwarn = "你中了瘟疫！快跑出人群！",
+	plagueyou = "你",
+	plagueare = "受到了",
+	plague_onme = "瘟疫在",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	cmd = "Guardian",
+	
+	reflect_cmd = "reflect",
+	reflect_name = "法术反射警报",
+	reflect_desc = "显示守护者的反射计时条",
+	
+	plagueyou_cmd = "plagueyou",
+	plagueyou_name = "你中瘟疫警报",
+	plagueyou_desc = "警报你中了瘟疫",
+	
+	plagueother_cmd = "plagueother",
+	plagueother_name = "他人中瘟疫警报",
+	plagueother_desc = "警报他人中了瘟疫",
+	
+	icon_cmd = "icon",
+	icon_name = "放置标记",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（你需要是团长或有A权限）",
+	
+	thunderclap_cmd = "thunderclap",
+	thunderclap_name = "雷霆一击警报",
+	thunderclap_desc = "警报雷霆一击",
+	
+	shadowstorm_cmd = "shadowstorm",
+	shadowstorm_name = "暗影风暴警报",
+	shadowstorm_desc = "警报暗影风暴",
+	
+	meteor_cmd = "meteor",
+	meteor_name = "流星警报",
+	meteor_desc = "警报流星",
+	
+	explode_cmd = "explode",
+	explode_name = "爆炸警报",
+	explode_desc = "警报即将到来的爆炸",
+	
+	enrage_cmd = "enrage",
+	enrage_name = "狂怒警报",
+	enrage_desc = "警报狂怒状态",
+	
+	
+	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect2 = "Scorch is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect3 = "Flame Shock is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect4 = "Firebolt is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect5 = "Flame Lash is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect6 = "Detect Magic is reflected",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	arcrefwarn = "火焰和奥术反射",
+	
+	trigger_shadowFrostReflect1 = "Shadow Word: Pain is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect2 = "Corruption is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect3 = "Frostbolt is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect4 = "Frost Shock is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect5 = "Anubisath Guardian is afflicted by Detect Magic.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+	sharefwarn = "暗影和冰霜反射",
+		
+	thunderclaptrigger = "Anubisath Guardian's Thunderclap hits",
+	thunderclap_split = "雷霆一击 -- 分成两组！！",
+	
+	shadowstormtrigger = "Anubisath Guardian's Shadow Storm hits",
+	shadowstorm_stay = "！！站在近战范围内！！",
+
+	meteortrigger = "Anubisath Guardian's Meteor",
+	meteorbar = "流星冷却",
+	meteorwarn = "流星！",
+	
+	explodetrigger = "Anubisath Guardian gains Explode.",
+	explodewarn = "爆炸！",
+	
+	enragetrigger = "Anubisath Guardian gains Enrage.",
+	enragewarn = "狂怒！",
+	
+	plaguetrigger = "^([^%s]+) ([^%s]+) afflicted by Plague%.$",
+	plaguewarn = "中了瘟疫！快跑出人群！",
+	plagueyouwarn = "你中了瘟疫！快跑出人群！",
+	plagueyou = "你",
+	plagueare = "受到了",
+	plague_onme = "瘟疫在",
 } end )
 
 module.defaultDB = {

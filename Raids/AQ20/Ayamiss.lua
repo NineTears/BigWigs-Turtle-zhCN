@@ -9,25 +9,52 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Ayamiss",
 
 	sacrifice_cmd = "sacrifice",
-	sacrifice_name = "Sacrifice Alert",
-	sacrifice_desc = "Warn for Sacrifice",
+	sacrifice_name = "祭品警报",
+	sacrifice_desc = "被作为祭品时发出警报",
 	
 	bigicon_cmd = "bigicons",
-	bigicon_name = "Kill the larva icon alert",
-	bigicon_desc = "Shows a big icon when a larva spawns",
+	bigicon_name = "击杀幼虫时显示图标警报",
+	bigicon_desc = "当幼虫产生时显示大图标警报",
 	
 	sacrificeother_trigger = "(.*) is afflicted by Paralyze.",
 	sacrificeyou_trigger = "(.*) are afflicted by Paralyze.",
 	sacrificeend_trigger = "Paralyze fades from",
 	
-	larva_bar = "Larva >Click Me!<",
-	nextlarva_bar = "Larva/Sacrifice CD",
+	larva_bar = "幼虫 >点我!<",
+	nextlarva_bar = "幼虫/牺牲 冷却",
 	
-	msg_sacrifice = " Sacrificed, Kill the larva!",
+	msg_sacrifice = " 牺牲，击杀幼虫!",
 	
-	p2_msg = "Phase 2",
+	p2_msg = "第二阶段",
 
-	larvaname = "Hive'Zara Larva",	
+	larvaname = "佐拉幼虫",	
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	cmd = "Ayamiss",
+
+	sacrifice_cmd = "sacrifice",
+	sacrifice_name = "祭品警报",
+	sacrifice_desc = "被作为祭品时发出警报",
+	
+	bigicon_cmd = "bigicons",
+	bigicon_name = "击杀幼虫时显示图标警报",
+	bigicon_desc = "当幼虫产生时显示大图标警报",
+	
+	sacrificeother_trigger = "(.*) is afflicted by Paralyze.",
+	sacrificeyou_trigger = "(.*) are afflicted by Paralyze.",
+	sacrificeend_trigger = "Paralyze fades from",
+	
+	larva_bar = "幼虫 >点我!<",
+	nextlarva_bar = "幼虫/牺牲 冷却",
+	
+	msg_sacrifice = " 牺牲，击杀幼虫!",
+	
+	p2_msg = "第二阶段",
+
+	larvaname = "佐拉幼虫",	
 } end )
 
 local timer = {

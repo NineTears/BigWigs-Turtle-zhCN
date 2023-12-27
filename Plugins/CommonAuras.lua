@@ -73,6 +73,116 @@ L:RegisterTranslations("enUS", function() return {
 	["Gives timer bars and raid messages about common buffs and debuffs."] = true,
 	["Common Auras"] = true,
 	["commonauras"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	msg_fearward = " 守护恐惧 ",
+	bar_fearward = " 守护恐惧 冷却",
+	
+	msg_shieldwall = " 盾墙",
+	bar_shieldwall = " 盾墙",
+	
+	msg_laststand = " 最后一搏",
+	bar_laststand = " 最后一搏",
+	
+	msg_lifegivingGem = " 生命赐予宝石",
+	bar_lifegivingGem = " 生命赐予宝石",
+	
+	msg_challengingShout = " 挑战怒吼",
+	bar_challengingShout = " 挑战怒吼",
+	
+	msg_challengingRoar = " 挑战咆哮",
+	bar_challengingRoar = " 挑战咆哮",
+
+	portal_regexp = ".*: (.*)",
+	
+	trigger_wormhole = "just opened a wormhole.",--CHAT_MSG_MONSTER_EMOTE
+	bar_wormhole = " 虫洞",
+	msg_wormhole = " 虫洞",
+	
+	trigger_orange = "begins to conjure a refreshment table.",--CHAT_MSG_MONSTER_EMOTE
+	bar_orange = "橙子！",
+	msg_orange = "橙子！补充维生素C",
+	
+	trigger_soulwell = "begins a Soulwell ritual.",--CHAT_MSG_MONSTER_EMOTE
+	bar_soulwell = "灵魂之井!",
+	msg_soulwell = "灵魂之井！拿你的饼干",
+	
+	trigger_shutdown = "Shutdown in (.+) (.+)",--CHAT_MSG_SYSTEM
+	trigger_restart = "Restart in (.+) (.+)",--CHAT_MSG_SYSTEM
+	trigger_restartMinSec = "Shutdown in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
+	trigger_shutdownMinSec = "Restart in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
+	bar_shutDown = "服务器关机/重启",
+	
+	["Toggle %s display."] = "切换%s显示。",
+	["Wormhole"] = "虫洞",
+	["Orange"] = "橙色",
+	["Soulwell"] = "灵魂之井",
+	["Portal"] = "传送门",
+	["Shutdown"] = "关机",
+	["broadcast"] = "广播",
+	["Broadcast"] = "广播",
+	["Toggle broadcasting the messages to the raidwarning channel."] = "切换广播信息到团队警告频道。",
+
+	["Gives timer bars and raid messages about common buffs and debuffs."] = "提供关于常见增益和减益的计时条和团队信息。",
+	["Common Auras"] = "常见的光环",
+	["commonauras"] = "常见的光环",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	iconPrefix = "Interface\\Icons\\",
+	
+	msg_fearward = " 守护恐惧 ",
+	bar_fearward = " 守护恐惧 冷却",
+	
+	msg_shieldwall = " 盾墙",
+	bar_shieldwall = " 盾墙",
+	
+	msg_laststand = " 最后一搏",
+	bar_laststand = " 最后一搏",
+	
+	msg_lifegivingGem = " 生命赐予宝石",
+	bar_lifegivingGem = " 生命赐予宝石",
+	
+	msg_challengingShout = " 挑战怒吼",
+	bar_challengingShout = " 挑战怒吼",
+	
+	msg_challengingRoar = " 挑战咆哮",
+	bar_challengingRoar = " 挑战咆哮",
+
+	portal_regexp = ".*: (.*)",
+	
+	trigger_wormhole = "just opened a wormhole.",--CHAT_MSG_MONSTER_EMOTE
+	bar_wormhole = " 虫洞",
+	msg_wormhole = " 虫洞",
+	
+	trigger_orange = "begins to conjure a refreshment table.",--CHAT_MSG_MONSTER_EMOTE
+	bar_orange = "橙子！",
+	msg_orange = "橙子！补充维生素C",
+	
+	trigger_soulwell = "begins a Soulwell ritual.",--CHAT_MSG_MONSTER_EMOTE
+	bar_soulwell = "灵魂之井!",
+	msg_soulwell = "灵魂之井！拿你的饼干",
+	
+	trigger_shutdown = "Shutdown in (.+) (.+)",--CHAT_MSG_SYSTEM
+	trigger_restart = "Restart in (.+) (.+)",--CHAT_MSG_SYSTEM
+	trigger_restartMinSec = "Shutdown in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
+	trigger_shutdownMinSec = "Restart in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
+	bar_shutDown = "服务器关机/重启",
+	
+	["Toggle %s display."] = "切换%s显示。",
+	["Wormhole"] = "虫洞",
+	["Orange"] = "橙色",
+	["Soulwell"] = "灵魂之井",
+	["Portal"] = "传送门",
+	["Shutdown"] = "关机",
+	["broadcast"] = "广播",
+	["Broadcast"] = "广播",
+	["Toggle broadcasting the messages to the raidwarning channel."] = "切换广播信息到团队警告频道。",
+
+	["Gives timer bars and raid messages about common buffs and debuffs."] = "提供关于常见增益和减益的计时条和团队信息。",
+	["Common Auras"] = "常见的光环",
+	["commonauras"] = "常见的光环",
 } end )
 
 BigWigsCommonAuras = BigWigs:NewModule(name, "AceHook-2.1")

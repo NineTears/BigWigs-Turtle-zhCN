@@ -36,6 +36,29 @@ L:RegisterTranslations("enUS", function() return {
 	["square"] = true,
 	["cross"] = true,
 	["skull"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Raid Icons"] = "团队图标",
+
+	["Place"] = "标记",
+	["Place Raid Icons"] = "标记团队图标",
+	["Toggle placing of Raid Icons on players."] = "切换是否在玩家身上标记团队图标",
+
+	["Icon"] = "图标",
+	["Set Icon"] = "设置图标",
+	["Set which icon to place on players."] = "设置玩家身上标记的图标。",
+
+	["Options for Raid Icons."] = "团队图标设置",
+
+	["star"] = "星形",
+	["circle"] = "圆圈",
+	["diamond"] = "棱形",
+	["triangle"] = "三角",
+	["moon"] = "月亮",
+	["square"] = "方形",
+	["cross"] = "十字",
+	["skull"] = "骷髅",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -104,7 +127,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	["star"] = "星星",
 	["circle"] = "圆圈",
-	["diamond"] = "钻石",
+	["diamond"] = "棱形",
 	["triangle"] = "三角",
 	["moon"] = "月亮",
 	["square"] = "方形",

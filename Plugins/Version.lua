@@ -55,6 +55,90 @@ L:RegisterTranslations("enUS", function() return {
 	["Show popup"] = true,
 	["Show popup warning on out of date version"] = true,
 
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["versionquery"] = "版本查询",
+	["Version Query"] = "版本查询",
+	["Commands for querying the raid for Big Wigs versions."] = "查询BigWigs版本的RAID命令.",
+	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请稍候5秒钟再重试.",
+	["Querying versions for "] = "查询版本 ",
+	["Big Wigs Version Query"] = "BigWigs 版本查询",
+	["Close window"] = "关闭窗口", -- I know, it's really a Tablet.
+	["Showing version for "] = "显示版本 ",
+	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比你的更新，红色比你老，白色一样.",
+	["Player"] = "玩家",
+	["Version"] = "版本",
+	["Current zone"] = "当前区域",
+	["<zone>"] = "<区域>",
+	["Version query done."] = "版本检测已完成.",
+	["Runs a version query on your current zone."] = "对当前区域进行版本检测.",
+	["Closes the version query window."] = "关闭版本查询窗口.",
+	["current"] = "当前",
+	["Runs a version query on the given zone."] = "在给指定的区域进行版本查询",
+	["Zone"] = "区域",
+	["zone"] = "区域",
+	["N/A"] = "N/A",
+	["BigWigs"] = "BigWigs",
+	["Runs a version query on the BigWigs core."] = "在BigWigs核心部分运行版本查询.",
+	["Nr Replies"] = "回应人数",
+	["Ancient"] = "旧版本",
+
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = "你的BigWigs Turtle-WoW版本已过时！请访问 https://github.com/NineTears/BigWigs-Turtle-zhCN 获取最新版本。",
+	["Close"] = "关闭",
+	["Cancel"] = "取消",
+
+	["People with outdated BigWigs:"] = "在用老版本的BigWigs的人：",
+	["Notify old versions"] = "老版本的通知",
+	["Notify old versions"] = "老版本的通知",
+	["List people with old versions to raid chat."] = "将在用老版本的人列表发送到聊天框",
+	["Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN"] = "下载新版本到：https://github.com/NineTears/BigWigs-Turtle-zhCN",
+
+	["Show popup"] = "显示弹出警报",
+	["Show popup warning on out of date version"] = "显示过期版本警报弹出窗口",
+
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["versionquery"] = "版本查询",
+	["Version Query"] = "版本查询",
+	["Commands for querying the raid for Big Wigs versions."] = "查询BigWigs版本的RAID命令.",
+	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请稍候5秒钟再重试.",
+	["Querying versions for "] = "查询版本 ",
+	["Big Wigs Version Query"] = "BigWigs 版本查询",
+	["Close window"] = "关闭窗口", -- I know, it's really a Tablet.
+	["Showing version for "] = "显示版本 ",
+	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比你的更新，红色比你老，白色一样.",
+	["Player"] = "玩家",
+	["Version"] = "版本",
+	["Current zone"] = "当前区域",
+	["<zone>"] = "<区域>",
+	["Version query done."] = "版本检测已完成.",
+	["Runs a version query on your current zone."] = "对当前区域进行版本检测.",
+	["Closes the version query window."] = "关闭版本查询窗口.",
+	["current"] = "当前",
+	["Runs a version query on the given zone."] = "在给指定的区域进行版本查询",
+	["Zone"] = "区域",
+	["zone"] = "区域",
+	["N/A"] = "N/A",
+	["BigWigs"] = "BigWigs",
+	["Runs a version query on the BigWigs core."] = "在BigWigs核心部分运行版本查询.",
+	["Nr Replies"] = "回应人数",
+	["Ancient"] = "旧版本",
+
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = "你的BigWigs Turtle-WoW版本已过时！请访问 https://github.com/NineTears/BigWigs-Turtle-zhCN 获取最新版本。",
+	["Close"] = "关闭",
+	["Cancel"] = "取消",
+
+	["People with outdated BigWigs:"] = "在用老版本的BigWigs的人：",
+	["Notify old versions"] = "老版本的通知",
+	["Notify old versions"] = "老版本的通知",
+	["List people with old versions to raid chat."] = "将在用老版本的人列表发送到聊天框",
+	["Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN"] = "下载新版本到：https://github.com/NineTears/BigWigs-Turtle-zhCN",
+
+	["Show popup"] = "显示弹出警报",
+	["Show popup warning on out of date version"] = "显示过期版本警报弹出窗口",
 } end )
 
 L:RegisterTranslations("esES", function() return {

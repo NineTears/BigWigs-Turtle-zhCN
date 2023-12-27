@@ -53,6 +53,34 @@ L:RegisterTranslations("enUS", function() return {
 	["default"] = true,
 	["Default only"] = true,
 	["Use only the default sound."] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Sounds"] = "声音",
+	["sounds"] = "声音",
+	["Options for sounds."] = "声音设置.",
+
+	["toggle"] = "切换",
+	["Use sounds"] = "使用声音",
+	["Toggle sounds on or off."] = "切换声音开和关.",
+	["default"] = "默认",
+	["Default only"] = "默认",
+	["Use only the default sound."] = "只选用默认声音.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Sounds"] = "声音",
+	["sounds"] = "声音",
+	["Options for sounds."] = "声音设置.",
+
+	["toggle"] = "切换",
+	["Use sounds"] = "使用声音",
+	["Toggle sounds on or off."] = "切换声音开和关.",
+	["default"] = "默认",
+	["Default only"] = "默认",
+	["Use only the default sound."] = "只选用默认声音.",
 } end)
 
 L:RegisterTranslations("esES", function() return {

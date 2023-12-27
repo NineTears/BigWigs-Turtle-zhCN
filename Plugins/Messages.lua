@@ -57,6 +57,102 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Test"] = true,
 	["Close"] = true,
+
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Messages"] = "信息提示",
+
+	["msg"] = "消息",
+	["anchor"] = "框体锚点",
+	["rw"] = "团队警报频道",
+	["color"] = "颜色",
+	["scale"] = "大小",
+
+	["Options for the message frame."] = "消息显示模式及相关设置.",
+	["Anchor"] = "信息框锚点",
+	["Show the message anchor frame."] = "显示信息框锚点.",
+	["Use RaidWarning"] = "使用团队通知",
+	["Toggle sending messages to the RaidWarnings frame."] = "选择是否通过团队通知发送消息.",
+	["Use colors"] = "发送彩色消息",
+	["Toggles white only messages ignoring coloring."] = "选择是否只发送单色消息.",
+	["Message frame scale"] = "信息框架缩放",
+
+	["Message frame"] = "信息框",
+	["Show anchor"] = "显示信息框锚点",
+	["Send messages to RaidWarning frame"] = "发送消息到团队通知频道",
+	["Set the message frame scale."] = "调整消息框架缩放",
+	["Colorize messages"] = "彩色消息",
+	["Scale"] = "大小",
+
+	["|cffff0000Co|cffff00fflo|cff00ff00r|r"] = "|cffff0000颜色|cffff00ff颜色|cff00ff00颜色|r",
+	["White"] = "白色",
+	["BigWigs frame"] = "BigWigs窗口模式",
+	["RaidWarning frame"] = "团队通告模式",
+	["Scale is set to %s"] = "缩放比例设置为 %s",
+	["Messages are now sent to the %2$s"] = "将当前消息设置发送到 %2$s",
+	["Messages are currently sent to the %2$s"] = "将当前消息设置发送到 %2$s",
+
+	["display"] = "显示",
+	["Display"] = "显示",
+	["Set where messages are displayed."] = "设置显示消息的位置.",
+	["Display is now set to %2$s"] = "显示现在设置为 %2$s",
+	["Display is currently set to %2$s"] = "显示当前设置为 %2$s",
+
+	["Mik's Scrolling Battle Text"] = "MSBT式战斗信息",
+	["Scrolling Combat Text"] = "SCT式战斗信息",
+	["Floating Combat Text"] = "浮动战斗信息",
+
+	["Test"] = "测试",
+	["Close"] = "退出",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	["Messages"] = "信息提示",
+
+	["msg"] = "消息",
+	["anchor"] = "框体锚点",
+	["rw"] = "团队警报频道",
+	["color"] = "颜色",
+	["scale"] = "大小",
+
+	["Options for the message frame."] = "消息显示模式及相关设置.",
+	["Anchor"] = "信息框锚点",
+	["Show the message anchor frame."] = "显示信息框锚点.",
+	["Use RaidWarning"] = "使用团队通知",
+	["Toggle sending messages to the RaidWarnings frame."] = "选择是否通过团队通知发送消息.",
+	["Use colors"] = "发送彩色消息",
+	["Toggles white only messages ignoring coloring."] = "选择是否只发送单色消息.",
+	["Message frame scale"] = "信息框架缩放",
+
+	["Message frame"] = "信息框",
+	["Show anchor"] = "显示信息框锚点",
+	["Send messages to RaidWarning frame"] = "发送消息到团队通知频道",
+	["Set the message frame scale."] = "调整消息框架缩放",
+	["Colorize messages"] = "彩色消息",
+	["Scale"] = "大小",
+
+	["|cffff0000Co|cffff00fflo|cff00ff00r|r"] = "|cffff0000颜色|cffff00ff颜色|cff00ff00颜色|r",
+	["White"] = "白色",
+	["BigWigs frame"] = "BigWigs窗口模式",
+	["RaidWarning frame"] = "团队通告模式",
+	["Scale is set to %s"] = "缩放比例设置为 %s",
+	["Messages are now sent to the %2$s"] = "将当前消息设置发送到 %2$s",
+	["Messages are currently sent to the %2$s"] = "将当前消息设置发送到 %2$s",
+
+	["display"] = "显示",
+	["Display"] = "显示",
+	["Set where messages are displayed."] = "设置显示消息的位置.",
+	["Display is now set to %2$s"] = "显示现在设置为 %2$s",
+	["Display is currently set to %2$s"] = "显示当前设置为 %2$s",
+
+	["Mik's Scrolling Battle Text"] = "MSBT式战斗信息",
+	["Scrolling Combat Text"] = "SCT式战斗信息",
+	["Floating Combat Text"] = "浮动战斗信息",
+
+	["Test"] = "测试",
+	["Close"] = "退出",
 } end)
 
 L:RegisterTranslations("esES", function() return {
