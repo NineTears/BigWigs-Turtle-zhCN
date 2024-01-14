@@ -202,7 +202,7 @@ BigWigsCommonAuras.defaultDB = {
 	broadcast = false,
 }
 BigWigsCommonAuras.consoleCmd = L["commonauras"]
-BigWigsCommonAuras.revision = 30036
+BigWigsCommonAuras.revision = 30039
 BigWigsCommonAuras.external = true
 BigWigsCommonAuras.consoleOptions = {
 	type = "group",
@@ -429,6 +429,12 @@ end
 
 function BigWigsCommonAuras:CHAT_MSG_MONSTER_EMOTE(msg, sender)
 	if string.find(msg, L["trigger_wormhole"]) then
+		
+		--Debug
+		if UnitName("Player") == "Relar" or UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("sender: "..sender) end
+		
+		
+		whZone = nil
 		if GetNumRaidMembers() > 0 then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == sender then
@@ -451,7 +457,10 @@ function BigWigsCommonAuras:CHAT_MSG_MONSTER_EMOTE(msg, sender)
 			whZone = sender
 		end
 		
-		self:TriggerEvent("BigWigs_SendSync", "BWCAWH "..whZone)
+		if whZone ~= nil then
+			self:TriggerEvent("BigWigs_SendSync", "BWCAWH "..whZone)
+		end
+		
 		
 	elseif	string.find(msg, L["trigger_orange"]) then
 		self:TriggerEvent("BigWigs_SendSync", "BWCAOR")
@@ -461,7 +470,7 @@ function BigWigsCommonAuras:CHAT_MSG_MONSTER_EMOTE(msg, sender)
 	end
 end
 
-function BigWigsCommonAuras:CHAT_MSG_SYSTEM(msg)
+function BigWigsCommonAuras:CHAT_MSG_SYSTEM(msg)	
 	if string.find(msg, L["trigger_restartMinSec"]) or string.find(msg, L["trigger_shutdownMinSec"]) then
 		local _,_, minutes, seconds = string.find(msg, " in (.+) Minutes (.+) Seconds.")
 		timeToShutdown = tonumber(minutes) * 60 + tonumber(seconds)

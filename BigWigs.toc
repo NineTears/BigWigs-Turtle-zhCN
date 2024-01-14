@@ -78,6 +78,7 @@ Raids\AQ20\Ossirian.lua
 Raids\AQ20\Moam.lua
 Raids\AQ20\Kurinaxx.lua
 Raids\AQ20\FleshHunter.lua
+Raids\AQ20\HiveZaraSoldier.lua
 
 Raids\AQ40\Skeram.lua
 Raids\AQ40\BugFamily.lua

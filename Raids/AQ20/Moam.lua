@@ -29,33 +29,7 @@ L:RegisterTranslations("enUS", function() return {
 	addswarn = "法力恶魔出现！莫阿姆麻痹90秒！",
 	paralyzebar = "麻痹",
 	returnincoming = "莫阿姆还有%s秒解除麻痹！",
-	returntrigger = "Energize fades from 莫阿姆.",
-	returntrigger2 = "bristles with energy",
-	returnwarn = "莫阿姆解除麻痹！90秒后出现法力恶魔！",
-} end )
-
-L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
-	cmd = "Moam",
-
-	adds_cmd = "adds",
-	adds_name = "法力恶魔警报",
-	adds_desc = "警报法力恶魔的出现",
-
-	paralyze_cmd = "paralyze",
-	paralyze_name = "麻痹警报",
-	paralyze_desc = "警报麻痹状态",
-
-	starttrigger = "%s senses your fear.",
-	startwarn = "开始战斗！90秒后出现法力恶魔！",
-	addsbar = "法力恶魔",
-	addsincoming = "还有%s秒出现法力恶魔！",
-	addstrigger = "drains your mana and turns to stone.",
-	addswarn = "法力恶魔出现！莫阿姆麻痹90秒！",
-	paralyzebar = "麻痹",
-	returnincoming = "莫阿姆还有%s秒解除麻痹！",
-	returntrigger = "Energize fades from 莫阿姆.",
+	returntrigger = "Energize fades from Moam.",
 	returntrigger2 = "bristles with energy",
 	returnwarn = "莫阿姆解除麻痹！90秒后出现法力恶魔！",
 } end )
@@ -105,7 +79,31 @@ L:RegisterTranslations("deDE", function() return {
 	returnwarn = "Moam erwacht! Elementare in 90 Sekunden!",
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2023-12-21
+	cmd = "Moam",
 
+	adds_cmd = "adds",
+	adds_name = "法力恶魔警报",
+	adds_desc = "警报法力恶魔的出现",
+
+	paralyze_cmd = "paralyze",
+	paralyze_name = "麻痹警报",
+	paralyze_desc = "警报麻痹状态",
+
+	starttrigger = "%s senses your fear.",
+	startwarn = "开始战斗！90秒后出现法力恶魔！",
+	addsbar = "法力恶魔",
+	addsincoming = "还有%s秒出现法力恶魔！",
+	addstrigger = "drains your mana and turns to stone.",
+	addswarn = "法力恶魔出现！莫阿姆麻痹90秒！",
+	paralyzebar = "麻痹",
+	returnincoming = "莫阿姆还有%s秒解除麻痹！",
+	returntrigger = "Energize fades from Moam.",
+	returntrigger2 = "bristles with energy",
+	returnwarn = "莫阿姆解除麻痹！90秒后出现法力恶魔！",
+} end )
 ---------------------------------
 --      	Variables 		   --
 ---------------------------------
