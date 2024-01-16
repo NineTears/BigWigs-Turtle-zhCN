@@ -26,7 +26,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	supreme_cmd = "supreme",
 	supreme_name = "无敌警报",
-	supreme_desc = "无敌模式警报",
+	supreme_desc = "无敌模式警告",
 	
 	weakness_cmd = "weakness",
 	weakness_name = "奥斯里安的弱点警报",
@@ -86,7 +86,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	supreme_cmd = "supreme",
 	supreme_name = "无敌警报",
-	supreme_desc = "无敌模式警报",
+	supreme_desc = "无敌模式警告",
 	
 	weakness_cmd = "weakness",
 	weakness_name = "奥斯里安的弱点警报",

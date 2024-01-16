@@ -66,7 +66,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Zul'Gurub"] = "ZG",
 	["Molten Core"] = "MC",
 	["Blackwing Lair"] = "BWL",
-	["Temple of Ahn'Qiraj"] = "AQ40",
+	["Ahn'Qiraj"] = "AQ40",
 	["Ruins of Ahn'Qiraj"] = "AQ20",
 	["Onyxia's Lair"] = "Onyxia",
 	["Naxxramas"] = "Naxxramas",
@@ -92,7 +92,7 @@ L:RegisterTranslations("enUS", function() return {
 	["You have slain %s!"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-27
+	-- Last update: 2024-01-16
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",
@@ -123,7 +123,7 @@ L:RegisterTranslations("enUS", function() return {
 	["debug"] = "调试",
 	["Debugging"] = "调试中",
 	["Show debug messages."] = "显示调试消息.",
-	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或者有A)",
+	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或有A权限)",
 	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
 	bosskill_cmd = "kill",
 	bosskill_name = "首领死亡",
@@ -138,7 +138,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Zul'Gurub"] = "祖尔格拉布",
 	["Molten Core"] = "熔火之心",
 	["Blackwing Lair"] = "黑翼之巢",
-	["Temple of Ahn'Qiraj"] = "安其拉神殿",
+	["Ahn'Qiraj"] = "安其拉",
 	["Ruins of Ahn'Qiraj"] = "安其拉废墟",
 	["Onyxia's Lair"] = "奥妮克希亚的巢穴",
 	["Naxxramas"] = "纳克萨玛斯",
@@ -195,7 +195,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["debug"] = "调试",
 	["Debugging"] = "调试中",
 	["Show debug messages."] = "显示调试消息.",
-	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或者有A)",
+	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或有A权限)",
 	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
 	bosskill_cmd = "kill",
 	bosskill_name = "首领死亡",
@@ -210,7 +210,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Zul'Gurub"] = "祖尔格拉布",
 	["Molten Core"] = "熔火之心",
 	["Blackwing Lair"] = "黑翼之巢",
-	["Temple of Ahn'Qiraj"] = "安其拉神殿",
+	["Ahn'Qiraj"] = "安其拉",
 	["Ruins of Ahn'Qiraj"] = "安其拉废墟",
 	["Onyxia's Lair"] = "奥妮克希亚的巢穴",
 	["Naxxramas"] = "纳克萨玛斯",
@@ -282,7 +282,7 @@ L:RegisterTranslations("esES", function() return {
 	["Zul'Gurub"] = "ZG",
 	["Molten Core"] = "NM",
 	["Blackwing Lair"] = "GAN",
-	["Temple of Ahn'Qiraj"] = "AQ40",
+	["Ahn'Qiraj"] = "AQ40",
 	["Ruins of Ahn'Qiraj"] = "AQ20",
 	["Onyxia's Lair"] = "Onyxia",
 	["Naxxramas"] = "Naxxramas",
@@ -338,7 +338,7 @@ L:RegisterTranslations("deDE", function() return {
 	["Zul'Gurub"] = "ZG",
 	["Molten Core"] = "MC",
 	["Blackwing Lair"] = "BWL",
-	["Temple of Ahn'Qiraj"] = "AQ40",
+	["Ahn'Qiraj"] = "AQ40",
 	["Ruins of Ahn'Qiraj"] = "AQ20",
 	["Onyxia's Lair"] = "Onyxia",
 	["Naxxramas"] = "Naxxramas",
@@ -418,7 +418,7 @@ BigWigs.modulePrototype.bossSync = nil -- "Ouro"
 -- override
 BigWigs.modulePrototype.revision = 1 -- To be overridden by the module!
 BigWigs.modulePrototype.started = false
-BigWigs.modulePrototype.zonename = nil -- AceLibrary("Babble-Zone-2.2")["Temple of Ahn'Qiraj"]
+BigWigs.modulePrototype.zonename = nil -- AceLibrary("Babble-Zone-2.2")["Ahn'Qiraj"]
 BigWigs.modulePrototype.enabletrigger = nil -- boss
 BigWigs.modulePrototype.wipemobs = nil -- adds that will be considered in CheckForEngage
 BigWigs.modulePrototype.toggleoptions = nil -- {"sweep", "sandblast", "scarab", -1, "emerge", "submerge", -1, "berserk", "bosskill"}
@@ -900,7 +900,7 @@ function BigWigs:ModuleDeclaration(bossName, zoneName)
 	--module.translatedName = AceLibrary("Babble-Boss-2.2")[bossName]
 
 	-- zone
-	local raidZones = {"Blackwing Lair", "Ruins of Ahn'Qiraj", "Temple of Ahn'Qiraj", "Molten Core", "Naxxramas", "Emerald Sanctum", "Zul'Gurub"}
+	local raidZones = {"Blackwing Lair", "Ruins of Ahn'Qiraj", "Ahn'Qiraj", "Molten Core", "Naxxramas", "Emerald Sanctum", "Zul'Gurub"}
 	local isOutdoorraid = true
 	for i, value in ipairs(raidZones) do
 		if value == zoneName then

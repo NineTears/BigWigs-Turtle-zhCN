@@ -10,7 +10,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	bigicon_cmd = "bigicon",
 	bigicon_name = "陷阱和叠加图标警报",
-	bigicon_desc = "当你被陷阱击中或叠加过多时显示大图标",
+	bigicon_desc = "当你被陷阱击中或叠加过多时显示大图标警告",
 	
 	trap_cmd = "trap",
 	trap_name = "陷阱警报",
@@ -26,11 +26,11 @@ L:RegisterTranslations("enUS", function() return {
 	
 	sounds_cmd = "sounds",
 	sounds_name = "叠加过多声音警报",
-	sounds_desc = "当你叠加过多时播放声音效果",
+	sounds_desc = "当你叠加过多时播放声音警告",
 	
 	taunt_cmd = "taunt",
 	taunt_name = "嘲讽大图标警报",
-	taunt_desc = "当你应该嘲讽时显示大图标",
+	taunt_desc = "当你应该嘲讽时显示大图标警告",
 	
 	trap_trigger = "Sand Trap hits (.+) for",
 	trap_warn = "沙坑",
@@ -49,7 +49,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	bigicon_cmd = "bigicon",
 	bigicon_name = "陷阱和叠加图标警报",
-	bigicon_desc = "当你被陷阱击中或叠加过多时显示大图标",
+	bigicon_desc = "当你被陷阱击中或叠加过多时显示大图标警告",
 	
 	trap_cmd = "trap",
 	trap_name = "陷阱警报",
@@ -65,11 +65,11 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	sounds_cmd = "sounds",
 	sounds_name = "叠加过多声音警报",
-	sounds_desc = "当你叠加过多时播放声音效果",
+	sounds_desc = "当你叠加过多时播放声音警告",
 	
 	taunt_cmd = "taunt",
 	taunt_name = "嘲讽大图标警报",
-	taunt_desc = "当你应该嘲讽时显示大图标",
+	taunt_desc = "当你应该嘲讽时显示大图标警告",
 	
 	trap_trigger = "Sand Trap hits (.+) for",
 	trap_warn = "沙坑",

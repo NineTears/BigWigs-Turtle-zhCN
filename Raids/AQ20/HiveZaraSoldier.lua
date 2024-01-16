@@ -11,7 +11,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	retaliationgain_cmd = "retaliationgain",
 	retaliationgain_name = "反击风暴获得警报",
-	retaliationgain_desc = "警告反击风暴获得",
+	retaliationgain_desc = "警告获得反击风暴",
 	
 	retaliationhityou_cmd = "retaliationhityou",
 	retaliationhityou_name = "反击风暴警报",
@@ -32,7 +32,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	retaliationgain_cmd = "retaliationgain",
 	retaliationgain_name = "反击风暴获得警报",
-	retaliationgain_desc = "警告反击风暴获得",
+	retaliationgain_desc = "警告获得反击风暴",
 	
 	retaliationhityou_cmd = "retaliationhityou",
 	retaliationhityou_name = "反击风暴警报",

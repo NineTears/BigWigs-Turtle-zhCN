@@ -13,32 +13,32 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "BugFamily",
 	
 	panic_cmd = "panic",
-	panic_name = "Fear",
-	panic_desc = "Warn for Princess Yauj's Panic.",
+	panic_name = "恐惧",
+	panic_desc = "警告亚尔基公主的恐惧技能。",
 
 	toxicvolley_cmd = "toxicvolley",
-	toxicvolley_name = "Toxic Volley",
-	toxicvolley_desc = "Warn for Lord Kri's Toxic Volley.",
+	toxicvolley_name = "毒性箭雨",
+	toxicvolley_desc = "警告克里领主的毒性箭雨技能。",
 
 	heal_cmd = "heal",
-	heal_name = "Great Heal",
-	heal_desc = "Announce Princess Yauj's heals.",
+	heal_name = "强效治疗",
+	heal_desc = "警告亚尔基公主的治疗技能。",
 
 	announce_cmd = "announce",
-	announce_name = "Poison Cloud",
-	announce_desc = "Whispers players that stand in the Poison Cloud.\n\n(Requires assistant or higher)",
+	announce_name = "毒云",
+	announce_desc = "密语站在毒云中的玩家。\n\n（需要是团长或有A权限）",
 
 	deathspecials_cmd = "deathspecials",
-	deathspecials_name = "Death Specials",
-	deathspecials_desc = "Lets people know which boss has been killed and what special abilities they do.",
+	deathspecials_name = "Boss死亡特殊技能",
+	deathspecials_desc = "通知玩家哪个Boss已被击败以及他们的特殊技能。",
 
 	enrage_cmd = "enrage",
-	enrage_name = "Enrage",
-	enrage_desc = "Enrage timers.",
+	enrage_name = "狂暴",
+	enrage_desc = "狂暴计时器。",
 	
 	trigger_heal = "Princess Yauj begins to cast Great Heal.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	bar_heal = "Great Heal",
-	msg_heal = "Casting heal!",
+	bar_heal = "强效治疗",
+	msg_heal = "正在施放治疗！",
 	
 	trigger_attack1 = "Princess Yauj attacks",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
 	trigger_attack2 = "Princess Yauj misses",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
@@ -49,25 +49,86 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_toxicVolleyAfflicted = "afflicted by Toxic Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_toxicVolleyResist = "Toxic Volley was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 	trigger_toxicVolleyImmune = "Toxic Volley fail",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_toxicVolley = "Toxic Volley",
+	bar_toxicVolley = "毒性箭雨",
 
 	trigger_panic = "afflicted by Panic",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_panicResist = "Panic was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 	trigger_panicImmune = "Panic fails",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_panic = "Panic",
+	bar_panic = "恐惧",
 
 	trigger_toxicVapors = "You suffer (.*) Nature damage from Ruklar the Trapper's Toxic Vapors.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	msg_toxicVapors = "Move away from the Poison Cloud!",
+	msg_toxicVapors = "远离毒云！",
 	
 	trigger_enrage = "%s goes into a berserker rage!",--CHAT_MSG_MONSTER_EMOTE (not confirmed)
-	bar_enrage = "Enrage",
-	msg_enrage60 = "Enrage in 60 seconds!",
-	msg_enrage10 = "Enrage in 10 seconds!",
-	msg_enrage = "Enraged!",
+	bar_enrage = "狂暴",
+	msg_enrage60 = "60秒后狂暴！",
+	msg_enrage10 = "10秒后狂暴！",
+	msg_enrage = "狂暴了！",
 	
-	msg_kriDead = "Kri is dead, POISON CLOUD!",
-	msg_yaujDead = "Yauj is dead, KILL THE SPAWNS!",
-	msg_vemDead = "Vem is dead, ENRAGE!",	
+	msg_kriDead = "克里领主已死亡，毒云出现！",
+	msg_yaujDead = "亚尔基公主已死亡，击杀亚尔基的子嗣！",
+	msg_vemDead = "维姆已死亡，狂暴状态！",	
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	cmd = "BugFamily",
+	
+	panic_cmd = "panic",
+	panic_name = "恐惧",
+	panic_desc = "警告亚尔基公主的恐惧技能。",
+
+	toxicvolley_cmd = "toxicvolley",
+	toxicvolley_name = "毒性箭雨",
+	toxicvolley_desc = "警告克里领主的毒性箭雨技能。",
+
+	heal_cmd = "heal",
+	heal_name = "强效治疗",
+	heal_desc = "警告亚尔基公主的治疗技能。",
+
+	announce_cmd = "announce",
+	announce_name = "毒云",
+	announce_desc = "密语站在毒云中的玩家。\n\n（需要是团长或有A权限）",
+
+	deathspecials_cmd = "deathspecials",
+	deathspecials_name = "Boss死亡特殊技能",
+	deathspecials_desc = "通知玩家哪个Boss已被击败以及他们的特殊技能。",
+
+	enrage_cmd = "enrage",
+	enrage_name = "狂暴",
+	enrage_desc = "狂暴计时器。",
+	
+	trigger_heal = "Princess Yauj begins to cast Great Heal.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	bar_heal = "强效治疗",
+	msg_heal = "正在施放治疗！",
+	
+	trigger_attack1 = "Princess Yauj attacks",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
+	trigger_attack2 = "Princess Yauj misses",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
+	trigger_attack3 = "Princess Yauj hits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
+	trigger_attack4 = "Princess Yauj crits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
+	
+	trigger_toxicVolleyHit = "Toxic Volley hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_toxicVolleyAfflicted = "afflicted by Toxic Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_toxicVolleyResist = "Toxic Volley was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+	trigger_toxicVolleyImmune = "Toxic Volley fail",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	bar_toxicVolley = "毒性箭雨",
+
+	trigger_panic = "afflicted by Panic",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_panicResist = "Panic was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+	trigger_panicImmune = "Panic fails",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	bar_panic = "恐惧",
+
+	trigger_toxicVapors = "You suffer (.*) Nature damage from Ruklar the Trapper's Toxic Vapors.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	msg_toxicVapors = "远离毒云！",
+	
+	trigger_enrage = "%s goes into a berserker rage!",--CHAT_MSG_MONSTER_EMOTE (not confirmed)
+	bar_enrage = "狂暴",
+	msg_enrage60 = "60秒后狂暴！",
+	msg_enrage10 = "10秒后狂暴！",
+	msg_enrage = "狂暴了！",
+	
+	msg_kriDead = "克里领主已死亡，毒云出现！",
+	msg_yaujDead = "亚尔基公主已死亡，击杀亚尔基的子嗣！",
+	msg_vemDead = "维姆已死亡，狂暴状态！",	
 } end )
 
 local timer = {

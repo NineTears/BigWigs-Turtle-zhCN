@@ -73,7 +73,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	["Pull"] = "开怪",
 	["pull"] = "pull",
-	["You have to be the raid leader or an assistant"] = "你必须是团长或有A权限",
+	["You have to be the raid leader or an assistant"] = "需要是团长或有A权限",
 	
 	["Enable"] = "启用",
 	["Enable pulltimer."] = "启用开怪计时",
@@ -97,7 +97,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	["Pull"] = "开怪",
 	["pull"] = "pull",
-	["You have to be the raid leader or an assistant"] = "你必须是团长或有A权限",
+	["You have to be the raid leader or an assistant"] = "需要是团长或有A权限",
 	
 	["Enable"] = "启用",
 	["Enable pulltimer."] = "启用开怪计时",

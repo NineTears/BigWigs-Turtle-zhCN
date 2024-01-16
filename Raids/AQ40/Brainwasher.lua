@@ -10,8 +10,8 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "BrainWasher",
 	
 	mc_cmd = "mc",
-	mc_name = "Mind Control Alert",
-	mc_desc = "Warn for Mind Control",
+	mc_name = "精神控制警报",
+	mc_desc = "警告精神控制",
 	
 	trigger_mcYou = "You are afflicted by Cause Insanity.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE          --To be confirmed
 	trigger_mcOther = "(.+) is afflicted by Cause Insanity.",--CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
@@ -19,6 +19,23 @@ L:RegisterTranslations("enUS", function() return {
 	bar_mc = " MC",
 	
 	["You have slain %s!"] = true,
+	["You have slain %s!"] = "你击败了%s！",
+	
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	cmd = "BrainWasher",
+	
+	mc_cmd = "mc",
+	mc_name = "精神控制警报",
+	mc_desc = "警告精神控制",
+	
+	trigger_mcYou = "You are afflicted by Cause Insanity.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE          --To be confirmed
+	trigger_mcOther = "(.+) is afflicted by Cause Insanity.",--CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_mcFade = "Cause Insanity fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	bar_mc = " MC",
+	
+	["You have slain %s!"] = "你击败了%s！",
 	
 } end )
 

@@ -50,7 +50,7 @@ L:RegisterTranslations("enUS", function() return {
 	["%s disabled."] = "%s 禁用.",
 	["%s icon is now %s."] = "%s 图标现在是 %s.",
 	["Show it again with /bw plugin minimap."] = "再次显示 /bw 小地图插件.",
-	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A.",
+	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A权限",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
@@ -73,7 +73,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["%s disabled."] = "%s 禁用.",
 	["%s icon is now %s."] = "%s 图标现在是 %s.",
 	["Show it again with /bw plugin minimap."] = "再次显示 /bw 小地图插件.",
-	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A.",
+	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A权限",
 } end)
 
 L:RegisterTranslations("esES", function() return {

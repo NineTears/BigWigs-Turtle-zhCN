@@ -10,11 +10,11 @@ L:RegisterTranslations("enUS", function() return {
 
 	sacrifice_cmd = "sacrifice",
 	sacrifice_name = "祭品警报",
-	sacrifice_desc = "被作为祭品时发出警报",
+	sacrifice_desc = "被作为祭品时发出警告",
 	
 	bigicon_cmd = "bigicons",
 	bigicon_name = "击杀幼虫时显示图标警报",
-	bigicon_desc = "当幼虫产生时显示大图标警报",
+	bigicon_desc = "当幼虫产生时显示大图标警告",
 	
 	sacrificeother_trigger = "(.*) is afflicted by Paralyze.",
 	sacrificeyou_trigger = "(.*) are afflicted by Paralyze.",
@@ -37,11 +37,11 @@ L:RegisterTranslations("zhCN", function() return {
 
 	sacrifice_cmd = "sacrifice",
 	sacrifice_name = "祭品警报",
-	sacrifice_desc = "被作为祭品时发出警报",
+	sacrifice_desc = "被作为祭品时发出警告",
 	
 	bigicon_cmd = "bigicons",
 	bigicon_name = "击杀幼虫时显示图标警报",
-	bigicon_desc = "当幼虫产生时显示大图标警报",
+	bigicon_desc = "当幼虫产生时显示大图标警告",
 	
 	sacrificeother_trigger = "(.*) is afflicted by Paralyze.",
 	sacrificeyou_trigger = "(.*) are afflicted by Paralyze.",

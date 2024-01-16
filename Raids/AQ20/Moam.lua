@@ -15,11 +15,11 @@ L:RegisterTranslations("enUS", function() return {
 
 	adds_cmd = "adds",
 	adds_name = "法力恶魔警报",
-	adds_desc = "警报法力恶魔的出现",
+	adds_desc = "警告法力恶魔的出现",
 
 	paralyze_cmd = "paralyze",
 	paralyze_name = "麻痹警报",
-	paralyze_desc = "警报麻痹状态",
+	paralyze_desc = "警告麻痹状态",
 
 	starttrigger = "%s senses your fear.",
 	startwarn = "开始战斗！90秒后出现法力恶魔！",
@@ -86,11 +86,11 @@ L:RegisterTranslations("zhCN", function() return {
 
 	adds_cmd = "adds",
 	adds_name = "法力恶魔警报",
-	adds_desc = "警报法力恶魔的出现",
+	adds_desc = "警告法力恶魔的出现",
 
 	paralyze_cmd = "paralyze",
 	paralyze_name = "麻痹警报",
-	paralyze_desc = "警报麻痹状态",
+	paralyze_desc = "警告麻痹状态",
 
 	starttrigger = "%s senses your fear.",
 	startwarn = "开始战斗！90秒后出现法力恶魔！",

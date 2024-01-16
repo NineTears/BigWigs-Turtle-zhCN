@@ -10,13 +10,26 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Champion",
 
 	fear_cmd = "fear",
-	fear_name = "Intimidating Shout Alert",
-	fear_desc = "Warn for Intimidating Shout",
+	fear_name = "破胆怒吼警报",
+	fear_desc = "警告破胆怒吼",
 	
 	fear_trigger = "afflicted by Intimidating Shout",
 	fear_trigger2 = "Qiraji Champion's Intimidating Shout was resisted",
 	fear_trigger3 = "Qiraji Champion's Intimidating Shout fail",
-	fear_bar = "Intimidating Shout CD",
+	fear_bar = "破胆怒吼冷却",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	cmd = "Champion",
+
+	fear_cmd = "fear",
+	fear_name = "破胆怒吼警报",
+	fear_desc = "警告破胆怒吼",
+	
+	fear_trigger = "afflicted by Intimidating Shout",
+	fear_trigger2 = "Qiraji Champion's Intimidating Shout was resisted",
+	fear_trigger3 = "Qiraji Champion's Intimidating Shout fail",
+	fear_bar = "破胆怒吼冷却",
 } end )
 
 local timer = {

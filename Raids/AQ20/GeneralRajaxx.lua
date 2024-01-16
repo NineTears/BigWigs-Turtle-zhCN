@@ -11,39 +11,39 @@ L:RegisterTranslations("enUS", function() return {
 
 	wave_cmd = "wave",
 	wave_name = "来袭警报",
-	wave_desc = "当新一批敌人来袭时发出警报",
+	wave_desc = "当新一批敌人来袭时发出警告",
 	
 	fear_cmd = "fear",--1
 	fear_name = "恐惧警报",
-	fear_desc = "警报恐惧状态",
+	fear_desc = "警告恐惧状态",
 	
 	attackorder_cmd = "attackorder",--2
 	attackorder_name = "攻击指令警报",
-	attackorder_desc = "警报攻击指令",
+	attackorder_desc = "警告攻击指令",
 	
 	lightningcloud_cmd = "lightningcloud",--3
 	lightningcloud_name = "闪电云警报",
-	lightningcloud_desc = "警报闪电云",
+	lightningcloud_desc = "警告闪电云",
 	
 	shockwave_cmd = "shockwave",--4
 	shockwave_name = "震荡波警报",
-	shockwave_desc = "警报震荡波",
+	shockwave_desc = "警告震荡波",
 	
 	shield_cmd = "shield",--5
 	shield_name = "护盾警报",
-	shield_desc = "警报护盾",
+	shield_desc = "警告护盾",
 	
 	knockback_cmd = "knockback",--6
 	knockback_name = "击退警报",
-	knockback_desc = "警报击退",
+	knockback_desc = "警告击退",
 	
 	enlarge_cmd = "enlarge",--7
 	enlarge_name = "巨化术警报",
-	enlarge_desc = "警报巨化术",
+	enlarge_desc = "警告巨化术",
 	
 	thundercrash_cmd = "thundercrash",--2
 	thundercrash_name = "雷霆冲击警报",
-	thundercrash_desc = "警报雷霆冲击",
+	thundercrash_desc = "警告雷霆冲击",
 	
 	trigger_eventStarted = "Remember, Rajaxx, when I said I'd kill you last?",--CHAT_MSG_MONSTER_YELL
 	bar_eventStart = "战斗开始",
@@ -102,39 +102,39 @@ L:RegisterTranslations("zhCN", function() return {
 
 	wave_cmd = "wave",
 	wave_name = "来袭警报",
-	wave_desc = "当新一批敌人来袭时发出警报",
+	wave_desc = "当新一批敌人来袭时发出警告",
 	
 	fear_cmd = "fear",--1
 	fear_name = "恐惧警报",
-	fear_desc = "警报恐惧状态",
+	fear_desc = "警告恐惧状态",
 	
 	attackorder_cmd = "attackorder",--2
 	attackorder_name = "攻击指令警报",
-	attackorder_desc = "警报攻击指令",
+	attackorder_desc = "警告攻击指令",
 	
 	lightningcloud_cmd = "lightningcloud",--3
 	lightningcloud_name = "闪电云警报",
-	lightningcloud_desc = "警报闪电云",
+	lightningcloud_desc = "警告闪电云",
 	
 	shockwave_cmd = "shockwave",--4
 	shockwave_name = "震荡波警报",
-	shockwave_desc = "警报震荡波",
+	shockwave_desc = "警告震荡波",
 	
 	shield_cmd = "shield",--5
 	shield_name = "护盾警报",
-	shield_desc = "警报护盾",
+	shield_desc = "警告护盾",
 	
 	knockback_cmd = "knockback",--6
 	knockback_name = "击退警报",
-	knockback_desc = "警报击退",
+	knockback_desc = "警告击退",
 	
 	enlarge_cmd = "enlarge",--7
 	enlarge_name = "巨化术警报",
-	enlarge_desc = "警报巨化术",
+	enlarge_desc = "警告巨化术",
 	
 	thundercrash_cmd = "thundercrash",--2
 	thundercrash_name = "雷霆冲击警报",
-	thundercrash_desc = "警报雷霆冲击",
+	thundercrash_desc = "警告雷霆冲击",
 	
 	trigger_eventStarted = "Remember, Rajaxx, when I said I'd kill you last?",--CHAT_MSG_MONSTER_YELL
 	bar_eventStart = "战斗开始",

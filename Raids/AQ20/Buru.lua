@@ -7,17 +7,17 @@ module.toggleoptions = {"watch", "dismember", "phase", "bosskill"}
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Buru",
 
-	watch_cmd = "凝视",
+	watch_cmd = "watch",
 	watch_name = "凝视警报",
 	watch_desc = "警告谁正在被凝视",
 	
-	dismember_cmd = "肢解",
+	dismember_cmd = "dismember",
 	dismember_name = "肢解警报",
 	dismember_desc = "警告即将发生的肢解",
 	
-	phase_cmd = "阶段",
+	phase_cmd = "phase",
 	phase_name = "阶段警报",
-	phase_desc = "阶段转换警告",
+	phase_desc = "警告阶段转换",
 	
 	trigger_watch = "sets eyes on (.+)!",--CHAT_MSG_MONSTER_EMOTE
 	msg_watch = " 被布鲁盯上了！",
@@ -73,17 +73,17 @@ L:RegisterTranslations("esES", function() return {
 L:RegisterTranslations("zhCN", function() return {
 	cmd = "Buru",
 
-	watch_cmd = "凝视",
+	watch_cmd = "watch",
 	watch_name = "凝视警报",
 	watch_desc = "警告谁正在被凝视",
 	
-	dismember_cmd = "肢解",
+	dismember_cmd = "dismember",
 	dismember_name = "肢解警报",
 	dismember_desc = "警告即将发生的肢解",
 	
-	phase_cmd = "阶段",
+	phase_cmd = "phase",
 	phase_name = "阶段警报",
-	phase_desc = "阶段转换警告",
+	phase_desc = "警告阶段转换",
 	
 	trigger_watch = "sets eyes on (.+)!",--CHAT_MSG_MONSTER_EMOTE
 	msg_watch = " 被布鲁盯上了！",

@@ -14,36 +14,36 @@ L:RegisterTranslations("enUS", function() return {
 	reflect_desc = "显示守护者的反射计时条",
 	
 	plagueyou_cmd = "plagueyou",
-	plagueyou_name = "你中瘟疫警报",
-	plagueyou_desc = "警报你中了瘟疫",
+	plagueyou_name = "你中了瘟疫警报",
+	plagueyou_desc = "警告你中了瘟疫",
 	
 	plagueother_cmd = "plagueother",
-	plagueother_name = "他人中瘟疫警报",
-	plagueother_desc = "警报他人中了瘟疫",
+	plagueother_name = "其他人中了瘟疫警报",
+	plagueother_desc = "警告其他人中了瘟疫",
 	
 	icon_cmd = "icon",
 	icon_name = "放置标记",
-	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（你需要是团长或有A权限）",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要是团长或有A权限）",
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
-	thunderclap_desc = "警报雷霆一击",
+	thunderclap_desc = "警告雷霆一击",
 	
 	shadowstorm_cmd = "shadowstorm",
 	shadowstorm_name = "暗影风暴警报",
-	shadowstorm_desc = "警报暗影风暴",
+	shadowstorm_desc = "警告暗影风暴",
 	
 	meteor_cmd = "meteor",
 	meteor_name = "流星警报",
-	meteor_desc = "警报流星",
+	meteor_desc = "警告流星",
 	
 	explode_cmd = "explode",
 	explode_name = "爆炸警报",
-	explode_desc = "警报即将到来的爆炸",
+	explode_desc = "警告即将到来的爆炸",
 	
 	enrage_cmd = "enrage",
 	enrage_name = "狂怒警报",
-	enrage_desc = "警报狂怒状态",
+	enrage_desc = "警告狂怒状态",
 	
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
@@ -69,20 +69,20 @@ L:RegisterTranslations("enUS", function() return {
 
 	meteortrigger = "Anubisath Guardian's Meteor",
 	meteorbar = "流星冷却",
-	meteorwarn = "流星！",
+	meteorwarn = "流星来袭！",
 	
 	explodetrigger = "Anubisath Guardian gains Explode.",
-	explodewarn = "爆炸！",
+	explodewarn = "即将爆炸！",
 	
 	enragetrigger = "Anubisath Guardian gains Enrage.",
-	enragewarn = "狂怒！",
+	enragewarn = "进入狂怒状态！",
 	
 	plaguetrigger = "^([^%s]+) ([^%s]+) afflicted by Plague%.$",
-	plaguewarn = "中了瘟疫！快跑出人群！",
-	plagueyouwarn = "你中了瘟疫！快跑出人群！",
+	plaguewarn = "感染了瘟疫！快跑出人群！",
+	plagueyouwarn = "你感染了瘟疫！快跑出人群！",
 	plagueyou = "你",
 	plagueare = "受到了",
-	plague_onme = "瘟疫在",
+	plague_onme = "瘟疫目标为",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_SELF_DAMAGE
 	msg_selfReflect = "别自己打自己！",
@@ -98,36 +98,36 @@ L:RegisterTranslations("zhCN", function() return {
 	reflect_desc = "显示守护者的反射计时条",
 	
 	plagueyou_cmd = "plagueyou",
-	plagueyou_name = "你中瘟疫警报",
-	plagueyou_desc = "警报你中了瘟疫",
+	plagueyou_name = "你中了瘟疫警报",
+	plagueyou_desc = "警告你中了瘟疫",
 	
 	plagueother_cmd = "plagueother",
-	plagueother_name = "他人中瘟疫警报",
-	plagueother_desc = "警报他人中了瘟疫",
+	plagueother_name = "其他人中了瘟疫警报",
+	plagueother_desc = "警告其他人中了瘟疫",
 	
 	icon_cmd = "icon",
 	icon_name = "放置标记",
-	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（你需要是团长或有A权限）",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要是团长或有A权限）",
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
-	thunderclap_desc = "警报雷霆一击",
+	thunderclap_desc = "警告雷霆一击",
 	
 	shadowstorm_cmd = "shadowstorm",
 	shadowstorm_name = "暗影风暴警报",
-	shadowstorm_desc = "警报暗影风暴",
+	shadowstorm_desc = "警告暗影风暴",
 	
 	meteor_cmd = "meteor",
 	meteor_name = "流星警报",
-	meteor_desc = "警报流星",
+	meteor_desc = "警告流星",
 	
 	explode_cmd = "explode",
 	explode_name = "爆炸警报",
-	explode_desc = "警报即将到来的爆炸",
+	explode_desc = "警告即将到来的爆炸",
 	
 	enrage_cmd = "enrage",
 	enrage_name = "狂怒警报",
-	enrage_desc = "警报狂怒状态",
+	enrage_desc = "警告狂怒状态",
 	
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
@@ -153,20 +153,20 @@ L:RegisterTranslations("zhCN", function() return {
 
 	meteortrigger = "Anubisath Guardian's Meteor",
 	meteorbar = "流星冷却",
-	meteorwarn = "流星！",
+	meteorwarn = "流星来袭！",
 	
 	explodetrigger = "Anubisath Guardian gains Explode.",
-	explodewarn = "爆炸！",
+	explodewarn = "即将爆炸！",
 	
 	enragetrigger = "Anubisath Guardian gains Enrage.",
-	enragewarn = "狂怒！",
+	enragewarn = "进入狂怒状态！",
 	
 	plaguetrigger = "^([^%s]+) ([^%s]+) afflicted by Plague%.$",
-	plaguewarn = "中了瘟疫！快跑出人群！",
-	plagueyouwarn = "你中了瘟疫！快跑出人群！",
+	plaguewarn = "感染了瘟疫！快跑出人群！",
+	plagueyouwarn = "你感染了瘟疫！快跑出人群！",
 	plagueyou = "你",
 	plagueare = "受到了",
-	plague_onme = "瘟疫在",
+	plague_onme = "瘟疫目标为",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_SELF_DAMAGE
 	msg_selfReflect = "别自己打自己！",
