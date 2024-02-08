@@ -76,6 +76,8 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
+	iconPrefix = "Interface\\Icons\\",
+	
 	msg_fearward = " 守护恐惧 ",
 	bar_fearward = " 守护恐惧冷却",
 	
