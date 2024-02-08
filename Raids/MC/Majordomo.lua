@@ -41,43 +41,43 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	disabletrigger = "My flame! Please don",
-	engage_trigger = "Reckless mortals, none may challenge the sons of the living flame!",
+    disabletrigger = "My flame! Please don",
+    engage_trigger = "Reckless mortals, none may challenge the sons of the living flame!",
 
-	magic_trigger = "gains Magic Reflection",
-	dmg_trigger = "gains Damage Shield",
-	magic_over_trigger = "Magic Reflection fades",
-	damage_over_trigger = "Damage Shield fades",
-	healdead = "Flamewaker Healer dies",
-	elitedead = "Flamewaker Elite dies",
-	elitename = "Flamewaker Elite",
-	healername = "Flamewaker Healer",
+    magic_trigger = "gains Magic Reflection",
+    dmg_trigger = "gains Damage Shield",
+    magic_over_trigger = "Magic Reflection fades",
+    damage_over_trigger = "Damage Shield fades",
+    healdead = "Flamewaker Healer dies",
+    elitedead = "Flamewaker Elite dies",
+    elitename = "Flamewaker Elite",
+    healername = "Flamewaker Healer",
 
-	magic_warn = "Magic Reflection for 10 seconds!",
-	dmg_warn = "Damage Shield for 10 seconds!",
-	shield_warn_soon = "3 seconds until new auras!",
-	magic_over_warn = "Magic Reflection down!",
-	dmg_over_warn = "Damage Shield down!",
-	hdeadmsg = "%d/4 Flamewaker Healers dead!",
-	edeadmsg = "%d/4 Flamewaker Elites dead!",
+    magic_warn = "魔法反射10秒钟！",
+    dmg_warn = "伤害护盾10秒钟！",
+    shield_warn_soon = "3秒后新光环出现！",
+    magic_over_warn = "魔法反射结束！",
+    dmg_over_warn = "伤害护盾结束！",
+    hdeadmsg = "%d/4 烈焰行者医师死亡！",
+    edeadmsg = "%d/4 烈焰行者精英死亡！",
 
-	magic_bar = "Magic Reflection",
-	dmg_bar = "Damage Shield",
-	shield_bar = "New shields",
+    magic_bar = "魔法反射",
+    dmg_bar = "伤害护盾",
+    shield_bar = "新光环",
 
-	cmd = "Majordomo",
+    cmd = "Majordomo",
 
-	adds_cmd = "adds",
-	adds_name = "Dead adds counter",
-	adds_desc = "Announces dead Healers and Elites",
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报医师和精英的死亡",
 
-	magic_cmd = "magic",
-	magic_name = "Magic Reflection",
-	magic_desc = "Warn for Magic Reflection",
+    magic_cmd = "magic",
+    magic_name = "魔法反射警报",
+    magic_desc = "魔法反射出现时进行警告",
 
-	dmg_cmd = "dmg",
-	dmg_name = "Damage Shield",
-	dmg_desc = "Warn for Damage Shield",
+    dmg_cmd = "dmg",
+    dmg_name = "伤害护盾警报",
+    dmg_desc = "伤害护盾出现时进行警告",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -160,6 +160,47 @@ L:RegisterTranslations("deDE", function() return {
 	dmg_desc = "Warnung, wenn Schadensschild aktiv.",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    disabletrigger = "My flame! Please don",
+    engage_trigger = "Reckless mortals, none may challenge the sons of the living flame!",
+
+    magic_trigger = "gains Magic Reflection",
+    dmg_trigger = "gains Damage Shield",
+    magic_over_trigger = "Magic Reflection fades",
+    damage_over_trigger = "Damage Shield fades",
+    healdead = "Flamewaker Healer dies",
+    elitedead = "Flamewaker Elite dies",
+    elitename = "Flamewaker Elite",
+    healername = "Flamewaker Healer",
+
+    magic_warn = "魔法反射10秒钟！",
+    dmg_warn = "伤害护盾10秒钟！",
+    shield_warn_soon = "3秒后新光环出现！",
+    magic_over_warn = "魔法反射结束！",
+    dmg_over_warn = "伤害护盾结束！",
+    hdeadmsg = "%d/4 烈焰行者医师死亡！",
+    edeadmsg = "%d/4 烈焰行者精英死亡！",
+
+    magic_bar = "魔法反射",
+    dmg_bar = "伤害护盾",
+    shield_bar = "新光环",
+
+    cmd = "Majordomo",
+
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报医师和精英的死亡",
+
+    magic_cmd = "magic",
+    magic_name = "魔法反射警报",
+    magic_desc = "魔法反射出现时进行警告",
+
+    dmg_cmd = "dmg",
+    dmg_name = "伤害护盾警报",
+    dmg_desc = "伤害护盾出现时进行警告",
+} end)
 
 ------------------------------
 --      Initialization      --

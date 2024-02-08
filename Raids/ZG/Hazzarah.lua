@@ -11,13 +11,13 @@ local module, L = BigWigs:ModuleDeclaration("Hazza'rah", "Zul'Gurub")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Hazzarah",
-	nightmaresummon_trigger = "Hazza\'rah casts Summon Nightmare Illusions\.",
-	nightmaresummon_message = "Kill the spawns!",
+    cmd = "Hazzarah",
+    nightmaresummon_trigger = "Hazza\'rah casts Summon Nightmare Illusions\.",
+    nightmaresummon_message = "击杀幻影！",
 
-	nightmaresummon_cmd = "spawns",
-	nightmaresummon_name = "Spawns alert",
-	nightmaresummon_desc = "Shows a warning when the boss summons Nightmare Illusions.",
+    nightmaresummon_cmd = "spawns",
+    nightmaresummon_name = "幻影警报",
+    nightmaresummon_desc = "当Boss召唤梦魇幻象时显示警告。",
 } end )
 
 L:RegisterTranslations("deDE", function() return {
@@ -40,6 +40,19 @@ L:RegisterTranslations("esES", function() return {
 	nightmaresummon_name = "Alerta de Ilusiones",
 	nightmaresummon_desc = "Avisa cuando el jefe Invoque ilusiones de pesadilla",
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Hazzarah",
+    nightmaresummon_trigger = "Hazza\'rah casts Summon Nightmare Illusions\.",
+    nightmaresummon_message = "击杀幻影！",
+
+    nightmaresummon_cmd = "spawns",
+    nightmaresummon_name = "幻影警报",
+    nightmaresummon_desc = "当Boss召唤梦魇幻象时显示警告。",
+} end )
+
 ---------------------------------
 --      	Variables 		   --
 ---------------------------------

@@ -11,38 +11,38 @@ local module, L = BigWigs:ModuleDeclaration("Flamegor", "Blackwing Lair")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	wingbuffet_trigger = "Flamegor begins to cast Wing Buffet.",
-	shadowflame_trigger = "Flamegor begins to cast Shadow Flame.",
-	frenzygain_trigger = "Flamegor gains Frenzy.",
-	frenzygain_trigger2 = "Flamegor goes into a frenzy!",
-	frenzyend_trigger = "Frenzy fades from Flamegor.",
+    wingbuffet_trigger = "Flamegor begins to cast Wing Buffet.",
+    shadowflame_trigger = "Flamegor begins to cast Shadow Flame.",
+    frenzygain_trigger = "Flamegor gains Frenzy.",
+    frenzygain_trigger2 = "Flamegor goes into a frenzy!",
+    frenzyend_trigger = "Frenzy fades from Flamegor.",
 
-	wingbuffet_message = "Wing Buffet! Next one in 30 seconds!",
-	wingbuffet_warning = "TAUNT now! Wing Buffet soon!",
-	shadowflame_warning = "Shadow Flame incoming!",
-	frenzy_message = "Frenzy! Tranq now!",
-	frenzy_bar = "Frenzy",
-	frenzy_Nextbar = "Next Frenzy",
+    wingbuffet_message = "龙翼攻击！下一次龙翼攻击将在30秒后到来！",
+    wingbuffet_warning = "现在嘲讽！龙翼攻击即将到来！",
+    shadowflame_warning = "暗影烈焰来袭！",
+    frenzy_message = "狂暴！现在使用宁神射击！",
+    frenzy_bar = "狂暴",
+    frenzy_Nextbar = "下一次狂暴",
 
-	wingbuffetcast_bar = "Wing Buffet",
-	wingbuffet_bar = "Next Wing Buffet",
-	wingbuffet1_bar = "Initial Wing Buffet",
-	shadowflame_bar = "Shadow Flame",
-	shadowflame_Nextbar = "Next Shadow Flame",
+    wingbuffetcast_bar = "龙翼攻击施放",
+    wingbuffet_bar = "下一次龙翼攻击",
+    wingbuffet1_bar = "首次龙翼攻击",
+    shadowflame_bar = "暗影烈焰",
+    shadowflame_Nextbar = "下一次暗影烈焰",
 
-	cmd = "Flamegor",
+    cmd = "Flamegor",
 
-	wingbuffet_cmd = "wingbuffet",
-	wingbuffet_name = "Wing Buffet alert",
-	wingbuffet_desc = "Warn when Flamegor casts Wing Buffet.",
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼攻击警报",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
 
-	shadowflame_cmd = "shadowflame",
-	shadowflame_name = "Shadow Flame alert",
-	shadowflame_desc = "Warn when Flamegor casts Shadow Flame.",
+    shadowflame_cmd = "shadowflame",
+    shadowflame_name = "暗影烈焰警报",
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。",
 
-	frenzy_cmd = "frenzy",
-	frenzy_name = "Frenzy alert",
-	frenzy_desc = "Warn when Flamegor is frenzied.",
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂暴警报",
+    frenzy_desc = "当弗莱格尔狂暴时进行警告。", 
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -113,6 +113,43 @@ L:RegisterTranslations("deDE", function() return {
 	frenzy_cmd = "frenzy",
 	frenzy_name = "Alarm f\195\188r Wutanfall",
 	frenzy_desc = "Warnung, wenn Flamegor in Wutanfall ger\195\164t.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    wingbuffet_trigger = "Flamegor begins to cast Wing Buffet.",
+    shadowflame_trigger = "Flamegor begins to cast Shadow Flame.",
+    frenzygain_trigger = "Flamegor gains Frenzy.",
+    frenzygain_trigger2 = "Flamegor goes into a frenzy!",
+    frenzyend_trigger = "Frenzy fades from Flamegor.",
+
+    wingbuffet_message = "龙翼攻击！下一次龙翼攻击将在30秒后到来！",
+    wingbuffet_warning = "现在嘲讽！龙翼攻击即将到来！",
+    shadowflame_warning = "暗影烈焰来袭！",
+    frenzy_message = "狂暴！现在使用宁神射击！",
+    frenzy_bar = "狂暴",
+    frenzy_Nextbar = "下一次狂暴",
+
+    wingbuffetcast_bar = "龙翼攻击施放",
+    wingbuffet_bar = "下一次龙翼攻击",
+    wingbuffet1_bar = "首次龙翼攻击",
+    shadowflame_bar = "暗影烈焰",
+    shadowflame_Nextbar = "下一次暗影烈焰",
+
+    cmd = "Flamegor",
+
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼攻击警报",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
+
+    shadowflame_cmd = "shadowflame",
+    shadowflame_name = "暗影烈焰警报",
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。",
+
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂暴警报",
+    frenzy_desc = "当弗莱格尔狂暴时进行警告。", 
 } end)
 
 ---------------------------------

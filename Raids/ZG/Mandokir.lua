@@ -6,79 +6,82 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"sounds", "bigicon", "sunder", "charge", "gaze", "announce", "puticon", "whirlwind", "enraged", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	ohgan = "Ohgan",
-	cmd = "Mandokir",
+    ohgan = "Ohgan",
+    cmd = "Mandokir",
 
-	engage_trigger = "feed your souls to Hakkar himself",
-	watch_trigger = "(.+)! I'm watching you!",
-	gaze_trigger = "Bloodlord Mandokir begins to cast Threatening Gaze.",
-	gazeafflictyou = "You are afflicted by Threatening Gaze.",
-	gazeafflictother = "(.+) is afflicted by Threatening Gaze.",
-	gazeendyou = "Threatening Gaze fades from you.",
-	gazeendother = "Threatening Gaze fades from (.+).",
-	gazecast = "Incoming Threatening Gaze!",
-	gazewatchedbar = "Threatening Gaze: %s",
-	enragegain = "Bloodlord Mandokir gains Enrage.",
-	enragefade = "Enrage fades from Bloodlord Mandokir.",
-	enragebar = "Enrage",
-	wwgain = "Bloodlord Mandokir gains Whirlwind.",
-	wwloss = "Whirlwind fades from Bloodlord Mandokir.",
-	ww = "Whirlwind",
-	deathyou = "You die.",
-	deathother = "(.+) dies.",
-	you = "you",
-	gaze_warn = "Gaze on ",
-	
-	sunder_trigger = "Sunder Armor %(5%)",
-	sunder_warn = "Too many Sunder stacks, seek help!",
-	
-	watched_warning = "You are being watched! Stop everything!",
-	watched_warning_tell = "You are being watched! Stop everything!",
-	watched_warning_other = "%s is being watched!",
-	enraged_message = "Ohgan down! Mandokir enraged!",
-	
-	charge_trigger = "Bloodlord Mandokir's Charge",
-	chargecd_bar = "Charge CD",
-	
-	announce_cmd = "whispers",
-	announce_name = "Whisper watched players",
-	announce_desc = "Warn when boss uses Threatening Gaze.\n\n(Requires assistant or higher)",
-	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "WW and Gaze big icon alert",
-	bigicon_desc = "Shows a big icon when whirlwind is happening and Gaze is on you",
-	
-	sounds_cmd = "sounds",
-	sounds_name = "Gaze, 5Sunders and WW sound alert",
-	sounds_desc = "Sound alert Gaze is on you, when you have 5 stacks of sunder on you, when whirlwind is happening.",
-	
-	puticon_cmd = "puticon",
-	puticon_name = "Raid icon on watched players",
-	puticon_desc = "Place a raid icon on the watched person.\n\n(Requires assistant or higher)",
-	
-	charge_cmd = "charge",
-	charge_name = "Charge Alert",
-	charge_desc = "Shows Charge bars",
-	
-	gaze_cmd = "gaze",
-	gaze_name = "Threatening Gaze alert",
-	gaze_desc = "Shows bars for Threatening Gaze",
+    engage_trigger = "feed your souls to Hakkar himself",
+    watch_trigger = "(.+)! I'm watching you!",
+    gaze_trigger = "Bloodlord Mandokir begins to cast Threatening Gaze.",
+    gazeafflictyou = "You are afflicted by Threatening Gaze.",
+    gazeafflictother = "(.+) is afflicted by Threatening Gaze.",
+    gazeendyou = "Threatening Gaze fades from you.",
+    gazeendother = "Threatening Gaze fades from (.+).",
+    gazecast = "即将威慑凝视！",
+    gazewatchedbar = "威慑凝视：%s",
+    enragegain = "Bloodlord Mandokir gains Enrage.",
+    enragefade = "Enrage fades from Bloodlord Mandokir.",
+    enragebar = "激怒",
+    wwgain = "Bloodlord Mandokir gains Whirlwind.",
+    wwloss = "Whirlwind fades from Bloodlord Mandokir.",
+    ww = "旋风斩",
+    deathyou = "You die.",
+    deathother = "(.+) dies.",
+    you = "你",
+    gaze_warn = "凝视目标 ",
 
-	whirlwind_cmd = "whirlwind",
-	whirlwind_name = "Whirlwind Alert",
-	whirlwind_desc = "Shows Whirlwind bars",
-	
-	sunder_cmd = "sunder",
-	sunder_name = "5 sunder stacks on you alert",
-	sunder_desc = "Alerts Ohgan's tank to get help if he has 5 stacks of Sunder Armor on him.",
-	
-	enraged_cmd = "enraged",
-	enraged_name = "Enrage alert",
-	enraged_desc = "Announces the boss' Enrage",
+    sunder_trigger = "Sunder Armor %(5%)",
+    sunder_warn = "破甲堆叠过多，寻求帮助！",
 
-	["Possible Gaze"] = true,
-	["Charge"] = true,
-	["Next Whirlwind"] = true,
+    watched_warning = "你正在被观察！停止一切动作！",
+    watched_warning_tell = "你正在被观察！停止一切动作！",
+    watched_warning_other = "%s 正在被观察！",
+    enraged_message = "奥根倒下！曼多基尔激怒！",
+
+    charge_trigger = "Bloodlord Mandokir's Charge",
+    chargecd_bar = "冲锋冷却",
+
+    announce_cmd = "whispers",
+    announce_name = "密语被观察玩家",
+    announce_desc = "当Boss使用威慑凝视时进行警告。\n\n(需要助理或更高权限)",
+
+    bigicon_cmd = "bigicon",
+    bigicon_name = "旋风斩和凝视大图标警告",
+    bigicon_desc = "当旋风斩发生和凝视定位在你身上时显示大图标",
+
+    sounds_cmd = "sounds",
+    sounds_name = "凝视、5层破甲和旋风斩声音警告",
+    sounds_desc = "声音警告凝视定位在你身上、你身上有5层破甲效果时以及旋风斩发生时。",
+
+    puticon_cmd = "puticon",
+    puticon_name = "标记被观察玩家",
+    puticon_desc = "在被观察的人身上放置团队标记。\n\n(需要助理或更高权限)",
+
+    charge_cmd = "charge",
+    charge_name = "冲锋警报",
+    charge_desc = "显示冲锋计时条",
+
+    gaze_cmd = "gaze",
+    gaze_name = "威慑凝视警报",
+    gaze_desc = "显示威慑凝视计时条",
+
+    whirlwind_cmd = "whirlwind",
+    whirlwind_name = "旋风斩警报",
+    whirlwind_desc = "显示旋风斩计时条",
+
+    sunder_cmd = "sunder",
+    sunder_name = "5层破甲效果警报",
+    sunder_desc = "如果奥根的坦克身上有5层破甲效果，则发出警报。",
+
+    enraged_cmd = "enraged",
+    enraged_name = "激怒警报",
+    enraged_desc = "通报Boss激怒",
+
+    ["Possible Gaze"] = true,
+    ["Charge"] = true,
+    ["Next Whirlwind"] = true,
+    ["Possible Gaze"] = "可能的凝视",
+    ["Charge"] = "冲锋",
+    ["Next Whirlwind"] = "下一次旋风斩",
 } end )
 
 L:RegisterTranslations("deDE", function() return {
@@ -185,6 +188,84 @@ L:RegisterTranslations("esES", function() return {
 	["Possible Gaze"] = "Mirada amenazante Posible",
 	["Charge"] = "Embestir",
 	["Next Whirlwind"] = "Próximo Torbellino",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    ohgan = "Ohgan",
+    cmd = "Mandokir",
+
+    engage_trigger = "feed your souls to Hakkar himself",
+    watch_trigger = "(.+)! I'm watching you!",
+    gaze_trigger = "Bloodlord Mandokir begins to cast Threatening Gaze.",
+    gazeafflictyou = "You are afflicted by Threatening Gaze.",
+    gazeafflictother = "(.+) is afflicted by Threatening Gaze.",
+    gazeendyou = "Threatening Gaze fades from you.",
+    gazeendother = "Threatening Gaze fades from (.+).",
+    gazecast = "即将威慑凝视！",
+    gazewatchedbar = "威慑凝视：%s",
+    enragegain = "Bloodlord Mandokir gains Enrage.",
+    enragefade = "Enrage fades from Bloodlord Mandokir.",
+    enragebar = "激怒",
+    wwgain = "Bloodlord Mandokir gains Whirlwind.",
+    wwloss = "Whirlwind fades from Bloodlord Mandokir.",
+    ww = "旋风斩",
+    deathyou = "You die.",
+    deathother = "(.+) dies.",
+    you = "你",
+    gaze_warn = "凝视目标 ",
+
+    sunder_trigger = "Sunder Armor %(5%)",
+    sunder_warn = "破甲堆叠过多，寻求帮助！",
+
+    watched_warning = "你正在被观察！停止一切动作！",
+    watched_warning_tell = "你正在被观察！停止一切动作！",
+    watched_warning_other = "%s 正在被观察！",
+    enraged_message = "奥根倒下！曼多基尔激怒！",
+
+    charge_trigger = "Bloodlord Mandokir's Charge",
+    chargecd_bar = "冲锋冷却",
+
+    announce_cmd = "whispers",
+    announce_name = "密语被观察玩家",
+    announce_desc = "当Boss使用威慑凝视时进行警告。\n\n(需要助理或更高权限)",
+
+    bigicon_cmd = "bigicon",
+    bigicon_name = "旋风斩和凝视大图标警告",
+    bigicon_desc = "当旋风斩发生和凝视定位在你身上时显示大图标",
+
+    sounds_cmd = "sounds",
+    sounds_name = "凝视、5层破甲和旋风斩声音警告",
+    sounds_desc = "声音警告凝视定位在你身上、你身上有5层破甲效果时以及旋风斩发生时。",
+
+    puticon_cmd = "puticon",
+    puticon_name = "标记被观察玩家",
+    puticon_desc = "在被观察的人身上放置团队标记。\n\n(需要助理或更高权限)",
+
+    charge_cmd = "charge",
+    charge_name = "冲锋警报",
+    charge_desc = "显示冲锋计时条",
+
+    gaze_cmd = "gaze",
+    gaze_name = "威慑凝视警报",
+    gaze_desc = "显示威慑凝视计时条",
+
+    whirlwind_cmd = "whirlwind",
+    whirlwind_name = "旋风斩警报",
+    whirlwind_desc = "显示旋风斩计时条",
+
+    sunder_cmd = "sunder",
+    sunder_name = "5层破甲效果警报",
+    sunder_desc = "如果奥根的坦克身上有5层破甲效果，则发出警报。",
+
+    enraged_cmd = "enraged",
+    enraged_name = "激怒警报",
+    enraged_desc = "通报Boss激怒",
+
+    ["Possible Gaze"] = "可能的凝视",
+    ["Charge"] = "冲锋",
+    ["Next Whirlwind"] = "下一次旋风斩",
 } end )
 
 module.wipemobs = { L["ohgan"] }

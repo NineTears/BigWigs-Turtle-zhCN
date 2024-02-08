@@ -11,18 +11,36 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "darkriderchampion",
+    cmd = "darkriderchampion",
 
-	reaverstorm_cmd = "reaverstorm",
-	reaverstorm_name = "Reaver Storm Alert",
-	reaverstorm_desc = "Warn for Reaver Storm",
+    reaverstorm_cmd = "reaverstorm",
+    reaverstorm_name = "掠夺者风暴警报",
+    reaverstorm_desc = "掠夺者风暴施放时进行警告",
 
 
-	trigger_reaverstorm = "Dark Rider Champion begins to perform Reaver Storm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_reaverstormCd = "Reaver Storm CD",
-	bar_reaverstormCast = "Reaver Storm Cast",
+    trigger_reaverstorm = "Dark Rider Champion begins to perform Reaver Storm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_reaverstormCd = "掠夺者风暴冷却",
+    bar_reaverstormCast = "掠夺者风暴施放",
 
-	["You have slain %s!"] = true,
+    ["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你杀死了%s！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "darkriderchampion",
+
+    reaverstorm_cmd = "reaverstorm",
+    reaverstorm_name = "掠夺者风暴警报",
+    reaverstorm_desc = "掠夺者风暴施放时进行警告",
+
+
+    trigger_reaverstorm = "Dark Rider Champion begins to perform Reaver Storm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_reaverstormCd = "掠夺者风暴冷却",
+    bar_reaverstormCast = "掠夺者风暴施放",
+
+    ["You have slain %s!"] = "你杀死了%s！",
 } end )
 
 module.defaultDB = {

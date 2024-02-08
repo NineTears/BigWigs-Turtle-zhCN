@@ -10,38 +10,38 @@ local module, L = BigWigs:ModuleDeclaration("Firemaw", "Blackwing Lair")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	wingbuffet_trigger = "Firemaw begins to cast Wing Buffet.",
-	shadowflame_trigger = "Firemaw begins to cast Shadow Flame.",
-	flamebuffetafflicted_trigger = "afflicted by Flame Buffet",
-	flamebuffetresisted_trigger = "Firemaw 's Flame Buffet was resisted",
-	flamebuffetimmune_trigger = "Firemaw 's Flame Buffet fail(.+) immune\.",
-	flamebuffetabsorb1_trigger = "You absorb Firemaw 's Flame Buffet",
-	flamebuffetabsorb2_trigger = "Firemaw 's Flame Buffet is absorbed",
+    wingbuffet_trigger = "Firemaw begins to cast Wing Buffet.",
+    shadowflame_trigger = "Firemaw begins to cast Shadow Flame.",
+    flamebuffetafflicted_trigger = "afflicted by Flame Buffet",
+    flamebuffetresisted_trigger = "Firemaw 's Flame Buffet was resisted",
+    flamebuffetimmune_trigger = "Firemaw 's Flame Buffet fail(.+) immune\.",
+    flamebuffetabsorb1_trigger = "You absorb Firemaw 's Flame Buffet",
+    flamebuffetabsorb2_trigger = "Firemaw 's Flame Buffet is absorbed",
 
-	wingbuffet_message = "Wing Buffet! Next one in 30 seconds!",
-	wingbuffet_warning = "TAUNT now! Wing Buffet soon!",
-	shadowflame_warning = "Shadow Flame incoming!",
+    wingbuffet_message = "龙翼攻击！下一次龙翼攻击将在30秒后到来！",
+    wingbuffet_warning = "现在嘲讽！龙翼攻击即将到来！",
+    shadowflame_warning = "暗影烈焰来袭！",
 
-	wingbuffetcast_bar = "Wing Buffet",
-	wingbuffet_bar = "Next Wing Buffet",
-	wingbuffet1_bar = "Initial Wing Buffet",
-	shadowflame_bar = "Shadow Flame",
-	shadowflame_Nextbar = "Next Shadow Flame",
-	flamebuffet_bar = "Flame Buffet",
+    wingbuffetcast_bar = "龙翼攻击施放",
+    wingbuffet_bar = "下一次龙翼攻击",
+    wingbuffet1_bar = "首次龙翼攻击",
+    shadowflame_bar = "暗影烈焰",
+    shadowflame_Nextbar = "下一次暗影烈焰",
+    flamebuffet_bar = "烈焰打击",
 
-	cmd = "Firemaw",
+    cmd = "Firemaw",
 
-	flamebuffet_cmd = "flamebuffet",
-	flamebuffet_name = "Flame Buffet alert",
-	flamebuffet_desc = "Warn when Flamegor casts Flame Buffet.",
+    flamebuffet_cmd = "flamebuffet",
+    flamebuffet_name = "烈焰打击警报",
+    flamebuffet_desc = "当弗莱格尔施放烈焰打击时进行警告。",
 
-	wingbuffet_cmd = "wingbuffet",
-	wingbuffet_name = "Wing Buffet alert",
-	wingbuffet_desc = "Warn when Flamegor casts Wing Buffet.",
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼攻击警报",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
 
-	shadowflame_cmd = "shadowflame",
-	shadowflame_name = "Shadow Flame alert",
-	shadowflame_desc = "Warn when Flamegor casts Shadow Flame.",
+    shadowflame_cmd = "shadowflame",
+    shadowflame_name = "暗影烈焰警报",
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。", 
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -114,7 +114,42 @@ L:RegisterTranslations("deDE", function() return {
 	shadowflame_desc = "Warnung, wenn Ebonroc Schattenflamme wirkt.",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    wingbuffet_trigger = "Firemaw begins to cast Wing Buffet.",
+    shadowflame_trigger = "Firemaw begins to cast Shadow Flame.",
+    flamebuffetafflicted_trigger = "afflicted by Flame Buffet",
+    flamebuffetresisted_trigger = "Firemaw 's Flame Buffet was resisted",
+    flamebuffetimmune_trigger = "Firemaw 's Flame Buffet fail(.+) immune\.",
+    flamebuffetabsorb1_trigger = "You absorb Firemaw 's Flame Buffet",
+    flamebuffetabsorb2_trigger = "Firemaw 's Flame Buffet is absorbed",
 
+    wingbuffet_message = "龙翼攻击！下一次龙翼攻击将在30秒后到来！",
+    wingbuffet_warning = "现在嘲讽！龙翼攻击即将到来！",
+    shadowflame_warning = "暗影烈焰来袭！",
+
+    wingbuffetcast_bar = "龙翼攻击施放",
+    wingbuffet_bar = "下一次龙翼攻击",
+    wingbuffet1_bar = "首次龙翼攻击",
+    shadowflame_bar = "暗影烈焰",
+    shadowflame_Nextbar = "下一次暗影烈焰",
+    flamebuffet_bar = "烈焰打击",
+
+    cmd = "Firemaw",
+
+    flamebuffet_cmd = "flamebuffet",
+    flamebuffet_name = "烈焰打击警报",
+    flamebuffet_desc = "当弗莱格尔施放烈焰打击时进行警告。",
+
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼攻击警报",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
+
+    shadowflame_cmd = "shadowflame",
+    shadowflame_name = "暗影烈焰警报",
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。", 
+} end)
 ---------------------------------
 --      	Variables 		   --
 ---------------------------------

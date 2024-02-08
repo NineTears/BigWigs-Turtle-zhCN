@@ -39,31 +39,31 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Taerar",
+    cmd = "Taerar",
 
-	noxious_cmd = "noxious",
-	noxious_name = "Noxious breath alert",
-	noxious_desc = "Warn for noxious breath",
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息出现时进行警告",
 
-	fear_cmd = "fear",
-	fear_name = "Fear",
-	fear_desc = "Warn for Bellowing Roar",
+    fear_cmd = "fear",
+    fear_name = "恐惧",
+    fear_desc = "低沉咆哮警告",
 
-	fear_trigger = "Taerar begins to cast Bellowing Roar.",
-	breath_trigger = "afflicted by Noxious Breath",
-	engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
-	shades_trigger = "Children of Madness - I release you upon this world!",
-	shadedies_trigger = "Shade of Taerar dies.",
+    fear_trigger = "Taerar begins to cast Bellowing Roar.",
+    breath_trigger = "afflicted by Noxious Breath",
+    engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
+    shades_trigger = "Children of Madness - I release you upon this world!",
+    shadedies_trigger = "Shade of Taerar dies.",
 
-	shades_warn = "Taerar banished! Kill Shades!",
-	fearCast_warn = "Fear in 1.5sec!",
-	breathSoon_warn = "Noxious Breath soon!",
-	breath_warn = "Noxious Breath!",
-	fear_warn = "AoE Fear soon!",
+    shades_warn = "泰拉尔被放逐了！击杀暗影！",
+    fearCast_warn = "1.5秒后恐惧！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
+    fear_warn = "即将释放群体恐惧！",
 
-	breath_bar = "Noxious Breath",
-	banish_bar = "Banish",
-	fear_bar = "AoE Fear",
+    breath_bar = "毒性吐息",
+    banish_bar = "放逐",
+    fear_bar = "群体恐惧",
 
 } end )
 
@@ -95,6 +95,38 @@ L:RegisterTranslations("esES", function() return {
 	fear_bar = "Clamor bramante",
 
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Taerar",
+
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息出现时进行警告",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧",
+    fear_desc = "低沉咆哮警告",
+
+    fear_trigger = "Taerar begins to cast Bellowing Roar.",
+    breath_trigger = "afflicted by Noxious Breath",
+    engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
+    shades_trigger = "Children of Madness - I release you upon this world!",
+    shadedies_trigger = "Shade of Taerar dies.",
+
+    shades_warn = "泰拉尔被放逐了！击杀暗影！",
+    fearCast_warn = "1.5秒后恐惧！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
+    fear_warn = "即将释放群体恐惧！",
+
+    breath_bar = "毒性吐息",
+    banish_bar = "放逐",
+    fear_bar = "群体恐惧",
+
+} end )
+
 ------------------------------
 --      Initialization      --
 ------------------------------

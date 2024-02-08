@@ -6,50 +6,50 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"frenzy", "fear", "decimate", "enrage", "zombies", -1, "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Gluth",
+    cmd = "Gluth",
 
-	fear_cmd = "fear",
-	fear_name = "Fear Alert",
-	fear_desc = "Warn for fear",
+    fear_cmd = "fear",
+    fear_name = "恐惧警报",
+    fear_desc = "恐惧出现时进行警告",
 
-	frenzy_cmd = "frenzy",
-	frenzy_name = "Frenzy Alert",
-	frenzy_desc = "Warn for frenzy",
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱警报",
+    frenzy_desc = "狂乱出现时进行警告",
 
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Timer",
-	enrage_desc = "Warn for Enrage",
+    enrage_cmd = "enrage",
+    enrage_name = "激怒计时器",
+    enrage_desc = "激怒出现时进行警告",
 
-	decimate_cmd = "decimate",
-	decimate_name = "Decimate Alert",
-	decimate_desc = "Warn for Decimate",
-	
-	zombies_cmd = "zombies",
-	zombies_name = "Zombie Spawn",
-	zombies_desc = "Shows timer for zombies",
-	
-	trigger_frenzyGain = "%s goes into a frenzy!",--CHAT_MSG_MONSTER_EMOTE
-	trigger_frenzyFade = "Frenzy fades from Gluth.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	msg_frenzy = "Frenzy - Tranq!",
-	bar_frenzyGain = "Frenzy - Tranq!",
-	bar_frenzyCD = "FrenzyCD",
-	
-	trigger_enrage = "Gluth gains Berserk.",--to be confirmed
-	msg_enrage60 = "Enrage in 60 seconds",
-	msg_enrage10 = "Enrage in 10 seconds",
-	msg_enrage = "Enrage!",
-	bar_enrage = "Enrage",
-		
-	trigger_decimate = "Decimate hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_decimate = "Decimate!",
-	msg_decimate5 = "Decimate in 5",
-	bar_decimate = "Decimate",
-	
-	bar_zombies = "Next Zombie - %d",
-		
-	trigger_fear = "Terrifying Roar",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_fearCD = "Fear CD",
-	msg_fear = "Fear!",
+    decimate_cmd = "decimate",
+    decimate_name = "残杀警报",
+    decimate_desc = "残杀出现时进行警告",
+    
+    zombies_cmd = "zombies",
+    zombies_name = "僵尸生成",
+    zombies_desc = "显示僵尸生成的计时器",
+    
+    trigger_frenzyGain = "%s goes into a frenzy!",--CHAT_MSG_MONSTER_EMOTE
+    trigger_frenzyFade = "Frenzy fades from Gluth.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_frenzy = "狂乱 - 使用宁神射击！",
+    bar_frenzyGain = "狂乱 - 使用宁神射击！",
+    bar_frenzyCD = "狂乱冷却",
+
+    trigger_enrage = "Gluth gains Berserk.",--to be confirmed
+    msg_enrage60 = "60秒后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
+    bar_enrage = "激怒",
+        
+    trigger_decimate = "Decimate hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_decimate = "残杀！",
+    msg_decimate5 = "5秒后残杀",
+    bar_decimate = "残杀",
+    
+    bar_zombies = "下一个僵尸 - %d",
+        
+    trigger_fear = "Terrifying Roar",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_fearCD = "恐惧冷却",
+    msg_fear = "恐惧！",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -105,6 +105,55 @@ L:RegisterTranslations("esES", function() return {
 	frenzy_message = "¡Frensí! Disparo tranquilizante ahora!",
 	frenzy_bar = "Frenesí",
 	frenzy_Nextbar = "Próximo Frenesí",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Gluth",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧警报",
+    fear_desc = "恐惧出现时进行警告",
+
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱警报",
+    frenzy_desc = "狂乱出现时进行警告",
+
+    enrage_cmd = "enrage",
+    enrage_name = "激怒计时器",
+    enrage_desc = "激怒出现时进行警告",
+
+    decimate_cmd = "decimate",
+    decimate_name = "残杀警报",
+    decimate_desc = "残杀出现时进行警告",
+    
+    zombies_cmd = "zombies",
+    zombies_name = "僵尸生成",
+    zombies_desc = "显示僵尸生成的计时器",
+    
+    trigger_frenzyGain = "%s goes into a frenzy!",--CHAT_MSG_MONSTER_EMOTE
+    trigger_frenzyFade = "Frenzy fades from Gluth.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_frenzy = "狂乱 - 使用宁神射击！",
+    bar_frenzyGain = "狂乱 - 使用宁神射击！",
+    bar_frenzyCD = "狂乱冷却",
+
+    trigger_enrage = "Gluth gains Berserk.",--to be confirmed
+    msg_enrage60 = "60秒后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
+    bar_enrage = "激怒",
+        
+    trigger_decimate = "Decimate hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_decimate = "残杀！",
+    msg_decimate5 = "5秒后残杀",
+    bar_decimate = "残杀",
+    
+    bar_zombies = "下一个僵尸 - %d",
+        
+    trigger_fear = "Terrifying Roar",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_fearCD = "恐惧冷却",
+    msg_fear = "恐惧！",
 } end )
 
 local timer = {

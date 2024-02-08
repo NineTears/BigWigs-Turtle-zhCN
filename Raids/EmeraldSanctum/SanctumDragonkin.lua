@@ -11,20 +11,38 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "SanctumDragonkin",
+    cmd = "SanctumDragonkin",
 
-	reflect_cmd = "reflect",
-	reflect_name = "Reflect Alert",
-	reflect_desc = "Warn for Reflect",
+    reflect_cmd = "reflect",
+    reflect_name = "反射警报",
+    reflect_desc = "圣殿龙人获得反射时进行警告",
 
-	trigger_reflect = "Sanctum Dragonkin gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_reflectFade = "Reflection fades from Sanctum Dragonkin.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-		
-	bar_reflect = "Dragonkin Spell Reflect",
-	msg_reflect = "Dragonkin Spell Reflect",
-	
-	["You have slain %s!"] = true,
-	
+    trigger_reflect = "Sanctum Dragonkin gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_reflectFade = "Reflection fades from Sanctum Dragonkin.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+        
+    bar_reflect = "龙人法术反射",
+    msg_reflect = "龙人法术反射",
+    
+    ["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你已经击败了%s！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "SanctumDragonkin",
+
+    reflect_cmd = "reflect",
+    reflect_name = "反射警报",
+    reflect_desc = "圣殿龙人获得反射时进行警告",
+
+    trigger_reflect = "Sanctum Dragonkin gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_reflectFade = "Reflection fades from Sanctum Dragonkin.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+        
+    bar_reflect = "龙人法术反射",
+    msg_reflect = "龙人法术反射",
+    
+    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 module.defaultDB = {

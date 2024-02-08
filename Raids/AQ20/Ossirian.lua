@@ -8,9 +8,9 @@ module.toggleoptions = {"bigicon", "warstomp", "cyclone", "sandstorm", "supreme"
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Ossirian",
 	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "大图标警告标志",
-	bigicon_desc = "用于沙尘暴、虚弱和萨满的根基图腾的大标志警告",
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标警告标志",
+    bigicon_desc = "沙尘暴、虚弱和萨满的根基图腾的大警告标志",
 
 	warstomp_cmd = "warstomp",
 	warstomp_name = "战争践踏计时条",
@@ -22,11 +22,11 @@ L:RegisterTranslations("enUS", function() return {
 
 	sandstorm_cmd = "sandstorm",
 	sandstorm_name = "沙尘暴伤害警告",
-	sandstorm_desc = "如果你受到沙尘暴的伤害，发出警告",
+	sandstorm_desc = "受到沙尘暴的伤害时进行警告",
 	
 	supreme_cmd = "supreme",
 	supreme_name = "无敌警报",
-	supreme_desc = "无敌模式警告",
+	supreme_desc = "无敌模式出现时进行警告",
 	
 	weakness_cmd = "weakness",
 	weakness_name = "奥斯里安的弱点警报",
@@ -48,7 +48,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	ossiLostSupreme = "Strength of Ossirian fades from Ossirian the Unscarred.",-- CHAT_MSG_SPELL_AURA_GONE_OTHER",
 
-	expose = "虚弱",
+	expose = "Expose",
 	
 	cyclone_trigger = "Enveloping Winds",
 	cyclone_bar = "飓风术",
@@ -65,12 +65,12 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	cmd = "Ossirian",
 	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "大图标警告标志",
-	bigicon_desc = "用于沙尘暴、虚弱和萨满的根基图腾的大标志警告",
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标警告标志",
+    bigicon_desc = "沙尘暴、虚弱和萨满的根基图腾的大警告标志",
 
 	warstomp_cmd = "warstomp",
 	warstomp_name = "战争践踏计时条",
@@ -82,11 +82,11 @@ L:RegisterTranslations("zhCN", function() return {
 
 	sandstorm_cmd = "sandstorm",
 	sandstorm_name = "沙尘暴伤害警告",
-	sandstorm_desc = "如果你受到沙尘暴的伤害，发出警告",
+	sandstorm_desc = "受到沙尘暴的伤害时进行警告",
 	
 	supreme_cmd = "supreme",
 	supreme_name = "无敌警报",
-	supreme_desc = "无敌模式警告",
+	supreme_desc = "无敌模式出现时进行警告",
 	
 	weakness_cmd = "weakness",
 	weakness_name = "奥斯里安的弱点警报",
@@ -108,7 +108,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	ossiLostSupreme = "Strength of Ossirian fades from Ossirian the Unscarred.",-- CHAT_MSG_SPELL_AURA_GONE_OTHER",
 
-	expose = "虚弱",
+	expose = "Expose",
 	
 	cyclone_trigger = "Enveloping Winds",
 	cyclone_bar = "飓风术",

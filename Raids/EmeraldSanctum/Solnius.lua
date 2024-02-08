@@ -20,57 +20,113 @@ module.zonename = {
 -->>>>>>>>>				-> Dispel 			-> 75% reduce cast time for 30sec
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Solnius",
+    cmd = "Solnius",
 
-	transitions_cmd = "transitions",
-	transitions_name = "Transitions Alert",
-	transitions_desc = "Warn for Transitions",
-	
-	--[[
-	wailoferennius_cmd = "wailoferennius",
-	wailoferennius_name = "Wail Of Erennius Alert",
-	wailoferennius_desc = "Warn for Wail Of Erennius",
+    transitions_cmd = "transitions",
+    transitions_name = "过渡阶段警报",
+    transitions_desc = "过渡阶段出现时进行警告",
 
-	howloferennius_cmd = "howloferennius",
-	howloferennius_name = "Howl Of Erennius Alert",
-	howloferennius_desc = "Warns for Howl Of Erennius",
-	
-	volley_cmd = "volley",
-	volley_name = "Poison Volley Alert",
-	volley_desc = "Warns for Poison Volley",
-	]]--
-	
-	bar_isImmune = "Solnius is Immune",
-	msg_isImmune = "Solnius is Immune",
-	
-	trigger_solniusSleep = "Solnius gains Sleep Visual DND.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_solniusSleepFade = "Sleep Visual DND fades from Solnius.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_isSleeping = "Solnius is Sleeping",
-	msg_isSleeping = "Mobs Incoming! 45sec to kill",
-	msg_isSleepingFade = "Solnius is Awake!",
-	
-	--[[Erennius vv
-	trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_wailOfErenniusCast = "Wail Casting",
-	bar_wailOfErenniusAfflicted = "Wail Afflicted",
-	bar_wailOfErenniusCd = "Wail of Erennius CD",
-	
-	trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
-	bar_howlOfErenniusCD = "Silence CD",
-	bar_howlOfErenniusAfflicted = "Silenced!",
-	
-	trigger_volley = "afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_volley = "Poison Bolt Volley",
-	--Erennius ^^--]]
-	
-	trigger_engage = "You think you can interfere with my eternal duty? The awakening has been fortold long before your kind has existed mortals, you shall regret setting foot on our hallowed ground!",--CHAT_MSG_MONSTER_YELL
-	
-	trigger_hardMode = "You will not disturb the Awakener...",--CHAT_MSG_MONSTER_YELL
-	msg_hardModeOn = "Erennius is joining the fight; Hard Mode - Good Luck!",
-	msg_hardModeOff = "Erennius died before Solnius; Hard Mode Cancelled - *chicken*",
-	
-	--trigger_yellSmt = "The dream beckons us all, you shall remain here forever...",
+    --[[
+    wailoferennius_cmd = "wailoferennius",
+    wailoferennius_name = "艾雷纽斯之嚎警报",
+    wailoferennius_desc = "艾雷纽斯之嚎出现时进行警告",
+
+    howloferennius_cmd = "howloferennius",
+    howloferennius_name = "艾雷纽斯之吼警报",
+    howloferennius_desc = "艾雷纽斯之吼出现时进行警告",
+    
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+    ]]--
+
+    bar_isImmune = "索尔纽斯免疫",
+    msg_isImmune = "索尔纽斯免疫",
+    
+    trigger_solniusSleep = "Solnius gains Sleep Visual DND.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_solniusSleepFade = "Sleep Visual DND fades from Solnius.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_isSleeping = "索尔纽斯正在沉睡",
+    msg_isSleeping = "小怪来袭！45秒内击杀",
+    msg_isSleepingFade = "索尔纽斯醒来了！",
+
+    --[[Erennius vv
+    trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_wailOfErenniusCast = "正在施放艾雷纽斯之嚎",
+    bar_wailOfErenniusAfflicted = "艾雷纽斯之嚎效果",
+    bar_wailOfErenniusCd = "艾雷纽斯之嚎冷却",
+    
+    trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+    bar_howlOfErenniusCD = "沉默冷却",
+    bar_howlOfErenniusAfflicted = "被沉默！",
+    
+    trigger_volley = "afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_volley = "毒箭齐射",
+    --Erennius ^^--]]
+    
+    trigger_engage = "You think you can interfere with my eternal duty? The awakening has been fortold long before your kind has existed mortals, you shall regret setting foot on our hallowed ground!",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_hardMode = "You will not disturb the Awakener...",--CHAT_MSG_MONSTER_YELL
+    msg_hardModeOn = "艾雷纽斯加入战斗；困难模式开启 - 祝你好运！",
+    msg_hardModeOff = "艾雷纽斯在索尔纽斯之前死亡；困难模式取消 - *胆小鬼*",
+    
+    --trigger_yellSmt = "The dream beckons us all, you shall remain here forever...",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Solnius",
+
+    transitions_cmd = "transitions",
+    transitions_name = "过渡阶段警报",
+    transitions_desc = "过渡阶段出现时进行警告",
+
+    --[[
+    wailoferennius_cmd = "wailoferennius",
+    wailoferennius_name = "艾雷纽斯之嚎警报",
+    wailoferennius_desc = "艾雷纽斯之嚎出现时进行警告",
+
+    howloferennius_cmd = "howloferennius",
+    howloferennius_name = "艾雷纽斯之吼警报",
+    howloferennius_desc = "艾雷纽斯之吼出现时进行警告",
+    
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+    ]]--
+
+    bar_isImmune = "索尔纽斯免疫",
+    msg_isImmune = "索尔纽斯免疫",
+    
+    trigger_solniusSleep = "Solnius gains Sleep Visual DND.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_solniusSleepFade = "Sleep Visual DND fades from Solnius.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_isSleeping = "索尔纽斯正在沉睡",
+    msg_isSleeping = "小怪来袭！45秒内击杀",
+    msg_isSleepingFade = "索尔纽斯醒来了！",
+
+    --[[Erennius vv
+    trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_wailOfErenniusCast = "正在施放艾雷纽斯之嚎",
+    bar_wailOfErenniusAfflicted = "艾雷纽斯之嚎效果",
+    bar_wailOfErenniusCd = "艾雷纽斯之嚎冷却",
+    
+    trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+    bar_howlOfErenniusCD = "沉默冷却",
+    bar_howlOfErenniusAfflicted = "被沉默！",
+    
+    trigger_volley = "afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_volley = "毒箭齐射",
+    --Erennius ^^--]]
+    
+    trigger_engage = "You think you can interfere with my eternal duty? The awakening has been fortold long before your kind has existed mortals, you shall regret setting foot on our hallowed ground!",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_hardMode = "You will not disturb the Awakener...",--CHAT_MSG_MONSTER_YELL
+    msg_hardModeOn = "艾雷纽斯加入战斗；困难模式开启 - 祝你好运！",
+    msg_hardModeOff = "艾雷纽斯在索尔纽斯之前死亡；困难模式取消 - *胆小鬼*",
+    
+    --trigger_yellSmt = "The dream beckons us all, you shall remain here forever...",
 } end )
 
 local timer = {

@@ -7,44 +7,44 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"mc", "shout", "unbalance", "shieldwall", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Razuvious",
+    cmd = "Razuvious",
 
-	shout_cmd = "shout",
-	shout_name = "Shout Alert",
-	shout_desc = "Warn for disrupting shout",
-	
-	mc_cmd = "mc",
-	mc_name = "MC timer bars",
-	mc_desc = "Shows Mind Control timer bars",
-	
-	unbalance_cmd = "unbalancing",
-	unbalance_name = "Unbalancing Strike Alert",
-	unbalance_desc = "Warn for Unbalancing Strike",
+    shout_cmd = "shout",
+    shout_name = "怒吼警报",
+    shout_desc = "打断怒吼时进行警告",
+    
+    mc_cmd = "mc",
+    mc_name = "精神控制计时条",
+    mc_desc = "显示精神控制计时条",
+    
+    unbalance_cmd = "unbalancing",
+    unbalance_name = "重压打击警报",
+    unbalance_desc = "重压打击出现时进行警告",
 
-	shieldwall_cmd = "shieldwall",
-	shieldwall_name = "Shield Wall Timer",
-	shieldwall_desc = "Show timer for Shield Wall",
+    shieldwall_cmd = "shieldwall",
+    shieldwall_name = "盾墙计时器",
+    shieldwall_desc = "显示盾墙持续时间",
 
-	starttrigger1 = "Stand and fight!",
-	starttrigger2 = "Show me what you've got!",
-	starttrigger3 = "Hah hah, I'm just getting warmed up!",
+    starttrigger1 = "Stand and fight!",
+    starttrigger2 = "Show me what you've got!",
+    starttrigger3 = "Hah hah, I'm just getting warmed up!",
 
-	trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
-	bar_shout = "Disrupting Shout",
-	msg_shout = "Disrupting Shout! Next in 25secs",
-	--noshoutwarn = "No shout! Next in 20secs",
-	
-	trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed
-	trigger_unbalance2 = "Instructor Razuvious's Unbalancing Strike",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_unbalance = "Unbalancing Strike",
-	
-	trigger_shieldWall = "Deathknight Understudy gains Shield Wall.",--to be confirmed
-	bar_shieldWall = "Shield Wall",
-	
-	mc_trigger = "You gain Mind Control.", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
-	mcEnd_trigger = "Mind Control fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-	mc_bar = " MC",
-	mcLocked_bar = "Can't MC ",
+    trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
+    bar_shout = "打断怒吼",
+    msg_shout = "打断怒吼！接下来在25秒",
+    --noshoutwarn = "No shout! Next in 20secs",
+    
+    trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed
+    trigger_unbalance2 = "Instructor Razuvious's Unbalancing Strike",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_unbalance = "重压打击",
+    
+    trigger_shieldWall = "Deathknight Understudy gains Shield Wall.",--to be confirmed
+    bar_shieldWall = "盾墙",
+    
+    mc_trigger = "You gain Mind Control.", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    mcEnd_trigger = "Mind Control fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+    mc_bar = "精神控制",
+    mcLocked_bar = "无法精神控制",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -83,6 +83,49 @@ L:RegisterTranslations("esES", function() return {
 
 	shieldwalltrigger   = "Caballero de la Muerte suplente gana Muro de escudo.",
 	shieldwallbar       = "Muro de escudo",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Razuvious",
+
+    shout_cmd = "shout",
+    shout_name = "怒吼警报",
+    shout_desc = "打断怒吼时进行警告",
+    
+    mc_cmd = "mc",
+    mc_name = "精神控制计时条",
+    mc_desc = "显示精神控制计时条",
+    
+    unbalance_cmd = "unbalancing",
+    unbalance_name = "重压打击警报",
+    unbalance_desc = "重压打击出现时进行警告",
+
+    shieldwall_cmd = "shieldwall",
+    shieldwall_name = "盾墙计时器",
+    shieldwall_desc = "显示盾墙持续时间",
+
+    starttrigger1 = "Stand and fight!",
+    starttrigger2 = "Show me what you've got!",
+    starttrigger3 = "Hah hah, I'm just getting warmed up!",
+
+    trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
+    bar_shout = "打断怒吼",
+    msg_shout = "打断怒吼！接下来在25秒",
+    --noshoutwarn = "No shout! Next in 20secs",
+    
+    trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed
+    trigger_unbalance2 = "Instructor Razuvious's Unbalancing Strike",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_unbalance = "重压打击",
+    
+    trigger_shieldWall = "Deathknight Understudy gains Shield Wall.",--to be confirmed
+    bar_shieldWall = "盾墙",
+    
+    mc_trigger = "You gain Mind Control.", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    mcEnd_trigger = "Mind Control fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+    mc_bar = "精神控制",
+    mcLocked_bar = "无法精神控制",
 } end )
 
 local timer = {

@@ -6,56 +6,111 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"curse", "hex", "brainwash", "healingward", "puticon", "autotarget", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Jindo",
+    cmd = "Jindo",
 
-	brainwash_cmd = "brainwash",
-	brainwash_name = "Brain Wash Totem Alert",
-	brainwash_desc = "Warn when Jin'do summons Brain Wash Totems.",
+    brainwash_cmd = "brainwash",
+    brainwash_name = "洗脑图腾警报",
+    brainwash_desc = "金度召唤洗脑图腾时进行警告。",
 
-	healingward_cmd = "healingward",
-	healingward_name = "Healing Totem Alert",
-	healingward_desc = "Warn when Jin'do summons Powerful Healing Wards.",
+    healingward_cmd = "healingward",
+    healingward_name = "治疗图腾警报",
+    healingward_desc = "金度召唤强效治疗结界时进行警告。",
 
-	curse_cmd = "curse",
-	curse_name = "Curse Alert",
-	curse_desc = "Warn when players get Delusions of Jin'do.",
+    curse_cmd = "curse",
+    curse_name = "诅咒警报",
+    curse_desc = "玩家中了金度的妄想时进行警告。",
 
-	hex_cmd = "hex",
-	hex_name = "Hex Alert",
-	hex_desc = "Warn when players get Hex.",
+    hex_cmd = "hex",
+    hex_name = "妖术警报",
+    hex_desc = "玩家中了妖术时进行警告。",
 
-	puticon_cmd = "puticon",
-	puticon_name = "Raid icon on cursed players",
-	puticon_desc = "Place a raid icon on the player with Delusions of Jin'do.\n\n(Requires assistant or higher)",
-	
-	autotarget_cmd = "autotarget",
-	autotarget_name = "Autotargetting of Totems",
-	autotarget_desc = "Autotargetting of Totems",
-	
-	trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
-	
-	trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_hexFades = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-	bar_hex = " Hexxed",
-	msg_hex = " is Hexxed! Dispel it!",
-	
-	trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	msg_curseYou = "You are cursed! Kill the Shades!",
-	trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	bar_curse = " Cursed",
-	trigger_curseFade = "Delusions of Jin'do fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-	
-	trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
-	msg_curseDispel = "Delusions of Jin'do was decursed!",
-	
-	trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	msg_brainWash = "Brain Wash Totem!",
-	--trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-	
-	trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	msg_healingWard = "Healing Totem!",
-	--trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    puticon_cmd = "puticon",
+    puticon_name = "标记中了诅咒的玩家",
+    puticon_desc = "在中了金度的妄想的玩家身上放置团队标记。\n\n(需要助理或更高权限)",
+
+    autotarget_cmd = "autotarget",
+    autotarget_name = "图腾自动目标",
+    autotarget_desc = "图腾自动目标",
+
+    trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
+
+    trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_hexFades = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_hex = " 妖术",
+    msg_hex = " 被妖术变形了！驱散它！",
+
+    trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_curseYou = "你被诅咒了！击杀幻影！",
+    trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_curse = " 受到诅咒",
+    trigger_curseFade = "Delusions of Jin'do fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
+    msg_curseDispel = "金度的妄想被解除了！",
+
+    trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_brainWash = "洗脑图腾！",
+    --trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+
+    trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_healingWard = "治疗图腾！",
+    --trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Jindo",
+
+    brainwash_cmd = "brainwash",
+    brainwash_name = "洗脑图腾警报",
+    brainwash_desc = "金度召唤洗脑图腾时进行警告。",
+
+    healingward_cmd = "healingward",
+    healingward_name = "治疗图腾警报",
+    healingward_desc = "金度召唤强效治疗结界时进行警告。",
+
+    curse_cmd = "curse",
+    curse_name = "诅咒警报",
+    curse_desc = "玩家中了金度的妄想时进行警告。",
+
+    hex_cmd = "hex",
+    hex_name = "妖术警报",
+    hex_desc = "玩家中了妖术时进行警告。",
+
+    puticon_cmd = "puticon",
+    puticon_name = "标记中了诅咒的玩家",
+    puticon_desc = "在中了金度的妄想的玩家身上放置团队标记。\n\n(需要助理或更高权限)",
+
+    autotarget_cmd = "autotarget",
+    autotarget_name = "图腾自动目标",
+    autotarget_desc = "图腾自动目标",
+
+    trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
+
+    trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_hexFades = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_hex = " 妖术",
+    msg_hex = " 被妖术变形了！驱散它！",
+
+    trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_curseYou = "你被诅咒了！击杀幻影！",
+    trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_curse = " 受到诅咒",
+    trigger_curseFade = "Delusions of Jin'do fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
+    msg_curseDispel = "金度的妄想被解除了！",
+
+    trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_brainWash = "洗脑图腾！",
+    --trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+
+    trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_healingWard = "治疗图腾！",
+    --trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
 local timer = {

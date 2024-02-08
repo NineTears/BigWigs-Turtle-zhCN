@@ -6,67 +6,67 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"frostbolt", "frostboltbar", -1, "frostblast", "proximity", "fissure", "mc", -1, "fbvolley", -1, "detonate", "detonateicon", -1 ,"guardians", -1, "addcount", "phase", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Kelthuzad",
+    cmd = "Kelthuzad",
 
-	KELTHUZADCHAMBERLOCALIZEDLOLHAX = "Kel'Thuzad Chamber",
+    KELTHUZADCHAMBERLOCALIZEDLOLHAX = "克尔苏加德的大厅",
 
-	phase_cmd = "phase",
-	phase_name = "Phase Warnings",
-	phase_desc = "Warn for phases.",
+    phase_cmd = "phase",
+    phase_name = "阶段警报",
+    phase_desc = "阶段转换时进行警告。",
 
-	mc_cmd = "mindcontrol",
-	mc_name = "Mind Control",
-	mc_desc = "Alerts when people are mind controlled.",
+    mc_cmd = "mindcontrol",
+    mc_name = "精神控制",
+    mc_desc = "被精神控制时进行警告。",
 
-	fissure_cmd = "fissure",
-	fissure_name = "Shadow Fissure",
-	fissure_desc = "Alerts about incoming Shadow Fissures.",
+    fissure_cmd = "fissure",
+    fissure_name = "暗影裂隙",
+    fissure_desc = "即将出现暗影裂隙时进行警告",
 
-	frostblast_cmd = "frostblast",
-	frostblast_name = "Frost Blast",
-	frostblast_desc = "Alerts when people get Frost Blasted.",
+    frostblast_cmd = "frostblast",
+    frostblast_name = "冰霜冲击",
+    frostblast_desc = "受到冰霜冲击时进行警告。",
 
-	frostbolt_cmd = "frostbolt",
-	frostbolt_name = "Frostbolt Alert",
-	frostbolt_desc = "Alerts about incoming Frostbolts",
+    frostbolt_cmd = "frostbolt",
+    frostbolt_name = "寒冰箭警报",
+    frostbolt_desc = "即将出现寒冰箭时进行警告",
 
-	frostboltbar_cmd = "frostboltbar",
-	frostboltbar_name = "Frostbolt Bar",
-	frostboltbar_desc = "Displays a bar for Frostbolt casts",
+    frostboltbar_cmd = "frostboltbar",
+    frostboltbar_name = "寒冰箭计时条",
+    frostboltbar_desc = "显示寒冰箭施放的计时条",
 
-	detonate_cmd = "detonate",
-	detonate_name = "Detonate Mana Warning",
-	detonate_desc = "Warns about Detonate Mana soon.",
+    detonate_cmd = "detonate",
+    detonate_name = "魔爆警报",
+    detonate_desc = "即将出现魔爆时进行警告",
 
-	detonateicon_cmd = "detonateicon",
-	detonateicon_name = "Raid Icon on Detonate",
-	detonateicon_desc = "Place a raid icon on people with Detonate Mana.",
+    detonateicon_cmd = "detonateicon",
+    detonateicon_name = "魔爆目标的团队标记",
+    detonateicon_desc = "在魔爆法力的玩家身上放置团队标记。",
 
-	guardians_cmd = "guardians",
-	guardians_name = "Guardian Spawns",
-	guardians_desc = "Warn for incoming Icecrown Guardians in phase 3.",
+    guardians_cmd = "guardians",
+    guardians_name = "守护者生成",
+    guardians_desc = "第三阶段即将出现寒冰皇冠卫士时进行警告",
 
-	fbvolley_cmd = "fbvolley",
-	fbvolley_name = "Possible volley",
-	fbvolley_desc = "Timer for possible Frostbolt volley/multiple",
+    fbvolley_cmd = "fbvolley",
+    fbvolley_name = "可能的齐射",
+    fbvolley_desc = "可能的寒冰箭齐射/多重的计时器",
 
-	addcount_cmd = "addcount",
-	addcount_name = "P1 Add counter",
-	addcount_desc = "Counts number of killed adds in P1",
+    addcount_cmd = "addcount",
+    addcount_name = "P1小怪计数器",
+    addcount_desc = "计数第一阶段已击杀的小怪数量",
 
-	mc_trigger1 = "Your soul, is bound to me now!",
-	mc_trigger2 = "There will be no escape!",
-	mc_warning = "Mind Control!",
-	mc_bar = "Possible Mind Control!",
-	
-	proximity_cmd = "proximity",
-	proximity_name = "Proximity Warning",
-	proximity_desc = "Show Proximity Warning Frame",
+    mc_trigger1 = "Your soul, is bound to me now!",
+    mc_trigger2 = "There will be no escape!",
+    mc_warning = "精神控制！",
+    mc_bar = "可能的精神控制！",
+
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
 	
 	start_trigger = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!",
 	start_trigger1 = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
-	start_warning = "Kel'Thuzad encounter started! ~5min till he is active!",
-	start_bar = "Phase 1 Timer",
+    start_warning = "克尔苏加德战斗开始！约5分钟后激活！",
+    start_bar = "第一阶段计时",
 	
 	attack_trigger1 = "Kel'Thuzad attacks",
 	attack_trigger2 = "Kel'Thuzad misses",
@@ -85,50 +85,50 @@ L:RegisterTranslations("enUS", function() return {
 	earthshock_trigger1 = "Earth Shock hits Kel'Thuzad",
 	earthshock_trigger2 = "Earth Shock crits Kel'Thuzad",
 
-	phase1_warn = "Phase 1 ends in 20 seconds!",
+    phase1_warn = "第一阶段在20秒内结束！",
 
-	phase2_trigger1 = "Pray for mercy!",
-	phase2_trigger2 = "Scream your dying breath!",
-	phase2_trigger3 = "The end is upon you!",
-	phase2_warning = "Phase 2, Kel'Thuzad incoming!",
-	phase2_bar = "Kel'Thuzad Active!",
+    phase2_trigger1 = "Pray for mercy!",
+    phase2_trigger2 = "Scream your dying breath!",
+    phase2_trigger3 = "The end is upon you!",
+    phase2_warning = "第二阶段，克尔苏加德即将出现！",
+    phase2_bar = "克尔苏加德激活！",
 
-	phase3_soon_warning = "Phase 3 soon!",
-	phase3_trigger = "Master! I require aid!",
-	phase3_warning = "Phase 3, Guardians incoming!",
+    phase3_soon_warning = "第三阶段即将到来！",
+    phase3_trigger = "Master! I require aid!",
+    phase3_warning = "第三阶段，寒冰皇冠卫士即将出现！",
 
-	guardians_bar = "Guardian %d",
+    guardians_bar = "寒冰皇冠卫士 %d",
 
-	fissure_trigger = "cast Shadow Fissure.",
-	fissure_warning = "Shadow Fissure!",
+    fissure_trigger = "cast Shadow Fissure.",
+    fissure_warning = "暗影裂隙！",
 
-	frostbolt_trigger = "Kel'Thuzad begins to cast Frostbolt.",
-	frostbolt_warning = "Frostbolt! Interrupt!",
-	frostbolt_bar = "Frostbolt",
+    frostbolt_trigger = "Kel'Thuzad begins to cast Frostbolt.",
+    frostbolt_warning = "寒冰箭！打断！",
+    frostbolt_bar = "寒冰箭",
 
-	frostbolt_volley = "Possible volley",
-	frostbolt_volley_trigger = "afflicted by Frostbolt",
+    frostbolt_volley = "可能的齐射",
+    frostbolt_volley_trigger = "afflicted by Frostbolt",
 
-	add_dead_trigger = "(.*) dies",
-	add_bar = "%d/14 %s",
+    add_dead_trigger = "(.*) dies",
+    add_bar = "%d/14 %s",
 
-	frostblast_bar = "Possible Frost Blast",
-	frostblast_trigger1 = "I will freeze the blood in your veins!",
-	frostblast_trigger2 = "^([^%s]+) ([^%s]+) afflicted by Frost Blast.",
-	frostblast_warning = "Frost Blast!",
-	frostblast_soon_message = "Possible Frost Blast in ~5sec!",
+    frostblast_bar = "可能的冰霜冲击",
+    frostblast_trigger1 = "I will freeze the blood in your veins!",
+    frostblast_trigger2 = "^([^%s]+) ([^%s]+) afflicted by Frost Blast.",
+    frostblast_warning = "冰霜冲击！",
+    frostblast_soon_message = "大约5秒后可能有冰霜冲击！",
 
-	phase2_frostblast_warning = "Possible Frost Blast in ~5sec!",
-	phase2_mc_warning = "Possible Mind Control in ~5sec!",
-	phase2_detonate_warning = "Detonate Mana in ~5sec!",
+    phase2_frostblast_warning = "大约5秒后可能有冰霜冲击！",
+    phase2_mc_warning = "大约5秒后可能有精神控制！",
+    phase2_detonate_warning = "大约5秒后可能有魔爆！",
 
-	detonate_trigger = "^([^%s]+) ([^%s]+) afflicted by Detonate Mana",
-	detonate_bar = "Detonate Mana - %s",
-	detonate_possible_bar = "Detonate Mana",
-	detonate_warning = "%s has Detonate Mana!",
+    detonate_trigger = "^([^%s]+) ([^%s]+) afflicted by Detonate Mana",
+    detonate_bar = "魔爆法力 - %s",
+    detonate_possible_bar = "魔爆法力",
+    detonate_warning = "%s 被魔爆法力影响！",
 
-	you = "You",
-	are = "are",
+    you = "你",
+    are = "是",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -254,6 +254,134 @@ L:RegisterTranslations("esES", function() return {
 	--proximity_cmd = "proximity",
 	proximity_name = "Alerta de Proximidad",
 	proximity_desc = "Muestra marco de alerta de proximidad",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Kelthuzad",
+
+    KELTHUZADCHAMBERLOCALIZEDLOLHAX = "克尔苏加德的大厅",
+
+    phase_cmd = "phase",
+    phase_name = "阶段警报",
+    phase_desc = "阶段转换时进行警告。",
+
+    mc_cmd = "mindcontrol",
+    mc_name = "精神控制",
+    mc_desc = "被精神控制时进行警告。",
+
+    fissure_cmd = "fissure",
+    fissure_name = "暗影裂隙",
+    fissure_desc = "即将出现暗影裂隙时进行警告",
+
+    frostblast_cmd = "frostblast",
+    frostblast_name = "冰霜冲击",
+    frostblast_desc = "受到冰霜冲击时进行警告。",
+
+    frostbolt_cmd = "frostbolt",
+    frostbolt_name = "寒冰箭警报",
+    frostbolt_desc = "即将出现寒冰箭时进行警告",
+
+    frostboltbar_cmd = "frostboltbar",
+    frostboltbar_name = "寒冰箭计时条",
+    frostboltbar_desc = "显示寒冰箭施放的计时条",
+
+    detonate_cmd = "detonate",
+    detonate_name = "魔爆警报",
+    detonate_desc = "即将出现魔爆时进行警告",
+
+    detonateicon_cmd = "detonateicon",
+    detonateicon_name = "魔爆目标的团队标记",
+    detonateicon_desc = "在魔爆法力的玩家身上放置团队标记。",
+
+    guardians_cmd = "guardians",
+    guardians_name = "守护者生成",
+    guardians_desc = "第三阶段即将出现寒冰皇冠卫士时进行警告",
+
+    fbvolley_cmd = "fbvolley",
+    fbvolley_name = "可能的齐射",
+    fbvolley_desc = "可能的寒冰箭齐射/多重的计时器",
+
+    addcount_cmd = "addcount",
+    addcount_name = "P1小怪计数器",
+    addcount_desc = "计数第一阶段已击杀的小怪数量",
+
+    mc_trigger1 = "Your soul, is bound to me now!",
+    mc_trigger2 = "There will be no escape!",
+    mc_warning = "精神控制！",
+    mc_bar = "可能的精神控制！",
+
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
+	
+	start_trigger = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!",
+	start_trigger1 = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
+    start_warning = "克尔苏加德战斗开始！约5分钟后激活！",
+    start_bar = "第一阶段计时",
+	
+	attack_trigger1 = "Kel'Thuzad attacks",
+	attack_trigger2 = "Kel'Thuzad misses",
+	attack_trigger3 = "Kel'Thuzad hits",
+	attack_trigger4 = "Kel'Thuzad crits",
+	
+	kick_trigger1 = "Kick hits Kel'Thuzad",
+	kick_trigger2 = "Kick crits Kel'Thuzad",
+	kick_trigger3 = "Kick was blocked by Kel'Thuzad",
+	pummel_trigger1 = "Pummel hits Kel'Thuzad",
+	pummel_trigger2 = "Pummel crits Kel'Thuzad",
+	pummel_trigger3 = "Pummel was blocked by Kel'Thuzad",
+	shieldbash_trigger1 = "Shield Bash hits Kel'Thuzad",
+	shieldbash_trigger2 = "Shield Bash crits Kel'Thuzad",
+	shieldbash_trigger3 = "Shield Bash was blocked by Kel'Thuzad",
+	earthshock_trigger1 = "Earth Shock hits Kel'Thuzad",
+	earthshock_trigger2 = "Earth Shock crits Kel'Thuzad",
+
+    phase1_warn = "第一阶段在20秒内结束！",
+
+    phase2_trigger1 = "Pray for mercy!",
+    phase2_trigger2 = "Scream your dying breath!",
+    phase2_trigger3 = "The end is upon you!",
+    phase2_warning = "第二阶段，克尔苏加德即将出现！",
+    phase2_bar = "克尔苏加德激活！",
+
+    phase3_soon_warning = "第三阶段即将到来！",
+    phase3_trigger = "Master! I require aid!",
+    phase3_warning = "第三阶段，寒冰皇冠卫士即将出现！",
+
+    guardians_bar = "寒冰皇冠卫士 %d",
+
+    fissure_trigger = "cast Shadow Fissure.",
+    fissure_warning = "暗影裂隙！",
+
+    frostbolt_trigger = "Kel'Thuzad begins to cast Frostbolt.",
+    frostbolt_warning = "寒冰箭！打断！",
+    frostbolt_bar = "寒冰箭",
+
+    frostbolt_volley = "可能的齐射",
+    frostbolt_volley_trigger = "afflicted by Frostbolt",
+
+    add_dead_trigger = "(.*) dies",
+    add_bar = "%d/14 %s",
+
+    frostblast_bar = "可能的冰霜冲击",
+    frostblast_trigger1 = "I will freeze the blood in your veins!",
+    frostblast_trigger2 = "^([^%s]+) ([^%s]+) afflicted by Frost Blast.",
+    frostblast_warning = "冰霜冲击！",
+    frostblast_soon_message = "大约5秒后可能有冰霜冲击！",
+
+    phase2_frostblast_warning = "大约5秒后可能有冰霜冲击！",
+    phase2_mc_warning = "大约5秒后可能有精神控制！",
+    phase2_detonate_warning = "大约5秒后可能有魔爆！",
+
+    detonate_trigger = "^([^%s]+) ([^%s]+) afflicted by Detonate Mana",
+    detonate_bar = "魔爆法力 - %s",
+    detonate_possible_bar = "魔爆法力",
+    detonate_warning = "%s 被魔爆法力影响！",
+
+    you = "你",
+    are = "是",
 } end )
 
 module.proximityCheck = function(unit) return CheckInteractDistance(unit, 2) end

@@ -6,81 +6,81 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"mc", "sounds", "bigicon", "raidSilence", "poison", "silence", "enrage", "rain", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Faerlina",
+    cmd = "Faerlina",
 
-	silence_cmd = "silence",
-	silence_name = "Silence Alert",
-	silence_desc = "Warn for silence",
+    silence_cmd = "silence",
+    silence_name = "沉默警报",
+    silence_desc = "沉默出现时进行警告",
 
-	bigicon_cmd = "bigicon",
-	bigicon_name = "BigIcon MC and Enrage Alert",
-	bigicon_desc = "BigIcon alerts when priest must MC and when the boss goes Enraged",
+    bigicon_cmd = "bigicon",
+    bigicon_name = "心灵控制和激怒大图标警报",
+    bigicon_desc = "当牧师必须进行心灵控制和Boss进入激怒时显示大图标警报",
 
-	sounds_cmd = "sounds",
-	sounds_name = "Sound MC and Enrage Alert",
-	sounds_desc = "Sound alert when priest must MC and when the boss goes Enraged",
-	
-	mc_cmd = "mc",
-	mc_name = "MC timer bars",
-	mc_desc = "Timer bars for Worshipper MindControls",
-	
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warn for Enrage",
+    sounds_cmd = "sounds",
+    sounds_name = "心灵控制和激怒声音警报",
+    sounds_desc = "当牧师必须进行心灵控制和Boss进入激怒时发出声音警报",
+    
+    mc_cmd = "mc",
+    mc_name = "心灵控制计时条",
+    mc_desc = "信徒心灵控制的计时条",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
 
-	rain_cmd = "rain",
-	rain_name = "Rain of Fire Alert",
-	rain_desc = "Warn when you are standing in Rain of Fire",
-	
-	raidSilence_cmd = "raidSilence",
-	raidSilence_name = "Raid members Silenced Alert",
-	raidSilence_desc = "Warn when raid members are silenced",
+    rain_cmd = "rain",
+    rain_name = "火焰之雨警报",
+    rain_desc = "当你站在火焰之雨中时进行警告",
+    
+    raidSilence_cmd = "raidSilence",
+    raidSilence_name = "团队成员沉默警报",
+    raidSilence_desc = "当团队成员被沉默时进行警告",
 
-	poison_cmd = "poison",
-	poison_name = "Poison Volley Alert",
-	poison_desc = "Warns shamans on Poison Volley",
-	
+    poison_cmd = "poison",
+    poison_name = "毒箭之雨警报",
+    poison_desc = "对萨满进行毒箭之雨的警告",
+    
 	trigger_start1 = "Kneel before me, worm!",
 	trigger_start2 = "Slay them in the master's name!",
 	trigger_start3 = "You cannot hide from me!",
 	trigger_start4 = "Run while you still can!",
 
-	trigger_rain = "You suffer (.+) Fire damage from Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
-	trigger_rain2 = "You absorb Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	
-	trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	
-	trigger_raidSilence = "afflicted by Silence.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	bar_raidSilence = "Raid member Silenced",
-	
-	trigger_mcGain = "(.+) gains Mind Control.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
-	trigger_mcGainYou = "You gain Mind Control.",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
-	--trigger_mcGain = "Naxxramas Worshipper is afflicted by Mind Control",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	mc_bar = " MC",
-	
-	trigger_worshipperDies = "Naxxramas Worshipper dies.",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
+    trigger_rain = "You suffer (.+) Fire damage from Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
+    trigger_rain2 = "You absorb Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    
+    trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    trigger_raidSilence = "afflicted by Silence.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_raidSilence = "团队成员沉默",
+    
+    trigger_mcGain = "(.+) gains Mind Control.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
+    trigger_mcGainYou = "You gain Mind Control.",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    --trigger_mcGain = "Naxxramas Worshipper is afflicted by Mind Control",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    mc_bar = " 心灵控制",
+    
+    trigger_worshipperDies = "Naxxramas Worshipper dies.",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
 
-	trigger_mcFade = "Mind Control fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-	--trigger_mcFade = "Naxxramas Worshipper begins to perform Widow's Embrace",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
-	--trigger_mcSuccess = "Widow's Embrace fades from Naxxramas Worshipper.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	--trigger_embrace = "Grand Widow Faerlina gains Widow's Embrace.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	msg_silencedHalf = "Silenced before enrage! next in 30 seconds",
-	msg_silenceZero = "Silenced WAY early! No delay on Enrage",
-	bar_silence = "Boss Silenced",
-	
-	trigger_enrage = "Grand Widow Faerlina gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	msg_enrageGain = "Enrage!",
-	bar_enrageGain = "Boss is ENRAGED!",
-	
-	trigger_enrageFade = "Enrage fades from Grand Widow Faerlina.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	msg_silencedEnrageFull = "Enrage silenced! next in 61 seconds",
-	
-	msg_enrageSoon = "Enrage in 10 seconds",
-	
-	bar_enrageCD = "Enrage CD",
-	
-	trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
-	msg_dispelCast = " Dispelled a Worshipper! Don't Dispel MC!",
+    trigger_mcFade = "Mind Control fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    --trigger_mcFade = "Naxxramas Worshipper begins to perform Widow's Embrace",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+    --trigger_mcSuccess = "Widow's Embrace fades from Naxxramas Worshipper.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    --trigger_embrace = "Grand Widow Faerlina gains Widow's Embrace.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_silencedHalf = "在激怒前沉默！下一个沉默在30秒后",
+    msg_silenceZero = "过早沉默！激怒无延迟",
+    bar_silence = "Boss沉默",
+    
+    trigger_enrage = "Grand Widow Faerlina gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrageGain = "激怒！",
+    bar_enrageGain = "Boss激怒！",
+    
+    trigger_enrageFade = "Enrage fades from Grand Widow Faerlina.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_silencedEnrageFull = "激怒被沉默！下一个激怒在61秒后",
+    
+    msg_enrageSoon = "激怒将在10秒后到来",
+    
+    bar_enrageCD = "激怒冷却",
+    
+    trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+    msg_dispelCast = "驱散了一个信徒！请勿驱散心灵控制！",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -114,6 +114,86 @@ L:RegisterTranslations("esES", function() return {
 	rain_name = "Alerta de Lluvia de Fuego",
 	rain_desc = "Avisa si estás en Lluvia de Fuego",
 	trigger_rain = "Sufres de Lluvia de Fuego",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Faerlina",
+
+    silence_cmd = "silence",
+    silence_name = "沉默警报",
+    silence_desc = "沉默出现时进行警告",
+
+    bigicon_cmd = "bigicon",
+    bigicon_name = "心灵控制和激怒大图标警报",
+    bigicon_desc = "当牧师必须进行心灵控制和Boss进入激怒时显示大图标警报",
+
+    sounds_cmd = "sounds",
+    sounds_name = "心灵控制和激怒声音警报",
+    sounds_desc = "当牧师必须进行心灵控制和Boss进入激怒时发出声音警报",
+    
+    mc_cmd = "mc",
+    mc_name = "心灵控制计时条",
+    mc_desc = "信徒心灵控制的计时条",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+
+    rain_cmd = "rain",
+    rain_name = "火焰之雨警报",
+    rain_desc = "当你站在火焰之雨中时进行警告",
+    
+    raidSilence_cmd = "raidSilence",
+    raidSilence_name = "团队成员沉默警报",
+    raidSilence_desc = "当团队成员被沉默时进行警告",
+
+    poison_cmd = "poison",
+    poison_name = "毒箭之雨警报",
+    poison_desc = "对萨满进行毒箭之雨的警告",
+    
+	trigger_start1 = "Kneel before me, worm!",
+	trigger_start2 = "Slay them in the master's name!",
+	trigger_start3 = "You cannot hide from me!",
+	trigger_start4 = "Run while you still can!",
+
+    trigger_rain = "You suffer (.+) Fire damage from Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
+    trigger_rain2 = "You absorb Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    
+    trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    trigger_raidSilence = "afflicted by Silence.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_raidSilence = "团队成员沉默",
+    
+    trigger_mcGain = "(.+) gains Mind Control.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
+    trigger_mcGainYou = "You gain Mind Control.",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    --trigger_mcGain = "Naxxramas Worshipper is afflicted by Mind Control",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    mc_bar = " 心灵控制",
+    
+    trigger_worshipperDies = "Naxxramas Worshipper dies.",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
+
+    trigger_mcFade = "Mind Control fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    --trigger_mcFade = "Naxxramas Worshipper begins to perform Widow's Embrace",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+    --trigger_mcSuccess = "Widow's Embrace fades from Naxxramas Worshipper.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    --trigger_embrace = "Grand Widow Faerlina gains Widow's Embrace.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_silencedHalf = "在激怒前沉默！下一个沉默在30秒后",
+    msg_silenceZero = "过早沉默！激怒无延迟",
+    bar_silence = "Boss沉默",
+    
+    trigger_enrage = "Grand Widow Faerlina gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrageGain = "激怒！",
+    bar_enrageGain = "Boss激怒！",
+    
+    trigger_enrageFade = "Enrage fades from Grand Widow Faerlina.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_silencedEnrageFull = "激怒被沉默！下一个激怒在61秒后",
+    
+    msg_enrageSoon = "激怒将在10秒后到来",
+    
+    bar_enrageCD = "激怒冷却",
+    
+    trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+    msg_dispelCast = "驱散了一个信徒！请勿驱散心灵控制！",
 } end )
 
 local timer = {

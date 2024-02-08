@@ -6,55 +6,109 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"blink", "teleport", "curse", "cripple", -1, "wave", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Noth",
+    cmd = "Noth",
 
-	blink_cmd = "blink",
-	blink_name = "Blink Alert",
-	blink_desc = "Warn for blink",
+    blink_cmd = "blink",
+    blink_name = "闪现警报",
+    blink_desc = "闪现时进行警告",
 
-	teleport_cmd = "teleport",
-	teleport_name = "Teleport Alert",
-	teleport_desc = "Warn for teleport",
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送时进行警告",
 
-	curse_cmd = "curse",
-	curse_name = "Curse Alert",
-	curse_desc = "Warn for curse",
-	
-	cripple_cmd = "cripple",
-	cripple_name = "Cripple Alert",
-	cripple_desc = "Warn for cripple",
-	
-	wave_cmd = "wave",
-	wave_name = "Wave Alert",
-	wave_desc = "Warn for waves",
+    curse_cmd = "curse",
+    curse_name = "诅咒警报",
+    curse_desc = "诅咒时进行警告",
+    
+    cripple_cmd = "cripple",
+    cripple_name = "残废术警报",
+    cripple_desc = "残废术生效时进行警告",
+    
+    wave_cmd = "wave",
+    wave_name = "波浪警报",
+    wave_desc = "波浪来袭时进行警告",
 
-	trigger_start1 = "Die, trespasser!",
-	trigger_start2 = "Glory to the master!",
-	trigger_start3 = "Your life is forfeit!",
-	
-	trigger_curse1 = "afflicted by Curse of the Plaguebringer",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_curse2 = "Curse of the Plaguebringer was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_curse = "Curse!",
-	bar_curse = "Curse CD",
-	
-	trigger_cripple1 = "is afflicted by Cripple",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_cripple2 = "Cripple was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_cripple = "Cripple!",
-	bar_cripple = "Cripple CD",
-	
-	trigger_blink = "Noth the Plaguebringer gains Blink.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	msg_blink = "Blink!",
-	bar_blink = "Blink CD",
-	
-	trigger_add = "Rise, my soldiers! Rise and fight once more!",
-	bar_roomWave = "3 Plagued Warriors",
-	
-	bar_wave1 = "Wave 1",
-	bar_wave2 = "Wave 2",
-	
-	msg_tpToBalcony = "Teleport! He's on the balcony!",
-	msg_tpToRoom = "Back in room!",
-	bar_teleport = "Teleport",	
+    trigger_start1 = "Die, trespasser!",
+    trigger_start2 = "Glory to the master!",
+    trigger_start3 = "Your life is forfeit!",
+    
+    trigger_curse1 = "afflicted by Curse of the Plaguebringer",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_curse2 = "Curse of the Plaguebringer was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_curse = "诅咒！",
+    bar_curse = "诅咒冷却",
+    
+    trigger_cripple1 = "is afflicted by Cripple",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_cripple2 = "Cripple was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_cripple = "残废术！",
+    bar_cripple = "残废术冷却",
+    
+    trigger_blink = "Noth the Plaguebringer gains Blink.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_blink = "闪现！",
+    bar_blink = "闪现冷却",
+    
+    trigger_add = "Rise, my soldiers! Rise and fight once more!",
+    bar_roomWave = "3个被感染的战士",
+    
+    bar_wave1 = "第1波",
+    bar_wave2 = "第2波",
+    
+    msg_tpToBalcony = "传送！他在阳台上！",
+    msg_tpToRoom = "回到房间中！",
+    bar_teleport = "传送",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Noth",
+
+    blink_cmd = "blink",
+    blink_name = "闪现警报",
+    blink_desc = "闪现时进行警告",
+
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送时进行警告",
+
+    curse_cmd = "curse",
+    curse_name = "诅咒警报",
+    curse_desc = "诅咒时进行警告",
+    
+    cripple_cmd = "cripple",
+    cripple_name = "残废术警报",
+    cripple_desc = "残废术生效时进行警告",
+    
+    wave_cmd = "wave",
+    wave_name = "波浪警报",
+    wave_desc = "波浪来袭时进行警告",
+
+    trigger_start1 = "Die, trespasser!",
+    trigger_start2 = "Glory to the master!",
+    trigger_start3 = "Your life is forfeit!",
+    
+    trigger_curse1 = "afflicted by Curse of the Plaguebringer",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_curse2 = "Curse of the Plaguebringer was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_curse = "诅咒！",
+    bar_curse = "诅咒冷却",
+    
+    trigger_cripple1 = "is afflicted by Cripple",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_cripple2 = "Cripple was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_cripple = "残废术！",
+    bar_cripple = "残废术冷却",
+    
+    trigger_blink = "Noth the Plaguebringer gains Blink.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_blink = "闪现！",
+    bar_blink = "闪现冷却",
+    
+    trigger_add = "Rise, my soldiers! Rise and fight once more!",
+    bar_roomWave = "3个被感染的战士",
+    
+    bar_wave1 = "第1波",
+    bar_wave2 = "第2波",
+    
+    msg_tpToBalcony = "传送！他在阳台上！",
+    msg_tpToRoom = "回到房间中！",
+    bar_teleport = "传送",
 } end )
 
 local timer = {

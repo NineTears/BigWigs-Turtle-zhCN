@@ -6,41 +6,81 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"locust", "impale", "enrage", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Anubrekhan",
+    cmd = "Anubrekhan",
 
-	locust_cmd = "locust",
-	locust_name = "Locust Swarm Alert",
-	locust_desc = "Warn for Locust Swarm",
+    locust_cmd = "locust",
+    locust_name = "蝗虫群警报",
+    locust_desc = "蝗虫群出现时进行警告",
 
-	enrage_cmd = "enrage",
-	enrage_name = "Crypt Guard Enrage Alert",
-	enrage_desc = "Warn for Enrage",
-	
-	impale_cmd = "impale",
-	impale_name = "Impale Alert",
-	impale_desc = "Warns for Impale",
-	
-	starttrigger1 = "Just a little taste...",
-	starttrigger2 = "Yes, run! It makes the blood pump faster!",
-	starttrigger3 = "There is no way out.",
-	
-	trigger_locustSwarmEnds = "Locust Swarm fades from Anub'Rekhan.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_locustSwarmCd = "Locust Swarm CD",
-	
-	bar_locustSwarmOffCd = "Locust Swarm Ready...",
-	
-	trigger_locustSwarmCast = "Anub'Rekhan begins to cast Locust Swarm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	msg_locustSwarmCasting = "Incoming Locust Swarm!",
-	bar_locustSwarmCasting = "Incoming Locust Swarm!",
-	
-	trigger_locustSwarmGain = "Anub'Rekhan is afflicted by Locust Swarm.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-	bar_locustSwarmIsUp = "Locust Swarm",
-	
-	trigger_impale = "Anub'Rekhan's Impale hits",
-	bar_impale = "Impale CD",
-	
-	trigger_enrage = "Crypt Guard gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	msg_enrage = "Crypt Guard Enrage - Stun + Traps!",
+    enrage_cmd = "enrage",
+    enrage_name = "地穴卫士激怒警报",
+    enrage_desc = "地穴卫士激怒时警告",
+
+    impale_cmd = "impale",
+    impale_name = "穿刺警报",
+    impale_desc = "穿刺出现时警告",
+
+    starttrigger1 = "Just a little taste...",
+    starttrigger2 = "Yes, run! It makes the blood pump faster!",
+    starttrigger3 = "There is no way out.",
+
+    trigger_locustSwarmEnds = "Locust Swarm fades from Anub'Rekhan.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_locustSwarmCd = "蝗虫群冷却",
+
+    bar_locustSwarmOffCd = "蝗虫群准备就绪...",
+
+    trigger_locustSwarmCast = "Anub'Rekhan begins to cast Locust Swarm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_locustSwarmCasting = "即将出现蝗虫群！",
+    bar_locustSwarmCasting = "即将出现蝗虫群！",
+
+    trigger_locustSwarmGain = "Anub'Rekhan is afflicted by Locust Swarm.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+    bar_locustSwarmIsUp = "蝗虫群",
+
+    trigger_impale = "Anub'Rekhan's Impale hits",
+    bar_impale = "穿刺冷却",
+
+    trigger_enrage = "Crypt Guard gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrage = "地穴卫士激怒 - 使用眩晕和陷阱！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Anubrekhan",
+
+    locust_cmd = "locust",
+    locust_name = "蝗虫群警报",
+    locust_desc = "蝗虫群出现时进行警告",
+
+    enrage_cmd = "enrage",
+    enrage_name = "地穴卫士激怒警报",
+    enrage_desc = "地穴卫士激怒时警告",
+
+    impale_cmd = "impale",
+    impale_name = "穿刺警报",
+    impale_desc = "穿刺出现时警告",
+
+    starttrigger1 = "Just a little taste...",
+    starttrigger2 = "Yes, run! It makes the blood pump faster!",
+    starttrigger3 = "There is no way out.",
+
+    trigger_locustSwarmEnds = "Locust Swarm fades from Anub'Rekhan.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_locustSwarmCd = "蝗虫群冷却",
+
+    bar_locustSwarmOffCd = "蝗虫群准备就绪...",
+
+    trigger_locustSwarmCast = "Anub'Rekhan begins to cast Locust Swarm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_locustSwarmCasting = "即将出现蝗虫群！",
+    bar_locustSwarmCasting = "即将出现蝗虫群！",
+
+    trigger_locustSwarmGain = "Anub'Rekhan is afflicted by Locust Swarm.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+    bar_locustSwarmIsUp = "蝗虫群",
+
+    trigger_impale = "Anub'Rekhan's Impale hits",
+    bar_impale = "穿刺冷却",
+
+    trigger_enrage = "Crypt Guard gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrage = "地穴卫士激怒 - 使用眩晕和陷阱！",
 } end )
 
 local timer = {

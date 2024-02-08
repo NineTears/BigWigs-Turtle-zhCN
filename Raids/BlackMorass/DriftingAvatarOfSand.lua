@@ -10,16 +10,31 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "DriftingAvatarOfSand",
+    cmd = "DriftingAvatarOfSand",
 
-	blindingsand_cmd = "blindingsand",
-	blindingsand_name = "Blinding Sand Alert",
-	blindingsand_desc = "Warn for Blinding Sand",
-	
-	trigger_blindingSandYou = "You are afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_blindingSandOther = "(.+) is afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_blindingSandFade = "Blinding Sand fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_blindingSand = " Blinded",
+    blindingsand_cmd = "blindingsand",
+    blindingsand_name = "致盲沙尘警报",
+    blindingsand_desc = "致盲沙尘出现时进行警告",
+    
+    trigger_blindingSandYou = "You are afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_blindingSandOther = "(.+) is afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_blindingSandFade = "Blinding Sand fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_blindingSand = "致盲",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "DriftingAvatarOfSand",
+
+    blindingsand_cmd = "blindingsand",
+    blindingsand_name = "致盲沙尘警报",
+    blindingsand_desc = "致盲沙尘出现时进行警告",
+    
+    trigger_blindingSandYou = "You are afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_blindingSandOther = "(.+) is afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_blindingSandFade = "Blinding Sand fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_blindingSand = "致盲",
 } end )
 
 local timer = {

@@ -6,51 +6,51 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"slimespray", "inject", "cloud", "icon",  -1, "enrage", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Grobbulus",
+    cmd = "Grobbulus",
 
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warn for Enrage",
-	
-	slimespray_cmd = "slimespray",
-	slimespray_name = "Slime Spray",
-	slimespray_desc = "Show timer for Slime Spray",
-	
-	inject_cmd = "inject",
-	inject_name = "Mutating Injection Alert",
-	inject_desc = "Warn when someone is injected",
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒时进行警告",
+    
+    slimespray_cmd = "slimespray",
+    slimespray_name = "软泥喷射",
+    slimespray_desc = "显示软泥喷射的计时器",
+    
+    inject_cmd = "inject",
+    inject_name = "变异注射警报",
+    inject_desc = "当有人被注射时进行警告",
 
-	icon_cmd = "icon",
-	icon_name = "Place Icon",
-	icon_desc = "Place a skull icon on an injected person. (Requires promoted or higher)",
+    icon_cmd = "icon",
+    icon_name = "放置图标",
+    icon_desc = "在被注射的人身上放置骷髅标记。（需要助理或更高权限）",
 
-	cloud_cmd = "cloud",
-	cloud_name = "Poison Cloud",
-	cloud_desc = "Warn for Poison Clouds",
-		
-	trigger_enrage = "%s becomes enraged!",--to be confirmed
-	bar_enrage = "Enrage",
-	msg_enrage60 = "Enrage in 1min",
-	msg_enrage10 = "Enrage in 10sec",
-	msg_enrage = "Enrage!",
-	
-	trigger_slimeSpray = "Slime Spray",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_slimeSprayCD = "Slime Spray CD",
-	
-	trigger_inject = "(.*) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_injectYou = "You are afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_injected = " Injected",
-	msg_injectYou = "You are injected!",
-	msg_inject = " Injected",
-	
-	trigger_injectDispel = "(.*)'s Mutating Injection is removed.",--CHAT_MSG_SPELL_BREAK_AURA,"
-	trigger_injectDispelYou = "Your Mutating Injection is removed.",--to be confirmed
-	
-	trigger_cloudCast = "Grobbulus casts Poison Cloud.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	bar_cloudCD = "Poison Cloud CD",
-	msg_cloudCast = "Cloud -- Move Grobbulus!",
-	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	--trigger_cloudHitsOther = "Grobbulus Cloud's Poison hits (.+) for", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+    cloud_cmd = "cloud",
+    cloud_name = "毒云",
+    cloud_desc = "毒云出现时进行警告",
+        
+    trigger_enrage = "%s becomes enraged!",--to be confirmed
+    bar_enrage = "激怒",
+    msg_enrage60 = "1分钟后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
+    
+    trigger_slimeSpray = "Slime Spray",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_slimeSprayCD = "软泥喷射冷却",
+    
+    trigger_inject = "(.*) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_injectYou = "You are afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_injected = "被注射",
+    msg_injectYou = "你被注射了！",
+    msg_inject = "被注射",
+    
+    trigger_injectDispel = "(.*)'s Mutating Injection is removed.",--CHAT_MSG_SPELL_BREAK_AURA,"
+    trigger_injectDispelYou = "Your Mutating Injection is removed.",--to be confirmed
+    
+    trigger_cloudCast = "Grobbulus casts Poison Cloud.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    bar_cloudCD = "毒云冷却",
+    msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
+    trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    --trigger_cloudHitsOther = "Grobbulus Cloud's Poison hits (.+) for", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -96,6 +96,56 @@ L:RegisterTranslations("esES", function() return {
 	cloud_warn = "¡Próximo Nube de veneno en ~15 segundos!",
 	cloud_bar = "Nube de veneno",
 
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Grobbulus",
+
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒时进行警告",
+    
+    slimespray_cmd = "slimespray",
+    slimespray_name = "软泥喷射",
+    slimespray_desc = "显示软泥喷射的计时器",
+    
+    inject_cmd = "inject",
+    inject_name = "变异注射警报",
+    inject_desc = "当有人被注射时进行警告",
+
+    icon_cmd = "icon",
+    icon_name = "放置图标",
+    icon_desc = "在被注射的人身上放置骷髅标记。（需要助理或更高权限）",
+
+    cloud_cmd = "cloud",
+    cloud_name = "毒云",
+    cloud_desc = "毒云出现时进行警告",
+        
+    trigger_enrage = "%s becomes enraged!",--to be confirmed
+    bar_enrage = "激怒",
+    msg_enrage60 = "1分钟后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
+    
+    trigger_slimeSpray = "Slime Spray",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_slimeSprayCD = "软泥喷射冷却",
+    
+    trigger_inject = "(.*) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_injectYou = "You are afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_injected = "被注射",
+    msg_injectYou = "你被注射了！",
+    msg_inject = "被注射",
+    
+    trigger_injectDispel = "(.*)'s Mutating Injection is removed.",--CHAT_MSG_SPELL_BREAK_AURA,"
+    trigger_injectDispelYou = "Your Mutating Injection is removed.",--to be confirmed
+    
+    trigger_cloudCast = "Grobbulus casts Poison Cloud.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    bar_cloudCD = "毒云冷却",
+    msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
+    trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    --trigger_cloudHitsOther = "Grobbulus Cloud's Poison hits (.+) for", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 } end )
 
 local timer = {

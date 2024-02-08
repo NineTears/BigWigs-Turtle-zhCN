@@ -6,73 +6,73 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"popcorn", "sounds", "bigicon", "sweep", "sandblast", -1, "emerge", "submerge", -1, "berserk", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Ouro",
+    cmd = "Ouro",
 
-	OUROCHAMBERLOCALIZEDLOLHAX = "Ouro's Chamber",
+    OUROCHAMBERLOCALIZEDLOLHAX = "Ouro's Chamber",
 
-	sweep_cmd = "sweep",
-	sweep_name = "Sweep Alert",
-	sweep_desc = "Warn for Sweeps",
-	
-	popcorn_cmd = "popcorn",
-	popcorn_name = "Popcorn Alert",
-	popcorn_desc = "Warns when you take damage from Popcorn",
-	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "BigIcon Alerts",
-	bigicon_desc = "BigIcon Alert for Sweep, Submerge, Emerge, Popcorn",
-	
-	sounds_cmd = "sounds",
-	sounds_name = "Sound Alerts",
-	sounds_desc = "Sound Alert for Sweep, Submerge, Emerge, Popcorn",
-	
-	sandblast_cmd = "sandblast",
-	sandblast_name = "Sandblast Alert",
-	sandblast_desc = "Warn for Sandblasts",
+    sweep_cmd = "sweep",
+    sweep_name = "横扫警报",
+    sweep_desc = "横扫出现时进行警告",
+    
+    popcorn_cmd = "popcorn",
+    popcorn_name = "爆裂警报",
+    popcorn_desc = "受到爆裂伤害时进行警告",
+    
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标警报",
+    bigicon_desc = "横扫、下潜、上浮、爆裂的大图标警告",
+    
+    sounds_cmd = "sounds",
+    sounds_name = "声音警报",
+    sounds_desc = "横扫、下潜、上浮、爆裂的声音警告",
+    
+    sandblast_cmd = "sandblast",
+    sandblast_name = "沙尘爆裂警报",
+    sandblast_desc = "沙尘爆裂出现时进行警告",
 
-	emerge_cmd = "emerge",
-	emerge_name = "Emerge Alert",
-	emerge_desc = "Warn for Emerge",
+    emerge_cmd = "emerge",
+    emerge_name = "上浮警报",
+    emerge_desc = "奥罗上浮时进行警告",
 
-	submerge_cmd = "submerge",
-	submerge_name = "Submerge Alert",
-	submerge_desc = "Warn for Submerge",
+    submerge_cmd = "submerge",
+    submerge_name = "下潜警报",
+    submerge_desc = "奥罗下潜时进行警告",
 
-	berserk_cmd = "berserk",
-	berserk_name = "Berserk",
-	berserk_desc = "Warn for when Ouro goes berserk",
+    berserk_cmd = "berserk",
+    berserk_name = "狂暴警报",
+    berserk_desc = "奥罗进入狂暴状态时进行警告",
 
-	sweeptrigger = "Ouro begins to cast Sweep",
-	sweepannounce = "Sweep!",
-	sweepwarn = "5 seconds until Sweep!",
-	sweepbartext = "Sweep",
+    sweeptrigger = "Ouro begins to cast Sweep",
+    sweepannounce = "横扫来临！",
+    sweepwarn = "横扫5秒后到来！",
+    sweepbartext = "横扫",
 
-	sandblasttrigger = "Ouro begins to perform Sand Blast",
-	sandblastannounce = "Incoming Sand Blast!",
-	sandblastwarn = "5 seconds until Sand Blast!",
-	sandblastbartext = "Possible Sand Blast",
+    sandblasttrigger = "Ouro begins to perform Sand Blast",
+    sandblastannounce = "沙尘爆裂来临！",
+    sandblastwarn = "沙尘爆裂5秒后到来！",
+    sandblastbartext = "可能的沙尘爆裂",
 
-	engage_message = "Ouro engaged! Possible Submerge in 90sec!",
-	possible_submerge_bar = "Possible submerge",
+    engage_message = "奥罗已激活！可能的下潜在90秒后！",
+    possible_submerge_bar = "可能下潜",
 
-	--emergetrigger = "Dirt Mound casts Summon Ouro Scarabs.",
-	emergetrigger = "Ground Rupture",
+    --emergetrigger = "Dirt Mound casts Summon Ouro Scarabs.",
+    emergetrigger = "Ground Rupture",
 
-	emergeannounce = "Ouro has emerged!",
-	emergewarn = "15 sec to possible submerge!",
-	emergebartext = "Ouro submerge",
+    emergeannounce = "奥罗已上浮！",
+    emergewarn = "15秒后可能下潜！",
+    emergebartext = "奥罗下潜",
 
-	--submergetrigger = "Ouro casts Summon Ouro Mounds.",
-	submergetrigger = "submerge",
-	submergeannounce = "Ouro has submerged!",
-	submergewarn = "5 seconds until Ouro Emerges!",
-	submergebartext = "Ouro Emerge",
+    --submergetrigger = "Ouro casts Summon Ouro Mounds.",
+    submergetrigger = "submerge",
+    submergeannounce = "奥罗已下潜！",
+    submergewarn = "奥罗5秒后上浮！",
+    submergebartext = "奥罗上浮",
 
-	berserktrigger = "Ouro gains Berserk.",
-	berserkannounce = "Berserk - Berserk!",
-	berserksoonwarn = "Berserk Soon - Get Ready!",
+    berserktrigger = "Ouro gains Berserk.",
+    berserkannounce = "狂暴 - 狂暴！",
+    berserksoonwarn = "即将狂暴 - 准备好！",
 
-	popcorn_trigger = "Dirt Mound's Quake hits you for",
+    popcorn_trigger = "Dirt Mound's Quake hits you for",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -174,6 +174,78 @@ L:RegisterTranslations("deDE", function() return {
 	berserktrigger = "Ouro bekommt 'Berserker'.",
 	berserkannounce = "Berserk - Berserk!",
 	berserksoonwarn = "Berserkerwut in K\195\188rze - Bereit machen!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Ouro",
+
+    OUROCHAMBERLOCALIZEDLOLHAX = "Ouro's Chamber",
+
+    sweep_cmd = "sweep",
+    sweep_name = "横扫警报",
+    sweep_desc = "横扫出现时进行警告",
+    
+    popcorn_cmd = "popcorn",
+    popcorn_name = "爆裂警报",
+    popcorn_desc = "受到爆裂伤害时进行警告",
+    
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标警报",
+    bigicon_desc = "横扫、下潜、上浮、爆裂的大图标警告",
+    
+    sounds_cmd = "sounds",
+    sounds_name = "声音警报",
+    sounds_desc = "横扫、下潜、上浮、爆裂的声音警告",
+    
+    sandblast_cmd = "sandblast",
+    sandblast_name = "沙尘爆裂警报",
+    sandblast_desc = "沙尘爆裂出现时进行警告",
+
+    emerge_cmd = "emerge",
+    emerge_name = "上浮警报",
+    emerge_desc = "奥罗上浮时进行警告",
+
+    submerge_cmd = "submerge",
+    submerge_name = "下潜警报",
+    submerge_desc = "奥罗下潜时进行警告",
+
+    berserk_cmd = "berserk",
+    berserk_name = "狂暴警报",
+    berserk_desc = "奥罗进入狂暴状态时进行警告",
+
+    sweeptrigger = "Ouro begins to cast Sweep",
+    sweepannounce = "横扫来临！",
+    sweepwarn = "横扫5秒后到来！",
+    sweepbartext = "横扫",
+
+    sandblasttrigger = "Ouro begins to perform Sand Blast",
+    sandblastannounce = "沙尘爆裂来临！",
+    sandblastwarn = "沙尘爆裂5秒后到来！",
+    sandblastbartext = "可能的沙尘爆裂",
+
+    engage_message = "奥罗已激活！可能的下潜在90秒后！",
+    possible_submerge_bar = "可能下潜",
+
+    --emergetrigger = "Dirt Mound casts Summon Ouro Scarabs.",
+    emergetrigger = "Ground Rupture",
+
+    emergeannounce = "奥罗已上浮！",
+    emergewarn = "15秒后可能下潜！",
+    emergebartext = "奥罗下潜",
+
+    --submergetrigger = "Ouro casts Summon Ouro Mounds.",
+    submergetrigger = "submerge",
+    submergeannounce = "奥罗已下潜！",
+    submergewarn = "奥罗5秒后上浮！",
+    submergebartext = "奥罗上浮",
+
+    berserktrigger = "Ouro gains Berserk.",
+    berserkannounce = "狂暴 - 狂暴！",
+    berserksoonwarn = "即将狂暴 - 准备好！",
+
+    popcorn_trigger = "Dirt Mound's Quake hits you for",
 } end )
 
 local timer = {

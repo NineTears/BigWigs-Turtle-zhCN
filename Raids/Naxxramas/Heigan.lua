@@ -6,52 +6,107 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"disease", "manaBurn", "teleport", "erruption", -1, "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Heigan",
-	
-	disease_cmd = "disease",
-	disease_name = "Decrepit Fever Alert",
-	disease_desc = "Warn for Decrepit Fever",
-	
-	manaBurn_cmd = "manaBurn",
-	manaBurn_name = "Mana Burn Alert",
-	manaBurn_desc = "Warn for Mana Burn",
-	
-	teleport_cmd = "teleport",
-	teleport_name = "Teleport Alert",
-	teleport_desc = "Warn for Teleports.",
+    cmd = "Heigan",
 
-	erruption_cmd = "erruption",
-	erruption_name = "Erruption Alert",
-	erruption_desc = "Warn for Erruption",
+    disease_cmd = "disease",
+    disease_name = "衰弱瘟疫警报",
+    disease_desc = "衰弱瘟疫出现时进行警告",
+    
+    manaBurn_cmd = "manaBurn",
+    manaBurn_name = "法力燃烧警报",
+    manaBurn_desc = "法力燃烧出现时进行警告",
+    
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送出现时进行警告",
 
-	trigger_engage1 = "You are mine now!",--CHAT_MSG_MONSTER_YELL
-	trigger_engage2 = "You...are next!",--CHAT_MSG_MONSTER_YELL
-	trigger_engage3 = "I see you!",--CHAT_MSG_MONSTER_YELL
-	
-	trigger_die = "takes his last breath.",--to be confirmed
-	
-	trigger_disease = "afflicted by Decrepit Fever.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_disease = "Decrepit Fever CD",
-	msg_disease = "Decrepit Fever",
-	
-	trigger_manaBurn = "Heigan the Unclean's Mana Burn",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_manaBurn = "Mana Burn CD",
-	
-	trigger_manaBurnYou = "Heigan the Unclean's Mana Burn hits you for",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_manaBurnYou = "Mana Burn hit you!",
+    erruption_cmd = "erruption",
+    erruption_name = "爆发警报",
+    erruption_desc = "爆发出现时进行警告",
 
-	trigger_danceStart = "The end is upon you.",--CHAT_MSG_MONSTER_YELL
-	msg_danceStart = "Teleport!",
-	bar_dancing = "Dancing Ends",
-	bar_dancingSoon = "Dancing Soon",
-	
-	msg_fightStart = "Fight!",
-	bar_fighting = "Dancing Starts",
-	
-	bar_erruption = "Erruption",	
+    trigger_engage1 = "You are mine now!",--CHAT_MSG_MONSTER_YELL
+    trigger_engage2 = "You...are next!",--CHAT_MSG_MONSTER_YELL
+    trigger_engage3 = "I see you!",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_die = "takes his last breath.",--to be confirmed
+    
+    trigger_disease = "afflicted by Decrepit Fever.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_disease = "衰弱瘟疫冷却",
+    msg_disease = "衰弱瘟疫",
+    
+    trigger_manaBurn = "Heigan the Unclean's Mana Burn",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_manaBurn = "法力燃烧冷却",
+    
+    trigger_manaBurnYou = "Heigan the Unclean's Mana Burn hits you for",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_manaBurnYou = "法力燃烧命中你！",
 
-	["Eye Stalk"] = true,
-	["Rotting Maggot"] = true,
+    trigger_danceStart = "The end is upon you.",--CHAT_MSG_MONSTER_YELL
+    msg_danceStart = "传送！",
+    bar_dancing = "跳舞结束",
+    bar_dancingSoon = "即将跳舞",
+    
+    msg_fightStart = "战斗开始！",
+    bar_fighting = "开始跳舞",
+    
+    bar_erruption = "爆发",	
+
+    ["Eye Stalk"] = true,
+    ["Rotting Maggot"] = true,
+    ["Eye Stalk"] = "眼柄",
+    ["Rotting Maggot"] = "腐烂的蛆虫",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Heigan",
+
+    disease_cmd = "disease",
+    disease_name = "衰弱瘟疫警报",
+    disease_desc = "衰弱瘟疫出现时进行警告",
+    
+    manaBurn_cmd = "manaBurn",
+    manaBurn_name = "法力燃烧警报",
+    manaBurn_desc = "法力燃烧出现时进行警告",
+    
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送出现时进行警告",
+
+    erruption_cmd = "erruption",
+    erruption_name = "爆发警报",
+    erruption_desc = "爆发出现时进行警告",
+
+    trigger_engage1 = "You are mine now!",--CHAT_MSG_MONSTER_YELL
+    trigger_engage2 = "You...are next!",--CHAT_MSG_MONSTER_YELL
+    trigger_engage3 = "I see you!",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_die = "takes his last breath.",--to be confirmed
+    
+    trigger_disease = "afflicted by Decrepit Fever.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_disease = "衰弱瘟疫冷却",
+    msg_disease = "衰弱瘟疫",
+    
+    trigger_manaBurn = "Heigan the Unclean's Mana Burn",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_manaBurn = "法力燃烧冷却",
+    
+    trigger_manaBurnYou = "Heigan the Unclean's Mana Burn hits you for",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_manaBurnYou = "法力燃烧命中你！",
+
+    trigger_danceStart = "The end is upon you.",--CHAT_MSG_MONSTER_YELL
+    msg_danceStart = "传送！",
+    bar_dancing = "跳舞结束",
+    bar_dancingSoon = "即将跳舞",
+    
+    msg_fightStart = "战斗开始！",
+    bar_fighting = "开始跳舞",
+    
+    bar_erruption = "爆发",	
+
+    ["Eye Stalk"] = true,
+    ["Rotting Maggot"] = true,
+    ["Eye Stalk"] = "眼柄",
+    ["Rotting Maggot"] = "腐烂的蛆虫",
 } end )
 
 local timer = {

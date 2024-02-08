@@ -13,11 +13,11 @@ L:RegisterTranslations("enUS", function() return {
 	
 	dismember_cmd = "dismember",
 	dismember_name = "肢解警报",
-	dismember_desc = "警告即将发生的肢解",
+	dismember_desc = "肢解出现时进行警告",
 	
 	phase_cmd = "phase",
 	phase_name = "阶段警报",
-	phase_desc = "警告阶段转换",
+	phase_desc = "阶段转换时进行警告",
 	
 	trigger_watch = "sets eyes on (.+)!",--CHAT_MSG_MONSTER_EMOTE
 	msg_watch = " 被布鲁盯上了！",
@@ -71,6 +71,8 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	cmd = "Buru",
 
 	watch_cmd = "watch",
@@ -79,11 +81,11 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	dismember_cmd = "dismember",
 	dismember_name = "肢解警报",
-	dismember_desc = "警告即将发生的肢解",
+	dismember_desc = "肢解出现时进行警告",
 	
 	phase_cmd = "phase",
 	phase_name = "阶段警报",
-	phase_desc = "警告阶段转换",
+	phase_desc = "阶段转换时进行警告",
 	
 	trigger_watch = "sets eyes on (.+)!",--CHAT_MSG_MONSTER_EMOTE
 	msg_watch = " 被布鲁盯上了！",

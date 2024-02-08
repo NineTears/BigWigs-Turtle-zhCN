@@ -64,8 +64,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Taskmaster"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
-	["respawntimers"] = "respawntimers",
+	-- Last update: 2024-02-08
+	["respawntimers"] = "怪物刷新时间",
 	["Respawn Timers"] = "怪物刷新时间",
 	["Respawn timer bars and warnings for trash mobs."] = "复活的计时条和警告小怪.",
 	["bars"] = "计时条",
@@ -115,8 +115,8 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
-	["respawntimers"] = "respawntimers",
+	-- Last update: 2024-02-08
+	["respawntimers"] = "怪物刷新时间",
 	["Respawn Timers"] = "怪物刷新时间",
 	["Respawn timer bars and warnings for trash mobs."] = "复活的计时条和警告小怪.",
 	["bars"] = "计时条",
@@ -136,7 +136,9 @@ L:RegisterTranslations("zhCN", function() return {
 	["Lava Surger"] = "熔岩奔腾者",
 	["Firelord"] = "火焰之王",
 	["Firewalker"] = "火焰行者", 
+	
 	["%s collapses and begins to smolder."] = "%s 倒下并开始冒烟。", 
+
 	-- Molten Core Messages
 	["Corehound"] = "\231\134\148\231\129\171\230\129\182\231\138\172",
 	["Annihilator"] = "\230\173\188\231\129\173\232\128\133",

@@ -6,36 +6,71 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"wailoferennius", "howloferennius", "volley", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Erennius",
+    cmd = "Erennius",
 
-	wailoferennius_cmd = "wailoferennius",
-	wailoferennius_name = "Wail Of Erennius Alert",
-	wailoferennius_desc = "Warn for Wail Of Erennius",
+    wailoferennius_cmd = "wailoferennius",
+    wailoferennius_name = "艾雷纽斯之嚎警报",
+    wailoferennius_desc = "艾雷纽斯之嚎出现时进行警告",
 
-	howloferennius_cmd = "howloferennius",
-	howloferennius_name = "Howl Of Erennius Alert",
-	howloferennius_desc = "Warns for Howl Of Erennius",
-	
-	volley_cmd = "volley",
-	volley_name = "Poison Volley Alert",
-	volley_desc = "Warns for Poison Volley",
-	
-	--Erennius vv
-	trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_wailOfErenniusCast = "Wail Casting",
-	bar_wailOfErenniusAfflicted = "Wail Afflicted",
-	bar_wailOfErenniusCd = "Wail of Erennius CD",
-	
-	trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
-	bar_howlOfErenniusCD = "Silence CD",
-	bar_howlOfErenniusAfflicted = "Silenced!",
-	
-	trigger_volley = "afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_volley = "Poison Bolt Volley",
-	--Erennius ^^
-	
-	trigger_someYell = "Your efforts...",
+    howloferennius_cmd = "howloferennius",
+    howloferennius_name = "艾雷纽斯之吼警报",
+    howloferennius_desc = "艾雷纽斯之吼出现时进行警告",
+    
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+    
+    --Erennius vv
+    trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_wailOfErenniusCast = "正在施放艾雷纽斯之嚎",
+    bar_wailOfErenniusAfflicted = "艾雷纽斯之嚎效果",
+    bar_wailOfErenniusCd = "艾雷纽斯之嚎冷却",
+    
+    trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+    bar_howlOfErenniusCD = "沉默冷却",
+    bar_howlOfErenniusAfflicted = "沉默！",
+    
+    trigger_volley = "afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_volley = "毒箭齐射",
+    --Erennius ^^
+    
+    trigger_someYell = "Your efforts...",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Erennius",
+
+    wailoferennius_cmd = "wailoferennius",
+    wailoferennius_name = "艾雷纽斯之嚎警报",
+    wailoferennius_desc = "艾雷纽斯之嚎出现时进行警告",
+
+    howloferennius_cmd = "howloferennius",
+    howloferennius_name = "艾雷纽斯之吼警报",
+    howloferennius_desc = "艾雷纽斯之吼出现时进行警告",
+    
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+    
+    --Erennius vv
+    trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_wailOfErenniusCast = "正在施放艾雷纽斯之嚎",
+    bar_wailOfErenniusAfflicted = "艾雷纽斯之嚎效果",
+    bar_wailOfErenniusCd = "艾雷纽斯之嚎冷却",
+    
+    trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+    bar_howlOfErenniusCD = "沉默冷却",
+    bar_howlOfErenniusAfflicted = "沉默！",
+    
+    trigger_volley = "afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_volley = "毒箭齐射",
+    --Erennius ^^
+    
+    trigger_someYell = "Your efforts...",
 } end )
 
 local timer = {

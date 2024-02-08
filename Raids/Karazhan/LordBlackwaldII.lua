@@ -10,44 +10,87 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "LordBlackwaldII",
+    cmd = "LordBlackwaldII",
 
-	reaverstorm_cmd = "reaverstorm",
-	reaverstorm_name = "Reaver Storm Alert",
-	reaverstorm_desc = "Warn for Reaver Storm",
+    reaverstorm_cmd = "reaverstorm",
+    reaverstorm_name = "掠夺者风暴警报",
+    reaverstorm_desc = "掠夺者风暴出现时进行警告",
 
-	boon_cmd = "boon",
-	boon_name = "Blackwalds Boon Alert",
-	boon_desc = "Warn for Blackwalds Boon",
-	
-	empoweredsoul_cmd = "empoweredsoul",
-	empoweredsoul_name = "Empowered Soul Alert",
-	empoweredsoul_desc = "Warns for Empowered Soul",
-	
-	summon_cmd = "summon",
-	summon_name = "Summon Alert",
-	summon_desc = "Warns for Summon",
-	
-	
-	
-	trigger_reaverstorm = "Lord Blackwald II begins to perform Reaver Storm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_reaverstormCd = "Reaver Storm CD",
-	bar_reaverstormCast = "Reaver Storm Cast",
-	
-	trigger_boonYou = "You are afflicted by Blackwalds Boon.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_boonOther = "(.+) is afflicted by Blackwalds Boon.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_boonFade = "Blackwalds Boon fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_boon = "Boon on ",
-	
-	trigger_empoweredSoulYou = "You are afflicted by Empowered Soul.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_empoweredSoulOther = "(.+) is afflicted by Empowered Soul.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	bar_empoweredSoul = " Empowered",
+    boon_cmd = "boon",
+    boon_name = "布莱克沃尔兹的恩赐警报",
+    boon_desc = "布莱克沃尔兹的恩赐出现时进行警告",
+    
+    empoweredsoul_cmd = "empoweredsoul",
+    empoweredsoul_name = "强化灵魂警报",
+    empoweredsoul_desc = "强化灵魂出现时进行警告",
+    
+    summon_cmd = "summon",
+    summon_name = "召唤警报",
+    summon_desc = "召唤出现时进行警告",
+    
 
-	trigger_yellSummon = "I call upon the Scythe of Elune, grant me your power!",--CHAT_MSG_MONSTER_YELL
-	bar_summon = "Summons add",
-	msg_yellSummon = "Shadowbane Ragefang Summonned!",
-	
-	trigger_engage = "You dare disturb the Dark Rider Lord?",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_reaverstorm = "Lord Blackwald II begins to perform Reaver Storm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_reaverstormCd = "掠夺者风暴冷却",
+    bar_reaverstormCast = "掠夺者风暴施放",
+    
+    trigger_boonYou = "You are afflicted by Blackwalds Boon.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_boonOther = "(.+) is afflicted by Blackwalds Boon.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_boonFade = "Blackwalds Boon fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_boon = "恩赐 ",
+    
+    trigger_empoweredSoulYou = "You are afflicted by Empowered Soul.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_empoweredSoulOther = "(.+) is afflicted by Empowered Soul.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    bar_empoweredSoul = " 强化灵魂",
+    
+    trigger_yellSummon = "I call upon the Scythe of Elune, grant me your power!",--CHAT_MSG_MONSTER_YELL
+    bar_summon = "召唤小怪",
+    msg_yellSummon = "影刃怒牙已被召唤！",
+    
+    trigger_engage = "You dare disturb the Dark Rider Lord?",--CHAT_MSG_MONSTER_YELL
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "LordBlackwaldII",
+
+    reaverstorm_cmd = "reaverstorm",
+    reaverstorm_name = "掠夺者风暴警报",
+    reaverstorm_desc = "掠夺者风暴出现时进行警告",
+
+    boon_cmd = "boon",
+    boon_name = "布莱克沃尔兹的恩赐警报",
+    boon_desc = "布莱克沃尔兹的恩赐出现时进行警告",
+    
+    empoweredsoul_cmd = "empoweredsoul",
+    empoweredsoul_name = "强化灵魂警报",
+    empoweredsoul_desc = "强化灵魂出现时进行警告",
+    
+    summon_cmd = "summon",
+    summon_name = "召唤警报",
+    summon_desc = "召唤出现时进行警告",
+    
+
+    
+    trigger_reaverstorm = "Lord Blackwald II begins to perform Reaver Storm.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_reaverstormCd = "掠夺者风暴冷却",
+    bar_reaverstormCast = "掠夺者风暴施放",
+    
+    trigger_boonYou = "You are afflicted by Blackwalds Boon.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_boonOther = "(.+) is afflicted by Blackwalds Boon.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_boonFade = "Blackwalds Boon fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_boon = "恩赐 ",
+    
+    trigger_empoweredSoulYou = "You are afflicted by Empowered Soul.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_empoweredSoulOther = "(.+) is afflicted by Empowered Soul.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    bar_empoweredSoul = " 强化灵魂",
+    
+    trigger_yellSummon = "I call upon the Scythe of Elune, grant me your power!",--CHAT_MSG_MONSTER_YELL
+    bar_summon = "召唤小怪",
+    msg_yellSummon = "影刃怒牙已被召唤！",
+    
+    trigger_engage = "You dare disturb the Dark Rider Lord?",--CHAT_MSG_MONSTER_YELL
 } end )
 
 local timer = {

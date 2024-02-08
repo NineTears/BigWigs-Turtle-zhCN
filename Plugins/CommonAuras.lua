@@ -20,7 +20,7 @@ local timeToShutdown = nil
 local shutdownBigWarning = nil
 
 L:RegisterTranslations("enUS", function() return {
-	iconPrefix = "Interface\\Icons\\",
+	--[[iconPrefix = "Interface\\Icons\\",
 	
 	msg_fearward = " FearWard on ",
 	bar_fearward = " FearWard CD",
@@ -58,7 +58,7 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_restart = "Restart in (.+) (.+)",--CHAT_MSG_SYSTEM
 	trigger_restartMinSec = "Shutdown in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
 	trigger_shutdownMinSec = "Restart in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
-	bar_shutDown = "Server Shutdown/Restart",
+	bar_shutDown = "Server Shutdown/Restart",--]]
 	
 	["Toggle %s display."] = true,
 	["Wormhole"] = true,
@@ -75,9 +75,9 @@ L:RegisterTranslations("enUS", function() return {
 	["commonauras"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	msg_fearward = " 守护恐惧 ",
-	bar_fearward = " 守护恐惧 冷却",
+	bar_fearward = " 守护恐惧冷却",
 	
 	msg_shieldwall = " 盾墙",
 	bar_shieldwall = " 盾墙",
@@ -130,10 +130,12 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	iconPrefix = "Interface\\Icons\\",
 	
 	msg_fearward = " 守护恐惧 ",
-	bar_fearward = " 守护恐惧 冷却",
+	bar_fearward = " 守护恐惧冷却",
 	
 	msg_shieldwall = " 盾墙",
 	bar_shieldwall = " 盾墙",

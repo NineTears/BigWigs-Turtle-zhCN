@@ -50,25 +50,25 @@ local lastCharge = 0
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	ms_cmd = "ms",
-	ms_name = "Mortal Strike",
-	ms_desc = "Warn when someone gets Mortal Strike",
+    ms_cmd = "ms",
+    ms_name = "致死打击",
+    ms_desc = "当有人受到致死打击时进行警告",
 
-	stomp_cmd = "stomp",
-	stomp_name = "War Stomp",
-	stomp_desc = "Warn when someone gets War Stomp",
+    stomp_cmd = "stomp",
+    stomp_name = "战争践踏",
+    stomp_desc = "当有人受到战争践踏时进行警告",
 
-	charge_cmd = "charge",
-	charge_name = "Charge",
-	charge_desc = "Warn when someone gets Charge",
+    charge_cmd = "charge",
+    charge_name = "冲锋",
+    charge_desc = "当有人受到冲锋时进行警告",
 
-	-- AceConsole strings
-	cmd = "Gordok",
+    -- AceConsole strings
+    cmd = "Gordok",
 
-	warStomp_bar = "War Stomp",
-	warStomp2_bar = "2nd War Stomp",
-	ms_bar = "Mortal Strike",
-	charge_bar = "Charge",
+    warStomp_bar = "战争践踏",
+    warStomp2_bar = "第二次战争践踏",
+    ms_bar = "致死打击",
+    charge_bar = "冲锋",
 
 } end )
 
@@ -110,6 +110,31 @@ L:RegisterTranslations("deDE", function() return {
 
 	-- AceConsole strings
 	cmd = "Gordok",
+
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    ms_cmd = "ms",
+    ms_name = "致死打击",
+    ms_desc = "当有人受到致死打击时进行警告",
+
+    stomp_cmd = "stomp",
+    stomp_name = "战争践踏",
+    stomp_desc = "当有人受到战争践踏时进行警告",
+
+    charge_cmd = "charge",
+    charge_name = "冲锋",
+    charge_desc = "当有人受到冲锋时进行警告",
+
+    -- AceConsole strings
+    cmd = "Gordok",
+
+    warStomp_bar = "战争践踏",
+    warStomp2_bar = "第二次战争践踏",
+    ms_bar = "致死打击",
+    charge_bar = "冲锋",
 
 } end )
 

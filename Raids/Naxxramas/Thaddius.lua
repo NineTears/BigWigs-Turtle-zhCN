@@ -8,91 +8,91 @@ module.enabletrigger = {module.translatedName, feugen, stalagg}
 module.toggleoptions = {"sounds", "bigicon", "enrage", "charge", "polarity", -1, "power", "magneticPull", "phase", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Thaddius",
-	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "BigIcon Magnetic Pull Alert",
-	bigicon_desc = "Warns adds tanks to taunt for Magnetic Pull with a BigIcon",
-	
-	sounds_cmd = "sounds",
-	sounds_name = "Sound Alert for Magnetic Pull",
-	sounds_desc = "Warns adds tanks to taunt for Magnetic Pull with sound",
-	
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warn for Enrage",
+    cmd = "Thaddius",
 
-	phase_cmd = "phase",
-	phase_name = "Phase Alerts",
-	phase_desc = "Warn for Phase transitions",
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标磁力吸引警报",
+    bigicon_desc = "用大图标警告添加坦克为磁力吸引嘲讽",
 
-	polarity_cmd = "polarity",
-	polarity_name = "Polarity Shift Alert",
-	polarity_desc = "Warn for polarity shifts",
+    sounds_cmd = "sounds",
+    sounds_name = "磁力吸引的声音警告",
+    sounds_desc = "用声音警告添加坦克为磁力吸引嘲讽",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒时进行警告",
 
-	power_cmd = "power",
-	power_name = "Power Surge Alert",
-	power_desc = "Warn for Stalagg's power surge",
+    phase_cmd = "phase",
+    phase_name = "阶段转换警报",
+    phase_desc = "阶段转换时进行警告",
 
-	adddeath_cmd = "adddeath",
-	adddeath_name = "Add Death Alert",
-	adddeath_desc = "Alerts when an add dies.",
+    polarity_cmd = "polarity",
+    polarity_name = "极性转化警报",
+    polarity_desc = "极性转化时进行警告",
 
-	charge_cmd = "charge",
-	charge_name = "Charge Alert",
-	charge_desc = "Warn about Positive/Negative charge for yourself only.",
+    power_cmd = "power",
+    power_name = "能量涌动警报",
+    power_desc = "斯塔拉格的能量涌动时进行警告",
 
-	magneticPull_cmd = "magneticPull",
-	magneticPull_name = "Magnetic Pull Alerts",
-	magneticPull_desc = "Warn about tank platform swaps.",
-	
-	feugen = "Feugen",
-	stalagg = "Stalagg",
-	
-	start_trigger = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
-	start_trigger1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
-	
-	enrage_trigger = "%s goes into a berserker rage!",--to confirm
-	enrage_warn = "Enrage!",
-	enrage60sec_warn = "Enrage in 60 seconds",
-	enrage30sec_warn = "Enrage in 30 seconds",
-	enrage10sec_warn = "Enrage in 10 seconds",
-	enrage_bar = "Enrage",
-		
-	trigger_feugenDead1 = "Feugen dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH ok
-	trigger_feugenDead2 = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL cannot confirm if this exists, would be on feugen death
-	trigger_stalaggDead1 = "Stalagg dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH ok
-	trigger_stalaggDead2 = "Master save me...",--CHAT_MSG_MONSTER_YELL ok
-	
-	msg_phase2 = "Phase 2",
-	bar_phase2 = "Thaddius Active",
-	polarityPosition_warn = "----- Thaddius +++++",
-	
-	trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
-	
-	polarityShiftCast_trigger = "Thaddius begins to cast Polarity Shift", --?? CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	polarityShiftCast_warn = "Polarity Shift inc!",
-	polarityShiftCast_bar = "Polarity Shift Cast",
-	polarityShiftCD_bar = "Polarity Shift CD",
+    adddeath_cmd = "adddeath",
+    adddeath_name = "增援死亡警报",
+    adddeath_desc = "增援死亡时进行警告",
 
-	polarityShift_trigger = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
-	
-	nochange = "Your debuff did not change!",
-	positivetype = "Interface\\Icons\\Spell_ChargePositive",
-	poswarn = "You changed to a Positive Charge!",
-	negativetype = "Interface\\Icons\\Spell_ChargeNegative",
-	negwarn = "You changed to a Negative Charge!",
-	polaritytickbar = "Polarity tick",
-	
-	powerSurge_trigger = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	powerSurge_warn = "Power Surge on Stalagg!",
-	powerSurge_bar = "Power Surge",
+    charge_cmd = "charge",
+    charge_name = "电荷警报",
+    charge_desc = "警告你自己的正/负电荷",
 
-	magneticPull_Bar = "Magnetic Pull",
-	
-	trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_manaBurn = "Feugen Mana Burned You! 30 yards AoE",
+    magneticPull_cmd = "magneticPull",
+    magneticPull_name = "磁力吸引警报",
+    magneticPull_desc = "坦克平台交换时进行警告",
+    
+    feugen = "Feugen",
+    stalagg = "Stalagg",
+    
+    start_trigger = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
+    start_trigger1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
+    
+    enrage_trigger = "%s goes into a berserker rage!",--to confirm
+    enrage_warn = "激怒！",
+    enrage60sec_warn = "激怒在60秒内",
+    enrage30sec_warn = "激怒在30秒内",
+    enrage10sec_warn = "激怒在10秒内",
+    enrage_bar = "激怒",
+        
+    trigger_feugenDead1 = "Feugen dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH ok
+    trigger_feugenDead2 = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL cannot confirm if this exists, would be on feugen death
+    trigger_stalaggDead1 = "Stalagg dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH ok
+    trigger_stalaggDead2 = "Master save me...",--CHAT_MSG_MONSTER_YELL ok
+    
+    msg_phase2 = "第二阶段",
+    bar_phase2 = "塔迪乌斯 活动中",
+    polarityPosition_warn = "----- 塔迪乌斯 +++++",
+    
+    trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
+    
+    polarityShiftCast_trigger = "Thaddius begins to cast Polarity Shift", --?? CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    polarityShiftCast_warn = "极性转化即将到来！",
+    polarityShiftCast_bar = "极性转化施法",
+    polarityShiftCD_bar = "极性转化冷却",
+
+    polarityShift_trigger = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
+    
+    nochange = "你的负面效果没有改变！",
+    positivetype = "Interface\\Icons\\Spell_ChargePositive",
+    poswarn = "你变成了正电荷！",
+    negativetype = "Interface\\Icons\\Spell_ChargeNegative",
+    negwarn = "你变成了负电荷！",
+    polaritytickbar = "极性跳动",
+    
+    powerSurge_trigger = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    powerSurge_warn = "斯塔拉格获得能量涌动！",
+    powerSurge_bar = "能量涌动",
+
+    magneticPull_Bar = "磁力吸引",
+    
+    trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_manaBurn = "费尔根对你释放了法力燃烧！30码范围效果",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -177,7 +177,7 @@ L:RegisterTranslations("esES", function() return {
 	polarityShiftCast_trigger = "Thaddius begins to cast Polarity Shift", --?? CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 	polarityShiftCast_warn = "Polarity Shift inc!",
 	polarityShiftCast_bar = "Polarity Shift Cast",
-	polarityShiftCD_bar = "Polarity Shift CD",
+	polarityShiftCD_bar = "Polarity Shift冷却",
 
 	nochange = "Your debuff did not change!",
 	positivetype = "Interface\\Icons\\Spell_ChargePositive",
@@ -185,6 +185,96 @@ L:RegisterTranslations("esES", function() return {
 	negativetype = "Interface\\Icons\\Spell_ChargeNegative",
 	negwarn = "You changed to a Negative Charge!",
 	polaritytickbar = "Polarity tick",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Thaddius",
+
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标磁力吸引警报",
+    bigicon_desc = "用大图标警告添加坦克为磁力吸引嘲讽",
+
+    sounds_cmd = "sounds",
+    sounds_name = "磁力吸引的声音警告",
+    sounds_desc = "用声音警告添加坦克为磁力吸引嘲讽",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒时进行警告",
+
+    phase_cmd = "phase",
+    phase_name = "阶段转换警报",
+    phase_desc = "阶段转换时进行警告",
+
+    polarity_cmd = "polarity",
+    polarity_name = "极性转化警报",
+    polarity_desc = "极性转化时进行警告",
+
+    power_cmd = "power",
+    power_name = "能量涌动警报",
+    power_desc = "斯塔拉格的能量涌动时进行警告",
+
+    adddeath_cmd = "adddeath",
+    adddeath_name = "增援死亡警报",
+    adddeath_desc = "增援死亡时进行警告",
+
+    charge_cmd = "charge",
+    charge_name = "电荷警报",
+    charge_desc = "警告你自己的正/负电荷",
+
+    magneticPull_cmd = "magneticPull",
+    magneticPull_name = "磁力吸引警报",
+    magneticPull_desc = "坦克平台交换时进行警告",
+    
+    feugen = "Feugen",
+    stalagg = "Stalagg",
+    
+    start_trigger = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
+    start_trigger1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
+    
+    enrage_trigger = "%s goes into a berserker rage!",--to confirm
+    enrage_warn = "激怒！",
+    enrage60sec_warn = "激怒在60秒内",
+    enrage30sec_warn = "激怒在30秒内",
+    enrage10sec_warn = "激怒在10秒内",
+    enrage_bar = "激怒",
+        
+    trigger_feugenDead1 = "Feugen dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH ok
+    trigger_feugenDead2 = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL cannot confirm if this exists, would be on feugen death
+    trigger_stalaggDead1 = "Stalagg dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH ok
+    trigger_stalaggDead2 = "Master save me...",--CHAT_MSG_MONSTER_YELL ok
+    
+    msg_phase2 = "第二阶段",
+    bar_phase2 = "塔迪乌斯 活动中",
+    polarityPosition_warn = "----- 塔迪乌斯 +++++",
+    
+    trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
+    
+    polarityShiftCast_trigger = "Thaddius begins to cast Polarity Shift", --?? CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    polarityShiftCast_warn = "极性转化即将到来！",
+    polarityShiftCast_bar = "极性转化施法",
+    polarityShiftCD_bar = "极性转化冷却",
+
+    polarityShift_trigger = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
+    
+    nochange = "你的负面效果没有改变！",
+    positivetype = "Interface\\Icons\\Spell_ChargePositive",
+    poswarn = "你变成了正电荷！",
+    negativetype = "Interface\\Icons\\Spell_ChargeNegative",
+    negwarn = "你变成了负电荷！",
+    polaritytickbar = "极性跳动",
+    
+    powerSurge_trigger = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    powerSurge_warn = "斯塔拉格获得能量涌动！",
+    powerSurge_bar = "能量涌动",
+
+    magneticPull_Bar = "磁力吸引",
+    
+    trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_manaBurn = "费尔根对你释放了法力燃烧！30码范围效果",
 } end )
 
 local timer = {

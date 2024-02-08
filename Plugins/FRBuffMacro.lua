@@ -19,6 +19,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	["Resist Fire"] = "抵抗火焰",
 	["phase shift"] = "相位变换",
 

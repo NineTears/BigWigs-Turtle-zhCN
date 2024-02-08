@@ -80,7 +80,7 @@ L:RegisterTranslations("enUS", function() return {
     ["Keep timers visible untill the timed event happens"] = true,
 
     -- Wind汉化修复Turtle-WOW中文数据
-    -- Last update: 2023-12-21
+    -- Last update: 2024-02-08
     ["Bars"] = "计时条",
     ["bars"] = "计时条",
     ["Options for the timer bars."] = "计时条选项.",
@@ -121,8 +121,10 @@ L:RegisterTranslations("enUS", function() return {
 end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
     -- Wind汉化修复Turtle-WOW中文数据
-    -- Last update: 2023-12-21
+    -- Last update: 2024-02-08
     ["Bars"] = "计时条",
     ["bars"] = "计时条",
     ["Options for the timer bars."] = "计时条选项.",

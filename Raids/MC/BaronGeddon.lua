@@ -48,64 +48,64 @@ local firstignite = true
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	inferno_trigger = "Baron Geddon gains Inferno\.",
-	service_trigger = "performs one last service for Ragnaros",
-	ignitemana_trigger = "afflicted by Ignite Mana",
-	bombyou_trigger = "You are afflicted by Living Bomb.",
-	bombother_trigger = "(.*) is afflicted by Living Bomb.",
-	bombyouend_trigger = "Living Bomb fades from you.",
-	bombotherend_trigger = "Living Bomb fades from (.*).",
-	ignitemana_trigger1 = "afflicted by Ignite Mana",
-	ignitemana_trigger2 = "Ignite Mana was resisted",
-	deathyou_trigger = "You die.",
-	deathother_trigger = "(.*) dies",
+    inferno_trigger = "Baron Geddon gains Inferno\.",
+    service_trigger = "performs one last service for Ragnaros",
+    ignitemana_trigger = "afflicted by Ignite Mana",
+    bombyou_trigger = "You are afflicted by Living Bomb.",
+    bombother_trigger = "(.*) is afflicted by Living Bomb.",
+    bombyouend_trigger = "Living Bomb fades from you.",
+    bombotherend_trigger = "Living Bomb fades from (.*).",
+    ignitemana_trigger1 = "afflicted by Ignite Mana",
+    ignitemana_trigger2 = "Ignite Mana was resisted",
+    deathyou_trigger = "You die.",
+    deathother_trigger = "(.*) dies",
 
-	bomb_message_you = "You are the bomb!",
-	bomb_message_youscreen = "You are the bomb!",
-	bomb_message_other = "%s is the bomb!",
+    bomb_message_you = "你是炸弹！",
+    bomb_message_youscreen = "你是炸弹！",
+    bomb_message_other = "%s是炸弹！",
 
-	bomb_bar = "Living Bomb: %s",
-	bomb_bar1 = "Living Bomb: %s",
-	inferno_bar = "Next Inferno",
-	inferno_channel = "Inferno",
-	nextinferno_message = "3 seconds until Inferno!",
-	service_bar = "Last Service",
-	nextbomb_bar = "Next Living Bomb",
-	ignite_bar = "Possible Ignite Mana",
+    bomb_bar = "活化炸弹: %s",
+    bomb_bar1 = "活化炸弹: %s",
+    inferno_bar = "下一次地狱火",
+    inferno_channel = "地狱火",
+    nextinferno_message = "3秒后地狱火！",
+    service_bar = "同归于尽",
+    nextbomb_bar = "下一个活化炸弹",
+    ignite_bar = "可能的点燃法力",
 
-	service_message = "Last Service! Baron Geddon exploding in 8 seconds!",
-	inferno_message = "Inferno for 8 seconds!",
-	ignite_message = "Dispel NOW!",
+    service_message = "同归于尽！迦顿男爵8秒后爆炸！",
+    inferno_message = "地狱火持续8秒！",
+    ignite_message = "现在驱散！",
 
-	cmd = "Baron",
+    cmd = "Baron",
 
-	service_cmd = "service",
-	service_name = "Last Service warning",
-	service_desc = "Timer bar for Geddon's last service.",
+    service_cmd = "service",
+    service_name = "同归于尽警报",
+    service_desc = "迦顿男爵同归于尽的计时条。",
 
-	inferno_cmd = "inferno",
-	inferno_name = "Inferno alert",
-	inferno_desc = "Timer bar for Geddon's Inferno.",
+    inferno_cmd = "inferno",
+    inferno_name = "地狱火警报",
+    inferno_desc = "迦顿男爵地狱火的计时条。",
 
-	bombtimer_cmd = "bombtimer",
-	bombtimer_name = "Living Bomb timers",
-	bombtimer_desc = "Shows a 8 second bar for when the bomb goes off at the target.",
+    bombtimer_cmd = "bombtimer",
+    bombtimer_name = "活化炸弹计时器",
+    bombtimer_desc = "在目标身上显示一个8秒的倒计时条，显示炸弹爆炸的时间。",
 
-	bomb_cmd = "bomb",
-	bomb_name = "Living Bomb alert",
-	bomb_desc = "Warn when players are the bomb",
+    bomb_cmd = "bomb",
+    bomb_name = "活化炸弹警报",
+    bomb_desc = "警告玩家成为炸弹时",
 
-	mana_cmd = "manaignite",
-	mana_name = "Ignite Mana alert",
-	mana_desc = "Shows timers for Ignite Mana and announce to dispel it",
+    mana_cmd = "manaignite",
+    mana_name = "点燃法力警报",
+    mana_desc = "为点燃法力显示计时器并通报驱散它",
 
-	icon_cmd = "icon",
-	icon_name = "Raid Icon on bomb",
-	icon_desc = "Put a Raid Icon on the person who's the bomb. (Requires assistant or higher)",
+    icon_cmd = "icon",
+    icon_name = "炸弹目标上的团队标志",
+    icon_desc = "在成为炸弹的玩家身上放置一个团队标志。（需要助理或更高权限）",
 
-	announce_cmd = "whispers",
-	announce_name = "Whisper to Bomb targets",
-	announce_desc = "Sends a whisper to players targetted by Living Bomb. (Requires assistant or higher)",
+    announce_cmd = "whispers",
+    announce_name = "密语给炸弹目标",
+    announce_desc = "给被活化炸弹选中的玩家发送密语。（需要助理或更高权限）",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -230,6 +230,68 @@ L:RegisterTranslations("deDE", function() return {
 	announce_desc = "Dem Spieler fl\195\188stern, wenn er die Bombe ist.\n\n(Ben\195\182tigt Schlachtzugleiter oder Assistent).",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    inferno_trigger = "Baron Geddon gains Inferno\.",
+    service_trigger = "performs one last service for Ragnaros",
+    ignitemana_trigger = "afflicted by Ignite Mana",
+    bombyou_trigger = "You are afflicted by Living Bomb.",
+    bombother_trigger = "(.*) is afflicted by Living Bomb.",
+    bombyouend_trigger = "Living Bomb fades from you.",
+    bombotherend_trigger = "Living Bomb fades from (.*).",
+    ignitemana_trigger1 = "afflicted by Ignite Mana",
+    ignitemana_trigger2 = "Ignite Mana was resisted",
+    deathyou_trigger = "You die.",
+    deathother_trigger = "(.*) dies",
+
+    bomb_message_you = "你是炸弹！",
+    bomb_message_youscreen = "你是炸弹！",
+    bomb_message_other = "%s是炸弹！",
+
+    bomb_bar = "活化炸弹: %s",
+    bomb_bar1 = "活化炸弹: %s",
+    inferno_bar = "下一次地狱火",
+    inferno_channel = "地狱火",
+    nextinferno_message = "3秒后地狱火！",
+    service_bar = "同归于尽",
+    nextbomb_bar = "下一个活化炸弹",
+    ignite_bar = "可能的点燃法力",
+
+    service_message = "同归于尽！迦顿男爵8秒后爆炸！",
+    inferno_message = "地狱火持续8秒！",
+    ignite_message = "现在驱散！",
+
+    cmd = "Baron",
+
+    service_cmd = "service",
+    service_name = "同归于尽警报",
+    service_desc = "迦顿男爵同归于尽的计时条。",
+
+    inferno_cmd = "inferno",
+    inferno_name = "地狱火警报",
+    inferno_desc = "迦顿男爵地狱火的计时条。",
+
+    bombtimer_cmd = "bombtimer",
+    bombtimer_name = "活化炸弹计时器",
+    bombtimer_desc = "在目标身上显示一个8秒的倒计时条，显示炸弹爆炸的时间。",
+
+    bomb_cmd = "bomb",
+    bomb_name = "活化炸弹警报",
+    bomb_desc = "警告玩家成为炸弹时",
+
+    mana_cmd = "manaignite",
+    mana_name = "点燃法力警报",
+    mana_desc = "为点燃法力显示计时器并通报驱散它",
+
+    icon_cmd = "icon",
+    icon_name = "炸弹目标上的团队标志",
+    icon_desc = "在成为炸弹的玩家身上放置一个团队标志。（需要助理或更高权限）",
+
+    announce_cmd = "whispers",
+    announce_name = "密语给炸弹目标",
+    announce_desc = "给被活化炸弹选中的玩家发送密语。（需要助理或更高权限）",
+} end)
 
 ------------------------------
 --      Initialization      --

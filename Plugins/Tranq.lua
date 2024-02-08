@@ -8,8 +8,8 @@ assert(BigWigs, "BigWigs not found!")
 local L = AceLibrary("AceLocale-2.2"):new("BigWigsTranq")
 
 L:RegisterTranslations("enUS", function() return {
-	CHAT_MSG_SPELL_SELF_BUFF = "You fail to dispel (.+)'s Frenzy.",
-	CHAT_MSG_SPELL_SELF_DAMAGE = "You cast Tranquilizing Shot on (.+).",
+	-- CHAT_MSG_SPELL_SELF_BUFF = "You fail to dispel (.+)'s Frenzy.",
+	-- CHAT_MSG_SPELL_SELF_DAMAGE = "You cast Tranquilizing Shot on (.+).",
 
 	["Tranq - %s"] = true,
 	["%s's Tranq failed!"] = true,
@@ -19,9 +19,9 @@ L:RegisterTranslations("enUS", function() return {
 	["Bars"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
-	CHAT_MSG_SPELL_SELF_BUFF = "你未能驱散(.+)的狂暴。",
-	CHAT_MSG_SPELL_SELF_DAMAGE = "你对(.+)施放了宁神射击。",
+	-- Last update: 2024-02-08
+	CHAT_MSG_SPELL_SELF_BUFF = "You fail to dispel (.+)'s Frenzy.",
+	CHAT_MSG_SPELL_SELF_DAMAGE = "You cast Tranquilizing Shot on (.+).",
 
 	["Tranq - %s"] = "宁神射击 - %s",
 	["%s's Tranq failed!"] = "%s的宁神射击失败了！",
@@ -56,6 +56,8 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	CHAT_MSG_SPELL_SELF_BUFF = "你未能驱散(.+)的狂暴。",
 	CHAT_MSG_SPELL_SELF_DAMAGE = "你对(.+)施放了宁神射击。",
 

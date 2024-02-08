@@ -10,37 +10,37 @@ local module, L = BigWigs:ModuleDeclaration("Ebonroc", "Blackwing Lair")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	wingbuffet_trigger = "Ebonroc begins to cast Wing Buffet.",
-	shadowflame_trigger = "Ebonroc begins to cast Shadow Flame.",
-	shadowcurseyou_trigger = "You are afflicted by Shadow of Ebonroc\.",
-	shadowcurseother_trigger = "(.+) is afflicted by Shadow of Ebonroc\.",
-	wingbuffet_message = "Wing Buffet! Next one in 30 seconds!",
-	wingbuffet_warning = "TAUNT now! Wing Buffet soon!",
-	shadowflame_warning = "Shadow Flame incoming!",
-	shadowfcurse_message_you = "You have Shadow of Ebonroc!",
-	shadowfcurse_message_taunt = "%s has Shadow of Ebonroc! TAUNT!",
+    wingbuffet_trigger = "Ebonroc begins to cast Wing Buffet.",
+    shadowflame_trigger = "Ebonroc begins to cast Shadow Flame.",
+    shadowcurseyou_trigger = "You are afflicted by Shadow of Ebonroc\.",
+    shadowcurseother_trigger = "(.+) is afflicted by Shadow of Ebonroc\.",
+    wingbuffet_message = "龙翼攻击！下一次龙翼攻击将在30秒后到来！",
+    wingbuffet_warning = "现在嘲讽！龙翼攻击即将到来！",
+    shadowflame_warning = "暗影烈焰来袭！",
+    shadowfcurse_message_you = "你受到了埃博诺克的暗影烈焰攻击！",
+    shadowfcurse_message_taunt = "%s 受到了埃博诺克的暗影烈焰！立刻嘲讽！",
 
-	wingbuffetcast_bar = "Wing Buffet",
-	wingbuffet_bar = "Next Wing Buffet",
-	wingbuffet1_bar = "Initial Wing Buffet",
-	shadowflame_bar = "Shadow Flame",
-	shadowflame_Nextbar = "Next Shadow Flame",
-	shadowcurse_bar = "%s - Shadow of Ebonroc",
-	shadowcurse_Firstbar = "Initial Shadow of Ebonroc",
+    wingbuffetcast_bar = "龙翼攻击施放",
+    wingbuffet_bar = "下一次龙翼攻击",
+    wingbuffet1_bar = "首次龙翼攻击",
+    shadowflame_bar = "暗影烈焰",
+    shadowflame_Nextbar = "下一次暗影烈焰",
+    shadowcurse_bar = "%s - 埃博诺克的暗影烈焰",
+    shadowcurse_Firstbar = "首次埃博诺克的暗影烈焰攻击",
 
-	cmd = "Ebonroc",
+    cmd = "Ebonroc",
 
-	wingbuffet_cmd = "wingbuffet",
-	wingbuffet_name = "Wing Buffet alert",
-	wingbuffet_desc = "Warn when Ebonroc casts Wing Buffet.",
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼攻击警报",
+    wingbuffet_desc = "埃博诺克施放龙翼攻击时进行警告。",
 
-	shadowflame_cmd = "shadowflame",
-	shadowflame_name = "Shadow Flame alert",
-	shadowflame_desc = "Warn when Ebonroc casts Shadow Flame.",
+    shadowflame_cmd = "shadowflame",
+    shadowflame_name = "暗影烈焰警报",
+    shadowflame_desc = "埃博诺克施放暗影烈焰时进行警告。",
 
-	curse_cmd = "curse",
-	curse_name = "Shadow of Ebonroc warnings",
-	curse_desc = "Shows a timer bar and announces who gets Shadow of Ebonroc.",
+    curse_cmd = "curse",
+    curse_name = "埃博诺克的暗影警告",
+    curse_desc = "显示计时条并通报谁受到了埃博诺克的暗影烈焰攻击。", 
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -111,6 +111,41 @@ L:RegisterTranslations("deDE", function() return {
 	curse_desc = "Zeigt eine Zeitleiste und k\195\188ndigt an wer Schattenschwinges Schatten bekommt.",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    wingbuffet_trigger = "Ebonroc begins to cast Wing Buffet.",
+    shadowflame_trigger = "Ebonroc begins to cast Shadow Flame.",
+    shadowcurseyou_trigger = "You are afflicted by Shadow of Ebonroc\.",
+    shadowcurseother_trigger = "(.+) is afflicted by Shadow of Ebonroc\.",
+    wingbuffet_message = "龙翼攻击！下一次龙翼攻击将在30秒后到来！",
+    wingbuffet_warning = "现在嘲讽！龙翼攻击即将到来！",
+    shadowflame_warning = "暗影烈焰来袭！",
+    shadowfcurse_message_you = "你受到了埃博诺克的暗影烈焰攻击！",
+    shadowfcurse_message_taunt = "%s 受到了埃博诺克的暗影烈焰！立刻嘲讽！",
+
+    wingbuffetcast_bar = "龙翼攻击施放",
+    wingbuffet_bar = "下一次龙翼攻击",
+    wingbuffet1_bar = "首次龙翼攻击",
+    shadowflame_bar = "暗影烈焰",
+    shadowflame_Nextbar = "下一次暗影烈焰",
+    shadowcurse_bar = "%s - 埃博诺克的暗影烈焰",
+    shadowcurse_Firstbar = "首次埃博诺克的暗影烈焰攻击",
+
+    cmd = "Ebonroc",
+
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼攻击警报",
+    wingbuffet_desc = "埃博诺克施放龙翼攻击时进行警告。",
+
+    shadowflame_cmd = "shadowflame",
+    shadowflame_name = "暗影烈焰警报",
+    shadowflame_desc = "埃博诺克施放暗影烈焰时进行警告。",
+
+    curse_cmd = "curse",
+    curse_name = "埃博诺克的暗影警告",
+    curse_desc = "显示计时条并通报谁受到了埃博诺克的暗影烈焰攻击。", 
+} end)
 
 ---------------------------------
 --      	Variables 		   --

@@ -6,81 +6,81 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"doom", "curse", "spore", "groups", "debuff", "corruptedmind", -1, "consumable", "graphic", "sound", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Loatheb",
+    cmd = "Loatheb",
 
-	doom_cmd = "doom",
-	doom_name = "Inevitable Doom Alert",
-	doom_desc = "Warn for Inevitable Doom",
+    doom_cmd = "doom",
+    doom_name = "必然厄运警报",
+    doom_desc = "必然厄运出现时进行警告",
 
-	curse_cmd = "curse",
-	curse_name = "Remove Curse Alert",
-	curse_desc = "Warn when curses are removed from Loatheb",
+    curse_cmd = "curse",
+    curse_name = "移除诅咒警报",
+    curse_desc = "洛欧塞布身上的诅咒被移除时进行警告",
 
-	spore_cmd = "spore",
-	spore_name = "Spore Alert",
-	spore_desc = "Warn for Spores",
+    spore_cmd = "spore",
+    spore_name = "孢子警报",
+    spore_desc = "孢子生成时进行警告",
 
-	debuff_cmd = "debuff",
-	debuff_name = "Spore Debuff",
-	debuff_desc = "Show icon when your spore debuff is running out",
+    debuff_cmd = "debuff",
+    debuff_name = "孢子减益效果",
+    debuff_desc = "当你的孢子减益效果即将消失时显示图标",
 
-	groups_cmd = "groups",
-	groups_name = "Spore groups",
-	groups_desc = "Disable to show group numbers on spore timer (7 Group tactic)",
-	
-	corruptedmind_cmd = "corruptedmind",
-	corruptedmind_name = "Your own Corrupted Mind Timer",
-	corruptedmind_desc = "Timer for your own Corrupted Mind debuff",
-	
-	
-	doombar = "Inevitable Doom %d",
-	doomwarn = "Inevitable Doom %d! %d sec to next!",
-	doomwarn5sec = "Inevitable Doom %d in 5 sec!",
-	doomtrigger = "afflicted by Inevitable Doom.",
+    groups_cmd = "groups",
+    groups_name = "孢子分组",
+    groups_desc = "关闭以在孢子计时器上显示分组编号（7组战术）",
 
-	cursewarn = "Curses removed! RENEW CURSES",
-	cursebar = "Remove Curse",
-	cursetrigger  = "Loatheb's Curse (.+) is removed.",
+    corruptedmind_cmd = "corruptedmind",
+    corruptedmind_name = "个人堕落心灵计时器",
+    corruptedmind_desc = "你的堕落心灵减益效果的计时器",
 
-	doomtimerbar = "Doom every 15sec",
-	doomtimerwarn = "Doom timerchange in %s seconds!",
-	doomtimerwarnnow = "Inevitable Doom now happens every 15sec!",
 
-	cursetimerbar = "Remove Curse Timer",
-	cursetimerwarn = "Curses removed, next in %s seconds!",
+    doombar = "必然厄运 %d",
+    doomwarn = "必然厄运 %d！距下一次 %d 秒！",
+    doomwarn5sec = "5秒后必然厄运 %d！",
+    doomtrigger = "受到了必然厄运的影响。",
 
-	startwarn = "Loatheb engaged, 2 min to Inevitable Doom!",
-	
-	trigger_corruptedMind = "You are afflicted by Corrupted Mind.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_corruptedMind = "Your Corrupted Mind",
-	trigger_corruptedMindFade = "Corrupted Mind fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
-	
-	--sporewarn = "Spore spawned",
-	sporebar = "Next Spore %d",
-	sporebar_group = "Next Spore - Group %d",
+    cursewarn = "诅咒被移除了！重新施放诅咒",
+    cursebar = "移除诅咒",
+    cursetrigger  = "Loatheb's Curse (.+) is removed.",
 
-	you = "You",
-	are = "are",
-	fungalBloom = "Fungal Bloom",
+    doomtimerbar = "每15秒一次厄运",
+    doomtimerwarn = "厄运计时器在 %s 秒后改变！",
+    doomtimerwarnnow = "必然厄运现在每15秒发生一次！",
 
-	--LoathebTactical
-	graphic_cmd = "graphic",
-	graphic_name = "Graphical Icons",
-	graphic_desc = "When checked shows graphical icons",
+    cursetimerbar = "移除诅咒计时器",
+    cursetimerwarn = "诅咒被移除，下一次在 %s 秒后！",
 
-	sound_cmd = "sound",
-	sound_name = "Sound Effects",
-	sound_desc = "When checked plays sound effects",
+    startwarn = "洛欧塞布已开战，2分钟后将出现必然厄运！",
 
-	consumable_cmd = "consumable",
-	consumable_name = "Do NOT warn raid to use consumables (A)",
-	consumable_desc = "When check does NOT warn raid to use consambles over raidwarn. Requires Assistance (A)",
+    trigger_corruptedMind = "You are afflicted by Corrupted Mind.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_corruptedMind = "你的堕落心灵",
+    trigger_corruptedMindFade = "Corrupted Mind fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
 
-	shadowpot = "-- Drink Shadow Protection Potion ! --",
-	bandage = "-- Use your bandages ! --",
-	wrtorhs = "-- Healthstone or Whipper Root Tuber ! --",
-	shadowpotandbandage = "-- Drink Shadow Protection Potion and Bandage ! --",
-	noconsumable = "-- No Consumable at this time ! --",
+    --sporewarn = "Spore spawned",
+    sporebar = "下一个孢子 %d",
+    sporebar_group = "下一孢子 - 分组 %d",
+
+    you = "你",
+    are = "的",
+    fungalBloom = "Fungal Bloom",
+
+    --LoathebTactical
+    graphic_cmd = "graphic",
+    graphic_name = "图形标志",
+    graphic_desc = "选中后显示图形标志",
+
+    sound_cmd = "sound",
+    sound_name = "声效",
+    sound_desc = "选中后播放声效",
+
+    consumable_cmd = "consumable",
+    consumable_name = "不警告团队使用消耗品（A）",
+    consumable_desc = "选中后不通过团队警告来提示使用消耗品。需要助理权限（A）",
+
+    shadowpot = "-- 喝下暗影防护药水！ --",
+    bandage = "-- 使用你的绷带！ --",
+    wrtorhs = "-- 使用治疗石或者鞭笞者根茎！ --",
+    shadowpotandbandage = "-- 喝下暗影防护药水并用绷带！ --",
+    noconsumable = "-- 现在不用消耗品！ --",
 
 	soundshadowpot = "Interface\\Addons\\BigWigs\\Sounds\\potion.wav",
 	soundbandage = "Interface\\Addons\\BigWigs\\Sounds\\bandage.wav",

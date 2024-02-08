@@ -6,51 +6,51 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"berserk", "lifedrain", "deepbreath", "icebolt", -1, "proximity", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Sapphiron",
+    cmd = "Sapphiron",
 
-	deepbreath_cmd = "deepbreath",
-	deepbreath_name = "Deep Breath alert",
-	deepbreath_desc = "Warn when Sapphiron begins to cast Deep Breath.",
+    deepbreath_cmd = "deepbreath",
+    deepbreath_name = "深呼吸警报",
+    deepbreath_desc = "萨菲隆开始施放深呼吸时进行警告。",
 
-	lifedrain_cmd = "lifedrain",
-	lifedrain_name = "Life Drain",
-	lifedrain_desc = "Warns about the Life Drain curse.",
+    lifedrain_cmd = "lifedrain",
+    lifedrain_name = "生命吸取",
+    lifedrain_desc = "生命吸取诅咒出现时进行警告。",
 
-	berserk_cmd = "berserk",
-	berserk_name = "Berserk",
-	berserk_desc = "Warn for berserk.",
+    berserk_cmd = "berserk",
+    berserk_name = "狂暴",
+    berserk_desc = "狂暴出现时进行警告。",
 
-	icebolt_cmd = "icebolt",
-	icebolt_name = "Announce Ice Block",
-	icebolt_desc = "Yell when you become an Ice Block.",
+    icebolt_cmd = "icebolt",
+    icebolt_name = "通报冰冻术",
+    icebolt_desc = "变成冰块时大喊。",
 
-	berserk_bar = "Berserk",
-	berserk_warn_10min = "10min to berserk!",
-	berserk_warn_5min = "5min to berserk!",
-	berserk_warn_rest = "%s sec to berserk!",
+    berserk_bar = "狂暴",
+    berserk_warn_10min = "狂暴还有10分钟！",
+    berserk_warn_5min = "狂暴还有5分钟！",
+    berserk_warn_rest = "狂暴还有%s秒！",
 
-	engage_message = "Sapphiron engaged! Berserk in 15min!",
+    engage_message = "萨菲隆开始战斗！15分钟后狂暴！",
 
-	lifedrain_message = "Life Drain! Possibly new one ~24sec!",
-	lifedrain_warn1 = "Life Drain in 5sec!",
-	lifedrain_bar = "Life Drain",
+    lifedrain_message = "生命吸取！大约24秒后可能再次发生！",
+    lifedrain_warn1 = "5秒后生命吸取！",
+    lifedrain_bar = "生命吸取",
 
-	lifedrain_trigger = "afflicted by Life Drain",
-	lifedrain_trigger2 = "Life Drain was resisted by",
-	icebolt_trigger = "You are afflicted by Icebolt",
-	icebolt_trigger2 = "Icebolt",
+    lifedrain_trigger = "afflicted by Life Drain",
+    lifedrain_trigger2 = "Life Drain was resisted by",
+    icebolt_trigger = "You are afflicted by Icebolt",
+    icebolt_trigger2 = "Icebolt",
 
-	deepbreath_incoming_message = "Ice Bomb casting in ~23sec!",
-	deepbreath_incoming_soon_message = "Ice Bomb casting in ~5sec!",
-	deepbreath_incoming_bar = "Ice Bomb Cast",
-	deepbreath_trigger = "begins to cast Frost Breath",
-	deepbreath_warning = "Ice Bomb Incoming!",
-	deepbreath_bar = "Ice Bomb Lands!",
-	icebolt_yell = "I'm an Ice Block!",
+    deepbreath_incoming_message = "寒冰炸弹施放约23秒后！",
+    deepbreath_incoming_soon_message = "寒冰炸弹施放约5秒后！",
+    deepbreath_incoming_bar = "寒冰炸弹施放",
+    deepbreath_trigger = "begins to cast Frost Breath",
+    deepbreath_warning = "寒冰炸弹来袭！",
+    deepbreath_bar = "寒冰炸弹落地！",
+    icebolt_yell = "我变成了冰块！",
 
-	proximity_cmd = "proximity",
-	proximity_name = "Proximity Warning",
-	proximity_desc = "Show Proximity Warning Frame",
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -94,6 +94,56 @@ L:RegisterTranslations("esES", function() return {
 	deepbreath_warning = "¡Aliento de Escarcha entrante!",
 	deepbreath_bar = "¡Lanza Aliento de Escarcha!",
 	icebolt_yell = "¡Estoy en Bloqueo de hielo!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Sapphiron",
+
+    deepbreath_cmd = "deepbreath",
+    deepbreath_name = "深呼吸警报",
+    deepbreath_desc = "萨菲隆开始施放深呼吸时进行警告。",
+
+    lifedrain_cmd = "lifedrain",
+    lifedrain_name = "生命吸取",
+    lifedrain_desc = "生命吸取诅咒出现时进行警告。",
+
+    berserk_cmd = "berserk",
+    berserk_name = "狂暴",
+    berserk_desc = "狂暴出现时进行警告。",
+
+    icebolt_cmd = "icebolt",
+    icebolt_name = "通报冰冻术",
+    icebolt_desc = "变成冰块时大喊。",
+
+    berserk_bar = "狂暴",
+    berserk_warn_10min = "狂暴还有10分钟！",
+    berserk_warn_5min = "狂暴还有5分钟！",
+    berserk_warn_rest = "狂暴还有%s秒！",
+
+    engage_message = "萨菲隆开始战斗！15分钟后狂暴！",
+
+    lifedrain_message = "生命吸取！大约24秒后可能再次发生！",
+    lifedrain_warn1 = "5秒后生命吸取！",
+    lifedrain_bar = "生命吸取",
+
+    lifedrain_trigger = "afflicted by Life Drain",
+    lifedrain_trigger2 = "Life Drain was resisted by",
+    icebolt_trigger = "You are afflicted by Icebolt",
+    icebolt_trigger2 = "Icebolt",
+
+    deepbreath_incoming_message = "寒冰炸弹施放约23秒后！",
+    deepbreath_incoming_soon_message = "寒冰炸弹施放约5秒后！",
+    deepbreath_incoming_bar = "寒冰炸弹施放",
+    deepbreath_trigger = "begins to cast Frost Breath",
+    deepbreath_warning = "寒冰炸弹来袭！",
+    deepbreath_bar = "寒冰炸弹落地！",
+    icebolt_yell = "我变成了冰块！",
+
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
 } end )
 
 module.proximityCheck = function(unit) return CheckInteractDistance(unit, 2) end

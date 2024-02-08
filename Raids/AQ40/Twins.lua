@@ -10,68 +10,135 @@ module.enabletrigger = {veklor, veknilash}
 module.toggleoptions = {"teleport", "enrage", "blizzard", "bug", "heal", "targeticon", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Twins",
-	
-	teleport_cmd = "teleport",
-	teleport_name = "Teleport Alert",
-	teleport_desc = "Warn for Teleport",
-	
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warn for Enrage",
-	
-	blizzard_cmd = "blizzard",
-	blizzard_name = "Blizzard Alert",
-	blizzard_desc = "Warn for Blizzard",
-	
-	bug_cmd = "bug",
-	bug_name = "Exploding Bug Alert",
-	bug_desc = "Warn for exploding bugs",
+    cmd = "Twins",
+    
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送出现时进行警告",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+    
+    blizzard_cmd = "blizzard",
+    blizzard_name = "暴风雪警报",
+    blizzard_desc = "暴风雪出现时进行警告",
+    
+    bug_cmd = "bug",
+    bug_name = "爆炸虫警报",
+    bug_desc = "爆炸虫出现时进行警告",
 
-	heal_cmd = "heal",
-	heal_name = "Heal Alert",
-	heal_desc = "Warn for Twins Healing",
-	
-	targeticon_cmd = "targeticon",
-	targeticon_name = "Twins' targets raid icon",
-	targeticon_desc = "Puts a star on the caster twin's target and a skull on the melee twin's target",
-	
-	
-	
-	trigger_tp = "gains Twin Teleport.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	bar_tpCd = "Teleport CD",
-	bar_tpOffCd = "Teleport Ready...",
-	msg_tpOffCd = "Teleport within 10sec!",
-	
-	trigger_enrage = "Emperor Vek'nilash becomes enraged.",--??
-	trigger_enrage2 = "Emperor Vek'lor becomes enraged.",--??
-	bar_enrage = "Enrage",
-	msg_enrage60 = "Enrage in 60 seconds",
-	msg_enrage10 = "Enrage in 10 seconds",
-	msg_enrage = "Twins are enraged",
-	
-	trigger_blizzard = "You are afflicted by Blizzard.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_blizzardFade = "Blizzard fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
-	msg_blizzard = "Run from Blizzard!",
-	
-	trigger_explode = "is afflicted by Explode Bug.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-	msg_explode = "Bug exploding nearby!",
-	
-	trigger_heal = "Heal Brother heals",--??
-	msg_heal = "Twins are healing, separate them!",
+    heal_cmd = "heal",
+    heal_name = "治疗警报",
+    heal_desc = "双子治疗时进行警告",
+    
+    targeticon_cmd = "targeticon",
+    targeticon_name = "双子目标团队图标",
+    targeticon_desc = "给施法的双子目标标一个星星，给近战的双子目标标一个骷髅",
+    
+    
+    
+    trigger_tp = "gains Twin Teleport.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    bar_tpCd = "传送冷却",
+    bar_tpOffCd = "传送准备...",
+    msg_tpOffCd = "10秒内传送！",
+    
+    trigger_enrage = "Emperor Vek'nilash becomes enraged.",--??
+    trigger_enrage2 = "Emperor Vek'lor becomes enraged.",--??
+    bar_enrage = "激怒",
+    msg_enrage60 = "60秒后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "双子激怒了",
+    
+    trigger_blizzard = "You are afflicted by Blizzard.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_blizzardFade = "Blizzard fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    msg_blizzard = "远离暴风雪！",
+    
+    trigger_explode = "is afflicted by Explode Bug.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+    msg_explode = "附近有虫子爆炸！",
+    
+    trigger_heal = "Heal Brother heals",--??
+    msg_heal = "双子在治疗，快分开他们！",
 
-	pull_trigger1 = "Ah, lambs to the slaughter.",
-	pull_trigger2 = "Prepare to embrace oblivion!",
-	pull_trigger3 = "Join me brother, there is blood to be shed.",
-	pull_trigger4 = "To decorate our halls.",
-	pull_trigger5 = "Let none survive!",
-	pull_trigger6 = "It's too late to turn away.",
-	pull_trigger7 = "Look brother, fresh blood.",
-	pull_trigger8 = "Like a fly in a web.",
-	pull_trigger9 = "Shall be your undoing!",
-	pull_trigger10 = "Your brash arrogance",
+    pull_trigger1 = "Ah, lambs to the slaughter.",
+    pull_trigger2 = "Prepare to embrace oblivion!",
+    pull_trigger3 = "Join me brother, there is blood to be shed.",
+    pull_trigger4 = "To decorate our halls.",
+    pull_trigger5 = "Let none survive!",
+    pull_trigger6 = "It's too late to turn away.",
+    pull_trigger7 = "Look brother, fresh blood.",
+    pull_trigger8 = "Like a fly in a web.",
+    pull_trigger9 = "Shall be your undoing!",
+    pull_trigger10 = "Your brash arrogance",
 
-	kill_trigger = "My brother...NO!",
+    kill_trigger = "My brother...NO!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Twins",
+    
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送出现时进行警告",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+    
+    blizzard_cmd = "blizzard",
+    blizzard_name = "暴风雪警报",
+    blizzard_desc = "暴风雪出现时进行警告",
+    
+    bug_cmd = "bug",
+    bug_name = "爆炸虫警报",
+    bug_desc = "爆炸虫出现时进行警告",
+
+    heal_cmd = "heal",
+    heal_name = "治疗警报",
+    heal_desc = "双子治疗时进行警告",
+    
+    targeticon_cmd = "targeticon",
+    targeticon_name = "双子目标团队图标",
+    targeticon_desc = "给施法的双子目标标一个星星，给近战的双子目标标一个骷髅",
+    
+    
+    
+    trigger_tp = "gains Twin Teleport.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    bar_tpCd = "传送冷却",
+    bar_tpOffCd = "传送准备...",
+    msg_tpOffCd = "10秒内传送！",
+    
+    trigger_enrage = "Emperor Vek'nilash becomes enraged.",--??
+    trigger_enrage2 = "Emperor Vek'lor becomes enraged.",--??
+    bar_enrage = "激怒",
+    msg_enrage60 = "60秒后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "双子激怒了",
+    
+    trigger_blizzard = "You are afflicted by Blizzard.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_blizzardFade = "Blizzard fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    msg_blizzard = "远离暴风雪！",
+    
+    trigger_explode = "is afflicted by Explode Bug.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+    msg_explode = "附近有虫子爆炸！",
+    
+    trigger_heal = "Heal Brother heals",--??
+    msg_heal = "双子在治疗，快分开他们！",
+
+    pull_trigger1 = "Ah, lambs to the slaughter.",
+    pull_trigger2 = "Prepare to embrace oblivion!",
+    pull_trigger3 = "Join me brother, there is blood to be shed.",
+    pull_trigger4 = "To decorate our halls.",
+    pull_trigger5 = "Let none survive!",
+    pull_trigger6 = "It's too late to turn away.",
+    pull_trigger7 = "Look brother, fresh blood.",
+    pull_trigger8 = "Like a fly in a web.",
+    pull_trigger9 = "Shall be your undoing!",
+    pull_trigger10 = "Your brash arrogance",
+
+    kill_trigger = "My brother...NO!",
 } end )
 
 local timer = {

@@ -10,7 +10,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	sacrifice_cmd = "sacrifice",
 	sacrifice_name = "祭品警报",
-	sacrifice_desc = "被作为祭品时发出警告",
+	sacrifice_desc = "被作为祭品时进行警告",
 	
 	bigicon_cmd = "bigicons",
 	bigicon_name = "击杀幼虫时显示图标警报",
@@ -21,23 +21,52 @@ L:RegisterTranslations("enUS", function() return {
 	sacrificeend_trigger = "Paralyze fades from",
 	
 	larva_bar = "幼虫 >点我!<",
-	nextlarva_bar = "幼虫/牺牲 冷却",
+	nextlarva_bar = "幼虫/牺牲冷却",
 	
 	msg_sacrifice = " 牺牲，击杀幼虫!",
 	
 	p2_msg = "第二阶段",
 
-	larvaname = "佐拉幼虫",	
+	larvaname = "Hive'Zara Larva",	
+} end )
+
+L:RegisterTranslations("enES", function() return {
+	cmd = "Buru",
+
+	watch_cmd = "watch",
+	watch_name = "Watched Alert",
+	watch_desc = "Warns for who is being watched",
+	
+	dismember_cmd = "dismember",
+	dismember_name = "Dismember Alert",
+	dismember_desc = "Warns for Dismember",
+	
+	phase_cmd = "phase",
+	phase_name = "Phase Alert",
+	phase_desc = "Warns for Phases",
+	
+	trigger_watch = "sets eyes on (.+)!",--CHAT_MSG_MONSTER_EMOTE
+	msg_watch = " is being watched!",
+	trigger_watchEnd = "Buru Egg's Explosion hits Buru the Gorger for",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	msg_watchEnd = "Buru stopped following you.",
+	
+	trigger_dismemberYouOne = "You are afflicted by Dismember.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+		trigger_dismemberYouMore = "You are afflicted by Dismember %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_dismemberOtherOne = "(.+) is afflicted by Dismember.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+		trigger_dismemberOtherMore = "(.+) is afflicted by Dismember %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	bar_dismember = " Dismember",
+	
+	msg_phase2 = "Phase2, DPS Buru!",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	cmd = "Ayamiss",
 
 	sacrifice_cmd = "sacrifice",
 	sacrifice_name = "祭品警报",
-	sacrifice_desc = "被作为祭品时发出警告",
+	sacrifice_desc = "被作为祭品时进行警告",
 	
 	bigicon_cmd = "bigicons",
 	bigicon_name = "击杀幼虫时显示图标警报",
@@ -48,13 +77,13 @@ L:RegisterTranslations("zhCN", function() return {
 	sacrificeend_trigger = "Paralyze fades from",
 	
 	larva_bar = "幼虫 >点我!<",
-	nextlarva_bar = "幼虫/牺牲 冷却",
+	nextlarva_bar = "幼虫/牺牲冷却",
 	
 	msg_sacrifice = " 牺牲，击杀幼虫!",
 	
 	p2_msg = "第二阶段",
 
-	larvaname = "佐拉幼虫",	
+	larvaname = "Hive'Zara Larva",	
 } end )
 
 local timer = {

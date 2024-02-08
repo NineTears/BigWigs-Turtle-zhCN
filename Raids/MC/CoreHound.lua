@@ -30,19 +30,19 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	Debuff = "Debuff",
+    Debuff = "Debuff",
 
-	trigger1 = "afflicted by %s",
-	trigger2 = "%s fail(.+) immune.",
-	trigger3 = "%s was resisted",
+    trigger1 = "afflicted by %s",
+    trigger2 = "%s fail(.+) immune.",
+    trigger3 = "%s was resisted",
 
 
-	-- AceConsole strings
-	cmd = "Corehound",
+    -- AceConsole strings
+    cmd = "Corehound",
 
-	bars_cmd = "bars",
-	bars_name = "Toggle bars",
-	bars_desc = "Toggles showing bars for timers.",
+    bars_cmd = "bars",
+    bars_name = "切换计时条",
+    bars_desc = "切换是否显示计时条。",
 
 
 } end )
@@ -91,6 +91,26 @@ local debuffTable = {
 	"Withering Heat",
 	"Ancient Hysteria"
 }
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    Debuff = "Debuff",
+
+    trigger1 = "afflicted by %s",
+    trigger2 = "%s fail(.+) immune.",
+    trigger3 = "%s was resisted",
+
+
+    -- AceConsole strings
+    cmd = "Corehound",
+
+    bars_cmd = "bars",
+    bars_name = "切换计时条",
+    bars_desc = "切换是否显示计时条。",
+
+
+} end )
 
 ------------------------------
 --      Initialization      --

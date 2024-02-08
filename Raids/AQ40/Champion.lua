@@ -11,7 +11,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	fear_cmd = "fear",
 	fear_name = "破胆怒吼警报",
-	fear_desc = "警告破胆怒吼",
+	fear_desc = "破胆怒吼出现时进行警告",
 	
 	fear_trigger = "afflicted by Intimidating Shout",
 	fear_trigger2 = "Qiraji Champion's Intimidating Shout was resisted",
@@ -20,11 +20,13 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	cmd = "Champion",
 
 	fear_cmd = "fear",
 	fear_name = "破胆怒吼警报",
-	fear_desc = "警告破胆怒吼",
+	fear_desc = "破胆怒吼出现时进行警告",
 	
 	fear_trigger = "afflicted by Intimidating Shout",
 	fear_trigger2 = "Qiraji Champion's Intimidating Shout was resisted",

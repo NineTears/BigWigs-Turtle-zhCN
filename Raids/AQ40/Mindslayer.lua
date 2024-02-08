@@ -6,35 +6,69 @@ module.toggleoptions = {"mc", "mindflay"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Mindslayer",
+    cmd = "Mindslayer",
 
-	mc_cmd = "mc",
-	mc_name = "Mind Control Alert",
-	mc_desc = "Warn for Mind Control",
-	
-	mindflay_cmd = "mindflay",
-	mindflay_name = "Mind Flay Alert",
-	mindflay_desc = "Warn for Mind Flay",
+    mc_cmd = "mc",
+    mc_name = "精神控制警报",
+    mc_desc = "精神控制出现时进行警告",
+    
+    mindflay_cmd = "mindflay",
+    mindflay_name = "精神鞭笞警报",
+    mindflay_desc = "精神鞭笞出现时进行警告",
 
-	mcplayer = "You are afflicted by Cause Insanity",
-	mcplayerother = "(.*) is afflicted by Cause Insanity",
-	mcplayeryouend = "Cause Insanity fades from you.",
-	mcplayerotherend = "Cause Insanity fades from (.*).",
-	mcplayer_message = "You are mindcontrolled!",
-	mcplayerother_message = "%s is mindcontrolled!",
-	mindcontrol_bar = "MC: %s",
-	deathyou_trigger = "You die.",
+    mcplayer = "You are afflicted by Cause Insanity",
+    mcplayerother = "(.*) is afflicted by Cause Insanity",
+    mcplayeryouend = "Cause Insanity fades from you.",
+    mcplayerotherend = "Cause Insanity fades from (.*).",
+    mcplayer_message = "你被控制了！",
+    mcplayerother_message = "%s 被控制了！",
+    mindcontrol_bar = "被控制：%s",
+    deathyou_trigger = "You die.",
     deathother_trigger = "(.*) dies.",
 
-	mindflayplayer = "You are afflicted by Mind Flay",
-	mindflayplayerother = "(.*) is afflicted by Mind Flay",
-	mindflayplayeryouend = "Mind Flay fades from you.",
-	mindflayplayerotherend = "Mind Flay fades from (.*).",
-	mindflayplayer_message = "You are Mind Flayed!",
-	mindflayplayerother_message = "%s is Mind Flayed!",
-	mindflay_bar = "Mind Flay: %s",
-	
-	mobdead = "Qiraji Mindslayer dies",
+    mindflayplayer = "You are afflicted by Mind Flay",
+    mindflayplayerother = "(.*) is afflicted by Mind Flay",
+    mindflayplayeryouend = "Mind Flay fades from you.",
+    mindflayplayerotherend = "Mind Flay fades from (.*).",
+    mindflayplayer_message = "你被精神鞭笞了！",
+    mindflayplayerother_message = "%s 被精神鞭笞了！",
+    mindflay_bar = "精神鞭笞：%s",
+    
+    mobdead = "其拉斩灵者死亡",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Mindslayer",
+
+    mc_cmd = "mc",
+    mc_name = "精神控制警报",
+    mc_desc = "精神控制出现时进行警告",
+    
+    mindflay_cmd = "mindflay",
+    mindflay_name = "精神鞭笞警报",
+    mindflay_desc = "精神鞭笞出现时进行警告",
+
+    mcplayer = "You are afflicted by Cause Insanity",
+    mcplayerother = "(.*) is afflicted by Cause Insanity",
+    mcplayeryouend = "Cause Insanity fades from you.",
+    mcplayerotherend = "Cause Insanity fades from (.*).",
+    mcplayer_message = "你被控制了！",
+    mcplayerother_message = "%s 被控制了！",
+    mindcontrol_bar = "被控制：%s",
+    deathyou_trigger = "You die.",
+    deathother_trigger = "(.*) dies.",
+
+    mindflayplayer = "You are afflicted by Mind Flay",
+    mindflayplayerother = "(.*) is afflicted by Mind Flay",
+    mindflayplayeryouend = "Mind Flay fades from you.",
+    mindflayplayerotherend = "Mind Flay fades from (.*).",
+    mindflayplayer_message = "你被精神鞭笞了！",
+    mindflayplayerother_message = "%s 被精神鞭笞了！",
+    mindflay_bar = "精神鞭笞：%s",
+    
+    mobdead = "其拉斩灵者死亡",
 } end )
 
 local timer = {

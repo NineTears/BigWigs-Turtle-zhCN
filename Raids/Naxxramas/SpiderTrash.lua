@@ -7,16 +7,31 @@ module.toggleoptions = {"charge"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "SpiderTrash",
-	
-	charge_cmd = "charge",
-	charge_name = "Poison Charge",
-	charge_desc = "Displays a cooldown and an icon for Poison Charge.",
-	
-	charge_trigger = "is afflicted by Poison Charge",
-	chargeself_trigger = "You are afflicted by Poison Charge",
-	chargegone_self = "Poison Charge fades from you",
-	charge_bar = "Poison Charge CD",
+    cmd = "SpiderTrash",
+
+    charge_cmd = "charge",
+    charge_name = "毒性充能",
+    charge_desc = "显示毒性充能的冷却时间和图标。",
+    
+    charge_trigger = "is afflicted by Poison Charge",
+    chargeself_trigger = "You are afflicted by Poison Charge",
+    chargegone_self = "Poison Charge fades from you",
+    charge_bar = "毒性充能冷却",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "SpiderTrash",
+
+    charge_cmd = "charge",
+    charge_name = "毒性充能",
+    charge_desc = "显示毒性充能的冷却时间和图标。",
+    
+    charge_trigger = "is afflicted by Poison Charge",
+    chargeself_trigger = "You are afflicted by Poison Charge",
+    chargegone_self = "Poison Charge fades from you",
+    charge_bar = "毒性充能冷却",
 } end )
 
 local timer = {

@@ -53,7 +53,7 @@ L:RegisterTranslations("enUS", function() return {
 	["4th"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Colors"] = "颜色",
 
 	["Messages"] = "信息",
@@ -179,6 +179,8 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	["Colors"] = "颜色",
 
 	["Messages"] = "信息",

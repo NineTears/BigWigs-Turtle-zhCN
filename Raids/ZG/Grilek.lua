@@ -11,32 +11,32 @@ local module, L = BigWigs:ModuleDeclaration("Gri'lek", "Zul'Gurub")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Grilek",
+    cmd = "Grilek",
 
-	avatar_trigger = "Gri\'lek gains Avatar\.",
-	preavatar_warn = "Avatar soon! Melee get out!",
-	avatar_bar = "Avatar",
-	avatar_message = "Avatar! Run away from the boss!",
-	avatar_end = "Avatar fades from Gri\'lek\.",
-	avatar_whisper_you = "Gri'lek is coming for you! Run away!",
-	avatar_whisper = "Gri'lek is coming for you! Run away!",
-	avatar_watch = "Gri'lek is going for %s!",
+    avatar_trigger = "Gri\'lek gains Avatar\.",
+    preavatar_warn = "即将天神下凡！近战请远离！",
+    avatar_bar = "天神下凡",
+    avatar_message = "天神下凡了！远离Boss！",
+    avatar_end = "Avatar fades from Gri\'lek\.",
+    avatar_whisper_you = "格里雷克正在追你！快跑！",
+    avatar_whisper = "格里雷克正在追你！快跑！",
+    avatar_watch = "格里雷克正在追 %s！",
 
-	avatar_cmd = "avatar",
-	avatar_name = "Avatar alert",
-	avatar_desc = "Announce when the boss has Avatar (enrage phase).",
+    avatar_cmd = "avatar",
+    avatar_name = "天神下凡警报",
+    avatar_desc = "当Boss进入天神下凡（激怒阶段）时通报。",
 
-	melee_cmd = "melee",
-	melee_name = "Warnings for melee",
-	melee_desc = "Warn before Avatar is cast, so melee classes can get away from the boss in time.",
+    melee_cmd = "melee",
+    melee_name = "近战警告",
+    melee_desc = "在天神下凡施放前警告，这样近战职业可以及时远离Boss。",
 
-	announce_cmd = "announce",
-	announce_name = "Whisper players",
-	announce_desc = "Lets players know that they are being targetted by Gri'lek so they run away.",
+    announce_cmd = "announce",
+    announce_name = "密语玩家",
+    announce_desc = "让被格里雷克选中的玩家知道，这样他们可以及时跑开。",
 
-	puticon_cmd = "puticon",
-	puticon_name = "Place icon",
-	puticon_desc = "Place a raid icon on the targetted player.\n\n(Requires assistant or higher)",
+    puticon_cmd = "puticon",
+    puticon_name = "放置标记",
+    puticon_desc = "在被标记的玩家身上放置团队图标。\n\n（需要助理或更高权限）",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -97,6 +97,36 @@ L:RegisterTranslations("deDE", function() return {
 	puticon_desc = "Setzt ein Schlachtzugssymbol auf den verfolgten Spieler.\n\n(Ben\195\182tigt Schlachtzugleiter oder Assistent)",
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Grilek",
+
+    avatar_trigger = "Gri\'lek gains Avatar\.",
+    preavatar_warn = "即将天神下凡！近战请远离！",
+    avatar_bar = "天神下凡",
+    avatar_message = "天神下凡了！远离Boss！",
+    avatar_end = "Avatar fades from Gri\'lek\.",
+    avatar_whisper_you = "格里雷克正在追你！快跑！",
+    avatar_whisper = "格里雷克正在追你！快跑！",
+    avatar_watch = "格里雷克正在追 %s！",
+
+    avatar_cmd = "avatar",
+    avatar_name = "天神下凡警报",
+    avatar_desc = "当Boss进入天神下凡（激怒阶段）时通报。",
+
+    melee_cmd = "melee",
+    melee_name = "近战警告",
+    melee_desc = "在天神下凡施放前警告，这样近战职业可以及时远离Boss。",
+
+    announce_cmd = "announce",
+    announce_name = "密语玩家",
+    announce_desc = "让被格里雷克选中的玩家知道，这样他们可以及时跑开。",
+
+    puticon_cmd = "puticon",
+    puticon_name = "放置标记",
+    puticon_desc = "在被标记的玩家身上放置团队图标。\n\n（需要助理或更高权限）",
+} end )
 
 ---------------------------------
 --      	Variables 		   --

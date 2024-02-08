@@ -6,87 +6,87 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"bigicon", "enrage", "frenzy", "breath", "breathcd", "vulnerability", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Chromaggus",
+    cmd = "Chromaggus",
 
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage",
-	enrage_desc = "Warn before the Enrage phase at 20%.",
+    enrage_cmd = "enrage",
+    enrage_name = "狂暴",
+    enrage_desc = "在20%血量即将进入狂暴阶段前进行警告。",
 
-	frenzy_cmd = "frenzy",
-	frenzy_name = "Frenzy",
-	frenzy_desc = "Warn for Frenzy.",
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱",
+    frenzy_desc = "狂乱出现时进行警告",
 
-	breath_cmd = "breath",
-	breath_name = "Breaths",
-	breath_desc = "Warn for Breaths.",
+    breath_cmd = "breath",
+    breath_name = "吐息",
+    breath_desc = "吐息出现时进行警告",
 
-	breathcd_cmd = "breathcd",
-	breathcd_name = "Breath Voice Countdown",
-	breathcd_desc = "Voice warning for the Breaths.",
+    breathcd_cmd = "breathcd",
+    breathcd_name = "吐息倒计时语音",
+    breathcd_desc = "吐息出现时进行语音倒计时进行警告。",
 
-	vulnerability_cmd = "vulnerability",
-	vulnerability_name = "Vulnerability",
-	vulnerability_desc = "Warn for Vulnerability changes.",
-	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "Bronze big icon alert",
-	bigicon_desc = "Shows a big icon when you have bronze",
-	
-	breath_trigger = "Chromaggus begins to cast (.+)\.",
-	vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Chromaggus for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)", -- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
-	vulnerability_dots_test = "^Chromaggus suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
-	frenzy_trigger = "goes into a killing frenzy",
-	frenzyfade_trigger = "Frenzy fades from Chromaggus\.",
-	vulnerability_trigger = "flinches as its skin shimmers.",
+    vulnerability_cmd = "vulnerability",
+    vulnerability_name = "弱点",
+    vulnerability_desc = "弱点发生变化时进行警告",
+    
+    bigicon_cmd = "bigicon",
+    bigicon_name = "青铜大图标警告",
+    bigicon_desc = "当你受到青铜影响时显示一个大图标",
+    
+    breath_trigger = "Chromaggus begins to cast (.+)\.",
+    vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Chromaggus for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)", -- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
+    vulnerability_dots_test = "^Chromaggus suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
+    frenzy_trigger = "goes into a killing frenzy",
+    frenzyfade_trigger = "Frenzy fades from Chromaggus\.",
+    vulnerability_trigger = "flinches as its skin shimmers.",
 
-	hit = "hits",
-	crit = "crits",
+    hit = "hits",
+    crit = "crits",
 
-	firstbreaths_warning = "Breath in 5 seconds!",
-	breath_warning = "%s in 5 seconds!",
-	breath_message = "%s is casting!",
-	vulnerability_message = "Vulnerability: %s!",
-	vulnerability_warning = "Spell vulnerability changed!",
-	frenzy_message = "Frenzy! TRANQ NOW!",
-	enrage_warning = "Enrage soon!",
+    firstbreaths_warning = "5秒后吐息！",
+    breath_warning = "%s 5秒后释放！",
+    breath_message = "%s正在施放！",
+    vulnerability_message = "弱点：%s！",
+    vulnerability_warning = "法术弱点已改变！",
+    frenzy_message = "狂乱状态！立刻使用宁神射击！",
+    enrage_warning = "即将激怒！",
 
-	breath1 = "Time Lapse",
-	breath2 = "Corrosive Acid",
-	breath3 = "Ignite Flesh",
-	breath4 = "Incinerate",
-	breath5 = "Frost Burn",
+    breath1 = "Time Lapse",
+    breath2 = "Corrosive Acid",
+    breath3 = "Ignite Flesh",
+    breath4 = "Incinerate",
+    breath5 = "Frost Burn",
 
-	breathcolor1 = "black",
-	breathcolor2 = "green",
-	breathcolor3 = "orange",
-	breathcolor4 = "red",
-	breathcolor5 = "blue",
+    breathcolor1 = "black",
+    breathcolor2 = "green",
+    breathcolor3 = "orange",
+    breathcolor4 = "red",
+    breathcolor5 = "blue",
 
-	icon1 = "Spell_Arcane_PortalOrgrimmar",
-	icon2 = "Spell_Nature_Acid_01",
-	icon3 = "Spell_Fire_Fire",
-	icon4 = "Spell_Shadow_ChillTouch",
-	icon5 = "Spell_Frost_ChillingBlast",
+    icon1 = "Spell_Arcane_PortalOrgrimmar",
+    icon2 = "Spell_Nature_Acid_01",
+    icon3 = "Spell_Fire_Fire",
+    icon4 = "Spell_Shadow_ChillTouch",
+    icon5 = "Spell_Frost_ChillingBlast",
 
-	castingbar = "Cast %s",
-	frenzy_bar = "Frenzy",
-	frenzy_Nextbar = "Next Frenzy",
-	first_bar = "First Breath",
-	second_bar = "Second Breath",
-	vuln_bar = "%s Vulnerability",
+    castingbar = "施放 %s",
+    frenzy_bar = "狂乱",
+    frenzy_Nextbar = "下一次狂乱",
+    first_bar = "第一次吐息",
+    second_bar = "第二次吐息",
+    vuln_bar = "%s 弱点",
 
-	fire = "Fire",
-	frost = "Frost",
-	shadow = "Shadow",
-	nature = "Nature",
-	arcane = "Arcane",
+    fire = "Fire",
+    frost = "Frost",
+    shadow = "Shadow",
+    nature = "Nature",
+    arcane = "Arcane",
 
-	curseofdoom = "Curse of Doom",
-	ignite = "Ignite",
-	starfire = "Starfire",
-	thunderfury = "Thunderfury",
-	
-	bronze = "You are afflicted by Brood Affliction: Bronze.",	
+    curseofdoom = "Curse of Doom",
+    ignite = "Ignite",
+    starfire = "Starfire",
+    thunderfury = "Thunderfury",
+    
+    bronze = "你受到了龙血之痛：青铜的影响。",	
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -233,6 +233,92 @@ L:RegisterTranslations("deDE", function() return {
 	ignite = "Entz\195\188nden",
 	starfire = "Sternenfeuer",
 	thunderfury = "Zorn der Winde",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Chromaggus",
+
+    enrage_cmd = "enrage",
+    enrage_name = "狂暴",
+    enrage_desc = "在20%血量即将进入狂暴阶段前进行警告。",
+
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱",
+    frenzy_desc = "狂乱出现时进行警告",
+
+    breath_cmd = "breath",
+    breath_name = "吐息",
+    breath_desc = "吐息出现时进行警告",
+
+    breathcd_cmd = "breathcd",
+    breathcd_name = "吐息倒计时语音",
+    breathcd_desc = "吐息出现时进行语音倒计时进行警告。",
+
+    vulnerability_cmd = "vulnerability",
+    vulnerability_name = "弱点",
+    vulnerability_desc = "弱点发生变化时进行警告",
+    
+    bigicon_cmd = "bigicon",
+    bigicon_name = "青铜大图标警告",
+    bigicon_desc = "当你受到青铜影响时显示一个大图标",
+    
+    breath_trigger = "Chromaggus begins to cast (.+)\.",
+    vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Chromaggus for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)", -- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
+    vulnerability_dots_test = "^Chromaggus suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
+    frenzy_trigger = "goes into a killing frenzy",
+    frenzyfade_trigger = "Frenzy fades from Chromaggus\.",
+    vulnerability_trigger = "flinches as its skin shimmers.",
+
+    hit = "hits",
+    crit = "crits",
+
+    firstbreaths_warning = "5秒后吐息！",
+    breath_warning = "%s 5秒后释放！",
+    breath_message = "%s正在施放！",
+    vulnerability_message = "弱点：%s！",
+    vulnerability_warning = "法术弱点已改变！",
+    frenzy_message = "狂乱状态！立刻使用宁神射击！",
+    enrage_warning = "即将激怒！",
+
+    breath1 = "Time Lapse",
+    breath2 = "Corrosive Acid",
+    breath3 = "Ignite Flesh",
+    breath4 = "Incinerate",
+    breath5 = "Frost Burn",
+
+    breathcolor1 = "black",
+    breathcolor2 = "green",
+    breathcolor3 = "orange",
+    breathcolor4 = "red",
+    breathcolor5 = "blue",
+
+    icon1 = "Spell_Arcane_PortalOrgrimmar",
+    icon2 = "Spell_Nature_Acid_01",
+    icon3 = "Spell_Fire_Fire",
+    icon4 = "Spell_Shadow_ChillTouch",
+    icon5 = "Spell_Frost_ChillingBlast",
+
+    castingbar = "施放 %s",
+    frenzy_bar = "狂乱",
+    frenzy_Nextbar = "下一次狂乱",
+    first_bar = "第一次吐息",
+    second_bar = "第二次吐息",
+    vuln_bar = "%s 弱点",
+
+    fire = "Fire",
+    frost = "Frost",
+    shadow = "Shadow",
+    nature = "Nature",
+    arcane = "Arcane",
+
+    curseofdoom = "Curse of Doom",
+    ignite = "Ignite",
+    starfire = "Starfire",
+    thunderfury = "Thunderfury",
+    
+    bronze = "你受到了龙血之痛：青铜的影响。",	
 } end )
 
 local timer = {

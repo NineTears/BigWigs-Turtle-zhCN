@@ -6,55 +6,55 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = { "cocoon", "webspray", "poison", "enrage", "spiderlings", "bosskill" }
 
 L:RegisterTranslations("enUS", function() return {
-        cmd = "Maexxna",
-		
-		cocoon_cmd = "cocoon",
-        cocoon_name = "Cocoon Alert",
-        cocoon_desc = "Warn for Cocooned Players",
-		
-        webspray_cmd = "spray",
-        webspray_name = "Web Spray Alert",
-        webspray_desc = "Warn for Web Spray",
-		
-		poison_cmd = "Poison",
-        poison_name = "Necrotic Poison Alert",
-        poison_desc = "Warn for Necrotic Poison",
-		
-        enrage_cmd = "enrage",
-        enrage_name = "Enrage Alert",
-        enrage_desc = "Warn for Enrage",
+    cmd = "Maexxna",
 
-        spiderlings_cmd = "spiderlings",
-        spiderlings_name = "Spiderlings Alert",
-        spiderlings_desc = "Warn for Spiderlings",
+    cocoon_cmd = "cocoon",
+    cocoon_name = "蛛网之茧警报",
+    cocoon_desc = "警告被蛛网之茧的玩家",
 
-		trigger_cocoonGain = "(.*) is afflicted by Web Wrap.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-		trigger_cocoonGainYou = "You are afflicted by Web Wrap.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-		trigger_cocoonFade = "Web Wrap fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-		bar_cocoonGain = "Cocoon ",
-		bar_cocoonCD = "Cocoon CD",
+    webspray_cmd = "spray",
+    webspray_name = "撒网警报",
+    webspray_desc = "即将撒网时进行警告",
 
-		trigger_webSprayGain = "afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-		bar_webSprayGain = "Web Spray",
-		bar_webSprayCD = "Web Spray CD",
-		
-		trigger_webSprayFade = "Web Spray fades from",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    poison_cmd = "Poison",
+    poison_name = "死灵之毒警报",
+    poison_desc = "死灵之毒出现时进行警告",
 
-		trigger_poisonGain = "afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-		bar_poisonGain = "Necrotic on tank!",
-		bar_poisonCD = "Necrotic Poison CD",
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+
+    spiderlings_cmd = "spiderlings",
+    spiderlings_name = "小蜘蛛警报",
+    spiderlings_desc = "小蜘蛛出现时进行警告",
+
+    trigger_cocoonGain = "(.*) is afflicted by Web Wrap.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_cocoonGainYou = "You are afflicted by Web Wrap.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_cocoonFade = "Web Wrap fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_cocoonGain = "蛛网之茧 ",
+    bar_cocoonCD = "蛛网之茧冷却",
+
+    trigger_webSprayGain = "afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_webSprayGain = "撒网",
+    bar_webSprayCD = "撒网冷却",
+
+    trigger_webSprayFade = "Web Spray fades from",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    trigger_poisonGain = "afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_poisonGain = "坦克身上的腐蚀！",
+    bar_poisonCD = "死灵之毒冷却",
+
+    trigger_poisonFade = "Necrotic Poison fades",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+        
+    trigger_enrageGain = "Maexxna gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrageGain = "迈克斯纳进入激怒状态！",
+
+    bar_spiderlings = "小蜘蛛",--迈克斯纳的小蜘蛛死亡。CHAT_MSG_COMBAT_HOSTILE_DEATH
 		
-		trigger_poisonFade = "Necrotic Poison fades",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-		
-		trigger_enrageGain = "Maexxna gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-		msg_enrageGain = "Maexxna is Enraged!",
-		
-		bar_spiderlings = "Spiderlings",--Maexxna Spiderling dies. CHAT_MSG_COMBAT_HOSTILE_DEATH
-		
-		--spray every 40sec
+	--spray every 40sec
 			--last for 8sec
-		--cocoon after 20sec
-		--lings after 35sec
+	--cocoon after 20sec
+	--lings after 35sec
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -95,6 +95,60 @@ L:RegisterTranslations("esES", function() return {
 
         you = "Tu",
         are = "estás",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Maexxna",
+
+    cocoon_cmd = "cocoon",
+    cocoon_name = "蛛网之茧警报",
+    cocoon_desc = "警告被蛛网之茧的玩家",
+
+    webspray_cmd = "spray",
+    webspray_name = "撒网警报",
+    webspray_desc = "即将撒网时进行警告",
+
+    poison_cmd = "Poison",
+    poison_name = "死灵之毒警报",
+    poison_desc = "死灵之毒出现时进行警告",
+
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+
+    spiderlings_cmd = "spiderlings",
+    spiderlings_name = "小蜘蛛警报",
+    spiderlings_desc = "小蜘蛛出现时进行警告",
+
+    trigger_cocoonGain = "(.*) is afflicted by Web Wrap.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_cocoonGainYou = "You are afflicted by Web Wrap.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_cocoonFade = "Web Wrap fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_cocoonGain = "蛛网之茧 ",
+    bar_cocoonCD = "蛛网之茧冷却",
+
+    trigger_webSprayGain = "afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_webSprayGain = "撒网",
+    bar_webSprayCD = "撒网冷却",
+
+    trigger_webSprayFade = "Web Spray fades from",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    trigger_poisonGain = "afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_poisonGain = "坦克身上的腐蚀！",
+    bar_poisonCD = "死灵之毒冷却",
+
+    trigger_poisonFade = "Necrotic Poison fades",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+        
+    trigger_enrageGain = "Maexxna gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrageGain = "迈克斯纳进入激怒状态！",
+
+    bar_spiderlings = "小蜘蛛",--迈克斯纳的小蜘蛛死亡。CHAT_MSG_COMBAT_HOSTILE_DEATH
+		
+	--spray every 40sec
+			--last for 8sec
+	--cocoon after 20sec
+	--lings after 35sec
 } end )
 
 local timer = {

@@ -34,22 +34,22 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Ysondre",
+    cmd = "Ysondre",
 
-	noxious_cmd = "noxious",
-	noxious_name = "Noxious breath alert",
-	noxious_desc = "Warn for noxious breath",
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息出现时进行警告",
 
-	engage_trigger = "The strands of LIFE have been severed! The Dreamers must be avenged!",
-	breath_trigger = "afflicted by Noxious Breath",
-	druid_trigger = "Your wicked souls shall feed my power!",
+    engage_trigger = "The strands of LIFE have been severed! The Dreamers must be avenged!",
+    breath_trigger = "afflicted by Noxious Breath",
+    druid_trigger = "Your wicked souls shall feed my power!",
 
-	druid_warn = "Druids spawned!",
-	breathSoon_warn = "Noxious Breath soon!",
-	breath_warn = "Noxious Breath!",
+    druid_warn = "德鲁伊出现了！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
 
 
-	breath_bar = "Noxious Breath",
+    breath_bar = "毒性吐息",
 
 } end )
 
@@ -71,6 +71,29 @@ L:RegisterTranslations("esES", function() return {
 	breath_bar = "Aliento nocivo",
 
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Ysondre",
+
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息出现时进行警告",
+
+    engage_trigger = "The strands of LIFE have been severed! The Dreamers must be avenged!",
+    breath_trigger = "afflicted by Noxious Breath",
+    druid_trigger = "Your wicked souls shall feed my power!",
+
+    druid_warn = "德鲁伊出现了！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
+
+
+    breath_bar = "毒性吐息",
+
+} end )
+
 ------------------------------
 --      Initialization      --
 ------------------------------

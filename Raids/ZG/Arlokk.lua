@@ -6,45 +6,89 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"phase", "whirlwind", "vanish", "mark", "puticon", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Arlokk",
-	
-	vanish_cmd = "vanish",
-	vanish_name = "Vanish alert",
-	vanish_desc = "Shows a bar for the Vanish duration.",
+    cmd = "Arlokk",
 
-	mark_cmd = "mark",
-	mark_name = "Mark of Arlokk alert",
-	mark_desc = "Warns when people are marked.",
+    vanish_cmd = "vanish",
+    vanish_name = "消失警报",
+    vanish_desc = "显示消失持续时间的计时条。",
 
-	whirlwind_cmd = "whirlwind",
-	whirlwind_name = "Whirlwind alert",
-	whirlwind_desc = "Shows you when the boss has Whirlwind.",
+    mark_cmd = "mark",
+    mark_name = "娅尔罗印记警报",
+    mark_desc = "玩家被标记时进行警告。",
 
-	phase_cmd = "phase",
-	phase_name = "Phase notification",
-	phase_desc = "Announces the boss' phase transitions.",
+    whirlwind_cmd = "whirlwind",
+    whirlwind_name = "旋风斩警报",
+    whirlwind_desc = "显示Boss拥有旋风斩时。",
 
-	puticon_cmd = "puticon",
-	puticon_name = "Raid icon on marked players",
-	puticon_desc = "Place a raid icon on the player with Mark of Arlokk.\n\n(Requires assistant or higher)",
-	
-	trigger_engage = "Bethekk, your priestess calls upon your might!",--CHAT_MSG_MONSTER_YELL
-	
-	trigger_mark = "(.+) is afflicted by Mark of Arlokk.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_markYou = "You are afflicted by Mark of Arlokk.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	msg_mark = " is Marked!",
-	bar_mark = " Marked",
-	
-	trigger_markFade = "Mark of Arlokk fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    phase_cmd = "phase",
+    phase_name = "阶段提示",
+    phase_desc = "通报Boss阶段转换。",
 
-	trigger_ww = "High Priestess Arlokk's Whirlwind",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_ww = "Whirlwind",
-	
-	msg_trollPhase = "Troll Phase",
-	msg_pantherPhase = "Panther Phase",
-	msg_vanishPhase = "Vanish!",
-	bar_return = "Estimated Return",
-	bar_nextVanish = "Next Vanish",	
+    puticon_cmd = "puticon",
+    puticon_name = "标记获得娅尔罗印记的玩家",
+    puticon_desc = "在获得娅尔罗印记的玩家身上放置团队标记。\n\n（需要助理或更高权限）",
+
+    trigger_engage = "Bethekk, your priestess calls upon your might!",--CHAT_MSG_MONSTER_YELL
+
+    trigger_mark = "(.+) is afflicted by Mark of Arlokk.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_markYou = "You are afflicted by Mark of Arlokk.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_mark = " 被标记了！",
+    bar_mark = " 被标记",
+
+    trigger_markFade = "Mark of Arlokk fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    trigger_ww = "High Priestess Arlokk's Whirlwind",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_ww = "旋风斩",
+
+    msg_trollPhase = "巨魔阶段",
+    msg_pantherPhase = "猎豹阶段",
+    msg_vanishPhase = "消失！",
+    bar_return = "预计返回",
+    bar_nextVanish = "下一次消失",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Arlokk",
+
+    vanish_cmd = "vanish",
+    vanish_name = "消失警报",
+    vanish_desc = "显示消失持续时间的计时条。",
+
+    mark_cmd = "mark",
+    mark_name = "娅尔罗印记警报",
+    mark_desc = "玩家被标记时进行警告。",
+
+    whirlwind_cmd = "whirlwind",
+    whirlwind_name = "旋风斩警报",
+    whirlwind_desc = "显示Boss拥有旋风斩时。",
+
+    phase_cmd = "phase",
+    phase_name = "阶段提示",
+    phase_desc = "通报Boss阶段转换。",
+
+    puticon_cmd = "puticon",
+    puticon_name = "标记获得娅尔罗印记的玩家",
+    puticon_desc = "在获得娅尔罗印记的玩家身上放置团队标记。\n\n（需要助理或更高权限）",
+
+    trigger_engage = "Bethekk, your priestess calls upon your might!",--CHAT_MSG_MONSTER_YELL
+
+    trigger_mark = "(.+) is afflicted by Mark of Arlokk.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_markYou = "You are afflicted by Mark of Arlokk.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_mark = " 被标记了！",
+    bar_mark = " 被标记",
+
+    trigger_markFade = "Mark of Arlokk fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    trigger_ww = "High Priestess Arlokk's Whirlwind",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_ww = "旋风斩",
+
+    msg_trollPhase = "巨魔阶段",
+    msg_pantherPhase = "猎豹阶段",
+    msg_vanishPhase = "消失！",
+    bar_return = "预计返回",
+    bar_nextVanish = "下一次消失",
 } end )
 
 local timer = {

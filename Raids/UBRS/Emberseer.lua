@@ -12,20 +12,39 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Emberseer",
+    cmd = "Emberseer",
 
-	firenova_cmd = "firenova",
-	firenova_name = "Fire Nova Timer",
-	firenova_desc = "Indicates time left to next Fire Nova.",
+    firenova_cmd = "firenova",
+    firenova_name = "火焰新星计时器",
+    firenova_desc = "显示下一次火焰新星的剩余时间。",
 
-	trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
+    trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
 
-	trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_firenova = "Fire Nova",
-	
-	msg_addDead = "/7 Incarcerator Dead",
-	
-	trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_firenova = "火焰新星",
+    
+    msg_addDead = "/7 狱卒死亡",
+    
+    trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Emberseer",
+
+    firenova_cmd = "firenova",
+    firenova_name = "火焰新星计时器",
+    firenova_desc = "显示下一次火焰新星的剩余时间。",
+
+    trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
+
+    trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_firenova = "火焰新星",
+    
+    msg_addDead = "/7 狱卒死亡",
+    
+    trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
 local timer = {

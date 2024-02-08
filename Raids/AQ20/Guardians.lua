@@ -23,19 +23,19 @@ L:RegisterTranslations("enUS", function() return {
 	
 	icon_cmd = "icon",
 	icon_name = "放置标记",
-	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要是团长或有A权限）",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要助理或更高权限）",
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
-	thunderclap_desc = "警告雷霆一击",
+	thunderclap_desc = "雷霆一击出现时进行警告",
 	
 	shadowstorm_cmd = "shadowstorm",
 	shadowstorm_name = "暗影风暴警报",
-	shadowstorm_desc = "警告暗影风暴",
+	shadowstorm_desc = "暗影风暴出现时进行警告",
 	
 	meteor_cmd = "meteor",
 	meteor_name = "流星警报",
-	meteor_desc = "警告流星",
+	meteor_desc = "流星出现时进行警告",
 	
 	explode_cmd = "explode",
 	explode_name = "爆炸警报",
@@ -43,7 +43,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	enrage_cmd = "enrage",
 	enrage_name = "狂怒警报",
-	enrage_desc = "警告狂怒状态",
+	enrage_desc = "狂怒状态出现时进行警告",
 	
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
@@ -81,7 +81,7 @@ L:RegisterTranslations("enUS", function() return {
 	plaguewarn = "感染了瘟疫！快跑出人群！",
 	plagueyouwarn = "你感染了瘟疫！快跑出人群！",
 	plagueyou = "你",
-	plagueare = "受到了",
+	plagueare = "是",
 	plague_onme = "瘟疫目标为",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_SELF_DAMAGE
@@ -90,7 +90,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	cmd = "Guardian",
 	
 	reflect_cmd = "reflect",
@@ -107,19 +107,19 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	icon_cmd = "icon",
 	icon_name = "放置标记",
-	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要是团长或有A权限）",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要助理或更高权限）",
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
-	thunderclap_desc = "警告雷霆一击",
+	thunderclap_desc = "雷霆一击出现时进行警告",
 	
 	shadowstorm_cmd = "shadowstorm",
 	shadowstorm_name = "暗影风暴警报",
-	shadowstorm_desc = "警告暗影风暴",
+	shadowstorm_desc = "暗影风暴出现时进行警告",
 	
 	meteor_cmd = "meteor",
 	meteor_name = "流星警报",
-	meteor_desc = "警告流星",
+	meteor_desc = "流星出现时进行警告",
 	
 	explode_cmd = "explode",
 	explode_name = "爆炸警报",
@@ -127,7 +127,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	enrage_cmd = "enrage",
 	enrage_name = "狂怒警报",
-	enrage_desc = "警告狂怒状态",
+	enrage_desc = "狂怒状态出现时进行警告",
 	
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
@@ -165,7 +165,7 @@ L:RegisterTranslations("zhCN", function() return {
 	plaguewarn = "感染了瘟疫！快跑出人群！",
 	plagueyouwarn = "你感染了瘟疫！快跑出人群！",
 	plagueyou = "你",
-	plagueare = "受到了",
+	plagueare = "是",
 	plague_onme = "瘟疫目标为",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_SELF_DAMAGE

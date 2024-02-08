@@ -6,25 +6,24 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"wound", "entangle", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Fankriss",
-	
-	wound_cmd = "wound",
-	wound_name = "Wound 5 stacks alerts",
-	wound_desc = "Alert for 5 stacks of Wound",
-	
-	entangle_cmd = "entangle",
-	entangle_name = "Entangle Alert",
-	entangle_desc = "Warn for Entangle",
-	
-	
-	trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-	bar_entangle = " Entangled",
-	
-	trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	bar_wound = " Wounds",
+    cmd = "Fankriss",
+    
+    wound_cmd = "wound",
+    wound_name = "重伤堆叠5层警报",
+    wound_desc = "当重伤达到5层时进行警报",
+    
+    entangle_cmd = "entangle",
+    entangle_name = "纠缠警报",
+    entangle_desc = "纠缠出现时进行警告",
+    
+    trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_entangle = " 纠缠持续",
+    
+    trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_wound = " 重伤持续",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -58,6 +57,29 @@ L:RegisterTranslations("deDE", function() return {
 	entangleplayer = "Ihr seid von Umschlingen betroffen.",
 	entangleplayerother = "(.*) ist von Umschlingen betroffen.",
 	entanglewarn = "Umschlingen!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Fankriss",
+    
+    wound_cmd = "wound",
+    wound_name = "重伤堆叠5层警报",
+    wound_desc = "当重伤达到5层时进行警报",
+    
+    entangle_cmd = "entangle",
+    entangle_name = "纠缠警报",
+    entangle_desc = "纠缠出现时进行警告",
+    
+    trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_entangle = " 纠缠持续",
+    
+    trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_wound = " 重伤持续",
 } end )
 
 local timer = {

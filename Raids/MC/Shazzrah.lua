@@ -50,48 +50,48 @@ local firstblink = true
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	blink_trigger = "casts Gate of Shazzrah",
-	deaden_trigger = "Shazzrah gains Deaden Magic",
-	curse_trigger = "afflicted by Shazzrah",
-	cs_trigger2 = "Shazzrah casts Counterspell",
-	cs_trigger = "Shazzrah(.+) Counterspell was resisted by",
-	curse_trigger2 = "Shazzrah(.+) Curse was resisted",
-	deaden_over_trigger = "Deaden Magic fades from Shazzrah",
+    blink_trigger = "casts Gate of Shazzrah",
+    deaden_trigger = "Shazzrah gains Deaden Magic",
+    curse_trigger = "afflicted by Shazzrah",
+    cs_trigger2 = "Shazzrah casts Counterspell",
+    cs_trigger = "Shazzrah(.+) Counterspell was resisted by",
+    curse_trigger2 = "Shazzrah(.+) Curse was resisted",
+    deaden_over_trigger = "Deaden Magic fades from Shazzrah",
 
-	blink_warn = "Blink - 45 seconds until next one!",
-	blink_soon_warn = "3 seconds to Blink!",
-	deaden_warn = "Deaden Magic is up! Dispel it!",
-	curse_warn = "Shazzrah's Curse! Decurse NOW!",
-	cs_now_warn = "Counterspell! ~18 seconds until next one!",
-	cs_soon_warn = "3 seconds until Counterspell!",
+    blink_warn = "闪现术 - 下次可能在45秒后！",
+    blink_soon_warn = "3秒后可能闪现术！",
+    deaden_warn = "魔法抑制已激活！驱散它！",
+    curse_warn = "沙斯拉尔的诅咒！现在解除诅咒！",
+    cs_now_warn = "反制成功！大约18秒后可能再次反制！",
+    cs_soon_warn = "3秒后可能反制！",
 
-	blink_bar = "Possible Blink",
-	deaden_bar = "Deaden Magic",
-	curse_bar = "Shazzrah's Curse",
-	cs_bar = "Possible Counterspell",
+    blink_bar = "可能的闪现术",
+    deaden_bar = "魔法抑制",
+    curse_bar = "沙斯拉尔的诅咒",
+    cs_bar = "可能的反制",
 
-	cmd = "Shazzrah",
-	
-	sounds_cmd = "sounds",
-	sounds_name = "Counterspell sound alert",
-	sounds_desc = "Sound effect about counterspell",
+    cmd = "Shazzrah",
+    
+    sounds_cmd = "sounds",
+    sounds_name = "反制声音警报",
+    sounds_desc = "关于反制的声音效果",
 
-	-- counterspell after blink 2s later
-	counterspell_cmd = "counterspell",
-	counterspell_name = "Counterspell alert",
-	counterspell_desc = "Warn for Shazzrah's Counterspell",
+    -- counterspell after blink 2s later
+    counterspell_cmd = "counterspell",
+    counterspell_name = "反制警报",
+    counterspell_desc = "沙斯拉尔反制时进行警告",
 
-	curse_cmd = "curse",
-	curse_name = "Shazzrah's Curse alert",
-	curse_desc = "Warn for Shazzrah's Curse",
+    curse_cmd = "curse",
+    curse_name = "沙斯拉尔的诅咒警报",
+    curse_desc = "沙斯拉尔的诅咒出现时进行警告",
 
-	deaden_cmd = "deaden",
-	deaden_name = "Deaden Magic alert",
-	deaden_desc = "Warn when Shazzrah has Deaden Magic",
+    deaden_cmd = "deaden",
+    deaden_name = "魔法抑制警报",
+    deaden_desc = "沙斯拉尔获得魔法抑制时进行警告",
 
-	blink_cmd = "blink",
-	blink_name = "Blink alert",
-	blink_desc = "Warn when Shazzrah Blinks",
+    blink_cmd = "blink",
+    blink_name = "闪现术警报",
+    blink_desc = "沙斯拉尔进行闪现术时进行警告",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -176,6 +176,52 @@ L:RegisterTranslations("deDE", function() return {
 	blink_desc = "Warnen wenn Shazzrah blinzelt",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    blink_trigger = "casts Gate of Shazzrah",
+    deaden_trigger = "Shazzrah gains Deaden Magic",
+    curse_trigger = "afflicted by Shazzrah",
+    cs_trigger2 = "Shazzrah casts Counterspell",
+    cs_trigger = "Shazzrah(.+) Counterspell was resisted by",
+    curse_trigger2 = "Shazzrah(.+) Curse was resisted",
+    deaden_over_trigger = "Deaden Magic fades from Shazzrah",
+
+    blink_warn = "闪现术 - 下次可能在45秒后！",
+    blink_soon_warn = "3秒后可能闪现术！",
+    deaden_warn = "魔法抑制已激活！驱散它！",
+    curse_warn = "沙斯拉尔的诅咒！现在解除诅咒！",
+    cs_now_warn = "反制成功！大约18秒后可能再次反制！",
+    cs_soon_warn = "3秒后可能反制！",
+
+    blink_bar = "可能的闪现术",
+    deaden_bar = "魔法抑制",
+    curse_bar = "沙斯拉尔的诅咒",
+    cs_bar = "可能的反制",
+
+    cmd = "Shazzrah",
+    
+    sounds_cmd = "sounds",
+    sounds_name = "反制声音警报",
+    sounds_desc = "关于反制的声音效果",
+
+    -- counterspell after blink 2s later
+    counterspell_cmd = "counterspell",
+    counterspell_name = "反制警报",
+    counterspell_desc = "沙斯拉尔反制时进行警告",
+
+    curse_cmd = "curse",
+    curse_name = "沙斯拉尔的诅咒警报",
+    curse_desc = "沙斯拉尔的诅咒出现时进行警告",
+
+    deaden_cmd = "deaden",
+    deaden_name = "魔法抑制警报",
+    deaden_desc = "沙斯拉尔获得魔法抑制时进行警告",
+
+    blink_cmd = "blink",
+    blink_name = "闪现术警报",
+    blink_desc = "沙斯拉尔进行闪现术时进行警告",
+} end)
 
 ------------------------------
 --      Initialization      --

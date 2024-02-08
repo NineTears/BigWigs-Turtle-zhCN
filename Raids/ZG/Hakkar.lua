@@ -6,90 +6,90 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"mc", "siphon", "enrage", -1, "aspectjeklik", "aspectvenoxis", "aspectmarli", "aspectthekal", "aspectarlokk", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Hakkar",
+    cmd = "Hakkar",
 
-	siphon_cmd = "siphon",
-	siphon_name = "Blood Siphon",
-	siphon_desc = "Shows bars, warnings and timers for Hakkar's Blood Siphon.",
+    siphon_cmd = "siphon",
+    siphon_name = "血液虹吸",
+    siphon_desc = "显示哈卡血液虹吸的计时条、警告和计时器。",
 
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage",
-	enrage_desc = "Lets you know when the 10 minutes are up!",
+    enrage_cmd = "enrage",
+    enrage_name = "激怒",
+    enrage_desc = "当10分钟结束时提醒你！",
 
-	mc_cmd = "mc",
-	mc_name = "Mind Control",
-	mc_desc = "Alert when players have Cause Insanity.",
+    mc_cmd = "mc",
+    mc_name = "精神控制",
+    mc_desc = "当玩家获得“导致疯狂”效果时警告。",
 
-	aspectjeklik_cmd = "aspectjeklik",
-	aspectjeklik_name = "Aspect of Jeklik",
-	aspectjeklik_desc = "Warnings for the extra ability Hakkar gains when High Priestess Jeklik is still alive.",
+    aspectjeklik_cmd = "aspectjeklik",
+    aspectjeklik_name = "耶克里克的守护",
+    aspectjeklik_desc = "当高阶祭司耶克里克在场时，哈卡获得的额外能力提醒。",
 
-	aspectvenoxis_cmd = "aspectvenoxis",
-	aspectvenoxis_name = "Aspect of Venoxis",
-	aspectvenoxis_desc = "Warnings for the extra ability Hakkar gains when High Priest Venoxis is still alive.",
+    aspectvenoxis_cmd = "aspectvenoxis",
+    aspectvenoxis_name = "温诺希斯的守护",
+    aspectvenoxis_desc = "当高阶祭司温诺希斯在场时，哈卡获得的额外能力提醒。",
 
-	aspectmarli_cmd = "aspectmarli",
-	aspectmarli_name = "Aspect of Mar'li",
-	aspectmarli_desc = "Warnings for the extra ability Hakkar gains when High Priestess Mar'li is still alive.",
+    aspectmarli_cmd = "aspectmarli",
+    aspectmarli_name = "玛尔里的守护",
+    aspectmarli_desc = "当高阶祭司玛尔里在场时，哈卡获得的额外能力提醒。",
 
-	aspectthekal_cmd = "aspectthekal",
-	aspectthekal_name = "Aspect of Thekal",
-	aspectthekal_desc = "Warnings for the extra ability Hakkar gains when High Priest Thekal is still alive.",
+    aspectthekal_cmd = "aspectthekal",
+    aspectthekal_name = "塞卡尔的守护",
+    aspectthekal_desc = "当高阶祭司塞卡尔在场时，哈卡获得的额外能力提醒。",
 
-	aspectarlokk_cmd = "aspectarlokk",
-	aspectarlokk_name = "Aspect of Arlokk",
-	aspectarlokk_desc = "Warnings for the extra ability Hakkar gains when High Priestess Arlokk is still alive.",
-	
-	
-	
-	engage_trigger = "FACE THE WRATH OF THE SOULFLAYER!",
-	
-	enrage1minute_message = "Enrage in 1 minute!",
-	enrageseconds_message = "Enrage in %d seconds!",
-	enrage_bar = "Enrage",
-	
-	mindcontrolyou_trigger = "You are afflicted by Cause Insanity.",
-	mindcontrolother_trigger = "(.+) is afflicted by Cause Insanity.",
-	mindcontrol_message = "%s is mindcontrolled!",
-	mindcontrol_message_you = "You are mindcontrolled!",
-	mindcontrol_bar = "MC: %s",
-	firstmc_bar = "First MC",
-	nextmc_bar = "Next MC",
-	
-	siphon_trigger = "Hakkar gains Blood Siphon.",
-	siphon_warning = "Blood Siphon in %d seconds!",
-	siphon_bar = "Blood Siphon",
-	siphon_message = "Blood Siphon - next one in 90 seconds!",
-	
-	--poisonousblood_trigger = "You are afflicted by Poisonous Blood.",
-	
-	aspectofthekal_trigger = "Hakkar gains Aspect of Thekal.",
-	aspectofthekalend_trigger = "Aspect of Thekal fades from Hakkar.",
-	aspectthekalnext_bar = "Next Frenzy",
-	aspectthekal_bar = "Frenzy - Aspect of Thekal",
-	aspectthekal_ann = "Frenzy! Tranq now!",
-	
-	aspectofmarliyou_trigger = "You are afflicted by Aspect of Mar'li.",
-	aspectofmarliother_trigger = "(.+) is afflicted by Aspect of Mar'li.",
-	trigger_aspectOfMarliFail = "Hakkar's Aspect of Mar'li",	
-	aspectmarli_bar = "Next Stun",
-	aspectmarlidebuff_bar = "Stun: %s - Aspect of Mar'li",
-	
-	trigger_aspectOfJeklik = "afflicted by Aspect of Jeklik.",
-	trigger_aspectOfJeklikFail = "Hakkar's Aspect of Jeklik",
-	aspectjeklik_bar = "Next Silence",
-	aspectjeklikdebuff_bar = "Silence - Aspect of Jeklik",
-	
-	aspectofarlokkyou_trigger = "You are afflicted by Aspect of Arlokk.",
-	aspectofarlokkother_trigger = "(.+) is afflicted by Aspect of Arlokk.",
-	trigger_aspectOfArlokkFail = "Hakkar's Aspect of Arlokk",
-	aspectarlokk_bar = "Next Vanish",
-	aspectarlokkdebuff_bar = "Vanish: %s - Aspect of Arlokk",
-	
-	trigger_aspectOfVenoxis = "Hakkar's Aspect of Venoxis hit",
-	trigger_aspectOfVenoxisFail = "Hakkar's Aspect of Venoxis was resisted",
-	aspectvenoxis_bar = "Next Poison - Aspect of Venoxis",
-	--aspectvenoxisdebuff_bar = "Poison - Aspect of Venoxis",
+    aspectarlokk_cmd = "aspectarlokk",
+    aspectarlokk_name = "娅尔罗的守护",
+    aspectarlokk_desc = "当高阶祭司娅尔罗在场时，哈卡获得的额外能力提醒。",
+
+
+
+    engage_trigger = "FACE THE WRATH OF THE SOULFLAYER!",
+
+    enrage1minute_message = "1分钟后激怒！",
+    enrageseconds_message = "%d秒后激怒！",
+    enrage_bar = "激怒",
+
+    mindcontrolyou_trigger = "You are afflicted by Cause Insanity.",
+    mindcontrolother_trigger = "(.+) is afflicted by Cause Insanity.",
+    mindcontrol_message = "%s 被精神控制了！",
+    mindcontrol_message_you = "你被精神控制了！",
+    mindcontrol_bar = "精神控制：%s",
+    firstmc_bar = "首次精神控制",
+    nextmc_bar = "下一次精神控制",
+
+    siphon_trigger = "Hakkar gains Blood Siphon.",
+    siphon_warning = "%d秒后血液虹吸！",
+    siphon_bar = "血液虹吸",
+    siphon_message = "血液虹吸 - 下一次在90秒后！",
+
+    --poisonousblood_trigger = "You are afflicted by Poisonous Blood.",
+
+    aspectofthekal_trigger = "Hakkar gains Aspect of Thekal.",
+    aspectofthekalend_trigger = "Aspect of Thekal fades from Hakkar.",
+    aspectthekalnext_bar = "下一次狂乱",
+    aspectthekal_bar = "狂乱 - 塞卡尔的守护",
+    aspectthekal_ann = "狂乱了！现在使用宁神射击！",
+
+    aspectofmarliyou_trigger = "You are afflicted by Aspect of Mar'li.",
+    aspectofmarliother_trigger = "(.+) is afflicted by Aspect of Mar'li.",
+    trigger_aspectOfMarliFail = "哈卡的玛尔里的守护",
+    aspectmarli_bar = "下一次昏迷",
+    aspectmarlidebuff_bar = "昏迷：%s - 玛尔里的守护",
+
+    trigger_aspectOfJeklik = "afflicted by Aspect of Jeklik.",
+    trigger_aspectOfJeklikFail = "Hakkar's Aspect of Jeklik",
+    aspectjeklik_bar = "下一次沉默",
+    aspectjeklikdebuff_bar = "沉默 - 耶克里克的守护",
+
+    aspectofarlokkyou_trigger = "You are afflicted by Aspect of Arlokk.",
+    aspectofarlokkother_trigger = "(.+) is afflicted by Aspect of Arlokk.",
+    trigger_aspectOfArlokkFail = "Hakkar's Aspect of Arlokk",
+    aspectarlokk_bar = "下一次消失",
+    aspectarlokkdebuff_bar = "消失：%s - 娅尔罗的守护",
+
+    trigger_aspectOfVenoxis = "Hakkar's Aspect of Venoxis hit",
+    trigger_aspectOfVenoxisFail = "Hakkar's Aspect of Venoxis was resisted",
+    aspectvenoxis_bar = "下一次毒液 - 温诺希斯的守护",
+    --aspectvenoxisdebuff_bar = "毒液 - 温诺希斯的守护",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -268,6 +268,95 @@ L:RegisterTranslations("deDE", function() return {
 	aspectarlokk_cmd = "aspectarlokk",
 	aspectarlokk_name = "Aspect of Arlokk",
 	aspectarlokk_desc = "Warnings for the extra ability Hakkar gains when High Priestess Arlokk is still alive.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Hakkar",
+
+    siphon_cmd = "siphon",
+    siphon_name = "血液虹吸",
+    siphon_desc = "显示哈卡血液虹吸的计时条、警告和计时器。",
+
+    enrage_cmd = "enrage",
+    enrage_name = "激怒",
+    enrage_desc = "当10分钟结束时提醒你！",
+
+    mc_cmd = "mc",
+    mc_name = "精神控制",
+    mc_desc = "当玩家获得“导致疯狂”效果时警告。",
+
+    aspectjeklik_cmd = "aspectjeklik",
+    aspectjeklik_name = "耶克里克的守护",
+    aspectjeklik_desc = "当高阶祭司耶克里克在场时，哈卡获得的额外能力提醒。",
+
+    aspectvenoxis_cmd = "aspectvenoxis",
+    aspectvenoxis_name = "温诺希斯的守护",
+    aspectvenoxis_desc = "当高阶祭司温诺希斯在场时，哈卡获得的额外能力提醒。",
+
+    aspectmarli_cmd = "aspectmarli",
+    aspectmarli_name = "玛尔里的守护",
+    aspectmarli_desc = "当高阶祭司玛尔里在场时，哈卡获得的额外能力提醒。",
+
+    aspectthekal_cmd = "aspectthekal",
+    aspectthekal_name = "塞卡尔的守护",
+    aspectthekal_desc = "当高阶祭司塞卡尔在场时，哈卡获得的额外能力提醒。",
+
+    aspectarlokk_cmd = "aspectarlokk",
+    aspectarlokk_name = "娅尔罗的守护",
+    aspectarlokk_desc = "当高阶祭司娅尔罗在场时，哈卡获得的额外能力提醒。",
+
+
+
+    engage_trigger = "FACE THE WRATH OF THE SOULFLAYER!",
+
+    enrage1minute_message = "1分钟后激怒！",
+    enrageseconds_message = "%d秒后激怒！",
+    enrage_bar = "激怒",
+
+    mindcontrolyou_trigger = "You are afflicted by Cause Insanity.",
+    mindcontrolother_trigger = "(.+) is afflicted by Cause Insanity.",
+    mindcontrol_message = "%s 被精神控制了！",
+    mindcontrol_message_you = "你被精神控制了！",
+    mindcontrol_bar = "精神控制：%s",
+    firstmc_bar = "首次精神控制",
+    nextmc_bar = "下一次精神控制",
+
+    siphon_trigger = "Hakkar gains Blood Siphon.",
+    siphon_warning = "%d秒后血液虹吸！",
+    siphon_bar = "血液虹吸",
+    siphon_message = "血液虹吸 - 下一次在90秒后！",
+
+    --poisonousblood_trigger = "You are afflicted by Poisonous Blood.",
+
+    aspectofthekal_trigger = "Hakkar gains Aspect of Thekal.",
+    aspectofthekalend_trigger = "Aspect of Thekal fades from Hakkar.",
+    aspectthekalnext_bar = "下一次狂乱",
+    aspectthekal_bar = "狂乱 - 塞卡尔的守护",
+    aspectthekal_ann = "狂乱了！现在使用宁神射击！",
+
+    aspectofmarliyou_trigger = "You are afflicted by Aspect of Mar'li.",
+    aspectofmarliother_trigger = "(.+) is afflicted by Aspect of Mar'li.",
+    trigger_aspectOfMarliFail = "哈卡的玛尔里的守护",
+    aspectmarli_bar = "下一次昏迷",
+    aspectmarlidebuff_bar = "昏迷：%s - 玛尔里的守护",
+
+    trigger_aspectOfJeklik = "afflicted by Aspect of Jeklik.",
+    trigger_aspectOfJeklikFail = "Hakkar's Aspect of Jeklik",
+    aspectjeklik_bar = "下一次沉默",
+    aspectjeklikdebuff_bar = "沉默 - 耶克里克的守护",
+
+    aspectofarlokkyou_trigger = "You are afflicted by Aspect of Arlokk.",
+    aspectofarlokkother_trigger = "(.+) is afflicted by Aspect of Arlokk.",
+    trigger_aspectOfArlokkFail = "Hakkar's Aspect of Arlokk",
+    aspectarlokk_bar = "下一次消失",
+    aspectarlokkdebuff_bar = "消失：%s - 娅尔罗的守护",
+
+    trigger_aspectOfVenoxis = "Hakkar's Aspect of Venoxis hit",
+    trigger_aspectOfVenoxisFail = "Hakkar's Aspect of Venoxis was resisted",
+    aspectvenoxis_bar = "下一次毒液 - 温诺希斯的守护",
+    --aspectvenoxisdebuff_bar = "毒液 - 温诺希斯的守护",
 } end)
 
 local timer = {

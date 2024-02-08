@@ -6,21 +6,21 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"enrage", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Patchwerk",
+    cmd = "Patchwerk",
 
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warn for Enrage",
-	
-	trigger_start1 = "Patchwerk want to play!",
-	trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
-	
-	trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
-	
-	bar_enrage = "Enrage",
-	msg_enrage60 = "Enrage in 60 seconds",
-	msg_enrage10 = "Enrage in 10 seconds",
-	msg_enrage = "Enrage!",
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒时进行警告",
+    
+    trigger_start1 = "Patchwerk want to play!",
+    trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
+    
+    trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
+    
+    bar_enrage = "激怒",
+    msg_enrage60 = "60秒后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -43,6 +43,26 @@ L:RegisterTranslations("esES", function() return {
 	warn60 = "Enfurecer en 60 segundos",
 	warn30 = "Enfurecer en 30 segundos",
 	warn10 = "Enfurecer en 10 segundos",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Patchwerk",
+
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒时进行警告",
+    
+    trigger_start1 = "Patchwerk want to play!",
+    trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
+    
+    trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
+    
+    bar_enrage = "激怒",
+    msg_enrage60 = "60秒后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
 } end )
 
 local timer = {

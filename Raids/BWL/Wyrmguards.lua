@@ -7,27 +7,27 @@ module.toggleoptions = {"vulnerability", "warstomp"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Wyrmguard",
-	
-	warstomp_cmd = "warstomp",
-	warstomp_name = "War Stomp Alert",
-	warstomp_desc = "Warn for War Stomp",
-	
-	vulnerability_cmd = "vulnerability",
-	vulnerability_name = "Vulnerability",
-	vulnerability_desc = "Warn for Vulnerability changes.",
-	
+    cmd = "Wyrmguard",
+    
+    warstomp_cmd = "warstomp",
+    warstomp_name = "战争践踏警报",
+    warstomp_desc = "战争践踏出现时进行警告",
+    
+    vulnerability_cmd = "vulnerability",
+    vulnerability_name = "弱点",
+    vulnerability_desc = "弱点发生变化时进行警告",
+    
 	hit = "hits",
 	crit = "crits",
-	vuln_bar = "%s Vulnerability",
-	
-	warstomp_trigger = "Death Talon Wyrmguard's War Stomp",
-	warstomp_bar = "War Stomp CD",
-	
-	vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Death Talon Wyrmguard for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
-	vulnerability_dots_test = "^Death Talon Wyrmguard suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
-	vulnerability_message = "Vulnerability: %s!",
-	
+    vuln_bar = "%s 弱点",
+    
+    warstomp_trigger = "Death Talon Wyrmguard's War Stomp",
+    warstomp_bar = "战争践踏冷却",
+    
+    vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Death Talon Wyrmguard for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
+    vulnerability_dots_test = "^Death Talon Wyrmguard suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
+    vulnerability_message = "弱点：%s！",
+    
 	fire = "Fire",
 	frost = "Frost",
 	shadow = "Shadow",
@@ -40,6 +40,41 @@ L:RegisterTranslations("enUS", function() return {
 	thunderfury = "Thunderfury",
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Wyrmguard",
+    
+    warstomp_cmd = "warstomp",
+    warstomp_name = "战争践踏警报",
+    warstomp_desc = "战争践踏出现时进行警告",
+    
+    vulnerability_cmd = "vulnerability",
+    vulnerability_name = "弱点",
+    vulnerability_desc = "弱点发生变化时进行警告",
+    
+	hit = "hits",
+	crit = "crits",
+    vuln_bar = "%s 弱点",
+    
+    warstomp_trigger = "Death Talon Wyrmguard's War Stomp",
+    warstomp_bar = "战争践踏冷却",
+    
+    vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Death Talon Wyrmguard for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
+    vulnerability_dots_test = "^Death Talon Wyrmguard suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
+    vulnerability_message = "弱点：%s！",
+    
+	fire = "Fire",
+	frost = "Frost",
+	shadow = "Shadow",
+	nature = "Nature",
+	arcane = "Arcane",
+	
+	curseofdoom = "Curse of Doom",
+	ignite = "Ignite",
+	starfire = "Starfire",
+	thunderfury = "Thunderfury",
+} end )
 local timer = {
 	warstomp = {8.5, 12.5},
 	vulnerability = 599,

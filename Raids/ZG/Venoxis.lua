@@ -6,61 +6,122 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"phase", "adds", "renew", "holyfire", "enrage", "announce", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd                 = "Venoxis",
+    cmd                 = "Venoxis",
 
-	adds_cmd            = "adds",
-	adds_name           = "Dead adds counter",
-	adds_desc           = "Announces dead Razzashi Cobras",
+    adds_cmd            = "adds",
+    adds_name           = "已死亡增援计数",
+    adds_desc           = "通报拉扎什眼镜蛇的死亡数量",
 
-	renew_cmd           = "renew",
-	renew_name          = "Renew Alert",
-	renew_desc          = "Warn for Renew",
+    renew_cmd           = "renew",
+    renew_name          = "恢复警报",
+    renew_desc          = "恢复施法时进行警告",
 
-	holyfire_cmd        = "holyfire",
-	holyfire_name       = "Holy Fire Alert",
-	holyfire_desc       = "Warn for Holy Fire",
+    holyfire_cmd        = "holyfire",
+    holyfire_name       = "神圣之火警报",
+    holyfire_desc       = "神圣之火施法时进行警告",
 
-	phase_cmd           = "phase",
-	phase_name          = "Phase Notification",
-	phase_desc          = "Announces the boss' phase transition",
+    phase_cmd           = "phase",
+    phase_name          = "阶段通知",
+    phase_desc          = "通报Boss的阶段转换",
 
-	announce_cmd        = "whispers",
-	announce_name       = "Whisper to people in Poison Clouds",
-	announce_desc       = "Sends a whisper to players that stand in poison\n\n(Requires assistant or higher)\n\n(Disclaimer: to avoid spamming whispers, it will only whisper people that actually take damage from the Poison Clouds)",
+    announce_cmd        = "whispers",
+    announce_name       = "密语站在毒云中的玩家",
+    announce_desc       = "向站在毒云中的玩家发送密语\n\n(需要助理或更高权限)\n\n(免责声明：为避免密语骚扰，只会密语实际受到毒云伤害的玩家)",
 
-	enrage_cmd          = "enrage",
-	enrage_name         = "Enrage Alert",
-	enrage_desc         = "Warn for Enrage",
-	
-	
-	renew_trigger = "High Priest Venoxis gains Renew.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	renewend_trigger = "Renew fades from High Priest Venoxis.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	enrage_trigger = "High Priest Venoxis gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	holyfire_trigger = "High Priest Venoxis begins to cast Holy Fire.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	phase2_trigger = "Let the coils of hate unfurl!",--CHAT_MSG_MONSTER_YELL
-	
-	attack_trigger1 = "High Priest Venoxis attacks",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
-	attack_trigger2 = "High Priest Venoxis misses",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
-	attack_trigger3 = "High Priest Venoxis hits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
-	attack_trigger4 = "High Priest Venoxis crits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
+    enrage_cmd          = "enrage",
+    enrage_name         = "激怒警报",
+    enrage_desc         = "激怒施法时进行警告",
+    
+    
+    renew_trigger = "High Priest Venoxis gains Renew.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    renewend_trigger = "Renew fades from High Priest Venoxis.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    enrage_trigger = "High Priest Venoxis gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    holyfire_trigger = "High Priest Venoxis begins to cast Holy Fire.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    phase2_trigger = "Let the coils of hate unfurl!",--CHAT_MSG_MONSTER_YELL
+    
+    attack_trigger1 = "High Priest Venoxis attacks",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
+    attack_trigger2 = "High Priest Venoxis misses",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
+    attack_trigger3 = "High Priest Venoxis hits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
+    attack_trigger4 = "High Priest Venoxis crits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
 
-	poisoncloudhitsyou_trigger = "You suffer (.+) Nature damage from High Priest Venoxis's Poison Cloud",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    poisoncloudhitsyou_trigger = "You suffer (.+) Nature damage from High Priest Venoxis's Poison Cloud",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 
-	add_name = "Razzashi Cobra",
-	deadaddtrigger = "Razzashi Cobra dies",
-	deadbosstrigger = "High Priest Venoxis dies",
+    add_name = "Razzashi Cobra",
+    deadaddtrigger = "Razzashi Cobra dies",
+    deadbosstrigger = "High Priest Venoxis dies",
 
-	holyfirebar = "Holy Fire",
-	renewbar = "Renew",
-	renew_message = "Renew! Dispel it!",
-	phase2_message = "Snake Phase",
-	enrage_message = "Boss is enraged! Spam heals!",
-	poisonyou_message = "Move away from poison cloud!",
-	addmsg = "%d/4 Razzashi Cobras dead!",
-	you = "you",
+    holyfirebar = "神圣之火",
+    renewbar = "恢复",
+    renew_message = "恢复！快驱散！",
+    phase2_message = "蛇形态阶段",
+    enrage_message = "Boss激怒！疯狂治疗！",
+    poisonyou_message = "远离毒云！",
+    addmsg = "拉扎什眼镜蛇已死亡 %d/4！",
+    you = "你",
 
-	
-	["Next Holy Fire"] = true,
+
+    ["Next Holy Fire"] = true,
+    ["Next Holy Fire"] = "下一次神圣之火",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd                 = "Venoxis",
+
+    adds_cmd            = "adds",
+    adds_name           = "已死亡增援计数",
+    adds_desc           = "通报拉扎什眼镜蛇的死亡数量",
+
+    renew_cmd           = "renew",
+    renew_name          = "恢复警报",
+    renew_desc          = "恢复施法时进行警告",
+
+    holyfire_cmd        = "holyfire",
+    holyfire_name       = "神圣之火警报",
+    holyfire_desc       = "神圣之火施法时进行警告",
+
+    phase_cmd           = "phase",
+    phase_name          = "阶段通知",
+    phase_desc          = "通报Boss的阶段转换",
+
+    announce_cmd        = "whispers",
+    announce_name       = "密语站在毒云中的玩家",
+    announce_desc       = "向站在毒云中的玩家发送密语\n\n(需要助理或更高权限)\n\n(免责声明：为避免密语骚扰，只会密语实际受到毒云伤害的玩家)",
+
+    enrage_cmd          = "enrage",
+    enrage_name         = "激怒警报",
+    enrage_desc         = "激怒施法时进行警告",
+    
+    
+    renew_trigger = "High Priest Venoxis gains Renew.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    renewend_trigger = "Renew fades from High Priest Venoxis.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    enrage_trigger = "High Priest Venoxis gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    holyfire_trigger = "High Priest Venoxis begins to cast Holy Fire.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    phase2_trigger = "Let the coils of hate unfurl!",--CHAT_MSG_MONSTER_YELL
+    
+    attack_trigger1 = "High Priest Venoxis attacks",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
+    attack_trigger2 = "High Priest Venoxis misses",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES
+    attack_trigger3 = "High Priest Venoxis hits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
+    attack_trigger4 = "High Priest Venoxis crits",--CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS
+
+    poisoncloudhitsyou_trigger = "You suffer (.+) Nature damage from High Priest Venoxis's Poison Cloud",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+
+    add_name = "Razzashi Cobra",
+    deadaddtrigger = "Razzashi Cobra dies",
+    deadbosstrigger = "High Priest Venoxis dies",
+
+    holyfirebar = "神圣之火",
+    renewbar = "恢复",
+    renew_message = "恢复！快驱散！",
+    phase2_message = "蛇形态阶段",
+    enrage_message = "Boss激怒！疯狂治疗！",
+    poisonyou_message = "远离毒云！",
+    addmsg = "拉扎什眼镜蛇已死亡 %d/4！",
+    you = "你",
+
+
+    ["Next Holy Fire"] = "下一次神圣之火",
 } end )
 
 module.wipemobs = { L["add_name"] }

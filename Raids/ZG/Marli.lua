@@ -6,63 +6,125 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"webs", "charge", "drain", "phase", "spider", "volley", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Marli",
-	
-	webs_cmd = "webs",
-	webs_name = "Enveloping Webs Alert",
-	webs_desc = "Warn for Enveloping Webs",
-	
-	charge_cmd = "charge",
-	charge_name = "Charge Alert",
-	charge_desc = "Warn for Charge",
-	
-	drain_cmd = "drain",
-	drain_name = "Drain Life Alert",
-	drain_desc = "Warn for Drain Life",
-	
-	phase_cmd = "phase",
-	phase_name = "Phase Change Alert",
-	phase_desc = "Warn for Phase Change",
-	
-	spider_cmd = "spider",
-	spider_name = "Spider Adds Alert",
-	spider_desc = "Warn for Spider Adds",
+    cmd = "Marli",
 
-	volley_cmd = "volley",
-	volley_name = "Poison Bolt Volley Alert",
-	volley_desc = "Warn for Poison Bolt Volleys",
-	
-	
-	trigger_engage = "Draw me to your web mistress Shadra. Unleash your venom!",--CHAT_MSG_MONSTER_YELL
-	trigger_bossDead = "High Priestess Mar'li dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-	--trigger_addDead = "Spawn of Mar'li dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-	
-	trigger_websOther = "(.+) is afflicted by Enveloping Webs.", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_websYou = "You are afflicted by Enveloping Webs.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_websCd = "Enveloping Webs CD",
-	
-	trigger_charge = "High Priestess Mar'li's Charge",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_chargeCd = "Charge CD",
-	
-	--if registering CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE then will Warlock's...
-	trigger_drainLifeOther = "(.+) is afflicted by Drain Life.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_drainLifeYou = "You are afflicted by Drain Life.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_drainLifeFade = "Drain Life fades from (.+)",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_drainLife = "Drain Life",
-	msg_drainLife = "Drain Life! Interrupt/Dispel!",
-	
-	trigger_spiderPhase = "Shadra, make of me your avatar!",--CHAT_MSG_MONSTER_YELL
-	bar_spiderPhaseTimer = "Spider Phase Ends",
-	
-	--no trigger for Troll Phase
-	bar_trollPhaseTimer = "Troll Phase Ends",
-	
-	--no trigger for adds spawn
-	msg_addsDead = "/4 Spiders Dead",
-	msg_spidersSpawn = "Kill the Spider add!",
-	
-	trigger_poisonVolley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	bar_poisonVolleyCd = "Poison Volley CD",
+    webs_cmd = "webs",
+    webs_name = "包围之网警报",
+    webs_desc = "包围之网出现时进行警告",
+
+    charge_cmd = "charge",
+    charge_name = "冲锋警报",
+    charge_desc = "冲锋出现时进行警告",
+
+    drain_cmd = "drain",
+    drain_name = "生命吸取警报",
+    drain_desc = "生命吸取出现时进行警告",
+
+    phase_cmd = "phase",
+    phase_name = "阶段转换警报",
+    phase_desc = "阶段转换出现时进行警告",
+
+    spider_cmd = "spider",
+    spider_name = "蜘蛛增援警报",
+    spider_desc = "蜘蛛增援出现时进行警告",
+
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+
+
+    trigger_engage = "Draw me to your web mistress Shadra. Unleash your venom!",--CHAT_MSG_MONSTER_YELL
+    trigger_bossDead = "High Priestess Mar'li dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    --trigger_addDead = "Spawn of Mar'li dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+
+    trigger_websOther = "(.+) is afflicted by Enveloping Webs.", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_websYou = "You are afflicted by Enveloping Webs.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_websCd = "包围之网冷却",
+
+    trigger_charge = "High Priestess Mar'li's Charge",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_chargeCd = "冲锋冷却",
+
+    --if registering CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE then will Warlock's...
+    trigger_drainLifeOther = "(.+) is afflicted by Drain Life.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_drainLifeYou = "You are afflicted by Drain Life.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_drainLifeFade = "Drain Life fades from (.+)",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_drainLife = "生命吸取",
+    msg_drainLife = "生命吸取！打断/驱散！",
+
+    trigger_spiderPhase = "Shadra, make of me your avatar!",--CHAT_MSG_MONSTER_YELL
+    bar_spiderPhaseTimer = "蜘蛛阶段结束",
+
+    --no trigger for Troll Phase
+    bar_trollPhaseTimer = "巨魔阶段结束",
+
+    --no trigger for adds spawn
+    msg_addsDead = "/4 蜘蛛死亡",
+    msg_spidersSpawn = "击败蜘蛛增援！",
+
+    trigger_poisonVolley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    bar_poisonVolleyCd = "毒箭齐射冷却",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Marli",
+
+    webs_cmd = "webs",
+    webs_name = "包围之网警报",
+    webs_desc = "包围之网出现时进行警告",
+
+    charge_cmd = "charge",
+    charge_name = "冲锋警报",
+    charge_desc = "冲锋出现时进行警告",
+
+    drain_cmd = "drain",
+    drain_name = "生命吸取警报",
+    drain_desc = "生命吸取出现时进行警告",
+
+    phase_cmd = "phase",
+    phase_name = "阶段转换警报",
+    phase_desc = "阶段转换出现时进行警告",
+
+    spider_cmd = "spider",
+    spider_name = "蜘蛛增援警报",
+    spider_desc = "蜘蛛增援出现时进行警告",
+
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+
+
+    trigger_engage = "Draw me to your web mistress Shadra. Unleash your venom!",--CHAT_MSG_MONSTER_YELL
+    trigger_bossDead = "High Priestess Mar'li dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    --trigger_addDead = "Spawn of Mar'li dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+
+    trigger_websOther = "(.+) is afflicted by Enveloping Webs.", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_websYou = "You are afflicted by Enveloping Webs.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_websCd = "包围之网冷却",
+
+    trigger_charge = "High Priestess Mar'li's Charge",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_chargeCd = "冲锋冷却",
+
+    --if registering CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE then will Warlock's...
+    trigger_drainLifeOther = "(.+) is afflicted by Drain Life.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_drainLifeYou = "You are afflicted by Drain Life.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_drainLifeFade = "Drain Life fades from (.+)",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_drainLife = "生命吸取",
+    msg_drainLife = "生命吸取！打断/驱散！",
+
+    trigger_spiderPhase = "Shadra, make of me your avatar!",--CHAT_MSG_MONSTER_YELL
+    bar_spiderPhaseTimer = "蜘蛛阶段结束",
+
+    --no trigger for Troll Phase
+    bar_trollPhaseTimer = "巨魔阶段结束",
+
+    --no trigger for adds spawn
+    msg_addsDead = "/4 蜘蛛死亡",
+    msg_spidersSpawn = "击败蜘蛛增援！",
+
+    trigger_poisonVolley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    bar_poisonVolleyCd = "毒箭齐射冷却",
 } end )
 
 local timer = {

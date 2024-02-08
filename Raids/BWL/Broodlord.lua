@@ -11,36 +11,37 @@ local module, L = BigWigs:ModuleDeclaration("Broodlord Lashlayer", "Blackwing La
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Broodlord",
+    cmd = "Broodlord",
 
-	engage_trigger = "None of your kind should be here",
-	ms_trigger = "^(.+) (.+) afflicted by Mortal Strike",
-	bw_trigger = "^(.+) (.+) afflicted by Blast Wave",
-	deathyou_trigger = "You die\.",
-	deathother_trigger = "(.+) dies\.",
-	ms_warn_you = "Mortal Strike on you!",
-	ms_warn_other = "Mortal Strike on %s!",
-	bw_warn = "Blast Wave soon!",
-	ms_bar = "Mortal Strike: %s",
-	bw_bar = "Blast Wave",
-	knock_bar = "Knock Away",
+    engage_trigger = "None of your kind should be here",
+    ms_trigger = "^(.+) (.+) afflicted by Mortal Strike",
+    bw_trigger = "^(.+) (.+) afflicted by Blast Wave",
+    deathyou_trigger = "You die\.",
+    deathother_trigger = "(.+) dies\.",
+    ms_warn_you = "你中了致死打击！",
+    ms_warn_other = "%s中了致死打击！",
+    bw_warn = "冲击波即将来临！",
+    ms_bar = "致死打击：%s",
+    bw_bar = "冲击波",
+    knock_bar = "击退",
 
-	["First Mortal Strike"] = true,
+    ["First Mortal Strike"] = true,
+    ["First Mortal Strike"] = "首次致死打击",
 
-	you = "You",
-	are = "are",
+    you = "你",
+    are = "是",
 
-	ms_cmd = "ms",
-	ms_name = "Mortal Strike",
-	ms_desc = "Warn when someone gets Mortal Strike and starts a clickable bar for easy selection.",
+    ms_cmd = "ms",
+    ms_name = "致死打击",
+    ms_desc = "当有人受到致死打击时进行警告并启动一个可点击的计时条以便选取。",
 
-	knock_cmd = "knock",
-	knock_name = "Knock Away",
-	knock_desc = "Shows a bar with the possible Knock Away cooldown.",
+    knock_cmd = "knock",
+    knock_name = "击退",
+    knock_desc = "显示可能的击退冷却计时条。",
 
-	bw_cmd = "bw",
-	bw_name = "Blast Wave",
-	bw_desc = "Shows a bar with the possible Blast Wave cooldown.\n\n(Disclaimer: this varies anywhere from 8 to 15 seconds. Chosen shortest interval for safety.)",
+    bw_cmd = "bw",
+    bw_name = "冲击波",
+    bw_desc = "显示一个可能的冲击波冷却计时条。\n\n(免责声明：这可能在8到15秒之间变化。选择了最短的间隔以确保安全。)",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -102,6 +103,40 @@ L:RegisterTranslations("deDE", function() return {
 	bw_desc = "Zeigt einen Balken mit der möglichen Druckwellenabklingzeit.\n\n(Hinweis: Diese variiert von 8 bis 15 Sekunden. Zur Sicherheit wurde der kürzeste Intervall gewählt.)",
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Broodlord",
+
+    engage_trigger = "None of your kind should be here",
+    ms_trigger = "^(.+) (.+) afflicted by Mortal Strike",
+    bw_trigger = "^(.+) (.+) afflicted by Blast Wave",
+    deathyou_trigger = "You die\.",
+    deathother_trigger = "(.+) dies\.",
+    ms_warn_you = "你中了致死打击！",
+    ms_warn_other = "%s中了致死打击！",
+    bw_warn = "冲击波即将来临！",
+    ms_bar = "致死打击：%s",
+    bw_bar = "冲击波",
+    knock_bar = "击退",
+
+    ["First Mortal Strike"] = "首次致死打击",
+
+    you = "你",
+    are = "是",
+
+    ms_cmd = "ms",
+    ms_name = "致死打击",
+    ms_desc = "当有人受到致死打击时进行警告并启动一个可点击的计时条以便选取。",
+
+    knock_cmd = "knock",
+    knock_name = "击退",
+    knock_desc = "显示可能的击退冷却计时条。",
+
+    bw_cmd = "bw",
+    bw_name = "冲击波",
+    bw_desc = "显示一个可能的冲击波冷却计时条。\n\n(免责声明：这可能在8到15秒之间变化。选择了最短的间隔以确保安全。)",
+} end )
 
 ---------------------------------
 --      	Variables 		   --

@@ -12,50 +12,50 @@ local module, L = BigWigs:ModuleDeclaration("Vaelastrasz the Corrupt", "Blackwin
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Vaelastrasz",
+    cmd = "Vaelastrasz",
 
-	adrenaline_trigger = "^(.+) (.+) afflicted by Burning Adrenaline\.",
-	start_trigger = "afflicted by Essence of the Red",
-	flamebreath_trigger = "Vaelastrasz the Corrupt begins to cast Flame Breath\.",
-	yell1 = "^Too late, friends",
-	yell2 = "^I beg you, mortals",
-	yell3 = "^FLAME! DEATH! DESTRUCTION!",
-	start_bar = "Start",
-	tankburn_bar = "Tank Burn",
-	adrenaline_bar = "Burning Adrenaline: %s",
-	breath_bar = "Flame Breath",
-	breath_message = "Casting Flame Breath!",
-	tankburnsoon = "Burning Adrenaline on tank in 5 seconds!",
-	adrenaline_message = "%s has Burning Adrenaline!",
-	adrenaline_message_you = "You have Burning Adrenaline! Go away!",
-	deathyou_trigger = "You die\.",
-	deathother_trigger = "(.+) dies\.",
+    adrenaline_trigger = "^(.+) (.+) afflicted by Burning Adrenaline\.",
+    start_trigger = "afflicted by Essence of the Red",
+    flamebreath_trigger = "Vaelastrasz the Corrupt begins to cast Flame Breath\.",
+    yell1 = "^Too late, friends",
+    yell2 = "^I beg you, mortals",
+    yell3 = "^FLAME! DEATH! DESTRUCTION!",
+    start_bar = "战斗开始",
+    tankburn_bar = "主坦燃烧",
+    adrenaline_bar = "燃烧刺激: %s",
+    breath_bar = "龙息术",
+    breath_message = "正在施放龙息术！",
+    tankburnsoon = "5秒后主坦燃烧！",
+    adrenaline_message = "%s 获得了燃烧刺激！",
+    adrenaline_message_you = "你获得了燃烧刺激！快离开！",
+    deathyou_trigger = "You die\.",
+    deathother_trigger = "(.+) dies\.",
 
-	are = "are",
+    are = "是",
 
-	start_cmd = "start",
-	start_name = "Start",
-	start_desc = "Starts a bar for estimating the beginning of the fight.",
+    start_cmd = "start",
+    start_name = "开始",
+    start_desc = "开始战斗计时条以估计战斗开始时间。",
 
-	flamebreath_cmd = "flamebreath",
-	flamebreath_name = "Flame Breath",
-	flamebreath_desc = "Warns when boss is casting Flame Breath.",
+    flamebreath_cmd = "flamebreath",
+    flamebreath_name = "龙息术",
+    flamebreath_desc = "当Boss施放龙息术时进行警告。",
 
-	adrenaline_cmd = "adrenaline",
-	adrenaline_name = "Burning Adrenaline",
-	adrenaline_desc = "Announces who received Burning Adrenaline and starts a clickable bar for easier selection.",
+    adrenaline_cmd = "adrenaline",
+    adrenaline_name = "燃烧刺激",
+    adrenaline_desc = "通报谁获得了燃烧刺激并开始一个可点击的计时条以便快速选择。",
 
-	whisper_cmd = "whisper",
-	whisper_name = "Whisper",
-	whisper_desc = "Whispers the players that got Burning Adrenaline, telling them to move away.",
+    whisper_cmd = "whisper",
+    whisper_name = "密语",
+    whisper_desc = "向获得燃烧刺激的玩家发送密语，告诉他们远离人群。",
 
-	tankburn_cmd = "tankburn",
-	tankburn_name = "Tank Burn",
-	tankburn_desc = "Shows a bar for the Burning Adrenaline that will be applied on boss' target.",
+    tankburn_cmd = "tankburn",
+    tankburn_name = "主坦燃烧",
+    tankburn_desc = "显示将施加在Boss目标上的燃烧刺激计时条。",
 
-	icon_cmd = "icon",
-	icon_name = "Raid Icon",
-	icon_desc = "Marks the player with Burning Adrenaline for easier localization.\n\n(Requires assistant or higher)",
+    icon_cmd = "icon",
+    icon_name = "团队标记",
+    icon_desc = "标记获得燃烧刺激的玩家，以便更容易找到位置。\n\n(需要助理或更高权限)",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -152,6 +152,54 @@ L:RegisterTranslations("deDE", function() return {
 	icon_desc = "Markiert den Spieler mit Brennendes Adrenalin zur leichteren Lokalisierung.\n\n(Ben\195\182tigt Schlachtzugleiter oder Assistent)",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Vaelastrasz",
+
+    adrenaline_trigger = "^(.+) (.+) afflicted by Burning Adrenaline\.",
+    start_trigger = "afflicted by Essence of the Red",
+    flamebreath_trigger = "Vaelastrasz the Corrupt begins to cast Flame Breath\.",
+    yell1 = "^Too late, friends",
+    yell2 = "^I beg you, mortals",
+    yell3 = "^FLAME! DEATH! DESTRUCTION!",
+    start_bar = "战斗开始",
+    tankburn_bar = "主坦燃烧",
+    adrenaline_bar = "燃烧刺激: %s",
+    breath_bar = "龙息术",
+    breath_message = "正在施放龙息术！",
+    tankburnsoon = "5秒后主坦燃烧！",
+    adrenaline_message = "%s 获得了燃烧刺激！",
+    adrenaline_message_you = "你获得了燃烧刺激！快离开！",
+    deathyou_trigger = "You die\.",
+    deathother_trigger = "(.+) dies\.",
+
+    are = "是",
+
+    start_cmd = "start",
+    start_name = "开始",
+    start_desc = "开始战斗计时条以估计战斗开始时间。",
+
+    flamebreath_cmd = "flamebreath",
+    flamebreath_name = "龙息术",
+    flamebreath_desc = "当Boss施放龙息术时进行警告。",
+
+    adrenaline_cmd = "adrenaline",
+    adrenaline_name = "燃烧刺激",
+    adrenaline_desc = "通报谁获得了燃烧刺激并开始一个可点击的计时条以便快速选择。",
+
+    whisper_cmd = "whisper",
+    whisper_name = "密语",
+    whisper_desc = "向获得燃烧刺激的玩家发送密语，告诉他们远离人群。",
+
+    tankburn_cmd = "tankburn",
+    tankburn_name = "主坦燃烧",
+    tankburn_desc = "显示将施加在Boss目标上的燃烧刺激计时条。",
+
+    icon_cmd = "icon",
+    icon_name = "团队标记",
+    icon_desc = "标记获得燃烧刺激的玩家，以便更容易找到位置。\n\n(需要助理或更高权限)",
+} end)
 
 ---------------------------------
 --      	Variables 		   --

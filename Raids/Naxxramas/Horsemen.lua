@@ -14,53 +14,53 @@ L:RegisterTranslations("enUS", function()
         cmd = "Horsemen",
 
         mark_cmd = "mark",
-        mark_name = "Mark Alerts",
-        mark_desc = "Warn for marks",
+        mark_name = "印记警报",
+        mark_desc = "印记出现时警告",
 
         shieldwall_cmd = "shieldwall",
-        shieldwall_name = "Shieldwall Alerts",
-        shieldwall_desc = "Warn for shieldwall",
+        shieldwall_name = "盾墙警报",
+        shieldwall_desc = "盾墙出现时警告",
 
         void_cmd = "void",
-        void_name = "Void Zone Alerts",
-        void_desc = "Warn on Lady Blaumeux casting Void Zone.",
+        void_name = "虚空领域警报",
+        void_desc = "女公爵布劳缪克丝施放虚空领域时警告",
 
         meteor_cmd = "meteor",
-        meteor_name = "Meteor Alerts",
-        meteor_desc = "Warn on Thane casting Meteor.",
+        meteor_name = "流星警报",
+        meteor_desc = "库尔塔兹领主施放流星时警告",
 
         wrath_cmd = "wrath",
-        wrath_name = "Holy Wrath Alerts",
-        wrath_desc = "Warn on Zeliek casting Wrath.",
+        wrath_name = "神圣愤怒警报",
+        wrath_desc = "瑟里耶克爵士施放神圣愤怒时警告",
 
-        markbar = "Mark %d",
-        mark_warn = "Mark %d!",
-        mark_warn_5 = "Mark %d in 5 sec",
+        markbar = "印记 %d",
+        mark_warn = "印记 %d！",
+        mark_warn_5 = "印记 %d 将在5秒后出现",
         marktrigger1 = "afflicted by Mark of Zeliek",
         marktrigger2 = "afflicted by Mark of Korth'azz",
         marktrigger3 = "afflicted by Mark of Blaumeux",
         marktrigger4 = "afflicted by Mark of Mograine",
 
         voidtrigger = "Your life is mine!",
-        voidwarn = "Void Zone Incoming",
-        voidbar = "Void Zone",
+        voidwarn = "虚空领域即将出现",
+        voidbar = "虚空领域",
 
         meteortrigger = "Thane Korth'azz's Meteor hits ",
         meteortrigger2 = "I like my meat extra crispy!",
-        meteorwarn = "Meteor!",
-        meteorbar = "Meteor",
+        meteorwarn = "流星！",
+        meteorbar = "流星",
 
         wrathtrigger = "Sir Zeliek's Holy Wrath hits ",
         wrathtrigger2 = "I have no choice but to obey!",
-        wrathwarn = "Holy Wrath!",
-        wrathbar = "Holy Wrath",
+        wrathwarn = "神圣愤怒！",
+        wrathbar = "神圣愤怒",
 
-        startwarn = "The Four Horsemen Engaged! Mark in 20 sec",
+        startwarn = "四骑士已激活！20秒后出现印记",
 
-        shieldwallbar = "%s - Shield Wall",
+        shieldwallbar = "%s - 盾墙",
         shieldwalltrigger = "(.*) gains Shield Wall.",
-        shieldwall_warn = "%s - Shield Wall for 20 sec",
-        shieldwall_warn_over = "%s - Shield Wall GONE!",
+        shieldwall_warn = "%s - 盾墙持续20秒",
+        shieldwall_warn_over = "%s - 盾墙结束！",
     }
 end)
 
@@ -116,6 +116,61 @@ L:RegisterTranslations("esES", function()
         shieldwalltrigger = "(.*) gana Muro de escudo.",
         shieldwall_warn = "%s - Muro de escudo por 20 segundos",
         shieldwall_warn_over = "¡%s - Muro de escudo DESAPARECE!",
+    }
+end)
+
+L:RegisterTranslations("zhCN", function()
+    return {
+        cmd = "Horsemen",
+
+        mark_cmd = "mark",
+        mark_name = "印记警报",
+        mark_desc = "印记出现时警告",
+
+        shieldwall_cmd = "shieldwall",
+        shieldwall_name = "盾墙警报",
+        shieldwall_desc = "盾墙出现时警告",
+
+        void_cmd = "void",
+        void_name = "虚空领域警报",
+        void_desc = "女公爵布劳缪克丝施放虚空领域时警告",
+
+        meteor_cmd = "meteor",
+        meteor_name = "流星警报",
+        meteor_desc = "库尔塔兹领主施放流星时警告",
+
+        wrath_cmd = "wrath",
+        wrath_name = "神圣愤怒警报",
+        wrath_desc = "瑟里耶克爵士施放神圣愤怒时警告",
+
+        markbar = "印记 %d",
+        mark_warn = "印记 %d！",
+        mark_warn_5 = "印记 %d 将在5秒后出现",
+        marktrigger1 = "afflicted by Mark of Zeliek",
+        marktrigger2 = "afflicted by Mark of Korth'azz",
+        marktrigger3 = "afflicted by Mark of Blaumeux",
+        marktrigger4 = "afflicted by Mark of Mograine",
+
+        voidtrigger = "Your life is mine!",
+        voidwarn = "虚空领域即将出现",
+        voidbar = "虚空领域",
+
+        meteortrigger = "Thane Korth'azz's Meteor hits ",
+        meteortrigger2 = "I like my meat extra crispy!",
+        meteorwarn = "流星！",
+        meteorbar = "流星",
+
+        wrathtrigger = "Sir Zeliek's Holy Wrath hits ",
+        wrathtrigger2 = "I have no choice but to obey!",
+        wrathwarn = "神圣愤怒！",
+        wrathbar = "神圣愤怒",
+
+        startwarn = "四骑士已激活！20秒后出现印记",
+
+        shieldwallbar = "%s - 盾墙",
+        shieldwalltrigger = "(.*) gains Shield Wall.",
+        shieldwall_warn = "%s - 盾墙持续20秒",
+        shieldwall_warn_over = "%s - 盾墙结束！",
     }
 end)
 

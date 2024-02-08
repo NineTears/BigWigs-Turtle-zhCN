@@ -10,32 +10,64 @@ module.defaultDB = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Gehennas",
+    cmd = "Gehennas",
 
-	adds_cmd = "adds",
-	adds_name = "Dead adds counter",
-	adds_desc = "Announces dead Flamewakers",
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报烈焰行者死亡",
 
-	curse_cmd = "curse",
-	curse_name = "Gehennas' Curse alert",
-	curse_desc = "Warn for Gehennas' Curse",
+    curse_cmd = "curse",
+    curse_name = "基赫纳斯的诅咒警报",
+    curse_desc = "基赫纳斯的诅咒出现时进行警告",
 
-	rain_cmd = "rain",
-	rain_name = "Rain of Fire alert",
-	rain_desc = "Shows a warning sign for Rain of Fire",
-	
-	curse_trigger = "afflicted by Gehennas' Curse.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	curse_trigger2 = "Gehennas' Curse was resisted",
-	curse_warn_soon = "5 seconds until Gehennas' Curse!",
-	curse_bar = "Gehennas' Curse",
-	
-	rain_run_trigger = "You suffer (.*) Fire damage from Gehennas's Rain of Fire.",--You suffer 958 Fire damage from Gehennas's Rain of Fire. CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	
-	dead1 = "Flamewaker dies",
-	addmsg = "%d/2 Flamewakers dead!",
-	flamewaker_name = "Flamewaker",
+    rain_cmd = "rain",
+    rain_name = "火焰之雨警报",
+    rain_desc = "火焰之雨出现时显示警告信号",
+    
+    curse_trigger = "afflicted by Gehennas' Curse.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    curse_trigger2 = "Gehennas' Curse was resisted",
+    curse_warn_soon = "基赫纳斯的诅咒5秒后到来！",
+    curse_bar = "基赫纳斯的诅咒",
+    
+    rain_run_trigger = "You suffer (.*) Fire damage from Gehennas's Rain of Fire.",--You suffer 958 Fire damage from Gehennas's Rain of Fire. CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    
+    dead1 = "Flamewaker dies",
+    addmsg = "%d/2烈焰行者死亡！",
+    flamewaker_name = "Flamewaker",
 
-	["Rain of Fire"] = true,
+    ["Rain of Fire"] = true,
+    ["Rain of Fire"] = "火焰之雨",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Gehennas",
+
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报烈焰行者死亡",
+
+    curse_cmd = "curse",
+    curse_name = "基赫纳斯的诅咒警报",
+    curse_desc = "基赫纳斯的诅咒出现时进行警告",
+
+    rain_cmd = "rain",
+    rain_name = "火焰之雨警报",
+    rain_desc = "火焰之雨出现时显示警告信号",
+    
+    curse_trigger = "afflicted by Gehennas' Curse.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    curse_trigger2 = "Gehennas' Curse was resisted",
+    curse_warn_soon = "基赫纳斯的诅咒5秒后到来！",
+    curse_bar = "基赫纳斯的诅咒",
+    
+    rain_run_trigger = "You suffer (.*) Fire damage from Gehennas's Rain of Fire.",--You suffer 958 Fire damage from Gehennas's Rain of Fire. CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    
+    dead1 = "Flamewaker dies",
+    addmsg = "%d/2烈焰行者死亡！",
+    flamewaker_name = "Flamewaker",
+
+    ["Rain of Fire"] = "火焰之雨",
 } end)
 
 local timer = {

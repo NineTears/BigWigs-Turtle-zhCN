@@ -36,36 +36,36 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Emeriss",
+    cmd = "Emeriss",
 
-	noxious_cmd = "noxious",
-	noxious_name = "Noxious breath alert",
-	noxious_desc = "Warn for noxious breath",
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息警告",
 
-	volatileyou_cmd = "volatileyou",
-	volatileyou_name = "Voltile infection on you alert",
-	volatileyou_desc = "Warn for volatile infection on you",
+    volatileyou_cmd = "volatileyou",
+    volatileyou_name = "你身上的不稳定感染警报",
+    volatileyou_desc = "你身上的不稳定感染警告",
 
-	volatileother_cmd = "volatileother",
-	volatileother_name = "Volatile infection on others alert",
-	volatileother_desc = "Warn for volatile infection on others",
+    volatileother_cmd = "volatileother",
+    volatileother_name = "他人身上的不稳定感染警报",
+    volatileother_desc = "他人身上的不稳定感染警告",
 
-	volatile_trigger = "^([^%s]+) ([^%s]+) afflicted by Volatile Infection",
-	breath_trigger = "afflicted by Noxious Breath",
-	engage_trigger = "Hope is a DISEASE of the soul! This land shall wither and die!",
-	corruption_trigger = "Taste your world's corruption!",
+    volatile_trigger = "^([^%s]+) ([^%s]+) afflicted by Volatile Infection",
+    breath_trigger = "afflicted by Noxious Breath",
+    engage_trigger = "Hope is a DISEASE of the soul! This land shall wither and die!",
+    corruption_trigger = "Taste your world's corruption!",
 
-	volatileYou_warn = "You are afflicted by Volatile Infection!",
-	volatileOther_warn = " is afflicted by Volatile Infection!",
-	breathSoon_warn = "Noxious Breath soon!",
-	breath_warn = "Noxious Breath!",
-	corruption_warn = "Corruption of the Earth! Heal NoW!",
+    volatileYou_warn = "你受到了不稳定感染！",
+    volatileOther_warn = " 受到了不稳定感染！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
+    corruption_warn = "大地的堕落！现在就治疗！",
 
-	isyou = "You",
-	isare = "are",
+    isyou = "你",
+    isare = "是",
 
-	breath_bar = "Noxious Breath",
-	corruption_bar = "Corruption of the Earth",
+    breath_bar = "毒性吐息",
+    corruption_bar = "大地的堕落",
 
 } end )
 
@@ -102,6 +102,43 @@ L:RegisterTranslations("esES", function() return {
 	corruption_bar = "Corrupción de la Tierra",
 
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Emeriss",
+
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息警告",
+
+    volatileyou_cmd = "volatileyou",
+    volatileyou_name = "你身上的不稳定感染警报",
+    volatileyou_desc = "你身上的不稳定感染警告",
+
+    volatileother_cmd = "volatileother",
+    volatileother_name = "他人身上的不稳定感染警报",
+    volatileother_desc = "他人身上的不稳定感染警告",
+
+    volatile_trigger = "^([^%s]+) ([^%s]+) afflicted by Volatile Infection",
+    breath_trigger = "afflicted by Noxious Breath",
+    engage_trigger = "Hope is a DISEASE of the soul! This land shall wither and die!",
+    corruption_trigger = "Taste your world's corruption!",
+
+    volatileYou_warn = "你受到了不稳定感染！",
+    volatileOther_warn = " 受到了不稳定感染！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
+    corruption_warn = "大地的堕落！现在就治疗！",
+
+    isyou = "你",
+    isare = "是",
+
+    breath_bar = "毒性吐息",
+    corruption_bar = "大地的堕落",
+
+} end )
+
 ------------------------------
 --      Initialization      --
 ------------------------------

@@ -30,7 +30,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Dazed"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Zombie Food"] = "眩晕监视",
 	["zombiefood"] = "眩晕监视",
 	["Optionally broadcast the raid when someone gets Dazed."] = "当有人眩晕时，可以随时广播.",
@@ -47,7 +47,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Zombie Food"] = "眩晕监视",
 	["zombiefood"] = "眩晕监视",
 	["Optionally broadcast the raid when someone gets Dazed."] = "当有人眩晕时，可以随时广播.",

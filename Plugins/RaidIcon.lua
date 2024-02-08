@@ -38,7 +38,7 @@ L:RegisterTranslations("enUS", function() return {
 	["skull"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Raid Icons"] = "团队图标",
 
 	["Place"] = "标记",
@@ -113,6 +113,8 @@ L:RegisterTranslations("koKR", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	["Raid Icons"] = "团队图标",
 
 	["Place"] = "标记",

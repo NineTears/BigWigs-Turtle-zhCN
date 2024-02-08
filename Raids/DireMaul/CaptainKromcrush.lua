@@ -10,36 +10,71 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "CaptainKromcrush",
+    cmd = "CaptainKromcrush",
 
-	retaliation_cmd = "retaliation",
-	retaliation_name = "Retaliation warnings",
-	retaliation_desc = "Announces for his Retaliation ability",
-	
-	adds_cmd = "adds",
-	adds_name = "Adds warnings",
-	adds_desc = "Announces when adds are summoned",
-	
-	fear_cmd = "fear",
-	fear_name = "Fear warnings",
-	fear_desc = "Fear timer bars",
-	
-	fearTrigger = "afflicted by Intimidating Shout",
-	fearTrigger2 = "Intimidating Shout fail",
-	fearMessage = "Feared",
-	fearBar = "Fear CD",
-	
-	retaliationUpTrigger = "Captain Kromcrush gains Retaliation",
-	retaliationUpMessage = "Retaliation! Stop damage!",
-	
-	retaliationDownTrigger = "Retaliation fades from Captain Kromcrush",
-	retaliationDownMessage = "Retaliation faded! Go!",
-	
-	retaliationHurtTrigger = "Captain Kromcrush's Retaliation hits you for",
-	retaliationHurtMessage = "I'm an idiot taking damage from Retaliation",
-	
-	addsTrigger = "Help me crush these punys",
-	addsUpMessage = "Adds are up!",
+    retaliation_cmd = "retaliation",
+    retaliation_name = "反击风暴警告",
+    retaliation_desc = "通报他的反击风暴技能",
+
+    adds_cmd = "adds",
+    adds_name = "增援警告",
+    adds_desc = "通报增援被召唤时",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧警告",
+    fear_desc = "恐惧计时条",
+
+    fearTrigger = "afflicted by Intimidating Shout",
+    fearTrigger2 = "Intimidating Shout fail",
+    fearMessage = "被恐惧",
+    fearBar = "恐惧冷却",
+
+    retaliationUpTrigger = "Captain Kromcrush gains Retaliation",
+    retaliationUpMessage = "反击风暴！停止输出！",
+
+    retaliationDownTrigger = "Retaliation fades from Captain Kromcrush",
+    retaliationDownMessage = "反击风暴结束！上！",
+
+    retaliationHurtTrigger = "Captain Kromcrush's Retaliation hits you for",
+    retaliationHurtMessage = "我是个白痴，被反击风暴伤害到了",
+
+    addsTrigger = "Help me crush these punys",
+    addsUpMessage = "增援出现了！",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "CaptainKromcrush",
+
+    retaliation_cmd = "retaliation",
+    retaliation_name = "反击风暴警告",
+    retaliation_desc = "通报他的反击风暴技能",
+
+    adds_cmd = "adds",
+    adds_name = "增援警告",
+    adds_desc = "通报增援被召唤时",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧警告",
+    fear_desc = "恐惧计时条",
+
+    fearTrigger = "afflicted by Intimidating Shout",
+    fearTrigger2 = "Intimidating Shout fail",
+    fearMessage = "被恐惧",
+    fearBar = "恐惧冷却",
+
+    retaliationUpTrigger = "Captain Kromcrush gains Retaliation",
+    retaliationUpMessage = "反击风暴！停止输出！",
+
+    retaliationDownTrigger = "Retaliation fades from Captain Kromcrush",
+    retaliationDownMessage = "反击风暴结束！上！",
+
+    retaliationHurtTrigger = "Captain Kromcrush's Retaliation hits you for",
+    retaliationHurtMessage = "我是个白痴，被反击风暴伤害到了",
+
+    addsTrigger = "Help me crush these punys",
+    addsUpMessage = "增援出现了！",
 } end)
 
 local timer = {

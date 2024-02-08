@@ -18,18 +18,18 @@ local L = AceLibrary("AceLocale-2.2"):new("BigWigs"..name)
 ------------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	--onyHeadHorde_trigger = "People of the Horde, citizens of Orgrimmar, come, gather round and celebrate a hero of the Horde. On this day",
-	--nefHeadHorde_trigger = "NEFARIAN IS SLAIN! People of Orgrimmar, bow down before the might of",
+	--[[onyHeadHorde_trigger = "People of the Horde, citizens of Orgrimmar, come, gather round and celebrate a hero of the Horde. On this day",
+	nefHeadHorde_trigger = "NEFARIAN IS SLAIN! People of Orgrimmar, bow down before the might of",
 
-	--onyHeadAlliance_trigger = "Citizens and allies of Stormwind, on this day, history has been made.",
-	--nefHeadAlliance_trigger = "Citizens of the Alliance, the Lord of Blackrock is slain! Nefarian has been subdued by the combined might of",
+	onyHeadAlliance_trigger = "Citizens and allies of Stormwind, on this day, history has been made.",
+	nefHeadAlliance_trigger = "Citizens of the Alliance, the Lord of Blackrock is slain! Nefarian has been subdued by the combined might of",
 
-	--zgHeart_trigger = "Now, only one step remains to rid us of the Soulflayer's threat...",
-	--rendHead_trigger = "Honor your heroes! On this day, they have dealt a great blow against one of our most hated enemies! The false Warchief, Rend Blackhand, has fallen!",
+	zgHeart_trigger = "Now, only one step remains to rid us of the Soulflayer's threat...",
+	rendHead_trigger = "Honor your heroes! On this day, they have dealt a great blow against one of our most hated enemies! The false Warchief, Rend Blackhand, has fallen!",
 
-	--dragonslayer = "Rallying Cry of the Dragonslayer",
-	--zandalar = "Spirit of Zandalar",
-	--blessing = "Warchief's Blessing",
+	dragonslayer = "Rallying Cry of the Dragonslayer",
+	zandalar = "Spirit of Zandalar",
+	blessing = "Warchief's Blessing",--]]
 
 	["worldbuffs"] = true,
 	["World Buff Timers"] = true,
@@ -39,7 +39,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Enable timers"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	onyHeadHorde_trigger = "People of the Horde, citizens of Orgrimmar, come, gather round and celebrate a hero of the Horde. On this day",
 	nefHeadHorde_trigger = "NEFARIAN IS SLAIN! People of Orgrimmar, bow down before the might of",
 
@@ -49,10 +49,10 @@ L:RegisterTranslations("enUS", function() return {
 	zgHeart_trigger = "Now, only one step remains to rid us of the Soulflayer's threat...",
 	rendHead_trigger = "Honor your heroes! On this day, they have dealt a great blow against one of our most hated enemies! The false Warchief, Rend Blackhand, has fallen!",
 
-	dragonslayer = "屠龙者的咆哮",
-	zandalar = "赞达拉之魂",
-	blessing = "酋长的祝福",
-
+	dragonslayer = "Rallying Cry of the Dragonslayer",
+	zandalar = "Spirit of Zandalar",
+	blessing = "Warchief's Blessing",
+	
 	["worldbuffs"] = "worldbuffs",
 	["World Buff Timers"] = "世界Buff计时条",
 	["Gives timer bars to see when world buffs are going out."] = "用计时条查看世界buff什么时候消失.",
@@ -64,7 +64,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	onyHeadHorde_trigger = "部落的勇士，奥格瑞玛的人民，来吧，聚集在一起，为部落的英雄庆祝，在这一天！",
 	nefHeadHorde_trigger = "奈法利安已被击败！奥格瑞玛的人民，向伟大的",
 

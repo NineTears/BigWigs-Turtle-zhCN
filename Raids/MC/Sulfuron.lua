@@ -42,38 +42,38 @@ local deadpriests = 0
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	triggeradddead = "Flamewaker Priest dies",
-	triggercast = "begins to cast Dark Mending",
-	spear_cast = "begins to perform Flame Spear",
-	healbar = "Dark Mending",
-	knockbacktimer = "~AoE knockback",
-	knockbackannounce = "3 seconds until knockback!",
-	healwarn = "Healing!",
-	knockback1 = "Hand of Ragnaros hits",
-	knockback11 = "Hand of Ragnaros hits",
-	knockback2 = "Hand of Ragnaros was resisted",
-	knockback3 = "absorb (.+) Hand of Ragnaros",
-	knockback33 = "Hand of Ragnaros is absorbed",
-	knockback4 = "Hand of Ragnaros (.+) immune",
-	flamewakerpriest_name = "Flamewaker Priest",
+    triggeradddead = "Flamewaker Priest dies",
+    triggercast = "begins to cast Dark Mending",
+    spear_cast = "begins to perform Flame Spear",
+    healbar = "黑暗治疗",
+    knockbacktimer = "~AoE 范围击退",
+    knockbackannounce = "3 秒后进行击退！",
+    healwarn = "正在治疗！",
+    knockback1 = "Hand of Ragnaros hits",
+    knockback11 = "Hand of Ragnaros hits",
+    knockback2 = "Hand of Ragnaros was resisted",
+    knockback3 = "absorb (.+) Hand of Ragnaros",
+    knockback33 = "Hand of Ragnaros is absorbed",
+    knockback4 = "Hand of Ragnaros (.+) immune",
+    flamewakerpriest_name = "Flamewaker Priest",
 
-	addmsg = "%d/4 Flamewaker Priests dead!",
+    addmsg = "%d/4 烈焰行者祭司死亡！",
 
-	flame_spear_bar = "Flame Spear",
+    flame_spear_bar = "烈焰之矛",
 
-	cmd = "Sulfuron",
+    cmd = "Sulfuron",
 
-	knockback_cmd = "knockback",
-	knockback_name = "Hand of Ragnaros announce",
-	knockback_desc = "Show timer for knockbacks",
+    knockback_cmd = "knockback",
+    knockback_name = "拉格纳罗斯之手通报",
+    knockback_desc = "显示击退计时器",
 
-	heal_cmd = "heal",
-	heal_name = "Adds' heals",
-	heal_desc = "Announces Flamewaker Priests' heals",
+    heal_cmd = "heal",
+    heal_name = "增援治疗警告",
+    heal_desc = "通报烈焰行者祭司的治疗",
 
-	adds_cmd = "adds",
-	adds_name = "Dead adds counter",
-	adds_desc = "Announces dead Flamewaker Priests",
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报烈焰行者祭司的死亡",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -146,6 +146,42 @@ L:RegisterTranslations("deDE", function() return {
 	adds_desc = "Verkündet Flamewaker Priests Tod",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    triggeradddead = "Flamewaker Priest dies",
+    triggercast = "begins to cast Dark Mending",
+    spear_cast = "begins to perform Flame Spear",
+    healbar = "黑暗治疗",
+    knockbacktimer = "~AoE 范围击退",
+    knockbackannounce = "3 秒后进行击退！",
+    healwarn = "正在治疗！",
+    knockback1 = "Hand of Ragnaros hits",
+    knockback11 = "Hand of Ragnaros hits",
+    knockback2 = "Hand of Ragnaros was resisted",
+    knockback3 = "absorb (.+) Hand of Ragnaros",
+    knockback33 = "Hand of Ragnaros is absorbed",
+    knockback4 = "Hand of Ragnaros (.+) immune",
+    flamewakerpriest_name = "Flamewaker Priest",
+
+    addmsg = "%d/4 烈焰行者祭司死亡！",
+
+    flame_spear_bar = "烈焰之矛",
+
+    cmd = "Sulfuron",
+
+    knockback_cmd = "knockback",
+    knockback_name = "拉格纳罗斯之手通报",
+    knockback_desc = "显示击退计时器",
+
+    heal_cmd = "heal",
+    heal_name = "增援治疗警告",
+    heal_desc = "通报烈焰行者祭司的治疗",
+
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报烈焰行者祭司的死亡",
+} end)
 
 ------------------------------
 --      Initialization      --

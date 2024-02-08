@@ -10,54 +10,54 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"room", -1, "add", "adddeath", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Gothik",
+    cmd = "Gothik",
 
-	room_cmd = "room",
-	room_name = "Room Arrival Warnings",
-	room_desc = "Warn for Gothik's arrival",
+    room_cmd = "room",
+    room_name = "房间到达警报",
+    room_desc = "戈提克到达时进行警告",
 
-	add_cmd = "add",
-	add_name = "Add Warnings",
-	add_desc = "Warn for adds",
+    add_cmd = "add",
+    add_name = "增援警报",
+    add_desc = "增援出现时进行警告",
 
-	adddeath_cmd = "adddeath",
-	adddeath_name = "Add Death Alert",
-	adddeath_desc = "Alerts when an add dies.",
+    adddeath_cmd = "adddeath",
+    adddeath_name = "增援死亡警报",
+    adddeath_desc = "增援死亡时发出提示",
 
-	disabletrigger = "I... am... undone.",
+    disabletrigger = "I... am... undone.",
 
-	starttrigger1 = "Brazenly you have disregarded powers beyond your understanding.",
-	starttrigger2 = "Teamanare shi rikk mannor rikk lok karkun",
-	startwarn = "Gothik the Harvester engaged! 4:35 till he's in the room.",
+    starttrigger1 = "Brazenly you have disregarded powers beyond your understanding.",
+    starttrigger2 = "Teamanare shi rikk mannor rikk lok karkun",
+    startwarn = "戈提克收割者已激活！4:35后他将进入房间。",
 
-	trainee_name = "Unrelenting Trainee",
-	spectral_trainee_name = "Spectral Trainee",
-	trawarn = "Trainees in 3 seconds",
-	trabar = "Trainee - %d",
-	
-	deathknight_name = "Unrelenting Deathknight",
-	spectral_deathknight_name = "Spectral Deathknight",
-	dkdiewarn = "Death Knight dead!",
-	dkwarn = "Deathknight in 3 seconds",
-	dkbar = "Deathknight - %d",
-	
-	rider_name = "Unrelenting Rider",
-	spectral_rider_name = "Spectral Rider",
-	riderdiewarn = "Rider dead!",
-	riderwarn = "Rider in 3 seconds",
-	riderbar = "Rider - %d",
-	
-	warn_inroom_3m = "In room in 3 minutes",
-	warn_inroom_90 = "In room in 90 seconds",
-	warn_inroom_60 = "In room in 60 seconds",
-	warn_inroom_30 = "In room in 30 seconds",
-	warn_inroom_10 = "Gothik Incoming in 10 seconds",
+    trainee_name = "不屈的学徒",
+    spectral_trainee_name = "鬼灵学徒",
+    trawarn = "3秒后学徒出现",
+    trabar = "学徒 - %d",
+    
+    deathknight_name = "不屈的死亡骑士",
+    spectral_deathknight_name = "鬼灵死亡骑士",
+    dkdiewarn = "死亡骑士已死亡！",
+    dkwarn = "3秒后死亡骑士出现",
+    dkbar = "死亡骑士 - %d",
+    
+    rider_name = "不屈的骑士",
+    spectral_rider_name = "鬼灵骑士",
+    riderdiewarn = "骑士已死亡！",
+    riderwarn = "3秒后骑士出现",
+    riderbar = "骑士 - %d",
+    
+    warn_inroom_3m = "3分钟后进入房间",
+    warn_inroom_90 = "90秒后进入房间",
+    warn_inroom_60 = "60秒后进入房间",
+    warn_inroom_30 = "30秒后进入房间",
+    warn_inroom_10 = "10秒后戈提克到来",
 
-	wave = "%d/22: ", -- its only 22 waves not 26
+    wave = "%d/22：", -- 共有22波而不是26波
 
-	inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
-	inroomwarn = "He's in the room!",
-	inroombartext = "In Room",
+    inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
+    inroomwarn = "他进入了房间！",
+    inroombartext = "进入房间",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -111,6 +111,59 @@ L:RegisterTranslations("esES", function() return {
 	inroomwarn = "¡Está en la habitación!",
 
 	inroombartext = "En Habitación",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Gothik",
+
+    room_cmd = "room",
+    room_name = "房间到达警报",
+    room_desc = "戈提克到达时进行警告",
+
+    add_cmd = "add",
+    add_name = "增援警报",
+    add_desc = "增援出现时进行警告",
+
+    adddeath_cmd = "adddeath",
+    adddeath_name = "增援死亡警报",
+    adddeath_desc = "增援死亡时发出提示",
+
+    disabletrigger = "I... am... undone.",
+
+    starttrigger1 = "Brazenly you have disregarded powers beyond your understanding.",
+    starttrigger2 = "Teamanare shi rikk mannor rikk lok karkun",
+    startwarn = "戈提克收割者已激活！4:35后他将进入房间。",
+
+    trainee_name = "不屈的学徒",
+    spectral_trainee_name = "鬼灵学徒",
+    trawarn = "3秒后学徒出现",
+    trabar = "学徒 - %d",
+    
+    deathknight_name = "不屈的死亡骑士",
+    spectral_deathknight_name = "鬼灵死亡骑士",
+    dkdiewarn = "死亡骑士已死亡！",
+    dkwarn = "3秒后死亡骑士出现",
+    dkbar = "死亡骑士 - %d",
+    
+    rider_name = "不屈的骑士",
+    spectral_rider_name = "鬼灵骑士",
+    riderdiewarn = "骑士已死亡！",
+    riderwarn = "3秒后骑士出现",
+    riderbar = "骑士 - %d",
+    
+    warn_inroom_3m = "3分钟后进入房间",
+    warn_inroom_90 = "90秒后进入房间",
+    warn_inroom_60 = "60秒后进入房间",
+    warn_inroom_30 = "30秒后进入房间",
+    warn_inroom_10 = "10秒后戈提克到来",
+
+    wave = "%d/22：", -- 共有22波而不是26波
+
+    inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
+    inroomwarn = "他进入了房间！",
+    inroombartext = "进入房间",
 } end )
 
 module.wipemobs = { L["rider_name"], L["deathknight_name"], L["trainee_name"],

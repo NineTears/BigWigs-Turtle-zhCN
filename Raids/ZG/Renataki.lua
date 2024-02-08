@@ -11,24 +11,24 @@ local module, L = BigWigs:ModuleDeclaration("Renataki", "Zul'Gurub")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Renataki",
+    cmd = "Renataki",
 
-	enrage_trigger = "Renataki gains Enrage\.",
-	enragesoon_message = "Enrage soon! Get ready!",
-	enrage_message = "Enraged!",
-	vanishsoon_message = "Vanish soon!",
-	vanish_message = "Boss has vanished!",
-	unvanish_message = "Boss is revealed!",
-	vanish_bar = "Vanish",
-	return_bar = "Return",
+    enrage_trigger = "Renataki gains Enrage\.",
+    enragesoon_message = "即将激怒！做好准备！",
+    enrage_message = "已激怒！",
+    vanishsoon_message = "即将消失！",
+    vanish_message = "Boss已经消失了！",
+    unvanish_message = "Boss显形了！",
+    vanish_bar = "消失",
+    return_bar = "返回",
 
-	vanish_cmd = "vanish",
-	vanish_name = "Vanish announce",
-	vanish_desc = "Shows warnings for boss' Vanish.",
+    vanish_cmd = "vanish",
+    vanish_name = "消失通报",
+    vanish_desc = "Boss消失时进行警告。",
 
-	enraged_cmd = "enraged",
-	enraged_name = "Announce boss Enrage",
-	enraged_desc = "Lets you know when boss hits harder.",
+    enraged_cmd = "enraged",
+    enraged_name = "激怒通报",
+    enraged_desc = "让你知道Boss何时攻击力更强。",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -72,6 +72,28 @@ L:RegisterTranslations("deDE", function() return {
 	enraged_desc = "L\195\164sst dich wissen, wenn Boss h\195\164rter zuschl\195\164gt.",
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Renataki",
+
+    enrage_trigger = "Renataki gains Enrage\.",
+    enragesoon_message = "即将激怒！做好准备！",
+    enrage_message = "已激怒！",
+    vanishsoon_message = "即将消失！",
+    vanish_message = "Boss已经消失了！",
+    unvanish_message = "Boss显形了！",
+    vanish_bar = "消失",
+    return_bar = "返回",
+
+    vanish_cmd = "vanish",
+    vanish_name = "消失通报",
+    vanish_desc = "Boss消失时进行警告。",
+
+    enraged_cmd = "enraged",
+    enraged_name = "激怒通报",
+    enraged_desc = "让你知道Boss何时攻击力更强。",
+} end )
 
 ---------------------------------
 --      	Variables 		   --

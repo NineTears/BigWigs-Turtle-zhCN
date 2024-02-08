@@ -6,28 +6,56 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"mc", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Skeram",
+    cmd = "Skeram",
 
-	mc_cmd = "mc",
-	mc_name = "Mind Control Alert",
-	mc_desc = "Warn for Mind Control",
+    mc_cmd = "mc",
+    mc_name = "精神控制警报",
+    mc_desc = "精神控制出现时进行警告",
 
-	split_cmd = "split",
-	split_name = "Split Alert",
-	split_desc = "Warn before Splitting",
-	
-	trigger_mcYou = "You are afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE (unconfirmed)
-	trigger_mcOther = "(.+) is afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	msg_mc = " is MC",
-	bar_mc = " MC",
-	
-	trigger_kill = "You only delay... the inevetable.",--CHAT_MSG_MONSTER_YELL
+    split_cmd = "split",
+    split_name = "分裂警报",
+    split_desc = "分裂前进行警告",
+    
+    trigger_mcYou = "You are afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE (unconfirmed)
+    trigger_mcOther = "(.+) is afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+    msg_mc = " 被精神控制",
+    bar_mc = " 精神控制",
+    
+    trigger_kill = "You only delay... the inevetable.",--CHAT_MSG_MONSTER_YELL
 
-	splitsoon_message = "Split soon! Get ready!",
-	split_message = "Split!",
-	kill_trigger = "You only delay",
-	
-	["You have slain %s!"] = true,
+    splitsoon_message = "即将分裂！准备好！",
+    split_message = "分裂！",
+    kill_trigger = "You only delay",
+    
+    ["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你已经击败了%s！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Skeram",
+
+    mc_cmd = "mc",
+    mc_name = "精神控制警报",
+    mc_desc = "精神控制出现时进行警告",
+
+    split_cmd = "split",
+    split_name = "分裂警报",
+    split_desc = "分裂前进行警告",
+    
+    trigger_mcYou = "You are afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE (unconfirmed)
+    trigger_mcOther = "(.+) is afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+    msg_mc = " 被精神控制",
+    bar_mc = " 精神控制",
+    
+    trigger_kill = "You only delay... the inevetable.",--CHAT_MSG_MONSTER_YELL
+
+    splitsoon_message = "即将分裂！准备好！",
+    split_message = "分裂！",
+    kill_trigger = "You only delay",
+    
+    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 local timer = {

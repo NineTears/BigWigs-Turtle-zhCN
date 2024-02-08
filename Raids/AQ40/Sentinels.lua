@@ -7,23 +7,23 @@ module.toggleoptions = {"abilities"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Sentinel",
-	
-	abilities_cmd = "abilities",
-	abilities_name = "Abilities Alert",
-	abilities_desc = "Warn for Abilities",
-	
-	hittrigger = "Anubisath Sentinel hits you",
-	
-	manaburnwarn = " has Mana Burn!",
-    thornswarn = " has Thorns!",
-    thunderclapwarn = " has Thunderclap!",
-    knockbackwarn = " has Knockback!",
-    mortalstrikewarn = " has Mortal Strike!",
-    shadowstormwarn = " has Shadow Storm!",
-    mendwarn = " has Mending!",
-    sharefwarn = " has Shadow and Frost!",
-	arcrefwarn = " has Fire and Arcane!",
+    cmd = "Sentinel",
+    
+    abilities_cmd = "abilities",
+    abilities_name = "技能警报",
+    abilities_desc = "技能出现时进行警告",
+    
+    hittrigger = "Anubisath Sentinel hits you",
+    
+    manaburnwarn = " 有魔法燃烧！",
+    thornswarn = " 有荆棘术！",
+    thunderclapwarn = " 有雷霆一击！",
+    knockbackwarn = " 有击退！",
+    mortalstrikewarn = " 有致死打击！",
+    shadowstormwarn = " 有暗影风暴！",
+    mendwarn = " 有愈合！",
+    sharefwarn = " 有暗影与冰霜之力！",
+    arcrefwarn = " 有火焰与奥术之力！",
 
 	trigger_arcaneFireReflect1 = "Your Moonfire is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_arcaneFireReflect2 = "Your Scorch is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
@@ -50,9 +50,61 @@ L:RegisterTranslations("enUS", function() return {
 	mendbufficon = "Interface\\Icons\\Spell_Nature_ResistNature",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_SELF_DAMAGE
-	msg_selfReflect = "STOP KILLING YOURSELF!",
+    msg_selfReflect = "停止自残！",
 	
 	["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你已经击败了%s！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Sentinel",
+    
+    abilities_cmd = "abilities",
+    abilities_name = "技能警报",
+    abilities_desc = "技能出现时进行警告",
+    
+    hittrigger = "Anubisath Sentinel hits you",
+    
+    manaburnwarn = " 有魔法燃烧！",
+    thornswarn = " 有荆棘术！",
+    thunderclapwarn = " 有雷霆一击！",
+    knockbackwarn = " 有击退！",
+    mortalstrikewarn = " 有致死打击！",
+    shadowstormwarn = " 有暗影风暴！",
+    mendwarn = " 有愈合！",
+    sharefwarn = " 有暗影与冰霜之力！",
+    arcrefwarn = " 有火焰与奥术之力！",
+
+	trigger_arcaneFireReflect1 = "Your Moonfire is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect2 = "Your Scorch is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect3 = "Your Flame Shock is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect4 = "Your Firebolt is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect5 = "Your Flame Lash is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect6 = "Your Detect Magic is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflectOther = "(.+)'s Detect Magic is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE
+	
+	trigger_shadowFrostReflect1 = "Your Shadow Word: Pain is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect2 = "Your Corruption is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect3 = "Your Frostbolt is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect4 = "Your Frost Shock is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflectOther = "(.+)'s Corruption is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE
+	
+	manaburnbufficon = "Interface\\Icons\\Spell_Shadow_ManaBurn",
+	thunderclapbufficon = "Interface\\Icons\\Ability_ThunderClap",
+	thornsbufficon = "Interface\\Icons\\Spell_Nature_Thorns",
+	knockbackbufficon = "Interface\\Icons\\Ability_UpgradeMoonGlaive",
+	mortalstrikebufficon = "Interface\\Icons\\Ability_Warrior_SavageBlow",
+	shadowstormbufficon = "Interface\\Icons\\Spell_Shadow_Haunting",
+	--arcrefbufficon = "nil",
+	--sharefbufficon = "Interface\\Icons\\Spell_Arcane_Blink",
+	mendbufficon = "Interface\\Icons\\Spell_Nature_ResistNature",
+	
+	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_SELF_DAMAGE
+    msg_selfReflect = "停止自残！",
+	
+    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 module.defaultDB = {

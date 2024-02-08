@@ -92,7 +92,7 @@ L:RegisterTranslations("enUS", function() return {
 	["You have slain %s!"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-01-16
+	-- Last update: 2024-02-08
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",
@@ -123,7 +123,7 @@ L:RegisterTranslations("enUS", function() return {
 	["debug"] = "调试",
 	["Debugging"] = "调试中",
 	["Show debug messages."] = "显示调试消息.",
-	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或有A权限)",
+	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要助理或更高权限)",
 	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
 	bosskill_cmd = "kill",
 	bosskill_name = "首领死亡",
@@ -165,6 +165,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",
@@ -195,7 +197,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["debug"] = "调试",
 	["Debugging"] = "调试中",
 	["Show debug messages."] = "显示调试消息.",
-	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要是团长或有A权限)",
+	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要助理或更高权限)",
 	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
 	bosskill_cmd = "kill",
 	bosskill_name = "首领死亡",

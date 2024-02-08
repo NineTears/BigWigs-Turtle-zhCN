@@ -5,65 +5,129 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"volley", "toxin", "freezestages", "freezecount", "pokecount", "glob", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Viscidus",
-	
-	volley_cmd = "volley",
-	volley_name = "Poison Volley Alert",
-	volley_desc = "Warn for Poison Volley",
+    cmd = "Viscidus",
 
-	toxin_cmd = "toxin",
-	toxin_name = "Standing in Toxin Cloud Alert",
-	toxin_desc = "Warn if you are standing in a toxin cloud",
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
 
-	freezestages_cmd = "freezestages",
-	freezestages_name = "Freezing States Alert",
-	freezestages_desc = "Warn for the different frozen states",
-	
-	freezecount_cmd = "freezecount",
-	freezecount_name = "Count Frost Damage",
-	freezecount_desc = "Count the quantity of Frost hits to freeze Viscidus",
-	
-	pokecount_cmd = "pokecount",
-	pokecount_name = "Count Poke Damage",
-	pokecount_desc = "Count the quantity of physical hits to shatter Viscidus",
-	
-	glob_cmd = "glob",
-	glob_name = "Glob Death Counter",
-	glob_desc = "Counts the Globs as they die",
+    toxin_cmd = "toxin",
+    toxin_name = "站在毒云中警报",
+    toxin_desc = "站在毒云中时进行警告",
+
+    freezestages_cmd = "freezestages",
+    freezestages_name = "冰冻状态警报",
+    freezestages_desc = "不同冰冻状态时进行警告",
+    
+    freezecount_cmd = "freezecount",
+    freezecount_name = "计算冰霜伤害",
+    freezecount_desc = "计算冰霜伤害击中维希度斯的次数以冻结它",
+    
+    pokecount_cmd = "pokecount",
+    pokecount_name = "计算戳击伤害",
+    pokecount_desc = "计算物理伤害击中维希度斯的次数以使其粉碎",
+    
+    glob_cmd = "glob",
+    glob_name = "水珠死亡计数器",
+    glob_desc = "计数水珠的死亡次数",
 
 
 
-	trigger_volley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	bar_volley = "Poison Bolt Volley",
-	
-	trigger_toxin = "You are afflicted by Toxin.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	msg_toxin = "Move from Toxin Cloud!",
-	trigger_toxinFade = "Toxin fades from you.",--CHAT_MSG_SPELL_AURA_GONE_OTHER",
+    trigger_volley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    bar_volley = "毒箭齐射",
+    
+    trigger_toxin = "You are afflicted by Toxin.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_toxin = "远离毒云！",
+    trigger_toxinFade = "Toxin fades from you.",--CHAT_MSG_SPELL_AURA_GONE_OTHER",
 
-	trigger_frostDmg = "Frost damage",--CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE
-	trigger_chilledDmg = "gains Chilled",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_wintersChill = "gains Winter's Chill",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	bar_frostDmg = "Frost hits remaining",
-	
-	trigger_pokeYou = "hit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
-	trigger_pokeOther = "hits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
-	trigger_pokeCritYou = "crit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
-	trigger_pokeCritOther = "crits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
-	bar_poke = "Pokes remaining",
-	
-	trigger_slow = " begins to slow!",--CHAT_MSG_RAID_BOSS_EMOTE
-	trigger_freezing = " is freezing up!",--CHAT_MSG_RAID_BOSS_EMOTE
-	trigger_frozen = " is frozen solid!",--CHAT_MSG_RAID_BOSS_EMOTE
-	trigger_crack = " begins to crack!",--CHAT_MSG_RAID_BOSS_EMOTE
-	trigger_shatter = " looks ready to shatter!",--CHAT_MSG_RAID_BOSS_EMOTE
-	
-	msg_slow = "Freeze Count: 100 / 200",
-	msg_freezing = "Freeze Count: 150 / 200",
-	msg_frozen = "Freeze Count: 200 / 200 - Frozen, poke him!",
-	msg_crack = "Poke Count: 50 / 150",
-	msg_shatter = "Poke Count: 100 / 150",
-	
-	bar_glob = "Globs remaining",
+    trigger_frostDmg = "Frost damage",--CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE
+    trigger_chilledDmg = "gains Chilled",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_wintersChill = "gains Winter's Chill",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    bar_frostDmg = "剩余冰霜击中次数",
+    
+    trigger_pokeYou = "hit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
+    trigger_pokeOther = "hits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
+    trigger_pokeCritYou = "crit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
+    trigger_pokeCritOther = "crits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
+    bar_poke = "剩余戳击次数",
+    
+    trigger_slow = " begins to slow!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_freezing = " is freezing up!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_frozen = " is frozen solid!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_crack = " begins to crack!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_shatter = " looks ready to shatter!",--CHAT_MSG_RAID_BOSS_EMOTE
+    
+    msg_slow = "冻结计数：100 / 200",
+    msg_freezing = "冻结计数：150 / 200",
+    msg_frozen = "冻结计数：200 / 200 - 已冻结，赶快戳击它！",
+    msg_crack = "戳击计数：50 / 150",
+    msg_shatter = "戳击计数：100 / 150",
+    
+    bar_glob = "剩余水珠数量",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Viscidus",
+
+    volley_cmd = "volley",
+    volley_name = "毒箭齐射警报",
+    volley_desc = "毒箭齐射出现时进行警告",
+
+    toxin_cmd = "toxin",
+    toxin_name = "站在毒云中警报",
+    toxin_desc = "站在毒云中时进行警告",
+
+    freezestages_cmd = "freezestages",
+    freezestages_name = "冰冻状态警报",
+    freezestages_desc = "不同冰冻状态时进行警告",
+    
+    freezecount_cmd = "freezecount",
+    freezecount_name = "计算冰霜伤害",
+    freezecount_desc = "计算冰霜伤害击中维希度斯的次数以冻结它",
+    
+    pokecount_cmd = "pokecount",
+    pokecount_name = "计算戳击伤害",
+    pokecount_desc = "计算物理伤害击中维希度斯的次数以使其粉碎",
+    
+    glob_cmd = "glob",
+    glob_name = "水珠死亡计数器",
+    glob_desc = "计数水珠的死亡次数",
+
+
+
+    trigger_volley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    bar_volley = "毒箭齐射",
+    
+    trigger_toxin = "You are afflicted by Toxin.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_toxin = "远离毒云！",
+    trigger_toxinFade = "Toxin fades from you.",--CHAT_MSG_SPELL_AURA_GONE_OTHER",
+
+    trigger_frostDmg = "Frost damage",--CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE
+    trigger_chilledDmg = "gains Chilled",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_wintersChill = "gains Winter's Chill",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    bar_frostDmg = "剩余冰霜击中次数",
+    
+    trigger_pokeYou = "hit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
+    trigger_pokeOther = "hits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
+    trigger_pokeCritYou = "crit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
+    trigger_pokeCritOther = "crits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
+    bar_poke = "剩余戳击次数",
+    
+    trigger_slow = " begins to slow!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_freezing = " is freezing up!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_frozen = " is frozen solid!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_crack = " begins to crack!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_shatter = " looks ready to shatter!",--CHAT_MSG_RAID_BOSS_EMOTE
+    
+    msg_slow = "冻结计数：100 / 200",
+    msg_freezing = "冻结计数：150 / 200",
+    msg_frozen = "冻结计数：200 / 200 - 已冻结，赶快戳击它！",
+    msg_crack = "戳击计数：50 / 150",
+    msg_shatter = "戳击计数：100 / 150",
+    
+    bar_glob = "剩余水珠数量",
 } end )
 
 local timer = {

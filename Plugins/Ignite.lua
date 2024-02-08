@@ -38,7 +38,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Reset the frame position."] = true,
 	["Send Stop"] = true,
 	["Send Stop messages to all raid members"] = true,
-	["font"] = "Fonts\\FRIZQT__.TTF",
+	--["font"] = "Fonts\\FRIZQT__.TTF",
 	["Always show in raid"] = true,
 	["Always show in raid after ignite tick"] = true,
 
@@ -51,11 +51,11 @@ L:RegisterTranslations("enUS", function() return {
 	["your"] = true,
 	["Your"] = true,
 
-	fire_test = "^([%w]+)([%s's]*) (.+) crits (.+) for ([%d]+) ([%w]+) damage.",
+	--[[fire_test = "^([%w]+)([%s's]*) (.+) crits (.+) for ([%d]+) ([%w]+) damage.",
 	ignite_stack_test = "^(.+) is afflicted by Ignite.[%s%(]*([%d]*)",
 	ignite_damage_test = "^(.+) suffers ([%d]+) Fire damage from ([%w]+)([%s's]*) Ignite.",
 	ignite_resist = "([%d]+) resisted",
-	ignite_fade_test = "^Ignite fades from (.+).",
+	ignite_fade_test = "^Ignite fades from (.+).",--]]
 
 	["Fireball"] = true,
 	["Scorch"] = true,
@@ -65,7 +65,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Pyroblast"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Show Warnings"] = "显示警告",
 	["Show Warnings from other players even if the frame is hidden."] = "显示警告从其他玩家，即使框架是隐藏的.",
 	["Ignite"] = "点燃",
@@ -92,23 +92,23 @@ L:RegisterTranslations("enUS", function() return {
 	["your"] = "你",
 	["Your"] = "你",
 
-	fire_test = "[^%s]的([^%s]+)致命一击对([^%s]+)造成([%d]+)点([%w]+)伤害。", 
-	ignite_stack_test = "^([^%s]+)受到了点燃效果的影响（([%d]*)）。",
-	ignite_damage_test = "([^%s]+)的点燃使([^%s]+)受到了([%d]+)点火焰伤害。",
-	ignite_resist = "([%d]+)点被抵抗",
-	ignite_fade_test = "^效果从(.+)身上消失。",
+	fire_test = "^([%w]+)([%s's]*) (.+) crits (.+) for ([%d]+) ([%w]+) damage.",
+	ignite_stack_test = "^(.+) is afflicted by Ignite.[%s%(]*([%d]*)",
+	ignite_damage_test = "^(.+) suffers ([%d]+) Fire damage from ([%w]+)([%s's]*) Ignite.",
+	ignite_resist = "([%d]+) resisted",
+	ignite_fade_test = "^Ignite fades from (.+).",
 
-	["Fireball"] = "火球术",
-	["Scorch"] = "灼烧",
-	["Fire Blast"] = "火焰冲击",
-	["Blastwave"] = "冲击波",
-	["Flamestrike"] = "烈焰风暴",
-	["Pyroblast"] = "炎爆术",
+	["Fireball"] = "Fireball",
+	["Scorch"] = "Scorch",
+	["Fire Blast"] = "Fire Blast",
+	["Blastwave"] = "Blastwave",
+	["Flamestrike"] = "Flamestrike",
+	["Pyroblast"] = "Pyroblast",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Show Warnings"] = "显示警告",
 	["Show Warnings from other players even if the frame is hidden."] = "显示警告从其他玩家，即使框架是隐藏的.",
 	["Ignite"] = "点燃",
@@ -135,18 +135,18 @@ L:RegisterTranslations("zhCN", function() return {
 	["your"] = "你",
 	["Your"] = "你",
 
-	fire_test = "[^%s]的([^%s]+)致命一击对([^%s]+)造成([%d]+)点([%w]+)伤害。", 
-	ignite_stack_test = "^([^%s]+)受到了点燃效果的影响（([%d]*)）。",
-	ignite_damage_test = "([^%s]+)的点燃使([^%s]+)受到了([%d]+)点火焰伤害。",
-	ignite_resist = "([%d]+)点被抵抗",
-	ignite_fade_test = "^效果从(.+)身上消失。",
+	fire_test = "^([%w]+)([%s's]*) (.+) crits (.+) for ([%d]+) ([%w]+) damage.",
+	ignite_stack_test = "^(.+) is afflicted by Ignite.[%s%(]*([%d]*)",
+	ignite_damage_test = "^(.+) suffers ([%d]+) Fire damage from ([%w]+)([%s's]*) Ignite.",
+	ignite_resist = "([%d]+) resisted",
+	ignite_fade_test = "^Ignite fades from (.+).",
 
-	["Fireball"] = "火球术",
-	["Scorch"] = "灼烧",
-	["Fire Blast"] = "火焰冲击",
-	["Blastwave"] = "冲击波",
-	["Flamestrike"] = "烈焰风暴",
-	["Pyroblast"] = "炎爆术",
+	["Fireball"] = "Fireball",
+	["Scorch"] = "Scorch",
+	["Fire Blast"] = "Fire Blast",
+	["Blastwave"] = "Blastwave",
+	["Flamestrike"] = "Flamestrike",
+	["Pyroblast"] = "Pyroblast",
 } end)
 
 L:RegisterTranslations("esES", function() return {

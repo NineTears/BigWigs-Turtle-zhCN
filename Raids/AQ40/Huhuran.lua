@@ -6,54 +6,107 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"wyvernsting", "frenzy", "noxiouspoison", "berserk", "enrage", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Huhuran",
+    cmd = "Huhuran",
 
-	wyvernsting_cmd = "wyvernsting",
-	wyvernsting_name = "Wyvern Sting Alert",
-	wyvernsting_desc = "Warn for Wyvern Sting",
+    wyvernsting_cmd = "wyvernsting",
+    wyvernsting_name = "飞龙钉刺警报",
+    wyvernsting_desc = "飞龙钉刺出现时进行警告",
 
-	frenzy_cmd = "frenzy",
-	frenzy_name = "Frenzy Alert",
-	frenzy_desc = "Warn for Frenzy",
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱警报",
+    frenzy_desc = "狂乱出现时进行警告",
 
-	noxiouspoison_cmd = "noxiouspoison",
-	noxiouspoison_name = "Noxious Poison Alert",
-	noxiouspoison_desc = "Warn for Noxious Poison",
-	
-	berserk_cmd = "berserk",
-	berserk_name = "Low Hp Berserk Alert",
-	berserk_desc = "Warn for Low Hp Berserk",
-	
-	enrage_cmd = "enrage",
-	enrage_name = "Timed Enrage Alert",
-	enrage_desc = "Warn for Timed Enrage",
-	
-	
-	trigger_wyvernSting = "afflicted by Wyvern Sting",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_wyvernStingYou = "You are afflicted by Wyvern Sting.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_wyvernStingYouFade = "Wyvern Sting fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
-	bar_wyvernStingDuration = "Wyvern Stung",
-	bar_wyvernStingCd = "Wyvern Sting CD",
-	
-	trigger_frenzyGain = "Princess Huhuran gains Frenzy.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_frenzyFade = "Frenzy fades from Princess Huhuran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_frenzyDuration = "Frenzy!",
-	bar_frenzyCd = "Frenzy CD",
-	msg_frenzy = "Frenzy - Tranq Shot!",
+    noxiouspoison_cmd = "noxiouspoison",
+    noxiouspoison_name = "剧毒警报",
+    noxiouspoison_desc = "剧毒出现时进行警告",
+    
+    berserk_cmd = "berserk",
+    berserk_name = "低血量狂暴警报",
+    berserk_desc = "低血量狂暴出现时进行警告",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "定时狂怒警报",
+    enrage_desc = "定时狂怒出现时进行警告",
+    
+    
+    trigger_wyvernSting = "afflicted by Wyvern Sting",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_wyvernStingYou = "You are afflicted by Wyvern Sting.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_wyvernStingYouFade = "Wyvern Sting fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_wyvernStingDuration = "飞龙钉刺效果",
+    bar_wyvernStingCd = "飞龙钉刺冷却",
+    
+    trigger_frenzyGain = "Princess Huhuran gains Frenzy.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_frenzyFade = "Frenzy fades from Princess Huhuran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_frenzyDuration = "狂乱！",
+    bar_frenzyCd = "狂乱冷却",
+    msg_frenzy = "狂乱 - 安抚射击！",
 
-	trigger_noxiousPoison = "afflicted by Noxious Poison",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_noxiousPoisonYou = "You are afflicted by Noxious Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_noxiousPoisonYouFade = "Noxious Poison fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
-	bar_noxiousPoisonDuration = "People Silenced",
-	bar_noxiousPoisonCd = "Noxious Poison CD",
-	
-	trigger_berserk = "Princess Huhuran gains Berserk.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	msg_berserk = "Berserk! Soak poison!",
-	
-	trigger_enrage = "Princess Huhuran gains Enrage.",--5min timer, string to be confirmed
-	bar_enrage = "Enrage",
-	msg_enrage1min = "Enrage in 60 seconds",
-	msg_enrage5sec = "Enrage in 5 seconds",
+    trigger_noxiousPoison = "afflicted by Noxious Poison",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_noxiousPoisonYou = "You are afflicted by Noxious Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_noxiousPoisonYouFade = "Noxious Poison fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_noxiousPoisonDuration = "沉默效果",
+    bar_noxiousPoisonCd = "剧毒冷却",
+    
+    trigger_berserk = "Princess Huhuran gains Berserk.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_berserk = "狂暴！吸收毒素！",
+    
+    trigger_enrage = "Princess Huhuran gains Enrage.",--5min timer, string to be confirmed
+    bar_enrage = "狂怒",
+    msg_enrage1min = "狂怒在60秒内",
+    msg_enrage5sec = "狂怒在5秒内",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Huhuran",
+
+    wyvernsting_cmd = "wyvernsting",
+    wyvernsting_name = "飞龙钉刺警报",
+    wyvernsting_desc = "飞龙钉刺出现时进行警告",
+
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱警报",
+    frenzy_desc = "狂乱出现时进行警告",
+
+    noxiouspoison_cmd = "noxiouspoison",
+    noxiouspoison_name = "剧毒警报",
+    noxiouspoison_desc = "剧毒出现时进行警告",
+    
+    berserk_cmd = "berserk",
+    berserk_name = "低血量狂暴警报",
+    berserk_desc = "低血量狂暴出现时进行警告",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "定时狂怒警报",
+    enrage_desc = "定时狂怒出现时进行警告",
+    
+    
+    trigger_wyvernSting = "afflicted by Wyvern Sting",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_wyvernStingYou = "You are afflicted by Wyvern Sting.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_wyvernStingYouFade = "Wyvern Sting fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_wyvernStingDuration = "飞龙钉刺效果",
+    bar_wyvernStingCd = "飞龙钉刺冷却",
+    
+    trigger_frenzyGain = "Princess Huhuran gains Frenzy.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_frenzyFade = "Frenzy fades from Princess Huhuran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_frenzyDuration = "狂乱！",
+    bar_frenzyCd = "狂乱冷却",
+    msg_frenzy = "狂乱 - 安抚射击！",
+
+    trigger_noxiousPoison = "afflicted by Noxious Poison",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_noxiousPoisonYou = "You are afflicted by Noxious Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_noxiousPoisonYouFade = "Noxious Poison fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_noxiousPoisonDuration = "沉默效果",
+    bar_noxiousPoisonCd = "剧毒冷却",
+    
+    trigger_berserk = "Princess Huhuran gains Berserk.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_berserk = "狂暴！吸收毒素！",
+    
+    trigger_enrage = "Princess Huhuran gains Enrage.",--5min timer, string to be confirmed
+    bar_enrage = "狂怒",
+    msg_enrage1min = "狂怒在60秒内",
+    msg_enrage5sec = "狂怒在5秒内",
 } end )
 
 local timer = {

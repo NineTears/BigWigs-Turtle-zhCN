@@ -5,14 +5,14 @@ module.revision = 20004
 module.enabletrigger = { "Stoneskin Gargoyle", "Plagued Gargoyle" }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Stoneskin",
+    cmd = "Stoneskin",
 
-	stoneskin_cmd = "stoneskin",
-	stoneskin_name = "Stoneskin Alert",
-	stoneskin_desc = "Warn for Stoneskin",
+    stoneskin_cmd = "stoneskin",
+    stoneskin_name = "石肤术警报",
+    stoneskin_desc = "石肤术出现时进行警告",
 
-	stoneskintrigger = "%s emits a strange noise.",
-	stoneskinwarn = "Casting Stoneskin!",
+    stoneskintrigger = "%s emits a strange noise.",
+    stoneskinwarn = "正在施放石肤术！",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -33,6 +33,19 @@ L:RegisterTranslations("deDE", function() return {
 
 	stoneskintrigger = "Stoneskin Gargoyle emits a strange noise.",
 	stoneskinwarn = "Casting Stoneskin!",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Stoneskin",
+
+    stoneskin_cmd = "stoneskin",
+    stoneskin_name = "石肤术警报",
+    stoneskin_desc = "石肤术出现时进行警告",
+
+    stoneskintrigger = "%s emits a strange noise.",
+    stoneskinwarn = "正在施放石肤术！",
 } end )
 
 module.defaultDB = {

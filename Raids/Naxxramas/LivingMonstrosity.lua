@@ -7,21 +7,41 @@ module.toggleoptions = {"lightningtotem", "autotarget"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Monstrosity",
-	
-	lightningtotem_cmd = "lightningtotem",
-	lightningtotem_name = "Lightning Totem Alert",
-	lightningtotem_desc = "Warn for Lightning Totem summon",
-	
-	autotarget_cmd = "autotarget",
-	autotarget_name = "Auto-Target Lightning Totem",
-	autotarget_desc = "Targets the totem automatically upon summon",
-	
-	trigger_totemUp = "Living Monstrosity casts Lightning Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	msg_totemUp = "Lightning Totem!",
-	
-	trigger_totemDead = "Lightning Totem dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-	msg_totemDead = "Totem is dead =)",
+    cmd = "Monstrosity",
+
+    lightningtotem_cmd = "lightningtotem",
+    lightningtotem_name = "闪电图腾警报",
+    lightningtotem_desc = "召唤闪电图腾时进行警告",
+
+    autotarget_cmd = "autotarget",
+    autotarget_name = "自动目标闪电图腾",
+    autotarget_desc = "召唤图腾时自动选择为目标",
+
+    trigger_totemUp = "Living Monstrosity casts Lightning Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_totemUp = "闪电图腾！",
+
+    trigger_totemDead = "Lightning Totem dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    msg_totemDead = "图腾死了 =)",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Monstrosity",
+
+    lightningtotem_cmd = "lightningtotem",
+    lightningtotem_name = "闪电图腾警报",
+    lightningtotem_desc = "召唤闪电图腾时进行警告",
+
+    autotarget_cmd = "autotarget",
+    autotarget_name = "自动目标闪电图腾",
+    autotarget_desc = "召唤图腾时自动选择为目标",
+
+    trigger_totemUp = "Living Monstrosity casts Lightning Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_totemUp = "闪电图腾！",
+
+    trigger_totemDead = "Lightning Totem dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    msg_totemDead = "图腾死了 =)",
 } end )
 
 local timer = {

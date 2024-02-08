@@ -47,53 +47,53 @@ local phase = 0
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Onyxia",
-	engage_trigger = "must leave my lair to feed",
+    cmd = "Onyxia",
+    engage_trigger = "must leave my lair to feed",
 
-	deepbreath_cmd = "deepbreath",
-	deepbreath_name = "Deep Breath",
-	deepbreath_desc = "Warn when Onyxia begins to cast Deep Breath.",
+    deepbreath_cmd = "deepbreath",
+    deepbreath_name = "深呼吸",
+    deepbreath_desc = "奥妮克希亚开始施放深呼吸时进行警告。",
 
-	flamebreath_cmd = "flamebreath",
-	flamebreath_name = "Flame Breath",
-	flamebreath_desc = "Warn when Onyxia begins to cast Flame Breath.",
+    flamebreath_cmd = "flamebreath",
+    flamebreath_name = "烈焰吐息",
+    flamebreath_desc = "奥妮克希亚开始施放烈焰吐息时进行警告。",
 
-	wingbuffet_cmd = "wingbuffet",
-	wingbuffet_name = "Wing Buffet",
-	wingbuffet_desc = "Warn for Wing Buffet.",
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼打击",
+    wingbuffet_desc = "龙翼打击出现时进行警告。",
 
-	fireball_cmd = "fireball",
-	fireball_name = "Fireball",
-	fireball_desc = "Warn for Fireball.",
+    fireball_cmd = "fireball",
+    fireball_name = "火球术",
+    fireball_desc = "火球术出现时进行警告。",
 
-	phase_cmd = "phase",
-	phase_name = "Phase",
-	phase_desc = "Warn for Phase Change.",
+    phase_cmd = "phase",
+    phase_name = "阶段",
+    phase_desc = "阶段改变时进行警告。",
 
-	onyfear_cmd = "onyfear",
-	onyfear_name = "Fear",
-	onyfear_desc = "Warn for Bellowing Roar in phase 3.",
+    onyfear_cmd = "onyfear",
+    onyfear_name = "低沉咆哮",
+    onyfear_desc = "第三阶段低沉咆哮时进行警告。",
 
-	deepbreath_trigger = "takes in a deep breath",
-	flamebreath_trigger = "Onyxia begins to cast Flame Breath\.",
-	wingbuffet_trigger = "Onyxia begins to cast Wing Buffet\.",
-	fireball_trigger = "Onyxia begins to cast Fireball.",
-	phase2_trigger = "from above",
-	phase3_trigger = "It seems you'll need another lesson",
-	fear_trigger = "Onyxia begins to cast Bellowing Roar\.",
-	fear_over_trigger = "Bellowing Roar",
+    deepbreath_trigger = "takes in a deep breath",
+    flamebreath_trigger = "Onyxia begins to cast Flame Breath\.",
+    wingbuffet_trigger = "Onyxia begins to cast Wing Buffet\.",
+    fireball_trigger = "Onyxia begins to cast Fireball.",
+    phase2_trigger = "from above",
+    phase3_trigger = "It seems you'll need another lesson",
+    fear_trigger = "Onyxia begins to cast Bellowing Roar\.",
+    fear_over_trigger = "Bellowing Roar",
 
-	warn1 = "Deep Breath incoming!",
-	phase1text = "Phase 1",
-	phase2text = "Phase 2",
-	phase3text = "Phase 3",
-	feartext = "Fear soon!",
-	fear_cast = "Fear",
-	fear_next = "Next Fear",
-	deepbreath_cast = "Deep Breath",
-	flamebreath_cast = "Flame Breath",
-	wingbuffet_cast = "Wing Buffet",
-	fireball_cast = "Fireball on %s",
+    warn1 = "深呼吸即将到来！",
+    phase1text = "第一阶段",
+    phase2text = "第二阶段",
+    phase3text = "第三阶段",
+    feartext = "即将恐惧！",
+    fear_cast = "低沉咆哮",
+    fear_next = "下一次低沉咆哮",
+    deepbreath_cast = "深呼吸",
+    flamebreath_cast = "烈焰吐息",
+    wingbuffet_cast = "龙翼打击",
+    fireball_cast = "对 %s 释放火球术",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -194,6 +194,58 @@ L:RegisterTranslations("deDE", function() return {
 	flamebreath_cast = "Flammenatem",
 	wingbuffet_cast = "Fl\195\188gelsto\195\159",
 	fireball_cast = "Feuerball on %s",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Onyxia",
+    engage_trigger = "must leave my lair to feed",
+
+    deepbreath_cmd = "deepbreath",
+    deepbreath_name = "深呼吸",
+    deepbreath_desc = "奥妮克希亚开始施放深呼吸时进行警告。",
+
+    flamebreath_cmd = "flamebreath",
+    flamebreath_name = "烈焰吐息",
+    flamebreath_desc = "奥妮克希亚开始施放烈焰吐息时进行警告。",
+
+    wingbuffet_cmd = "wingbuffet",
+    wingbuffet_name = "龙翼打击",
+    wingbuffet_desc = "龙翼打击出现时进行警告。",
+
+    fireball_cmd = "fireball",
+    fireball_name = "火球术",
+    fireball_desc = "火球术出现时进行警告。",
+
+    phase_cmd = "phase",
+    phase_name = "阶段",
+    phase_desc = "阶段改变时进行警告。",
+
+    onyfear_cmd = "onyfear",
+    onyfear_name = "低沉咆哮",
+    onyfear_desc = "第三阶段低沉咆哮时进行警告。",
+
+    deepbreath_trigger = "takes in a deep breath",
+    flamebreath_trigger = "Onyxia begins to cast Flame Breath\.",
+    wingbuffet_trigger = "Onyxia begins to cast Wing Buffet\.",
+    fireball_trigger = "Onyxia begins to cast Fireball.",
+    phase2_trigger = "from above",
+    phase3_trigger = "It seems you'll need another lesson",
+    fear_trigger = "Onyxia begins to cast Bellowing Roar\.",
+    fear_over_trigger = "Bellowing Roar",
+
+    warn1 = "深呼吸即将到来！",
+    phase1text = "第一阶段",
+    phase2text = "第二阶段",
+    phase3text = "第三阶段",
+    feartext = "即将恐惧！",
+    fear_cast = "低沉咆哮",
+    fear_next = "下一次低沉咆哮",
+    deepbreath_cast = "深呼吸",
+    flamebreath_cast = "烈焰吐息",
+    wingbuffet_cast = "龙翼打击",
+    fireball_cast = "对 %s 释放火球术",
 } end )
 
 local fireballTarget = nil

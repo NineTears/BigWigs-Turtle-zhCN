@@ -7,105 +7,213 @@ module.toggleoptions = {"bloodlust", "silence", "cleave", "heal", "disarm", -1, 
 module.wipemobs = {"Zealot Zath", "Zealot Lor'Khan"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Thekal",
-	
-	heal_cmd = "heal",
-	heal_name = "Heal alert",
-	heal_desc = "Warn for Lor'Khan's heals.",
+    cmd = "Thekal",
 
-	bloodlust_cmd = "bloodlust",
-	bloodlust_name = "Bloodlust alert",
-	bloodlust_desc = "Announces which boss gets Bloodlust, for easy dispel announce.",
+    heal_cmd = "heal",
+    heal_name = "治疗警报",
+    heal_desc = "狂热者洛卡恩治疗时进行警告。",
 
-	silence_cmd = "silence",
-	silence_name = "Silence",
-	silence_desc = "Shows you who gets silenced.",
+    bloodlust_cmd = "bloodlust",
+    bloodlust_name = "嗜血警报",
+    bloodlust_desc = "通报哪个Boss获得嗜血，便于驱散。",
 
-	disarm_cmd = "disarm",
-	disarm_name = "Disarm",
-	disarm_desc = "Warn for Zealot Lor'Khan's disarm.",
+    silence_cmd = "silence",
+    silence_name = "沉默",
+    silence_desc = "显示谁被沉默了。",
 
-	cleave_cmd = "cleave",
-	cleave_name = "Mortal Cleave notifications",
-	cleave_desc = "Shows who has Mortal Strike-type debuff.",
+    disarm_cmd = "disarm",
+    disarm_name = "缴械",
+    disarm_desc = "狂热者洛卡恩缴械时进行警告。。",
 
-	punch_cmd = "punch",
-	punch_name = "Force Punch alert",
-	punch_desc = "JUMP!",
+    cleave_cmd = "cleave",
+    cleave_name = "致死顺劈警报",
+    cleave_desc = "显示谁受到了类似致死打击的减益效果。",
 
-	tigers_cmd = "tigers",
-	tigers_name = "Tiger spawns",
-	tigers_desc = "Warn for incoming tigers.",
+    punch_cmd = "punch",
+    punch_name = "强力猛击警报",
+    punch_desc = "跳！",
 
-	frenzy_cmd = "frenzy",
-	frenzy_name = "Frenzy announce",
-	frenzy_desc = "Warn when High Priest Thekal goes into a frenzy.",
+    tigers_cmd = "tigers",
+    tigers_name = "召唤老虎",
+    tigers_desc = "有老虎增援时进行警告。",
 
-	enraged_cmd = "enraged",
-	enraged_name = "Enrage alert",
-	enraged_desc = "Lets you know when the boss is enraged.",
+    frenzy_cmd = "frenzy",
+    frenzy_name = "疯狂警报",
+    frenzy_desc = "当高阶祭司塞卡尔进入疯狂状态时进行警告。",
 
-	phase_cmd = "phase",
-	phase_name = "Phase notification",
-	phase_desc = "Announces the boss' phase transitions.",
-	
-	phase2_trigger = "fill me with your RAGE!",
+    enraged_cmd = "enraged",
+    enraged_name = "激怒警报",
+    enraged_desc = "当Boss被激怒时进行警告。",
 
-	phaseone_message = "Troll Phase",
-	phasetwo_message = "Tiger Phase",
-	phasetwo_bar = "Tiger Phase",
-	
-	tigers_trigger = "High Priest Thekal performs Summon Zulian Guardians.",
-	tigers_message = "Incoming Tigers!",
-	
-	forcepunch_trigger = "High Priest Thekal begins to perform Force Punch.",
-	forcepunch_bar = "Force Punch",
-	
-	heal_trigger = "Zealot Lor'Khan begins to cast Great Heal.",
-	heal_message = "Zealot Lor'Khan is Healing! Interrupt it!",
-	heal_bar = "Great Heal",
-	
-	enrage_trigger = "High Priest Thekal gains Enrage\.",
-	enrage_message = "Boss is enraged! Spam heals!",
-	
-	disarmself_trigger = "You are afflicted by Disarm.",
-	disarmother_trigger = "(.+) is afflicted by Disarm.",
-	disarm_bar = "Disarm: %s",
-	
-	mortalcleaveself_trigger = "You are afflicted by Mortal Cleave.",
-	mortalcleaveother_trigger = "(.+) is afflicted by Mortal Cleave.",
-	mortalcleave_bar = "Mortal Cleave: %s",
-	
-	silenceself_trigger = "You are afflicted by Silence.",
-	silenceother_trigger = "(.+) is afflicted by Silence.",
-	silenceselfend_trigger = "Silence fades from you.",
-	silenceotherend_trigger = "Silence fades from (.+).",
-	silence_announce = "Silence on %s! Dispel it!",
-	silence_bar = "Silence: %s",
-	
-	bloodlustgain = "(.+) gains Bloodlust.",
-	bloodlustend = "Bloodlust fades from (.+).",
-	bloodlust_bar = "Bloodlust: %s",
-	bloodlustannounce = "Dispel Bloodlust from %s!",
-	
-	frenzybegin_trigger = "High Priest Thekal gains Frenzy.",
-	frenzyend_trigger = "Frenzy fades from High Priest Thekal.",
-	frenzyann = "Frenzy! Tranq now!",
-	frenzy_bar = "Frenzy",
-	
-	death_trigger = "dies.",
-	zath_trigger = "Zealot Zath",
-	lorkhan_trigger = "Zealot Lor'Khan",
-	thekal_trigger = "High Priest Thekal",
-	
-	thekalrescast_trigger = "High Priest Thekal begins to cast Resurrection.",
-	zathrescast_trigger = "Zealot Zath begins to cast Resurrection.",
-	lorkhanrescast_trigger = "Zealot Lor'Khan begins to cast Resurrection.",
+    phase_cmd = "phase",
+    phase_name = "阶段通知",
+    phase_desc = "通报Boss的阶段转换。",
 
-	["You have slain %s!"] = true,
-	["Knockback"] = true,
-	["New Adds"] = true,
-	["Next Bloodlust"] = true,
+    phase2_trigger = "fill me with your RAGE!",
+
+    phaseone_message = "巨魔阶段",
+    phasetwo_message = "老虎阶段",
+    phasetwo_bar = "老虎阶段",
+
+    tigers_trigger = "High Priest Thekal performs Summon Zulian Guardians.",
+    tigers_message = "老虎来了！",
+
+    forcepunch_trigger = "High Priest Thekal begins to perform Force Punch.",
+    forcepunch_bar = "强力猛击",
+
+    heal_trigger = "Zealot Lor'Khan begins to cast Great Heal.",
+    heal_message = "狂热者洛卡恩正在治疗！打断它！",
+    heal_bar = "强效治疗",
+
+    enrage_trigger = "High Priest Thekal gains Enrage\.",
+    enrage_message = "Boss被激怒！疯狂治疗！",
+
+    disarmself_trigger = "You are afflicted by Disarm.",
+    disarmother_trigger = "(.+) is afflicted by Disarm.",
+    disarm_bar = "缴械：%s",
+
+    mortalcleaveself_trigger = "You are afflicted by Mortal Cleave.",
+    mortalcleaveother_trigger = "(.+) is afflicted by Mortal Cleave.",
+    mortalcleave_bar = "致死顺劈：%s",
+
+    silenceself_trigger = "You are afflicted by Silence.",
+    silenceother_trigger = "(.+) is afflicted by Silence.",
+    silenceselfend_trigger = "Silence fades from you.",
+    silenceotherend_trigger = "Silence fades from (.+).",
+    silence_announce = "%s 被沉默了！快驱散！",
+    silence_bar = "沉默：%s",
+
+    bloodlustgain = "(.+) gains Bloodlust.",
+    bloodlustend = "Bloodlust fades from (.+).",
+    bloodlust_bar = "嗜血：%s",
+    bloodlustannounce = "从 %s 身上驱散嗜血！",
+
+    frenzybegin_trigger = "High Priest Thekal gains Frenzy.",
+    frenzyend_trigger = "Frenzy fades from High Priest Thekal.",
+    frenzyann = "疯狂！快用宁神射击！",
+    frenzy_bar = "疯狂",
+
+    death_trigger = "dies.",
+    zath_trigger = "Zealot Zath",
+    lorkhan_trigger = "Zealot Lor'Khan",
+    thekal_trigger = "High Priest Thekal",
+
+    thekalrescast_trigger = "High Priest Thekal begins to cast Resurrection.",
+    zathrescast_trigger = "Zealot Zath begins to cast Resurrection.",
+    lorkhanrescast_trigger = "Zealot Lor'Khan begins to cast Resurrection.",
+
+    ["You have slain %s!"] = true,
+    ["Knockback"] = true,
+    ["New Adds"] = true,
+    ["Next Bloodlust"] = true,
+    ["You have slain %s!"] = "你已击败%s！",
+    ["Knockback"] = "击退",
+    ["New Adds"] = "新的增援",
+    ["Next Bloodlust"] = "下一次嗜血",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Thekal",
+
+    heal_cmd = "heal",
+    heal_name = "治疗警报",
+    heal_desc = "狂热者洛卡恩治疗时进行警告。",
+
+    bloodlust_cmd = "bloodlust",
+    bloodlust_name = "嗜血警报",
+    bloodlust_desc = "通报哪个Boss获得嗜血，便于驱散。",
+
+    silence_cmd = "silence",
+    silence_name = "沉默",
+    silence_desc = "显示谁被沉默了。",
+
+    disarm_cmd = "disarm",
+    disarm_name = "缴械",
+    disarm_desc = "狂热者洛卡恩缴械时进行警告。。",
+
+    cleave_cmd = "cleave",
+    cleave_name = "致死顺劈警报",
+    cleave_desc = "显示谁受到了类似致死打击的减益效果。",
+
+    punch_cmd = "punch",
+    punch_name = "强力猛击警报",
+    punch_desc = "跳！",
+
+    tigers_cmd = "tigers",
+    tigers_name = "召唤老虎",
+    tigers_desc = "有老虎增援时进行警告。",
+
+    frenzy_cmd = "frenzy",
+    frenzy_name = "疯狂警报",
+    frenzy_desc = "当高阶祭司塞卡尔进入疯狂状态时进行警告。",
+
+    enraged_cmd = "enraged",
+    enraged_name = "激怒警报",
+    enraged_desc = "当Boss被激怒时进行警告。",
+
+    phase_cmd = "phase",
+    phase_name = "阶段通知",
+    phase_desc = "通报Boss的阶段转换。",
+
+    phase2_trigger = "fill me with your RAGE!",
+
+    phaseone_message = "巨魔阶段",
+    phasetwo_message = "老虎阶段",
+    phasetwo_bar = "老虎阶段",
+
+    tigers_trigger = "High Priest Thekal performs Summon Zulian Guardians.",
+    tigers_message = "老虎来了！",
+
+    forcepunch_trigger = "High Priest Thekal begins to perform Force Punch.",
+    forcepunch_bar = "强力猛击",
+
+    heal_trigger = "Zealot Lor'Khan begins to cast Great Heal.",
+    heal_message = "狂热者洛卡恩正在治疗！打断它！",
+    heal_bar = "强效治疗",
+
+    enrage_trigger = "High Priest Thekal gains Enrage\.",
+    enrage_message = "Boss被激怒！疯狂治疗！",
+
+    disarmself_trigger = "You are afflicted by Disarm.",
+    disarmother_trigger = "(.+) is afflicted by Disarm.",
+    disarm_bar = "缴械：%s",
+
+    mortalcleaveself_trigger = "You are afflicted by Mortal Cleave.",
+    mortalcleaveother_trigger = "(.+) is afflicted by Mortal Cleave.",
+    mortalcleave_bar = "致死顺劈：%s",
+
+    silenceself_trigger = "You are afflicted by Silence.",
+    silenceother_trigger = "(.+) is afflicted by Silence.",
+    silenceselfend_trigger = "Silence fades from you.",
+    silenceotherend_trigger = "Silence fades from (.+).",
+    silence_announce = "%s 被沉默了！快驱散！",
+    silence_bar = "沉默：%s",
+
+    bloodlustgain = "(.+) gains Bloodlust.",
+    bloodlustend = "Bloodlust fades from (.+).",
+    bloodlust_bar = "嗜血：%s",
+    bloodlustannounce = "从 %s 身上驱散嗜血！",
+
+    frenzybegin_trigger = "High Priest Thekal gains Frenzy.",
+    frenzyend_trigger = "Frenzy fades from High Priest Thekal.",
+    frenzyann = "疯狂！快用宁神射击！",
+    frenzy_bar = "疯狂",
+
+    death_trigger = "dies.",
+    zath_trigger = "Zealot Zath",
+    lorkhan_trigger = "Zealot Lor'Khan",
+    thekal_trigger = "High Priest Thekal",
+
+    thekalrescast_trigger = "High Priest Thekal begins to cast Resurrection.",
+    zathrescast_trigger = "Zealot Zath begins to cast Resurrection.",
+    lorkhanrescast_trigger = "Zealot Lor'Khan begins to cast Resurrection.",
+
+    ["You have slain %s!"] = "你已击败%s！",
+    ["Knockback"] = "击退",
+    ["New Adds"] = "新的增援",
+    ["Next Bloodlust"] = "下一次嗜血",
 } end )
 
 local timer = {

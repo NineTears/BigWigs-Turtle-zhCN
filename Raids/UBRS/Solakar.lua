@@ -12,38 +12,75 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Solakar",
-	
-	waves_cmd = "waves",
-	waves_name = "Waves",
-	waves_desc = "Warn for Waves.",
-	
-	warstomp_cmd = "warstomp",
-	warstomp_name = "Warstomp",
-	warstomp_desc = "Warn for Warstomp.",
-		
-	trigger_warstomp = "Solakar Flamewreath's War Stomp",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_warstomp = "Stun!",
-	
-	trigger_engage = "Intruders are destroying our eggs!  Stop!!",--CHAT_MSG_MONSTER_YELL
-	
-	msg_wave1 = "Wave 1/5 -- 2 Rookery Hatcher / Guardian",
-	bar_timeToWave2 = "Wave 2/5 Spawns",
-	
-	msg_wave2 = "Wave 2/5 -- 2 Rookery Hatcher / Guardian",
-	bar_timeToWave3 = "Wave 3/5 Spawns",
-	
-	msg_wave3 = "Wave 3/5 -- 2 Rookery Hatcher / Guardian",
-	bar_timeToWave4 = "Wave 4/5 Spawns",
-	
-	msg_wave4 = "Wave 4/5 -- 2 Rookery Hatcher / Guardian",
-	bar_timeToWave5 = "Wave 5/5 Spawns",
-	
-	msg_wave5 = "Wave 5/5 -- 2 Rookery Hatcher / Guardian",
-	bar_timeToBoss = "Solakar spawns",
-	
-	trigger_bossSpawn = "I am here! Now, puny little worms, you will pay for your intrusion!",--CHAT_MSG_MONSTER_YELL
-	msg_bossSpawn = "Solakar spawned!",
+    cmd = "Solakar",
+
+    waves_cmd = "waves",
+    waves_name = "波次",
+    waves_desc = "波次警告。",
+
+    warstomp_cmd = "warstomp",
+    warstomp_name = "战争践踏",
+    warstomp_desc = "战争践踏出现时进行警告。",
+
+    trigger_warstomp = "Solakar Flamewreath's War Stomp",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_warstomp = "眩晕！",
+
+    trigger_engage = "Intruders are destroying our eggs!  Stop!!",--CHAT_MSG_MONSTER_YELL
+
+    msg_wave1 = "波次 1/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave2 = "波次 2/5 出现",
+
+    msg_wave2 = "波次 2/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave3 = "波次 3/5 出现",
+
+    msg_wave3 = "波次 3/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave4 = "波次 4/5 出现",
+
+    msg_wave4 = "波次 4/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave5 = "波次 5/5 出现",
+
+    msg_wave5 = "波次 5/5 -- 2 孵化者 / 守护者",
+    bar_timeToBoss = "索拉卡·火冠出现",
+
+    trigger_bossSpawn = "I am here! Now, puny little worms, you will pay for your intrusion!",--CHAT_MSG_MONSTER_YELL
+    msg_bossSpawn = "索拉卡·火冠出现了！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Solakar",
+
+    waves_cmd = "waves",
+    waves_name = "波次",
+    waves_desc = "波次警告。",
+
+    warstomp_cmd = "warstomp",
+    warstomp_name = "战争践踏",
+    warstomp_desc = "战争践踏出现时进行警告。",
+
+    trigger_warstomp = "Solakar Flamewreath's War Stomp",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_warstomp = "眩晕！",
+
+    trigger_engage = "Intruders are destroying our eggs!  Stop!!",--CHAT_MSG_MONSTER_YELL
+
+    msg_wave1 = "波次 1/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave2 = "波次 2/5 出现",
+
+    msg_wave2 = "波次 2/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave3 = "波次 3/5 出现",
+
+    msg_wave3 = "波次 3/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave4 = "波次 4/5 出现",
+
+    msg_wave4 = "波次 4/5 -- 2 孵化者 / 守护者",
+    bar_timeToWave5 = "波次 5/5 出现",
+
+    msg_wave5 = "波次 5/5 -- 2 孵化者 / 守护者",
+    bar_timeToBoss = "索拉卡·火冠出现",
+
+    trigger_bossSpawn = "I am here! Now, puny little worms, you will pay for your intrusion!",--CHAT_MSG_MONSTER_YELL
+    msg_bossSpawn = "索拉卡·火冠出现了！",
 } end )
 
 local timer = {

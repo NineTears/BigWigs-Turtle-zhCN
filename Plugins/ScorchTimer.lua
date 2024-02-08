@@ -67,15 +67,15 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Scorch Timer"] = true,
 
-	firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
-	scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
-	resist_test = "^Your Fire Vulnerability was resisted by (.+).",
+	-- firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
+	-- scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
+	-- resist_test = "^Your Fire Vulnerability was resisted by (.+).",
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Bars"] = "计时条",
 
-	["Gives timer for Scorch Fire Vulnerability."] = "为烈焰风暴脆弱性提供计时器。",
+	["Gives timer for Scorch Fire Vulnerability."] = "提供灼烧火焰易伤的计时器。",
 	["Enable"] = "启用",
 	["Enable timers."] = "启用计时器。",
 	["Target only"] = "仅目标",
@@ -108,22 +108,22 @@ L:RegisterTranslations("enUS", function() return {
 	["Reverse"] = "颠倒",
 	["Toggles if bars are reversed (fill up instead of emptying)."] = "切换是否反转进度条（填充而不是清空）.",
 
-	["ScorchTimer"] = "烈焰风暴计时器",
+	["ScorchTimer"] = "灼烧计时器",
 
-	["Scorch Timer"] = "烈焰风暴计时器",
+	["Scorch Timer"] = "灼烧计时器",
 
-	firevuln_test = "(.+) 受到火焰抗性影响.",
-	scorch_test	= "^你的烈焰风暴 (%a%a?)伤害了 (.+) ",
-	resist_test = "^你的火焰抗性抵抗了 (.+).",
+	firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
+	scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
+	resist_test = "^Your Fire Vulnerability was resisted by (.+).",
 
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Bars"] = "计时条",
 
-	["Gives timer for Scorch Fire Vulnerability."] = "为烈焰风暴脆弱性提供计时器。",
+	["Gives timer for Scorch Fire Vulnerability."] = "提供灼烧火焰易伤的计时器。",
 	["Enable"] = "启用",
 	["Enable timers."] = "启用计时器。",
 	["Target only"] = "仅目标",
@@ -156,12 +156,12 @@ L:RegisterTranslations("zhCN", function() return {
 	["Reverse"] = "颠倒",
 	["Toggles if bars are reversed (fill up instead of emptying)."] = "切换是否反转进度条（填充而不是清空）.",
 
-	["ScorchTimer"] = "烈焰风暴计时器",
+	["ScorchTimer"] = "灼烧计时器",
 
-	["Scorch Timer"] = "烈焰风暴计时器",
+	["Scorch Timer"] = "灼烧计时器",
 
 	firevuln_test = "(.+) 受到火焰抗性影响.",
-	scorch_test	= "^你的烈焰风暴 (%a%a?)伤害了 (.+) ",
+	scorch_test	= "^你的灼烧 (%a%a?)伤害了 (.+) ",
 	resist_test = "^你的火焰抗性抵抗了 (.+).",
 } end)
 

@@ -6,32 +6,63 @@ module.enabletrigger = module.translatedName
 module.toggleoptions = {"fear", "knock", "thunderclap"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Berserker",
-	
-	fear_cmd = "fear",
-	fear_name = "Fear Alert",
-	fear_desc = "Warn for Fear",
-	
-	knock_cmd = "knock",
-	knock_name = "Knock Away Alert",
-	knock_desc = "Warn for Knock Away",
-	
-	thunderclap_cmd = "thunderclap",
-	thunderclap_name = "Thunderclap Alert",
-	thunderclap_desc = "Warn for Thunderclap",
-	
-	
-	
-	trigger_fear1 = "afflicted by Intimidating Roar",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_fear2 = "Intimidating Roar fail(.+) immune.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	trigger_fear3 = "Intimidating Roar was resisted",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_fear = "Fear CD",
-	
-	trigger_knockAway = "Gurubashi Berserker's Knock Away",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_knockAway = "KnockAway CD",
-	
-	trigger_thunderclap = "Gurubashi Berserker's Thunderclap",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	bar_thunderclap = "Thunderclap CD",
+    cmd = "Berserker",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧警报",
+    fear_desc = "恐惧出现时进行警告",
+
+    knock_cmd = "knock",
+    knock_name = "击退警报",
+    knock_desc = "击退出现时进行警告",
+
+    thunderclap_cmd = "thunderclap",
+    thunderclap_name = "雷霆一击警报",
+    thunderclap_desc = "雷霆一击出现时进行警告",
+
+    
+
+    trigger_fear1 = "afflicted by Intimidating Roar",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_fear2 = "Intimidating Roar fail(.+) immune.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_fear3 = "Intimidating Roar was resisted",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_fear = "恐惧冷却",
+
+    trigger_knockAway = "Gurubashi Berserker's Knock Away",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_knockAway = "击退冷却",
+
+    trigger_thunderclap = "Gurubashi Berserker's Thunderclap",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_thunderclap = "雷霆一击冷却",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Berserker",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧警报",
+    fear_desc = "恐惧出现时进行警告",
+
+    knock_cmd = "knock",
+    knock_name = "击退警报",
+    knock_desc = "击退出现时进行警告",
+
+    thunderclap_cmd = "thunderclap",
+    thunderclap_name = "雷霆一击警报",
+    thunderclap_desc = "雷霆一击出现时进行警告",
+
+    
+
+    trigger_fear1 = "afflicted by Intimidating Roar",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_fear2 = "Intimidating Roar fail(.+) immune.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_fear3 = "Intimidating Roar was resisted",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_fear = "恐惧冷却",
+
+    trigger_knockAway = "Gurubashi Berserker's Knock Away",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_knockAway = "击退冷却",
+
+    trigger_thunderclap = "Gurubashi Berserker's Thunderclap",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_thunderclap = "雷霆一击冷却",
 } end )
 
 local timer = {

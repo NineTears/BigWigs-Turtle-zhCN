@@ -7,18 +7,35 @@ module.toggleoptions = {"whirlwind"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "deathknightCaptain",
-	
-	whirlwind_cmd = "whirlwind",
-	whirlwind_name = "Whirlwind Alert",
-	whirlwind_desc = "Warn for Whirlwind",
-	
-	whirlwind_trigger = "Deathknight Captain gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	whirlwindEnd_trigger = "Whirlwind fades from Deathknight Captain.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	whirlwind_bar1 = "Whirlwind 1",
-	whirlwind_bar2 = "Whirlwind 2",
-	whirlwindCD_bar1 = "Whirlwind CD 1",
-	whirlwindCD_bar2 = "Whirlwind CD 2",
+    cmd = "deathknightCaptain",
+
+    whirlwind_cmd = "whirlwind",
+    whirlwind_name = "旋风斩警报",
+    whirlwind_desc = "死亡骑士队长使用旋风斩时进行警告",
+
+    whirlwind_trigger = "Deathknight Captain gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    whirlwindEnd_trigger = "Whirlwind fades from Deathknight Captain.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    whirlwind_bar1 = "旋风斩 1",
+    whirlwind_bar2 = "旋风斩 2",
+    whirlwindCD_bar1 = "旋风斩冷却 1",
+    whirlwindCD_bar2 = "旋风斩冷却 2",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "deathknightCaptain",
+
+    whirlwind_cmd = "whirlwind",
+    whirlwind_name = "旋风斩警报",
+    whirlwind_desc = "死亡骑士队长使用旋风斩时进行警告",
+
+    whirlwind_trigger = "Deathknight Captain gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    whirlwindEnd_trigger = "Whirlwind fades from Deathknight Captain.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    whirlwind_bar1 = "旋风斩 1",
+    whirlwind_bar2 = "旋风斩 2",
+    whirlwindCD_bar1 = "旋风斩冷却 1",
+    whirlwindCD_bar2 = "旋风斩冷却 2",
 } end )
 
 local timer = {

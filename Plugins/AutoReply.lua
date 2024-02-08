@@ -41,8 +41,10 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 		-- Wind汉化修复Turtle-WOW中文数据
-		-- Last update: 2023-12-21
+		-- Last update: 2024-02-08
 		statusRequest_cmd = "statusRequest",
 		statusRequest_name = "状态请求",
 		statusRequest_desc = "允许查询Boss状态",

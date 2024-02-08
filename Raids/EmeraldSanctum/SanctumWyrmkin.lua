@@ -11,19 +11,39 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "SanctumWyrmkin",
+    cmd = "SanctumWyrmkin",
 
-	wyrmkinsvenom_cmd = "wyrmkinsvenom",
-	wyrmkinsvenom_name = "Wyrmkins Venom Alert",
-	wyrmkinsvenom_desc = "Warn for Wyrmkins Venom",
+    wyrmkinsvenom_cmd = "wyrmkinsvenom",
+    wyrmkinsvenom_name = "龙族毒液警报",
+    wyrmkinsvenom_desc = "龙族毒液出现时进行警告",
 
-	trigger_wyrmkinsVenomYou = "You are afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_wyrmkinsVenomFade = "Wyrmkins Venom fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
-	trigger_wyrmkinsVenomOther = "(.+) is afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_wyrmkinsVenomYou = "You are afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_wyrmkinsVenomFade = "Wyrmkins Venom fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
+    trigger_wyrmkinsVenomOther = "(.+) is afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    bar_wyrmkinsVenom = " 毒液",
+    
+    ["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你已击败了%s！",
 	
-	bar_wyrmkinsVenom = " Venom",
-	
-	["You have slain %s!"] = true,
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "SanctumWyrmkin",
+
+    wyrmkinsvenom_cmd = "wyrmkinsvenom",
+    wyrmkinsvenom_name = "龙族毒液警报",
+    wyrmkinsvenom_desc = "龙族毒液出现时进行警告",
+
+    trigger_wyrmkinsVenomYou = "You are afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_wyrmkinsVenomFade = "Wyrmkins Venom fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
+    trigger_wyrmkinsVenomOther = "(.+) is afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    bar_wyrmkinsVenom = " 毒液",
+    
+    ["You have slain %s!"] = "你已击败了%s！",
 	
 } end )
 

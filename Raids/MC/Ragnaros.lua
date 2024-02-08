@@ -55,55 +55,56 @@ local phase = nil
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	knockback_trigger = "^TASTE",
-	submerge_trigger = "^COME FORTH,",
-	submerge_trigger2 = "^YOU CANNOT DEFEAT THE LIVING FLAME,",
-	engage_trigger = "^NOW FOR YOU",
-	engage_soon_trigger1 = "Imprudent whelps!",
-	engage_soon_trigger2 = "TOO SOON! YOU HAVE AWAKENED ME TOO SOON",
-	engage_soon_trigger3 = "YOU ALLOWED THESE INSECTS",
-	hammer_trigger = "^BY FIRE BE PURGED!",
+    knockback_trigger = "^TASTE",
+    submerge_trigger = "^COME FORTH,",
+    submerge_trigger2 = "^YOU CANNOT DEFEAT THE LIVING FLAME,",
+    engage_trigger = "^NOW FOR YOU",
+    engage_soon_trigger1 = "Imprudent whelps!",
+    engage_soon_trigger2 = "TOO SOON! YOU HAVE AWAKENED ME TOO SOON",
+    engage_soon_trigger3 = "YOU ALLOWED THESE INSECTS",
+    hammer_trigger = "^BY FIRE BE PURGED!",
 
-	knockback_message = "Knockback!",
-	knockback_soon_message = "Knockback soon!",
-	submerge_message = "Ragnaros submerged. Incoming Sons of Flame!",
-	emerge_soon_message = "15 sec until Ragnaros emerges!",
-	emerge_message = "Ragnaros emerged, 3 minutes until submerge!",
-	submerge_60sec_message = "60 sec to submerge!",
-	submerge_30sec_message = "30 sec to submerge!",
-	submerge_10sec_message = "10 sec to submerge!",
-	submerge_5sec_message = "5 sec to submerge!",
+    knockback_message = "击退！",
+    knockback_soon_message = "即将击退！",
+    submerge_message = "拉格纳罗斯已下潜。烈焰之子来临！",
+    emerge_soon_message = "15秒后拉格纳罗斯将浮现！",
+    emerge_message = "拉格纳罗斯已浮现，3分钟后再次下潜！",
+    submerge_60sec_message = "下潜60秒！",
+    submerge_30sec_message = "下潜30秒！",
+    submerge_10sec_message = "下潜10秒！",
+    submerge_5sec_message = "下潜5秒！",
 
-	knockback_bar = "AoE knockback",
-	emerge_bar = "Ragnaros emerge",
-	submerge_bar = "Ragnaros submerge",
+    knockback_bar = "AoE击退",
+    emerge_bar = "拉格纳罗斯浮现",
+    submerge_bar = "拉格纳罗斯下潜",
 
-	sonofflame = "Son of Flame",
-	sonsdeadwarn = "%d/8 Sons of Flame dead!",
+    sonofflame = "Son of Flame",
+    sonsdeadwarn = "%d/8 烈焰之子死亡！",
 
-	cmd = "Ragnaros",
+    cmd = "Ragnaros",
 
-	start_cmd = "start",
-	start_name = "Start",
-	start_desc = "Starts a bar for estimating the beginning of the fight.",
+    start_cmd = "start",
+    start_name = "开始",
+    start_desc = "开始一个计时条以预估战斗开始时间。",
 
-	emerge_cmd = "emerge",
-	emerge_name = "Emerge alert",
-	emerge_desc = "Warn for Ragnaros Emerge",
+    emerge_cmd = "emerge",
+    emerge_name = "浮现警报",
+    emerge_desc = "拉格纳罗斯浮现时进行警告",
 
-	adds_cmd = "adds",
-	adds_name = "Son of Flame dies",
-	adds_desc = "Warn when a son dies",
+    adds_cmd = "adds",
+    adds_name = "烈焰之子死亡",
+    adds_desc = "烈焰之子死亡时进行警告",
 
-	submerge_cmd = "submerge",
-	submerge_name = "Submerge alert",
-	submerge_desc = "Warn for Ragnaros Submerge",
+    submerge_cmd = "submerge",
+    submerge_name = "下潜警报",
+    submerge_desc = "拉格纳罗斯下潜时进行警告",
 
-	aoeknock_cmd = "aoeknock",
-	aoeknock_name = "Knockback alert",
-	aoeknock_desc = "Warn for Wrath of Ragnaros knockback",
+    aoeknock_cmd = "aoeknock",
+    aoeknock_name = "击退警报",
+    aoeknock_desc = "拉格纳罗斯之怒击退时进行警告",
 
-	["Combat"] = true,
+    ["Combat"] = true,
+    ["Combat"] = "战斗",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -205,6 +206,60 @@ L:RegisterTranslations("deDE", function() return {
 	aoeknock_desc = "Warnen, wenn Zorn des Ragnaros zurückstö\195\159t",
 
 	["Combat"] = "Kampf beginnt",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    knockback_trigger = "^TASTE",
+    submerge_trigger = "^COME FORTH,",
+    submerge_trigger2 = "^YOU CANNOT DEFEAT THE LIVING FLAME,",
+    engage_trigger = "^NOW FOR YOU",
+    engage_soon_trigger1 = "Imprudent whelps!",
+    engage_soon_trigger2 = "TOO SOON! YOU HAVE AWAKENED ME TOO SOON",
+    engage_soon_trigger3 = "YOU ALLOWED THESE INSECTS",
+    hammer_trigger = "^BY FIRE BE PURGED!",
+
+    knockback_message = "击退！",
+    knockback_soon_message = "即将击退！",
+    submerge_message = "拉格纳罗斯已下潜。烈焰之子来临！",
+    emerge_soon_message = "15秒后拉格纳罗斯将浮现！",
+    emerge_message = "拉格纳罗斯已浮现，3分钟后再次下潜！",
+    submerge_60sec_message = "下潜60秒！",
+    submerge_30sec_message = "下潜30秒！",
+    submerge_10sec_message = "下潜10秒！",
+    submerge_5sec_message = "下潜5秒！",
+
+    knockback_bar = "AoE击退",
+    emerge_bar = "拉格纳罗斯浮现",
+    submerge_bar = "拉格纳罗斯下潜",
+
+    sonofflame = "Son of Flame",
+    sonsdeadwarn = "%d/8 烈焰之子死亡！",
+
+    cmd = "Ragnaros",
+
+    start_cmd = "start",
+    start_name = "开始",
+    start_desc = "开始一个计时条以预估战斗开始时间。",
+
+    emerge_cmd = "emerge",
+    emerge_name = "浮现警报",
+    emerge_desc = "拉格纳罗斯浮现时进行警告",
+
+    adds_cmd = "adds",
+    adds_name = "烈焰之子死亡",
+    adds_desc = "烈焰之子死亡时进行警告",
+
+    submerge_cmd = "submerge",
+    submerge_name = "下潜警报",
+    submerge_desc = "拉格纳罗斯下潜时进行警告",
+
+    aoeknock_cmd = "aoeknock",
+    aoeknock_name = "击退警报",
+    aoeknock_desc = "拉格纳罗斯之怒击退时进行警告",
+
+    ["Combat"] = "战斗",
 } end)
 
 local lastKnockback = nil

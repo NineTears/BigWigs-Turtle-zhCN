@@ -27,20 +27,20 @@ local earthquakeon = nil
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	corerager_name = "Core Rager",
-	earthquakesoonwarn = "Earthquake soon",
-	golemaggenrage = "Golemagg the Incinerator gains Enrage",
-	enragewarn = "Boss is enraged!",
+    corerager_name = "Core Rager",
+    earthquakesoonwarn = "即将地震",
+    golemaggenrage = "Golemagg the Incinerator gains Enrage",
+    enragewarn = "Boss已激怒！",
 
-	cmd = "Golemagg",
+    cmd = "Golemagg",
 
-	enraged_cmd = "enraged",
-	enraged_name = "Announce boss Enrage",
-	enraged_desc = "Lets you know when boss hits harder",
+    enraged_cmd = "enraged",
+    enraged_name = "通报Boss激怒",
+    enraged_desc = "当Boss攻击变得更猛烈时提醒你",
 
-	earthquake_cmd = "earthquake",
-	earthquake_name = "Earthquake announce",
-	earthquake_desc = "Announces when it's time for melees to back off",
+    earthquake_cmd = "earthquake",
+    earthquake_name = "地震通报",
+    earthquake_desc = "当近战需要后撤时通报",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -77,6 +77,24 @@ L:RegisterTranslations("deDE", function() return {
 	earthquake_desc = "Sagt an, wenn es f\195\188r die Melees zeit ist, weg zu gehen",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    corerager_name = "Core Rager",
+    earthquakesoonwarn = "即将地震",
+    golemaggenrage = "Golemagg the Incinerator gains Enrage",
+    enragewarn = "Boss已激怒！",
+
+    cmd = "Golemagg",
+
+    enraged_cmd = "enraged",
+    enraged_name = "通报Boss激怒",
+    enraged_desc = "当Boss攻击变得更猛烈时提醒你",
+
+    earthquake_cmd = "earthquake",
+    earthquake_name = "地震通报",
+    earthquake_desc = "当近战需要后撤时通报",
+} end)
 
 ------------------------------
 --      Initialization      --

@@ -30,31 +30,31 @@ local adds = 0
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	firesworn_name = "Firesworn",
-	triggeradddead8 = "Garr gains Enrage(.+)8",
-	triggeradddead7 = "Garr gains Enrage(.+)7",
-	triggeradddead6 = "Garr gains Enrage(.+)6",
-	triggeradddead5 = "Garr gains Enrage(.+)5",
-	triggeradddead4 = "Garr gains Enrage(.+)4",
-	triggeradddead3 = "Garr gains Enrage(.+)3",
-	triggeradddead2 = "Garr gains Enrage(.+)2",
-	triggeradddead1 = "Garr gains Enrage.",
+    firesworn_name = "Firesworn",
+    triggeradddead8 = "Garr gains Enrage(.+)8",
+    triggeradddead7 = "Garr gains Enrage(.+)7",
+    triggeradddead6 = "Garr gains Enrage(.+)6",
+    triggeradddead5 = "Garr gains Enrage(.+)5",
+    triggeradddead4 = "Garr gains Enrage(.+)4",
+    triggeradddead3 = "Garr gains Enrage(.+)3",
+    triggeradddead2 = "Garr gains Enrage(.+)2",
+    triggeradddead1 = "Garr gains Enrage.",
 
-	counterbarMsg = "Firesworns dead",
-	addmsg1 = "1/8 Firesworns dead!",
-	addmsg2 = "2/8 Firesworns dead!",
-	addmsg3 = "3/8 Firesworns dead!",
-	addmsg4 = "4/8 Firesworns dead!",
-	addmsg5 = "5/8 Firesworns dead!",
-	addmsg6 = "6/8 Firesworns dead!",
-	addmsg7 = "7/8 Firesworns dead!",
-	addmsg8 = "8/8 Firesworns dead!",
+    counterbarMsg = "火誓者死亡计数",
+    addmsg1 = "1/8火誓者死亡！",
+    addmsg2 = "2/8火誓者死亡！",
+    addmsg3 = "3/8火誓者死亡！",
+    addmsg4 = "4/8火誓者死亡！",
+    addmsg5 = "5/8火誓者死亡！",
+    addmsg6 = "6/8火誓者死亡！",
+    addmsg7 = "7/8火誓者死亡！",
+    addmsg8 = "8/8火誓者死亡！",
 
-	cmd = "Garr",
+    cmd = "Garr",
 
-	adds_cmd = "adds",
-	adds_name = "Dead adds counter",
-	adds_desc = "Announces dead Firesworns",
+    adds_cmd = "adds",
+    adds_name = "死亡火誓者计数器",
+    adds_desc = "通报火誓者死亡",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -113,6 +113,35 @@ L:RegisterTranslations("deDE", function() return {
 	adds_desc = "Verk\195\188ndet Feueranbeter Tod",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    firesworn_name = "Firesworn",
+    triggeradddead8 = "Garr gains Enrage(.+)8",
+    triggeradddead7 = "Garr gains Enrage(.+)7",
+    triggeradddead6 = "Garr gains Enrage(.+)6",
+    triggeradddead5 = "Garr gains Enrage(.+)5",
+    triggeradddead4 = "Garr gains Enrage(.+)4",
+    triggeradddead3 = "Garr gains Enrage(.+)3",
+    triggeradddead2 = "Garr gains Enrage(.+)2",
+    triggeradddead1 = "Garr gains Enrage.",
+
+    counterbarMsg = "火誓者死亡计数",
+    addmsg1 = "1/8火誓者死亡！",
+    addmsg2 = "2/8火誓者死亡！",
+    addmsg3 = "3/8火誓者死亡！",
+    addmsg4 = "4/8火誓者死亡！",
+    addmsg5 = "5/8火誓者死亡！",
+    addmsg6 = "6/8火誓者死亡！",
+    addmsg7 = "7/8火誓者死亡！",
+    addmsg8 = "8/8火誓者死亡！",
+
+    cmd = "Garr",
+
+    adds_cmd = "adds",
+    adds_name = "死亡火誓者计数器",
+    adds_desc = "通报火誓者死亡",
+} end)
 
 ------------------------------
 --      Initialization      --

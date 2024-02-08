@@ -10,34 +10,67 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Chronar",
+    cmd = "Chronar",
 
-	reflect_cmd = "reflect",
-	reflect_name = "Spell Reflect Alert",
-	reflect_desc = "Warn for Spell Reflect",
-	
-	ms_cmd = "ms",
-	ms_name = "Mortal Strike Alert",
-	ms_desc = "Warns for Mortal Strike",
-	
-	enrage_cmd = "enrage",
-	enrage_name = "Enrage Alert",
-	enrage_desc = "Warns for Enrage",
-	
-	trigger_engage = "It seems we have visitors. You should not have come here mortals, now I will ensure that you will not leave.",--CHAT_MSG_MONSTER_YELL
-	
-	trigger_reflect = "Chronar gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_reflectFade = "Reflection fades from Chronar.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_reflect = "Spell Reflect",
-	msg_reflect = "Chronar is reflecting Spells!",
-	
-	trigger_msOther = "(.+) is afflicted by Mortal Strike.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_msYou = "You are afflicted by Mortal Strike.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_msFade = "Mortal Strike fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_ms = " Mortal Strike",
-	
-	trigger_enrage = "Chronar gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
-	msg_enrage = "Enrage!",
+    reflect_cmd = "reflect",
+    reflect_name = "法术反射警报",
+    reflect_desc = "法术反射出现时进行警告",
+    
+    ms_cmd = "ms",
+    ms_name = "致死打击警报",
+    ms_desc = "致死打击出现时进行警告",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+    
+    trigger_engage = "It seems we have visitors. You should not have come here mortals, now I will ensure that you will not leave.",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_reflect = "Chronar gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_reflectFade = "Reflection fades from Chronar.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_reflect = "法术反射",
+    msg_reflect = "克罗纳尔正在反射法术！",
+    
+    trigger_msOther = "(.+) is afflicted by Mortal Strike.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_msYou = "You are afflicted by Mortal Strike.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_msFade = "Mortal Strike fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_ms = "致死打击",
+    
+    trigger_enrage = "Chronar gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
+    msg_enrage = "激怒！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Chronar",
+
+    reflect_cmd = "reflect",
+    reflect_name = "法术反射警报",
+    reflect_desc = "法术反射出现时进行警告",
+    
+    ms_cmd = "ms",
+    ms_name = "致死打击警报",
+    ms_desc = "致死打击出现时进行警告",
+    
+    enrage_cmd = "enrage",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
+    
+    trigger_engage = "It seems we have visitors. You should not have come here mortals, now I will ensure that you will not leave.",--CHAT_MSG_MONSTER_YELL
+    
+    trigger_reflect = "Chronar gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_reflectFade = "Reflection fades from Chronar.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_reflect = "法术反射",
+    msg_reflect = "克罗纳尔正在反射法术！",
+    
+    trigger_msOther = "(.+) is afflicted by Mortal Strike.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_msYou = "You are afflicted by Mortal Strike.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_msFade = "Mortal Strike fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_ms = "致死打击",
+    
+    trigger_enrage = "Chronar gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
+    msg_enrage = "激怒！",
 } end )
 
 local timer = {

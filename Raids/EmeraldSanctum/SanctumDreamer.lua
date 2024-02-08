@@ -11,20 +11,41 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "SanctumDreamer",
+    cmd = "SanctumDreamer",
 
-	dreamstate_cmd = "dreamstate",
-	dreamstate_name = "Dreamstate Alert",
-	dreamstate_desc = "Warn for Dreamstate",
+    dreamstate_cmd = "dreamstate",
+    dreamstate_name = "梦境状态警报",
+    dreamstate_desc = "梦境状态出现时进行警告",
 
-	trigger_sleepYou = "You are afflicted by Dreamstate.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_sleepFade = "Dreamstate fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
-	trigger_sleepOther = "(.+) is afflicted by Dreamstate.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_sleepYou = "You are afflicted by Dreamstate.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_sleepFade = "Dreamstate fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
+    trigger_sleepOther = "(.+) is afflicted by Dreamstate.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    --bar_dreamstate = " is Sleeping",
+    bar_dreamstate = "沉睡的人",
+    
+    ["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你已击败了%s！",
 	
-	--bar_dreamstate = " is Sleeping",
-	bar_dreamstate = "People Sleeping",
-	
-	["You have slain %s!"] = true,
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "SanctumDreamer",
+
+    dreamstate_cmd = "dreamstate",
+    dreamstate_name = "梦境状态警报",
+    dreamstate_desc = "梦境状态出现时进行警告",
+
+    trigger_sleepYou = "You are afflicted by Dreamstate.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_sleepFade = "Dreamstate fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
+    trigger_sleepOther = "(.+) is afflicted by Dreamstate.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    --bar_dreamstate = " is Sleeping",
+    bar_dreamstate = "沉睡的人",
+    
+    ["You have slain %s!"] = "你已击败了%s！",
 	
 } end )
 

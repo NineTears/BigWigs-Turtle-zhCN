@@ -50,10 +50,12 @@ L:RegisterTranslations("enUS", function() return {
 	["%s disabled."] = "%s 禁用.",
 	["%s icon is now %s."] = "%s 图标现在是 %s.",
 	["Show it again with /bw plugin minimap."] = "再次显示 /bw 小地图插件.",
-	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A权限",
+	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要助理或更高权限",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 
 	--中文端汉化，wind
 	["|cff00ff00Module running|r"] = "|cff00ff00模块运行|r",
@@ -73,7 +75,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["%s disabled."] = "%s 禁用.",
 	["%s icon is now %s."] = "%s 图标现在是 %s.",
 	["Show it again with /bw plugin minimap."] = "再次显示 /bw 小地图插件.",
-	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要是团长或有A权限",
+	["You need to be an assistant or raid leader to use this function."] = "使用此功能需要助理或更高权限",
 } end)
 
 L:RegisterTranslations("esES", function() return {

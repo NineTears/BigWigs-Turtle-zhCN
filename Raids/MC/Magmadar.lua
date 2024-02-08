@@ -41,30 +41,30 @@ local _, playerClass = UnitClass("player")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	-- Chat message triggers
-	frenzy_trigger = "goes into a killing frenzy!",
-	panic_trigger = "afflicted by Panic.",
-	panic_trigger2 = "Panic fail(.+) immune.",
-	panic_trigger3 = "Magmadar's Panic was resisted",
-	frenzy_bar = "Frenzy",
-	frenzyfade_trigger = "Frenzy fades from Magmadar",
+    -- Chat message triggers
+    frenzy_trigger = "goes into a killing frenzy!",
+    panic_trigger = "afflicted by Panic.",
+    panic_trigger2 = "Panic fail(.+) immune.",
+    panic_trigger3 = "Magmadar's Panic was resisted",
+    frenzy_bar = "狂乱",
+    frenzyfade_trigger = "Frenzy fades from Magmadar",
 
-	-- Warnings and bar texts
-	frenzyann = "Frenzy! Tranq now!",
-	fearsoon = "Panic incoming soon!",
-	feartime = "Fear! 30 seconds until next!",
-	fearbar = "Panic",
+    -- Warnings and bar texts
+    frenzyann = "狂乱了！现在使用宁神射击！",
+    fearsoon = "即将恐慌！",
+    feartime = "恐慌！下一次恐慌30秒后！",
+    fearbar = "恐慌",
 
-	-- AceConsole strings
-	cmd = "Magmadar",
+    -- AceConsole strings
+    cmd = "Magmadar",
 
-	panic_cmd = "panic",
-	panic_name = "Warn for Panic",
-	panic_desc = "Warn when Magmadar casts Panic",
+    panic_cmd = "panic",
+    panic_name = "恐慌警告",
+    panic_desc = "玛格曼达施放恐慌时进行警告",
 
-	frenzy_cmd = "frenzy",
-	frenzy_name = "Frenzy alert",
-	frenzy_desc = "Warn when Magmadar goes into a frenzy",
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱警报",
+    frenzy_desc = "玛格曼达进入狂乱时进行警告",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -114,6 +114,35 @@ L:RegisterTranslations("deDE", function() return {
 	--frenzy_cmd = "frenzy",
 	frenzy_name = "Alarm für Raserei",
 	frenzy_desc = "Warnung, wenn Magmadar in Raserei gerät.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    -- Chat message triggers
+    frenzy_trigger = "goes into a killing frenzy!",
+    panic_trigger = "afflicted by Panic.",
+    panic_trigger2 = "Panic fail(.+) immune.",
+    panic_trigger3 = "Magmadar's Panic was resisted",
+    frenzy_bar = "狂乱",
+    frenzyfade_trigger = "Frenzy fades from Magmadar",
+
+    -- Warnings and bar texts
+    frenzyann = "狂乱了！现在使用宁神射击！",
+    fearsoon = "即将恐慌！",
+    feartime = "恐慌！下一次恐慌30秒后！",
+    fearbar = "恐慌",
+
+    -- AceConsole strings
+    cmd = "Magmadar",
+
+    panic_cmd = "panic",
+    panic_name = "恐慌警告",
+    panic_desc = "玛格曼达施放恐慌时进行警告",
+
+    frenzy_cmd = "frenzy",
+    frenzy_name = "狂乱警报",
+    frenzy_desc = "玛格曼达进入狂乱时进行警告",
 } end)
 
 ------------------------------

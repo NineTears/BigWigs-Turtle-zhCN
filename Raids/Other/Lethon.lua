@@ -34,22 +34,22 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Lethon",
+    cmd = "Lethon",
 
-	noxious_cmd = "noxious",
-	noxious_name = "Noxious breath alert",
-	noxious_desc = "Warn for noxious breath",
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息出现时进行警告",
 
-	engage_trigger = "I can sense the SHADOW on your hearts. There can be no rest for the wicked!",
-	breath_trigger = "afflicted by Noxious Breath",
-	shadow_trigger = "Your wicked souls shall feed my power!",
+    engage_trigger = "I can sense the SHADOW on your hearts. There can be no rest for the wicked!",
+    breath_trigger = "afflicted by Noxious Breath",
+    shadow_trigger = "Your wicked souls shall feed my power!",
 
-	shadow_warn = "Shadows spawned!",
-	breathSoon_warn = "Noxious Breath soon!",
-	breath_warn = "Noxious Breath!",
+    shadow_warn = "阴影出现了！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
 
 
-	breath_bar = "Noxious Breath",
+    breath_bar = "毒性吐息",
 
 } end )
 
@@ -72,6 +72,29 @@ L:RegisterTranslations("esES", function() return {
 	breath_bar = "Aliento nocivo",
 
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Lethon",
+
+    noxious_cmd = "noxious",
+    noxious_name = "毒性吐息警报",
+    noxious_desc = "毒性吐息出现时进行警告",
+
+    engage_trigger = "I can sense the SHADOW on your hearts. There can be no rest for the wicked!",
+    breath_trigger = "afflicted by Noxious Breath",
+    shadow_trigger = "Your wicked souls shall feed my power!",
+
+    shadow_warn = "阴影出现了！",
+    breathSoon_warn = "毒性吐息即将来临！",
+    breath_warn = "毒性吐息！",
+
+
+    breath_bar = "毒性吐息",
+
+} end )
+
 ------------------------------
 --      Initialization      --
 ------------------------------

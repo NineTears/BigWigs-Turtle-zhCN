@@ -7,22 +7,44 @@ module.toggleoptions = {"bigicon", "bars"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "BatRider",
+    cmd = "BatRider",
 
-	bars_cmd = "bars",
-	bars_name = "Toggle bars",
-	bars_desc = "Toggles showing bars for timers.",
-	
-	bigicon_cmd = "bigicon",
-	bigicon_name = "BigIcon warnings",
-	bigicon_desc = "Big icon warning on explosion",
-	
-	explodingTrigger = "Gurubashi Bat Rider gets a crazed look in his eye.",
-	explodingTrigger2 = "Gurubashi Bat Rider becomes fully engulfed in flames.",
-	explodingBar = "Exploding",
-	explodingMsg = "Exploding!",
-	
-	["You have slain %s!"] = true,
+    bars_cmd = "bars",
+    bars_name = "显示计时条开关",
+    bars_desc = "切换是否显示计时条。",
+
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标警告",
+    bigicon_desc = "爆炸时的大图标警告",
+
+    explodingTrigger = "Gurubashi Bat Rider gets a crazed look in his eye.",
+    explodingTrigger2 = "Gurubashi Bat Rider becomes fully engulfed in flames.",
+    explodingBar = "即将爆炸",
+    explodingMsg = "即将爆炸！",
+
+    ["You have slain %s!"] = true,
+    ["You have slain %s!"] = "你已经击败了%s！",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "BatRider",
+
+    bars_cmd = "bars",
+    bars_name = "显示计时条开关",
+    bars_desc = "切换是否显示计时条。",
+
+    bigicon_cmd = "bigicon",
+    bigicon_name = "大图标警告",
+    bigicon_desc = "爆炸时的大图标警告",
+
+    explodingTrigger = "Gurubashi Bat Rider gets a crazed look in his eye.",
+    explodingTrigger2 = "Gurubashi Bat Rider becomes fully engulfed in flames.",
+    explodingBar = "即将爆炸",
+    explodingMsg = "即将爆炸！",
+
+    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 module.defaultDB = {

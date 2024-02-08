@@ -35,29 +35,29 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Elder-Mottled-Boar",
+    cmd = "Elder-Mottled-Boar",
 
-	engage_cmd = "engage", -- <name>_cmd
-	engage_name = "Engage Alert", -- <name>_name
-	engage_desc = "Warn for Engage", -- <name>_desc
-	engage_msg = "Boar engaged! Be careful.",
+    engage_cmd = "engage",
+    engage_name = "开始战斗警报",
+    engage_desc = "战斗开始时进行警告",
+    engage_msg = "野猪开始战斗！小心。",
 
-	teleport_msg = "Teleport",
+    teleport_msg = "传送",
 
-	charge_cmd = "charge",
-	charge_name = "Charge Alert",
-	charge_desc = "Warn for Charge",
-	charge_trigger = "gains Boar Charge",
-	charge_msg = "Boar is charging!",
-	charge_bar = "Charge",
+    charge_cmd = "charge",
+    charge_name = "冲锋警报",
+    charge_desc = "冲锋时进行警告",
+    charge_trigger = "gains Boar Charge",
+    charge_msg = "野猪正在冲锋！",
+    charge_bar = "冲锋",
 
-	vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Elder Mottled Boar for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
-	umlaut_test = "hits you for",
+    vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Elder Mottled Boar for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
+    umlaut_test = "hits you for",
 
 
-	proximity_cmd = "proximity",
-	proximity_name = "Proximity Warning",
-	proximity_desc = "Show Proximity Warning Frame",
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
 
 } end )
 
@@ -83,6 +83,34 @@ L:RegisterTranslations("deDE", function() return {
 
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Elder-Mottled-Boar",
+
+    engage_cmd = "engage",
+    engage_name = "开始战斗警报",
+    engage_desc = "战斗开始时进行警告",
+    engage_msg = "野猪开始战斗！小心。",
+
+    teleport_msg = "传送",
+
+    charge_cmd = "charge",
+    charge_name = "冲锋警报",
+    charge_desc = "冲锋时进行警告",
+    charge_trigger = "gains Boar Charge",
+    charge_msg = "野猪正在冲锋！",
+    charge_bar = "冲锋",
+
+    vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Elder Mottled Boar for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
+    umlaut_test = "hits you for",
+
+
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
+
+} end )
 
 ------------------------------
 --      Initialization      --

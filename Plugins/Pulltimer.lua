@@ -40,14 +40,14 @@ L:RegisterTranslations("enUS", function() return {
 
 	["pulltimer"] = true,
 	["Options for Pull Timer"] = true,
-	pullstart_message = "Pull in %d sec. (Sent by %s)",
+	--[[pullstart_message = "Pull in %d sec. (Sent by %s)",
 	pullstop_message = "Pull aborted (Sent by %s)",
 	pull1_message = "Pull in 1",
 	pull2_message = "Pull in 2",
 	pull3_message = "Pull in 3",
 	pull4_message = "Pull in 4",
 	pull5_message = "Pull in 5",
-	pull0_message = "Pull!",
+	pull0_message = "Pull!",--]]
 
 	["Pull"] = true,
 	["pull"] = true,
@@ -57,7 +57,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Enable pulltimer."] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Pull Timer"] = "开怪计时",
 	
 	["pulltimer"] = "开怪计时",
@@ -73,7 +73,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	["Pull"] = "开怪",
 	["pull"] = "pull",
-	["You have to be the raid leader or an assistant"] = "需要是团长或有A权限",
+	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
 	
 	["Enable"] = "启用",
 	["Enable pulltimer."] = "启用开怪计时",
@@ -81,7 +81,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Pull Timer"] = "开怪计时",
 	
 	["pulltimer"] = "开怪计时",
@@ -97,7 +97,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	["Pull"] = "开怪",
 	["pull"] = "pull",
-	["You have to be the raid leader or an assistant"] = "需要是团长或有A权限",
+	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
 	
 	["Enable"] = "启用",
 	["Enable pulltimer."] = "启用开怪计时",

@@ -45,55 +45,55 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	curse_trigger = "afflicted by Lucifron",
-	doom_trigger = "afflicted by Impending Doom",
-	shock_trigger = "s Shadow Shock hits",
-	shock_trigger2 = "s Shadow Shock was resisted",
-	curse_trigger2 = " Lucifron(.*) Curse was resisted",
-	doom_trigger2 = "s Impending Doom was resisted",
-	curse_warn_soon = "5 seconds until Lucifron's Curse!",
-	curse_warn_now = "Lucifron's Curse - 20 seconds until next!",
-	doom_warn_soon = "5 seconds until Impending Doom!",
-	doom_warn_now = "Impending Doom - 15 seconds until next!",
-	mindcontrolyou_trigger = "You are afflicted by Dominate Mind.",
-	mindcontrolother_trigger = "(.*) is afflicted by Dominate Mind.",
-	mindcontrolyouend_trigger = "Dominate Mind fades from you.",
-	mindcontrolotherend_trigger = "Dominate Mind fades from (.*).",
-	deathyou_trigger = "You die.",
-	deathother_trigger = "(.*) dies.",
-	deadaddtrigger = "Flamewaker Protector dies",
-	add_name = "Flamewaker Protector",
+    curse_trigger = "afflicted by Lucifron",
+    doom_trigger = "afflicted by Impending Doom",
+    shock_trigger = "s Shadow Shock hits",
+    shock_trigger2 = "s Shadow Shock was resisted",
+    curse_trigger2 = " Lucifron(.*) Curse was resisted",
+    doom_trigger2 = "s Impending Doom was resisted",
+    curse_warn_soon = "鲁西弗隆的诅咒还有5秒到来！",
+    curse_warn_now = "鲁西弗隆的诅咒 - 下一次诅咒20秒后出现！",
+    doom_warn_soon = "厄运降临还有5秒到来！",
+    doom_warn_now = "厄运降临 - 下一次厄运降临15秒后出现！",
+    mindcontrolyou_trigger = "You are afflicted by Dominate Mind.",
+    mindcontrolother_trigger = "(.*) is afflicted by Dominate Mind.",
+    mindcontrolyouend_trigger = "Dominate Mind fades from you.",
+    mindcontrolotherend_trigger = "Dominate Mind fades from (.*).",
+    deathyou_trigger = "You die.",
+    deathother_trigger = "(.*) dies.",
+    deadaddtrigger = "Flamewaker Protector dies",
+    add_name = "Flamewaker Protector",
 
-	mindcontrol_message = "%s is mindcontrolled!",
-	mindcontrol_message_you = "You are mindcontrolled!",
-	mindcontrol_bar = "MC: %s",
-	addmsg = "%d/2 Flamewaker Protectors dead!",
+    mindcontrol_message = "%s 被精神控制了！",
+    mindcontrol_message_you = "你被精神控制了！",
+    mindcontrol_bar = "精神控制：%s",
+    addmsg = "%d/2 烈焰行者保卫者死亡！",
 
-	curse_bar = "Lucifron's Curse",
-	doom_bar = "Impending Doom",
-	shock_bar = "Shadow Shock",
+    curse_bar = "鲁西弗隆的诅咒",
+    doom_bar = "厄运降临",
+    shock_bar = "暗影震击",
 
-	cmd = "Lucifron",
+    cmd = "Lucifron",
 
-	adds_cmd = "adds",
-	adds_name = "Dead adds counter",
-	adds_desc = "Announces dead Flamewaker Protectors",
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报烈焰行者保卫者死亡",
 
-	mc_cmd = "mc",
-	mc_name = "Dominate Mind",
-	mc_desc = "Alert when someone is mind controlled.",
+    mc_cmd = "mc",
+    mc_name = "统御意志",
+    mc_desc = "当有人被精神控制时进行警告",
 
-	curse_cmd = "curse",
-	curse_name = "Lucifron's Curse alert",
-	curse_desc = "Warn for Lucifron's Curse",
+    curse_cmd = "curse",
+    curse_name = "鲁西弗隆的诅咒警报",
+    curse_desc = "鲁西弗隆的诅咒出现时进行警告",
 
-	doom_cmd = "doom",
-	doom_name = "Impending Doom alert",
-	doom_desc = "Warn for Impending Doom",
+    doom_cmd = "doom",
+    doom_name = "厄运降临警报",
+    doom_desc = "厄运降临出现时进行警告",
 
-	shock_cmd = "shock",
-	shock_name = "Shadow Shock alert",
-	shock_desc  = "Warn for Shadow Shock",
+    shock_cmd = "shock",
+    shock_name = "暗影震击警报",
+    shock_desc  = "暗影震击出现时进行警告",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -201,6 +201,59 @@ L:RegisterTranslations("deDE", function() return {
 	shock_desc  = "Warnen vor Schattenschock",
 } end)
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    curse_trigger = "afflicted by Lucifron",
+    doom_trigger = "afflicted by Impending Doom",
+    shock_trigger = "s Shadow Shock hits",
+    shock_trigger2 = "s Shadow Shock was resisted",
+    curse_trigger2 = " Lucifron(.*) Curse was resisted",
+    doom_trigger2 = "s Impending Doom was resisted",
+    curse_warn_soon = "鲁西弗隆的诅咒还有5秒到来！",
+    curse_warn_now = "鲁西弗隆的诅咒 - 下一次诅咒20秒后出现！",
+    doom_warn_soon = "厄运降临还有5秒到来！",
+    doom_warn_now = "厄运降临 - 下一次厄运降临15秒后出现！",
+    mindcontrolyou_trigger = "You are afflicted by Dominate Mind.",
+    mindcontrolother_trigger = "(.*) is afflicted by Dominate Mind.",
+    mindcontrolyouend_trigger = "Dominate Mind fades from you.",
+    mindcontrolotherend_trigger = "Dominate Mind fades from (.*).",
+    deathyou_trigger = "You die.",
+    deathother_trigger = "(.*) dies.",
+    deadaddtrigger = "Flamewaker Protector dies",
+    add_name = "Flamewaker Protector",
+
+    mindcontrol_message = "%s 被精神控制了！",
+    mindcontrol_message_you = "你被精神控制了！",
+    mindcontrol_bar = "精神控制：%s",
+    addmsg = "%d/2 烈焰行者保卫者死亡！",
+
+    curse_bar = "鲁西弗隆的诅咒",
+    doom_bar = "厄运降临",
+    shock_bar = "暗影震击",
+
+    cmd = "Lucifron",
+
+    adds_cmd = "adds",
+    adds_name = "死亡增援计数器",
+    adds_desc = "通报烈焰行者保卫者死亡",
+
+    mc_cmd = "mc",
+    mc_name = "统御意志",
+    mc_desc = "当有人被精神控制时进行警告",
+
+    curse_cmd = "curse",
+    curse_name = "鲁西弗隆的诅咒警报",
+    curse_desc = "鲁西弗隆的诅咒出现时进行警告",
+
+    doom_cmd = "doom",
+    doom_name = "厄运降临警报",
+    doom_desc = "厄运降临出现时进行警告",
+
+    shock_cmd = "shock",
+    shock_name = "暗影震击警报",
+    shock_desc  = "暗影震击出现时进行警告",
+} end)
 
 ------------------------------
 --      Initialization      --

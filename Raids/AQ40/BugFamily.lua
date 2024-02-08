@@ -26,7 +26,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	announce_cmd = "announce",
 	announce_name = "毒云",
-	announce_desc = "密语站在毒云中的玩家。\n\n（需要是团长或有A权限）",
+	announce_desc = "密语站在毒云中的玩家。\n\n（需要助理或更高权限）",
 
 	deathspecials_cmd = "deathspecials",
 	deathspecials_name = "Boss死亡特殊技能",
@@ -71,6 +71,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
 	cmd = "BugFamily",
 	
 	panic_cmd = "panic",
@@ -87,7 +89,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	announce_cmd = "announce",
 	announce_name = "毒云",
-	announce_desc = "密语站在毒云中的玩家。\n\n（需要是团长或有A权限）",
+	announce_desc = "密语站在毒云中的玩家。\n\n（需要助理或更高权限）",
 
 	deathspecials_cmd = "deathspecials",
 	deathspecials_name = "Boss死亡特殊技能",

@@ -29,27 +29,27 @@ local syncName = {
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Azuregos",
+    cmd = "Azuregos",
 
-	teleport_cmd = "teleport",
-	teleport_name = "Teleport Alert",
-	teleport_desc = "Warn for teleport",
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送时进行警告",
 
-	shield_cmd = "shield",
-	shield_name = "Shield Alert",
-	shield_desc = "Warn for shield",
+    shield_cmd = "shield",
+    shield_name = "护盾警报",
+    shield_desc = "护盾出现时进行警告",
 
-	teleport_trigger = "Come, little ones",
-	shieldDown_trigger = "^Reflection fades from Azuregos",
-	shieldUp_trigger = "^Azuregos gains Reflection",
+    teleport_trigger = "Come, little ones",
+    shieldDown_trigger = "^Reflection fades from Azuregos",
+    shieldUp_trigger = "^Azuregos gains Reflection",
 
-	teleport_warn = "Teleport!",
-	shieldDown_warn = "Magic Shield down!",
-	shieldUp_warn = "Magic Shield UP!",
-	teleport_bar = "Teleport",
-	teleportSoon_warn = "Teleport soon",
+    teleport_warn = "传送！",
+    shieldDown_warn = "魔法护盾消失！",
+    shieldUp_warn = "魔法护盾启动！",
+    teleport_bar = "传送",
+    teleportSoon_warn = "即将传送",
 
-	shield_bar = "Magic Shield",
+    shield_bar = "魔法护盾",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -75,6 +75,33 @@ L:RegisterTranslations("esES", function() return {
 
 	shield_bar = "Escudo magia",
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Azuregos",
+
+    teleport_cmd = "teleport",
+    teleport_name = "传送警报",
+    teleport_desc = "传送时进行警告",
+
+    shield_cmd = "shield",
+    shield_name = "护盾警报",
+    shield_desc = "护盾出现时进行警告",
+
+    teleport_trigger = "Come, little ones",
+    shieldDown_trigger = "^Reflection fades from Azuregos",
+    shieldUp_trigger = "^Azuregos gains Reflection",
+
+    teleport_warn = "传送！",
+    shieldDown_warn = "魔法护盾消失！",
+    shieldUp_warn = "魔法护盾启动！",
+    teleport_bar = "传送",
+    teleportSoon_warn = "即将传送",
+
+    shield_bar = "魔法护盾",
+} end )
+
 ------------------------------
 --      Initialization      --
 ------------------------------

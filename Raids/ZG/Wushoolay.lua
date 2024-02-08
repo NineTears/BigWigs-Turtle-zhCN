@@ -11,21 +11,21 @@ local module, L = BigWigs:ModuleDeclaration("Wushoolay", "Zul'Gurub")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Wushoolay",
+    cmd = "Wushoolay",
 
-	chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
-	chainlightning_bar = "Chain Lightning",
-	chainlightning_message = "Chain Lightning! Interrupt it!",
-	lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
-	lightningcloud_message = "Get out of the Lightning Cloud!",
+    chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
+    chainlightning_bar = "闪电链",
+    chainlightning_message = "闪电链！打断它！",
+    lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
+    lightningcloud_message = "离开闪电云！",
 
-	chainlightning_cmd = "chainlightning",
-	chainlightning_name = "Chain Lightning alert",
-	chainlightning_desc = "Warn when the boss is casting Chain Lightning.",
+    chainlightning_cmd = "chainlightning",
+    chainlightning_name = "闪电链警报",
+    chainlightning_desc = "当Boss施放闪电链时进行警告。",
 
-	lightningcloud_cmd = "lightningcloud",
-	lightningcloud_name = "Lightning Cloud warning",
-	lightningcloud_desc = "Warns when you stand in the Lightning Cloud.",
+    lightningcloud_cmd = "lightningcloud",
+    lightningcloud_name = "闪电云警告",
+    lightningcloud_desc = "当你站在闪电云中时进行警告。",
 } end )
 
 L:RegisterTranslations("deDE", function() return {
@@ -63,6 +63,27 @@ L:RegisterTranslations("esES", function() return {
 	lightningcloud_name = "Alerta de Nube de relámpagos",
 	lightningcloud_desc = "Avisa cuando estás en el Nube de relámpagos.",
 } end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Wushoolay",
+
+    chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
+    chainlightning_bar = "闪电链",
+    chainlightning_message = "闪电链！打断它！",
+    lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
+    lightningcloud_message = "离开闪电云！",
+
+    chainlightning_cmd = "chainlightning",
+    chainlightning_name = "闪电链警报",
+    chainlightning_desc = "当Boss施放闪电链时进行警告。",
+
+    lightningcloud_cmd = "lightningcloud",
+    lightningcloud_name = "闪电云警告",
+    lightningcloud_desc = "当你站在闪电云中时进行警告。",
+} end )
+
 ---------------------------------
 --      	Variables 		   --
 ---------------------------------

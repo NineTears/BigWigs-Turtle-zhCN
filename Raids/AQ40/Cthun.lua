@@ -8,183 +8,177 @@ module.enabletrigger = {eyeofcthun, cthun}
 module.toggleoptions = {"icon", "rape", -1, "tentacle", "glare", "group", -1, "giant", "acid", "weakened", -1, "proximity", "stomach", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Cthun",
+    cmd = "Cthun",
+    
+    icon_cmd = "icon",
+    icon_name = "眼棱目标标记",
+    icon_desc = "在眼棱目标上标记一个图标",
+    
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
 
-	icon_cmd = "icon",
-	icon_name = "目标使用眼棱标记",
-	icon_desc = "在眼棱目标上放置图标警告",
+    stomach_cmd = "stomach",
+    stomach_name = "胃中的玩家",
+    stomach_desc = "显示在胃中的玩家，而不是过于接近的玩家",
+    
+    tentacle_cmd = "tentacle",
+    tentacle_name = "触须警报",
+    tentacle_desc = "触须出现时进行警告",
+    
+    glare_cmd = "glare",
+    glare_name = "黑暗凝视警报",
+    glare_desc = "黑暗凝视出现时进行警告",
+    
+    group_cmd = "group",
+    group_name = "黑暗凝视小队警报",
+    group_desc = "小队X受到黑暗凝视时进行警报",
+    
+    giant_cmd = "giant",
+    giant_name = "巨眼警报",
+    giant_desc = "巨眼出现时进行警告",
+    
+    weakened_cmd = "weakened",
+    weakened_name = "虚弱状态警报",
+    weakened_desc = "虚弱状态出现时进行警告",
+    
+    acid_cmd = "acid",
+    acid_name = "消化酸液警报",
+    acid_desc = "当你有5层消化酸液时显示警告",
+    
+    startwarn	= "克苏恩已触发战斗！- 45秒后将出现黑暗凝视和眼棱",
+    barStartRandomBeams = "随机眼棱开始！",
 
-	proximity_cmd = "proximity",
-	proximity_name = "近距离警告",
-	proximity_desc = "显示近距离警告框",
+    eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
+    eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
+    eyebeam     = "%s受到眼棱攻击",
+    Unknown = "未知", -- Eye Beam on Unknown
+    
+    tentacle    = "触须派对 - 5秒",
+    norape      = "5秒后触须出现！",
+    barTentacle = "触须派对！",
+    barNoRape   = "触须派对！",
 
-	stomach_cmd = "stomach",
-	stomach_name = "胃里的玩家",
-	stomach_desc = "显示胃里的玩家而不是过于靠近的玩家",
+    glare       = "黑暗凝视！",
+    msgGlareEnds    = "黑暗凝视5秒后结束",
+    barGlare    = "下一次黑暗凝视！",
+    barGlareEnds = "黑暗凝视结束",
+    barGlareCasting = "正在施放黑暗凝视",
 
-	tentacle_cmd = "tentacle",
-	tentacle_name = "触手警报",
-	tentacle_desc = "警告触手来袭",
+    phase2starting  = "眼睛已死！主体即将出现！",
 
-	rape_cmd = "rape",
-	rape_name = "强奸笑话很有趣",
-	rape_desc = "有些人喜欢色情笑话。",
+    playersInStomach = "胃中的玩家",
 
-	glare_cmd = "glare",
-	glare_name = "黑暗闪耀警报",
-	glare_desc = "警告黑暗闪耀",
+    barGiant	= "巨眼触须！",
+    barGiantC	= "巨爪触须！",
+    GiantEye = "5秒后出现巨眼触须！",
+    gedownwarn	= "巨眼已击败！",
 
-	group_cmd = "group",
-	group_name = "黑暗闪耀团队警告",
-	group_desc = "警告团队受到黑暗闪耀",
+    weakenedtrigger = "is weakened!",
+    weakened    = "克苏恩虚弱45秒",
+    invulnerable2   = "5秒后派对结束",
+    invulnerable1   = "派对结束 - 克苏恩无敌",
+    barWeakened = "克苏恩变得虚弱！",
 
-	giant_cmd = "giant",
-	giant_name = "巨眼警报",
-	giant_desc = "警告巨眼来袭",
+    digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
+    msgDigestiveAcid = "5层消化酸液堆叠",
 
-	weakened_cmd = "weakened",
-	weakened_name = "虚弱状态警报",
-	weakened_desc = "警告虚弱状态",
-	
-	acid_cmd = "acid",
-	acid_name = "消化酸液警报",
-	acid_desc = "当你受到5层消化酸液效果时显示警报",
+    ["Second TentacleHP"] = "第二触须血量%d%%",
+    ["First Tentacle dead"] = "第一触须已死",
+    ["First Tentacle"] = "第一触须",
+    ["Second Tentacle"] = "第二触须",
 
-	startwarn = "克苏恩已激活！ - 45秒后施放黑暗闪耀和眼棱",
-	barStartRandomBeams = "随机眼棱开始！",
-
-	eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
-	eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
-	eyebeam = "%s遭到眼棱攻击",
-	Unknown = "未知", -- 眼棱攻击未知目标
-
-	tentacle = "触手派对 - 5秒",
-	norape = "5秒后触手到来！",
-	barTentacle = "触手派对！",
-	barNoRape = "触手派对！",
-
-	glare = "黑暗闪耀！",
-	msgGlareEnds = "黑暗闪耀将在5秒后结束",
-	barGlare = "下一次黑暗闪耀！",
-	barGlareEnds = "黑暗闪耀结束",
-	barGlareCasting = "正在施放黑暗闪耀",
-
-	phase2starting = "巨眼已击败！即将进入本体阶段！",
-
-	playersInStomach = "胃内玩家",
-
-	barGiant = "巨眼触手！",
-	barGiantC = "巨爪触手！",
-	GiantEye = "5秒后巨眼触手到来！",
-	gedownwarn = "巨眼触手已击败！",
-
-	weakenedtrigger = "is weakened!",
-	weakened = "克苏恩虚弱，持续45秒",
-	invulnerable2 = "5秒后克苏恩将再次无敌",
-	invulnerable1 = "派对结束 - 克苏恩无敌",
-	barWeakened = "克苏恩虚弱！",
-
-	digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
-	msgDigestiveAcid = "5层消化酸液",
-
-	["Second TentacleHP"] = "第二触手血量%d%%",
-	["First Tentacle dead"] = "第一触手已击败",
-	["First Tentacle"] = "第一触手",
-	["Second Tentacle"] = "第二触手",
-
-	window_bar = "机会之窗",
-	trigger_bigClawDies = "Giant Claw Tentacle dies.",
-	trigger_bigEyeDies = "Giant Eye Tentacle dies.",
+    window_bar = "机会窗口",
+    trigger_bigClawDies = "Giant Claw Tentacle dies.",
+    trigger_bigEyeDies = "Giant Eye Tentacle dies.",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Cthun",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Cthun",
+    
+    icon_cmd = "icon",
+    icon_name = "眼棱目标标记",
+    icon_desc = "在眼棱目标上标记一个图标",
+    
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框",
 
-	icon_cmd = "icon",
-	icon_name = "目标使用眼棱标记",
-	icon_desc = "在眼棱目标上放置图标警告",
+    stomach_cmd = "stomach",
+    stomach_name = "胃中的玩家",
+    stomach_desc = "显示在胃中的玩家，而不是过于接近的玩家",
+    
+    tentacle_cmd = "tentacle",
+    tentacle_name = "触须警报",
+    tentacle_desc = "触须出现时进行警告",
+    
+    glare_cmd = "glare",
+    glare_name = "黑暗凝视警报",
+    glare_desc = "黑暗凝视出现时进行警告",
+    
+    group_cmd = "group",
+    group_name = "黑暗凝视小队警报",
+    group_desc = "小队X受到黑暗凝视时进行警报",
+    
+    giant_cmd = "giant",
+    giant_name = "巨眼警报",
+    giant_desc = "巨眼出现时进行警告",
+    
+    weakened_cmd = "weakened",
+    weakened_name = "虚弱状态警报",
+    weakened_desc = "虚弱状态出现时进行警告",
+    
+    acid_cmd = "acid",
+    acid_name = "消化酸液警报",
+    acid_desc = "当你有5层消化酸液时显示警告",
+    
+    startwarn	= "克苏恩已触发战斗！- 45秒后将出现黑暗凝视和眼棱",
+    barStartRandomBeams = "随机眼棱开始！",
 
-	proximity_cmd = "proximity",
-	proximity_name = "近距离警告",
-	proximity_desc = "显示近距离警告框",
+    eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
+    eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
+    eyebeam     = "%s受到眼棱攻击",
+    Unknown = "未知", -- Eye Beam on Unknown
+    
+    tentacle    = "触须派对 - 5秒",
+    norape      = "5秒后触须出现！",
+    barTentacle = "触须派对！",
+    barNoRape   = "触须派对！",
 
-	stomach_cmd = "stomach",
-	stomach_name = "胃里的玩家",
-	stomach_desc = "显示胃里的玩家而不是过于靠近的玩家",
+    glare       = "黑暗凝视！",
+    msgGlareEnds    = "黑暗凝视5秒后结束",
+    barGlare    = "下一次黑暗凝视！",
+    barGlareEnds = "黑暗凝视结束",
+    barGlareCasting = "正在施放黑暗凝视",
 
-	tentacle_cmd = "tentacle",
-	tentacle_name = "触手警报",
-	tentacle_desc = "警告触手来袭",
+    phase2starting  = "眼睛已死！主体即将出现！",
 
-	rape_cmd = "rape",
-	rape_name = "强奸笑话很有趣",
-	rape_desc = "有些人喜欢色情笑话。",
+    playersInStomach = "胃中的玩家",
 
-	glare_cmd = "glare",
-	glare_name = "黑暗闪耀警报",
-	glare_desc = "警告黑暗闪耀",
+    barGiant	= "巨眼触须！",
+    barGiantC	= "巨爪触须！",
+    GiantEye = "5秒后出现巨眼触须！",
+    gedownwarn	= "巨眼已击败！",
 
-	group_cmd = "group",
-	group_name = "黑暗闪耀团队警告",
-	group_desc = "警告团队受到黑暗闪耀",
+    weakenedtrigger = "is weakened!",
+    weakened    = "克苏恩虚弱45秒",
+    invulnerable2   = "5秒后派对结束",
+    invulnerable1   = "派对结束 - 克苏恩无敌",
+    barWeakened = "克苏恩变得虚弱！",
 
-	giant_cmd = "giant",
-	giant_name = "巨眼警报",
-	giant_desc = "警告巨眼来袭",
+    digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
+    msgDigestiveAcid = "5层消化酸液堆叠",
 
-	weakened_cmd = "weakened",
-	weakened_name = "虚弱状态警报",
-	weakened_desc = "警告虚弱状态",
-	
-	acid_cmd = "acid",
-	acid_name = "消化酸液警报",
-	acid_desc = "当你受到5层消化酸液效果时显示警报",
+    ["Second TentacleHP"] = "第二触须血量%d%%",
+    ["First Tentacle dead"] = "第一触须已死",
+    ["First Tentacle"] = "第一触须",
+    ["Second Tentacle"] = "第二触须",
 
-	startwarn = "克苏恩已激活！ - 45秒后施放黑暗闪耀和眼棱",
-	barStartRandomBeams = "随机眼棱开始！",
-
-	eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
-	eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
-	eyebeam = "%s遭到眼棱攻击",
-	Unknown = "未知", -- 眼棱攻击未知目标
-
-	tentacle = "触手派对 - 5秒",
-	norape = "5秒后触手到来！",
-	barTentacle = "触手派对！",
-	barNoRape = "触手派对！",
-
-	glare = "黑暗闪耀！",
-	msgGlareEnds = "黑暗闪耀将在5秒后结束",
-	barGlare = "下一次黑暗闪耀！",
-	barGlareEnds = "黑暗闪耀结束",
-	barGlareCasting = "正在施放黑暗闪耀",
-
-	phase2starting = "巨眼已击败！即将进入本体阶段！",
-
-	playersInStomach = "胃内玩家",
-
-	barGiant = "巨眼触手！",
-	barGiantC = "巨爪触手！",
-	GiantEye = "5秒后巨眼触手到来！",
-	gedownwarn = "巨眼触手已击败！",
-
-	weakenedtrigger = "is weakened!",
-	weakened = "克苏恩虚弱，持续45秒",
-	invulnerable2 = "5秒后克苏恩将再次无敌",
-	invulnerable1 = "派对结束 - 克苏恩无敌",
-	barWeakened = "克苏恩虚弱！",
-
-	digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
-	msgDigestiveAcid = "5层消化酸液",
-
-	["Second TentacleHP"] = "第二触手血量%d%%",
-	["First Tentacle dead"] = "第一触手已击败",
-	["First Tentacle"] = "第一触手",
-	["Second Tentacle"] = "第二触手",
-
-	window_bar = "机会之窗",
-	trigger_bigClawDies = "Giant Claw Tentacle dies.",
-	trigger_bigEyeDies = "Giant Eye Tentacle dies.",
+    window_bar = "机会窗口",
+    trigger_bigClawDies = "Giant Claw Tentacle dies.",
+    trigger_bigEyeDies = "Giant Eye Tentacle dies.",
 } end )
 
 module.proximityCheck = function(unit) return CheckInteractDistance(unit, 2) end

@@ -56,7 +56,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Show popup warning on out of date version"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
 	["Commands for querying the raid for Big Wigs versions."] = "查询BigWigs版本的RAID命令.",
@@ -100,7 +100,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
 	["Commands for querying the raid for Big Wigs versions."] = "查询BigWigs版本的RAID命令.",

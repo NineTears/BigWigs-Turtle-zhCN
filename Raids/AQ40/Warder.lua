@@ -7,51 +7,101 @@ module.toggleoptions = {"fear", "silence", "roots", "dust", "warnings"}
 module.trashMod = true
 
 L:RegisterTranslations("enUS", function() return {
-	cmd = "Warder",
+    cmd = "Warder",
 
-	fear_cmd = "fear",
-	fear_name = "Fear timer",
-	fear_desc = "Shows fear cd",
+    fear_cmd = "fear",
+    fear_name = "恐惧计时器",
+    fear_desc = "显示恐惧冷却时间",
 
-	silence_cmd = "silence",
-	silence_name = "Silence timer",
-	silence_desc = "Shows Silence cd",
+    silence_cmd = "silence",
+    silence_name = "沉默计时器",
+    silence_desc = "显示沉默冷却时间",
 
-	roots_cmd = "roots",
-	roots_name = "Roots timer",
-	roots_desc = "Shows Roots cd",
+    roots_cmd = "roots",
+    roots_name = "纠缠根须计时器",
+    roots_desc = "显示纠缠根须冷却时间",
 
-	dust_cmd = "dust",
-	dust_name = "Dust Cloud timer",
-	dust_desc = "Shows Dust Cloud cd",
+    dust_cmd = "dust",
+    dust_name = "尘云计时器",
+    dust_desc = "显示尘云冷却时间",
 
-	warnings_cmd = "warnings",
-	warnings_name = "Warning messages ",
-	warnings_desc = "Warning messages showing which 2 abilities current mob has",
+    warnings_cmd = "warnings",
+    warnings_name = "警告消息",
+    warnings_desc = "显示当前怪物拥有的两种技能的警告消息",
 
-	fearTrigger = "Anubisath Warder begins to cast Fear.",
-	fearWarn = "Fear",
-	fearWarn2 = "(Silence or Dust Cloud)",
-	fearBar = "Fear!",
-	fearBar_next = "Fear CD",
+    fearTrigger = "Anubisath Warder begins to cast Fear.",
+    fearWarn = "恐惧",
+    fearWarn2 = "(沉默或尘云)",
+    fearBar = "恐惧！",
+    fearBar_next = "恐惧冷却",
 
-	silenceTrigger = "Anubisath Warder begins to cast Silence.",
-	silenceWarn = "Silence",
-	silenceWarn2 = "(Roots or Fear)",
-	silenceBar = "Silence!",
-	silenceBar_next = "Silence CD",
+    silenceTrigger = "Anubisath Warder begins to cast Silence.",
+    silenceWarn = "沉默",
+    silenceWarn2 = "(纠缠根须或恐惧)",
+    silenceBar = "沉默！",
+    silenceBar_next = "沉默冷却",
 
-	rootsTrigger = "Anubisath Warder begins to cast Entangling Roots.",
-	rootsWarn = "Roots",
-	rootsWarn2 = "(Silence or Dust Cloud)",
-	rootsBar = "Roots!",
-	rootsBar_next = "Roots CD",
+    rootsTrigger = "Anubisath Warder begins to cast Entangling Roots.",
+    rootsWarn = "纠缠根须",
+    rootsWarn2 = "(沉默或尘云)",
+    rootsBar = "纠缠根须！",
+    rootsBar_next = "纠缠根须冷却",
 
-	dustTrigger = "Anubisath Warder begins to perform Dust Cloud.",
-	dustWarn = "Dust Cloud",
-	dustWarn2 = "(Roots or Fear)",
-	dustBar = "Dust Cloud!",
-	dustBar_next = "Dust Cloud CD",
+    dustTrigger = "Anubisath Warder begins to perform Dust Cloud.",
+    dustWarn = "尘云",
+    dustWarn2 = "(纠缠根须或恐惧)",
+    dustBar = "尘云！",
+    dustBar_next = "尘云冷却",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+    cmd = "Warder",
+
+    fear_cmd = "fear",
+    fear_name = "恐惧计时器",
+    fear_desc = "显示恐惧冷却时间",
+
+    silence_cmd = "silence",
+    silence_name = "沉默计时器",
+    silence_desc = "显示沉默冷却时间",
+
+    roots_cmd = "roots",
+    roots_name = "纠缠根须计时器",
+    roots_desc = "显示纠缠根须冷却时间",
+
+    dust_cmd = "dust",
+    dust_name = "尘云计时器",
+    dust_desc = "显示尘云冷却时间",
+
+    warnings_cmd = "warnings",
+    warnings_name = "警告消息",
+    warnings_desc = "显示当前怪物拥有的两种技能的警告消息",
+
+    fearTrigger = "Anubisath Warder begins to cast Fear.",
+    fearWarn = "恐惧",
+    fearWarn2 = "(沉默或尘云)",
+    fearBar = "恐惧！",
+    fearBar_next = "恐惧冷却",
+
+    silenceTrigger = "Anubisath Warder begins to cast Silence.",
+    silenceWarn = "沉默",
+    silenceWarn2 = "(纠缠根须或恐惧)",
+    silenceBar = "沉默！",
+    silenceBar_next = "沉默冷却",
+
+    rootsTrigger = "Anubisath Warder begins to cast Entangling Roots.",
+    rootsWarn = "纠缠根须",
+    rootsWarn2 = "(沉默或尘云)",
+    rootsBar = "纠缠根须！",
+    rootsBar_next = "纠缠根须冷却",
+
+    dustTrigger = "Anubisath Warder begins to perform Dust Cloud.",
+    dustWarn = "尘云",
+    dustWarn2 = "(纠缠根须或恐惧)",
+    dustBar = "尘云！",
+    dustBar_next = "尘云冷却",
 } end )
 
 local timer = {

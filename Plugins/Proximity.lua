@@ -92,7 +92,7 @@ L:RegisterTranslations("enUS", function() return {
 	proximity = "Proximity display",
 	proximity_desc = "Show the proximity window when appropriate for this encounter, listing players who are standing too close to you.",
 
-	font = "Fonts\\FRIZQT__.TTF",
+	-- font = "Fonts\\FRIZQT__.TTF",
 
 	["Test"] = true,
 	["Perform a Proximity test."] = true,
@@ -101,7 +101,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Reset the anchor position, moving it to the center of your screen."] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Proximity"] = "附近玩家",
 	["Close Players"] = "附近玩家",
 	["Options for the Proximity Display."] = "显示附近玩家显示",
@@ -130,7 +130,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2023-12-21
+	-- Last update: 2024-02-08
 	["Proximity"] = "附近玩家",
 	["Close Players"] = "附近玩家",
 	["Options for the Proximity Display."] = "显示附近玩家显示",
