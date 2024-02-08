@@ -26,6 +26,10 @@ L:RegisterTranslations("enUS", function() return {
     tentacle_name = "触须警报",
     tentacle_desc = "触须出现时进行警告",
     
+    rape_cmd = "rape",
+    rape_name = "强奸笑话很有趣",
+    rape_desc = "有些人喜欢色情笑话。",
+	
     glare_cmd = "glare",
     glare_name = "黑暗凝视警报",
     glare_desc = "黑暗凝视出现时进行警告",
@@ -114,6 +118,10 @@ L:RegisterTranslations("zhCN", function() return {
     tentacle_name = "触须警报",
     tentacle_desc = "触须出现时进行警告",
     
+    rape_cmd = "rape",
+    rape_name = "强奸笑话很有趣",
+    rape_desc = "有些人喜欢色情笑话。",
+	
     glare_cmd = "glare",
     glare_name = "黑暗凝视警报",
     glare_desc = "黑暗凝视出现时进行警告",
