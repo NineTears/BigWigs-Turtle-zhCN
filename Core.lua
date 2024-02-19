@@ -149,7 +149,7 @@ L:RegisterTranslations("enUS", function() return {
 	["The Black Morass"] = "时光之穴:黑色沼泽",
 	["Silithus"] = "希利苏斯",
 	["Outdoor Raid Bosses"] = "世界Boss",
-	["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+	["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 
 	["Battlegrounds"] = "战场",
 	["Alterac Valley"] = "奥特兰克山谷",
@@ -223,7 +223,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["The Black Morass"] = "时光之穴:黑色沼泽",
 	["Silithus"] = "希利苏斯",
 	["Outdoor Raid Bosses"] = "世界Boss",
-	["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+	["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 
 	["Battlegrounds"] = "战场",
 	["Alterac Valley"] = "奥特兰克山谷",

@@ -59,10 +59,10 @@ L:RegisterTranslations("enUS", function() return {
 	-- Last update: 2024-02-08
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
-	["Commands for querying the raid for Big Wigs versions."] = "用于查询Big Wigs版本的命令。",
+	["Commands for querying the raid for Big Wigs versions."] = "用于查询BigWigs版本的命令。",
 	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
 	["Querying versions for "] = "正在查询版本：",
-	["Big Wigs Version Query"] = "Big Wigs版本查询",
+	["Big Wigs Version Query"] = "BigWigs版本查询",
 	["Close window"] = "关闭窗口",
 	["Showing version for "] = "显示版本：",
 	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比您的版本更新，红色版本比您的版本旧，白色版本与您的版本相同。",
@@ -78,54 +78,12 @@ L:RegisterTranslations("enUS", function() return {
 	["Zone"] = "区域",
 	["zone"] = "区域",
 	["N/A"] = "无",
-	["BigWigs"] = "Big Wigs",
+	["BigWigs"] = "BigWigs",
 	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",
 	["Nr Replies"] = "回应人数",
 	["Ancient"] = "旧版本",
 
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "您的Big Wigs Turtle-WoW版本已过时！\n请访问github.com/madScripting/BigWigs-TurtleWoW获取最新版本。",
-	["Close"] = "关闭",
-	["Cancel"] = "取消",
-
-	["People with outdated BigWigs:"] = "使用过时版本的人员：",
-	["Notify old versions"] = "通知过时版本",
-	["List people with old versions to raid chat."] = "将使用过时版本的人员列入团队聊天。",
-	["Download newest version from github.com/madScripting/BigWigs-TurtleWoW"] = "从github.com/madScripting/BigWigs-TurtleWoW下载最新版本",
-
-	["Show popup"] = "显示弹出窗口",
-	["Show popup warning on out of date version"] = "在过时版本上显示弹出警告",
-} end )
-
-L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["versionquery"] = "版本查询",
-	["Version Query"] = "版本查询",
-	["Commands for querying the raid for Big Wigs versions."] = "用于查询Big Wigs版本的命令。",
-	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
-	["Querying versions for "] = "正在查询版本：",
-	["Big Wigs Version Query"] = "Big Wigs版本查询",
-	["Close window"] = "关闭窗口",
-	["Showing version for "] = "显示版本：",
-	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比您的版本更新，红色版本比您的版本旧，白色版本与您的版本相同。",
-	["Player"] = "玩家",
-	["Version"] = "版本",
-	["Current zone"] = "当前区域",
-	["<zone>"] = "<区域>",
-	["Version query done."] = "版本查询完成。",
-	["Runs a version query on your current zone."] = "在当前区域上运行版本查询。",
-	["Closes the version query window."] = "关闭版本查询窗口。",
-	["current"] = "当前",
-	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
-	["Zone"] = "区域",
-	["zone"] = "区域",
-	["N/A"] = "无",
-	["BigWigs"] = "Big Wigs",
-	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",
-	["Nr Replies"] = "回应人数",
-	["Ancient"] = "旧版本",
-
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "您的Big Wigs Turtle-WoW版本已过时！\n请访问github.com/madScripting/BigWigs-TurtleWoW获取最新版本。",
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "您的BigWigs Turtle-WoW版本已过时！\n请访问github.com/madScripting/BigWigs-TurtleWoW获取最新版本。",
 	["Close"] = "关闭",
 	["Cancel"] = "取消",
 
@@ -211,6 +169,47 @@ L:RegisterTranslations("deDE", function() return {
 	["Cancel"] = "Abbrechen",
 } end )
 
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-02-08
+	["versionquery"] = "版本查询",
+	["Version Query"] = "版本查询",
+	["Commands for querying the raid for Big Wigs versions."] = "用于查询BigWigs版本的命令。",
+	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
+	["Querying versions for "] = "正在查询版本：",
+	["Big Wigs Version Query"] = "BigWigs版本查询",
+	["Close window"] = "关闭窗口",
+	["Showing version for "] = "显示版本：",
+	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比您的版本更新，红色版本比您的版本旧，白色版本与您的版本相同。",
+	["Player"] = "玩家",
+	["Version"] = "版本",
+	["Current zone"] = "当前区域",
+	["<zone>"] = "<区域>",
+	["Version query done."] = "版本查询完成。",
+	["Runs a version query on your current zone."] = "在当前区域上运行版本查询。",
+	["Closes the version query window."] = "关闭版本查询窗口。",
+	["current"] = "当前",
+	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
+	["Zone"] = "区域",
+	["zone"] = "区域",
+	["N/A"] = "无",
+	["BigWigs"] = "BigWigs",
+	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",
+	["Nr Replies"] = "回应人数",
+	["Ancient"] = "旧版本",
+
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "您的BigWigs Turtle-WoW版本已过时！\n请访问github.com/madScripting/BigWigs-TurtleWoW获取最新版本。",
+	["Close"] = "关闭",
+	["Cancel"] = "取消",
+
+	["People with outdated BigWigs:"] = "使用过时版本的人员：",
+	["Notify old versions"] = "通知过时版本",
+	["List people with old versions to raid chat."] = "将使用过时版本的人员列入团队聊天。",
+	["Download newest version from github.com/madScripting/BigWigs-TurtleWoW"] = "从github.com/madScripting/BigWigs-TurtleWoW下载最新版本",
+
+	["Show popup"] = "显示弹出窗口",
+	["Show popup warning on out of date version"] = "在过时版本上显示弹出警告",
+} end )
 
 ---------------------------------
 --      Addon Declaration      --
