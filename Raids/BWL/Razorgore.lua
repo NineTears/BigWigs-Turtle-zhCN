@@ -86,8 +86,8 @@ L:RegisterTranslations("enUS", function() return {
     polymorph_desc = "告诉你谁被黑翼控制者变形并开始一个可点击的计时条以便选取。",
 
     icon_cmd = "icon",
-    icon_name = "精神控制时标记团队图标",
-    icon_desc = "在精神控制的玩家身上标记团队图标直到效果结束。\n\n(需要助理或更高权限)",
+    icon_name = "精神控制时标记团队标志",
+    icon_desc = "在精神控制的玩家身上标记团队标志直到效果结束。\n\n(需要助理或更高权限)",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -326,8 +326,8 @@ L:RegisterTranslations("zhCN", function() return {
     polymorph_desc = "告诉你谁被黑翼控制者变形并开始一个可点击的计时条以便选取。",
 
     icon_cmd = "icon",
-    icon_name = "精神控制时标记团队图标",
-    icon_desc = "在精神控制的玩家身上标记团队图标直到效果结束。\n\n(需要助理或更高权限)",
+    icon_name = "精神控制时标记团队标志",
+    icon_desc = "在精神控制的玩家身上标记团队标志直到效果结束。\n\n(需要助理或更高权限)",
 } end)
 
 ---------------------------------

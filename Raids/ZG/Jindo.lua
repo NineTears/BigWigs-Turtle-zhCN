@@ -26,7 +26,7 @@ L:RegisterTranslations("enUS", function() return {
 
     puticon_cmd = "puticon",
     puticon_name = "标记中了诅咒的玩家",
-    puticon_desc = "在中了金度的妄想的玩家身上放置团队标记。\n\n(需要助理或更高权限)",
+    puticon_desc = "在中了金度的妄想的玩家身上放置团队标志。\n\n(需要助理或更高权限)",
 
     autotarget_cmd = "autotarget",
     autotarget_name = "图腾自动目标",
@@ -81,7 +81,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     puticon_cmd = "puticon",
     puticon_name = "标记中了诅咒的玩家",
-    puticon_desc = "在中了金度的妄想的玩家身上放置团队标记。\n\n(需要助理或更高权限)",
+    puticon_desc = "在中了金度的妄想的玩家身上放置团队标志。\n\n(需要助理或更高权限)",
 
     autotarget_cmd = "autotarget",
     autotarget_name = "图腾自动目标",

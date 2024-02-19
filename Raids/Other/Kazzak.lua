@@ -103,8 +103,8 @@ L:RegisterTranslations("enUS", function() return {
     twistedreflection_desc = "当人们得到了一个减益效果，每次击中他们时为Boss治疗25000生命值时进行警告。",
 
     puticon_cmd = "puticon",
-    puticon_name = "卡扎克印记目标上的团队图标",
-    puticon_desc = "在被卡扎克的印记标记的人身上放置一个团队图标。\n\n（需要助理或更高权限）",
+    puticon_name = "卡扎克印记目标上的团队标志",
+    puticon_desc = "在被卡扎克的印记标记的人身上放置一个团队标志。\n\n（需要助理或更高权限）",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -239,8 +239,8 @@ L:RegisterTranslations("zhCN", function() return {
     twistedreflection_desc = "当人们得到了一个减益效果，每次击中他们时为Boss治疗25000生命值时进行警告。",
 
     puticon_cmd = "puticon",
-    puticon_name = "卡扎克印记目标上的团队图标",
-    puticon_desc = "在被卡扎克的印记标记的人身上放置一个团队图标。\n\n（需要助理或更高权限）",
+    puticon_name = "卡扎克印记目标上的团队标志",
+    puticon_desc = "在被卡扎克的印记标记的人身上放置一个团队标志。\n\n（需要助理或更高权限）",
 } end )
 
 ------------------------------

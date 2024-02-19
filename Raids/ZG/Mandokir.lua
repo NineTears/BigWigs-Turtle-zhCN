@@ -54,7 +54,7 @@ L:RegisterTranslations("enUS", function() return {
 
     puticon_cmd = "puticon",
     puticon_name = "标记被观察玩家",
-    puticon_desc = "在被观察的人身上放置团队标记。\n\n(需要助理或更高权限)",
+    puticon_desc = "在被观察的人身上放置团队标志。\n\n(需要助理或更高权限)",
 
     charge_cmd = "charge",
     charge_name = "冲锋警报",
@@ -241,7 +241,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     puticon_cmd = "puticon",
     puticon_name = "标记被观察玩家",
-    puticon_desc = "在被观察的人身上放置团队标记。\n\n(需要助理或更高权限)",
+    puticon_desc = "在被观察的人身上放置团队标志。\n\n(需要助理或更高权限)",
 
     charge_cmd = "charge",
     charge_name = "冲锋警报",

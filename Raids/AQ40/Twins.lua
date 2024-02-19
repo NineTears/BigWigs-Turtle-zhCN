@@ -33,7 +33,7 @@ L:RegisterTranslations("enUS", function() return {
     heal_desc = "双子治疗时进行警告",
     
     targeticon_cmd = "targeticon",
-    targeticon_name = "双子目标团队图标",
+    targeticon_name = "双子目标团队标志",
     targeticon_desc = "给施法的双子目标标一个星星，给近战的双子目标标一个骷髅",
     
     
@@ -100,7 +100,7 @@ L:RegisterTranslations("zhCN", function() return {
     heal_desc = "双子治疗时进行警告",
     
     targeticon_cmd = "targeticon",
-    targeticon_name = "双子目标团队图标",
+    targeticon_name = "双子目标团队标志",
     targeticon_desc = "给施法的双子目标标一个星星，给近战的双子目标标一个骷髅",
     
     

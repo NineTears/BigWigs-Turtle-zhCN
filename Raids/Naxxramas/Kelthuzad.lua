@@ -1,110 +1,128 @@
+--Credits to balakethelock
+
+----------------------------------
+--      Module Declaration      --
+----------------------------------
 
 local module, L = BigWigs:ModuleDeclaration("Kel'Thuzad", "Naxxramas")
 
-module.revision = 20004
-module.enabletrigger = module.translatedName
-module.toggleoptions = {"frostbolt", "frostboltbar", -1, "frostblast", "proximity", "fissure", "mc", -1, "fbvolley", -1, "detonate", "detonateicon", -1 ,"guardians", -1, "addcount", "phase", "bosskill"}
+
+----------------------------
+--      Localization      --
+----------------------------
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Kelthuzad",
 
-    KELTHUZADCHAMBERLOCALIZEDLOLHAX = "克尔苏加德的大厅",
+    KELTHUZADCHAMBERLOCALIZEDLOLHAX = "Kel'Thuzad Chamber",
 
     phase_cmd = "phase",
     phase_name = "阶段警报",
-    phase_desc = "阶段转换时进行警告。",
+    phase_desc = "对各个阶段进行警告。",
 
     mc_cmd = "mindcontrol",
-    mc_name = "精神控制",
-    mc_desc = "被精神控制时进行警告。",
+    mc_name = "精神控制警报",
+    mc_desc = "当有人被精神控制时进行警告。",
 
     fissure_cmd = "fissure",
-    fissure_name = "暗影裂隙",
-    fissure_desc = "即将出现暗影裂隙时进行警告",
+    fissure_name = "暗影裂隙警报",
+    fissure_desc = "暗影裂隙即将出现时进行警告。",
 
     frostblast_cmd = "frostblast",
-    frostblast_name = "冰霜冲击",
-    frostblast_desc = "受到冰霜冲击时进行警告。",
+    frostblast_name = "冰霜冲击警报",
+    frostblast_desc = "当有人受到冰霜冲击时进行警告。",
 
     frostbolt_cmd = "frostbolt",
     frostbolt_name = "寒冰箭警报",
-    frostbolt_desc = "即将出现寒冰箭时进行警告",
+    frostbolt_desc = "寒冰箭即将出现时进行警告。",
 
     frostboltbar_cmd = "frostboltbar",
     frostboltbar_name = "寒冰箭计时条",
-    frostboltbar_desc = "显示寒冰箭施放的计时条",
+    frostboltbar_desc = "显示寒冰箭施法的计时条。",
 
     detonate_cmd = "detonate",
-    detonate_name = "魔爆警报",
-    detonate_desc = "即将出现魔爆时进行警告",
+    detonate_name = "法力爆破警告",
+    detonate_desc = "法力爆破即将出现时进行警告。",
 
     detonateicon_cmd = "detonateicon",
-    detonateicon_name = "魔爆目标的团队标记",
-    detonateicon_desc = "在魔爆法力的玩家身上放置团队标记。",
+    detonateicon_name = "法力爆破团队标志",
+    detonateicon_desc = "在有法力爆破的人身上标记团队标志。",
 
     guardians_cmd = "guardians",
-    guardians_name = "守护者生成",
-    guardians_desc = "第三阶段即将出现寒冰皇冠卫士时进行警告",
+    guardians_name = "寒冰皇冠卫士警报",
+    guardians_desc = "第三阶段即将出现寒冰皇冠卫士时进行警告。",
+
+    shackles_cmd = "shackles",
+    shackles_name = "束缚警报",
+    shackles_desc = "当束缚被施加或打破时进行警告",
 
     fbvolley_cmd = "fbvolley",
     fbvolley_name = "可能的齐射",
     fbvolley_desc = "可能的寒冰箭齐射/多重的计时器",
 
     addcount_cmd = "addcount",
-    addcount_name = "P1小怪计数器",
-    addcount_desc = "计数第一阶段已击杀的小怪数量",
+    addcount_name = "P1添加计数器",
+    addcount_desc = "计数第一阶段被杀死的小怪数量",
+
+    abomwarn_cmd = "abomwarn",
+    abomwarn_name = "P1憎恶警报",
+    abomwarn_desc = "当憎恶出现时播放声音",
+
+    abomwarn_text = "憎恶出现 ",
+
+    weaverwarn_cmd = "weaverarn",
+    weaverwarn_name = "P1织魂者警报",
+    weaverwarn_desc = "当织魂者出现时播放声音",
+
+    weaverwarn_text = "织魂者出现 ",
 
     mc_trigger1 = "Your soul, is bound to me now!",
     mc_trigger2 = "There will be no escape!",
     mc_warning = "精神控制！",
     mc_bar = "可能的精神控制！",
 
-    proximity_cmd = "proximity",
-    proximity_name = "近距离警告",
-    proximity_desc = "显示近距离警告框",
-	
-	start_trigger = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!",
-	start_trigger1 = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
-    start_warning = "克尔苏加德战斗开始！约5分钟后激活！",
+    start_trigger = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!",
+    start_trigger1 = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
+    start_warning = "克尔苏加德的战斗开始了！约5分钟后他将激活！",
     start_bar = "第一阶段计时",
-	
-	attack_trigger1 = "Kel'Thuzad attacks",
-	attack_trigger2 = "Kel'Thuzad misses",
-	attack_trigger3 = "Kel'Thuzad hits",
-	attack_trigger4 = "Kel'Thuzad crits",
-	
-	kick_trigger1 = "Kick hits Kel'Thuzad",
-	kick_trigger2 = "Kick crits Kel'Thuzad",
-	kick_trigger3 = "Kick was blocked by Kel'Thuzad",
-	pummel_trigger1 = "Pummel hits Kel'Thuzad",
-	pummel_trigger2 = "Pummel crits Kel'Thuzad",
-	pummel_trigger3 = "Pummel was blocked by Kel'Thuzad",
-	shieldbash_trigger1 = "Shield Bash hits Kel'Thuzad",
-	shieldbash_trigger2 = "Shield Bash crits Kel'Thuzad",
-	shieldbash_trigger3 = "Shield Bash was blocked by Kel'Thuzad",
-	earthshock_trigger1 = "Earth Shock hits Kel'Thuzad",
-	earthshock_trigger2 = "Earth Shock crits Kel'Thuzad",
+
+    attack_trigger1 = "Kel'Thuzad attacks",
+    attack_trigger2 = "Kel'Thuzad misses",
+    attack_trigger3 = "Kel'Thuzad hits",
+    attack_trigger4 = "Kel'Thuzad crits",
+    kick_trigger1 = "Kick hits Kel'Thuzad",
+    kick_trigger2 = "Kick crits Kel'Thuzad",
+    kick_trigger3 = "Kick was blocked by Kel'Thuzad",
+    pummel_trigger1 = "Pummel hits Kel'Thuzad",
+    pummel_trigger2 = "Pummel crits Kel'Thuzad",
+    pummel_trigger3 = "Pummel was blocked by Kel'Thuzad",
+    shieldbash_trigger1 = "Shield Bash hits Kel'Thuzad",
+    shieldbash_trigger2 = "Shield Bash crits Kel'Thuzad",
+    shieldbash_trigger3 = "Shield Bash was blocked by Kel'Thuzad",
+    earthshock_trigger1 = "Earth Shock hits Kel'Thuzad",
+    earthshock_trigger2 = "Earth Shock crits Kel'Thuzad",
 
     phase1_warn = "第一阶段在20秒内结束！",
 
     phase2_trigger1 = "Pray for mercy!",
     phase2_trigger2 = "Scream your dying breath!",
     phase2_trigger3 = "The end is upon you!",
-    phase2_warning = "第二阶段，克尔苏加德即将出现！",
+    phase2_warning = "第二阶段，克尔苏加德即将来临！",
     phase2_bar = "克尔苏加德激活！",
 
     phase3_soon_warning = "第三阶段即将到来！",
     phase3_trigger = "Master! I require aid!",
-    phase3_warning = "第三阶段，寒冰皇冠卫士即将出现！",
+    phase3_warning = "第三阶段，寒冰皇冠卫士即将到来！",
 
     guardians_bar = "寒冰皇冠卫士 %d",
 
-    fissure_trigger = "cast Shadow Fissure.",
+    fissure_trigger = "casts Shadow Fissure.",
     fissure_warning = "暗影裂隙！",
 
     frostbolt_trigger = "Kel'Thuzad begins to cast Frostbolt.",
     frostbolt_warning = "寒冰箭！打断！",
     frostbolt_bar = "寒冰箭",
+
 
     frostbolt_volley = "可能的齐射",
     frostbolt_volley_trigger = "afflicted by Frostbolt",
@@ -116,19 +134,27 @@ L:RegisterTranslations("enUS", function() return {
     frostblast_trigger1 = "I will freeze the blood in your veins!",
     frostblast_trigger2 = "^([^%s]+) ([^%s]+) afflicted by Frost Blast.",
     frostblast_warning = "冰霜冲击！",
-    frostblast_soon_message = "大约5秒后可能有冰霜冲击！",
+    frostblast_soon_message = "大约5秒后可能会有冰霜冲击！",
 
-    phase2_frostblast_warning = "大约5秒后可能有冰霜冲击！",
-    phase2_mc_warning = "大约5秒后可能有精神控制！",
-    phase2_detonate_warning = "大约5秒后可能有魔爆！",
+    phase2_frostblast_warning = "大约5秒后可能会有冰霜冲击！",
+    phase2_mc_warning = "大约5秒后可能会有精神控制！",
+    phase2_detonate_warning = "大约5秒后有法力爆破！",
 
     detonate_trigger = "^([^%s]+) ([^%s]+) afflicted by Detonate Mana",
-    detonate_bar = "魔爆法力 - %s",
-    detonate_possible_bar = "魔爆法力",
-    detonate_warning = "%s 被魔爆法力影响！",
+    detonate_bar = "法力爆破 - %s",
+    detonate_possible_bar = "法力爆破",
+    detonate_warning = "%s 被法力爆破了！",
+
+    shackle_trigger = "Guardian of Icecrown is afflicted by Shackle Undead",
+    shacklefade_trigger = "Shackle Undead fades from Guardian of Icecrown",
+    shackle_warning = "%s/3",
 
     you = "你",
     are = "是",
+
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框架",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -257,107 +283,117 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Kelthuzad",
 
-    KELTHUZADCHAMBERLOCALIZEDLOLHAX = "克尔苏加德的大厅",
+    KELTHUZADCHAMBERLOCALIZEDLOLHAX = "Kel'Thuzad Chamber",
 
     phase_cmd = "phase",
     phase_name = "阶段警报",
-    phase_desc = "阶段转换时进行警告。",
+    phase_desc = "对各个阶段进行警告。",
 
     mc_cmd = "mindcontrol",
-    mc_name = "精神控制",
-    mc_desc = "被精神控制时进行警告。",
+    mc_name = "精神控制警报",
+    mc_desc = "当有人被精神控制时进行警告。",
 
     fissure_cmd = "fissure",
-    fissure_name = "暗影裂隙",
-    fissure_desc = "即将出现暗影裂隙时进行警告",
+    fissure_name = "暗影裂隙警报",
+    fissure_desc = "暗影裂隙即将出现时进行警告。",
 
     frostblast_cmd = "frostblast",
-    frostblast_name = "冰霜冲击",
-    frostblast_desc = "受到冰霜冲击时进行警告。",
+    frostblast_name = "冰霜冲击警报",
+    frostblast_desc = "当有人受到冰霜冲击时进行警告。",
 
     frostbolt_cmd = "frostbolt",
     frostbolt_name = "寒冰箭警报",
-    frostbolt_desc = "即将出现寒冰箭时进行警告",
+    frostbolt_desc = "寒冰箭即将出现时进行警告。",
 
     frostboltbar_cmd = "frostboltbar",
     frostboltbar_name = "寒冰箭计时条",
-    frostboltbar_desc = "显示寒冰箭施放的计时条",
+    frostboltbar_desc = "显示寒冰箭施法的计时条。",
 
     detonate_cmd = "detonate",
-    detonate_name = "魔爆警报",
-    detonate_desc = "即将出现魔爆时进行警告",
+    detonate_name = "法力爆破警告",
+    detonate_desc = "法力爆破即将出现时进行警告。",
 
     detonateicon_cmd = "detonateicon",
-    detonateicon_name = "魔爆目标的团队标记",
-    detonateicon_desc = "在魔爆法力的玩家身上放置团队标记。",
+    detonateicon_name = "法力爆破团队标志",
+    detonateicon_desc = "在有法力爆破的人身上标记团队标志。",
 
     guardians_cmd = "guardians",
-    guardians_name = "守护者生成",
-    guardians_desc = "第三阶段即将出现寒冰皇冠卫士时进行警告",
+    guardians_name = "寒冰皇冠卫士警报",
+    guardians_desc = "第三阶段即将出现寒冰皇冠卫士时进行警告。",
+
+    shackles_cmd = "shackles",
+    shackles_name = "束缚警报",
+    shackles_desc = "当束缚被施加或打破时进行警告",
 
     fbvolley_cmd = "fbvolley",
     fbvolley_name = "可能的齐射",
     fbvolley_desc = "可能的寒冰箭齐射/多重的计时器",
 
     addcount_cmd = "addcount",
-    addcount_name = "P1小怪计数器",
-    addcount_desc = "计数第一阶段已击杀的小怪数量",
+    addcount_name = "P1添加计数器",
+    addcount_desc = "计数第一阶段被杀死的小怪数量",
+
+    abomwarn_cmd = "abomwarn",
+    abomwarn_name = "P1憎恶警报",
+    abomwarn_desc = "当憎恶出现时播放声音",
+
+    abomwarn_text = "憎恶出现 ",
+
+    weaverwarn_cmd = "weaverarn",
+    weaverwarn_name = "P1织魂者警报",
+    weaverwarn_desc = "当织魂者出现时播放声音",
+
+    weaverwarn_text = "织魂者出现 ",
 
     mc_trigger1 = "Your soul, is bound to me now!",
     mc_trigger2 = "There will be no escape!",
     mc_warning = "精神控制！",
     mc_bar = "可能的精神控制！",
 
-    proximity_cmd = "proximity",
-    proximity_name = "近距离警告",
-    proximity_desc = "显示近距离警告框",
-	
-	start_trigger = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!",
-	start_trigger1 = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
-    start_warning = "克尔苏加德战斗开始！约5分钟后激活！",
+    start_trigger = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!",
+    start_trigger1 = "Minions, servants, soldiers of the cold dark! Obey the call of Kel'Thuzad!",
+    start_warning = "克尔苏加德的战斗开始了！约5分钟后他将激活！",
     start_bar = "第一阶段计时",
-	
-	attack_trigger1 = "Kel'Thuzad attacks",
-	attack_trigger2 = "Kel'Thuzad misses",
-	attack_trigger3 = "Kel'Thuzad hits",
-	attack_trigger4 = "Kel'Thuzad crits",
-	
-	kick_trigger1 = "Kick hits Kel'Thuzad",
-	kick_trigger2 = "Kick crits Kel'Thuzad",
-	kick_trigger3 = "Kick was blocked by Kel'Thuzad",
-	pummel_trigger1 = "Pummel hits Kel'Thuzad",
-	pummel_trigger2 = "Pummel crits Kel'Thuzad",
-	pummel_trigger3 = "Pummel was blocked by Kel'Thuzad",
-	shieldbash_trigger1 = "Shield Bash hits Kel'Thuzad",
-	shieldbash_trigger2 = "Shield Bash crits Kel'Thuzad",
-	shieldbash_trigger3 = "Shield Bash was blocked by Kel'Thuzad",
-	earthshock_trigger1 = "Earth Shock hits Kel'Thuzad",
-	earthshock_trigger2 = "Earth Shock crits Kel'Thuzad",
+
+    attack_trigger1 = "Kel'Thuzad attacks",
+    attack_trigger2 = "Kel'Thuzad misses",
+    attack_trigger3 = "Kel'Thuzad hits",
+    attack_trigger4 = "Kel'Thuzad crits",
+    kick_trigger1 = "Kick hits Kel'Thuzad",
+    kick_trigger2 = "Kick crits Kel'Thuzad",
+    kick_trigger3 = "Kick was blocked by Kel'Thuzad",
+    pummel_trigger1 = "Pummel hits Kel'Thuzad",
+    pummel_trigger2 = "Pummel crits Kel'Thuzad",
+    pummel_trigger3 = "Pummel was blocked by Kel'Thuzad",
+    shieldbash_trigger1 = "Shield Bash hits Kel'Thuzad",
+    shieldbash_trigger2 = "Shield Bash crits Kel'Thuzad",
+    shieldbash_trigger3 = "Shield Bash was blocked by Kel'Thuzad",
+    earthshock_trigger1 = "Earth Shock hits Kel'Thuzad",
+    earthshock_trigger2 = "Earth Shock crits Kel'Thuzad",
 
     phase1_warn = "第一阶段在20秒内结束！",
 
     phase2_trigger1 = "Pray for mercy!",
     phase2_trigger2 = "Scream your dying breath!",
     phase2_trigger3 = "The end is upon you!",
-    phase2_warning = "第二阶段，克尔苏加德即将出现！",
+    phase2_warning = "第二阶段，克尔苏加德即将来临！",
     phase2_bar = "克尔苏加德激活！",
 
     phase3_soon_warning = "第三阶段即将到来！",
     phase3_trigger = "Master! I require aid!",
-    phase3_warning = "第三阶段，寒冰皇冠卫士即将出现！",
+    phase3_warning = "第三阶段，寒冰皇冠卫士即将到来！",
 
     guardians_bar = "寒冰皇冠卫士 %d",
 
-    fissure_trigger = "cast Shadow Fissure.",
+    fissure_trigger = "casts Shadow Fissure.",
     fissure_warning = "暗影裂隙！",
 
     frostbolt_trigger = "Kel'Thuzad begins to cast Frostbolt.",
     frostbolt_warning = "寒冰箭！打断！",
     frostbolt_bar = "寒冰箭",
+
 
     frostbolt_volley = "可能的齐射",
     frostbolt_volley_trigger = "afflicted by Frostbolt",
@@ -369,24 +405,45 @@ L:RegisterTranslations("zhCN", function() return {
     frostblast_trigger1 = "I will freeze the blood in your veins!",
     frostblast_trigger2 = "^([^%s]+) ([^%s]+) afflicted by Frost Blast.",
     frostblast_warning = "冰霜冲击！",
-    frostblast_soon_message = "大约5秒后可能有冰霜冲击！",
+    frostblast_soon_message = "大约5秒后可能会有冰霜冲击！",
 
-    phase2_frostblast_warning = "大约5秒后可能有冰霜冲击！",
-    phase2_mc_warning = "大约5秒后可能有精神控制！",
-    phase2_detonate_warning = "大约5秒后可能有魔爆！",
+    phase2_frostblast_warning = "大约5秒后可能会有冰霜冲击！",
+    phase2_mc_warning = "大约5秒后可能会有精神控制！",
+    phase2_detonate_warning = "大约5秒后有法力爆破！",
 
     detonate_trigger = "^([^%s]+) ([^%s]+) afflicted by Detonate Mana",
-    detonate_bar = "魔爆法力 - %s",
-    detonate_possible_bar = "魔爆法力",
-    detonate_warning = "%s 被魔爆法力影响！",
+    detonate_bar = "法力爆破 - %s",
+    detonate_possible_bar = "法力爆破",
+    detonate_warning = "%s 被法力爆破了！",
+
+    shackle_trigger = "Guardian of Icecrown is afflicted by Shackle Undead",
+    shacklefade_trigger = "Shackle Undead fades from Guardian of Icecrown",
+    shackle_warning = "%s/3",
 
     you = "你",
     are = "是",
+
+    proximity_cmd = "proximity",
+    proximity_name = "近距离警告",
+    proximity_desc = "显示近距离警告框架",
 } end )
 
+---------------------------------
+--      	Variables 		   --
+---------------------------------
+
+-- module variables
+module.revision = 20004 -- To be overridden by the module!
+module.enabletrigger = module.translatedName -- string or table {boss, add1, add2}
+--module.wipemobs = { L["add_name"] } -- adds which will be considered in CheckForEngage
+module.toggleoptions = {"frostbolt", "frostboltbar", -1, "frostblast", "proximity", "fissure", "mc", -1, "fbvolley", -1, "detonate", "detonateicon", "shackles",-1, "abomwarn", "weaverwarn","guardians", -1, "addcount", "phase", "bosskill"}
+
+-- Proximity Plugin
 module.proximityCheck = function(unit) return CheckInteractDistance(unit, 2) end
 module.proximitySilent = true
 
+
+-- locals
 local timer = {
 	phase1 = 320,
 	firstFrostboltVolley = 30,
@@ -400,20 +457,22 @@ local timer = {
 	frostblast = {30,60},
 	firstMindcontrol = 60,
 	mindcontrol = {60,90},
+	mcduration = 20,
 	firstGuardians = 5,
 	guardians = 7,
 }
 local icon = {
-	abomination = "",
-	soulWeaver = "",
+	abomination = "Spell_Shadow_CallOfBone",
+	soulWeaver = "Spell_Shadow_Possession",
 	frostboltVolley = "Spell_Frost_FrostWard",
 	mindcontrol = "Inv_Belt_18",
-	phase1 = "",
-	phase2 = "",
-	guardians = "",
+	phase1 = "Spell_Shadow_Raisedead",
+	phase2 = "Spell_Shadow_Raisedead",
+	guardians = "Spell_Shadow_Raisedead",
 	frostblast = "Spell_Frost_FreezingBreath",
 	detonate = "Spell_Nature_WispSplode",
 	frostbolt = "Spell_Frost_FrostBolt02",
+	shackleundead = "Spell_Nature_Slow",
 }
 local syncName = {
 	detonate = "KelDetonate"..module.revision,
@@ -433,14 +492,22 @@ local numFrostboltVolleyHits = 0	-- counts the number of people hit by frostbolt
 local numAbominations = 0	-- counter for Unstoppable Abomination's
 local numWeavers = 0 	-- counter for Soul Weaver's
 local timePhase1Start = 0    -- time of p1 start, used for tracking add count
+local shacklecount = 0 -- Counter for shackles up
+
+
+------------------------------
+--      Initialization      --
+------------------------------
 
 module:RegisterYellEngage(L["start_trigger"])
 module:RegisterYellEngage(L["start_trigger1"])
 
+-- Big evul hack to enable the module when entering Kel'Thuzads chamber.
 function module:OnRegister()
 	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
 end
 
+-- called after module is enabled
 function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE")
@@ -459,6 +526,9 @@ function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Affliction")
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", "Affliction")
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", "Affliction")
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE", "ShackleCheck")
+	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER", "ShackleCheck")
 
 	self:ThrottleSync(5, syncName.detonate)
 	self:ThrottleSync(0, syncName.frostblast)
@@ -471,6 +541,7 @@ function module:OnEnable()
 	self:ThrottleSync(5, syncName.phase3)
 end
 
+-- called after module is enabled and after each wipe
 function module:OnSetup()
 	self:RegisterEvent("CHAT_MSG_COMBAT_HOSTILE_DEATH")
 
@@ -479,6 +550,7 @@ function module:OnSetup()
 	self.lastFrostBlast=0
 end
 
+-- called after boss is engaged
 function module:OnEngage()
 	self.lastFrostBlast=0
 	self:Message(L["start_warning"], "Attention")
@@ -493,12 +565,57 @@ function module:OnEngage()
 		self:Bar(string.format(L["add_bar"], numWeavers, "Soul Weaver"), timer.phase1, icon.soulWeaver)
 	end
 
+	self:ScheduleEvent("abom1", self.AbominationSpawns, 44, self, "1")
+	self:ScheduleEvent("abom2", self.AbominationSpawns, 72, self, "2")
+	self:ScheduleEvent("abom3", self.AbominationSpawns, 100, self, "3")
+	self:ScheduleEvent("abom4", self.AbominationSpawns, 130, self, "4")
+	self:ScheduleEvent("abom5", self.AbominationSpawns, 153, self, "5")
+	self:ScheduleEvent("abom6", self.AbominationSpawns, 176, self, "6")
+	self:ScheduleEvent("abom7", self.AbominationSpawns, 193, self, "7")
+	self:ScheduleEvent("abom8", self.AbominationSpawns, 212, self, "8")
+	self:ScheduleEvent("abom9", self.AbominationSpawns, 232, self, "9")
+	self:ScheduleEvent("abom10", self.AbominationSpawns, 252, self, "10")
+	self:ScheduleEvent("abom11", self.AbominationSpawns, 268, self, "11")
+	self:ScheduleEvent("abom12", self.AbominationSpawns, 285, self, "12")
+	self:ScheduleEvent("abom13", self.AbominationSpawns, 300, self, "13")
+	self:ScheduleEvent("abom14", self.AbominationSpawns, 318, self, "14")
+	
+	self:ScheduleEvent("weaver1", self.WeaverSpawns, 44, self, "1")
+	self:ScheduleEvent("weaver2", self.WeaverSpawns, 68, self, "2")
+	self:ScheduleEvent("weaver3", self.WeaverSpawns, 97, self, "3")
+	self:ScheduleEvent("weaver4", self.WeaverSpawns, 130, self, "4")
+	self:ScheduleEvent("weaver5", self.WeaverSpawns, 155, self, "5")
+	self:ScheduleEvent("weaver6", self.WeaverSpawns, 170, self, "6")
+	self:ScheduleEvent("weaver7", self.WeaverSpawns, 190, self, "7")
+	self:ScheduleEvent("weaver8", self.WeaverSpawns, 213, self, "8")
+	self:ScheduleEvent("weaver9", self.WeaverSpawns, 235, self, "9")
+	self:ScheduleEvent("weaver10", self.WeaverSpawns, 256, self, "10")
+	self:ScheduleEvent("weaver11", self.WeaverSpawns, 271, self, "11")
+	self:ScheduleEvent("weaver12", self.WeaverSpawns, 285, self, "12")
+	self:ScheduleEvent("weaver13", self.WeaverSpawns, 294, self, "13")
+	self:ScheduleEvent("weaver14", self.WeaverSpawns, 300, self, "14")
+
+	-- Set combat range to max to make sure players don't miss any events.
+	SetCVar("CombatDeathLogRange", 200)
+	SetCVar("CombatLogRangeParty", 200)
+	SetCVar("CombatLogRangePartyPet", 200)
+	SetCVar("CombatLogRangeFriendlyPlayers", 200)
+	SetCVar("CombatLogRangeFriendlyPlayersPets", 200)
+	SetCVar("CombatLogRangeHostilePlayers", 200)
+	SetCVar("CombatLogRangeHostilePlayersPets", 200)
+	SetCVar("CombatLogRangeCreature", 200)
 end
 
+-- called after boss is disengaged (wipe(retreat) or victory)
 function module:OnDisengage()
 	self:RemoveProximity()
 	BigWigsFrostBlast:FBClose()
 end
+
+
+------------------------------
+--      Event Handlers      --
+------------------------------
 
 function module:MINIMAP_ZONE_CHANGED(msg)
 	if GetMinimapZoneText() ~= L["KELTHUZADCHAMBERLOCALIZEDLOLHAX"] or self.core:IsModuleActive(module.translatedName) then
@@ -540,6 +657,9 @@ function module:CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE( msg )
 	if string.find(msg, L["frostbolt_trigger"]) then
 		self:Sync(syncName.frostbolt)
 	end
+	if string.find(msg, L["fissure_trigger"]) then
+		self:Sync(syncName.fissure)
+	end
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
@@ -558,7 +678,6 @@ end
 --[[function module:Volley()
 self:Bar(L["frostbolt_volley"], 15, icon.frostboltVolley)
 end]]
-
 function module:Affliction(msg)
 	local _, _, sPlayer, sType = string.find(msg, L["frostblast_trigger2"])
 	if ( sPlayer and sType ) then
@@ -607,6 +726,22 @@ function module:Affliction(msg)
 	end
 end
 
+function module:ShackleCheck(msg)
+	if string.find(msg, L["shackle_trigger"]) then
+		shacklecount = shacklecount + 1
+		self:WarningSign(icon.shackleundead, 120, true, string.format(L["shackle_warning"], shacklecount))
+		if shacklecount < 2 then self:Sound("ShackleOne") end
+		if shacklecount == 2 then self:Sound("ShackleTwo") end
+		if shacklecount > 2 then self:Sound("ShackleThree") end
+	end
+	if string.find(msg, L["shacklefade_trigger"]) then
+		shacklecount = shacklecount - 1
+		if shacklecount < 0 then shacklecount = 0 end
+		self:WarningSign(icon.shackleundead, 120, true, string.format(L["shackle_warning"], shacklecount))
+		self:Sound("ShackleBroke")
+	end
+end
+
 function module:Event(msg)
 	-- shadow fissure
 	if string.find(msg, L["fissure_trigger"]) then
@@ -635,6 +770,11 @@ function module:Event(msg)
 	end
 end
 
+
+------------------------------
+--      Synchronization	    --
+------------------------------
+
 function module:BigWigs_RecvSync(sync, rest, nick)
 	if sync == syncName.phase2 then
 		self:Phase2()
@@ -659,7 +799,13 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 	end
 end
 
+
+------------------------------
+--      Sync Handlers	    --
+------------------------------
+
 function module:Phase2()
+	shacklecount = 0
 	self:Bar(L["phase2_bar"], timer.phase2, icon.phase2)
 	self:DelayedMessage(timer.phase2, L["phase2_warning"], "Important")
 	if self.db.profile.mc then
@@ -691,12 +837,43 @@ function module:Phase2()
 		self:RemoveBar(L["start_bar"])
 		self:RemoveBar(string.format(L["add_bar"], numWeavers, "Soul Weaver"))
 		self:RemoveBar(string.format(L["add_bar"], numAbominations, "Unstoppable Abomination"))
+		if self:IsEventScheduled("abom1") then
+		self:CancelScheduledEvent("abom1") 
+		self:CancelScheduledEvent("abom2") 
+		self:CancelScheduledEvent("abom3") 
+		self:CancelScheduledEvent("abom4") 
+		self:CancelScheduledEvent("abom5") 
+		self:CancelScheduledEvent("abom6") 
+		self:CancelScheduledEvent("abom7") 
+		self:CancelScheduledEvent("abom8") 
+		self:CancelScheduledEvent("abom9") 
+		self:CancelScheduledEvent("abom10")
+		self:CancelScheduledEvent("abom11")
+		self:CancelScheduledEvent("abom12")
+		self:CancelScheduledEvent("abom13")
+		self:CancelScheduledEvent("abom14")
+		self:CancelScheduledEvent("weaver1")
+		self:CancelScheduledEvent("weaver2")
+		self:CancelScheduledEvent("weaver3")
+		self:CancelScheduledEvent("weaver4")
+		self:CancelScheduledEvent("weaver5")
+		self:CancelScheduledEvent("weaver6")
+		self:CancelScheduledEvent("weaver7")
+		self:CancelScheduledEvent("weaver8")
+		self:CancelScheduledEvent("weaver9")
+		self:CancelScheduledEvent("weaver10")
+		self:CancelScheduledEvent("weaver11")
+		self:CancelScheduledEvent("weaver12")
+		self:CancelScheduledEvent("weaver13")
+		self:CancelScheduledEvent("weaver14")
+		end
 	end
 	self:ScheduleEvent("bwKTremoveP1Bars", removeP1Bars, 1, self)
 
 end
 
 function module:Phase3()
+	shacklecount = 0
 	if self.db.profile.phase then
 		self:Message(L["phase3_warning"], "Attention", nil, "Beware")
 	end
@@ -712,8 +889,8 @@ function module:MindControl()
 	if self.db.profile.mc then
 		self:Message(L["mc_warning"], "Urgent")
 		self:IntervalBar(L["mc_bar"], timer.mindcontrol[1], timer.mindcontrol[2], icon.mindcontrol)
+		self:Bar(L["mc_warning"], timer.mcduration, icon.mindcontrol, true, "black")
 	end
-
 end
 
 function module:FrostBlast(name)
@@ -762,7 +939,7 @@ end
 
 function module:Fissure()
 	if self.db.profile.fissure then
-		self:Message(L["fissure_warning"], "Urgent", true, "Alarm")
+		self:Message(L["fissure_warning"], "Urgent", true, "Beware")
 		-- add bar?
 	end
 end
@@ -786,3 +963,16 @@ function module:WeaverDies(name)
 		end
 	end
 end
+
+function module:AbominationSpawns(count)
+	if count and self.db.profile.abomwarn then
+		self:Message(L["abomwarn_text"]..count.."/14", "Personal")
+	end
+end
+
+function module:WeaverSpawns(count)
+	if count and self.db.profile.weaverwarn then
+		self:Message(L["weaverwarn_text"]..count.."/14", "Personal")
+	end
+end
+

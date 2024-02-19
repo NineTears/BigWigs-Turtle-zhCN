@@ -26,7 +26,7 @@ L:RegisterTranslations("enUS", function() return {
 
     puticon_cmd = "puticon",
     puticon_name = "标记获得娅尔罗印记的玩家",
-    puticon_desc = "在获得娅尔罗印记的玩家身上放置团队标记。\n\n（需要助理或更高权限）",
+    puticon_desc = "在获得娅尔罗印记的玩家身上放置团队标志。\n\n（需要助理或更高权限）",
 
     trigger_engage = "Bethekk, your priestess calls upon your might!",--CHAT_MSG_MONSTER_YELL
 
@@ -70,7 +70,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     puticon_cmd = "puticon",
     puticon_name = "标记获得娅尔罗印记的玩家",
-    puticon_desc = "在获得娅尔罗印记的玩家身上放置团队标记。\n\n（需要助理或更高权限）",
+    puticon_desc = "在获得娅尔罗印记的玩家身上放置团队标志。\n\n（需要助理或更高权限）",
 
     trigger_engage = "Bethekk, your priestess calls upon your might!",--CHAT_MSG_MONSTER_YELL
 

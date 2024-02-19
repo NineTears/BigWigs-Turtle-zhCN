@@ -43,14 +43,14 @@ L:RegisterTranslations("enUS", function() return {
 	["Nr Replies"] = true,
 	["Ancient"] = true,
 
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = true,
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = true,
 	["Close"] = true,
 	["Cancel"] = true,
 
 	["People with outdated BigWigs:"] = true,
 	["Notify old versions"] = true,
 	["List people with old versions to raid chat."] = true,
-	["Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN"] = true,
+	["Download newest version from github.com/madScripting/BigWigs-TurtleWoW"] = true,
 
 	["Show popup"] = true,
 	["Show popup warning on out of date version"] = true,
@@ -59,43 +59,41 @@ L:RegisterTranslations("enUS", function() return {
 	-- Last update: 2024-02-08
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
-	["Commands for querying the raid for Big Wigs versions."] = "查询BigWigs版本的RAID命令.",
-	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请稍候5秒钟再重试.",
-	["Querying versions for "] = "查询版本 ",
-	["Big Wigs Version Query"] = "BigWigs 版本查询",
-	["Close window"] = "关闭窗口", -- I know, it's really a Tablet.
-	["Showing version for "] = "显示版本 ",
-	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比你的更新，红色比你老，白色一样.",
+	["Commands for querying the raid for Big Wigs versions."] = "用于查询Big Wigs版本的命令。",
+	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
+	["Querying versions for "] = "正在查询版本：",
+	["Big Wigs Version Query"] = "Big Wigs版本查询",
+	["Close window"] = "关闭窗口",
+	["Showing version for "] = "显示版本：",
+	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比您的版本更新，红色版本比您的版本旧，白色版本与您的版本相同。",
 	["Player"] = "玩家",
 	["Version"] = "版本",
 	["Current zone"] = "当前区域",
 	["<zone>"] = "<区域>",
-	["Version query done."] = "版本检测已完成.",
-	["Runs a version query on your current zone."] = "对当前区域进行版本检测.",
-	["Closes the version query window."] = "关闭版本查询窗口.",
+	["Version query done."] = "版本查询完成。",
+	["Runs a version query on your current zone."] = "在当前区域上运行版本查询。",
+	["Closes the version query window."] = "关闭版本查询窗口。",
 	["current"] = "当前",
-	["Runs a version query on the given zone."] = "在给指定的区域进行版本查询",
+	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
 	["Zone"] = "区域",
 	["zone"] = "区域",
-	["N/A"] = "N/A",
-	["BigWigs"] = "BigWigs",
-	["Runs a version query on the BigWigs core."] = "在BigWigs核心部分运行版本查询.",
+	["N/A"] = "无",
+	["BigWigs"] = "Big Wigs",
+	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",
 	["Nr Replies"] = "回应人数",
 	["Ancient"] = "旧版本",
 
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = "你的BigWigs Turtle-WoW版本已过时！请访问 https://github.com/NineTears/BigWigs-Turtle-zhCN 获取最新版本。",
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "您的Big Wigs Turtle-WoW版本已过时！\n请访问github.com/madScripting/BigWigs-TurtleWoW获取最新版本。",
 	["Close"] = "关闭",
 	["Cancel"] = "取消",
 
-	["People with outdated BigWigs:"] = "在用老版本的BigWigs的人：",
-	["Notify old versions"] = "老版本的通知",
-	["Notify old versions"] = "老版本的通知",
-	["List people with old versions to raid chat."] = "将在用老版本的人列表发送到聊天框",
-	["Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN"] = "下载新版本到：https://github.com/NineTears/BigWigs-Turtle-zhCN",
+	["People with outdated BigWigs:"] = "使用过时版本的人员：",
+	["Notify old versions"] = "通知过时版本",
+	["List people with old versions to raid chat."] = "将使用过时版本的人员列入团队聊天。",
+	["Download newest version from github.com/madScripting/BigWigs-TurtleWoW"] = "从github.com/madScripting/BigWigs-TurtleWoW下载最新版本",
 
-	["Show popup"] = "显示弹出警报",
-	["Show popup warning on out of date version"] = "显示过期版本警报弹出窗口",
-
+	["Show popup"] = "显示弹出窗口",
+	["Show popup warning on out of date version"] = "在过时版本上显示弹出警告",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -103,42 +101,41 @@ L:RegisterTranslations("zhCN", function() return {
 	-- Last update: 2024-02-08
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
-	["Commands for querying the raid for Big Wigs versions."] = "查询BigWigs版本的RAID命令.",
-	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请稍候5秒钟再重试.",
-	["Querying versions for "] = "查询版本 ",
-	["Big Wigs Version Query"] = "BigWigs 版本查询",
-	["Close window"] = "关闭窗口", -- I know, it's really a Tablet.
-	["Showing version for "] = "显示版本 ",
-	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比你的更新，红色比你老，白色一样.",
+	["Commands for querying the raid for Big Wigs versions."] = "用于查询Big Wigs版本的命令。",
+	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
+	["Querying versions for "] = "正在查询版本：",
+	["Big Wigs Version Query"] = "Big Wigs版本查询",
+	["Close window"] = "关闭窗口",
+	["Showing version for "] = "显示版本：",
+	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比您的版本更新，红色版本比您的版本旧，白色版本与您的版本相同。",
 	["Player"] = "玩家",
 	["Version"] = "版本",
 	["Current zone"] = "当前区域",
 	["<zone>"] = "<区域>",
-	["Version query done."] = "版本检测已完成.",
-	["Runs a version query on your current zone."] = "对当前区域进行版本检测.",
-	["Closes the version query window."] = "关闭版本查询窗口.",
+	["Version query done."] = "版本查询完成。",
+	["Runs a version query on your current zone."] = "在当前区域上运行版本查询。",
+	["Closes the version query window."] = "关闭版本查询窗口。",
 	["current"] = "当前",
-	["Runs a version query on the given zone."] = "在给指定的区域进行版本查询",
+	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
 	["Zone"] = "区域",
 	["zone"] = "区域",
-	["N/A"] = "N/A",
-	["BigWigs"] = "BigWigs",
-	["Runs a version query on the BigWigs core."] = "在BigWigs核心部分运行版本查询.",
+	["N/A"] = "无",
+	["BigWigs"] = "Big Wigs",
+	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",
 	["Nr Replies"] = "回应人数",
 	["Ancient"] = "旧版本",
 
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = "你的BigWigs Turtle-WoW版本已过时！请访问 https://github.com/NineTears/BigWigs-Turtle-zhCN 获取最新版本。",
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "您的Big Wigs Turtle-WoW版本已过时！\n请访问github.com/madScripting/BigWigs-TurtleWoW获取最新版本。",
 	["Close"] = "关闭",
 	["Cancel"] = "取消",
 
-	["People with outdated BigWigs:"] = "在用老版本的BigWigs的人：",
-	["Notify old versions"] = "老版本的通知",
-	["Notify old versions"] = "老版本的通知",
-	["List people with old versions to raid chat."] = "将在用老版本的人列表发送到聊天框",
-	["Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN"] = "下载新版本到：https://github.com/NineTears/BigWigs-Turtle-zhCN",
+	["People with outdated BigWigs:"] = "使用过时版本的人员：",
+	["Notify old versions"] = "通知过时版本",
+	["List people with old versions to raid chat."] = "将使用过时版本的人员列入团队聊天。",
+	["Download newest version from github.com/madScripting/BigWigs-TurtleWoW"] = "从github.com/madScripting/BigWigs-TurtleWoW下载最新版本",
 
-	["Show popup"] = "显示弹出警报",
-	["Show popup warning on out of date version"] = "显示过期版本警报弹出窗口",
+	["Show popup"] = "显示弹出窗口",
+	["Show popup warning on out of date version"] = "在过时版本上显示弹出警告",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -168,14 +165,14 @@ L:RegisterTranslations("esES", function() return {
 	["Nr Replies"] = "Nr repuesta",
 	["Ancient"] = "Anciano",
 
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = "¡Tu versión de Big Wigs es anticuada!\n Por favor visite https://github.com/NineTears/BigWigs-Turtle-zhCN para descargar la última versión.",
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "¡Tu versión de Big Wigs es anticuada!\n Por favor visite github.com/madScripting/BigWigs-TurtleWoW para descargar la última versión.",
 	["Close"] = "Cerrar",
 	["Cancel"] = "Cancelar",
 
 	["People with outdated BigWigs:"] = "Personas con BigWigs anticuado:",
 	["Notify old versions"] = "Notificar de versiones anticuadas",
 	["List people with old versions to raid chat."] = "Enumera las personas con versiones anticuadas al chat de la banda",
-	["Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN"] = "Descarga la última versión en https://github.com/NineTears/BigWigs-Turtle-zhCN",
+	["Download newest version from github.com/madScripting/BigWigs-TurtleWoW"] = "Descarga la última versión en github.com/madScripting/BigWigs-TurtleWoW",
 
 	["Show popup"] = "Mostrar Ventana Emergente",
 	["Show popup warning on out of date version"] = "Muesta la ventana emergente para versiones anticuadas",
@@ -209,7 +206,7 @@ L:RegisterTranslations("deDE", function() return {
 	["Nr Replies"] = "Anzahl der Antworten",
 	["Ancient"] = "Alt",
 
-	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."] = "Deine Version von Big Wigs Turtle-WoW ist veraltet! Bitte downloade die neuste Version von https://github.com/NineTears/BigWigs-Turtle-zhCN",
+	["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."] = "Deine Version von Big Wigs Turtle-WoW ist veraltet! Bitte downloade die neuste Version von github.com/madScripting/BigWigs-TurtleWoW",
 	["Close"] = "Schliessen",
 	["Cancel"] = "Abbrechen",
 } end )
@@ -361,7 +358,7 @@ end
 function BigWigsVersionQuery:UpdateVersions()
 	for name, version in pairs(self.responseTable) do
 		if not self.zoneRevisions then return end
-		if version > 11200 and version < 40000 then
+		if version > 20000 and version < 40000 then
 			if self.zoneRevisions[self.currentZone] and version > self.zoneRevisions[self.currentZone] then
 				self:IsOutOfDate()
 			end
@@ -376,12 +373,12 @@ end
 function BigWigsVersionQuery:IsOutOfDate()
 	if not self.OutOfDateShown then
 		self.OutOfDateShown = true
-		BigWigs:Print(L["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."])
+		BigWigs:Print(L["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."])
 
 		if self.db.profile.popup then
 			local dialog = nil
 			StaticPopupDialogs["BigWigsOutOfDateDialog"] = {
-				text = L["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit https://github.com/NineTears/BigWigs-Turtle-zhCN to get the latest version."],
+				text = L["Your version of Big Wigs Turtle-WoW is out of date!\nPlease visit github.com/madScripting/BigWigs-TurtleWoW to get the latest version."],
 				button1 = L["Close"],
 				button2 = L["Cancel"],
 				OnAccept = function()
@@ -392,7 +389,7 @@ function BigWigsVersionQuery:IsOutOfDate()
 				end,
 				OnShow = function (self, data)
 					local editbox = getglobal(this:GetName().."WideEditBox")
-					editbox:SetText("https://github.com/NineTears/BigWigs-Turtle-zhCN")
+					editbox:SetText("github.com/madScripting/BigWigs-TurtleWoW")
 					editbox:SetWidth(250)
 					editbox:ClearFocus()
 					editbox:HighlightText()
@@ -426,7 +423,7 @@ function BigWigsVersionQuery:NotifyOldVersions()
 	end
 	SendChatMessage(L["People with outdated BigWigs:"],"RAID")
 	SendChatMessage(line,"RAID")
-	SendChatMessage("Download newest version from https://github.com/NineTears/BigWigs-Turtle-zhCN", "RAID")
+	SendChatMessage("Download newest version from github.com/madScripting/BigWigs-TurtleWoW", "RAID")
 end
 
 function BigWigsVersionQuery:OnTooltipUpdate()
@@ -457,7 +454,7 @@ function BigWigsVersionQuery:OnTooltipUpdate()
 			local color = COLOR_WHITE
 			if self.zoneRevisions[self.currentZone] and version > self.zoneRevisions[self.currentZone] then
 				color = COLOR_RED
-				if version > 11200 and version < 40000 then
+				if version > 20000 and version < 40000 then
 					self:IsOutOfDate()
 					color = COLOR_GREEN
 				end

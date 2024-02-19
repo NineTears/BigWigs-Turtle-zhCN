@@ -54,7 +54,7 @@ L:RegisterTranslations("enUS", function() return {
     tankburn_desc = "显示将施加在Boss目标上的燃烧刺激计时条。",
 
     icon_cmd = "icon",
-    icon_name = "团队标记",
+    icon_name = "团队标志",
     icon_desc = "标记获得燃烧刺激的玩家，以便更容易找到位置。\n\n(需要助理或更高权限)",
 } end)
 
@@ -197,7 +197,7 @@ L:RegisterTranslations("zhCN", function() return {
     tankburn_desc = "显示将施加在Boss目标上的燃烧刺激计时条。",
 
     icon_cmd = "icon",
-    icon_name = "团队标记",
+    icon_name = "团队标志",
     icon_desc = "标记获得燃烧刺激的玩家，以便更容易找到位置。\n\n(需要助理或更高权限)",
 } end)
 

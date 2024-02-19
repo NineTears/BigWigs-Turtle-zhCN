@@ -2,7 +2,7 @@
 local module, L = BigWigs:ModuleDeclaration("Instructor Razuvious", "Naxxramas")
 local understudy = AceLibrary("Babble-Boss-2.2")["Deathknight Understudy"]
 
-module.revision = 30040
+module.revision = 30042
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"mc", "shout", "unbalance", "shieldwall", "bosskill"}
 
@@ -31,7 +31,7 @@ L:RegisterTranslations("enUS", function() return {
 
     trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
     bar_shout = "打断怒吼",
-    msg_shout = "打断怒吼！接下来在25秒",
+    msg_shout = "打断怒吼！下一次将在25秒后施放。",
     --noshoutwarn = "No shout! Next in 20secs",
     
     trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed
@@ -112,7 +112,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
     bar_shout = "打断怒吼",
-    msg_shout = "打断怒吼！接下来在25秒",
+    msg_shout = "打断怒吼！下一次将在25秒后施放。",
     --noshoutwarn = "No shout! Next in 20secs",
     
     trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed
@@ -200,7 +200,7 @@ function module:OnEngage()
 		self:DelayedWarningSign(timer.firstShout - 3, icon.shout, 0.7)
 	end
 	
-	self:ScheduleRepeatingEvent("bwCheckRazuviousEngaged", self.CheckRazuviousEngaged, 0.5, self)
+	--self:ScheduleRepeatingEvent("bwCheckRazuviousEngaged", self.CheckRazuviousEngaged, 0.5, self)
 end
 
 function module:OnDisengage()

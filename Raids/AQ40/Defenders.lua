@@ -23,7 +23,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	icon_cmd = "icon",
 	icon_name = "标记",
-	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要助理或更高权限）",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标志（需要助理或更高权限）",
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
@@ -106,7 +106,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	icon_cmd = "icon",
 	icon_name = "标记",
-	icon_desc = "在最后一个中了瘟疫的人身上放置团队标记（需要助理或更高权限）",
+	icon_desc = "在最后一个中了瘟疫的人身上放置团队标志（需要助理或更高权限）",
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
