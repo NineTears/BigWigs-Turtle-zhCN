@@ -43,7 +43,7 @@ L:RegisterTranslations("enUS", function() return {
 
     adrenaline_cmd = "adrenaline",
     adrenaline_name = "燃烧刺激",
-    adrenaline_desc = "通报谁获得了燃烧刺激并开始一个可点击的计时条以便快速选择。",
+    adrenaline_desc = "通报谁获得了燃烧刺激并显示一个可点击的计时条以便快速选择。",
 
     whisper_cmd = "whisper",
     whisper_name = "密语",
@@ -186,7 +186,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     adrenaline_cmd = "adrenaline",
     adrenaline_name = "燃烧刺激",
-    adrenaline_desc = "通报谁获得了燃烧刺激并开始一个可点击的计时条以便快速选择。",
+    adrenaline_desc = "通报谁获得了燃烧刺激并显示一个可点击的计时条以便快速选择。",
 
     whisper_cmd = "whisper",
     whisper_name = "密语",

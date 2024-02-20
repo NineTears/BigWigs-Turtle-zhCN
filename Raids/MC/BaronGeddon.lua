@@ -14,15 +14,15 @@ L:RegisterTranslations("enUS", function() return {
     
     bomb_cmd = "bomb",
     bomb_name = "活体炸弹警报",
-    bomb_desc = "警告玩家成为活体炸弹时",
+    bomb_desc = "玩家成为活体炸弹时进行警告",
     
     inferno_cmd = "inferno",
     inferno_name = "地狱火警报",
-    inferno_desc = "迦顿男爵的地狱火的计时条。",
+    inferno_desc = "迦顿男爵的地狱火计时条。",
     
     service_cmd = "service",
     service_name = "最后的仪式警告",
-    service_desc = "迦顿男爵的最后的仪式的计时条。",
+    service_desc = "迦顿男爵的最后的仪式计时条。",
     
     ignite_cmd = "ignite",
     ignite_name = "点燃法力警报",
@@ -60,15 +60,15 @@ L:RegisterTranslations("zhCN", function() return {
     
     bomb_cmd = "bomb",
     bomb_name = "活体炸弹警报",
-    bomb_desc = "警告玩家成为活体炸弹时",
+    bomb_desc = "玩家成为活体炸弹时进行警告",
     
     inferno_cmd = "inferno",
     inferno_name = "地狱火警报",
-    inferno_desc = "迦顿男爵的地狱火的计时条。",
+    inferno_desc = "迦顿男爵的地狱火计时条。",
     
     service_cmd = "service",
     service_name = "最后的仪式警告",
-    service_desc = "迦顿男爵的最后的仪式的计时条。",
+    service_desc = "迦顿男爵的最后的仪式计时条。",
     
     ignite_cmd = "ignite",
     ignite_name = "点燃法力警报",
