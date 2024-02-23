@@ -9,12 +9,12 @@ L:RegisterTranslations("enUS", function() return {
     cmd = "Chromaggus",
 
     enrage_cmd = "enrage",
-    enrage_name = "狂暴",
-    enrage_desc = "在20%血量即将进入狂暴阶段前进行警告。",
+    enrage_name = "激怒",
+    enrage_desc = "在20%血量即将进入激怒阶段前进行警告",
 
     frenzy_cmd = "frenzy",
-    frenzy_name = "狂乱",
-    frenzy_desc = "狂乱出现时进行警告",
+    frenzy_name = "狂暴",
+    frenzy_desc = "狂暴出现时进行警告",
 
     breath_cmd = "breath",
     breath_name = "吐息",
@@ -22,7 +22,7 @@ L:RegisterTranslations("enUS", function() return {
 
     breathcd_cmd = "breathcd",
     breathcd_name = "吐息倒计时语音",
-    breathcd_desc = "吐息出现时进行语音倒计时进行警告。",
+    breathcd_desc = "吐息出现时进行语音倒计时进行警告",
 
     vulnerability_cmd = "vulnerability",
     vulnerability_name = "弱点",
@@ -39,28 +39,28 @@ L:RegisterTranslations("enUS", function() return {
     frenzyfade_trigger = "Frenzy fades from Chromaggus\.",
     vulnerability_trigger = "flinches as its skin shimmers.",
 
-    hit = "hits",
-    crit = "crits",
+    hit = "击中",
+    crit = "致命一击对",
 
     firstbreaths_warning = "5秒后吐息！",
     breath_warning = "%s 5秒后释放！",
-    breath_message = "%s正在施放！",
+    breath_message = "%s 正在施放！",
     vulnerability_message = "弱点：%s！",
-    vulnerability_warning = "法术弱点已改变！",
-    frenzy_message = "狂乱状态！立刻使用宁神射击！",
+    vulnerability_warning = "克洛玛古斯弱点改变!",
+    frenzy_message = "狂暴了！立刻宁神射击！",
     enrage_warning = "即将激怒！",
 
-    breath1 = "Time Lapse",
-    breath2 = "Corrosive Acid",
-    breath3 = "Ignite Flesh",
-    breath4 = "Incinerate",
-    breath5 = "Frost Burn",
+    breath1 = "时间流逝",
+    breath2 = "腐蚀酸液",
+    breath3 = "点燃躯体",
+    breath4 = "焚烧",
+    breath5 = "冰霜灼烧",
 
-    breathcolor1 = "black",
-    breathcolor2 = "green",
-    breathcolor3 = "orange",
-    breathcolor4 = "red",
-    breathcolor5 = "blue",
+    breathcolor1 = "黑色",
+    breathcolor2 = "绿色",
+    breathcolor3 = "橙色",
+    breathcolor4 = "红色",
+    breathcolor5 = "蓝色",
 
     icon1 = "Spell_Arcane_PortalOrgrimmar",
     icon2 = "Spell_Nature_Acid_01",
@@ -69,22 +69,22 @@ L:RegisterTranslations("enUS", function() return {
     icon5 = "Spell_Frost_ChillingBlast",
 
     castingbar = "施放 %s",
-    frenzy_bar = "狂乱",
-    frenzy_Nextbar = "下一次狂乱",
+    frenzy_bar = "狂暴(立刻宁神)",
+    frenzy_Nextbar = "下一次狂暴(准备宁神)",
     first_bar = "第一次吐息",
     second_bar = "第二次吐息",
     vuln_bar = "%s 弱点",
 
-    fire = "Fire",
-    frost = "Frost",
-    shadow = "Shadow",
-    nature = "Nature",
-    arcane = "Arcane",
+    fire = "火焰",
+    frost = "冰霜",
+    shadow = "暗影",
+    nature = "自然",
+    arcane = "奥术",
 
-    curseofdoom = "Curse of Doom",
-    ignite = "Ignite",
-    starfire = "Starfire",
-    thunderfury = "Thunderfury",
+    curseofdoom = "厄运诅咒",
+    ignite = "点燃",
+    starfire = "星火术",
+    thunderfury = "雷霆之怒",
     
     bronze = "你受到了龙血之痛：青铜的影响。",	
 } end )
@@ -236,17 +236,15 @@ L:RegisterTranslations("deDE", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Chromaggus",
 
     enrage_cmd = "enrage",
-    enrage_name = "狂暴",
-    enrage_desc = "在20%血量即将进入狂暴阶段前进行警告。",
+    enrage_name = "激怒",
+    enrage_desc = "在20%血量即将进入激怒阶段前进行警告",
 
     frenzy_cmd = "frenzy",
-    frenzy_name = "狂乱",
-    frenzy_desc = "狂乱出现时进行警告",
+    frenzy_name = "狂暴",
+    frenzy_desc = "狂暴出现时进行警告",
 
     breath_cmd = "breath",
     breath_name = "吐息",
@@ -254,7 +252,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     breathcd_cmd = "breathcd",
     breathcd_name = "吐息倒计时语音",
-    breathcd_desc = "吐息出现时进行语音倒计时进行警告。",
+    breathcd_desc = "吐息出现时进行语音倒计时进行警告",
 
     vulnerability_cmd = "vulnerability",
     vulnerability_name = "弱点",
@@ -271,28 +269,28 @@ L:RegisterTranslations("zhCN", function() return {
     frenzyfade_trigger = "Frenzy fades from Chromaggus\.",
     vulnerability_trigger = "flinches as its skin shimmers.",
 
-    hit = "hits",
-    crit = "crits",
+    hit = "击中",
+    crit = "致命一击对",
 
     firstbreaths_warning = "5秒后吐息！",
     breath_warning = "%s 5秒后释放！",
-    breath_message = "%s正在施放！",
+    breath_message = "%s 正在施放！",
     vulnerability_message = "弱点：%s！",
-    vulnerability_warning = "法术弱点已改变！",
-    frenzy_message = "狂乱状态！立刻使用宁神射击！",
+    vulnerability_warning = "克洛玛古斯弱点改变!",
+    frenzy_message = "狂暴了！立刻宁神射击！",
     enrage_warning = "即将激怒！",
 
-    breath1 = "Time Lapse",
-    breath2 = "Corrosive Acid",
-    breath3 = "Ignite Flesh",
-    breath4 = "Incinerate",
-    breath5 = "Frost Burn",
+    breath1 = "时间流逝",
+    breath2 = "腐蚀酸液",
+    breath3 = "点燃躯体",
+    breath4 = "焚烧",
+    breath5 = "冰霜灼烧",
 
-    breathcolor1 = "black",
-    breathcolor2 = "green",
-    breathcolor3 = "orange",
-    breathcolor4 = "red",
-    breathcolor5 = "blue",
+    breathcolor1 = "黑色",
+    breathcolor2 = "绿色",
+    breathcolor3 = "橙色",
+    breathcolor4 = "红色",
+    breathcolor5 = "蓝色",
 
     icon1 = "Spell_Arcane_PortalOrgrimmar",
     icon2 = "Spell_Nature_Acid_01",
@@ -301,22 +299,22 @@ L:RegisterTranslations("zhCN", function() return {
     icon5 = "Spell_Frost_ChillingBlast",
 
     castingbar = "施放 %s",
-    frenzy_bar = "狂乱",
-    frenzy_Nextbar = "下一次狂乱",
+    frenzy_bar = "狂暴(立刻宁神)",
+    frenzy_Nextbar = "下一次狂暴(准备宁神)",
     first_bar = "第一次吐息",
     second_bar = "第二次吐息",
     vuln_bar = "%s 弱点",
 
-    fire = "Fire",
-    frost = "Frost",
-    shadow = "Shadow",
-    nature = "Nature",
-    arcane = "Arcane",
+    fire = "火焰",
+    frost = "冰霜",
+    shadow = "暗影",
+    nature = "自然",
+    arcane = "奥术",
 
-    curseofdoom = "Curse of Doom",
-    ignite = "Ignite",
-    starfire = "Starfire",
-    thunderfury = "Thunderfury",
+    curseofdoom = "厄运诅咒",
+    ignite = "点燃",
+    starfire = "星火术",
+    thunderfury = "雷霆之怒",
     
     bronze = "你受到了龙血之痛：青铜的影响。",	
 } end )

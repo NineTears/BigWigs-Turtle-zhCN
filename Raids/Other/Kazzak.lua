@@ -84,7 +84,7 @@ L:RegisterTranslations("enUS", function() return {
 
     supreme_cmd = "supreme",
     supreme_name = "至高无上警报",
-    supreme_desc = "至高无上状态出现时进行警告。",
+    supreme_desc = "至高无上状态出现时进行警告",
 
     voidbolt_cmd = "voidbolt",
     voidbolt_name = "虚空箭",
@@ -92,15 +92,15 @@ L:RegisterTranslations("enUS", function() return {
 
     corruptsoul_cmd = "corruptsoul",
     corruptsoul_name = "腐蚀之魂",
-    corruptsoul_desc = "当Boss因随机死亡而治疗时进行警告。",
+    corruptsoul_desc = "当Boss因随机死亡而治疗时进行警告",
 
     markofkazzak_cmd = "markofkazzak",
     markofkazzak_name = "卡扎克的印记",
-    markofkazzak_desc = "当人们从Boss身上得到吸取法力的减益效果时进行警告。",
+    markofkazzak_desc = "当人们从Boss身上得到吸取法力的减益效果时进行警告",
 
     twistedreflection_cmd = "twistedreflection",
     twistedreflection_name = "扭曲反射",
-    twistedreflection_desc = "当人们得到了一个减益效果，每次击中他们时为Boss治疗25000生命值时进行警告。",
+    twistedreflection_desc = "当人们得到了一个减益效果，每次击中他们时为Boss治疗25000生命值时进行警告",
 
     puticon_cmd = "puticon",
     puticon_name = "卡扎克印记目标上的团队标志",
@@ -220,7 +220,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     supreme_cmd = "supreme",
     supreme_name = "至高无上警报",
-    supreme_desc = "至高无上状态出现时进行警告。",
+    supreme_desc = "至高无上状态出现时进行警告",
 
     voidbolt_cmd = "voidbolt",
     voidbolt_name = "虚空箭",
@@ -228,15 +228,15 @@ L:RegisterTranslations("zhCN", function() return {
 
     corruptsoul_cmd = "corruptsoul",
     corruptsoul_name = "腐蚀之魂",
-    corruptsoul_desc = "当Boss因随机死亡而治疗时进行警告。",
+    corruptsoul_desc = "当Boss因随机死亡而治疗时进行警告",
 
     markofkazzak_cmd = "markofkazzak",
     markofkazzak_name = "卡扎克的印记",
-    markofkazzak_desc = "当人们从Boss身上得到吸取法力的减益效果时进行警告。",
+    markofkazzak_desc = "当人们从Boss身上得到吸取法力的减益效果时进行警告",
 
     twistedreflection_cmd = "twistedreflection",
     twistedreflection_name = "扭曲反射",
-    twistedreflection_desc = "当人们得到了一个减益效果，每次击中他们时为Boss治疗25000生命值时进行警告。",
+    twistedreflection_desc = "当人们得到了一个减益效果，每次击中他们时为Boss治疗25000生命值时进行警告",
 
     puticon_cmd = "puticon",
     puticon_name = "卡扎克印记目标上的团队标志",

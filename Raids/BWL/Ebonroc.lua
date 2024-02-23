@@ -32,11 +32,11 @@ L:RegisterTranslations("enUS", function() return {
 
     wingbuffet_cmd = "wingbuffet",
     wingbuffet_name = "龙翼攻击警报",
-    wingbuffet_desc = "埃博诺克施放龙翼攻击时进行警告。",
+    wingbuffet_desc = "埃博诺克施放龙翼攻击时进行警告",
 
     shadowflame_cmd = "shadowflame",
     shadowflame_name = "暗影烈焰警报",
-    shadowflame_desc = "埃博诺克施放暗影烈焰时进行警告。",
+    shadowflame_desc = "埃博诺克施放暗影烈焰时进行警告",
 
     curse_cmd = "curse",
     curse_name = "埃博诺克的暗影警告",
@@ -136,11 +136,11 @@ L:RegisterTranslations("zhCN", function() return {
 
     wingbuffet_cmd = "wingbuffet",
     wingbuffet_name = "龙翼攻击警报",
-    wingbuffet_desc = "埃博诺克施放龙翼攻击时进行警告。",
+    wingbuffet_desc = "埃博诺克施放龙翼攻击时进行警告",
 
     shadowflame_cmd = "shadowflame",
     shadowflame_name = "暗影烈焰警报",
-    shadowflame_desc = "埃博诺克施放暗影烈焰时进行警告。",
+    shadowflame_desc = "埃博诺克施放暗影烈焰时进行警告",
 
     curse_cmd = "curse",
     curse_name = "埃博诺克的暗影警告",

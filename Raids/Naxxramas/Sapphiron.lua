@@ -10,15 +10,15 @@ L:RegisterTranslations("enUS", function() return {
 
     deepbreath_cmd = "deepbreath",
     deepbreath_name = "深呼吸警报",
-    deepbreath_desc = "萨菲隆开始施放深呼吸时进行警告。",
+    deepbreath_desc = "萨菲隆开始施放深呼吸时进行警告",
 
     lifedrain_cmd = "lifedrain",
     lifedrain_name = "生命吸取",
-    lifedrain_desc = "生命吸取诅咒出现时进行警告。",
+    lifedrain_desc = "生命吸取诅咒出现时进行警告",
 
     berserk_cmd = "berserk",
     berserk_name = "狂暴",
-    berserk_desc = "狂暴出现时进行警告。",
+    berserk_desc = "狂暴出现时进行警告",
 
     icebolt_cmd = "icebolt",
     icebolt_name = "通报冰冻术",
@@ -103,15 +103,15 @@ L:RegisterTranslations("zhCN", function() return {
 
     deepbreath_cmd = "deepbreath",
     deepbreath_name = "深呼吸警报",
-    deepbreath_desc = "萨菲隆开始施放深呼吸时进行警告。",
+    deepbreath_desc = "萨菲隆开始施放深呼吸时进行警告",
 
     lifedrain_cmd = "lifedrain",
     lifedrain_name = "生命吸取",
-    lifedrain_desc = "生命吸取诅咒出现时进行警告。",
+    lifedrain_desc = "生命吸取诅咒出现时进行警告",
 
     berserk_cmd = "berserk",
     berserk_name = "狂暴",
-    berserk_desc = "狂暴出现时进行警告。",
+    berserk_desc = "狂暴出现时进行警告",
 
     icebolt_cmd = "icebolt",
     icebolt_name = "通报冰冻术",

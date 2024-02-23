@@ -22,7 +22,7 @@ L:RegisterTranslations("enUS", function() return {
     vuln_bar = "%s 弱点",
     
     warstomp_trigger = "Death Talon Wyrmguard's War Stomp",
-    warstomp_bar = "战争践踏冷却",
+    warstomp_bar = "战争践踏 CD",
     
     vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Death Talon Wyrmguard for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
     vulnerability_dots_test = "^Death Talon Wyrmguard suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
@@ -58,7 +58,7 @@ L:RegisterTranslations("zhCN", function() return {
     vuln_bar = "%s 弱点",
     
     warstomp_trigger = "Death Talon Wyrmguard's War Stomp",
-    warstomp_bar = "战争践踏冷却",
+    warstomp_bar = "战争践踏 CD",
     
     vulnerability_direct_test = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Death Talon Wyrmguard for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
     vulnerability_dots_test = "^Death Talon Wyrmguard suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",

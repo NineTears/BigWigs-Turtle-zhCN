@@ -14,7 +14,7 @@ L:RegisterTranslations("enUS", function() return {
 
     mark_cmd = "mark",
     mark_name = "娅尔罗印记警报",
-    mark_desc = "玩家被标记时进行警告。",
+    mark_desc = "玩家被标记时进行警告",
 
     whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩警报",
@@ -58,7 +58,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     mark_cmd = "mark",
     mark_name = "娅尔罗印记警报",
-    mark_desc = "玩家被标记时进行警告。",
+    mark_desc = "玩家被标记时进行警告",
 
     whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩警报",

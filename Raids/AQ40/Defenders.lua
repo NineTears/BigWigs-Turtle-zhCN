@@ -27,15 +27,15 @@ L:RegisterTranslations("enUS", function() return {
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
-	thunderclap_desc = "雷霆一击出现时进行警告。",
+	thunderclap_desc = "雷霆一击出现时进行警告",
 	
 	shadowstorm_cmd = "shadowstorm",
 	shadowstorm_name = "暗影风暴警报",
-	shadowstorm_desc = "暗影风暴出现时进行警告。",
+	shadowstorm_desc = "暗影风暴出现时进行警告",
 	
 	meteor_cmd = "meteor",
 	meteor_name = "流星警报",
-	meteor_desc = "流星出现时进行警告。",
+	meteor_desc = "流星出现时进行警告",
 	
 	explode_cmd = "explode",
 	explode_name = "爆炸警报",
@@ -43,7 +43,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	enrage_cmd = "enrage",
 	enrage_name = "激怒警报",
-	enrage_desc = "激怒状态出现时进行警告。",
+	enrage_desc = "激怒状态出现时进行警告",
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_arcaneFireReflect2 = "Scorch is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
@@ -110,15 +110,15 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	thunderclap_cmd = "thunderclap",
 	thunderclap_name = "雷霆一击警报",
-	thunderclap_desc = "雷霆一击出现时进行警告。",
+	thunderclap_desc = "雷霆一击出现时进行警告",
 	
 	shadowstorm_cmd = "shadowstorm",
 	shadowstorm_name = "暗影风暴警报",
-	shadowstorm_desc = "暗影风暴出现时进行警告。",
+	shadowstorm_desc = "暗影风暴出现时进行警告",
 	
 	meteor_cmd = "meteor",
 	meteor_name = "流星警报",
-	meteor_desc = "流星出现时进行警告。",
+	meteor_desc = "流星出现时进行警告",
 	
 	explode_cmd = "explode",
 	explode_name = "爆炸警报",
@@ -126,7 +126,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	enrage_cmd = "enrage",
 	enrage_name = "激怒警报",
-	enrage_desc = "激怒状态出现时进行警告。",
+	enrage_desc = "激怒状态出现时进行警告",
 	
 	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
 	trigger_arcaneFireReflect2 = "Scorch is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE

@@ -11,7 +11,7 @@ L:RegisterTranslations("enUS", function() return {
 
     shout_cmd = "shout",
     shout_name = "怒吼警报",
-    shout_desc = "打断怒吼时进行警告",
+    shout_desc = "瓦解怒吼时进行警告",
     
     mc_cmd = "mc",
     mc_name = "精神控制计时条",
@@ -30,8 +30,8 @@ L:RegisterTranslations("enUS", function() return {
     starttrigger3 = "Hah hah, I'm just getting warmed up!",
 
     trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
-    bar_shout = "打断怒吼",
-    msg_shout = "打断怒吼！下一次将在25秒后施放。",
+    bar_shout = "瓦解怒吼",
+    msg_shout = "瓦解怒吼！下一次将在25秒后施放。",
     --noshoutwarn = "No shout! Next in 20secs",
     
     trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed
@@ -92,7 +92,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     shout_cmd = "shout",
     shout_name = "怒吼警报",
-    shout_desc = "打断怒吼时进行警告",
+    shout_desc = "瓦解怒吼时进行警告",
     
     mc_cmd = "mc",
     mc_name = "精神控制计时条",
@@ -111,8 +111,8 @@ L:RegisterTranslations("zhCN", function() return {
     starttrigger3 = "Hah hah, I'm just getting warmed up!",
 
     trigger_shout = "%s lets loose a triumphant shout.",--CHAT_MSG_RAID_BOSS_EMOTE
-    bar_shout = "打断怒吼",
-    msg_shout = "打断怒吼！下一次将在25秒后施放。",
+    bar_shout = "瓦解怒吼",
+    msg_shout = "瓦解怒吼！下一次将在25秒后施放。",
     --noshoutwarn = "No shout! Next in 20secs",
     
     trigger_unbalance = "afflicted by Unbalancing Strike",--to be confirmed

@@ -21,11 +21,11 @@ L:RegisterTranslations("enUS", function() return {
 
     chainlightning_cmd = "chainlightning",
     chainlightning_name = "闪电链警报",
-    chainlightning_desc = "当Boss施放闪电链时进行警告。",
+    chainlightning_desc = "当Boss施放闪电链时进行警告",
 
     lightningcloud_cmd = "lightningcloud",
     lightningcloud_name = "闪电云警告",
-    lightningcloud_desc = "当你站在闪电云中时进行警告。",
+    lightningcloud_desc = "当你站在闪电云中时进行警告",
 } end )
 
 L:RegisterTranslations("deDE", function() return {
@@ -77,11 +77,11 @@ L:RegisterTranslations("zhCN", function() return {
 
     chainlightning_cmd = "chainlightning",
     chainlightning_name = "闪电链警报",
-    chainlightning_desc = "当Boss施放闪电链时进行警告。",
+    chainlightning_desc = "当Boss施放闪电链时进行警告",
 
     lightningcloud_cmd = "lightningcloud",
     lightningcloud_name = "闪电云警告",
-    lightningcloud_desc = "当你站在闪电云中时进行警告。",
+    lightningcloud_desc = "当你站在闪电云中时进行警告",
 } end )
 
 ---------------------------------

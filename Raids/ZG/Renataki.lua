@@ -24,7 +24,7 @@ L:RegisterTranslations("enUS", function() return {
 
     vanish_cmd = "vanish",
     vanish_name = "消失通报",
-    vanish_desc = "Boss消失时进行警告。",
+    vanish_desc = "Boss消失时进行警告",
 
     enraged_cmd = "enraged",
     enraged_name = "激怒通报",
@@ -88,7 +88,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     vanish_cmd = "vanish",
     vanish_name = "消失通报",
-    vanish_desc = "Boss消失时进行警告。",
+    vanish_desc = "Boss消失时进行警告",
 
     enraged_cmd = "enraged",
     enraged_name = "激怒通报",

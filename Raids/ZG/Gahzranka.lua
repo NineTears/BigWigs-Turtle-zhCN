@@ -10,15 +10,15 @@ L:RegisterTranslations("enUS", function() return {
 
     frostbreath_cmd = "frostbreath",
     frostbreath_name = "冰霜吐息警报",
-    frostbreath_desc = "当Boss开始施放冰霜吐息时进行警告。",
+    frostbreath_desc = "当Boss开始施放冰霜吐息时进行警告",
 
     geyser_cmd = "geyser",
     geyser_name = "巨型喷泉警报",
-    geyser_desc = "当Boss开始施放巨型喷泉时进行警告。",
+    geyser_desc = "当Boss开始施放巨型喷泉时进行警告",
 
     slam_cmd = "slam",
     slam_name = "猛击警报",
-    slam_desc = "当Boss施放猛击时进行警告。",
+    slam_desc = "当Boss施放猛击时进行警告",
 
     trigger_frostbreathCast = "Gahz'ranka begins to perform Frost Breath.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbreathCast = "冰霜吐息伤害+法力燃烧",
@@ -78,15 +78,15 @@ L:RegisterTranslations("zhCN", function() return {
 
     frostbreath_cmd = "frostbreath",
     frostbreath_name = "冰霜吐息警报",
-    frostbreath_desc = "当Boss开始施放冰霜吐息时进行警告。",
+    frostbreath_desc = "当Boss开始施放冰霜吐息时进行警告",
 
     geyser_cmd = "geyser",
     geyser_name = "巨型喷泉警报",
-    geyser_desc = "当Boss开始施放巨型喷泉时进行警告。",
+    geyser_desc = "当Boss开始施放巨型喷泉时进行警告",
 
     slam_cmd = "slam",
     slam_name = "猛击警报",
-    slam_desc = "当Boss施放猛击时进行警告。",
+    slam_desc = "当Boss施放猛击时进行警告",
 
     trigger_frostbreathCast = "Gahz'ranka begins to perform Frost Breath.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbreathCast = "冰霜吐息伤害+法力燃烧",

@@ -39,7 +39,7 @@ L:RegisterTranslations("enUS", function() return {
 
     flamebreath_cmd = "flamebreath",
     flamebreath_name = "龙息术",
-    flamebreath_desc = "当Boss施放龙息术时进行警告。",
+    flamebreath_desc = "当Boss施放龙息术时进行警告",
 
     adrenaline_cmd = "adrenaline",
     adrenaline_name = "燃烧刺激",
@@ -182,7 +182,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     flamebreath_cmd = "flamebreath",
     flamebreath_name = "龙息术",
-    flamebreath_desc = "当Boss施放龙息术时进行警告。",
+    flamebreath_desc = "当Boss施放龙息术时进行警告",
 
     adrenaline_cmd = "adrenaline",
     adrenaline_name = "燃烧刺激",

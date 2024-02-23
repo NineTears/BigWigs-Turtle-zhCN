@@ -10,7 +10,7 @@ L:RegisterTranslations("enUS", function() return {
     
     avatar_cmd = "avatar",
     avatar_name = "天神下凡警报",
-    avatar_desc = "当Boss获得天神下凡效果（激怒阶段）时进行警告。",
+    avatar_desc = "当Boss获得天神下凡效果（激怒阶段）时进行警告",
 
     melee_cmd = "melee",
     melee_name = "近战警报",
@@ -87,7 +87,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     avatar_cmd = "avatar",
     avatar_name = "天神下凡警报",
-    avatar_desc = "当Boss获得天神下凡效果（激怒阶段）时进行警告。",
+    avatar_desc = "当Boss获得天神下凡效果（激怒阶段）时进行警告",
 
     melee_cmd = "melee",
     melee_name = "近战警报",

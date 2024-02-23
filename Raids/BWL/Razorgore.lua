@@ -63,7 +63,7 @@ L:RegisterTranslations("enUS", function() return {
 
     phase_cmd = "phase",
     phase_name = "阶段",
-    phase_desc = "阶段转换进行警告。",
+    phase_desc = "阶段转换进行警告",
 
     mobs_cmd = "mobs",
     mobs_name = "首波敌人",
@@ -303,7 +303,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     phase_cmd = "phase",
     phase_name = "阶段",
-    phase_desc = "阶段转换进行警告。",
+    phase_desc = "阶段转换进行警告",
 
     mobs_cmd = "mobs",
     mobs_name = "首波敌人",

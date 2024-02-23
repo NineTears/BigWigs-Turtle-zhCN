@@ -21,7 +21,7 @@ L:RegisterTranslations("enUS", function() return {
 
     flamebreath_cmd = "flamebreath",
     flamebreath_name = "烈焰吐息",
-    flamebreath_desc = "烈焰吐息出现时进行警告。",
+    flamebreath_desc = "烈焰吐息出现时进行警告",
 
     freeze_cmd = "freeze",
     freeze_name = "冰冻",
@@ -29,7 +29,7 @@ L:RegisterTranslations("enUS", function() return {
 
     dismount_cmd = "dismount",
     dismount_name = "下马",
-    dismount_desc = "当雷德下马时进行警告。",
+    dismount_desc = "当雷德下马时进行警告",
 
     whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩",
@@ -91,7 +91,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     flamebreath_cmd = "flamebreath",
     flamebreath_name = "烈焰吐息",
-    flamebreath_desc = "烈焰吐息出现时进行警告。",
+    flamebreath_desc = "烈焰吐息出现时进行警告",
 
     freeze_cmd = "freeze",
     freeze_name = "冰冻",
@@ -99,7 +99,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     dismount_cmd = "dismount",
     dismount_name = "下马",
-    dismount_desc = "当雷德下马时进行警告。",
+    dismount_desc = "当雷德下马时进行警告",
 
     whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩",

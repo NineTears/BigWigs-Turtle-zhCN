@@ -11,7 +11,7 @@ L:RegisterTranslations("enUS", function() return {
 
     heal_cmd = "heal",
     heal_name = "治疗警报",
-    heal_desc = "狂热者洛卡恩治疗时进行警告。",
+    heal_desc = "狂热者洛卡恩治疗时进行警告",
 
     bloodlust_cmd = "bloodlust",
     bloodlust_name = "嗜血警报",
@@ -35,15 +35,15 @@ L:RegisterTranslations("enUS", function() return {
 
     tigers_cmd = "tigers",
     tigers_name = "召唤老虎",
-    tigers_desc = "有老虎增援时进行警告。",
+    tigers_desc = "有老虎增援时进行警告",
 
     frenzy_cmd = "frenzy",
     frenzy_name = "疯狂警报",
-    frenzy_desc = "当高阶祭司塞卡尔进入疯狂状态时进行警告。",
+    frenzy_desc = "当高阶祭司塞卡尔进入疯狂状态时进行警告",
 
     enraged_cmd = "enraged",
     enraged_name = "激怒警报",
-    enraged_desc = "当Boss被激怒时进行警告。",
+    enraged_desc = "当Boss被激怒时进行警告",
 
     phase_cmd = "phase",
     phase_name = "阶段通知",
@@ -119,7 +119,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     heal_cmd = "heal",
     heal_name = "治疗警报",
-    heal_desc = "狂热者洛卡恩治疗时进行警告。",
+    heal_desc = "狂热者洛卡恩治疗时进行警告",
 
     bloodlust_cmd = "bloodlust",
     bloodlust_name = "嗜血警报",
@@ -143,15 +143,15 @@ L:RegisterTranslations("zhCN", function() return {
 
     tigers_cmd = "tigers",
     tigers_name = "召唤老虎",
-    tigers_desc = "有老虎增援时进行警告。",
+    tigers_desc = "有老虎增援时进行警告",
 
     frenzy_cmd = "frenzy",
     frenzy_name = "疯狂警报",
-    frenzy_desc = "当高阶祭司塞卡尔进入疯狂状态时进行警告。",
+    frenzy_desc = "当高阶祭司塞卡尔进入疯狂状态时进行警告",
 
     enraged_cmd = "enraged",
     enraged_name = "激怒警报",
-    enraged_desc = "当Boss被激怒时进行警告。",
+    enraged_desc = "当Boss被激怒时进行警告",
 
     phase_cmd = "phase",
     phase_name = "阶段通知",

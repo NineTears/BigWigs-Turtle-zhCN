@@ -20,7 +20,7 @@ L:RegisterTranslations("enUS", function() return {
 
     warstomp_cmd = "warstomp",
     warstomp_name = "战争践踏",
-    warstomp_desc = "战争践踏出现时进行警告。",
+    warstomp_desc = "战争践踏出现时进行警告",
 
     trigger_warstomp = "Solakar Flamewreath's War Stomp",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_warstomp = "眩晕！",
@@ -57,7 +57,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     warstomp_cmd = "warstomp",
     warstomp_name = "战争践踏",
-    warstomp_desc = "战争践踏出现时进行警告。",
+    warstomp_desc = "战争践踏出现时进行警告",
 
     trigger_warstomp = "Solakar Flamewreath's War Stomp",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_warstomp = "眩晕！",

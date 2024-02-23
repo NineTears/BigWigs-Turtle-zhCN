@@ -34,15 +34,15 @@ L:RegisterTranslations("enUS", function() return {
 
     wingbuffet_cmd = "wingbuffet",
     wingbuffet_name = "龙翼攻击警报",
-    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告",
 
     shadowflame_cmd = "shadowflame",
     shadowflame_name = "暗影烈焰警报",
-    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。",
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告",
 
     frenzy_cmd = "frenzy",
     frenzy_name = "狂暴警报",
-    frenzy_desc = "当弗莱格尔狂暴时进行警告。", 
+    frenzy_desc = "当弗莱格尔狂暴时进行警告", 
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -141,15 +141,15 @@ L:RegisterTranslations("zhCN", function() return {
 
     wingbuffet_cmd = "wingbuffet",
     wingbuffet_name = "龙翼攻击警报",
-    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告",
 
     shadowflame_cmd = "shadowflame",
     shadowflame_name = "暗影烈焰警报",
-    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。",
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告",
 
     frenzy_cmd = "frenzy",
     frenzy_name = "狂暴警报",
-    frenzy_desc = "当弗莱格尔狂暴时进行警告。", 
+    frenzy_desc = "当弗莱格尔狂暴时进行警告", 
 } end)
 
 ---------------------------------

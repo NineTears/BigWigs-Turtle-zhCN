@@ -18,7 +18,7 @@ L:RegisterTranslations("enUS", function() return {
 
     mc_cmd = "mc",
     mc_name = "精神控制",
-    mc_desc = "当玩家被精神控制时进行警告。",
+    mc_desc = "当玩家被精神控制时进行警告",
 
     aspectjeklik_cmd = "aspectjeklik",
     aspectjeklik_name = "耶克里克的守护",
@@ -286,7 +286,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     mc_cmd = "mc",
     mc_name = "精神控制",
-    mc_desc = "当玩家被精神控制时进行警告。",
+    mc_desc = "当玩家被精神控制时进行警告",
 
     aspectjeklik_cmd = "aspectjeklik",
     aspectjeklik_name = "耶克里克的守护",

@@ -10,19 +10,19 @@ L:RegisterTranslations("enUS", function() return {
 
     brainwash_cmd = "brainwash",
     brainwash_name = "洗脑图腾警报",
-    brainwash_desc = "金度召唤洗脑图腾时进行警告。",
+    brainwash_desc = "金度召唤洗脑图腾时进行警告",
 
     healingward_cmd = "healingward",
     healingward_name = "治疗图腾警报",
-    healingward_desc = "金度召唤强效治疗结界时进行警告。",
+    healingward_desc = "金度召唤强效治疗结界时进行警告",
 
     curse_cmd = "curse",
     curse_name = "诅咒警报",
-    curse_desc = "玩家中了金度的妄想时进行警告。",
+    curse_desc = "玩家中了金度的妄想时进行警告",
 
     hex_cmd = "hex",
     hex_name = "妖术警报",
-    hex_desc = "玩家中了妖术时进行警告。",
+    hex_desc = "玩家中了妖术时进行警告",
 
     puticon_cmd = "puticon",
     puticon_name = "标记中了诅咒的玩家",
@@ -65,19 +65,19 @@ L:RegisterTranslations("zhCN", function() return {
 
     brainwash_cmd = "brainwash",
     brainwash_name = "洗脑图腾警报",
-    brainwash_desc = "金度召唤洗脑图腾时进行警告。",
+    brainwash_desc = "金度召唤洗脑图腾时进行警告",
 
     healingward_cmd = "healingward",
     healingward_name = "治疗图腾警报",
-    healingward_desc = "金度召唤强效治疗结界时进行警告。",
+    healingward_desc = "金度召唤强效治疗结界时进行警告",
 
     curse_cmd = "curse",
     curse_name = "诅咒警报",
-    curse_desc = "玩家中了金度的妄想时进行警告。",
+    curse_desc = "玩家中了金度的妄想时进行警告",
 
     hex_cmd = "hex",
     hex_name = "妖术警报",
-    hex_desc = "玩家中了妖术时进行警告。",
+    hex_desc = "玩家中了妖术时进行警告",
 
     puticon_cmd = "puticon",
     puticon_name = "标记中了诅咒的玩家",

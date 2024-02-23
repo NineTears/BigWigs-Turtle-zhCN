@@ -33,15 +33,15 @@ L:RegisterTranslations("enUS", function() return {
 
     flamebuffet_cmd = "flamebuffet",
     flamebuffet_name = "烈焰打击警报",
-    flamebuffet_desc = "当弗莱格尔施放烈焰打击时进行警告。",
+    flamebuffet_desc = "当弗莱格尔施放烈焰打击时进行警告",
 
     wingbuffet_cmd = "wingbuffet",
     wingbuffet_name = "龙翼攻击警报",
-    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告",
 
     shadowflame_cmd = "shadowflame",
     shadowflame_name = "暗影烈焰警报",
-    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。", 
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告", 
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -140,15 +140,15 @@ L:RegisterTranslations("zhCN", function() return {
 
     flamebuffet_cmd = "flamebuffet",
     flamebuffet_name = "烈焰打击警报",
-    flamebuffet_desc = "当弗莱格尔施放烈焰打击时进行警告。",
+    flamebuffet_desc = "当弗莱格尔施放烈焰打击时进行警告",
 
     wingbuffet_cmd = "wingbuffet",
     wingbuffet_name = "龙翼攻击警报",
-    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告。",
+    wingbuffet_desc = "当弗莱格尔施放龙翼攻击时进行警告",
 
     shadowflame_cmd = "shadowflame",
     shadowflame_name = "暗影烈焰警报",
-    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告。", 
+    shadowflame_desc = "当弗莱格尔施放暗影烈焰时进行警告", 
 } end)
 ---------------------------------
 --      	Variables 		   --
