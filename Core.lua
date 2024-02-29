@@ -135,31 +135,31 @@ L:RegisterTranslations("enUS", function() return {
 	["Load all %s modules."] = "加载所有 %s 模块.",
 
 	-- AceConsole zone commands
-	["Zul'Gurub"] = "祖尔格拉布",
-	["Molten Core"] = "熔火之心",
-	["Blackwing Lair"] = "黑翼之巢",
-	["Ahn'Qiraj"] = "安其拉",
-	["Ruins of Ahn'Qiraj"] = "安其拉废墟",
-	["Onyxia's Lair"] = "奥妮克希亚的巢穴",
-	["Naxxramas"] = "纳克萨玛斯",
-	["Emerald Sanctum"] = "翡翠圣境",
-	["Karazhan"] = "卡拉赞下层大厅",
-	["Dire Maul"] = "厄运之槌(北)",
-	["Blackrock Spire"] = "黑石塔上层",
-	["The Black Morass"] = "时光之穴:黑色沼泽",
-	["Silithus"] = "希利苏斯",
-	["Outdoor Raid Bosses"] = "世界Boss",
-	["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+	--["Zul'Gurub"] = "祖尔格拉布",
+	--["Molten Core"] = "熔火之心",
+	--["Blackwing Lair"] = "黑翼之巢",
+	--["Ahn'Qiraj"] = "安其拉",
+	--["Ruins of Ahn'Qiraj"] = "安其拉废墟",
+	--["Onyxia's Lair"] = "奥妮克希亚的巢穴",
+	--["Naxxramas"] = "纳克萨玛斯",
+	--["Emerald Sanctum"] = "翡翠圣境",
+	--["Karazhan"] = "卡拉赞下层大厅",
+	--["Dire Maul"] = "厄运之槌(北)",
+	--["Blackrock Spire"] = "黑石塔上层",
+	--["The Black Morass"] = "时光之穴:黑色沼泽",
+	--["Silithus"] = "希利苏斯",
+	--["Outdoor Raid Bosses"] = "世界Boss",
+	--["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 
-	["Battlegrounds"] = "战场",
-	["Alterac Valley"] = "奥特兰克山谷",
-	["Arathi Basin"] = "阿拉希盆地",
+	--["Battlegrounds"] = "战场",
+	--["Alterac Valley"] = "奥特兰克山谷",
+	--["Arathi Basin"] = "阿拉希盆地",
 
 	--Name for exception bosses (neutrals that enable modules)
-	["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
-	["Lord Victor Nefarius"] = "维克多·奈法里奥斯",
-	["Solnius"] = "索尔纽斯",
-	["Lieutenant General Andorov"] = "安多洛夫中将",
+	--["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
+	--["Lord Victor Nefarius"] = "维克多·奈法里奥斯",
+	--["Solnius"] = "索尔纽斯",
+	--["Lieutenant General Andorov"] = "安多洛夫中将",
 
 	["You have slain %s!"] = "你已击败%s!",
 } end)
