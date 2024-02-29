@@ -1,7 +1,7 @@
 ## Interface: 11200
 
-## Title: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星1.24]|R
-## Title-zhCN: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星1.24]|R
+## Title: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星1.25]|R
+## Title-zhCN: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星1.25]|R
 ## Notes: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星]|R团队首领警报插件，预警、提示BOSS技能并显示计时条，由|cff33ffccNineTears(Wind)|R汉化修复。|N命令：/BigWigs
 ## Notes-zhCN: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星]|R团队首领警报插件，预警、提示BOSS技能并显示计时条，由|cff33ffccNineTears(Wind)|R汉化修复。|N命令：/BigWigs
 ## X-Repple: 团队
@@ -69,6 +69,7 @@ Raids\ZG\Wushoolay.lua
 Raids\ZG\Gahzranka.lua
 Raids\ZG\GurubashiBerserker.lua
 Raids\ZG\GurubashiBatRider.lua
+Raids\ZG\MadServant.lua
 
 Raids\AQ20\Ayamiss.lua
 Raids\AQ20\Buru.lua
@@ -132,6 +133,7 @@ Raids\Other\DarkReaverOfKarazhan.lua
 Raids\Other\NerubianOverseer.lua
 Raids\Other\TwilightCorrupter.lua
 Raids\Other\Ostarius.lua
+Raids\Other\DrWeavil.lua
 
 Raids\Onyxia\Onyxia.lua
 

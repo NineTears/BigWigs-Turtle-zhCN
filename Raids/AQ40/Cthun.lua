@@ -1,7 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("C'Thun", "Ahn'Qiraj")
 
-module.revision = 30027
+module.revision = 30055
 local eyeofcthun = AceLibrary("Babble-Boss-2.2")["Eye of C'Thun"]
 local cthun = AceLibrary("Babble-Boss-2.2")["C'Thun"]
 module.enabletrigger = {eyeofcthun, cthun}
@@ -55,7 +55,7 @@ L:RegisterTranslations("enUS", function() return {
 
     eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
     eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
-    eyebeam     = "%s受到眼棱攻击",
+    eyebeam     = "%s 受到眼棱攻击",
     Unknown = "未知", -- Eye Beam on Unknown
     
     tentacle    = "触须派对 - 5秒",
@@ -85,10 +85,9 @@ L:RegisterTranslations("enUS", function() return {
     barWeakened = "克苏恩变得虚弱！",
 
     digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
-    msgDigestiveAcid = "5层消化酸液堆叠",
+    msgDigestiveAcid = "5层消化酸液",
 
-    ["Second TentacleHP"] = "第二触须血量%d%%",
-    ["First Tentacle dead"] = "第一触须已死",
+    ["First Tentacle dead"] = "第一触须死亡",
     ["First Tentacle"] = "第一触须",
     ["Second Tentacle"] = "第二触须",
 
@@ -98,8 +97,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Cthun",
     
     icon_cmd = "icon",
@@ -147,7 +144,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
     eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
-    eyebeam     = "%s受到眼棱攻击",
+    eyebeam     = "%s 受到眼棱攻击",
     Unknown = "未知", -- Eye Beam on Unknown
     
     tentacle    = "触须派对 - 5秒",
@@ -177,10 +174,9 @@ L:RegisterTranslations("zhCN", function() return {
     barWeakened = "克苏恩变得虚弱！",
 
     digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
-    msgDigestiveAcid = "5层消化酸液堆叠",
+    msgDigestiveAcid = "5层消化酸液",
 
-    ["Second TentacleHP"] = "第二触须血量%d%%",
-    ["First Tentacle dead"] = "第一触须已死",
+    ["First Tentacle dead"] = "第一触须死亡",
     ["First Tentacle"] = "第一触须",
     ["Second Tentacle"] = "第二触须",
 
@@ -259,6 +255,10 @@ local isWeakened = nil
 local doCheckForWipe = false
 
 local eyeTarget = nil
+
+function module:OnRegister()
+	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
+end
 
 function module:OnEnable()
 	--self:RegisterEvent("CHAT_MSG_SAY")--Debug
@@ -358,6 +358,13 @@ end
 function module:OnDisengage()
 	self:RemoveProximity()
 	self:TriggerEvent("BigWigs_StopDebuffTrack")
+end
+
+function module:MINIMAP_ZONE_CHANGED(msg)
+	--The Scarab Wall when you release, then Gates of Ahn'Qiraj as you run back, then Ahn'Qiraj when you zone in
+	if (GetMinimapZoneText() == "The Scarab Wall" or GetMinimapZoneText() == "Gates of Ahn'Qiraj") and self.core:IsModuleActive(module.translatedName) then
+		self.core:DisableModule(module.translatedName)
+	end
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)

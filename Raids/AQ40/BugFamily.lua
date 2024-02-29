@@ -5,24 +5,24 @@ local kri = AceLibrary("Babble-Boss-2.2")["Lord Kri"]
 local yauj = AceLibrary("Babble-Boss-2.2")["Princess Yauj"]
 local vem = AceLibrary("Babble-Boss-2.2")["Vem"]
 
-module.revision = 30039
+module.revision = 30055
 module.enabletrigger = {kri, yauj, vem}
-module.toggleoptions = {"panic", "toxicvolley", "heal", "announce", "deathspecials", "enrage", "bosskill"}
+module.toggleoptions = {"panic", "toxicvolley", "heal", "announce", "deathspecials", "enrage", "vapors", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
 	cmd = "BugFamily",
 	
 	panic_cmd = "panic",
 	panic_name = "恐惧",
-	panic_desc = "警告亚尔基公主的恐惧技能。",
+	panic_desc = "警告亚尔基公主的恐惧技能",
 
 	toxicvolley_cmd = "toxicvolley",
 	toxicvolley_name = "毒性箭雨",
-	toxicvolley_desc = "警告克里领主的毒性箭雨技能。",
+	toxicvolley_desc = "警告克里领主的毒性箭雨技能",
 
 	heal_cmd = "heal",
 	heal_name = "强效治疗",
-	heal_desc = "警告亚尔基公主的治疗技能。",
+	heal_desc = "警告亚尔基公主的治疗技能",
 
 	announce_cmd = "announce",
 	announce_name = "毒云",
@@ -30,11 +30,15 @@ L:RegisterTranslations("enUS", function() return {
 
 	deathspecials_cmd = "deathspecials",
 	deathspecials_name = "Boss死亡特殊技能",
-	deathspecials_desc = "通知玩家哪个Boss已被击败以及他们的特殊技能。",
+	deathspecials_desc = "通知玩家哪个Boss已被击败以及他们的特殊技能",
 
 	enrage_cmd = "enrage",
 	enrage_name = "狂暴",
-	enrage_desc = "狂暴计时器。",
+	enrage_desc = "狂暴计时器",
+	
+	vapors_cmd = "vapors",
+	vapors_name = "毒气云雾警报",
+	vapors_desc = "站在有毒气体云雾中时进行警告",
 	
 	trigger_heal = "Princess Yauj begins to cast Great Heal.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
 	bar_heal = "强效治疗",
@@ -55,8 +59,9 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_panicResist = "Panic was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 	trigger_panicImmune = "Panic fails",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	bar_panic = "恐惧",
-
-	trigger_toxicVapors = "You suffer (.*) Nature damage from Ruklar the Trapper's Toxic Vapors.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	
+	trigger_toxicVapors = "You are afflicted by Toxic Vapors.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_toxicVaporsFade = "Toxic Vapors fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
 	msg_toxicVapors = "远离毒云！",
 	
 	trigger_enrage = "%s goes into a berserker rage!",--CHAT_MSG_MONSTER_EMOTE (not confirmed)
@@ -71,21 +76,19 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	cmd = "BugFamily",
 	
 	panic_cmd = "panic",
 	panic_name = "恐惧",
-	panic_desc = "警告亚尔基公主的恐惧技能。",
+	panic_desc = "警告亚尔基公主的恐惧技能",
 
 	toxicvolley_cmd = "toxicvolley",
 	toxicvolley_name = "毒性箭雨",
-	toxicvolley_desc = "警告克里领主的毒性箭雨技能。",
+	toxicvolley_desc = "警告克里领主的毒性箭雨技能",
 
 	heal_cmd = "heal",
 	heal_name = "强效治疗",
-	heal_desc = "警告亚尔基公主的治疗技能。",
+	heal_desc = "警告亚尔基公主的治疗技能",
 
 	announce_cmd = "announce",
 	announce_name = "毒云",
@@ -93,11 +96,15 @@ L:RegisterTranslations("zhCN", function() return {
 
 	deathspecials_cmd = "deathspecials",
 	deathspecials_name = "Boss死亡特殊技能",
-	deathspecials_desc = "通知玩家哪个Boss已被击败以及他们的特殊技能。",
+	deathspecials_desc = "通知玩家哪个Boss已被击败以及他们的特殊技能",
 
 	enrage_cmd = "enrage",
 	enrage_name = "狂暴",
-	enrage_desc = "狂暴计时器。",
+	enrage_desc = "狂暴计时器",
+	
+	vapors_cmd = "vapors",
+	vapors_name = "毒气云雾警报",
+	vapors_desc = "站在有毒气体云雾中时进行警告",
 	
 	trigger_heal = "Princess Yauj begins to cast Great Heal.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
 	bar_heal = "强效治疗",
@@ -118,8 +125,9 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_panicResist = "Panic was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 	trigger_panicImmune = "Panic fails",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	bar_panic = "恐惧",
-
-	trigger_toxicVapors = "You suffer (.*) Nature damage from Ruklar the Trapper's Toxic Vapors.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	
+	trigger_toxicVapors = "You are afflicted by Toxic Vapors.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_toxicVaporsFade = "Toxic Vapors fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
 	msg_toxicVapors = "远离毒云！",
 	
 	trigger_enrage = "%s goes into a berserker rage!",--CHAT_MSG_MONSTER_EMOTE (not confirmed)
@@ -187,6 +195,8 @@ function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", "Event")--trigger_toxicVolleyAfflicted, trigger_panic
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Event")--trigger_panic, trigger_panicImmune, trigger_toxicVolleyImmune, trigger_toxicVapors
 	
+	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_SELF", "Event")--trigger_toxicVaporsFade
+	
 	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE", "Event")--trigger_enrage
 	
 	self:ThrottleSync(5, syncName.volley)
@@ -220,8 +230,8 @@ function module:OnEngage()
 	end
 	if self.db.profile.enrage then
 		self:Bar(L["bar_enrage"], timer.enrage, icon.enrage, true, "red")
-		self:DelayedMessage(timer.enrage - 60, L["msg_enrage60"], "Attention", nil, nil, true)
-		self:DelayedMessage(timer.enrage - 10, L["msg_enrage10"], "Attention", nil, nil, true)
+		self:DelayedMessage(timer.enrage - 60, L["msg_enrage60"], "Attention", false, nil, false)
+		self:DelayedMessage(timer.enrage - 10, L["msg_enrage10"], "Attention", false, nil, false)
 	end
 end
 
@@ -255,10 +265,12 @@ function module:Event(msg)
 		self:Sync(syncName.panic)
 	elseif string.find(msg, L["trigger_toxicVolleyHit"]) or string.find(msg, L["trigger_toxicVolleyAfflicted"]) or string.find(msg, L["trigger_toxicVolleyImmune"]) or string.find(msg, L["trigger_toxicVolleyResist"]) then
 		self:Sync(syncName.volley)
-	elseif string.find(msg, L["trigger_toxicVapors"]) then
-		self:WarningSign(icon.toxicVapors, 0.7)
-		self:Sound("Info")
-		self:Message(L["msg_toxicVapors"], "Urgent")
+	
+	elseif string.find(msg, L["trigger_toxicVapors"]) and self.db.profile.vapors then
+		self:ToxicVapors()
+	elseif string.find(msg, L["trigger_toxicVaporsFade"]) and self.db.profile.vapors then
+		self:ToxicVaporsFade()
+	
 	elseif msg == L["trigger_heal"] then
 		self:Sync(syncName.heal)
 	end
@@ -295,7 +307,8 @@ function module:Heal()
 	castingheal = true
 	
 	self:Bar(L["bar_heal"], timer.heal, icon.heal, true, "yellow")
-	self:Message(L["msg_heal"], "Attention", true, "Alert")
+	self:Message(L["msg_heal"], "Attention", false, nil, false)
+	self:Sound("Alert")
 	
 	if UnitClass("Player") == "Rogue" or UnitClass("Player") == "Warrior" or UnitClass("Player") == "Mage" then
 		if UnitName("Target") == "Princess Yauj" then
@@ -317,7 +330,7 @@ function module:Panic()
 end
 
 function module:Enrage()
-	self:Message(L["msg_enrage"], "Important")
+	self:Message(L["msg_enrage"], "Important", false, nil, false)
 end
 
 function module:KriDead()
@@ -326,7 +339,7 @@ function module:KriDead()
 		self:RemoveBar(L["bar_toxicVolley"])
 	end
 	if self.db.profile.deathspecials then
-		self:Message(L["msg_kriDead"], "Positive")
+		self:Message(L["msg_kriDead"], "Positive", false, nil, false)
 	end
 	if vemdead and yaujdead then
 		self:Sync(syncName.allDead)
@@ -342,7 +355,7 @@ function module:YaujDead()
 		self:RemoveBar(L["bar_panic"])
 	end
 	if self.db.profile.deathspecials then
-		self:Message(L["msg_yaujDead"], "Positive")
+		self:Message(L["msg_yaujDead"], "Positive", false, nil, false)
 	end
 	if vemdead and kridead then
 		self:Sync(syncName.allDead)
@@ -353,9 +366,19 @@ function module:VemDead()
 	vemdead = true
 	
 	if self.db.profile.deathspecials then
-		self:Message(L["msg_vemDead"], "Positive")
+		self:Message(L["msg_vemDead"], "Positive", false, nil, false)
 	end
 	if yaujdead and kridead then
 		self:Sync(syncName.allDead)
 	end
+end
+
+function module:ToxicVapors()
+	self:WarningSign(icon.toxicVapors, 10)
+	self:Sound("RunAway")
+	self:Message(L["msg_toxicVapors"], "Urgent", false, nil, false)
+end
+
+function module:ToxicVaporsFade()
+	self:RemoveWarningSign(icon.toxicVapors)
 end
