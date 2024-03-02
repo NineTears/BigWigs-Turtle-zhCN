@@ -46,8 +46,8 @@ L:RegisterTranslations("enUS", function() return {
     magneticPull_name = "磁力吸引警报",
     magneticPull_desc = "坦克平台交换时进行警告",
     
-    feugen = "Feugen",
-    stalagg = "Stalagg",
+    feugen = "伏晨",
+    stalagg = "斯塔拉格",
     
     start_trigger = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
     start_trigger1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
@@ -228,8 +228,8 @@ L:RegisterTranslations("zhCN", function() return {
     magneticPull_name = "磁力吸引警报",
     magneticPull_desc = "坦克平台交换时进行警告",
     
-    feugen = "Feugen",
-    stalagg = "Stalagg",
+    feugen = "伏晨",
+    stalagg = "斯塔拉格",
     
     start_trigger = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
     start_trigger1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
