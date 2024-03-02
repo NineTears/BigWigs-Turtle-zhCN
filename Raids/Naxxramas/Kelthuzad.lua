@@ -3,14 +3,14 @@
 
 local module, L = BigWigs:ModuleDeclaration("Kel'Thuzad", "Naxxramas")
 
-module.revision = 30058
+module.revision = 30060
 module.enabletrigger = module.translatedName
 module.toggleoptions = {
 	"phase",
 	"p1adds",
 	-1,
 	"mc",
-	"mcicon",
+	--"mcicon",
 	"fissure",
 	"frostblast",
 	"frostblastframe",
@@ -182,7 +182,7 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Kelthuzad",
+    cmd = "Kelthuzad",
 
     phase_cmd = "phase",
     phase_name = "阶段警报",
@@ -207,7 +207,7 @@ L:RegisterTranslations("zhCN", function() return {
     frostblast_cmd = "frostblast",
     frostblast_name = "冰霜冲击警报",
     frostblast_desc = "冰霜冲击施放时进行警告。",
-	
+    
     frostblastframe_cmd = "frostblastframe",
     frostblastframe_name = "冰霜冲击目标框架",
     frostblastframe_desc = "显示一个包含冰霜冲击目标及其血量条的框架。",
@@ -235,7 +235,7 @@ L:RegisterTranslations("zhCN", function() return {
     shackle_cmd = "shackle",
     shackle_name = "束缚亡灵计数",
     shackle_desc = "统计对守护者施放的束缚亡灵次数。",
-	
+    
     bloodtap_cmd = "bloodtap",
     bloodtap_name = "鲜血分流计数",
     bloodtap_desc = "统计守护者身上的鲜血分流增益次数。",
@@ -243,10 +243,10 @@ L:RegisterTranslations("zhCN", function() return {
     proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
-	
-	
-	--Mortal Wound from Unstoppable Abomination, stacking, -10% healing, 15sec
-	
+    
+    
+    --Mortal Wound from Unstoppable Abomination, stacking, -10% healing, 15sec
+    
     trigger_engage = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!", --CHAT_MSG_MONSTER_YELL
     bar_phase1 = "第一阶段",
 
@@ -260,8 +260,8 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
     msg_phase3 = "第三阶段 - 5个守护者即将到来 - 最多束缚3个！",
-	
-	--supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
+    
+    --supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
     bar_abom = "/14 憎恶死亡",
     bar_weaver = "/14 编织者死亡",
 
@@ -289,7 +289,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_frostBlastCd = "冰霜冲击 CD",
     bar_frostBlastAfflic = "冰霜冲击",
     msg_frostBlast = "冰霜冲击！",
-		--unused
+        --unused
     trigger_frostBlastFade = "Frost Blast fades from (.+)", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
 
     trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
@@ -302,23 +302,23 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbolt = "寒冰箭",
     msg_frostbolt = "寒冰箭 - 打断！",
-	
-	trigger_attack1 = "Kel'Thuzad attacks", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
-	trigger_attack2 = "Kel'Thuzad misses", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
-	trigger_attack3 = "Kel'Thuzad hits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
-	trigger_attack4 = "Kel'Thuzad crits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
-	trigger_kick1 = "Kick hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_kick2 = "Kick crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_kick3 = "Kick was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_pummel1 = "Pummel hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_pummel2 = "Pummel crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_pummel3 = "Pummel was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_shieldBash1 = "Shield Bash hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_shieldBash2 = "Shield Bash crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_shieldBash3 = "Shield Bash was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_earthShock1 = "Earth Shock hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	trigger_earthShock2 = "Earth Shock crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-	
+    
+    trigger_attack1 = "Kel'Thuzad attacks", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
+    trigger_attack2 = "Kel'Thuzad misses", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
+    trigger_attack3 = "Kel'Thuzad hits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
+    trigger_attack4 = "Kel'Thuzad crits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
+    trigger_kick1 = "Kick hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_kick2 = "Kick crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_kick3 = "Kick was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_pummel1 = "Pummel hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_pummel2 = "Pummel crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_pummel3 = "Pummel was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_shieldBash1 = "Shield Bash hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_shieldBash2 = "Shield Bash crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_shieldBash3 = "Shield Bash was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_earthShock1 = "Earth Shock hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    trigger_earthShock2 = "Earth Shock crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+    
     trigger_volley = "afflicted by Frostbolt", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_volley = "魔法飞弹 CD",
 
@@ -953,59 +953,59 @@ function module:Mc(rest)
 		mc1 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
-		if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
+		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
 					SetRaidTargetIcon("raid"..i, 1)
 				end
 			end
-		end
+		end]]--
 	elseif mc2 == nil then
 		mc2 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
-		if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
+		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
 					SetRaidTargetIcon("raid"..i, 2)
 				end
 			end
-		end
+		end]]--
 	elseif mc3 == nil then
 		mc3 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
-		if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
+		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
 					SetRaidTargetIcon("raid"..i, 3)
 				end
 			end
-		end
+		end]]--
 	elseif mc4 == nil then
 		mc4 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
-		if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
+		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
 					SetRaidTargetIcon("raid"..i, 4)
 				end
 			end
-		end
+		end]]--
 	end
 end
 
 function module:McFade(rest)
 	self:RemoveBar(rest..L["bar_mcAfflic"].. " >Click Me<")
 	
-	if IsRaidLeader() or IsRaidOfficer() then
+	--[[if IsRaidLeader() or IsRaidOfficer() then
 		for i=1,GetNumRaidMembers() do
 			if UnitName("raid"..i) == rest then
 				SetRaidTargetIcon("raid"..i, 0)
 			end
 		end
-	end
+	end]]--
 	
 	if mc1 ~= nil and mc2 ~= nil and mc3 ~= nil and mc4 ~= nil then
 		mc1 = nil
