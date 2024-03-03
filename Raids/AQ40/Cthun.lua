@@ -87,16 +87,16 @@ L:RegisterTranslations("enUS", function() return {
     digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
     msgDigestiveAcid = "5层消化酸液",
 
-    ["First Tentacle dead"] = "First Tentacle dead",
-    ["First Tentacle"] = "First Tentacle",
-    ["Second Tentacle"] = "Second Tentacle",
+    ["First Tentacle dead"] = "第一触须死亡",
+    ["First Tentacle"] = "第一触须",
+    ["Second Tentacle"] = "第二触须",
 
     window_bar = "机会窗口",
     trigger_bigClawDies = "Giant Claw Tentacle dies.",
     trigger_bigEyeDies = "Giant Eye Tentacle dies.",
 
-    Giant Eye Tentacle = "Giant Eye Tentacle",
-    Flesh Tentacle = "Flesh Tentacle",
+    ["Giant Eye Tentacle"] = "Giant Eye Tentacle",
+    ["Flesh Tentacle"] = "Flesh Tentacle",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -187,8 +187,8 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_bigClawDies = "Giant Claw Tentacle dies.",
     trigger_bigEyeDies = "Giant Eye Tentacle dies.",
 	
-    Giant Eye Tentacle = "巨眼触须",
-    Flesh Tentacle = "血肉触须",
+    ["Giant Eye Tentacle"] = "巨眼触须",
+    ["Flesh Tentacle"] = "血肉触须",
 } end )
 
 module.proximityCheck = function(unit) return CheckInteractDistance(unit, 2) end
