@@ -159,7 +159,7 @@ L:RegisterTranslations("zhCN", function() return {
 	-- Last update: 2024-02-08
     cmd = "Sartura",
 
-    add_name = "Sartura's Royal Guard",
+    add_name = "沙尔图拉皇家卫士",
     starttrigger = "defiling these sacred grounds",
     endtrigger = "I serve to the last!",
     startwarn = "萨尔图拉已激活 - 10分钟后狂暴！",

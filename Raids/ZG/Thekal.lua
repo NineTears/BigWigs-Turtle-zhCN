@@ -4,7 +4,7 @@ local module, L = BigWigs:ModuleDeclaration("High Priest Thekal", "Zul'Gurub")
 module.revision = 30012
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"bloodlust", "silence", "cleave", "heal", "disarm", -1, "phase", "punch", "tigers", "frenzy", "enraged", "bosskill"}
-module.wipemobs = {"Zealot Zath", "Zealot Lor'Khan"}
+module.wipemobs = {L["Zealot Zath"], L["Zealot Lor'Khan"]}
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Thekal",
@@ -111,9 +111,9 @@ L:RegisterTranslations("enUS", function() return {
     ["New Adds"] = "新的增援",
     ["Next Bloodlust"] = "下一次嗜血",
 
-	["Zealot Zath"] = "狂热者札斯",
-	["Zealot Lor'Khan"] = "狂热者洛卡恩", 
-	["High Priest Thekal"] = "古拉巴什食腐者",
+	["Zealot Zath"] = "Zealot Zath",
+	["Zealot Lor'Khan"] = "Zealot Lor'Khan",
+	["High Priest Thekal"] = "High Priest Thekal",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -220,7 +220,7 @@ L:RegisterTranslations("zhCN", function() return {
     ["Next Bloodlust"] = "下一次嗜血",
 
 	["Zealot Zath"] = "狂热者札斯",
-	["Zealot Lor'Khan"] = "狂热者洛卡恩", 
+	["Zealot Lor'Khan"] = "狂热者洛卡恩",
 	["High Priest Thekal"] = "古拉巴什食腐者",
 } end )
 
@@ -324,20 +324,20 @@ function module:CheckHP()
 	local lorkhanHealth
 	local thekalHealth
 	
-	if UnitName("playertarget") == "Zealot Zath" then
+	if UnitName("playertarget") == L["Zealot Zath"] then
 		zathHealth = math.ceil((UnitHealth("playertarget") / UnitHealthMax("playertarget")) * 100)
-	elseif UnitName("playertarget") == "Zealot Lor'Khan" then
+	elseif UnitName("playertarget") == L["Zealot Lor'Khan"] then
 		lorkhanHealth = math.ceil((UnitHealth("playertarget") / UnitHealthMax("playertarget")) * 100)
-	elseif UnitName("playertarget") == "High Priest Thekal" then
+	elseif UnitName("playertarget") == L["High Priest Thekal"] then
 		thekalHealth = math.ceil((UnitHealth("playertarget") / UnitHealthMax("playertarget")) * 100)
 	end
 	
 	for i = 1, GetNumRaidMembers(), 1 do
-		if UnitName("Raid"..i.."target") == "Zealot Zath" then
+		if UnitName("Raid"..i.."target") == L["Zealot Zath"] then
 			zathHealth = math.ceil((UnitHealth("Raid"..i.."target") / UnitHealthMax("Raid"..i.."target")) * 100)
-		elseif UnitName("Raid"..i.."target") == "Zealot Lor'Khan" then
+		elseif UnitName("Raid"..i.."target") == L["Zealot Lor'Khan"] then
 			lorkhanHealth = math.ceil((UnitHealth("Raid"..i.."target") / UnitHealthMax("Raid"..i.."target")) * 100)
-		elseif UnitName("Raid"..i.."target") == "High Priest Thekal" then
+		elseif UnitName("Raid"..i.."target") == L["High Priest Thekal"] then
 			thekalHealth = math.ceil((UnitHealth("Raid"..i.."target") / UnitHealthMax("Raid"..i.."target")) * 100)
 		end
 		if zathHealth and lorkhanHealth and thekalHealth then break; end
@@ -382,9 +382,9 @@ function module:PhaseChangeCheck()
 		for i = 1, GetNumRaidMembers(), 1 do
 			if UnitName("Raid"..i.."target") == self.translatedName and not UnitIsDead("Raid"..i.."target") then
 				thekaldead = nil
-			elseif UnitName("Raid"..i.."target") == "Zealot Zath" and not UnitIsDead("Raid"..i.."target") then
+			elseif UnitName("Raid"..i.."target") == L["Zealot Zath"] and not UnitIsDead("Raid"..i.."target") then
 				zathdead = nil
-			elseif UnitName("Raid"..i.."target") == "Zealot Lor'Khan" and not UnitIsDead("Raid"..i.."target") then
+			elseif UnitName("Raid"..i.."target") == L["Zealot Lor'Khan"] and not UnitIsDead("Raid"..i.."target") then
 				lorkhandead = nil
 			end
 		end
@@ -507,9 +507,9 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 end
 
 function module:TigerPhase()
-	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Zath"])
-	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Lor'Khan"])
-	self:TriggerEvent("BigWigs_StopHPBar", self, L["High Priest Thekal"])
+	self:TriggerEvent("BigWigs_StopHPBar", self, "Zealot Zath")
+	self:TriggerEvent("BigWigs_StopHPBar", self, "Zealot Lor'Khan")
+	self:TriggerEvent("BigWigs_StopHPBar", self, "High Priest Thekal")
 	self:CancelScheduledEvent("thekalHpCheck")
 	
 	if self.db.profile.heal then

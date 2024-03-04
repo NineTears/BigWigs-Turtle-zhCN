@@ -221,7 +221,7 @@ L:RegisterTranslations("zhCN", function() return {
     deathyou_trigger = "You die.",
     deathother_trigger = "(.*) dies.",
     deadaddtrigger = "Flamewaker Protector dies",
-    add_name = "Flamewaker Protector",
+    add_name = "烈焰行者护卫",
 
     mindcontrol_message = "%s 被精神控制了！",
     mindcontrol_message_you = "你被精神控制了！",

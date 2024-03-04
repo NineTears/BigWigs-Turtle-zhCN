@@ -201,7 +201,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_submerge = "拉格纳罗斯下潜",
     msg_submerge10 = "10秒后下潜！",
 
-    sonOfFlame = "Son of Flame",
+    sonOfFlame = "烈焰之子",
     msg_sonsDead = "%d/8 烈焰之子已死亡！",
 
     ["Combat"] = "战斗",

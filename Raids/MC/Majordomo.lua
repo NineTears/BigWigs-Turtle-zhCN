@@ -172,8 +172,8 @@ L:RegisterTranslations("zhCN", function() return {
     damage_over_trigger = "Damage Shield fades",
     healdead = "Flamewaker Healer dies",
     elitedead = "Flamewaker Elite dies",
-    elitename = "Flamewaker Elite",
-    healername = "Flamewaker Healer",
+    elitename = "烈焰行者精英",
+    healername = "烈焰行者医师",
 
     magic_warn = "魔法反射10秒钟！",
     dmg_warn = "伤害护盾10秒钟！",

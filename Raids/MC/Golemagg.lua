@@ -80,7 +80,7 @@ L:RegisterTranslations("deDE", function() return {
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
-    corerager_name = "Core Rager",
+    corerager_name = "熔火怒犬",
     earthquakesoonwarn = "即将地震",
     golemaggenrage = "Golemagg the Incinerator gains Enrage",
     enragewarn = "Boss已激怒！",

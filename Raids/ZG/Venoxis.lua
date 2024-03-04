@@ -107,7 +107,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     poisoncloudhitsyou_trigger = "You suffer (.+) Nature damage from High Priest Venoxis's Poison Cloud",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 
-    add_name = "Razzashi Cobra",
+    add_name = "拉扎什眼镜蛇",
     deadaddtrigger = "Razzashi Cobra dies",
     deadbosstrigger = "High Priest Venoxis dies",
 

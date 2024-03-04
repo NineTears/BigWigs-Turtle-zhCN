@@ -162,7 +162,7 @@ L:RegisterTranslations("zhCN", function() return {
     knockback3 = "absorb (.+) Hand of Ragnaros",
     knockback33 = "Hand of Ragnaros is absorbed",
     knockback4 = "Hand of Ragnaros (.+) immune",
-    flamewakerpriest_name = "Flamewaker Priest",
+    flamewakerpriest_name = "烈焰行者祭司",
 
     addmsg = "%d/4 烈焰行者祭司死亡！",
 

@@ -65,7 +65,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     dead1 = "Flamewaker dies",
     addmsg = "%d/2烈焰行者死亡！",
-    flamewaker_name = "Flamewaker",
+    flamewaker_name = "烈焰行者祭司",
 
     ["Rain of Fire"] = "火焰之雨",
 } end)

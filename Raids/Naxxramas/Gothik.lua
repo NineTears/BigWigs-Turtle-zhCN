@@ -28,32 +28,32 @@ L:RegisterTranslations("enUS", function() return {
 
     starttrigger1 = "Brazenly you have disregarded powers beyond your understanding.",
     starttrigger2 = "Teamanare shi rikk mannor rikk lok karkun",
-    startwarn = "戈提克收割者已激活！4:35后他将进入房间。",
+    startwarn = "戈提克收割者已激活！4:35 后他将进入房间。",
 
-    trainee_name = "不屈的学徒",
-    spectral_trainee_name = "鬼灵学徒",
-    trawarn = "3秒后学徒出现",
+	trainee_name = "Unrelenting Trainee",
+	spectral_trainee_name = "Spectral Trainee",
+    trawarn = "3 秒后学徒出现",
     trabar = "学徒 - %d",
     
-    deathknight_name = "不屈的死亡骑士",
-    spectral_deathknight_name = "鬼灵死亡骑士",
+	deathknight_name = "Unrelenting Deathknight",
+	spectral_deathknight_name = "Spectral Deathknight",
     dkdiewarn = "死亡骑士已死亡！",
-    dkwarn = "3秒后死亡骑士出现",
+    dkwarn = "3 秒后死亡骑士出现",
     dkbar = "死亡骑士 - %d",
     
-    rider_name = "不屈的骑士",
-    spectral_rider_name = "鬼灵骑士",
+	rider_name = "Unrelenting Rider",
+	spectral_rider_name = "Spectral Rider",
     riderdiewarn = "骑士已死亡！",
-    riderwarn = "3秒后骑士出现",
+    riderwarn = "3 秒后骑士出现",
     riderbar = "骑士 - %d",
     
-    warn_inroom_3m = "3分钟后进入房间",
-    warn_inroom_90 = "90秒后进入房间",
-    warn_inroom_60 = "60秒后进入房间",
-    warn_inroom_30 = "30秒后进入房间",
-    warn_inroom_10 = "10秒后戈提克到来",
+    warn_inroom_3m = "3 分钟后进入房间",
+    warn_inroom_90 = "90 秒后进入房间",
+    warn_inroom_60 = "60 秒后进入房间",
+    warn_inroom_30 = "30 秒后进入房间",
+    warn_inroom_10 = "10 秒后戈提克到来",
 
-    wave = "%d/22: ", -- 共有22波而不是26波
+    wave = "%d/22: ", -- 共有 22 波而不是 26 波
 
     inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
     inroomwarn = "他进入了房间！",
@@ -132,32 +132,32 @@ L:RegisterTranslations("zhCN", function() return {
 
     starttrigger1 = "Brazenly you have disregarded powers beyond your understanding.",
     starttrigger2 = "Teamanare shi rikk mannor rikk lok karkun",
-    startwarn = "戈提克收割者已激活！4:35后他将进入房间。",
+    startwarn = "戈提克收割者已激活！4:35 后他将进入房间。",
 
-    trainee_name = "不屈的学徒",
-    spectral_trainee_name = "鬼灵学徒",
-    trawarn = "3秒后学徒出现",
+	trainee_name = "无情的训练师",
+	spectral_trainee_name = "鬼灵训练师",
+    trawarn = "3 秒后学徒出现",
     trabar = "学徒 - %d",
     
-    deathknight_name = "不屈的死亡骑士",
-    spectral_deathknight_name = "鬼灵死亡骑士",
+	deathknight_name = "无情的死亡骑士",
+	spectral_deathknight_name = "鬼灵死亡骑士",
     dkdiewarn = "死亡骑士已死亡！",
-    dkwarn = "3秒后死亡骑士出现",
+    dkwarn = "3 秒后死亡骑士出现",
     dkbar = "死亡骑士 - %d",
     
-    rider_name = "不屈的骑士",
-    spectral_rider_name = "鬼灵骑士",
+	rider_name = "无情的骑兵",
+	spectral_rider_name = "鬼灵骑兵",
     riderdiewarn = "骑士已死亡！",
-    riderwarn = "3秒后骑士出现",
+    riderwarn = "3 秒后骑士出现",
     riderbar = "骑士 - %d",
     
-    warn_inroom_3m = "3分钟后进入房间",
-    warn_inroom_90 = "90秒后进入房间",
-    warn_inroom_60 = "60秒后进入房间",
-    warn_inroom_30 = "30秒后进入房间",
-    warn_inroom_10 = "10秒后戈提克到来",
+    warn_inroom_3m = "3 分钟后进入房间",
+    warn_inroom_90 = "90 秒后进入房间",
+    warn_inroom_60 = "60 秒后进入房间",
+    warn_inroom_30 = "30 秒后进入房间",
+    warn_inroom_10 = "10 秒后戈提克到来",
 
-    wave = "%d/22: ", -- 共有22波而不是26波
+    wave = "%d/22: ", -- 共有 22 波而不是 26 波
 
     inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
     inroomwarn = "他进入了房间！",
