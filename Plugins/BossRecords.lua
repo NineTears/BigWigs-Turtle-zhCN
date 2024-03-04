@@ -30,8 +30,8 @@ local L = AceLibrary("AceLocale-2.2"):new("BigWigsBossRecords")
 L:RegisterTranslations("enUS", function() return {
     BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
     BOSS_DOWN		= "%s 击败 %s!",
-    BOSS_DOWN_L		= "%s 击败 %s! 上一个是%s.最快记录是%s.你共有%d次胜利.",
-    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有%d次胜利.",
+    BOSS_DOWN_L		= "%s 击败 %s! 上一个是 %s。最快记录是 %s。你共有 %d 次胜利。",
+    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有 %d 次胜利。",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
@@ -41,8 +41,8 @@ L:RegisterTranslations("zhCN", function() return {
     -- Last update: 2024-02-08
     BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
     BOSS_DOWN		= "%s 击败 %s!",
-    BOSS_DOWN_L		= "%s 击败 %s! 上一个是%s.最快记录是%s.你共有%d次胜利.",
-    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有%d次胜利.",
+    BOSS_DOWN_L		= "%s 击败 %s! 上一个是 %s。最快记录是 %s。你共有 %d 次胜利。",
+    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有 %d 次胜利。",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -74,8 +74,9 @@ function BigWigsBossRecords:StartBossfight(module)
 	if module and module.bossSync then
 		c.name      = module:ToString()
 		c.startTime = GetTime()
-
-		DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_ENGAGED"], c.name))
+		--if self.db.profile.enable then
+			DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_ENGAGED"], c.name))
+		--end
 	end
 end
 
@@ -87,19 +88,25 @@ function BigWigsBossRecords:EndBossfight(module)
 		if self.db.profile[c.name] then
 			if self.db.profile[c.name][2] > timeSpent then
 				-- It's a new record!
-				DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_DOWN_NR"], c.name, self:FormatTime(timeSpent), self:FormatTime(self.db.profile[c.name][2]), self.db.profile[c.name][1] + 1))
+				--if self.db.profile.enable then
+					DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_DOWN_NR"], c.name, self:FormatTime(timeSpent), self:FormatTime(self.db.profile[c.name][2]), self.db.profile[c.name][1] + 1))
+				--end
 				self.db.profile[c.name][1] = self.db.profile[c.name][1] + 1;
 				self.db.profile[c.name][2] = timeSpent
 				self.db.profile[c.name][3] = timeSpent
 			else
 				-- We found data but it's not a new record
-				DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_DOWN_L"], c.name, self:FormatTime(timeSpent), self:FormatTime(self.db.profile[c.name][3]), self:FormatTime(self.db.profile[c.name][2]), self.db.profile[c.name][1] + 1))
+				--if self.db.profile.enable then
+					DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_DOWN_L"], c.name, self:FormatTime(timeSpent), self:FormatTime(self.db.profile[c.name][3]), self:FormatTime(self.db.profile[c.name][2]), self.db.profile[c.name][1] + 1))
+				--end
 				self.db.profile[c.name][1] = self.db.profile[c.name][1] + 1;
 				self.db.profile[c.name][3] = timeSpent
 			end
 		else
 			-- It's our first kill
-			DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_DOWN"], c.name, self:FormatTime(timeSpent)))
+			--if self.db.profile.enable then
+				DEFAULT_CHAT_FRAME:AddMessage(prefix .. string.format(L["BOSS_DOWN"], c.name, self:FormatTime(timeSpent)))
+			--end
 			self.db.profile[c.name] = {1, timeSpent, timeSpent}
 		end
 	end
