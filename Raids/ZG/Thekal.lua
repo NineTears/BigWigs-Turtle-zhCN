@@ -113,7 +113,6 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Zealot Zath"] = "Zealot Zath",
 	["Zealot Lor'Khan"] = "Zealot Lor'Khan",
-	["High Priest Thekal"] = "High Priest Thekal",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -221,7 +220,6 @@ L:RegisterTranslations("zhCN", function() return {
 
 	["Zealot Zath"] = "狂热者札斯",
 	["Zealot Lor'Khan"] = "狂热者洛卡恩",
-	["High Priest Thekal"] = "古拉巴什食腐者",
 } end )
 
 local timer = {
