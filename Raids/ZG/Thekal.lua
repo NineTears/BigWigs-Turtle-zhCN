@@ -110,6 +110,10 @@ L:RegisterTranslations("enUS", function() return {
     ["Knockback"] = "击退",
     ["New Adds"] = "新的增援",
     ["Next Bloodlust"] = "下一次嗜血",
+
+	["Zealot Zath"] = "狂热者札斯",
+	["Zealot Lor'Khan"] = "狂热者洛卡恩", 
+	["High Priest Thekal"] = "古拉巴什食腐者",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -214,6 +218,10 @@ L:RegisterTranslations("zhCN", function() return {
     ["Knockback"] = "击退",
     ["New Adds"] = "新的增援",
     ["Next Bloodlust"] = "下一次嗜血",
+
+	["Zealot Zath"] = "狂热者札斯",
+	["Zealot Lor'Khan"] = "狂热者洛卡恩", 
+	["High Priest Thekal"] = "古拉巴什食腐者",
 } end )
 
 local timer = {
@@ -499,9 +507,9 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 end
 
 function module:TigerPhase()
-	self:TriggerEvent("BigWigs_StopHPBar", self, "Zealot Zath")
-	self:TriggerEvent("BigWigs_StopHPBar", self, "Zealot Lor'Khan")
-	self:TriggerEvent("BigWigs_StopHPBar", self, "High Priest Thekal")
+	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Zath"])
+	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Lor'Khan"])
+	self:TriggerEvent("BigWigs_StopHPBar", self, L["High Priest Thekal"])
 	self:CancelScheduledEvent("thekalHpCheck")
 	
 	if self.db.profile.heal then
