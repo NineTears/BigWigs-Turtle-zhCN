@@ -222,6 +222,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Zealot Zath"] = "狂热者札斯",
 	["Zealot Lor'Khan"] = "狂热者洛卡恩",
 	["High Priest Thekal"] = "高阶祭司塞卡尔",
+	["High Priest Thekal"] = "古拉巴什食腐者",
 } end )
 
 local timer = {
