@@ -111,8 +111,9 @@ L:RegisterTranslations("enUS", function() return {
     ["New Adds"] = "新的增援",
     ["Next Bloodlust"] = "下一次嗜血",
 
-	["Zealot Zath"] = "Zealot Zath",
-	["Zealot Lor'Khan"] = "Zealot Lor'Khan",
+	["Zealot Zath"] = true,
+	["Zealot Lor'Khan"] = true,
+	["High Priest Thekal"] = true,
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -220,6 +221,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	["Zealot Zath"] = "狂热者札斯",
 	["Zealot Lor'Khan"] = "狂热者洛卡恩",
+	["High Priest Thekal"] = "高阶祭司塞卡尔",
 } end )
 
 local timer = {
@@ -305,12 +307,12 @@ function module:OnEngage()
 	self.lorkhanHP = 100
 	self.thekalHP = 100
 	
-	self:TriggerEvent("BigWigs_StartHPBar", self, "Zealot Zath", 100)
-	self:TriggerEvent("BigWigs_SetHPBar", self, "Zealot Zath", 0)
-	self:TriggerEvent("BigWigs_StartHPBar", self, "Zealot Lor'Khan", 100)
-	self:TriggerEvent("BigWigs_SetHPBar", self, "Zealot Lor'Khan", 0)
-	self:TriggerEvent("BigWigs_StartHPBar", self, "High Priest Thekal", 100)
-	self:TriggerEvent("BigWigs_SetHPBar", self, "High Priest Thekal", 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, L["Zealot Zath"], 100)
+	self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Zath"], 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, L["Zealot Lor'Khan"], 100)
+	self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Lor'Khan"], 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, L["High Priest Thekal"], 100)
+	self:TriggerEvent("BigWigs_SetHPBar", self, L["High Priest Thekal"], 0)
 	self:ScheduleRepeatingEvent("thekalHpCheck", self.CheckHP, 0.5, self)
 end
 
@@ -343,15 +345,15 @@ function module:CheckHP()
 	
 	if zathHealth then
 		self.zathHP = zathHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, "Zealot Zath", 100-self.zathHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Zath"], 100-self.zathHP)
 	end
 	if lorkhanHealth then
 		self.lorkhanHP = lorkhanHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, "Zealot Lor'Khan", 100-self.lorkhanHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Lor'Khan"], 100-self.lorkhanHP)
 	end
 	if thekalHealth then
 		self.thekalHP = thekalHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, "High Priest Thekal", 100-self.thekalHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, L["High Priest Thekal"], 100-self.thekalHP)
 	end
 end
 
@@ -505,9 +507,9 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 end
 
 function module:TigerPhase()
-	self:TriggerEvent("BigWigs_StopHPBar", self, "Zealot Zath")
-	self:TriggerEvent("BigWigs_StopHPBar", self, "Zealot Lor'Khan")
-	self:TriggerEvent("BigWigs_StopHPBar", self, "High Priest Thekal")
+	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Zath"])
+	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Lor'Khan"])
+	self:TriggerEvent("BigWigs_StopHPBar", self, L["High Priest Thekal"])
 	self:CancelScheduledEvent("thekalHpCheck")
 	
 	if self.db.profile.heal then
