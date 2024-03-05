@@ -4,7 +4,7 @@ local module, L = BigWigs:ModuleDeclaration("High Priest Thekal", "Zul'Gurub")
 module.revision = 30012
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"bloodlust", "silence", "cleave", "heal", "disarm", -1, "phase", "punch", "tigers", "frenzy", "enraged", "bosskill"}
-module.wipemobs = {L["Zealot Zath"], L["Zealot Lor'Khan"]}
+module.wipemobs = {"Zealot Zath", "Zealot Lor'Khan", "High Priest Thekal"}
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Thekal",
