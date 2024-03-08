@@ -215,60 +215,60 @@ L:RegisterTranslations("zhCN", function() return {
 --      Addon Declaration      --
 ---------------------------------
 
-BigWigsVersionQuery = BigWigs:NewModule("Version Query")
+-- BigWigsVersionQuery = BigWigs:NewModule("Version Query")
 
-BigWigsVersionQuery.defaultDB = {
-	popup = true,
-}
-BigWigsVersionQuery.consoleCmd = L["versionquery"]
-BigWigsVersionQuery.consoleOptions = {
-	type = "group",
-	name = L["Version Query"],
-	desc = L["Commands for querying the raid for Big Wigs versions."],
-	args = {
-		[L["BigWigs"]] = {
-			type = "execute",
-			name = L["BigWigs"],
-			order = 1,
-			desc = L["Runs a version query on the BigWigs core."],
-			func = function() BigWigsVersionQuery:QueryVersion("BigWigs") end,
-		},
-		[L["current"]] = {
-			type = "execute",
-			name = L["Current zone"],
-			order = 2,
-			desc = L["Runs a version query on your current zone."],
-			func = function() BigWigsVersionQuery:QueryVersion() end,
-		},
-		[L["zone"]] = {
-			type = "text",
-			name = L["Zone"],
-			order = 3,
-			desc = L["Runs a version query on the given zone."],
-			usage = L["<zone>"],
-			get = false,
-			set = function(zone) BigWigsVersionQuery:QueryVersion(zone) end,
-		},
-		spacer = {
-			type = "header",
-			name = " ",
-			order = 10,
-		},
-		popup = {
-			type = "toggle",
-			name = L["Show popup"],
-			desc = L["Show popup warning on out of date version"],
-			order = 12,
-			get = function() return BigWigsVersionQuery.db.profile.popup end,
-			set = function(v) BigWigsVersionQuery.db.profile.popup = v end,
-		},
-	}
-}
+-- BigWigsVersionQuery.defaultDB = {
+-- 	popup = true,
+-- }
+-- BigWigsVersionQuery.consoleCmd = L["versionquery"]
+-- BigWigsVersionQuery.consoleOptions = {
+-- 	type = "group",
+-- 	name = L["Version Query"],
+-- 	desc = L["Commands for querying the raid for Big Wigs versions."],
+-- 	args = {
+-- 		[L["BigWigs"]] = {
+-- 			type = "execute",
+-- 			name = L["BigWigs"],
+-- 			order = 1,
+-- 			desc = L["Runs a version query on the BigWigs core."],
+-- 			func = function() BigWigsVersionQuery:QueryVersion("BigWigs") end,
+-- 		},
+-- 		[L["current"]] = {
+-- 			type = "execute",
+-- 			name = L["Current zone"],
+-- 			order = 2,
+-- 			desc = L["Runs a version query on your current zone."],
+-- 			func = function() BigWigsVersionQuery:QueryVersion() end,
+-- 		},
+-- 		[L["zone"]] = {
+-- 			type = "text",
+-- 			name = L["Zone"],
+-- 			order = 3,
+-- 			desc = L["Runs a version query on the given zone."],
+-- 			usage = L["<zone>"],
+-- 			get = false,
+-- 			set = function(zone) BigWigsVersionQuery:QueryVersion(zone) end,
+-- 		},
+-- 		spacer = {
+-- 			type = "header",
+-- 			name = " ",
+-- 			order = 10,
+-- 		},
+-- 		popup = {
+-- 			type = "toggle",
+-- 			name = L["Show popup"],
+-- 			desc = L["Show popup warning on out of date version"],
+-- 			order = 12,
+-- 			get = function() return BigWigsVersionQuery.db.profile.popup end,
+-- 			set = function(v) BigWigsVersionQuery.db.profile.popup = v end,
+-- 		},
+-- 	}
+-- }
 
 ------------------------------
 --      Initialization      --
 ------------------------------
-
+--[[禁用版本检查，降低内存消耗
 function BigWigsVersionQuery:Test()
 	BigWigsVersionQuery:QueryVersion("BigWigs")
 end
@@ -540,7 +540,7 @@ function BigWigsVersionQuery:QueryVersion(zone)
 	self:TriggerEvent("BigWigs_SendSync", "BWVQ "..zone)
 end
 
---[[ Parses the new style reply, which is "1111 <nick>" ]]
+-- Parses the new style reply, which is "1111 <nick>" 
 function BigWigsVersionQuery:ParseReply2(reply)
 	-- If there's no space, it's just a version number we got.
 	local first, last = string.find(reply, " ")
@@ -557,7 +557,7 @@ function BigWigsVersionQuery:ParseReply2(reply)
 	return tonumber(rev), nick
 end
 
---[[ Parses the old style reply, which was MC:REV BWL:REV, etc. ]]
+-- Parses the old style reply, which was MC:REV BWL:REV, etc. 
 function BigWigsVersionQuery:ParseReply(reply)
 	if not string.find(reply, ":") then return -1 end
 	local zone = BWL:HasTranslation(self.currentZone) and BWL:GetTranslation(self.currentZone) or self.currentZone
@@ -572,12 +572,12 @@ function BigWigsVersionQuery:ParseReply(reply)
 	return -1
 end
 
---[[
+
 -- Version reply syntax history:
 --  Old Style:           MC:REV BWL:REV ZG:REV
 --  First Working Style: REV
 --  New Style:           REV QuereeNick
---]]
+
 
 function BigWigsVersionQuery:BigWigs_RecvSync(sync, rest, nick)
 	if sync == "BWVQ" and nick ~= UnitName("player") and rest then
@@ -606,4 +606,4 @@ function BigWigsVersionQuery:BigWigs_RecvSync(sync, rest, nick)
 		end
 	end
 end
-
+]]
