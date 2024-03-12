@@ -20,45 +20,48 @@ local timeToShutdown = nil
 local shutdownBigWarning = nil
 
 L:RegisterTranslations("enUS", function() return {
-	--[[iconPrefix = "Interface\\Icons\\",
+	-- iconPrefix = "Interface\\Icons\\",
 	
-	msg_fearward = " FearWard on ",
-	bar_fearward = " FearWard CD",
+	-- msg_fearward = " FearWard on ",
+	-- bar_fearward = " FearWard CD",
 	
-	msg_shieldwall = " Shield Wall",
-	bar_shieldwall = " Shield Wall",
+	-- msg_shieldwall = " Shield Wall",
+	-- bar_shieldwall = " Shield Wall",
 	
-	msg_laststand = " Last Stand",
-	bar_laststand = " Last Stand",
+	-- msg_laststand = " Last Stand",
+	-- bar_laststand = " Last Stand",
 	
-	msg_lifegivingGem = " Lifegiving Gem",
-	bar_lifegivingGem = " Lifegiving Gem",
+	-- msg_lifegivingGem = " Lifegiving Gem",
+	-- bar_lifegivingGem = " Lifegiving Gem",
 	
-	msg_challengingShout = " Challenging Shout",
-	bar_challengingShout = " Challenging Shout",
+	-- msg_challengingShout = " Challenging Shout",
+	-- bar_challengingShout = " Challenging Shout",
 	
-	msg_challengingRoar = " Challenging Roar",
-	bar_challengingRoar = " Challenging Roar",
-
-	portal_regexp = ".*: (.*)",
+	-- msg_challengingRoar = " Challenging Roar",
+	-- bar_challengingRoar = " Challenging Roar",
 	
-	trigger_wormhole = "just opened a wormhole.",--CHAT_MSG_MONSTER_EMOTE
-	bar_wormhole = " Wormhole",
-	msg_wormhole = " Wormhole",
+	-- msg_divineIntervention = "Divine Intervention on ",
+	-- bar_divineIntervention = " Divine Intervention",
 	
-	trigger_orange = "begins to conjure a refreshment table.",--CHAT_MSG_MONSTER_EMOTE
-	bar_orange = "Oranges!",
-	msg_orange = "Oranges! Get your Vitamin C",
+	-- portal_regexp = ".*: (.*)",
 	
-	trigger_soulwell = "begins a Soulwell ritual.",--CHAT_MSG_MONSTER_EMOTE
-	bar_soulwell = "Soulwell!",
-	msg_soulwell = "Soulwell! Get your Cookie",
+	-- trigger_wormhole = "just opened a wormhole.",--CHAT_MSG_MONSTER_EMOTE
+	-- bar_wormhole = " Wormhole",
+	-- msg_wormhole = " Wormhole",
 	
-	trigger_shutdown = "Shutdown in (.+) (.+)",--CHAT_MSG_SYSTEM
-	trigger_restart = "Restart in (.+) (.+)",--CHAT_MSG_SYSTEM
-	trigger_restartMinSec = "Shutdown in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
-	trigger_shutdownMinSec = "Restart in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
-	bar_shutDown = "Server Shutdown/Restart",--]]
+	-- trigger_orange = "begins to conjure a refreshment table.",--CHAT_MSG_MONSTER_EMOTE
+	-- bar_orange = "Oranges!",
+	-- msg_orange = "Oranges! Get your Vitamin C",
+	
+	-- trigger_soulwell = "begins a Soulwell ritual.",--CHAT_MSG_MONSTER_EMOTE
+	-- bar_soulwell = "Soulwell!",
+	-- msg_soulwell = "Soulwell! Get your Cookie",
+	
+	-- trigger_shutdown = "Shutdown in (.+) (.+)",--CHAT_MSG_SYSTEM
+	-- trigger_restart = "Restart in (.+) (.+)",--CHAT_MSG_SYSTEM
+	-- trigger_restartMinSec = "Shutdown in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
+	-- trigger_shutdownMinSec = "Restart in (.+) Minutes (.+) Seconds.",--CHAT_MSG_SYSTEM
+	-- bar_shutDown = "Server Shutdown/Restart",
 	
 	["Toggle %s display."] = true,
 	["Wormhole"] = true,
@@ -75,7 +78,7 @@ L:RegisterTranslations("enUS", function() return {
 	["commonauras"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
+	-- Last update: 2024-03-12
 	iconPrefix = "Interface\\Icons\\",
 	
 	msg_fearward = " 守护恐惧 ",
@@ -95,7 +98,10 @@ L:RegisterTranslations("enUS", function() return {
 	
 	msg_challengingRoar = " 挑战咆哮",
 	bar_challengingRoar = " 挑战咆哮",
-
+	
+	msg_divineIntervention = "圣佑术在 ",
+	bar_divineIntervention = " 圣佑术",
+	
 	portal_regexp = ".*: (.*)",
 	
 	trigger_wormhole = "just opened a wormhole.",--CHAT_MSG_MONSTER_EMOTE
@@ -132,8 +138,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	iconPrefix = "Interface\\Icons\\",
 	
 	msg_fearward = " 守护恐惧 ",
@@ -153,7 +157,10 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	msg_challengingRoar = " 挑战咆哮",
 	bar_challengingRoar = " 挑战咆哮",
-
+	
+	msg_divineIntervention = "圣佑术在 ",
+	bar_divineIntervention = " 圣佑术",
+	
 	portal_regexp = ".*: (.*)",
 	
 	trigger_wormhole = "just opened a wormhole.",--CHAT_MSG_MONSTER_EMOTE
@@ -198,6 +205,7 @@ BigWigsCommonAuras.defaultDB = {
 	lifegivinggem = true,
 	challengingshout = true,
 	challengingroar = true,
+	di = true,
 	portal = true,
 	wormhole = true,
 	orange = true,
@@ -206,7 +214,7 @@ BigWigsCommonAuras.defaultDB = {
 	broadcast = false,
 }
 BigWigsCommonAuras.consoleCmd = L["commonauras"]
-BigWigsCommonAuras.revision = 30052
+BigWigsCommonAuras.revision = 30066
 BigWigsCommonAuras.external = true
 BigWigsCommonAuras.consoleOptions = {
 	type = "group",
@@ -254,6 +262,13 @@ BigWigsCommonAuras.consoleOptions = {
 			desc = string.format(L["Toggle %s display."], BS["Challenging Roar"]),
 			get = function() return BigWigsCommonAuras.db.profile.challengingroar end,
 			set = function(v) BigWigsCommonAuras.db.profile.challengingroar = v end,
+		},
+		["di"] = {
+			type = "toggle",
+			name = BS["Divine Intervention"],
+			desc = string.format(L["Toggle %s display."], BS["Divine Intervention"]),
+			get = function() return BigWigsCommonAuras.db.profile.di end,
+			set = function(v) BigWigsCommonAuras.db.profile.di = v end,
 		},
 		["portal"] = {
 			type = "toggle",
@@ -305,6 +320,7 @@ local timer = {
 	laststand = 20,
 	lifegivingGem = 20,
 	challenging = 6,
+	di = 60,
 	portal = 60,
 	wormhole = 8,
 	orange = 60,
@@ -317,6 +333,7 @@ local icon = {
 	lifegivingGem = L["iconPrefix"].."inv_misc_gem_pearl_05",
 	challengingShout = L["iconPrefix"].."ability_bullrush",
 	challengingRoar = L["iconPrefix"].."ability_druid_challangingroar",
+	di = L["iconPrefix"].."spell_nature_timestop",
 	wormhole = L["iconPrefix"].."Inv_Misc_EngGizmos_12",
 	orange = L["iconPrefix"].."inv_misc_food_41",
 	soulwell = L["iconPrefix"].."inv_stone_04",
@@ -329,6 +346,7 @@ local color = {
 	lifegivingGem = "Red",
 	challengingShout = "Red",
 	challengingRoar = "Red",
+	di = "Blue",
 	wormhole = "Cyan",
 	orange = "Green",
 	soulwell = "Green",
@@ -341,9 +359,10 @@ function BigWigsCommonAuras:OnEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE")--trigger_wormhole, trigger_orange, trigger_soulwell
 	self:RegisterEvent("CHAT_MSG_SYSTEM")--trigger_shutdown, trigger_restart
 	
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS")
+	
 	if UnitClass("player") == "Warrior" or UnitClass("player") == "Druid" then
 		self:RegisterEvent("SpellStatus_SpellCastInstant")
-		self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS")
 	
 	elseif UnitClass("player") == "Priest" and UnitRace("player") == "Dwarf" then
 		self:RegisterEvent("SpellStatus_SpellCastInstant")
@@ -406,8 +425,10 @@ function BigWigsCommonAuras:SpellStatus_SpellCastInstant(sId, sName, sRank, sFul
 end
 
 function BigWigsCommonAuras:CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS(msg)
-	if string.find(msg, BS["Gift of Life"]) then
+	if string.find(msg, BS["Gift of Life"]) and (UnitClass("Player") == "Warrior" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" ) then
 		self:TriggerEvent("BigWigs_SendSync", "BWCALG")
+	elseif msg == "You gain Divine Intervention." then
+		self:TriggerEvent("BigWigs_SendSync", "BWCADI")
 	end
 end
 
@@ -562,6 +583,10 @@ function BigWigsCommonAuras:BigWigs_RecvSync( sync, rest, nick )
 		self:TriggerEvent("BigWigs_StartBar", self, nick..L["bar_challengingRoar"], timer.challenging, icon.challengingRoar, true, color.challengingRoar)
 		self:SetCandyBarOnClick("BigWigsBar "..nick..L["bar_challengingRoar"], function(name, button, extra) TargetByName(extra, true) end, nick )
 	
+	elseif self.db.profile.di and sync == "BWCADI" then
+		self:TriggerEvent("BigWigs_Message", L["msg_divineIntervention"]..nick, "Urgent", false, nil, false)
+		self:TriggerEvent("BigWigs_StartBar", self, nick..L["bar_divineIntervention"], timer.di, icon.di, true, color.di)
+		self:SetCandyBarOnClick("BigWigsBar "..nick..L["bar_divineIntervention"], function(name, button, extra) TargetByName(extra, true) end, nick )
 	
 	elseif self.db.profile.portal and sync == "BWCAP" and rest then
 		rest = BS:HasTranslation(rest) and BS:GetTranslation(rest) or rest
