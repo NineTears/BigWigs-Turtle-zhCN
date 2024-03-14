@@ -60,12 +60,12 @@ L:RegisterTranslations("enUS", function() return {
     frostblastframe_desc = "显示一个包含冰霜冲击目标及其血量条的框架。",
 
     detonate_cmd = "detonate",
-    detonate_name = "法力爆炸警报",
-    detonate_desc = "法力爆炸施放时进行警告。",
+    detonate_name = "自爆法力警报",
+    detonate_desc = "自爆法力施放时进行警告。",
 
     detonateicon_cmd = "detonateicon",
-    detonateicon_name = "法力爆炸标记",
-    detonateicon_desc = "在法力爆炸的目标上标记团队标记。",
+    detonateicon_name = "自爆法力标记",
+    detonateicon_desc = "在自爆法力的目标上标记团队标记。",
 
     frostbolt_cmd = "frostbolt",
     frostbolt_name = "单体寒冰箭警报",
@@ -84,8 +84,8 @@ L:RegisterTranslations("enUS", function() return {
     shackle_desc = "统计对守护者施放的束缚亡灵次数。",
 	
     bloodtap_cmd = "bloodtap",
-    bloodtap_name = "鲜血分流计数",
-    bloodtap_desc = "统计守护者身上的鲜血分流增益次数。",
+    bloodtap_name = "血液分流计数",
+    bloodtap_desc = "统计守护者身上的血液分流增益次数。",
 
     proximity_cmd = "proximity",
     proximity_name = "近距离警告",
@@ -101,12 +101,12 @@ L:RegisterTranslations("enUS", function() return {
     trigger_phase2_2 = "Scream your dying breath!", --CHAT_MSG_MONSTER_YELL
     trigger_phase2_3 = "The end is upon you!", --CHAT_MSG_MONSTER_YELL
     bar_phase2 = "克尔苏加德激活",
-    msg_phase2 = "第二阶段 - 克尔苏加德15秒后进入！",
+    msg_phase2 = "第二阶段 - 克尔苏加德 15 秒后进入！",
 
-    msg_phase3soon = "第三阶段即将到来 - 40%血量时发生",
+    msg_phase3soon = "第三阶段即将到来 - 40% 血量时发生",
 
     trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
-    msg_phase3 = "第三阶段 - 5个守护者即将到来 - 最多束缚3个！",
+    msg_phase3 = "第三阶段 - 5 个守护者即将到来 - 最多束缚 3 个！",
 	
 	--supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
     bar_abom = "/14 憎恶死亡",
@@ -142,9 +142,9 @@ L:RegisterTranslations("enUS", function() return {
     trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_detonateOther = "(.+) is afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-    bar_detonateAfflic = " 法力爆炸",
-    bar_detonateCd = "法力爆炸 CD",
-    msg_detonate = "法力爆炸在 ",
+    bar_detonateAfflic = " 自爆法力",
+    bar_detonateCd = "自爆法力 CD",
+    msg_detonate = "自爆法力在 ",
 
     trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbolt = "寒冰箭",
@@ -177,7 +177,7 @@ L:RegisterTranslations("enUS", function() return {
     msg_shackle = "%s/3",
 
     trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    bar_bloodTapA = "鲜血分流 +",
+    bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
 } end )
 
@@ -213,12 +213,12 @@ L:RegisterTranslations("zhCN", function() return {
     frostblastframe_desc = "显示一个包含冰霜冲击目标及其血量条的框架。",
 
     detonate_cmd = "detonate",
-    detonate_name = "法力爆炸警报",
-    detonate_desc = "法力爆炸施放时进行警告。",
+    detonate_name = "自爆法力警报",
+    detonate_desc = "自爆法力施放时进行警告。",
 
     detonateicon_cmd = "detonateicon",
-    detonateicon_name = "法力爆炸标记",
-    detonateicon_desc = "在法力爆炸的目标上标记团队标记。",
+    detonateicon_name = "自爆法力标记",
+    detonateicon_desc = "在自爆法力的目标上标记团队标记。",
 
     frostbolt_cmd = "frostbolt",
     frostbolt_name = "单体寒冰箭警报",
@@ -237,8 +237,8 @@ L:RegisterTranslations("zhCN", function() return {
     shackle_desc = "统计对守护者施放的束缚亡灵次数。",
     
     bloodtap_cmd = "bloodtap",
-    bloodtap_name = "鲜血分流计数",
-    bloodtap_desc = "统计守护者身上的鲜血分流增益次数。",
+    bloodtap_name = "血液分流计数",
+    bloodtap_desc = "统计守护者身上的血液分流增益次数。",
 
     proximity_cmd = "proximity",
     proximity_name = "近距离警告",
@@ -254,12 +254,12 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_phase2_2 = "Scream your dying breath!", --CHAT_MSG_MONSTER_YELL
     trigger_phase2_3 = "The end is upon you!", --CHAT_MSG_MONSTER_YELL
     bar_phase2 = "克尔苏加德激活",
-    msg_phase2 = "第二阶段 - 克尔苏加德15秒后进入！",
+    msg_phase2 = "第二阶段 - 克尔苏加德 15 秒后进入！",
 
-    msg_phase3soon = "第三阶段即将到来 - 40%血量时发生",
+    msg_phase3soon = "第三阶段即将到来 - 40% 血量时发生",
 
     trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
-    msg_phase3 = "第三阶段 - 5个守护者即将到来 - 最多束缚3个！",
+    msg_phase3 = "第三阶段 - 5 个守护者即将到来 - 最多束缚 3 个！",
     
     --supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
     bar_abom = "/14 憎恶死亡",
@@ -295,9 +295,9 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_detonateOther = "(.+) is afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-    bar_detonateAfflic = " 法力爆炸",
-    bar_detonateCd = "法力爆炸 CD",
-    msg_detonate = "法力爆炸在 ",
+    bar_detonateAfflic = " 自爆法力",
+    bar_detonateCd = "自爆法力 CD",
+    msg_detonate = "自爆法力在 ",
 
     trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbolt = "寒冰箭",
@@ -330,7 +330,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_shackle = "%s/3",
 
     trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    bar_bloodTapA = "鲜血分流 +",
+    bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
 } end )
 
