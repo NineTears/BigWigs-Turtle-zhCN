@@ -29,8 +29,8 @@ L:RegisterTranslations("enUS", function() return {
 
 	larvaname = "Hive'Zara Larva",
 	
-	Rogue = "Rogue",
-	Druid = "Druid",
+	classrogue = "Rogue",
+	classdruid = "Druid",
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -88,8 +88,8 @@ L:RegisterTranslations("zhCN", function() return {
 
 	larvaname = "札拉幼虫",	
 	
-	Rogue = "盗贼",
-	Druid = "德鲁伊",
+	classrogue = "盗贼",
+	classdruid = "德鲁伊",
 } end )
 
 local timer = {
@@ -183,7 +183,7 @@ function module:Sacrifice(rest)
 	
 	bwPlayerIsAttacking = nil
 	if IsRaidLeader() or IsRaidOfficer() then
-		if UnitClass("Player") ~= L["Rogue"] and UnitClass("Player") ~= L["Druid"] then
+		if UnitClass("Player") ~= L["classrogue"] and UnitClass("Player") ~= L["classdruid"] then
 			if PlayerFrame.inCombat then
 				bwPlayerIsAttacking = true
 			end
