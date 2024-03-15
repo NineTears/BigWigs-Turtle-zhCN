@@ -31,6 +31,10 @@ L:RegisterTranslations("enUS", function() return {
 	bar_dismember = " 斩杀",
 	
 	msg_phase2 = "第二阶段，DPS全力输出布鲁!",
+	
+	--本地化补充
+	you = "you",
+	buruischasingme = "布鲁正在追我！",
 } end )
 
 L:RegisterTranslations("deDE", function() return {
@@ -99,6 +103,10 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_dismember = " 斩杀",
 	
 	msg_phase2 = "第二阶段，DPS全力输出布鲁!",
+	
+	--本地化补充
+	you = "你",
+	buruischasingme = "布鲁正在追我！",
 } end )
 
 local timer = {
@@ -147,7 +155,7 @@ end
 function module:CHAT_MSG_MONSTER_EMOTE(msg)
 	if string.find(msg, L["trigger_watch"]) then
 		local _, _, watchedPlayer = string.find(msg, L["trigger_watch"])
-		if watchedPlayer == "you" then watchedPlayer = UnitName("Player") end
+		if watchedPlayer == L["you"] then watchedPlayer = UnitName("Player") end
 		self:Sync(syncName.watch.." "..watchedPlayer)
 	end
 end
@@ -216,7 +224,7 @@ function module:Watch(rest)
 		self:Message(rest..L["msg_watch"], "Attention", false, nil, false)
 		
 		if rest == UnitName("Player") then
-			SendChatMessage("Buru is chasing me!", "SAY")
+			SendChatMessage(L["buruischasingme"], "SAY")
 			self:WarningSign(icon.watch, 2)
 			self:Sound("RunAway")
 		end
