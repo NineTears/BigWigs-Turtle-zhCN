@@ -27,7 +27,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	p2_msg = "第二阶段",
 
-	larvaname = "Hive'Zara Larva",	
+	larvaname = true,	
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -83,7 +83,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	p2_msg = "第二阶段",
 
-	larvaname = "Hive'Zara Larva",	
+	larvaname = "札拉幼虫",	
 } end )
 
 local timer = {
@@ -169,7 +169,7 @@ end
 function module:Sacrifice(rest)
 	self:Message(rest..L["msg_sacrifice"], "Urgent", false, "Beware")
 	self:Bar(L["larva_bar"], timer.larva, icon.sacrifice, true, "red")
-	self:SetCandyBarOnClick("BigWigsBar "..L["larva_bar"], function(name, button, extra) TargetByName("Hive'Zara Larva", true) end, rest)
+	self:SetCandyBarOnClick("BigWigsBar "..L["larva_bar"], function(name, button, extra) TargetByName(L["larvaname"], true) end, rest)
 	
 	if self.db.profile.bigicon then
 		self:WarningSign(icon.sacrifice, 0.7)
