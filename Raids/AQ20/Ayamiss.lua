@@ -27,7 +27,10 @@ L:RegisterTranslations("enUS", function() return {
 	
 	p2_msg = "第二阶段",
 
-	larvaname = true,	
+	larvaname = "Hive'Zara Larva",
+	
+	["Rogue"] = "Rogue",
+	["Druid"] = "Druid",
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -84,6 +87,9 @@ L:RegisterTranslations("zhCN", function() return {
 	p2_msg = "第二阶段",
 
 	larvaname = "札拉幼虫",	
+	
+	["Rogue"] = "盗贼",
+	["Druid"] = "德鲁伊",
 } end )
 
 local timer = {
@@ -177,7 +183,7 @@ function module:Sacrifice(rest)
 	
 	bwPlayerIsAttacking = nil
 	if IsRaidLeader() or IsRaidOfficer() then
-		if UnitClass("Player") ~= "Rogue" and UnitClass("Player") ~= "Druid" then
+		if UnitClass("Player") ~= L["Rogue"] and UnitClass("Player") ~= L["Druid"] then
 			if PlayerFrame.inCombat then
 				bwPlayerIsAttacking = true
 			end
