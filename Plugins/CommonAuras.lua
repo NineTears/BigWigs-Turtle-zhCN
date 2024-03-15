@@ -87,8 +87,8 @@ L:RegisterTranslations("enUS", function() return {
 	msg_shieldwall = " 盾墙",
 	bar_shieldwall = " 盾墙",
 	
-	msg_laststand = " 最后一搏",
-	bar_laststand = " 最后一搏",
+	msg_laststand = " 破釜沉舟",
+	bar_laststand = " 破釜沉舟",
 	
 	msg_lifegivingGem = " 生命赐予宝石",
 	bar_lifegivingGem = " 生命赐予宝石",
@@ -146,8 +146,8 @@ L:RegisterTranslations("zhCN", function() return {
 	msg_shieldwall = " 盾墙",
 	bar_shieldwall = " 盾墙",
 	
-	msg_laststand = " 最后一搏",
-	bar_laststand = " 最后一搏",
+	msg_laststand = " 破釜沉舟",
+	bar_laststand = " 破釜沉舟",
 	
 	msg_lifegivingGem = " 生命赐予宝石",
 	bar_lifegivingGem = " 生命赐予宝石",
