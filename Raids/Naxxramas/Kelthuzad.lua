@@ -181,9 +181,9 @@ L:RegisterTranslations("enUS", function() return {
     bar_bloodTapB = "% 伤害",
 
     --本地化补充
-    ["Unstoppable Abomination"] = true,
-    ["Soul Weaver"] = true,
-    ["Kel'Thuzad"] = true,
+    ["Unstoppable Abomination"] = "Unstoppable Abomination",
+    ["Soul Weaver"] = "Soul Weaver",
+    ["Kel'Thuzad"] = "Kel'Thuzad",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
