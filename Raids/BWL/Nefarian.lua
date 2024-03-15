@@ -87,8 +87,8 @@ L:RegisterTranslations("enUS", function() return {
     mcwarn = "正在施放精神控制！",
     mcplayer = "^([^%s]+) ([^%s]+) afflicted by Shadow Command.$",
     mcplayerwarn = " 被精神控制了！",
-    mcyou = "你",
-    mcare = "是",
+    mcyou = "you",
+    mcare = "are",
 
     -- nef counter
     ["NefCounter_Trigger"] = "^([%w ]+) dies.",
@@ -359,7 +359,7 @@ L:RegisterTranslations("zhCN", function() return {
     mcplayer = "^([^%s]+) ([^%s]+) afflicted by Shadow Command.$",
     mcplayerwarn = " 被精神控制了！",
     mcyou = "你",
-    mcare = "是",
+    mcare = "受到了",
 
     -- nef counter
     ["NefCounter_Trigger"] = "^([%w ]+) dies.",

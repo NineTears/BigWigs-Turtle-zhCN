@@ -59,8 +59,8 @@ L:RegisterTranslations("enUS", function() return {
     sporebar = "下一个孢子 %d",
     sporebar_group = "下一孢子 - 分组 %d",
 
-    you = "你",
-    are = "的",
+    you = "you",
+    are = "are",
     fungalBloom = "Fungal Bloom",
 
     --LoathebTactical

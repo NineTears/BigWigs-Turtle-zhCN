@@ -57,7 +57,7 @@ L:RegisterTranslations("enUS", function() return {
     enrage_message = "Boss激怒！疯狂治疗！",
     poisonyou_message = "远离毒云！",
     addmsg = "拉扎什眼镜蛇已死亡 %d/4！",
-    you = "你",
+    you = "you",
 
 
     ["Next Holy Fire"] = true,

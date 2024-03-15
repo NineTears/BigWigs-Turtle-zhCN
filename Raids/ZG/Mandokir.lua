@@ -26,7 +26,7 @@ L:RegisterTranslations("enUS", function() return {
     ww = "旋风斩",
     deathyou = "You die.",
     deathother = "(.+) dies.",
-    you = "你",
+    you = "you",
     gaze_warn = "凝视目标 ",
 
     sunder_trigger = "Sunder Armor %(5%)",

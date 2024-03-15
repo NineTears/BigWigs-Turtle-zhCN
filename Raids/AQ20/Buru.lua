@@ -34,7 +34,9 @@ L:RegisterTranslations("enUS", function() return {
 	
 	--本地化补充
 	you = "you",
+	positive = "正面",
 	buruischasingme = "布鲁正在追我！",
+	attention = "注意",
 } end )
 
 L:RegisterTranslations("deDE", function() return {
@@ -106,7 +108,9 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	--本地化补充
 	you = "你",
+	positive = "正面",
 	buruischasingme = "布鲁正在追我！",
+	attention = "注意",
 } end )
 
 local timer = {
@@ -221,7 +225,7 @@ function module:Watch(rest)
 	end
 	
 	if self.db.profile.watch then
-		self:Message(rest..L["msg_watch"], "Attention", false, nil, false)
+		self:Message(rest..L["msg_watch"], L["attention"], false, nil, false)
 		
 		if rest == UnitName("Player") then
 			SendChatMessage(L["buruischasingme"], "SAY")
@@ -242,7 +246,7 @@ function module:WatchEnd()
 	
 	if self.db.profile.watch then
 		if watchedPlayer == UnitName("Player") then
-			self:Message(L["msg_watchEnd"], "Positive", false, nil, false)
+			self:Message(L["msg_watchEnd"], L["positive"], false, nil, false)
 			self:Sound("Alert")
 		end
 	end
@@ -264,7 +268,7 @@ end
 
 function module:Phase2()
 	if self.db.profile.phase then
-		self:Message(L["msg_phase2"], "Attention", false, nil, false)
+		self:Message(L["msg_phase2"], L["attention"], false, nil, false)
 		self:Sound("Long")
 	end
 	self:WatchEnd()

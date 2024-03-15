@@ -80,8 +80,8 @@ L:RegisterTranslations("enUS", function() return {
 	plaguetrigger = "^([^%s]+) ([^%s]+) afflicted by Plague%.$",
 	plaguewarn = "感染了瘟疫！快跑出人群！",
 	plagueyouwarn = "你感染了瘟疫！快跑出人群！",
-	plagueyou = "你",
-	plagueare = "是",
+	plagueyou = "you",
+	plagueare = "are",
 	plague_onme = "瘟疫目标为",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_SELF_DAMAGE
@@ -165,7 +165,7 @@ L:RegisterTranslations("zhCN", function() return {
 	plaguewarn = "感染了瘟疫！快跑出人群！",
 	plagueyouwarn = "你感染了瘟疫！快跑出人群！",
 	plagueyou = "你",
-	plagueare = "是",
+	plagueare = "受到了",
 	plague_onme = "瘟疫目标为",
 	
 	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Guardian.",--CHAT_MSG_SPELL_SELF_DAMAGE

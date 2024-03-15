@@ -61,8 +61,8 @@ L:RegisterTranslations("enUS", function() return {
     breath_warn = "毒性吐息！",
     corruption_warn = "大地的堕落！现在就治疗！",
 
-    isyou = "你",
-    isare = "是",
+    isyou = "you",
+    isare = "are",
 
     breath_bar = "毒性吐息",
     corruption_bar = "大地的堕落",
@@ -132,7 +132,7 @@ L:RegisterTranslations("zhCN", function() return {
     corruption_warn = "大地的堕落！现在就治疗！",
 
     isyou = "你",
-    isare = "是",
+    isare = "受到了",
 
     breath_bar = "毒性吐息",
     corruption_bar = "大地的堕落",

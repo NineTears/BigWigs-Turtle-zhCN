@@ -28,8 +28,8 @@ L:RegisterTranslations("enUS", function() return {
     ["First Mortal Strike"] = true,
     ["First Mortal Strike"] = "首次致死打击",
 
-    you = "你",
-    are = "是",
+    you = "you",
+    are = "are",
 
     ms_cmd = "ms",
     ms_name = "致死打击",
@@ -123,7 +123,7 @@ L:RegisterTranslations("zhCN", function() return {
     ["First Mortal Strike"] = "首次致死打击",
 
     you = "你",
-    are = "是",
+    are = "受到了",
 
     ms_cmd = "ms",
     ms_name = "致死打击",

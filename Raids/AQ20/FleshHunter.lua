@@ -10,6 +10,7 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "FleshHunter",
 	consumeother_trigger = "(.*) is afflicted by Consume",
 	consume_bar = " 已吞噬!",
+	clickme = " >点击我!<",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -18,6 +19,7 @@ L:RegisterTranslations("zhCN", function() return {
 	cmd = "FleshHunter",
 	consumeother_trigger = "(.*) is afflicted by Consume",
 	consume_bar = " 已吞噬!",
+	clickme = " >点击我!<",
 } end )
 
 module.defaultDB = {
@@ -57,8 +59,8 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 		if rest == UnitName("player") then
 			self:Bar(string.format(UnitName("player") .. L["consume_bar"]), timer.consume, icon.consume)
 		else
-			self:Bar(string.format(rest .. L["consume_bar"] .. " >Click Me!<"), timer.consume, icon.consume)
-			self:SetCandyBarOnClick("BigWigsBar "..string.format(rest .. L["consume_bar"] .. " >Click Me!<"), function(name, button, extra) TargetByName(extra, true) end, rest)
+			self:Bar(string.format(rest .. L["consume_bar"] .. L["clickme"]), timer.consume, icon.consume)
+			self:SetCandyBarOnClick("BigWigsBar "..string.format(rest .. L["consume_bar"] .. L["clickme"]), function(name, button, extra) TargetByName(extra, true) end, rest)
 		end
 	end
 end

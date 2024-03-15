@@ -29,8 +29,9 @@ L:RegisterTranslations("enUS", function() return {
 
 	larvaname = "Hive'Zara Larva",
 	
-	classrogue = "Rogue",
-	classdruid = "Druid",
+	classrogue = "Rogue",  --盗贼
+	classdruid = "Druid",  --德鲁伊
+	attention = "注意",
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -90,6 +91,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	classrogue = "盗贼",
 	classdruid = "德鲁伊",
+	attention = "注意",
 } end )
 
 local timer = {
@@ -201,7 +203,7 @@ function module:Sacrifice(rest)
 end
 
 function module:Phase2()
-	self:Message(L["p2_msg"], "Attention")
+	self:Message(L["p2_msg"], L["attention"])
 	p2 = true
 end
 
