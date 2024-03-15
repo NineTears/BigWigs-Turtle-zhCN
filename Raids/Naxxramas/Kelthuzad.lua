@@ -181,9 +181,9 @@ L:RegisterTranslations("enUS", function() return {
     bar_bloodTapB = "% 伤害",
 
     --本地化补充
-    ["Unstoppable Abomination"] = "Unstoppable Abomination",
-    ["Soul Weaver"] = "Soul Weaver",
-    ["Kel'Thuzad"] = "Kel'Thuzad",
+    unstoppableabomination = "Unstoppable Abomination",
+    soulweaver = "Soul Weaver",
+    kelthuzad = "Kel'Thuzad",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -339,9 +339,9 @@ L:RegisterTranslations("zhCN", function() return {
     bar_bloodTapB = "% 伤害",
 
     --本地化补充
-    ["Unstoppable Abomination"] = "无法阻止的憎恶",
-    ["Soul Weaver"] = "织魂者",
-    ["Kel'Thuzad"] = "克尔苏加德",
+    unstoppableabomination = "无法阻止的憎恶",
+    soulweaver = "织魂者",
+    kelthuzad = "克尔苏加德",
 } end )
 
 local timer = {
@@ -719,13 +719,13 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 	
-	if (msg == string.format(UNITDIESOTHER, L["Unstoppable Abomination"])) then
+	if (msg == string.format(UNITDIESOTHER, L["unstoppableabomination"])) then
 		self:Sync(syncName.abominationDead)
 	
-	elseif (msg == string.format(UNITDIESOTHER, L["Soul Weaver"])) then
+	elseif (msg == string.format(UNITDIESOTHER, L["soulweaver"])) then
 		self:Sync(syncName.soulWeaverDead)
 	
-	elseif (msg == string.format(UNITDIESOTHER, L["Kel'Thuzad"]))then
+	elseif (msg == string.format(UNITDIESOTHER, L["kelthuzad"]))then
 		self:SendBossDeathSync()
 	end
 end
