@@ -29,8 +29,8 @@ L:RegisterTranslations("enUS", function() return {
 
 	larvaname = "Hive'Zara Larva",
 	
-	["Rogue"] = "Rogue",
-	["Druid"] = "Druid",
+	Rogue = "Rogue",
+	Druid = "Druid",
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -88,8 +88,8 @@ L:RegisterTranslations("zhCN", function() return {
 
 	larvaname = "札拉幼虫",	
 	
-	["Rogue"] = "盗贼",
-	["Druid"] = "德鲁伊",
+	Rogue = "盗贼",
+	Druid = "德鲁伊",
 } end )
 
 local timer = {
