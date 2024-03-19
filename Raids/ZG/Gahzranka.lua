@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Gahz'ranka", "Zul'Gurub")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30025
 module.enabletrigger = module.translatedName
@@ -146,15 +147,15 @@ function module:Event(msg)
 	
 	
 	elseif string.find(msg, L["trigger_frostbreathYou"]) then
-		if UnitClass("Player") == "Priest" then
+		if UnitClass("Player") == BC["Priest"] then
 			self:WarningSign(icon.frostbreath, 0.7)
 			self:Sound("Info")
 			self:Message(L["msg_frostBreathYou"], "Attention", false, nil, false)
-		elseif UnitClass("Player") == "Mage" then
+		elseif UnitClass("Player") == BC["Mage"] then
 			self:WarningSign(icon.frostbreath, 0.7)
 			self:Sound("Info")
 			self:Message(L["msg_frostBreathYou"], "Attention", false, nil, false)
-		elseif UnitClass("Player") == "Warlock" then
+		elseif UnitClass("Player") == BC["Warlock"] then
 			self:WarningSign(icon.frostbreath, 0.7)
 			self:Sound("Info")
 			self:Message(L["msg_frostBreathYou"], "Attention", false, nil, false)

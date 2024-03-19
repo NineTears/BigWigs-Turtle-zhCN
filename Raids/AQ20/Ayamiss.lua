@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Ayamiss the Hunter", "Ruins of Ahn'Qiraj")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30027
 module.enabletrigger = module.translatedName
@@ -27,11 +28,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	p2_msg = "第二阶段",
 
-	larvaname = "Hive'Zara Larva",
-	
-	classrogue = "Rogue",  --盗贼
-	classdruid = "Druid",  --德鲁伊
-	attention = "注意",
+	larvaname = "Hive'Zara Larva",	
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -88,10 +85,6 @@ L:RegisterTranslations("zhCN", function() return {
 	p2_msg = "第二阶段",
 
 	larvaname = "札拉幼虫",	
-	
-	classrogue = "盗贼",
-	classdruid = "德鲁伊",
-	attention = "注意",
 } end )
 
 local timer = {
@@ -185,7 +178,7 @@ function module:Sacrifice(rest)
 	
 	bwPlayerIsAttacking = nil
 	if IsRaidLeader() or IsRaidOfficer() then
-		if UnitClass("Player") ~= L["classrogue"] and UnitClass("Player") ~= L["classdruid"] then
+		if UnitClass("Player") ~= BC["Rogue"] and UnitClass("Player") ~= BC["Druid"] then
 			if PlayerFrame.inCombat then
 				bwPlayerIsAttacking = true
 			end
@@ -203,7 +196,7 @@ function module:Sacrifice(rest)
 end
 
 function module:Phase2()
-	self:Message(L["p2_msg"], L["attention"])
+	self:Message(L["p2_msg"], "Attention")
 	p2 = true
 end
 

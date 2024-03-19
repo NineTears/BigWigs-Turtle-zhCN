@@ -4,6 +4,7 @@
 ----------------------------------
 
 local module, L = BigWigs:ModuleDeclaration("Razorgore the Untamed", "Blackwing Lair")
+local bzblackwinglair = AceLibrary("Babble-Zone-2.2")["Blackwing Lair"]
 
 ----------------------------
 --      Localization      --
@@ -648,7 +649,7 @@ function module:OrbControlCheck()
 	end
 	if bosscontrol then
 		self:ScheduleEvent("orbcontrol_check", self.OrbControlCheck, 0.5, self)
-	elseif GetRealZoneText() == "Blackwing Lair" then
+	elseif GetRealZoneText() == bzblackwinglair then
 		self:Sync(syncName.orbOver)
 	end
 end

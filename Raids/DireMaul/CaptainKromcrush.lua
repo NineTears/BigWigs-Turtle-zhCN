@@ -1,5 +1,6 @@
-
 local module, L = BigWigs:ModuleDeclaration("Captain Kromcrush", "Dire Maul")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbcaptainkromcrush = AceLibrary("Babble-Boss-2.2")["Captain Kromcrush"]
 
 module.revision = 30002
 module.enabletrigger = module.translatedName
@@ -115,13 +116,13 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if playerClass == "SHAMAN" then
+	if playerClass == BC["Shaman"] then
 		self:WarningSign(icon.tremor, 0.7)
 		self:Sound("Beware")
 	end
 	self:Bar(L["fearBar"], timer.fear, icon.fear, true, "white")
-	if UnitName("target") == "Captain Kromcrush" and (IsRaidLeader() or IsRaidOfficer()) then
-		klhtm.net.sendmessage("target " .. "Captain Kromcrush")
+	if UnitName("target") == bbcaptainkromcrush and (IsRaidLeader() or IsRaidOfficer()) then
+		klhtm.net.sendmessage("target " .. bbcaptainkromcrush)
 	end
 end
 
@@ -148,13 +149,13 @@ function module:Event(msg)
 end
 
 function module:AddsUp()
-	if playerClass == "PRIEST" or playerClass == "WARLOCK" then
+	if playerClass == BC["Priest"] or playerClass == BC["Warlock"] then
 		self:WarningSign(icon.fear, 0.7)
 	end
-	if playerClass == "MAGE" then
+	if playerClass == BC["Mage"] then
 		self:WarningSign(icon.sheep, 0.7)
 	end
-	if playerClass == "HUNTER" then
+	if playerClass == BC["Hunter"] then
 		self:WarningSign(icon.trap, 0.7)
 	end
 	self:Message(L["addsUpMessage"], "Urgent", false, "Beware", false)
@@ -169,14 +170,14 @@ function module:Fear()
 end
 
 function module:RetaliationUp()
-	if playerClass == "WARRIOR" or playerClass == "ROGUE" then
+	if playerClass == BC["Warrior"] or playerClass == BC["Rogue"] then
 		self:Message(L["retaliationUpMessage"], "Important", false, "Beware", false)
 		self:WarningSign(icon.retaliation, 15)
 	end
 end
 
 function module:RetaliationDown()
-	if playerClass == "WARRIOR" or playerClass == "ROGUE" then
+	if playerClass == BC["Warrior"] or playerClass == BC["Rogue"] then
 		self:Message(L["retaliationDownMessage"], "Important", false, "gogogo", false)
 		self:RemoveWarningSign(icon.retaliation)
 	end

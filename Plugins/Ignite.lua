@@ -13,6 +13,7 @@ assert( BigWigs, "BigWigs not found!")
 
 local L = AceLibrary("AceLocale-2.2"):new("BigWigsIgnite")
 local LC = AceLibrary("AceLocale-2.2"):new("BigWigs")
+local BC = AceLibrary("Babble-Class-2.2")
 
 local frame = nil
 
@@ -526,7 +527,7 @@ function BigWigsIgnite:PlayerDamageEvents(msg)
 		end
 		if BigWigsIgnite.db.profile.alwaysShow then
 			local _, class = UnitClass("player")
-			if class == "MAGE" then
+			if class == BC["Mage"] then
 				if not BigWigsIgnite.db.profile.isVisible then
 					self:Show()
 				end
@@ -605,7 +606,7 @@ end
 
 function BigWigsIgnite:ShowWarning()
 	if self.db.profile.isVisible or self.db.profile.showWarnings then
-		self:Message("Stop Firespells!", "Urgent", true, "Pain")
+		self:Message("停止火焰法术！", "Urgent", true, "Pain")
 		frame:SetBackdropColor(200/255, 30/255, 30/255)
 	end
 end
@@ -638,7 +639,7 @@ function BigWigsIgnite:IsMage(aName)
 				local name = UnitName(raidUnit)
 				if name == aName then
 					local _, class = UnitClass(raidUnit)
-					if class == "Mage" then
+					if class == BC["Mage"] then
 						return true
 					end
 				end

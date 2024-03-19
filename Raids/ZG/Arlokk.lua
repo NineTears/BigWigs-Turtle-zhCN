@@ -45,6 +45,7 @@ L:RegisterTranslations("enUS", function() return {
     msg_vanishPhase = "消失！",
     bar_return = "预计返回",
     bar_nextVanish = "下一次消失",
+    clickme = " >点击我！<",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -89,6 +90,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_vanishPhase = "消失！",
     bar_return = "预计返回",
     bar_nextVanish = "下一次消失",
+    clickme = " >点击我！<",
 } end )
 
 local timer = {
@@ -184,8 +186,8 @@ end
 function module:Mark(rest)
 	self:Message(rest..L["msg_mark"], "Attention")
 
-	self:Bar(rest..L["bar_mark"].. " >Click Me<", timer.mark, icon.mark, true, "Green")
-	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mark"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest..L["bar_mark"].. L["clickme"], timer.mark, icon.mark, true, "Green")
+	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mark"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 
 	for i=1,GetNumRaidMembers() do
 		if UnitName("raid"..i) == rest then
@@ -195,7 +197,7 @@ function module:Mark(rest)
 end
 
 function module:MarkFade(rest)
-	self:RemoveBar(rest..L["bar_mark"].. " >Click Me<")
+	self:RemoveBar(rest..L["bar_mark"].. L["clickme"])
 end
 
 function module:Whirlwind()

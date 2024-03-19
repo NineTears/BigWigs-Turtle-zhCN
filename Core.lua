@@ -126,7 +126,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要助理或更高权限)",
 	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
 	bosskill_cmd = "kill",
-	bosskill_name = "首领死亡",
+	bosskill_name = "Boss死亡",
 	bosskill_desc = "当Boss被击败时进行通告",
 
 	["Other"] = "其他",
@@ -162,6 +162,7 @@ L:RegisterTranslations("enUS", function() return {
 	--["Lieutenant General Andorov"] = "安多洛夫中将",
 
 	["You have slain %s!"] = "你已击败%s!",
+	["you"] = true,
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
@@ -200,7 +201,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "强制对团队中所有人的模块进行重置。\n\n(需要助理或更高权限)",
 	["%s has requested forced reboot for the %s module."] = "%s 已请求强制重新启动 %s 模块.",
 	bosskill_cmd = "kill",
-	bosskill_name = "首领死亡",
+	bosskill_name = "Boss死亡",
 	bosskill_desc = "当Boss被击败时进行通告",
 
 	["Other"] = "其他",
@@ -236,6 +237,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Lieutenant General Andorov"] = "安多洛夫中将",
 
 	["You have slain %s!"] = "你已击败%s!",
+	["you"] = "你",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -836,7 +838,7 @@ function BigWigs:OnEnable()
 end
 
 function BigWigs:AceEvent_FullyInitialized()
-	if GetNumRaidMembers() > 0 or not self.loading or (GetZoneText() == "The Black Morass") or (GetZoneText() == "Dire Maul") then
+	if GetNumRaidMembers() > 0 or not self.loading or (GetZoneText() == BZ["The Black Morass"]) or (GetZoneText() == BZ["Dire Maul"]) then
 		-- Enable all disabled modules that are not boss modules.
 		for name, module in self:IterateModules() do
 			if type(module.IsBossModule) ~= "function" or not module:IsBossModule() then
@@ -1161,7 +1163,7 @@ function BigWigs:BigWigs_RecvSync(sync, moduleName, nick)
 	if nick then
 		if type(nick) == "string" then
 			if nick == playername then
-				n = "you"
+				n = L["you"]
 			else
 				n = nick
 			end

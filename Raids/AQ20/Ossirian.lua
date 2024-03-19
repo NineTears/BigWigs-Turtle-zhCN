@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Ossirian the Unscarred", "Ruins of Ahn'Qiraj")
+local BST = AceLibrary("Babble-SpellTree-2.2")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30012
 module.enabletrigger = module.translatedName
@@ -260,42 +262,42 @@ function module:Weakness(rest)
 	bwOssiSupreme = false
 	element = tostring(rest)
 	
-	if element == "Shadow" and self.db.profile.weakness then
-		self:RemoveBar("Shadow weakness!")
-		self:Message(string.format(L["debuffwarn"].."Shadow!"), "Important")
-		self:Bar("Shadow weakness!", timer.weakness, icon.shadow, true, "green")
+	if element == BST["Shadow"] and self.db.profile.weakness then
+		self:RemoveBar("暗影易伤！")
+		self:Message(string.format(L["debuffwarn"].."暗影！"), "Important")
+		self:Bar("暗影易伤！", timer.weakness, icon.shadow, true, "green")
 		if self.db.profile.bigicon then
 			self:WarningSign(icon.shadow, 0.7)
 		end
 	end
-	if element == "Fire" and self.db.profile.weakness then
-		self:RemoveBar("Fire weakness!")
-		self:Message(string.format(L["debuffwarn"].."Fire!"), "Important")
-		self:Bar("Fire weakness!", timer.weakness, icon.fire, true, "green")
+	if element == BST["Fire"] and self.db.profile.weakness then
+		self:RemoveBar("火焰易伤！")
+		self:Message(string.format(L["debuffwarn"].."火焰！"), "Important")
+		self:Bar("火焰易伤！", timer.weakness, icon.fire, true, "green")
 		if self.db.profile.bigicon then
 			self:WarningSign(icon.fire, 0.7)
 		end
 	end
-	if element == "Frost" and self.db.profile.weakness then
-		self:RemoveBar("Frost weakness!")
-		self:Message(string.format(L["debuffwarn"].."Frost!"), "Important")
-		self:Bar("Frost weakness!", timer.weakness, icon.frost, true, "green")
+	if element == BST["Frost"] and self.db.profile.weakness then
+		self:RemoveBar("冰霜易伤！")
+		self:Message(string.format(L["debuffwarn"].."冰霜！"), "Important")
+		self:Bar("冰霜易伤！", timer.weakness, icon.frost, true, "green")
 		if self.db.profile.bigicon then
 			self:WarningSign(icon.frost, 0.7)
 		end
 	end
-	if element == "Nature" and self.db.profile.weakness then
-		self:RemoveBar("Nature weakness!")
-		self:Message(string.format(L["debuffwarn"].."Nature!"), "Important")
-		self:Bar("Nature weakness!", timer.weakness, icon.nature, true, "green")
+	if element == BST["Nature"] and self.db.profile.weakness then
+		self:RemoveBar("自然易伤！")
+		self:Message(string.format(L["debuffwarn"].."自然！"), "Important")
+		self:Bar("自然易伤！", timer.weakness, icon.nature, true, "green")
 		if self.db.profile.bigicon then
 			self:WarningSign(icon.nature, 0.7)
 		end
 	end
-	if element == "Arcane" and self.db.profile.weakness then
-		self:RemoveBar("Arcane weakness!")
-		self:Message(string.format(L["debuffwarn"].."Arcane!"), "Important")
-		self:Bar("Arcane weakness!", timer.weakness, icon.arcane, true, "green")
+	if element == BST["Arcane"] and self.db.profile.weakness then
+		self:RemoveBar("奥术易伤！")
+		self:Message(string.format(L["debuffwarn"].."奥术！"), "Important")
+		self:Bar("奥术易伤！", timer.weakness, icon.arcane, true, "green")
 		if self.db.profile.bigicon then
 			self:WarningSign(icon.arcane, 0.7)
 		end
@@ -318,7 +320,7 @@ function module:Cyclone()
 	self:RemoveBar(L["cyclone_bar"])
 	self:Bar(L["cyclone_bar"], timer.cyclone, icon.cyclone, true, "white")
 	
-	if playerClass == "SHAMAN" and self.db.profile.bigicon then
+	if playerClass == BC["Shaman"] and self.db.profile.bigicon then
 		self:DelayedWarningSign(timer.cyclone - 5, icon.grounding, 1)
 	end
 end

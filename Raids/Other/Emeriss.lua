@@ -8,7 +8,7 @@ module.revision = 20008 -- To be overridden by the module!
 module.enabletrigger = module.translatedName -- string or table {boss, add1, add2}
 module.toggleoptions = {"noxious", "volatileyou", "volatileother", "bosskill"}
 module.zonename = {
-	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Ashenvale"],
 	AceLibrary("Babble-Zone-2.2")["Duskwood"],
 	AceLibrary("Babble-Zone-2.2")["The Hinterlands"],

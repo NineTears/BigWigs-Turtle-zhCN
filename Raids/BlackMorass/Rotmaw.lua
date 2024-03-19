@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Rotmaw", "The Black Morass")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30029
 module.enabletrigger = module.translatedName
@@ -30,6 +30,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_consumeOther = "(.+) is afflicted by Consume.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_consumeFade = "Consume fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_consume = "被吞噬",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -55,6 +56,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_consumeOther = "(.+) is afflicted by Consume.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_consumeFade = "Consume fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_consume = "被吞噬",
+    you = "你",
 } end )
 
 local timer = {
@@ -114,7 +116,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_contagionOfRotFade"]) then
 		local _,_, contagionOfRotFadePlayer, _ = string.find(msg, L["trigger_contagionOfRotFade"])
-		if contagionOfRotFadePlayer == "you" then contagionOfRotFadePlayer = UnitName("Player") end
+		if contagionOfRotFadePlayer == L["you"] then contagionOfRotFadePlayer = UnitName("Player") end
 		self:Sync(syncName.contagionOfRotFade .. " " .. contagionOfRotFadePlayer)
 		
 		
@@ -127,7 +129,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_consumeFade"]) then
 		local _,_, consumeFadePlayer, _ = string.find(msg, L["trigger_consumeFade"])
-		if consumeFadePlayer == "you" then consumeFadePlayer = UnitName("Player") end
+		if consumeFadePlayer == L["you"] then consumeFadePlayer = UnitName("Player") end
 		self:Sync(syncName.consumeFade .. " " .. consumeFadePlayer)
 	end
 end
@@ -149,7 +151,7 @@ end
 function module:ContagionOfRot(rest)
 	self:Bar(rest..L["bar_contagionOfRot"], timer.contagionOfRot, icon.contagionOfRot, true, color.contagionOfRot)
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" or UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] or UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.contagionOfRot, 0.7)
 	end
 end

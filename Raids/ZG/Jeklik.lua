@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("High Priestess Jeklik", "Zul'Gurub")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30025
 module.enabletrigger = module.translatedName
@@ -352,13 +353,13 @@ function module:Heal()
 	self:Bar(L["bar_healCast"], timer.healCast, icon.heal, true, color.healCast)
 	self:Message(L["msg_healCast"], "Positive", false, nil, false)
 	
-	if UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Mage"] then
 		self:Sound("Beware")
 		self:WarningSign(icon.heal, 0.7)
-	elseif UnitClass("Player") == "Warrior" then
+	elseif UnitClass("Player") == BC["Warrior"] then
 		self:Sound("Beware")
 		self:WarningSign(icon.heal, 0.7)
-	elseif UnitClass("Player") == "Rogue" then
+	elseif UnitClass("Player") == BC["Rogue"] then
 		self:Sound("Beware")
 		self:WarningSign(icon.heal, 0.7)
 	end

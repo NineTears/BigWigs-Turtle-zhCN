@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Mossheart", "The Black Morass")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30029
 module.enabletrigger = module.translatedName
@@ -46,6 +46,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_rejuvenationFade = "Rejuvenation fades from Mossheart.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_rejuvenation = "回春术",
     msg_rejuvenation = "莫斯哈特获得回春术，快驱散！",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -87,6 +88,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_rejuvenationFade = "Rejuvenation fades from Mossheart.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_rejuvenation = "回春术",
     msg_rejuvenation = "莫斯哈特获得回春术，快驱散！",
+    you = "你",
 } end )
 
 local timer = {
@@ -172,7 +174,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_mossCoveredHandsFade"]) then
 		local _,_, mossCoveredHandsFadePlayer, _ = string.find(msg, L["trigger_mossCoveredHandsFade"])
-		if mossCoveredHandsFadePlayer == "you" then mossCoveredHandsFadePlayer = UnitName("Player") end
+		if mossCoveredHandsFadePlayer == L["you"] then mossCoveredHandsFadePlayer = UnitName("Player") end
 		self:Sync(syncName.mossCoveredHandsFade .. " " .. mossCoveredHandsFadePlayer)
 	
 	
@@ -213,7 +215,7 @@ end
 function module:MossCoveredHands(rest)
 	self:Bar(rest..L["bar_mossCoveredHands"], timer.mossCoveredHands, icon.mossCoveredHands, true, color.mossCoveredHands)
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.mossCoveredHands, 0.7)
 		self:Sound("Info")
 	end
@@ -227,14 +229,14 @@ function module:EntanglingRoots()
 	self:RemoveBar(L["bar_entanglingRootsCd"])
 	self:Bar(L["bar_entanglingRootsCd"], timer.entanglingRootsCd, icon.entanglingRootsCd, true, color.entanglingRootsCd)
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.entanglingRootsCd, 0.7)
 		self:Sound("Info")
 	end
 end
 
 function module:DredgeSickness()
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" or UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] or UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.dredgeSickness, 0.7)
 		self:Sound("Info")
 	end
@@ -242,7 +244,7 @@ end
 
 function module:Rejuvenation()
 	self:Bar(L["bar_rejuvenation"], timer.rejuvenation, icon.rejuvenation, true, color.rejuvenation)
-	if UnitClass("Player") == "Shaman" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.rejuvenation, timer.rejuvenation)
 		self:Sound("Info")
 		self:Message(L["msg_rejuvenation"], "Urgent", false, nil, false)

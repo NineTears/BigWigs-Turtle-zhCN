@@ -1,5 +1,8 @@
 
 local module, L = BigWigs:ModuleDeclaration("Living Monstrosity", "Naxxramas")
+local bslightningtotem = AceLibrary("Babble-Spell-2.2")["Lightning Totem"]
+
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30011
 module.enabletrigger = module.translatedName
@@ -75,27 +78,27 @@ function module:Event(msg)
 			self:WarningSign(icon.lightningTotem, 0.7)
 		end
 		if self.db.profile.autotarget then
-			if UnitClass("Player") == "Rogue" then
-				TargetByName("Lightning Totem",true)
+			if UnitClass("Player") == BC["Rogue"] then
+				TargetByName(bslightningtotem,true)
 				--DEFAULT_CHAT_FRAME:AddMessage("Rogue")
 			end
-			--if UnitClass("Player") == "Paladin" then
+			--if UnitClass("Player") == BC["Paladin"] then
 			--	DEFAULT_CHAT_FRAME:AddMessage("Paladin")
 			--end
-			if UnitClass("Player") == "Hunter" then
-				TargetByName("Lightning Totem",true)
+			if UnitClass("Player") == BC["Hunter"] then
+				TargetByName(bslightningtotem,true)
 				--DEFAULT_CHAT_FRAME:AddMessage("Hunter")
 			end
-			if UnitClass("Player") == "Warrior" then
-				TargetByName("Lightning Totem",true)
+			if UnitClass("Player") == BC["Warrior"] then
+				TargetByName(bslightningtotem,true)
 				--DEFAULT_CHAT_FRAME:AddMessage("Warrior")
 			end
-			if UnitClass("Player") == "Mage" then
-				TargetByName("Lightning Totem",true)
+			if UnitClass("Player") == BC["Mage"] then
+				TargetByName(bslightningtotem,true)
 				--DEFAULT_CHAT_FRAME:AddMessage("Mage")
 			end
-			if UnitClass("Player") == "Warlock" then
-				TargetByName("Lightning Totem",true)
+			if UnitClass("Player") == BC["Warlock"] then
+				TargetByName(bslightningtotem,true)
 				--DEFAULT_CHAT_FRAME:AddMessage("Warlock")
 			end
 		end

@@ -1,5 +1,6 @@
-
 local module, L = BigWigs:ModuleDeclaration("High Priestess Mar'li", "Zul'Gurub")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbspawnofmarli = AceLibrary("Babble-Boss-2.2")["Spawn of Mar'li"]
 
 module.revision = 30034
 module.enabletrigger = module.translatedName
@@ -211,7 +212,7 @@ function module:OnDisengage()
 end
 
 function module:CheckTarget()
-	if UnitName("target") == "Spawn of Mar'li" and not UnitIsDeadOrGhost("target") and UnitExists("target") then
+	if UnitName("target") == bbspawnofmarli and not UnitIsDeadOrGhost("target") and UnitExists("target") then
 		self:CancelScheduledEvent("bwmarliaddcheck")
 		if (IsRaidLeader() or IsRaidOfficer()) then
 			SetRaidTarget("target",8)
@@ -219,7 +220,7 @@ function module:CheckTarget()
 		self:Sync(syncName.spidersSpawn)
 	else
 		for i = 1,GetNumRaidMembers() do
-			if UnitName("Raid"..i.."target") == "Spawn of Mar'li" and not UnitIsDeadOrGhost("Raid"..i.."target") and UnitExists("Raid"..i.."target") then
+			if UnitName("Raid"..i.."target") == bbspawnofmarli and not UnitIsDeadOrGhost("Raid"..i.."target") and UnitExists("Raid"..i.."target") then
 				self:CancelScheduledEvent("bwmarliaddcheck")
 				if (IsRaidLeader() or IsRaidOfficer()) then
 					SetRaidTarget("Raid"..i.."target",8)
@@ -299,7 +300,7 @@ end
 function module:Webs()
 	self:RemoveBar(L["bar_websCd"])
 	self:IntervalBar(L["bar_websCd"], timer.websCd[1], timer.websCd[2], icon.webs, true, color.websCd)
-	if UnitClass("Player") == "Paladin" then
+	if UnitClass("Player") == BC["Paladin"] then
 		self:WarningSign(icon.webs, 0.7)
 		self:Sound("Info")
 	end
@@ -314,7 +315,7 @@ function module:DrainStart()
 	self:Bar(L["bar_drainLife"], timer.drainLife, icon.drainLife, true, color.drainLife)
 	self:Message(L["msg_drainLife"], "Attention", false, nil, false)
 	
-	if UnitClass("Player") == "Rogue" or UnitClass("Player") == "Warrior" or UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Mage"] then
 		self:WarningSign(icon.drainLife, timer.drainLife)
 		self:Sound("Beware")
 	end
@@ -355,7 +356,7 @@ end
 
 function module:PoisonVolley()
 	self:IntervalBar(L["bar_poisonVolleyCd"], timer.poisonVolleyCd[1], timer.poisonVolleyCd[2], icon.poisonVolley, true, color.poisonVolley)
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.poisonVolley, 0.7)
 		self:Sound("Info")
 	end

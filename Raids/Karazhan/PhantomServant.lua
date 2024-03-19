@@ -26,6 +26,7 @@ L:RegisterTranslations("enUS", function() return {
 
     ["You have slain %s!"] = true,
     ["You have slain %s!"] = "你杀死了%s！",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -45,6 +46,7 @@ L:RegisterTranslations("zhCN", function() return {
     --bar_phantomScreamAfflicted = " Silenced",
 
     ["You have slain %s!"] = "你杀死了%s！",
+    you = "你",
 } end )
 
 module.defaultDB = {
@@ -138,7 +140,7 @@ function module:Event(msg)
 		
 	--elseif string.find(msg, L["trigger_phantomScreamFade"]) then
 	--	local _,_, phantomScreamFadeTarget, _ = string.find(msg, L["trigger_phantomScreamFade"])
-	--	if phantomScreamFadeTarget == "you" then phantomScreamFadeTarget = UnitName("Player") end
+	--	if phantomScreamFadeTarget == L["you"] then phantomScreamFadeTarget = UnitName("Player") end
 	--	self:Sync(syncName.phantomScreamFade .. " " .. phantomScreamFadeTarget)
 	end
 end

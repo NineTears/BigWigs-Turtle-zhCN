@@ -4,6 +4,7 @@ local __substr = string.sub
 local __tinsert = table.insert
 
 local module, L = BigWigs:ModuleDeclaration("Gothik the Harvester", "Naxxramas")
+local bzeasternplaguelands = AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"]
 
 module.revision = 30055
 module.enabletrigger = module.translatedName
@@ -231,7 +232,7 @@ function module:OnDisengage()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() == "Eastern Plaguelands" and self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() == bzeasternplaguelands and self.core:IsModuleActive(module.translatedName) then
 		self.core:DisableModule(module.translatedName)
 	end
 end

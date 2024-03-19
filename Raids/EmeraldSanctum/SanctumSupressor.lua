@@ -25,7 +25,7 @@ L:RegisterTranslations("enUS", function() return {
     
     ["You have slain %s!"] = true,
     ["You have slain %s!"] = "你已击败了%s！",
-	
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -44,7 +44,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_emeraldSupression = " 镇压",
     
     ["You have slain %s!"] = "你已击败了%s！",
-	
+    you = "你",
 } end )
 
 module.defaultDB = {
@@ -133,7 +133,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_emeraldSupressionFade"]) then
 		local _,_, supressionOffTarget, _ = string.find(msg, L["trigger_emeraldSupressionFade"])
-		if supressionOffTarget == "you" then supressionOffTarget = UnitName("Player") end
+		if supressionOffTarget == L["you"] then supressionOffTarget = UnitName("Player") end
 		self:Sync(syncName.emeraldSupressionOff .. " " .. supressionOffTarget)
 	
 	elseif string.find(msg, L["trigger_emeraldSupressionOther"]) then

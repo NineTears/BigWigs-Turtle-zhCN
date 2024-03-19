@@ -38,6 +38,43 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_person1 = "(.+) is afflicted by Living Bomb.",--CHAT_MSG_
 	
 	trigger_engage = "I kill you!",--CHAT_MSG_MONSTER_YELL
+	clickme = " >点击我！<",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	cmd = "Bossname",
+
+	ability1_cmd = "ability1",
+	ability1_name = "ability1 Alert",
+	ability1_desc = "Warn for ability1",
+
+	ability2_cmd = "ability2",
+	ability2_name = "ability2 Alert",
+	ability2_desc = "Warn for ability2",
+	
+	ability3_cmd = "ability3",
+	ability3_name = "ability3 Alert",
+	ability3_desc = "Warns for ability3",
+	
+	
+	
+	
+	trigger_ability1 = "trigger_ability1",--CHAT_MSG...
+	bar_ability1 = "bar_ability1",
+	msg_ability1 = "msg_ability1",
+	
+	trigger_ability2 = "trigger_ability2",--CHAT_MSG...
+	bar_ability2 = "bar_ability1",
+	msg_ability2 = "msg_ability1",
+	
+	trigger_ability3 = "trigger_ability3",--CHAT_MSG_
+	bar_ability3 = "bar_ability1",
+	msg_ability3 = "msg_ability1",
+	
+	trigger_person1 = "(.+) is afflicted by Living Bomb.",--CHAT_MSG_
+	
+	trigger_engage = "I kill you!",--CHAT_MSG_MONSTER_YELL
+	clickme = " >点击我！<",
 } end )
 
 local timer = {
@@ -141,7 +178,7 @@ function module:Ability3(rest)
 		TargetLastTarget()
 	end
 	
-	self:Bar(rest..L["bar_ability3"].. " >Click Me<", timer.ability3, icon.ability3, true, color.ability3)
-	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_ability3"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest..L["bar_ability3"].. L["clickme"], timer.ability3, icon.ability3, true, color.ability3)
+	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_ability3"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 	self:Message(rest..L["msg_ability3"], "Attention")
 end

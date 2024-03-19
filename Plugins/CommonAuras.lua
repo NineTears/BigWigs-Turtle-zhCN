@@ -1,7 +1,18 @@
 
 local name = "Common Auras"
 local L = AceLibrary("AceLocale-2.2"):new("BigWigs"..name)
+local BC = AceLibrary("Babble-Class-2.2")
 local BS = AceLibrary("Babble-Spell-2.2")
+
+local bzorgrimmar = AceLibrary("Babble-Zone-2.2")["Orgrimmar"]
+local bzthunderbluff = AceLibrary("Babble-Zone-2.2")["Thunder Bluff"]
+local bzundercity = AceLibrary("Babble-Zone-2.2")["Undercity"]
+local bzstonard = AceLibrary("Babble-Zone-2.2")["Stonard"]
+local bzstormwind = AceLibrary("Babble-Zone-2.2")["Stormwind"]
+local bzironforge = AceLibrary("Babble-Zone-2.2")["Ironforge"]
+local bzdarnassus = AceLibrary("Babble-Zone-2.2")["Darnassus"]
+local bztheramore = AceLibrary("Babble-Zone-2.2")["Theramore"]
+local bzkarazhan = AceLibrary("Babble-Zone-2.2")["Karazhan"]
 
 local spellStatus = nil
 
@@ -135,6 +146,10 @@ L:RegisterTranslations("enUS", function() return {
 	["Gives timer bars and raid messages about common buffs and debuffs."] = "提供关于常见增益和减益的计时条和团队信息。",
 	["Common Auras"] = "常见的光环",
 	["commonauras"] = "常见的光环",
+	Dwarf = "Dwarf",
+	Alliance = "Alliance",
+	Horde = "Horde",
+	yougaindivineintervention = "You gain Divine Intervention.",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -194,6 +209,10 @@ L:RegisterTranslations("zhCN", function() return {
 	["Gives timer bars and raid messages about common buffs and debuffs."] = "提供关于常见增益和减益的计时条和团队信息。",
 	["Common Auras"] = "常见的光环",
 	["commonauras"] = "常见的光环",
+	Dwarf = "矮人",
+	Alliance = "联盟",
+	Horde = "部落",
+	yougaindivineintervention = "你获得了神圣干涉。",
 } end )
 
 BigWigsCommonAuras = BigWigs:NewModule(name, "AceHook-2.1")
@@ -361,13 +380,13 @@ function BigWigsCommonAuras:OnEnable()
 	
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS")
 	
-	if UnitClass("player") == "Warrior" or UnitClass("player") == "Druid" then
+	if UnitClass("player") == BC["Warrior"] or UnitClass("player") == BC["Druid"] then
 		self:RegisterEvent("SpellStatus_SpellCastInstant")
 	
-	elseif UnitClass("player") == "Priest" and UnitRace("player") == "Dwarf" then
+	elseif UnitClass("player") == BC["Priest"] and UnitRace("player") == L["Dwarf"] then
 		self:RegisterEvent("SpellStatus_SpellCastInstant")
 	
-	elseif UnitClass("player") == "Mage" then
+	elseif UnitClass("player") == BC["Mage"] then
 		if not spellStatus then spellStatus = AceLibrary("SpellStatus-1.0") end
 		self:RegisterEvent("SpellStatus_SpellCastCastingFinish")
 		self:RegisterEvent("SpellStatus_SpellCastFailure")
@@ -425,9 +444,9 @@ function BigWigsCommonAuras:SpellStatus_SpellCastInstant(sId, sName, sRank, sFul
 end
 
 function BigWigsCommonAuras:CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS(msg)
-	if string.find(msg, BS["Gift of Life"]) and (UnitClass("Player") == "Warrior" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" ) then
+	if string.find(msg, BS["Gift of Life"]) and (UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] ) then
 		self:TriggerEvent("BigWigs_SendSync", "BWCALG")
-	elseif msg == "You gain Divine Intervention." then
+	elseif msg == L["yougaindivineintervention"] then
 		self:TriggerEvent("BigWigs_SendSync", "BWCADI")
 	end
 end
@@ -463,8 +482,8 @@ function BigWigsCommonAuras:CHAT_MSG_MONSTER_EMOTE(msg, sender)
 		if GetNumRaidMembers() > 0 then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == sender then
-					if UnitFactionGroup("raid"..i) == "Alliance" then whZone = "Stormwind"
-					elseif UnitFactionGroup("raid"..i) == "Horde" then whZone = "Orgrimmar"
+					if UnitFactionGroup("raid"..i) == L["Alliance"] then whZone = bzstormwind
+					elseif UnitFactionGroup("raid"..i) == L["Horde"] then whZone = bzorgrimmar
 					else whZone = sender
 					end
 				end
@@ -472,8 +491,8 @@ function BigWigsCommonAuras:CHAT_MSG_MONSTER_EMOTE(msg, sender)
 		elseif GetNumPartyMembers() > 0 then
 			for i=1,GetNumPartyMembers() do
 				if UnitName("party"..i) == sender then
-					if UnitFactionGroup("party"..i) == "Alliance" then whZone = "Stormwind"
-					elseif UnitFactionGroup("party"..i) == "Horde" then whZone = "Orgrimmar"
+					if UnitFactionGroup("party"..i) == L["Alliance"] then whZone = bzstormwind
+					elseif UnitFactionGroup("party"..i) == L["Horde"] then whZone = bzorgrimmar
 					else whZone = sender
 					end
 				end
@@ -592,22 +611,22 @@ function BigWigsCommonAuras:BigWigs_RecvSync( sync, rest, nick )
 		rest = BS:HasTranslation(rest) and BS:GetTranslation(rest) or rest
 		local _, _, zone = string.find(rest, L["portal_regexp"])
 		if zone then
-			if zone == "Orgrimmar" or zone == "Thunder Bluff" or zone == "Undercity" or zone == "Stonard" then
+			if zone == bzorgrimmar or zone == bzthunderbluff or zone == bzundercity or zone == bzstonard then
 				portalColor = "Red"
-				portalText = "--HORDE-- portal to "
-			elseif zone == "Stormwind" or zone == "Ironforge" or zone == "Darnassus" or zone == "Theramore" then
+				portalText = "--部落-- 传送门到 "
+			elseif zone == bzstormwind or zone == bzironforge or zone == bzdarnassus or zone == bztheramore then
 				portalColor = "Blue"
-				portalText = "--ALLIANCE-- portal to "
-			elseif zone == "Karazhan" or zone  then
+				portalText = "--联盟-- 传送门到 "
+			elseif zone == bzkarazhan or zone  then
 				portalColor = "Green"
-				portalText = "--NEUTRAL-- portal to "
+				portalText = "--中立-- 传送门到 "
 			end
-			self:TriggerEvent("BigWigs_Message", portalText..zone, "Attention", false, nil, false)
-			if zone == "Stonard" then
+			self:TriggerEvent("BigWigs_Message", portalText..zone, L["Attention"], false, nil, false)
+			if zone == bzstonard then
 				self:TriggerEvent("BigWigs_StartBar", self, rest, timer.portal, L["iconPrefix"].."Spell_Arcane_PortalStonard", true, portalColor)
-			elseif zone == "Theramore" then
+			elseif zone == bztheramore then
 				self:TriggerEvent("BigWigs_StartBar", self, rest, timer.portal, L["iconPrefix"].."Spell_Arcane_PortalTheramore", true, portalColor)
-			elseif zone == "Karazhan" then
+			elseif zone == bzkarazhan then
 				self:TriggerEvent("BigWigs_StartBar", self, rest, timer.portal, L["iconPrefix"].."Spell_Arcane_PortalUndercity", true, portalColor)
 			else
 				self:TriggerEvent("BigWigs_StartBar", self, rest, timer.portal, BS:GetSpellIcon(rest), true, portalColor)
@@ -616,12 +635,12 @@ function BigWigsCommonAuras:BigWigs_RecvSync( sync, rest, nick )
 	
 	
 	elseif self.db.profile.wormhole and sync == "BWCAWH" and rest then
-		if rest == "Orgrimmar" then
+		if rest == bzorgrimmar then
 			whColor = "Red"
-			whText = "--HORDE-- wormhole to Orgrimmar"
-		elseif rest == "Stormwind" then
+			whText = "--部落-- 虫洞到奥格瑞玛"
+		elseif rest == bzstormwind then
 			whColor = "Blue"
-			whText = "--ALLIANCE-- wormhole to Stormwind"
+			whText = "--联盟-- 虫洞到暴风城"
 		end
 		self:TriggerEvent("BigWigs_Message", whText, "Attention", false, nil, false)
 		self:TriggerEvent("BigWigs_StartBar", self, rest..L["bar_wormhole"], timer.wormhole, icon.wormhole, true, whColor)

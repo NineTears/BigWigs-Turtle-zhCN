@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Chromaggus", "Blackwing Lair")
+local BST = AceLibrary("Babble-SpellTree-2.2")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30037
 module.enabletrigger = module.translatedName
@@ -475,7 +477,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 	if not vulnerability then
 		local _, _, dmg, school, userspell, partial = string.find(msg, L["vulnerability_dots_test"])
 		if dmg and school and userspell then
-			if school == L["arcane"] then
+			if school == BST["Arcane"] then
 				if partial and partial ~= "" then
 					if tonumber(dmg)+tonumber(partial) >= 250 then
 						self:IdentifyVulnerability(school)
@@ -485,7 +487,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["fire"] and not string.find(userspell, L["ignite"]) then
+			elseif school == BST["Fire"] and not string.find(userspell, L["ignite"]) then
 				if partial and partial ~= "" then
 					if tonumber(dmg)+tonumber(partial) >= 400 then
 						self:IdentifyVulnerability(school)
@@ -495,7 +497,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["nature"] then
+			elseif school == BST["Nature"] then
 				if partial and partial ~= "" then
 					if tonumber(dmg)+tonumber(partial) >= 300 then
 						self:IdentifyVulnerability(school)
@@ -505,7 +507,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["shadow"] then
+			elseif school == BST["Shadow"] then
 				if string.find(userspell, L["curseofdoom"]) then
 					if partial and partial ~= "" then
 						if tonumber(dmg)+tonumber(partial) >= 3000 then
@@ -555,7 +557,7 @@ function module:PlayerDamageEvents(msg)
 				end
 				school = string.gsub(school, "schaden", "") -- turn "Feuerschaden" into "Feuer"
 			end
-			if school == L["arcane"] then
+			if school == BST["Arcane"] then
 				if string.find(userspell, L["starfire"]) then
 					if partial and partial ~= "" then
 						if (tonumber(dmg)+tonumber(partial) >= 800 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 1200 and stype == L["crit"]) then
@@ -577,7 +579,7 @@ function module:PlayerDamageEvents(msg)
 						end
 					end
 				end
-			elseif school == L["fire"] then
+			elseif school == BST["Fire"] then
 				if partial and partial ~= "" then
 					if (tonumber(dmg)+tonumber(partial) >= 1300 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 2600 and stype == L["crit"]) then
 						self:IdentifyVulnerability(school)
@@ -587,7 +589,7 @@ function module:PlayerDamageEvents(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["frost"] then
+			elseif school == BST["Frost"] then
 				if partial and partial ~= "" then
 					if (tonumber(dmg)+tonumber(partial) >= 800 and stype == L["hit"])	or (tonumber(dmg)+tonumber(partial) >= 1600 and stype == L["crit"]) then
 						self:IdentifyVulnerability(school)
@@ -597,7 +599,7 @@ function module:PlayerDamageEvents(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["nature"] then
+			elseif school == BST["Nature"] then
 				if string.find(userspell, L["thunderfury"]) then
 					if partial and partial ~= "" then
 						if (tonumber(dmg)+tonumber(partial) >= 800 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 1200 and stype == L["crit"]) then
@@ -619,7 +621,7 @@ function module:PlayerDamageEvents(msg)
 						end
 					end
 				end
-			elseif school == L["shadow"] then
+			elseif school == BST["Shadow"] then
 				if partial and partial ~= "" then
 					if (tonumber(dmg)+tonumber(partial) >= 1700 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 3400 and stype == L["crit"]) then
 						self:IdentifyVulnerability(school)
@@ -667,7 +669,7 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 			self:Message(L["frenzy_message"], "Attention")
 			self:Bar(L["frenzy_bar"], timer.frenzy, icon.frenzy, true, "red")
 
-			if playerClass == "HUNTER" then
+			if playerClass == BC["Hunter"] then
 				self:WarningSign(icon.tranquil, timer.frenzy, true)
 			end
 		end

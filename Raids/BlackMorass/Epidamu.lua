@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Epidamu", "The Black Morass")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30029
 module.enabletrigger = module.translatedName
@@ -29,6 +30,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_temporalConfluxOther = "(.+) is afflicted by Temporal Conflux.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_temporalConfluxFade = "Temporal Conflux fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_temporalConflux = "时空涡流",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -53,6 +55,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_temporalConfluxOther = "(.+) is afflicted by Temporal Conflux.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_temporalConfluxFade = "Temporal Conflux fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_temporalConflux = "时空涡流",
+    you = "你",
 } end )
 
 local timer = {
@@ -112,7 +115,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_drainManaFade"]) then
 		local _,_, drainManaFadePlayer, _ = string.find(msg, L["trigger_drainManaFade"])
-		if drainManaFadePlayer == "you" then drainManaFadePlayer = UnitName("Player") end
+		if drainManaFadePlayer == L["you"] then drainManaFadePlayer = UnitName("Player") end
 		self:Sync(syncName.drainManaFade .. " " .. drainManaFadePlayer)
 		
 		
@@ -126,7 +129,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_temporalConfluxFade"]) then
 		local _,_, temporalConfluxFadePlayer, _ = string.find(msg, L["trigger_temporalConfluxFade"])
-		if temporalConfluxFadePlayer == "you" then temporalConfluxFadePlayer = UnitName("Player") end
+		if temporalConfluxFadePlayer == L["you"] then temporalConfluxFadePlayer = UnitName("Player") end
 		self:Sync(syncName.temporalConfluxFade .. " " .. temporalConfluxFadePlayer)
 	end
 end
@@ -148,7 +151,7 @@ end
 function module:DrainMana(rest)
 	self:Bar(rest..L["bar_drainMana"], timer.drainMana, icon.drainMana, true, color.drainMana)
 	
-	if UnitClass("Player") == "Priest" or UnitClass("Player") ~= "Paladin" then
+	if UnitClass("Player") == BC["Priest"] or UnitClass("Player") ~= BC["Paladin"] then
 		self:WarningSign(icon.drainMana, 0.7)
 		self:Sound("Info")
 	end

@@ -1,5 +1,6 @@
-
 local module, L = BigWigs:ModuleDeclaration("Baron Geddon", "Molten Core")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbbarongeddon = AceLibrary("Babble-Boss-2.2")["Baron Geddon"]
 
 module.revision = 30044
 module.enabletrigger = module.translatedName
@@ -53,6 +54,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_ignite2 = "Ignite Mana was resisted",
     bar_igniteCd = "点燃法力 CD",
     msg_ignite = "现在就驱散法力！",
+    you = "you",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
@@ -99,6 +101,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_ignite2 = "Ignite Mana was resisted",
     bar_igniteCd = "点燃法力 CD",
     msg_ignite = "现在就驱散法力！",
+    you = "你",
 } end)
 
 local timer = {
@@ -193,7 +196,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_bombFade"]) then
 		local _,_, bombFadePlayer,_ = string.find(msg, L["trigger_bombFade"])
-		if bombFadePlayer == "you" then bombFadePlayer = UnitName("Player") end
+		if bombFadePlayer == L["you"] then bombFadePlayer = UnitName("Player") end
 		self:Sync(syncName.bombFade .. " " .. bombFadePlayer)
 		
 		
@@ -281,7 +284,7 @@ function module:InfernoYou()
 		doWarn = true
 	
 	--don't do it if you're the tank
-	elseif UnitName("Target") == "Baron Geddon" and UnitName("TargetTarget") == UnitName("Player") then
+	elseif UnitName("Target") == bbbarongeddon and UnitName("TargetTarget") == UnitName("Player") then
 		doWarn = false
 		return
 	end
@@ -319,7 +322,7 @@ end
 function module:Ignite()
 	self:IntervalBar(L["bar_igniteCd"], timer.igniteCd[1], timer.igniteCd[2], icon.ignite, true, color.ignite)
 
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.ignite, 0.7)
 		self:Sound("Info")
 		self:Message(L["msg_ignite"], "Personal", false, nil, false)

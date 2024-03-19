@@ -1,6 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("General Rajaxx", "Ruins of Ahn'Qiraj")
 local andorov = AceLibrary("Babble-Boss-2.2")["Lieutenant General Andorov"]
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30027
 module.enabletrigger = {module.translatedName, andorov}
@@ -93,6 +94,8 @@ L:RegisterTranslations("enUS", function() return {
 	msg_wave8 = "第8/8波 -- 拉贾克斯将军",
 	trigger_thundercrash = "Thundercrash",
 	bar_thundercrash = "雷霆冲击冷却",
+	clickme = " >点击我！<",
+	you = "you",
 } end )
 
 L:RegisterTranslations("enES", function() return {
@@ -273,6 +276,8 @@ L:RegisterTranslations("zhCN", function() return {
 	msg_wave8 = "第8/8波 -- 拉贾克斯将军",
 	trigger_thundercrash = "Thundercrash",
 	bar_thundercrash = "雷霆冲击冷却",
+	clickme = " >点击我！<",
+	you = "你",
 } end )
 
 local timer = {
@@ -369,7 +374,7 @@ end
 
 function module:OnEngage()
 	self:Bar("Target Andorov", 3600, icon.eventStart, true, "Cyan")
-	self:SetCandyBarOnClick("BigWigsBar ".."Target Andorov", function(name, button, extra) TargetByName("Lieutenant General Andorov", true) end, rest)
+	self:SetCandyBarOnClick("BigWigsBar ".."Target Andorov", function(name, button, extra) TargetByName(andorov, true) end, rest)
 end
 
 function module:OnDisengage()
@@ -385,7 +390,7 @@ function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 end
 
 function module:CHAT_MSG_MONSTER_YELL(msg, sender)
-	if msg == L["trigger_eventStarted"] and sender == "Lieutenant General Andorov" then
+	if msg == L["trigger_eventStarted"] and sender == andorov then
 		module:SendEngageSync()
 		self:Sync(syncName.wave1)
 		
@@ -421,7 +426,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_attackOrderFade"]) then
 		local _,_, attackOrderFadePerson, _ = string.find(msg, L["trigger_attackOrderFade"])
-		if attackOrderFadePerson == "you" then
+		if attackOrderFadePerson == L["you"] then
 			attackOrderFadePerson = UnitName("Player")
 		end
 		self:Sync(syncName.attackOrderFade.." "..attackOrderFadePerson)
@@ -554,8 +559,8 @@ function module:AttackOrder(rest)
 		SendChatMessage("Attack Order on "..UnitName("player").."!","SAY")
 	end
 	
-	self:Bar(rest..L["bar_attackOrder"].." >Click Me<", timer.attackOrder, icon.attackOrder, true, "Blue")
-	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_attackOrder"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest..L["bar_attackOrder"]..L["clickme"], timer.attackOrder, icon.attackOrder, true, "Blue")
+	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_attackOrder"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 	
 	for i=1,GetNumRaidMembers() do
 		if UnitName("raid"..i) == rest then
@@ -565,7 +570,7 @@ function module:AttackOrder(rest)
 end
 
 function module:AttackOrderFade(rest)
-	self:RemoveBar(rest..L["bar_attackOrder"].." >Click Me<")
+	self:RemoveBar(rest..L["bar_attackOrder"]..L["clickme"])
 	for i=1,GetNumRaidMembers() do
 		if UnitName("raid"..i) == rest then
 			SetRaidTarget("raid"..i, 0)
@@ -596,7 +601,7 @@ end
 
 function module:Enlarge()
 	self:Bar(L["bar_enlarge"], timer.enlargeDuration, icon.enlarge, true, "Blue")
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:Message(L["msg_enlarge"], "Important", false, "Info")
 		self:WarningSign(icon.enlarge, 0.7)
 	else

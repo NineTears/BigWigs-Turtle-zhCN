@@ -80,7 +80,6 @@ L:RegisterTranslations("enUS", function() return {
     ["Charge"] = true,
     ["Next Whirlwind"] = true,
     ["Possible Gaze"] = "可能的凝视",
-    ["Charge"] = "冲锋",
     ["Next Whirlwind"] = "下一次旋风斩",
 } end )
 
@@ -372,7 +371,7 @@ function module:Event(msg)
 	elseif msg == L["gaze_trigger"] then
 		self:Sync(syncName.gazeCast)
 	elseif msg == L["gazeafflictyou"] then
-		self:Message(L["gaze_warn"].."you! STOP ALL ACTION!", "Urgent")
+		self:Message(L["gaze_warn"].."你！停止所有动作！", "Urgent")
 		if self.db.profile.sounds then
 			self:Sound("Beware")
 		end

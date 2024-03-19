@@ -6,6 +6,7 @@ local veklor = AceLibrary("Babble-Boss-2.2")["Emperor Vek'lor"]
 local veknilash = AceLibrary("Babble-Boss-2.2")["Emperor Vek'nilash"]
 local boss = AceLibrary("Babble-Boss-2.2")["The Twin Emperors"]
 local L = AceLibrary("AceLocale-2.2"):new("BigWigs" .. boss)
+
 module.enabletrigger = {veklor, veknilash}
 module.toggleoptions = {"teleport", "enrage", "blizzard", "bug", "heal", "targeticon", "bosskill"}
 
@@ -221,7 +222,7 @@ end
 
 function module:VeklorTarget()
 	if UnitName("target") ~= nil and UnitName("targettarget") ~= nil and (IsRaidLeader() or IsRaidOfficer()) then
-		if UnitName("target") == "Emperor Vek'lor" then
+		if UnitName("target") == veklor then
 			SetRaidTarget("targettarget",1)
 		end
 	end
@@ -229,7 +230,7 @@ end
 
 function module:VeknilashTarget()
 	if UnitName("target") ~= nil and UnitName("targettarget") ~= nil and (IsRaidLeader() or IsRaidOfficer()) then
-		if UnitName("target") == "Emperor Vek'nilash" then
+		if UnitName("target") == veknilash then
 			SetRaidTarget("targettarget",8)
 		end
 	end

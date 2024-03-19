@@ -62,6 +62,7 @@ L:RegisterTranslations("enUS", function() return {
     bar_deathCoil = "死亡缠绕",
     
     --Lady Vashj -> Thunderstorm Cloud -> CLOG
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -119,6 +120,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_deathCoil = "死亡缠绕",
     
     --Lady Vashj -> Thunderstorm Cloud -> CLOG
+    you = "你",
 } end )
 
 local timer = {
@@ -225,7 +227,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_devouringPlagueFade"]) then
 		local _,_, devouringPlagueFadePlayer, _ = string.find(msg, L["trigger_devouringPlagueFade"])
-		if devouringPlagueFadePlayer == "you" then devouringPlagueFadePlayer = UnitName("Player") end
+		if devouringPlagueFadePlayer == L["you"] then devouringPlagueFadePlayer = UnitName("Player") end
 		self:Sync(syncName.devouringPlagueFade .. " " .. devouringPlagueFadePlayer)
 	
 	
@@ -238,7 +240,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_deathCoilFade"]) then
 		local _,_, deathCoilFadePlayer, _ = string.find(msg, L["trigger_deathCoilFade"])
-		if deathCoilFadePlayer == "you" then deathCoilFadePlayer = UnitName("Player") end
+		if deathCoilFadePlayer == L["you"] then deathCoilFadePlayer = UnitName("Player") end
 		self:Sync(syncName.deathCoilFade .. " " .. deathCoilFadePlayer)
 	end
 end

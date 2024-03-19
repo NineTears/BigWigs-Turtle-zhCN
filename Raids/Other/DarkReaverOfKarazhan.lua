@@ -5,7 +5,7 @@ module.revision = 30051
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"forlornspirit", "lurkingshadow", -1, "enrage", -1, "deterrence", "nimblereflexes", -1, "unbalancingstrike", "piercearmor", "bosskill"}
 module.zonename = {
-	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Deadwind Pass"],
 }
 
@@ -79,6 +79,8 @@ L:RegisterTranslations("enUS", function() return {
     bar_pierceArmor = " 破甲",
 
     trigger_engage = "You desecrate the Master's lands with your filthy footsteps!",--CHAT_MSG_MONSTER_YELL
+    clickme = " >点击我！<",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -151,6 +153,8 @@ L:RegisterTranslations("zhCN", function() return {
     bar_pierceArmor = " 破甲",
 
     trigger_engage = "You desecrate the Master's lands with your filthy footsteps!",--CHAT_MSG_MONSTER_YELL
+    clickme = " >点击我！<",
+    you = "你",
 } end )
 
 local timer = {
@@ -295,7 +299,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_unbalancingStrikeFade"]) then
 		local _,_, unbalFadeTarget, _ = string.find(msg, L["trigger_unbalancingStrikeFade"])
-		if unbalFadeTarget == "you" then unbalFadeTarget = UnitName("Player") end
+		if unbalFadeTarget == L["you"] then unbalFadeTarget = UnitName("Player") end
 		self:Sync(syncName.unbalancingStrikeFade .. " " .. unbalFadeTarget)
 		
 		
@@ -309,7 +313,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_pierceArmorFade"]) then
 		local _,_, pierceFadeTarget, _ = string.find(msg, L["trigger_pierceArmorFade"])
-		if pierceFadeTarget == "you" then pierceFadeTarget = UnitName("Player") end
+		if pierceFadeTarget == L["you"] then pierceFadeTarget = UnitName("Player") end
 		self:Sync(syncName.pierceArmorFade .. " " .. pierceFadeTarget)
 	end
 end
@@ -355,8 +359,8 @@ function module:ForlornSpiritSpawn()
 end
 
 function module:LurkingShadowSpawn(rest)
-	self:Bar(rest.." "..L["bar_lurkingShadowSpawn"].." >Click Me!<", timer.lurkingShadowSpawn, icon.lurkingShadowSpawn, true, color.lurkingShadowSpawn)
-	self:SetCandyBarOnClick("BigWigsBar "..rest.." "..L["bar_lurkingShadowSpawn"].." >Click Me!<", function(name, button, extra) TargetByName(extra, true) end, "Lurking Shadow")
+	self:Bar(rest.." "..L["bar_lurkingShadowSpawn"]..L["clickme"], timer.lurkingShadowSpawn, icon.lurkingShadowSpawn, true, color.lurkingShadowSpawn)
+	self:SetCandyBarOnClick("BigWigsBar "..rest.." "..L["bar_lurkingShadowSpawn"]..L["clickme"], function(name, button, extra) TargetByName(extra, true) end, "Lurking Shadow")
 	
 	self:Message(rest..L["msg_lurkingShadowSpawn"], "Attention", false, nil, false)
 	

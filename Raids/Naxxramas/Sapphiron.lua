@@ -1,5 +1,9 @@
 
 local module, L = BigWigs:ModuleDeclaration("Sapphiron", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
+local bzsapphironslair = AceLibrary("Babble-Zone-2.2")["Sapphiron's Lair"]
+local bzkelthuzadchamber = AceLibrary("Babble-Zone-2.2")["Kel'Thuzad Chamber"]
+local bbsapphiron = AceLibrary("Babble-Boss-2.2")["Sapphiron"]
 
 module.revision = 30058
 module.enabletrigger = module.translatedName
@@ -302,12 +306,12 @@ function module:OnDisengage()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Sapphiron's Lair" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzsapphironslair or self.core:IsModuleActive(module.translatedName) then
 		return
-	elseif GetMinimapZoneText() == "Kel'Thuzad Chamber" and self.core:IsModuleActive(module.translatedName) then
+	elseif GetMinimapZoneText() == bzkelthuzadchamber and self.core:IsModuleActive(module.translatedName) then
 		self.core:DisableModule(module.translatedName)
 		return
-	elseif GetMinimapZoneText() == "Sapphiron's Lair" then
+	elseif GetMinimapZoneText() == bzsapphironslair then
 		self.core:EnableModule(module.translatedName)
 	end
 end
@@ -351,7 +355,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_parryYou"]) and self.db.profile.parry then
 		if UnitName("Target") ~= nil and UnitName("TargetTarget") ~= nil then
-			if UnitName("Target") == "Sapphiron" and UnitName("TargetTarget") ~= UnitName("Player") then
+			if UnitName("Target") == bbsapphiron and UnitName("TargetTarget") ~= UnitName("Player") then
 				self:ParryYou()
 			end
 		end
@@ -413,7 +417,7 @@ function module:LifeDrain()
 	lastLifeDrainTime = GetTime()
 	self:Bar(L["bar_lifeDrain"], timer.lifeDrain, icon.lifeDrain, true, color.lifeDrain)
 	
-	if UnitClass("Player") == "Mage" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Druid"] then
 		self:Message(L["msg_lifeDrain"], "Personal", false, nil, false)
 		self:WarningSign(icon.lifeDrain, 0.7)
 		self:Sound("Long")

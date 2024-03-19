@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Antnormi", "The Black Morass")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30035
 module.enabletrigger = module.translatedName
@@ -173,7 +174,7 @@ end
 function module:FearCastStart()
 	self:RemoveBar(L["bar_fearCd"])
 	self:Bar(L["bar_fearCast"], timer.fearCast, icon.fear, true, color.fearCast)
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign("spell_nature_tremortotem", 0.7)
 	end
 end

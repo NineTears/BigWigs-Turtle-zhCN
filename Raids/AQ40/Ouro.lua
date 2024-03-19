@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Ouro", "Ahn'Qiraj")
+local bbouro = AceLibrary("Babble-Boss-2.2")["Ouro"]
 
 module.revision = 30058
 module.enabletrigger = module.translatedName
@@ -342,7 +343,7 @@ end
 
 function module:OuroTarget()
 	if UnitName("target") ~= nil and UnitName("targettarget") ~= nil and (IsRaidLeader() or IsRaidOfficer()) then
-		if UnitName("target") == "Ouro" then
+		if UnitName("target") == bbouro then
 			SetRaidTarget("targettarget",8)
 		end
 	end

@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Deathknight Captain", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbdeathknightcaptain = AceLibrary("Babble-Boss-2.2")["Deathknight Captain"]
 
 module.revision = 30011
 module.enabletrigger = module.translatedName
@@ -117,8 +119,8 @@ function module:Whirlwind()
 	else
 		self:Bar(L["whirlwind_bar2"], timer.whirlwind, icon.whirlwind, true, "red")
 	end
-	if playerClass == "WARRIOR" or playerClass == "ROGUE" then
-		if UnitName("target") == "Deathknight Captain" then
+	if playerClass == BC["Warrior"] or playerClass == BC["Rogue"] then
+		if UnitName("target") == bbdeathknightcaptain then
 			self:WarningSign(icon.whirlwind, 0.7)
 		end
 	end

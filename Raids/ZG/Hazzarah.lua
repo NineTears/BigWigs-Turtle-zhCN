@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Hazza'rah", "Zul'Gurub")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30063
 module.enabletrigger = module.translatedName
@@ -211,7 +211,7 @@ function module:Sleep()
 	self:Bar(L["bar_sleepAfflic"], timer.sleepAfflic, icon.sleep, true, color.sleep)
 	self:Message(L["msg_sleep"], "Attention", false, nil, false)
 	
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.tremor, 1)
 	end
 	
@@ -222,11 +222,11 @@ function module:ChainBurn()
 	self:Bar(L["bar_chainBurn"], timer.chainBurn, icon.chainBurn, true, color.chainBurn)
 	self:Message(L["msg_chainBurn"], "Attention", false, nil, false)
 	
-	if UnitClass("Player") == "Hunter" then
+	if UnitClass("Player") == BC["Hunter"] then
 		self:WarningSign(icon.viperSting, 1)
-	elseif UnitClass("Player") == "Warlock" then
+	elseif UnitClass("Player") == BC["Warlock"] then
 		self:WarningSign(icon.manaDrain, 1)
-	elseif UnitClass("Player") == "Priest" then
+	elseif UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.manaBurn, 1)
 	end
 end

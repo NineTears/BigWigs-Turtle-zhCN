@@ -1,5 +1,6 @@
-
 local module, L = BigWigs:ModuleDeclaration("Brood Queen Araxxna", "Karazhan")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbskitterwebegg = AceLibrary("Babble-Boss-2.2")["Skitterweb Egg"]
 
 module.revision = 30036
 module.enabletrigger = module.translatedName
@@ -13,64 +14,66 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "BroodQueenAraxxna",
 
 	volley_cmd = "volley",
-    volley_name = "巢毒齐射警报",
-    volley_desc = "巢毒齐射出现时进行警告",
+	volley_name = "巢毒齐射警报",
+	volley_desc = "巢毒齐射出现时进行警告",
 
 	leechingbite_cmd = "leechingbite",
-    leechingbite_name = "水蛭叮咬警报",
-    leechingbite_desc = "水蛭叮咬出现时进行警告",
+	leechingbite_name = "水蛭叮咬警报",
+	leechingbite_desc = "水蛭叮咬出现时进行警告",
 	
 	egg_cmd = "egg",
-    egg_name = "产卵警报",
-    egg_desc = "产卵时进行警告",
+	egg_name = "产卵警报",
+	egg_desc = "产卵时进行警告",
 	
 	
 	
 	trigger_volley = "Brood Queen Araxxna's Brood Venom Volley hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    bar_volley = "巢毒齐射",
+	bar_volley = "巢毒齐射",
 	
 	trigger_leechingBiteYou = "You are afflicted by Leeching Bite.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_leechingBiteOther = "(.+) is afflicted by Leeching Bite.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
 	trigger_leechingBiteFade = "Leeching Bite fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-    bar_leechingBite = " 水蛭叮咬",
+	bar_leechingBite = " 水蛭叮咬",
 
 	trigger_eggSpawn = "My minions shall consume you!",--CHAT_MSG_MONSTER_YELL
-    bar_eggHatch = "掠网蛛卵孵化",
-    msg_eggSpawn = "2个卵即将孵化！",
+	bar_eggHatch = "掠网蛛卵孵化",
+	msg_eggSpawn = "2个卵即将孵化！",
 	
 	trigger_engage = "What goes there, new prey to be entangled?",--CHAT_MSG_MONSTER_YELL
+	you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
 	cmd = "BroodQueenAraxxna",
 
 	volley_cmd = "volley",
-    volley_name = "巢毒齐射警报",
-    volley_desc = "巢毒齐射出现时进行警告",
+	volley_name = "巢毒齐射警报",
+	volley_desc = "巢毒齐射出现时进行警告",
 
 	leechingbite_cmd = "leechingbite",
-    leechingbite_name = "水蛭叮咬警报",
-    leechingbite_desc = "水蛭叮咬出现时进行警告",
+	leechingbite_name = "水蛭叮咬警报",
+	leechingbite_desc = "水蛭叮咬出现时进行警告",
 	
 	egg_cmd = "egg",
-    egg_name = "产卵警报",
-    egg_desc = "产卵时进行警告",
+	egg_name = "产卵警报",
+	egg_desc = "产卵时进行警告",
 	
 	
 	
 	trigger_volley = "Brood Queen Araxxna's Brood Venom Volley hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    bar_volley = "巢毒齐射",
+	bar_volley = "巢毒齐射",
 	
 	trigger_leechingBiteYou = "You are afflicted by Leeching Bite.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_leechingBiteOther = "(.+) is afflicted by Leeching Bite.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
 	trigger_leechingBiteFade = "Leeching Bite fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-    bar_leechingBite = " 水蛭叮咬",
+	bar_leechingBite = " 水蛭叮咬",
 
 	trigger_eggSpawn = "My minions shall consume you!",--CHAT_MSG_MONSTER_YELL
-    bar_eggHatch = "掠网蛛卵孵化",
-    msg_eggSpawn = "2个卵即将孵化！",
+	bar_eggHatch = "掠网蛛卵孵化",
+	msg_eggSpawn = "2个卵即将孵化！",
 	
 	trigger_engage = "What goes there, new prey to be entangled?",--CHAT_MSG_MONSTER_YELL
+	you = "你",
 } end )
 
 local timer = {
@@ -154,7 +157,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_leechingBiteFade"]) then
 		local _,_, leechingBiteFadeTarget, _ = string.find(msg, L["trigger_leechingBiteFade"])
-		if leechingBiteFadeTarget == "you" then leechingBiteFadeTarget = UnitName("Player") end
+		if leechingBiteFadeTarget == L["you"] then leechingBiteFadeTarget = UnitName("Player") end
 		self:Sync(syncName.leechingBiteFade .. " " .. leechingBiteFadeTarget)
 		
 	end
@@ -177,7 +180,7 @@ end
 function module:Volley()
 	self:Bar(L["bar_volley"], timer.volley, icon.volley, true, color.volley)
 	
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.volley, 0.7)
 	end
 end
@@ -193,12 +196,12 @@ end
 function module:EggSpawn()
 	bwPlayerIsAttacking = nil
 	if IsRaidLeader() or IsRaidOfficer() then
-		if UnitClass("Player") ~= "Rogue" and UnitClass("Player") ~= "Druid" then
+		if UnitClass("Player") ~= BC["Rogue"] and UnitClass("Player") ~= BC["Druid"] then
 			if PlayerFrame.inCombat then
 				bwPlayerIsAttacking = true
 			end
 			
-			TargetByName("Skitterweb Egg",true)
+			TargetByName(bbskitterwebegg,true)
 			SetRaidTarget("target",8)
 			TargetLastTarget()
 			if bwPlayerIsAttacking then

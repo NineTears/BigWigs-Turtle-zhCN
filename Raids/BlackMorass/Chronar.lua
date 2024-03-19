@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Chronar", "The Black Morass")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30029
 module.enabletrigger = module.translatedName
@@ -38,6 +39,7 @@ L:RegisterTranslations("enUS", function() return {
     
     trigger_enrage = "Chronar gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
     msg_enrage = "激怒！",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -71,6 +73,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_enrage = "Chronar gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
     msg_enrage = "激怒！",
+    you = "你",
 } end )
 
 local timer = {
@@ -148,7 +151,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_msFade"]) then
 		local _,_, msFadePlayer, _ = string.find(msg, L["trigger_msFade"])
-		if msFadePlayer == "you" then msFadePlayer = UnitName("Player") end
+		if msFadePlayer == L["you"] then msFadePlayer = UnitName("Player") end
 		self:Sync(syncName.msFade .. " " .. msFadePlayer)
 		
 		
@@ -176,7 +179,7 @@ end
 function module:Reflect()
 	self:Bar(L["bar_reflect"], timer.reflect, icon.reflect, true, color.reflect)
 	
-	if UnitClass("Player") ~= "Warrior" and UnitClass("Player") ~= "Rogue" then
+	if UnitClass("Player") ~= BC["Warrior"] and UnitClass("Player") ~= BC["Rogue"] then
 		self:WarningSign(icon.reflect, 0.7)
 		self:Sound("Info")
 		self:Message(L["msg_reflect"], "Urgent", false, nil, false)

@@ -1,5 +1,7 @@
-
 local module, L = BigWigs:ModuleDeclaration("Solnius", "Emerald Sanctum")
+local BC = AceLibrary("Babble-Class-2.2")
+local bberennius = AceLibrary("Babble-Boss-2.2")["Erennius"]
+local bbsolnius = AceLibrary("Babble-Boss-2.2")["Solnius"]
 
 module.revision = 30029
 module.enabletrigger = module.translatedName
@@ -224,7 +226,7 @@ function module:UNIT_HEALTH(arg1)
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if msg == string.format(UNITDIESOTHER, "Erennius") and bwSolniusHardMode == true then
+	if msg == string.format(UNITDIESOTHER, bberennius) and bwSolniusHardMode == true then
 		--[[
 		self:RemoveBar(L["bar_wailOfErenniusCast"])
 		self:RemoveBar(L["bar_wailOfErenniusAfflicted"])
@@ -235,13 +237,13 @@ function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 		if bwSolniusHardModeHardOn == false then
 			self:Sync(syncName.hardModeOff)
 		end
-	elseif msg == string.format(UNITDIESOTHER, "Solnius") and bwSolniusHardMode == true then
+	elseif msg == string.format(UNITDIESOTHER, bbsolnius) and bwSolniusHardMode == true then
 		bwSolniusHardModeHardOn = true
 	end
 end
 
 function module:CHAT_MSG_MONSTER_YELL(msg, sender)
-	if msg == L["trigger_engage"] and sender == "Solnius" then
+	if msg == L["trigger_engage"] and sender == bbsolnius then
 		module:SendEngageSync()
 	elseif msg == L["trigger_hardMode"] and bwSolniusEngaged == true then
 		self:Sync(syncName.hardMode)
@@ -332,7 +334,7 @@ end
 function module:Volley()
 	self:Bar(L["bar_volley"], timer.volley, icon.volley, true, color.volley)
 	
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.volley, 0.7)
 	end
 end

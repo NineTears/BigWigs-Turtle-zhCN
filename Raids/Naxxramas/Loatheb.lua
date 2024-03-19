@@ -61,7 +61,7 @@ L:RegisterTranslations("enUS", function() return {
 
     you = "you",
     are = "are",
-    fungalBloom = "Fungal Bloom",
+    fungalBloom = "Fungal Bloom",	--“蘑菇花”技能
 
     --LoathebTactical
     graphic_cmd = "graphic",
@@ -162,6 +162,91 @@ L:RegisterTranslations("esES", function() return {
 
 	you = "Tu",
 	are = "estás",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+    cmd = "Loatheb",
+
+    doom_cmd = "doom",
+    doom_name = "必然厄运警报",
+    doom_desc = "必然厄运出现时进行警告",
+
+    curse_cmd = "curse",
+    curse_name = "移除诅咒警报",
+    curse_desc = "洛欧塞布身上的诅咒被移除时进行警告",
+
+    spore_cmd = "spore",
+    spore_name = "孢子警报",
+    spore_desc = "孢子生成时进行警告",
+
+    debuff_cmd = "debuff",
+    debuff_name = "孢子减益效果",
+    debuff_desc = "当你的孢子减益效果即将消失时显示图标",
+
+    groups_cmd = "groups",
+    groups_name = "孢子分组",
+    groups_desc = "关闭以在孢子计时器上显示分组编号（7组战术）",
+
+    corruptedmind_cmd = "corruptedmind",
+    corruptedmind_name = "个人堕落心灵计时器",
+    corruptedmind_desc = "你的堕落心灵减益效果的计时器",
+
+
+    doombar = "必然厄运 %d",
+    doomwarn = "必然厄运 %d！距下一次 %d 秒！",
+    doomwarn5sec = "5秒后必然厄运 %d！",
+    doomtrigger = "受到了必然厄运的影响。",
+
+    cursewarn = "诅咒被移除了！重新施放诅咒",
+    cursebar = "移除诅咒",
+    cursetrigger  = "Loatheb's Curse (.+) is removed.",
+
+    doomtimerbar = "每15秒一次厄运",
+    doomtimerwarn = "厄运计时器在 %s 秒后改变！",
+    doomtimerwarnnow = "必然厄运现在每15秒发生一次！",
+
+    cursetimerbar = "移除诅咒计时器",
+    cursetimerwarn = "诅咒被移除，下一次在 %s 秒后！",
+
+    startwarn = "洛欧塞布已开战，2分钟后将出现必然厄运！",
+
+    trigger_corruptedMind = "You are afflicted by Corrupted Mind.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_corruptedMind = "你的堕落心灵",
+    trigger_corruptedMindFade = "Corrupted Mind fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    --sporewarn = "Spore spawned",
+    sporebar = "下一个孢子 %d",
+    sporebar_group = "下一孢子 - 分组 %d",
+
+    you = "你",
+    are = "受到了",
+    fungalBloom = "蘑菇花",	--“蘑菇花”技能
+
+    --LoathebTactical
+    graphic_cmd = "graphic",
+    graphic_name = "图形标志",
+    graphic_desc = "选中后显示图形标志",
+
+    sound_cmd = "sound",
+    sound_name = "声效",
+    sound_desc = "选中后播放声效",
+
+    consumable_cmd = "consumable",
+    consumable_name = "不警告团队使用消耗品（A）",
+    consumable_desc = "选中后不通过团队警告来提示使用消耗品。需要助理权限（A）",
+
+    shadowpot = "-- 喝下暗影防护药水！ --",
+    bandage = "-- 使用你的绷带！ --",
+    wrtorhs = "-- 使用治疗石或者鞭笞者根茎！ --",
+    shadowpotandbandage = "-- 喝下暗影防护药水并用绷带！ --",
+    noconsumable = "-- 现在不用消耗品！ --",
+
+	soundshadowpot = "Interface\\Addons\\BigWigs\\Sounds\\potion.wav",
+	soundbandage = "Interface\\Addons\\BigWigs\\Sounds\\bandage.wav",
+	soundwrtorhs = "Interface\\Addons\\BigWigs\\Sounds\\healthstone.wav",
+	soundshadowpotandbandage = "Interface\\Addons\\BigWigs\\Sounds\\potionandbandage.wav",
+	soundgoforbuff = "Interface\\Addons\\BigWigs\\Sounds\\goforbuff.wav",
+
 } end )
 
 local LoathebDebuff = CreateFrame( "GameTooltip", "LoathebDebuff", nil, "GameTooltipTemplate" );

@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Princess Huhuran", "Ahn'Qiraj")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30033
 module.enabletrigger = module.translatedName
@@ -256,7 +257,7 @@ function module:FrenzyGain()
 	
 	lastFrenzy = GetTime()
 	
-	if UnitClass("Player") == "Hunter" then
+	if UnitClass("Player") == BC["Hunter"] then
 		self:Sound("Info")
 		self:WarningSign(icon.tranq, timer.frenzyDuration)
 	end

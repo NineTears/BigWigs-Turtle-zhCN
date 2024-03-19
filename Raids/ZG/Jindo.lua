@@ -1,5 +1,10 @@
 
 local module, L = BigWigs:ModuleDeclaration("Jin'do the Hexxer", "Zul'Gurub")
+local BC = AceLibrary("Babble-Class-2.2")
+local bsbrainwashtotem = AceLibrary("Babble-Spell-2.2")["Brain Wash Totem"]
+local bspowerfulhealingward = AceLibrary("Babble-Spell-2.2")["Powerful Healing Ward"]
+local bbjindothegexxer = AceLibrary("Babble-Boss-2.2")["Jin'do the Hexxer"]
+local bbshadeofjindo = AceLibrary("Babble-Boss-2.2")["Shade of Jin'do"]
 
 module.revision = 30041
 module.enabletrigger = module.translatedName
@@ -247,9 +252,9 @@ function module:CurseDispel()
 end
 
 function module:Hex(rest)
-	if UnitClass("Player") == "Paladin" then
+	if UnitClass("Player") == BC["Paladin"] then
 		self:WarningSign(icon.hex, 0.7)
-	elseif UnitClass("Player") == "Priest" then
+	elseif UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.hex, 0.7)
 	end
 	
@@ -265,22 +270,22 @@ function module:BrainWash()
 	self:WarningSign(icon.brainWash, 0.7)
 	self:Message(L["msg_brainWash"], "Attention", true, "Alarm")
 	
-	if UnitName("Target") == "Jin'do the Hexxer" and UnitName("TargetTarget") == UnitName("Player") then return end
+	if UnitName("Target") == bbjindothegexxer and UnitName("TargetTarget") == UnitName("Player") then return end
 	
-	if UnitName("Target") == "Shade of Jin'do" then return end
+	if UnitName("Target") == bbshadeofjindo then return end
 	
-	if UnitClass("Player") == "Warrior" and self.db.profile.autotarget then
-		TargetByName("Brain Wash Totem", true)
-	elseif UnitClass("Player") == "Rogue" and self.db.profile.autotarget then
-		TargetByName("Brain Wash Totem", true)
-	elseif UnitClass("Player") == "Hunter" and self.db.profile.autotarget then
-		TargetByName("Brain Wash Totem", true)
-	elseif UnitClass("Player") == "Mage" and self.db.profile.autotarget then
-		TargetByName("Brain Wash Totem", true)
-	elseif UnitClass("Player") == "Warlock" and self.db.profile.autotarget then
-		TargetByName("Brain Wash Totem", true)
-	elseif UnitClass("Player") == "Warrior" and self.db.profile.autotarget then
-		TargetByName("Brain Wash Totem", true)
+	if UnitClass("Player") == BC["Warrior"] and self.db.profile.autotarget then
+		TargetByName(bsbrainwashtotem, true)
+	elseif UnitClass("Player") == BC["Rogue"] and self.db.profile.autotarget then
+		TargetByName(bsbrainwashtotem, true)
+	elseif UnitClass("Player") == BC["Hunter"] and self.db.profile.autotarget then
+		TargetByName(bsbrainwashtotem, true)
+	elseif UnitClass("Player") == BC["Mage"] and self.db.profile.autotarget then
+		TargetByName(bsbrainwashtotem, true)
+	elseif UnitClass("Player") == BC["Warlock"] and self.db.profile.autotarget then
+		TargetByName(bsbrainwashtotem, true)
+	elseif UnitClass("Player") == BC["Warrior"] and self.db.profile.autotarget then
+		TargetByName(bsbrainwashtotem, true)
 	end
 end
 
@@ -288,20 +293,20 @@ function module:HealingWard()
 	self:WarningSign(icon.healingWard, 0.7)
 	self:Message(L["msg_healingWard"], "Attention", true, "Alarm")
 	
-	if UnitName("Target") == "Brain Wash Totem" then return end
-	if UnitName("Target") == "Jin'do the Hexxer" and UnitName("TargetTarget") == UnitName("Player") then return end
+	if UnitName("Target") == bsbrainwashtotem then return end
+	if UnitName("Target") == bbjindothegexxer and UnitName("TargetTarget") == UnitName("Player") then return end
 	
-	if UnitClass("Player") == "Warrior" and self.db.profile.autotarget then
-		TargetByName("Powerful Healing Ward", true)
-	elseif UnitClass("Player") == "Rogue" and self.db.profile.autotarget then
-		TargetByName("Powerful Healing Ward", true)
-	elseif UnitClass("Player") == "Hunter" and self.db.profile.autotarget then
-		TargetByName("Powerful Healing Ward", true)
-	elseif UnitClass("Player") == "Mage" and self.db.profile.autotarget then
-		TargetByName("Powerful Healing Ward", true)
-	elseif UnitClass("Player") == "Warlock" and self.db.profile.autotarget then
-		TargetByName("Powerful Healing Ward", true)
-	elseif UnitClass("Player") == "Warrior" and self.db.profile.autotarget then
-		TargetByName("Powerful Healing Ward", true)
+	if UnitClass("Player") == BC["Warrior"] and self.db.profile.autotarget then
+		TargetByName(bspowerfulhealingward, true)
+	elseif UnitClass("Player") == BC["Rogue"] and self.db.profile.autotarget then
+		TargetByName(bspowerfulhealingward, true)
+	elseif UnitClass("Player") == BC["Hunter"] and self.db.profile.autotarget then
+		TargetByName(bspowerfulhealingward, true)
+	elseif UnitClass("Player") == BC["Mage"] and self.db.profile.autotarget then
+		TargetByName(bspowerfulhealingward, true)
+	elseif UnitClass("Player") == BC["Warlock"] and self.db.profile.autotarget then
+		TargetByName(bspowerfulhealingward, true)
+	elseif UnitClass("Player") == BC["Warrior"] and self.db.profile.autotarget then
+		TargetByName(bspowerfulhealingward, true)
 	end
 end

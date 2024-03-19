@@ -20,7 +20,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	["You have slain %s!"] = true,
 	["You have slain %s!"] = "你击败了%s！",
-	
+	you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -38,7 +38,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_mc = " 精神控制",
 	
 	["You have slain %s!"] = "你击败了%s！",
-	
+	you = "你",
 } end )
 
 module.defaultDB = {
@@ -133,7 +133,7 @@ function module:Events(msg)
 		
 	elseif string.find(msg, L["trigger_mcFade"]) then
 		local _,_, mcFadePerson, _ = string.find(msg, L["trigger_mcFade"])
-		if mcFadePerson == "you" then mcFadePerson = UnitName("Player") end
+		if mcFadePerson == L["you"] then mcFadePerson = UnitName("Player") end
 		self:Sync(syncName.mcFade .. " " .. mcFadePerson)
 	end
 end

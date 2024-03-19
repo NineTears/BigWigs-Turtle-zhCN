@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Clawlord Howlfang", "Karazhan")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbclawlordhowlfang = AceLibrary("Babble-Boss-2.2")["Clawlord Howlfang"]
 
 module.revision = 30036
 module.enabletrigger = module.translatedName
@@ -127,7 +129,7 @@ function module:Event(msg)
 	if string.find(msg, L["trigger_terrifyingPresenceSelf"]) then
 		local _,_, tpQty, _ = string.find(msg, L["trigger_terrifyingPresenceSelf"])
 		if UnitName("target") ~= nil and UnitName("targettarget") ~= nil then
-			if UnitName("target") == "Clawlord Howlfang" and UnitName("targettarget") == UnitName("Player") then
+			if UnitName("target") == bbclawlordhowlfang and UnitName("targettarget") == UnitName("Player") then
 				local tpPlayerAndQty = UnitName("Player") .. " " .. tpQty
 				self:Sync(syncName.terrifyingPresence2 .. " " .. tpPlayerAndQty)
 			end
@@ -167,9 +169,9 @@ end
 function module:Curse()
 	self:Message(L["msg_curse"], "Urgent", false, nil, false)
 	
-	if UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Mage"] then
 		self:WarningSign(icon.curse, 0.7)
-	elseif UnitClass("Player") == "Druid" then
+	elseif UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.curse, 0.7)
 	end
 end

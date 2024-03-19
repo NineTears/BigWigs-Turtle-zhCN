@@ -1,11 +1,12 @@
-
 local module, L = BigWigs:ModuleDeclaration("Nerubian Overseer", "Eastern Plaguelands")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbnerubianoverseer = AceLibrary("Babble-Boss-2.2")["Nerubian Overseer"]
 
 module.revision = 30058
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"shadowshock", "venomspit", "poisoncloud", "corrosivepoison", "necroticpoison", "webspray", "explode", "bosskill"}
 module.zonename = {
-	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"],
 }
 
@@ -72,6 +73,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
     trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
     msg_explode = " 爆炸了，诞生了4个小蛛魔！",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -137,6 +139,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
     trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
     msg_explode = " 爆炸了，诞生了4个小蛛魔！",
+    you = "你",
 } end )
 
 local timer = {
@@ -271,25 +274,25 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_corrosivePoisonFade"]) then
 		local _,_, corrosiveFadePlayer, _ = string.find(msg, L["trigger_corrosivePoisonFade"])
-		if corrosiveFadePlayer == "you" then corrosiveFadePlayer = UnitName("Player") end
+		if corrosiveFadePlayer == L["you"] then corrosiveFadePlayer = UnitName("Player") end
 		self:Sync(syncName.corrosivePoisonFade .. " " .. corrosiveFadePlayer)
 	
 	
 	
 	elseif string.find(msg, L["trigger_necroticPoison"]) then
 		local _,_, necroticPlayer, _ = string.find(msg, L["trigger_necroticPoison"])
-		if UnitName("Target") == "Nerubian Overseer" and UnitName("TargetTarget") == necroticPlayer then
+		if UnitName("Target") == bbnerubianoverseer and UnitName("TargetTarget") == necroticPlayer then
 			self:Sync(syncName.necroticPoison .. " " .. necroticPlayer)
 		end
 		
 	elseif msg == L["trigger_necroticPoisonYou"] then
-		if UnitName("Target") == "Nerubian Overseer" and UnitName("TargetTarget") == UnitName("Player") then
+		if UnitName("Target") == bbnerubianoverseer and UnitName("TargetTarget") == UnitName("Player") then
 			self:Sync(syncName.necroticPoison .. " " .. UnitName("Player"))
 		end
 		
 	elseif string.find(msg, L["trigger_necroticPoisonFade"]) then
 		local _,_, necroticFadePlayer, _ = string.find(msg, L["trigger_necroticPoisonFade"])
-		if necroticFadePlayer == "you" then necroticFadePlayer = UnitName("Player") end
+		if necroticFadePlayer == L["you"] then necroticFadePlayer = UnitName("Player") end
 		self:Sync(syncName.necroticPoisonFade .. " " .. necroticFadePlayer)
 	
 	
@@ -336,7 +339,7 @@ function module:VenomSpit()
 	self:RemoveBar(L["bar_venomSpit"])
 	self:Bar(L["bar_venomSpit"], timer.venomSpit, icon.venomSpit, true, color.venomSpit)
 	
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.poisonTotem, 0.7)
 	end
 end
@@ -353,7 +356,7 @@ end
 function module:CorrosivePoison(rest)
 	self:Bar(rest..L["bar_corrosivePoison"], timer.corrosivePoison, icon.corrosivePoison, true, color.corrosivePoison)
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.corrosivePoison, 0.7)
 	end
 end
@@ -365,7 +368,7 @@ end
 function module:NecroticPoison(rest)
 	self:Bar(rest..L["bar_necroticPoison"], timer.necroticPoison, icon.necroticPoison, true, color.necroticPoison)
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.necroticPoison, 0.7)
 	end
 end

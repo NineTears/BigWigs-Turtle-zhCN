@@ -35,6 +35,7 @@ L:RegisterTranslations("enUS", function() return {
     mindflay_bar = "精神鞭笞：%s",
     
     mobdead = "其拉斩灵者死亡",
+    clickme = " >点击我！<",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -69,6 +70,7 @@ L:RegisterTranslations("zhCN", function() return {
     mindflay_bar = "精神鞭笞：%s",
     
     mobdead = "其拉斩灵者死亡",
+    clickme = " >点击我！<",
 } end )
 
 local timer = {
@@ -179,13 +181,13 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 			if rest == UnitName("player") then
 				self:Bar(string.format(L["mindcontrol_bar"], UnitName("player")), timer.mc, icon.mc, true, "red")
 			else
-				self:Bar(string.format(L["mindcontrol_bar"], rest .. " >Click Me!<"), timer.mc, icon.mc, true, "red")
-				self:SetCandyBarOnClick("BigWigsBar "..string.format(L["mindcontrol_bar"], rest .. " >Click Me!<"), function(name, button, extra) TargetByName(extra, true) end, rest)
+				self:Bar(string.format(L["mindcontrol_bar"], rest .. L["clickme"]), timer.mc, icon.mc, true, "red")
+				self:SetCandyBarOnClick("BigWigsBar "..string.format(L["mindcontrol_bar"], rest .. L["clickme"]), function(name, button, extra) TargetByName(extra, true) end, rest)
 			end
 		end
 	elseif sync == syncName.mcOver then
 		if self.db.profile.mc then
-			self:RemoveBar(string.format(L["mindcontrol_bar"], rest .. " >Click Me!<"))
+			self:RemoveBar(string.format(L["mindcontrol_bar"], rest .. L["clickme"]))
 		end
 	end
 

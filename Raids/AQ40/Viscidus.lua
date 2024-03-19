@@ -1,5 +1,8 @@
-
 local module, L = BigWigs:ModuleDeclaration("Viscidus", "Ahn'Qiraj")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbglobofviscidus = AceLibrary("Babble-Boss-2.2")["Glob of Viscidus"]
+local bbviscidus = AceLibrary("Babble-Boss-2.2")["Viscidus"]
+
 module.revision = 30039
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"volley", "toxin", "freezestages", "freezecount", "pokecount", "glob", "bosskill"}
@@ -336,7 +339,7 @@ end
 function module:Volley()
 	self:IntervalBar(L["bar_volley"], timer.volley[1], timer.volley[2], icon.volley, true, color.volley)
 	
-	if UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" then
+	if UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] then
 		self:WarningSign(icon.volley, 0.7)
 	end
 end
@@ -426,12 +429,12 @@ function module:FrostDmg()
 end
 
 function module:FindGlob()
-	if UnitName("target") == "Glob of Viscidus" then
+	if UnitName("target") == bbglobofviscidus then
 		self:CancelScheduledEvent("bwviscFindGlob")
 		self:ScheduleRepeatingEvent("bwviscFindViscidus", self.FindViscidus, 0.5, self)
 	else
 		for i = 1, GetNumRaidMembers(), 1 do
-			if UnitName("Raid"..i.."target") == "Glob of Viscidus" then
+			if UnitName("Raid"..i.."target") == bbglobofviscidus then
 				self:CancelScheduledEvent("bwviscFindGlob")
 				self:ScheduleRepeatingEvent("bwviscFindViscidus", self.FindViscidus, 0.5, self)
 				break
@@ -441,11 +444,11 @@ function module:FindGlob()
 end
 
 function module:FindViscidus()
-	if UnitName("target") == "Viscidus" then
+	if UnitName("target") == bbviscidus then
 		self:StartFostDmgBar()
 	else
 		for i = 1, GetNumRaidMembers(), 1 do
-			if UnitName("Raid"..i.."target") == "Viscidus" then
+			if UnitName("Raid"..i.."target") == bbviscidus then
 				self:StartFostDmgBar()
 				checkFrost = true
 				break

@@ -2,6 +2,8 @@ local module, L = BigWigs:ModuleDeclaration("Pyroguard Emberseer", "Blackrock Sp
 
 local adds = AceLibrary("Babble-Boss-2.2")["Blackhand Incarcerator"]
 local boss = AceLibrary("Babble-Boss-2.2")["Pyroguard Emberseer"]
+local bbblackhandincarcerator = AceLibrary("Babble-Boss-2.2")["Blackhand Incarcerator"]
+local bzhallofbinding = AceLibrary("Babble-Zone-2.2")["Hall of Binding"]
 
 module.revision = 30025
 module.enabletrigger = {adds, boss}
@@ -23,7 +25,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_firenova = "火焰新星",
     
-    msg_addDead = "/7 狱卒死亡",
+    msg_addDead = "/7 监禁者死亡",
     
     trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
@@ -42,7 +44,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_firenova = "火焰新星",
     
-    msg_addDead = "/7 狱卒死亡",
+    msg_addDead = "/7 监禁者死亡",
     
     trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
@@ -87,7 +89,7 @@ function module:OnRegister()
 	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
 end
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Hall of Binding" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzhallofbinding or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 
@@ -103,7 +105,7 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	if msg == L["trigger_bossDead"] then
 		self:SendBossDeathSync()
-	elseif msg == string.format(UNITDIESOTHER, "Blackhand Incarcerator") then
+	elseif msg == string.format(UNITDIESOTHER, bbblackhandincarcerator) then
 		bwIncarceratorDeadCount = bwIncarceratorDeadCount + 1
 		self:Message(bwIncarceratorDeadCount..L["msg_addDead"], "Important", false, nil, false)
 	end

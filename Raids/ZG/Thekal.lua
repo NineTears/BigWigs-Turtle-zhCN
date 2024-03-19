@@ -1,5 +1,9 @@
 
 local module, L = BigWigs:ModuleDeclaration("High Priest Thekal", "Zul'Gurub")
+local bbzealotzath = AceLibrary("Babble-Boss-2.2")["Zealot Zath"]
+local bbzealotlorkhan = AceLibrary("Babble-Boss-2.2")["Zealot Lor'Khan"]
+local bbhighpriestthekal = AceLibrary("Babble-Boss-2.2")["High Priest Thekal"]
+
 
 module.revision = 30012
 module.enabletrigger = module.translatedName
@@ -105,14 +109,11 @@ L:RegisterTranslations("enUS", function() return {
     ["Knockback"] = true,
     ["New Adds"] = true,
     ["Next Bloodlust"] = true,
-    ["You have slain %s!"] = "你已击败%s！",
-    ["Knockback"] = "击退",
+    ["You have slain %s!"] = "你已击败 %s！",
     ["New Adds"] = "新的增援",
     ["Next Bloodlust"] = "下一次嗜血",
 
-	["Zealot Zath"] = true,
-	["Zealot Lor'Khan"] = true,
-	["High Priest Thekal"] = true,
+    ["High Priest Thekal"] = true,
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -218,13 +219,10 @@ L:RegisterTranslations("zhCN", function() return {
     ["New Adds"] = "新的增援",
     ["Next Bloodlust"] = "下一次嗜血",
 
-	["Zealot Zath"] = "狂热者札斯",
-	["Zealot Lor'Khan"] = "狂热者洛卡恩",
-	["High Priest Thekal"] = "高阶祭司塞卡尔",
-	["High Priest Thekal"] = "古拉巴什食腐者",
+    ["High Priest Thekal"] = "古拉巴什食腐者",
 } end )
 
-module.wipemobs = {L["Zealot Zath"], L["Zealot Lor'Khan"], L["High Priest Thekal"]}
+module.wipemobs = {bbzealotzath, bbzealotlorkhan, bbhighpriestthekal}
 
 local timer = {
 	forcePunch = 1,
@@ -309,12 +307,12 @@ function module:OnEngage()
 	self.lorkhanHP = 100
 	self.thekalHP = 100
 	
-	self:TriggerEvent("BigWigs_StartHPBar", self, L["Zealot Zath"], 100)
-	self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Zath"], 0)
-	self:TriggerEvent("BigWigs_StartHPBar", self, L["Zealot Lor'Khan"], 100)
-	self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Lor'Khan"], 0)
-	self:TriggerEvent("BigWigs_StartHPBar", self, L["High Priest Thekal"], 100)
-	self:TriggerEvent("BigWigs_SetHPBar", self, L["High Priest Thekal"], 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, bbzealotzath, 100)
+	self:TriggerEvent("BigWigs_SetHPBar", self, bbzealotzath, 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, bbzealotlorkhan, 100)
+	self:TriggerEvent("BigWigs_SetHPBar", self, bbzealotlorkhan, 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, bbhighpriestthekal, 100)
+	self:TriggerEvent("BigWigs_SetHPBar", self, bbhighpriestthekal, 0)
 	self:ScheduleRepeatingEvent("thekalHpCheck", self.CheckHP, 0.5, self)
 end
 
@@ -326,20 +324,20 @@ function module:CheckHP()
 	local lorkhanHealth
 	local thekalHealth
 	
-	if UnitName("playertarget") == L["Zealot Zath"] then
+	if UnitName("playertarget") == bbzealotzath then
 		zathHealth = math.ceil((UnitHealth("playertarget") / UnitHealthMax("playertarget")) * 100)
-	elseif UnitName("playertarget") == L["Zealot Lor'Khan"] then
+	elseif UnitName("playertarget") == bbzealotlorkhan then
 		lorkhanHealth = math.ceil((UnitHealth("playertarget") / UnitHealthMax("playertarget")) * 100)
-	elseif UnitName("playertarget") == L["High Priest Thekal"] then
+	elseif UnitName("playertarget") == bbhighpriestthekal then
 		thekalHealth = math.ceil((UnitHealth("playertarget") / UnitHealthMax("playertarget")) * 100)
 	end
 	
 	for i = 1, GetNumRaidMembers(), 1 do
-		if UnitName("Raid"..i.."target") == L["Zealot Zath"] then
+		if UnitName("Raid"..i.."target") == bbzealotzath then
 			zathHealth = math.ceil((UnitHealth("Raid"..i.."target") / UnitHealthMax("Raid"..i.."target")) * 100)
-		elseif UnitName("Raid"..i.."target") == L["Zealot Lor'Khan"] then
+		elseif UnitName("Raid"..i.."target") == bbzealotlorkhan then
 			lorkhanHealth = math.ceil((UnitHealth("Raid"..i.."target") / UnitHealthMax("Raid"..i.."target")) * 100)
-		elseif UnitName("Raid"..i.."target") == L["High Priest Thekal"] then
+		elseif UnitName("Raid"..i.."target") == bbhighpriestthekal then
 			thekalHealth = math.ceil((UnitHealth("Raid"..i.."target") / UnitHealthMax("Raid"..i.."target")) * 100)
 		end
 		if zathHealth and lorkhanHealth and thekalHealth then break; end
@@ -347,15 +345,15 @@ function module:CheckHP()
 	
 	if zathHealth then
 		self.zathHP = zathHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Zath"], 100-self.zathHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, bbzealotzath, 100-self.zathHP)
 	end
 	if lorkhanHealth then
 		self.lorkhanHP = lorkhanHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, L["Zealot Lor'Khan"], 100-self.lorkhanHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, bbzealotlorkhan, 100-self.lorkhanHP)
 	end
 	if thekalHealth then
 		self.thekalHP = thekalHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, L["High Priest Thekal"], 100-self.thekalHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, bbhighpriestthekal, 100-self.thekalHP)
 	end
 end
 
@@ -384,9 +382,9 @@ function module:PhaseChangeCheck()
 		for i = 1, GetNumRaidMembers(), 1 do
 			if UnitName("Raid"..i.."target") == self.translatedName and not UnitIsDead("Raid"..i.."target") then
 				thekaldead = nil
-			elseif UnitName("Raid"..i.."target") == L["Zealot Zath"] and not UnitIsDead("Raid"..i.."target") then
+			elseif UnitName("Raid"..i.."target") == bbzealotzath and not UnitIsDead("Raid"..i.."target") then
 				zathdead = nil
-			elseif UnitName("Raid"..i.."target") == L["Zealot Lor'Khan"] and not UnitIsDead("Raid"..i.."target") then
+			elseif UnitName("Raid"..i.."target") == bbzealotlorkhan and not UnitIsDead("Raid"..i.."target") then
 				lorkhandead = nil
 			end
 		end
@@ -509,8 +507,8 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 end
 
 function module:TigerPhase()
-	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Zath"])
-	self:TriggerEvent("BigWigs_StopHPBar", self, L["Zealot Lor'Khan"])
+	self:TriggerEvent("BigWigs_StopHPBar", self, bbzealotzath)
+	self:TriggerEvent("BigWigs_StopHPBar", self, bbzealotlorkhan)
 	self:TriggerEvent("BigWigs_StopHPBar", self, L["High Priest Thekal"])
 	self:CancelScheduledEvent("thekalHpCheck")
 	

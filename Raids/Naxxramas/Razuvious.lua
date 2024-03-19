@@ -1,6 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Instructor Razuvious", "Naxxramas")
-local understudy = AceLibrary("Babble-Boss-2.2")["Deathknight Understudy"]
+local BC = AceLibrary("Babble-Class-2.2")
+local bbinstructorrazuvious = AceLibrary("Babble-Boss-2.2")["Instructor Razuvious"]
 
 module.revision = 30042
 module.enabletrigger = module.translatedName
@@ -169,10 +170,10 @@ function module:OnDisengage()
 end
 
 function module:CheckRazuviousEngaged()
-	TargetByName("Instructor Razuvious")
-	if UnitName("Target") ~= "Instructor Razuvious" then
+	TargetByName(bbinstructorrazuvious)
+	if UnitName("Target") ~= bbinstructorrazuvious then
 		self:CancelScheduledEvent("bwCheckRazuviousEngaged")
-	elseif UnitName("Target") == "Instructor Razuvious" then
+	elseif UnitName("Target") == bbinstructorrazuvious then
 		if not UnitAffectingCombat("Target") then
 			if badEngageSync == nil then
 				self:RemoveBar(L["bar_shout"])
@@ -251,7 +252,7 @@ end
 
 function module:Shieldwall()
 	self:Bar(L["bar_shieldWall"], timer.shieldwall, icon.shieldwall, true, "green")
-	if UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Priest"] then
 		self:DelayedWarningSign(timer.shieldwall, icon.taunt, 0.7)
 	end
 end
@@ -262,7 +263,7 @@ end
 
 function module:McEnd(rest)
 	self:RemoveBar(rest..L["mc_bar"])
-	if UnitClass("Player") == "Warrior" then
+	if UnitClass("Player") == BC["Warrior"] then
 		self:WarningSign(icon.taunt, 0.7)
 		self:Sound("Info")
 	end

@@ -1,5 +1,12 @@
 
 local module, L = BigWigs:ModuleDeclaration("Alterac Valley", "Alterac Valley")
+local bzalteracvalley = AceLibrary("Babble-Zone-2.2")["Alterac Valley"]
+local bbkorrakthebloodrager = AceLibrary("Babble-Boss-2.2")["Korrak the Bloodrager"]
+local bbdrekthar = AceLibrary("Babble-Boss-2.2")["Drek'Thar"]
+local bbvanndarstormpike = AceLibrary("Babble-Boss-2.2")["Vanndar Stormpike"]
+local bbcaptaingalvangar = AceLibrary("Babble-Boss-2.2")["Captain Galvangar"]
+local bbcaptainbalindastonehearth = AceLibrary("Babble-Boss-2.2")["Captain Balinda Stonehearth"]
+
 
 module.revision = 30062
 module.enabletrigger = {}
@@ -75,6 +82,8 @@ L:RegisterTranslations("enUS", function() return {
 	--msg to be confirmed once it gets below 2 minutes
 	trigger_gameEnd = "Not enough players. This game will close in (.+) (.+).",
     bar_gameEnd = "比赛结束",
+    Alliance = "Alliance",
+    Horde = "Horde",
     }
 end)
 
@@ -148,6 +157,8 @@ L:RegisterTranslations("zhCN", function() return {
 	--msg to be confirmed once it gets below 2 minutes
 	trigger_gameEnd = "Not enough players. This game will close in (.+) (.+).",
     bar_gameEnd = "比赛结束",
+    Alliance = "联盟",
+    Horde = "部落",
     }
 end)
 
@@ -258,7 +269,7 @@ end
 
 function module:ZONE_CHANGED_NEW_AREA(msg)
 	--if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("here") end
-	if GetZoneText() ~= "Alterac Valley" or self.core:IsModuleActive(module.translatedName) then
+	if GetZoneText() ~= bzalteracvalley or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 
@@ -285,9 +296,9 @@ function module:CHAT_MSG_MONSTER_YELL(msg)
 			
 			self:RemoveBar(gy)
 			
-			if faction == "Alliance" then
+			if faction == L["Alliance"] then
 				self:Bar(gy, timer.graveyards, icon.alliance, true, color.alliance)
-			elseif faction == "Horde" then
+			elseif faction == L["Horde"] then
 				self:Bar(gy, timer.graveyards, icon.horde, true, color.horde)
 			end
 		end
@@ -298,9 +309,9 @@ function module:CHAT_MSG_MONSTER_YELL(msg)
 			
 			self:RemoveBar(tower)
 			
-			if faction == "Alliance" then
+			if faction == L["Alliance"] then
 				self:Bar(tower, timer.towers, icon.alliance, true, color.alliance)
-			elseif faction == "Horde" then
+			elseif faction == L["Horde"] then
 				self:Bar(tower, timer.towers, icon.horde, true, color.horde)
 			end
 		end
@@ -317,9 +328,9 @@ function module:CHAT_MSG_MONSTER_YELL(msg)
 			
 			self:RemoveBar(mine)
 			
-			if faction == "Alliance" then
+			if faction == L["Alliance"] then
 				self:Bar(mine, timer.mines, icon.alliance, true, color.alliance)
-			elseif faction == "Horde" then
+			elseif faction == L["Horde"] then
 				self:Bar(mine, timer.mines, icon.horde, true, color.horde)
 			end
 		end
@@ -355,9 +366,9 @@ function module:CHAT_MSG_SYSTEM(msg)
 end
 
 function module:UNIT_HEALTH(msg)
-	if UnitName(msg) == "Drek'Thar" then
+	if UnitName(msg) == bbdrekthar then
 		local health = UnitHealth(msg)
-		if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("Drek'Thar: "..health) end
+		if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("德雷克塔尔: "..health) end
 		if health >= 48 and health <= 52 then
 			self:Sync(syncName.drek50)
 		elseif health >= 38 and health <= 42 then
@@ -369,9 +380,9 @@ function module:UNIT_HEALTH(msg)
 		elseif health >= 8 and health <= 12 then
 			self:Sync(syncName.drek10)
 		end
-	elseif UnitName(msg) == "Vanndar Stormpike" then
+	elseif UnitName(msg) == bbvanndarstormpike then
 		local health = UnitHealth(msg)
-		if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("Vanndar Stormpike: "..health) end
+		if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("范达尔·雷矛: "..health) end
 		if health >= 48 and health <= 52 then
 			self:Sync(syncName.vann50)
 		elseif health >= 38 and health <= 42 then
@@ -387,11 +398,11 @@ function module:UNIT_HEALTH(msg)
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if (msg == string.format(UNITDIESOTHER, "Captain Galvangar")) then
+	if (msg == string.format(UNITDIESOTHER, bbcaptaingalvangar)) then
 		self:Sync(syncName.galvDead)
-	elseif (msg == string.format(UNITDIESOTHER, "Captain Balinda Stonehearth")) then
+	elseif (msg == string.format(UNITDIESOTHER, bbcaptainbalindastonehearth)) then
 		self:Sync(syncName.balindaDead)
-	elseif (msg == string.format(UNITDIESOTHER, "Korrak the Bloodrager")) then
+	elseif (msg == string.format(UNITDIESOTHER, bbkorrakthebloodrager)) then
 		self:Sync(syncName.korrakDead)
 	end
 end
@@ -499,5 +510,5 @@ function module:CountPlayers()
 	else
 		self:DelayedSync(5, syncName.countPlayers)
 	end
-	--DEFAULT_CHAT_FRAME:AddMessage("Horde Players: "..numHorde.." // Alliance Players: "..numAlliance)
+	--DEFAULT_CHAT_FRAME:AddMessage("部落玩家: "..numHorde.." // 联盟玩家: "..numAlliance)
 end

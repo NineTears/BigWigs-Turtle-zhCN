@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Moroes", "Karazhan")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30025
 module.enabletrigger = module.translatedName
@@ -65,6 +66,7 @@ L:RegisterTranslations("enUS", function() return {
     bar_dust = " 中了闪光尘",
     
     trigger_yellSmt = "Most impressive, it would appear your skills do match your bravery.",-- CHAT_MSG_MONSTER_YELL
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -125,6 +127,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_dust = " 中了闪光尘",
     
     trigger_yellSmt = "Most impressive, it would appear your skills do match your bravery.",-- CHAT_MSG_MONSTER_YELL
+    you = "你",
 } end )
 
 local timer = {
@@ -241,7 +244,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_shuffleKickFade"]) then
 		local _,_, shuffleKickFadePlayer, _ = string.find(msg, L["trigger_shuffleKickFade"])
-		if shuffleKickFadePlayer == "you" then shuffleKickFadePlayer = UnitName("Player") end
+		if shuffleKickFadePlayer == L["you"] then shuffleKickFadePlayer = UnitName("Player") end
 		self:Sync(syncName.shuffleKickFade .. " " .. shuffleKickFadePlayer)
 		
 		
@@ -258,7 +261,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_dustFade"]) then
 		local _,_, dustFadePlayer, _ = string.find(msg, L["trigger_dustFade"])
-		if dustFadePlayer == "you" then dustFadePlayer = UnitName("Player") end
+		if dustFadePlayer == L["you"] then dustFadePlayer = UnitName("Player") end
 		self:Sync(syncName.dustFade .. " " .. dustFadePlayer)
 		
 	end
@@ -309,9 +312,9 @@ end
 function module:SmokeBomb()
 	self:Bar(L["bar_smokeBomb"], timer.smokeBomb, icon.smokeBomb, true, color.smokeBomb)
 	
-	if UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.smokeBomb, 0.7)
-	elseif UnitClass("Player") == "Paladin" then
+	elseif UnitClass("Player") == BC["Paladin"] then
 		self:WarningSign(icon.smokeBomb, 0.7)
 	end
 end
@@ -319,13 +322,13 @@ end
 function module:Reflect()
 	self:Bar(L["bar_reflect"], timer.reflect, icon.reflect, true, color.reflect)
 	
-	if UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Mage"] then
 		self:WarningSign(icon.reflect, timer.reflect)
-	elseif UnitClass("Player") == "Warlock" then
+	elseif UnitClass("Player") == BC["Warlock"] then
 		self:WarningSign(icon.reflect, timer.reflect)
 	end
 	
-	if (UnitClass("Player") ~= "Warrior") and (UnitClass("Player") ~= "Rogue") then
+	if (UnitClass("Player") ~= BC["Warrior"]) and (UnitClass("Player") ~= BC["Rogue"]) then
 		self:Message(L["msg_reflect"], "Important", false, nil, false)
 		self:Sound("Long")
 	end
@@ -346,9 +349,9 @@ end
 function module:Curse()
 	self:Message(L["msg_curse"], "Urgent", false, nil, false)
 	
-	if UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Mage"] then
 		self:WarningSign(icon.curse, 0.7)
-	elseif UnitClass("Player") == "Druid" then
+	elseif UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.curse, 0.7)
 	end
 end

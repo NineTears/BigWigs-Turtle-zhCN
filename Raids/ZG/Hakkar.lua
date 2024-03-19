@@ -91,6 +91,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_aspectOfVenoxisFail = "Hakkar's Aspect of Venoxis was resisted",
     aspectvenoxis_bar = "下一次毒液 - 温诺希斯的守护",
     --aspectvenoxisdebuff_bar = "毒液 - 温诺希斯的守护",
+    grounded = "Grounded!",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -359,6 +360,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_aspectOfVenoxisFail = "Hakkar's Aspect of Venoxis was resisted",
     aspectvenoxis_bar = "下一次毒液 - 温诺希斯的守护",
     --aspectvenoxisdebuff_bar = "毒液 - 温诺希斯的守护",
+    grounded = "被钉在地上！",
 } end)
 
 local timer = {
@@ -456,7 +458,7 @@ function module:Event(msg)
 	elseif msg == L["mindcontrolyou_trigger"] then
 		self:Sync(syncName.mindcontrol .. " "..UnitName("player"))
 	elseif msg == L["trigger_mindcontrolTotem"] then
-		self:Sync(syncName.mindcontrol .. " ".."Grounded!")
+		self:Sync(syncName.mindcontrol .. " "..grounded)
 	
 	
 	elseif msg == L["siphon_trigger"] then
@@ -554,7 +556,7 @@ function module:MindControl(rest)
 	self:DelayedBar(10, L["nextmc_bar"], 11, icon.mindcontrol, true, "Black")
 	self:Bar(string.format(L["mindcontrol_bar"], rest), 10, icon.mindcontrol, true, "White")
 	
-	if rest ~= "Grounded!" then
+	if rest ~= grounded then
 		self:Message(string.format(L["mindcontrol_message"], rest), "Attention")
 		
 		if (IsRaidLeader() or IsRaidOfficer()) then

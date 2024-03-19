@@ -10,7 +10,7 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "FleshHunter",
 	consumeother_trigger = "(.*) is afflicted by Consume",
 	consume_bar = " 已吞噬!",
-	clickme = " >点击我!<",
+	clickme = " >点击我！<",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -19,7 +19,7 @@ L:RegisterTranslations("zhCN", function() return {
 	cmd = "FleshHunter",
 	consumeother_trigger = "(.*) is afflicted by Consume",
 	consume_bar = " 已吞噬!",
-	clickme = " >点击我!<",
+	clickme = " >点击我！<",
 } end )
 
 module.defaultDB = {

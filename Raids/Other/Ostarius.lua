@@ -1,11 +1,12 @@
-
 local module, L = BigWigs:ModuleDeclaration("Ostarius", "Tanaris")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbostarius = AceLibrary("Babble-Boss-2.2")["Ostarius"]
 
 module.revision = 30049
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"conflagbar", "conflagyou", -1, "chainlightning", -1, "blizzard", "rainoffire", "sonicburst", -1, "traps", "eq", "stomp", -1, "activation", -1, "phase", "portals", "bosskill"}
 module.zonename = {
-	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Tanaris"],
 }
 
@@ -155,6 +156,7 @@ L:RegisterTranslations("enUS", function() return {
 	The yells?
 	Gate Construct, there is 8, do they spawn at the same time?
 	]]--
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -303,6 +305,7 @@ L:RegisterTranslations("zhCN", function() return {
 	The yells?
 	Gate Construct, there is 8, do they spawn at the same time?
 	]]--
+    you = "你",
 } end )
 
 local timer = {
@@ -546,21 +549,21 @@ function module:Event(msg)
 	elseif string.find(msg, L["trigger_stomp"]) then
 		local _, _, stompPlayer, _ = string.find(msg, L["trigger_stomp"])
 		if UnitName("Target") ~= nil and UnitName("TargetTarget") ~= nil then
-			if UnitName("Target") == "Ostarius" and UnitName("TargetTarget") == stompPlayer then
+			if UnitName("Target") == bbostarius and UnitName("TargetTarget") == stompPlayer then
 				self:Sync(syncName.stomp .. " " .. stompPlayer)
 			end
 		end
 		
 	elseif string.find(msg, L["trigger_stompYou"]) then
 		if UnitName("Target") ~= nil and UnitName("TargetTarget") ~= nil then
-			if UnitName("Target") == "Ostarius" and UnitName("TargetTarget") == UnitName("Player") then
+			if UnitName("Target") == bbostarius and UnitName("TargetTarget") == UnitName("Player") then
 				self:Sync(syncName.stomp .. " " .. UnitName("Player"))
 			end
 		end
 		
 	elseif string.find(msg, L["trigger_stompFade"]) then
 		local _, _, stompFadePlayer, _ = string.find(msg, L["trigger_stompFade"])
-		if stompFadePlayer == "you" then stompFadePlayer = UnitName("Player") end
+		if stompFadePlayer == L["you"] then stompFadePlayer = UnitName("Player") end
 		self:Sync(syncName.stompFade .. " " .. stompFadePlayer)
 		
 		
@@ -584,7 +587,7 @@ function module:Event(msg)
 		
 		
 	elseif msg == L["trigger_sonicBurstYou"] and self.db.profile.sonicburst then
-		if UnitClass("Player") == "Priest" or UnitClass("Player") == "Mage" or UnitClass("Player") == "Warlock" or UnitClass("Player") == "Hunter" then
+		if UnitClass("Player") == BC["Priest"] or UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Warlock"] or UnitClass("Player") == BC["Hunter"] then
 			self:Message(L["msg_sonicBurstYou"], "Urgent", false, nil, false)
 			self:WarningSign(icon.sonicBurst, 1)
 		end
@@ -748,7 +751,7 @@ end
 
 
 function module:Traps()
-	if traps == nil and UnitClass("Player") == "Rogue" and self.db.profile.traps then
+	if traps == nil and UnitClass("Player") == BC["Rogue"] and self.db.profile.traps then
 		self:Message(L["msg_traps"], "Personal", false, nil, false)
 		self:Sound("Beware")
 		self:WarningSign(icon.traps, 1)
@@ -757,7 +760,7 @@ function module:Traps()
 end
 
 function module:TrapsFade()
-	if traps == true and UnitClass("Player") == "Rogue" and self.db.profile.traps then
+	if traps == true and UnitClass("Player") == BC["Rogue"] and self.db.profile.traps then
 		self:Message(L["msg_trapsFade"], "Personal", false, nil, false)
 		self:Sound("Beware")
 		self:WarningSign(icon.traps, 1)
@@ -767,7 +770,7 @@ end
 
 function module:EQ30()
 	if self.db.profile.eq then
-		if UnitClass("Player") == "Warrior" or UnitClass("Player") == "Rogue" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" then
+		if UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] then
 			self:Message(L["msg_earthquakeSoon"], "Urgent", false, nil, false)
 			self:Sound("RunAway")
 			self:WarningSign(icon.earthquake, 1)
@@ -778,7 +781,7 @@ end
 
 function module:EQ20()
 	if self.db.profile.eq then
-		if UnitClass("Player") == "Warrior" or UnitClass("Player") == "Rogue" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" then
+		if UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] then
 			self:Message(L["msg_earthquakeSoon"], "Urgent", false, nil, false)
 			self:Sound("RunAway")
 			self:WarningSign(icon.earthquake, 1)
@@ -789,7 +792,7 @@ end
 
 function module:EQ10()
 	if self.db.profile.eq then
-		if UnitClass("Player") == "Warrior" or UnitClass("Player") == "Rogue" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" then
+		if UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] then
 			self:Message(L["msg_earthquakeSoon"], "Urgent", false, nil, false)
 			self:Sound("RunAway")
 			self:WarningSign(icon.earthquake, 1)
@@ -800,7 +803,7 @@ end
 
 function module:EQ()
 	if self.db.profile.eq then
-		if UnitClass("Player") == "Warrior" or UnitClass("Player") == "Rogue" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" then
+		if UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] then
 			self:Message(L["msg_earthquakeDone"], "Positive", false, nil, false)			
 			self:WarningSign(icon.earthquake, 1)
 			self:Sound("Info")

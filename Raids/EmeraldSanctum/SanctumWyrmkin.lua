@@ -25,7 +25,7 @@ L:RegisterTranslations("enUS", function() return {
     
     ["You have slain %s!"] = true,
     ["You have slain %s!"] = "你已击败了%s！",
-	
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -44,7 +44,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_wyrmkinsVenom = " 毒液",
     
     ["You have slain %s!"] = "你已击败了%s！",
-	
+    you = "你",
 } end )
 
 module.defaultDB = {
@@ -133,7 +133,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_wyrmkinsVenomFade"]) then
 		local _,_, wyrmkinsVenomOffTarget, _ = string.find(msg, L["trigger_wyrmkinsVenomFade"])
-		if wyrmkinsVenomOffTarget == "you" then wyrmkinsVenomOffTarget = UnitName("Player") end
+		if wyrmkinsVenomOffTarget == L["you"] then wyrmkinsVenomOffTarget = UnitName("Player") end
 		self:Sync(syncName.wyrmkinsVenomOff .. " " .. wyrmkinsVenomOffTarget)
 	
 	elseif string.find(msg, L["trigger_wyrmkinsVenomOther"]) then

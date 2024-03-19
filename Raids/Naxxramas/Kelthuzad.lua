@@ -2,6 +2,11 @@
 --Adjustments by Relar
 
 local module, L = BigWigs:ModuleDeclaration("Kel'Thuzad", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
+local bzkelthuzadchamber = AceLibrary("Babble-Zone-2.2")["Kel'Thuzad Chamber"]
+local bbkelthuzad = AceLibrary("Babble-Boss-2.2")["Kel'Thuzad"]
+local bbunstoppableabomination = AceLibrary("Babble-Boss-2.2")["Unstoppable Abomination"]
+local bbsoulweaver = AceLibrary("Babble-Boss-2.2")["Soul Weaver"]
 
 module.revision = 30065
 module.enabletrigger = module.translatedName
@@ -179,11 +184,8 @@ L:RegisterTranslations("enUS", function() return {
     trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
-
-    --本地化补充
-    unstoppableabomination = "Unstoppable Abomination",
-    soulweaver = "Soul Weaver",
-    kelthuzad = "Kel'Thuzad",
+    clickme = " >点击我！<",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -337,11 +339,8 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
-
-    --本地化补充
-    unstoppableabomination = "无法阻止的憎恶",
-    soulweaver = "织魂者",
-    kelthuzad = "克尔苏加德",
+    clickme = " >点击我！<",
+    you = "你",
 } end )
 
 local timer = {
@@ -675,7 +674,7 @@ function module:OnDisengage()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Kel'Thuzad Chamber" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzkelthuzadchamber or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 
@@ -719,13 +718,13 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 	
-	if (msg == string.format(UNITDIESOTHER, L["unstoppableabomination"])) then
+	if (msg == string.format(UNITDIESOTHER, bbunstoppableabomination)) then
 		self:Sync(syncName.abominationDead)
 	
-	elseif (msg == string.format(UNITDIESOTHER, L["soulweaver"])) then
+	elseif (msg == string.format(UNITDIESOTHER, bbsoulweaver)) then
 		self:Sync(syncName.soulWeaverDead)
 	
-	elseif (msg == string.format(UNITDIESOTHER, L["kelthuzad"]))then
+	elseif (msg == string.format(UNITDIESOTHER, bbkelthuzad))then
 		self:SendBossDeathSync()
 	end
 end
@@ -747,7 +746,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_mcFade"]) then
 		local _, _, mcFadePlayer, _ = string.find(msg, L["trigger_mcFade"])
-		if mcFadePlayer == "you" then mcFadePlayer = UnitName("Player") end
+		if mcFadePlayer == L["you"] then mcFadePlayer = UnitName("Player") end
 		self:Sync(syncName.mcFade .. " " .. mcFadePlayer)
 		
 		
@@ -772,7 +771,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_detonateFade"]) then
 		local _,_, detonateFadePlayer, _ = string.find( msg, L["trigger_detonateFade"])
-		if detonateFadePlayer == "you" then detonateFadePlayer = UnitName("Player") end
+		if detonateFadePlayer == L["you"] then detonateFadePlayer = UnitName("Player") end
 		self:Sync(syncName.detonateFade .. " ".. detonateFadePlayer)
 		
 		
@@ -959,7 +958,7 @@ function module:Phase3()
 	
 	if self.db.profile.phase then
 		self:Message(L["msg_phase3"], "Urgent", false, nil, false)
-		if UnitClass("Player") == "Warrior" or UnitClass("Player") == "Druid" or UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" then
+		if UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Druid"] or UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
 			self:Sound("Beware")
 		end
 	end
@@ -1006,7 +1005,7 @@ function module:McYell()
 	
 	self:DelayedIntervalBar(timer.mcAfflic, L["bar_mcCd"], timer.mcCd[1], timer.mcCd[2], icon.mc, true, color.mc)
 	
-	if UnitClass("Player") == "Mage" or UnitClass("Player") == "Warlock" then
+	if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Warlock"] then
 		self:Message(L["msg_mc"], "Urgent", false, nil, false)
 		self:WarningSign(icon.mc, 1)
 		self:Sound("Long")
@@ -1020,8 +1019,8 @@ function module:Mc(rest)
 	
 	if mc1 == nil then
 		mc1 = rest
-		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
-		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
+		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
@@ -1031,8 +1030,8 @@ function module:Mc(rest)
 		end]]--
 	elseif mc2 == nil then
 		mc2 = rest
-		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
-		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
+		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
@@ -1042,8 +1041,8 @@ function module:Mc(rest)
 		end]]--
 	elseif mc3 == nil then
 		mc3 = rest
-		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
-		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
+		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
@@ -1053,8 +1052,8 @@ function module:Mc(rest)
 		end]]--
 	elseif mc4 == nil then
 		mc4 = rest
-		self:Bar(rest..L["bar_mcAfflic"].. " >Click Me<", timer.mcAfflic, icon.mc, true, color.mc)
-		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
+		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == rest then
@@ -1066,7 +1065,7 @@ function module:Mc(rest)
 end
 
 function module:McFade(rest)
-	self:RemoveBar(rest..L["bar_mcAfflic"].. " >Click Me<")
+	self:RemoveBar(rest..L["bar_mcAfflic"].. L["clickme"])
 	
 	--[[if IsRaidLeader() or IsRaidOfficer() then
 		for i=1,GetNumRaidMembers() do
@@ -1097,7 +1096,7 @@ function module:FrostBlastYell()
 	self:Bar(L["bar_frostBlastAfflic"], timer.frostBlastAfflic, icon.frostBlast, true, color.frostBlast)
 	self:DelayedIntervalBar(timer.frostBlastAfflic, L["bar_frostBlastCd"], timer.frostBlastCd[1], timer.frostBlastCd[2], icon.frostBlast, true, color.frostBlast)
 	
-	if UnitClass("Player") == "Shaman" or UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] or UnitClass("Player") == BC["Druid"] then
 		self:Message(L["msg_frostBlast"], "Urgent", false, nil, false)
 		self:WarningSign(icon.frostBlast, 1)
 		self:Sound("Long")
@@ -1127,7 +1126,7 @@ function module:Detonate(rest)
 		end
 	end
 	
-	if (UnitClass("Player") ~= "Warrior" and UnitClass("Player") ~= "Rogue") and self.db.profile.detonate then
+	if (UnitClass("Player") ~= BC["Warrior"] and UnitClass("Player") ~= BC["Rogue"]) and self.db.profile.detonate then
 		self:Message(L["msg_detonate"]..rest, "Attention", false, nil, false)
 
 		self:Bar(rest..L["bar_detonateAfflic"], timer.detonateAfflic, icon.detonate, true, color.detonate)
@@ -1150,7 +1149,7 @@ end
 function module:Frostbolt()
 	castingFrostbolt = true
 	
-	if UnitClass("Player") == "Rogue" or UnitClass("Player") == "Warrior" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Mage"] then
 		self:Bar(L["bar_frostbolt"], timer.frostbolt, icon.frostbolt, true, color.frostbolt)
 		self:WarningSign(icon.frostbolt, timer.frostbolt)
 		self:Message(L["msg_frostbolt"], "Personal", false, nil, false)

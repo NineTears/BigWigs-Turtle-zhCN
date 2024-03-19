@@ -47,6 +47,7 @@ L:RegisterTranslations("enUS", function() return {
 	bar_cloudCD = "毒云冷却",
 	msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
 	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -91,6 +92,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_cloudCD = "毒云冷却",
 	msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
 	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	you = "你",
 } end )
 
 local timer = {
@@ -173,7 +175,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_injectFade"]) then
 		local _,_, injectFadePerson, _ = string.find(msg, L["trigger_injectFade"])
-		if injectFadePerson == "you" then injectFadePerson = UnitName("Player") end
+		if injectFadePerson == L["you"] then injectFadePerson = UnitName("Player") end
 		self:Sync(syncName.injectFade.." "..injectFadePerson)
 
 	

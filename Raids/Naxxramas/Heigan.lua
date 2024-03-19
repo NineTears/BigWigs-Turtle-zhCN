@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Heigan the Unclean", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30038
 module.enabletrigger = module.translatedName
@@ -200,7 +200,7 @@ end
 function module:Event(msg)
 	if string.find(msg, L["trigger_manaBurnYou"]) then
 		if self.db.profile.manaBurn then
-			if UnitClass("Player") ~= "Rogue" and UnitClass("Player") ~= "Warrior" then
+			if UnitClass("Player") ~= BC["Rogue"] and UnitClass("Player") ~= BC["Warrior"] then
 				self:Message(L["msg_manaBurnYou"], "Important", nil, "Info")
 				self:WarningSign(icon.manaBurn, 0.7)
 			end
@@ -239,7 +239,7 @@ function module:Disease()
 	if timer.diseaseCD[1] < (timer.fightDuration - (GetTime() - bwHeiganTimeFloorStarted)) then
 		self:IntervalBar(L["bar_disease"], timer.diseaseCD[1], timer.diseaseCD[2], icon.disease, true, "Green")
 	end
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Priest"] then
 		self:Message(L["msg_disease"], "Important", nil, "Info")
 		self:WarningSign(icon.disease, 0.7)
 	end

@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Sanctum Dragonkin", "Emerald Sanctum")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbsanctumdragonkin = AceLibrary("Babble-Boss-2.2")["Sanctum Dragonkin"]
 
 module.revision = 30021
 module.enabletrigger = module.translatedName
@@ -136,14 +138,14 @@ function module:Reflect()
 	self:Bar(L["bar_reflect"], timer.reflect, icon.reflect, true, color.reflect)
 	
 	if UnitName("Target") ~= nil then
-		if UnitName("Target") == "Sanctum Dragonkin" then
-			if UnitClass("Player") == "Mage" then
+		if UnitName("Target") == bbsanctumdragonkin then
+			if UnitClass("Player") == BC["Mage"] then
 				self:WarningSign(icon.reflect,2)
-			elseif UnitClass("Player") == "Warlock" then
+			elseif UnitClass("Player") == BC["Warlock"] then
 				self:WarningSign(icon.reflect,2)
 			end
 			
-			if (UnitClass("Player") ~= "Warrior") and (UnitClass("Player") ~= "Rogue") then
+			if (UnitClass("Player") ~= BC["Warrior"]) and (UnitClass("Player") ~= BC["Rogue"]) then
 				self:Message(L["msg_reflect"], "Important", false, nil, false)
 				self:Sound("Long")
 			end

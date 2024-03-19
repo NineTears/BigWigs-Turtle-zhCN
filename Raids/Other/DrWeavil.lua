@@ -1,11 +1,12 @@
 
 local module, L = BigWigs:ModuleDeclaration("Doctor Weavil", "Dustwallow Marsh")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30051
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"mindshatter", "mc", "bosskill"}
 module.zonename = {
-	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Dustwallow Marsh"],
 }
 
@@ -30,6 +31,8 @@ L:RegisterTranslations("enUS", function() return {
     trigger_mcOther = "(.+) is afflicted by Mental Domination.", --CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_mcFade = "Mental Domination fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mc = " 精神控制",
+    clickme = " >点击我！<",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -53,6 +56,8 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_mcOther = "(.+) is afflicted by Mental Domination.", --CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_mcFade = "Mental Domination fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mc = " 精神控制",
+    clickme = " >点击我！<",
+    you = "你",
 } end )
 
 local timer = {
@@ -140,7 +145,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_mcFade"]) then
 		local _,_, mcFadePlayer, _ = string.find(msg, L["trigger_mcFade"])
-		if mcFadePlayer == "you" then mcFadePlayer = UnitName("Player") end
+		if mcFadePlayer == L["you"] then mcFadePlayer = UnitName("Player") end
 		self:Sync(syncName.mcFade .. " " .. mcFadePlayer)
 	end
 end
@@ -171,8 +176,8 @@ function module:MindShatter()
 end
 
 function module:Mc(rest)
-	self:Bar(rest.." "..L["bar_mc"].." >Click Me!<", timer.mc, icon.mc, true, color.mc)
-	self:SetCandyBarOnClick("BigWigsBar "..rest.." "..L["bar_mc"].." >Click Me!<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest.." "..L["bar_mc"]..L["clickme"], timer.mc, icon.mc, true, color.mc)
+	self:SetCandyBarOnClick("BigWigsBar "..rest.." "..L["bar_mc"]..L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 	
 	if IsRaidLeader() or IsRaidOfficer() then
 		for i=1,GetNumRaidMembers() do
@@ -182,14 +187,14 @@ function module:Mc(rest)
 		end
 	end
 	
-	if UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Mage"] then
 		self:WarningSign(icon.mc, 0.7)
 		self:Sound("Beware")
 	end
 end
 
 function module:McFade(rest)
-	self:RemoveBar(rest.." "..L["bar_mc"].." >Click Me!<")
+	self:RemoveBar(rest.." "..L["bar_mc"]..L["clickme"])
 	
 	if IsRaidLeader() or IsRaidOfficer() then
 		for i=1,GetNumRaidMembers() do

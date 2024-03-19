@@ -4,6 +4,11 @@ local thane = AceLibrary("Babble-Boss-2.2")["Thane Korth'azz"]
 local mograine = AceLibrary("Babble-Boss-2.2")["Highlord Mograine"]
 local zeliek = AceLibrary("Babble-Boss-2.2")["Sir Zeliek"]
 local blaumeux = AceLibrary("Babble-Boss-2.2")["Lady Blaumeux"]
+local bsimprovedsealofjustice = AceLibrary("Babble-Spell-2.2")["Improved Seal of Justice"]
+local bsdefiance = AceLibrary("Babble-Spell-2.2")["Defiance"]
+local bsferalinstinct = AceLibrary("Babble-Spell-2.2")["Feral Instinct"]
+
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30066
 module.enabletrigger = {"Thane Korth'azz", "Highlord Mograine", "Sir Zeliek", "Lady Blaumeux"}
@@ -305,13 +310,13 @@ function module:OnDisengage()
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if msg == string.format(UNITDIESOTHER, "Thane Korth'azz") then
+	if msg == string.format(UNITDIESOTHER, thane) then
 		korthAzzDead = true
-	elseif msg == string.format(UNITDIESOTHER, "Highlord Mograine") then
+	elseif msg == string.format(UNITDIESOTHER, mograine) then
 		mograineDead = true
-	elseif msg == string.format(UNITDIESOTHER, "Sir Zeliek") then
+	elseif msg == string.format(UNITDIESOTHER, zeliek) then
 		zeliekDead = true
-	elseif msg == string.format(UNITDIESOTHER, "Lady Blaumeux") then
+	elseif msg == string.format(UNITDIESOTHER, blaumeux) then
 		blaumeuxDead = true
 	end
 	
@@ -346,7 +351,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_shieldWall"]) then
 		local _, _, shieldWallUser = string.find(msg, L["trigger_shieldWall"])
-		if shieldWallUser == "Thane Korth'azz" or shieldWallUser == "Highlord Mograine" or shieldWallUser == "Sir Zeliek" or shieldWallUser == "Lady Blaumeux" then
+		if shieldWallUser == thane or shieldWallUser == mograine or shieldWallUser == zeliek or shieldWallUser == blaumeux then
 			self:Sync(syncName.shieldwall .. " " .. shieldWallUser)
 		end
 	
@@ -365,13 +370,13 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_tauntResist"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_tauntResist"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntResist()
 		end
 	
 	elseif string.find(msg, L["trigger_growlResist"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_growlResist"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntResist()
 		end
 	
@@ -379,13 +384,13 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_tauntSuccess"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_tauntSuccess"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntSuccess()
 		end
 		
 	elseif string.find(msg, L["trigger_growlSuccess"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_growlSuccess"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntSuccess()
 		end
     end
@@ -395,7 +400,7 @@ end
 
 --tanks say when they are ready to tank
 function module:ZeliekMarkFade()
-	if (UnitName("Target") == "Thane Korth'azz" or UnitName("Target") == "Highlord Mograine" or UnitName("Target") == "Sir Zeliek" or UnitName("Target") == "Lady Blaumeux") and UnitName("TargetTarget") == UnitName("Player") then
+	if (UnitName("Target") == thane or UnitName("Target") == mograine or UnitName("Target") == zeliek or UnitName("Target") == blaumeux) and UnitName("TargetTarget") == UnitName("Player") then
 		return
 	else
 		if isTank == nil then self:TankCheck() end
@@ -406,7 +411,7 @@ function module:ZeliekMarkFade()
 end
 
 function module:KorthAzzMarkFade()
-	if (UnitName("Target") == "Thane Korth'azz" or UnitName("Target") == "Highlord Mograine" or UnitName("Target") == "Sir Zeliek" or UnitName("Target") == "Lady Blaumeux") and UnitName("TargetTarget") == UnitName("Player") then
+	if (UnitName("Target") == thane or UnitName("Target") == mograine or UnitName("Target") == zeliek or UnitName("Target") == blaumeux) and UnitName("TargetTarget") == UnitName("Player") then
 		return
 	else
 		if isTank == nil then self:TankCheck() end
@@ -417,7 +422,7 @@ function module:KorthAzzMarkFade()
 end
 
 function module:BlaumeuxMarkFade()
-	if (UnitName("Target") == "Thane Korth'azz" or UnitName("Target") == "Highlord Mograine" or UnitName("Target") == "Sir Zeliek" or UnitName("Target") == "Lady Blaumeux") and UnitName("TargetTarget") == UnitName("Player") then
+	if (UnitName("Target") == thane or UnitName("Target") == mograine or UnitName("Target") == zeliek or UnitName("Target") == blaumeux) and UnitName("TargetTarget") == UnitName("Player") then
 		return
 	else
 		if isTank == nil then self:TankCheck() end
@@ -428,7 +433,7 @@ function module:BlaumeuxMarkFade()
 end
 
 function module:MograineMarkFade()
-	if (UnitName("Target") == "Thane Korth'azz" or UnitName("Target") == "Highlord Mograine" or UnitName("Target") == "Sir Zeliek" or UnitName("Target") == "Lady Blaumeux") and UnitName("TargetTarget") == UnitName("Player") then
+	if (UnitName("Target") == thane or UnitName("Target") == mograine or UnitName("Target") == zeliek or UnitName("Target") == blaumeux) and UnitName("TargetTarget") == UnitName("Player") then
 		return
 	else
 		if isTank == nil then self:TankCheck() end
@@ -439,13 +444,13 @@ function module:MograineMarkFade()
 end
 
 function module:TankCheck()
-	if UnitClass("Player") == "Warrior" and UnitHealthMax("Player") >= 8000 then
+	if UnitClass("Player") == BC["Warrior"] and UnitHealthMax("Player") >= 8000 then
 		local numTabs = GetNumTalentTabs()
 		for t=1, numTabs do
 			local numTalents = GetNumTalents(t)
 			for i=1, numTalents do
 				local nameTalent, icon, tier, column, currRank, maxRank= GetTalentInfo(t,i)
-				if nameTalent == "Defiance" then
+				if nameTalent == bsdefiance then
 					if currRank == 5 then
 						isTank = true
 					end
@@ -453,13 +458,13 @@ function module:TankCheck()
 			end
 		end
 	
-	elseif UnitClass("Player") == "Druid" and UnitHealthMax("Player") >= 8000 then
+	elseif UnitClass("Player") == BC["Druid"] and UnitHealthMax("Player") >= 8000 then
 		local numTabs = GetNumTalentTabs()
 		for t=1, numTabs do
 			local numTalents = GetNumTalents(t)
 			for i=1, numTalents do
 				local nameTalent, icon, tier, column, currRank, maxRank= GetTalentInfo(t,i)
-				if nameTalent == "Feral Instinct" then
+				if nameTalent == bsferalinstinct then
 					if currRank == 3 then
 						isTank = true
 					end
@@ -467,13 +472,13 @@ function module:TankCheck()
 			end
 		end
 		
-	elseif UnitClass("Player") == "Paladin" and UnitHealthMax("Player") >= 8000 then
+	elseif UnitClass("Player") == BC["Paladin"] and UnitHealthMax("Player") >= 8000 then
 		local numTabs = GetNumTalentTabs()
 		for t=1, numTabs do
 			local numTalents = GetNumTalents(t)
 			for i=1, numTalents do
 				local nameTalent, icon, tier, column, currRank, maxRank= GetTalentInfo(t,i)
-				if nameTalent == "Improved Seal of Justice" then
+				if nameTalent == bsimprovedsealofjustice then
 					if currRank == 3 then
 						isTank = true
 					end
@@ -502,7 +507,7 @@ end
 function module:Mark4()
 	--if you are a tank, yell for replacement
 	--if you are not a tank, warn to GTFO
-	if (UnitName("Target") == "Thane Korth'azz" or UnitName("Target") == "Highlord Mograine" or UnitName("Target") == "Sir Zeliek" or UnitName("Target") == "Lady Blaumeux") and UnitName("TargetTarget") == UnitName("Player") then
+	if (UnitName("Target") == thane or UnitName("Target") == mograine or UnitName("Target") == zeliek or UnitName("Target") == blaumeux) and UnitName("TargetTarget") == UnitName("Player") then
 		if self.db.profile.tankswarn then
 			SendChatMessage(UnitName("Player")..L["msg_mark4Tank"], "Yell")
 		end
@@ -544,17 +549,17 @@ function module:DelayedVoidZoneEvent()
         if target == UnitName("Player") then
             self:Message(L["msg_voidYou"], "Urgent", false, nil, false)
             self:Sound("Beware")
-            SendChatMessage("Void Zone On Me !", "SAY")
+            SendChatMessage("虚空领域在我身上！", "SAY")
         end
     end
 end
 
 function module:CheckTarget()
-    if UnitName("Target") == "Lady Blaumeux" then
+    if UnitName("Target") == blaumeux then
         return UnitName("TargetTarget")
     else
         for i = 1, GetNumRaidMembers() do
-            if UnitName("Raid" .. i .. "Target") == "Lady Blaumeux" then
+            if UnitName("Raid" .. i .. "Target") == blaumeux then
                 return UnitName("Raid" .. i .. "TargetTarget")
             end
         end

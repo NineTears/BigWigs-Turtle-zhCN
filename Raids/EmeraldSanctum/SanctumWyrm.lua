@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Sanctum Wyrm", "Emerald Sanctum")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30020
 module.enabletrigger = module.translatedName
@@ -126,13 +126,13 @@ function module:Event(msg)
 	end
 	
 	if string.find(msg, L["trigger_volleyYou"]) then
-		if UnitClass("Player") == "Mage" then
+		if UnitClass("Player") == BC["Mage"] then
 			self:Message(L["msg_volley"], "Urgent", false, nil, false)
 			self:Sound("Info")
-		elseif UnitClass("Player") == "Warlock" then
+		elseif UnitClass("Player") == BC["Warlock"] then
 			self:Message(L["msg_volley"], "Urgent", false, nil, false)
 			self:Sound("Info")
-		elseif UnitClass("Player") == "Priest" then
+		elseif UnitClass("Player") == BC["Priest"] then
 			self:Message(L["msg_volley"], "Urgent", false, nil, false)
 			self:Sound("Info")
 		end
@@ -151,7 +151,7 @@ function module:Volley()
 	self:RemoveBar(L["bar_volley"])
 	self:Bar(L["bar_volley"], timer.volley, icon.volley, true, color.volley)
 	
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.volley, 0.7)
 	end
 end

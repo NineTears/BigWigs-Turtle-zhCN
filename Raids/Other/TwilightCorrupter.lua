@@ -5,7 +5,7 @@ module.revision = 30044
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"creatureofnightmare", "soulcorruption", "swellofsouls", "bosskill"}
 module.zonename = {
-	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Deadwind Pass"],
 }
 
@@ -39,6 +39,8 @@ L:RegisterTranslations("enUS", function() return {
     bar_swellOfSouls = " 攻击力增益",
 
     subStringDead = "(.+) dies.",
+    clickme = " >点击我！<",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -71,6 +73,8 @@ L:RegisterTranslations("zhCN", function() return {
     bar_swellOfSouls = " 攻击力增益",
 
     subStringDead = "(.+) dies.",
+    clickme = " >点击我！<",
+    you = "你",
 } end )
 
 local timer = {
@@ -188,7 +192,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_creatureOfNightmareFade"]) then
 		local _,_, targetMcFade, _ = string.find(msg, L["trigger_creatureOfNightmareFade"])
-		if targetMcFade == "you" then targetMcFade = UnitName("Player") end
+		if targetMcFade == L["you"] then targetMcFade = UnitName("Player") end
 		self:Sync(syncName.creatureOfNightmareFade .. " " .. targetMcFade)
 		
 		
@@ -215,8 +219,8 @@ function module:CreatureOfNightmare(rest)
 	self:RemoveBar(L["bar_creatureOfNightmareAfflic"])
 	self:RemoveBar(L["bar_creatureOfNightmareCd"])
 	
-	self:Bar(rest.." "..L["bar_creatureOfNightmareAfflic"].." >Click Me!<", timer.creatureOfNightmareAfflic, icon.creatureOfNightmare, true, color.creatureOfNightmareAfflic)
-	self:SetCandyBarOnClick("BigWigsBar "..rest.." "..L["bar_creatureOfNightmareAfflic"].." >Click Me!<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest.." "..L["bar_creatureOfNightmareAfflic"]..L["clickme"], timer.creatureOfNightmareAfflic, icon.creatureOfNightmare, true, color.creatureOfNightmareAfflic)
+	self:SetCandyBarOnClick("BigWigsBar "..rest.." "..L["bar_creatureOfNightmareAfflic"]..L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 	
 	self:DelayedBar(timer.creatureOfNightmareAfflic, L["bar_creatureOfNightmareCd"], timer.creatureOfNightmareCd, icon.creatureOfNightmare, true, color.creatureOfNightmareCd)
 	
@@ -234,7 +238,7 @@ function module:CreatureOfNightmare(rest)
 end
 
 function module:CreatureOfNightmareFade(rest)
-	self:RemoveBar(rest.." "..L["bar_creatureOfNightmareAfflic"].." >Click Me!<")
+	self:RemoveBar(rest.." "..L["bar_creatureOfNightmareAfflic"]..L["clickme"])
 	
 	if IsRaidLeader() or IsRaidOfficer() then
 		for i=1,GetNumRaidMembers() do

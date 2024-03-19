@@ -4,6 +4,9 @@ local module, L = BigWigs:ModuleDeclaration("C'Thun", "Ahn'Qiraj")
 module.revision = 30055
 local eyeofcthun = AceLibrary("Babble-Boss-2.2")["Eye of C'Thun"]
 local cthun = AceLibrary("Babble-Boss-2.2")["C'Thun"]
+local bzthescarabwall = AceLibrary("Babble-Zone-2.2")["The Scarab Wall"]
+local bzgatesofahnqiraj = AceLibrary("Babble-Zone-2.2")["Gates of Ahn'Qiraj"]
+
 module.enabletrigger = {eyeofcthun, cthun}
 module.toggleoptions = {"icon", "rape", -1, "tentacle", "glare", "group", -1, "giant", "acid", "weakened", -1, "proximity", "stomach", "bosskill"}
 
@@ -295,8 +298,8 @@ function module:CHAT_MSG_SAY(msg)
 		self:Sync(syncName.p2Start)
 	elseif string.find(msg,"tentHp") then
 		local hp = strsub(msg,8,strlen(msg))
-		DEFAULT_CHAT_FRAME:AddMessage("HP: "..hp)
-		DEFAULT_CHAT_FRAME:AddMessage("Length: "..strlen(hp))
+		DEFAULT_CHAT_FRAME:AddMessage("生命值："..hp)
+		DEFAULT_CHAT_FRAME:AddMessage("长度："..strlen(hp))
 		self:testTentacleHp(hp)
 	elseif msg == "tentDies" then
 		self:Sync(syncName.fleshtentacledead2)
@@ -328,7 +331,7 @@ function module:testTentacleHp(hp)
 			self:TriggerEvent("BigWigs_SetHPBar", self, L["Second Tentacle"], 100-self.secondTentacleHP)
 		end
 		if self.secondTentacleHP < 20 and not secondTentacleLowWarn then
-			self:Message("Second Tentacle at "..self.secondTentacleHP.."% HP")
+			self:Message("第二只触手在 "..self.secondTentacleHP.."% HP")
 			secondTentacleLowWarn = true
 		end
 	end
@@ -368,7 +371,7 @@ end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
 	--The Scarab Wall when you release, then Gates of Ahn'Qiraj as you run back, then Ahn'Qiraj when you zone in
-	if (GetMinimapZoneText() == "The Scarab Wall" or GetMinimapZoneText() == "Gates of Ahn'Qiraj") and self.core:IsModuleActive(module.translatedName) then
+	if (GetMinimapZoneText() == bzthescarabwall or GetMinimapZoneText() == bzgatesofahnqiraj) and self.core:IsModuleActive(module.translatedName) then
 		self.core:DisableModule(module.translatedName)
 	end
 end
@@ -419,7 +422,7 @@ function module:CheckDigestiveAcid(msg)
 	local _, _, stacks = string.find(msg, L["digestiveAcidTrigger"])
 
 	if stacks then
-		self:DebugMessage("Digestive Acid Stacks: " .. stacks)
+		self:DebugMessage("消化酸液叠加层数：" .. stacks)
 		if tonumber(stacks) == 5 then
 			self:DigestiveAcid()
 		end
@@ -657,11 +660,11 @@ function module:DelayedEyeBeamCheck()
 		
 		if name == UnitName("player") then
 			self:WarningSign(icon.eyeBeamSelf, 2 - 0.1)
-			SendChatMessage("Eye Beam On Me !", "SAY")
+			SendChatMessage("眼棱在我身上！", "SAY")
 		else
 			for i = 1, GetNumRaidMembers(), 1 do
 				if name == UnitName('Raid' .. i) and CheckInteractDistance("Raid" .. i, 3) then
-					self:Message("Eye Beam on " .. name .. " ! Move away !", "Important" )
+					self:Message("眼棱开启！ " .. name .. " ! 快离开！", "Important" )
 				end
 			end
 		end

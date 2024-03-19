@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Lord Blackwald II", "Karazhan")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30027
 module.enabletrigger = module.translatedName
@@ -48,6 +49,8 @@ L:RegisterTranslations("enUS", function() return {
     msg_yellSummon = "影刃怒牙已被召唤！",
     
     trigger_engage = "You dare disturb the Dark Rider Lord?",--CHAT_MSG_MONSTER_YELL
+    clickme = " >点击我！<",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -91,6 +94,8 @@ L:RegisterTranslations("zhCN", function() return {
     msg_yellSummon = "影刃怒牙已被召唤！",
     
     trigger_engage = "You dare disturb the Dark Rider Lord?",--CHAT_MSG_MONSTER_YELL
+    clickme = " >点击我！<",
+    you = "你",
 } end )
 
 local timer = {
@@ -178,7 +183,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_boonFade"]) then
 		local _,_, boonFadePlayer, _ = string.find(msg, L["trigger_boonFade"])
-		if boonFadePlayer == "you" then boonFadePlayer = UnitName("Player") end
+		if boonFadePlayer == L["you"] then boonFadePlayer = UnitName("Player") end
 		self:Sync(syncName.boonFade .. " " .. boonFadePlayer)
 
 
@@ -220,9 +225,9 @@ end
 function module:Boon(rest)
 	self:Bar(L["bar_boon"]..rest, timer.boon, icon.boon, true, color.boon)
 	
-	if UnitClass("Player") == "Mage" then
+	if UnitClass("Player") == BC["Mage"] then
 		self:WarningSign(icon.boon, 0.7)
-	elseif UnitClass("Player") == "Druid" then
+	elseif UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.boon, 0.7)
 	end
 end
@@ -238,8 +243,8 @@ function module:EmpoweredSoul(rest)
 		end
 	end
 	
-	self:Bar(rest..L["bar_empoweredSoul"].. " >Click Me<", timer.empoweredSoul, icon.empoweredSoul, true, color.empoweredSoul)
-	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_empoweredSoul"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest..L["bar_empoweredSoul"].. L["clickme"], timer.empoweredSoul, icon.empoweredSoul, true, color.empoweredSoul)
+	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_empoweredSoul"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 end
 
 function module:Summon()

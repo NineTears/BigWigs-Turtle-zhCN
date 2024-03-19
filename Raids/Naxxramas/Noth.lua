@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Noth the Plaguebringer", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30017
 module.enabletrigger = module.translatedName
@@ -252,7 +253,7 @@ function module:Curse()
 		self:IntervalBar(L["bar_curse"], timer.curse[1], timer.curse[2], icon.curse, true, "Red")
 	end
 	
-	if UnitClass("Player") == "Mage" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.curse, 0.7)
 		self:Message(L["msg_curse"], "Important", nil, "Beware")
 	end
@@ -264,7 +265,7 @@ function module:Cripple()
 		self:IntervalBar(L["bar_cripple"], timer.cripple[1], timer.cripple[2], icon.cripple, true, "Cyan")
 	end
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.cripple, 0.7)
 		self:Message(L["msg_cripple"], "Important", nil, "Beware")
 	end

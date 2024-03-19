@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Maexxna", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30012
 module.enabletrigger = module.translatedName
@@ -299,7 +299,7 @@ end
 function module:Poison()
 	self:RemoveBar(L["bar_poisonCD"])
 	self:Bar(L["bar_poisonGain"], timer.poisonDuration, icon.poison, true, "Green")
-	if UnitClass("Player") == "Shaman" or UnitClass("Player") == "Paladin" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.poison, 0.7)
 	end
 end

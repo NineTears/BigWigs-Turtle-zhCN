@@ -4,6 +4,7 @@
 ----------------------------------
 
 local module, L = BigWigs:ModuleDeclaration("Magmadar", "Molten Core")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 20004 -- To be overridden by the module!
 module.enabletrigger = module.translatedName -- string or table {boss, add1, add2}
@@ -233,7 +234,7 @@ function module:Panic(delay)
 		self:DelayedMessage(timer.earliestPanic - 5 + delay, L["fearsoon"], "Urgent", nil, nil, true)
 		self:IntervalBar(L["fearbar"], timer.earliestPanic + delay, timer.latestPanic + delay, icon.panic, true, "Blue")
 
-		if playerClass == "WARRIOR" then
+		if playerClass == BC["Warrior"] then
 			self:DelayedSound(timer.earliestPanic - 10 + delay, "Ten")
 			self:DelayedSound(timer.earliestPanic - 3 + delay, "Three")
 			self:DelayedSound(timer.earliestPanic - 2 + delay, "Two")
@@ -246,7 +247,7 @@ function module:Frenzy()
 	if self.db.profile.frenzy then
 		self:Message(L["frenzyann"], "Important", true, "Alert")
 		self:Bar(L["frenzy_bar"], timer.frenzy, icon.frenzy, true, "red")
-		if playerClass == "HUNTER" then
+		if playerClass == BC["Hunter"] then
 			self:WarningSign(icon.tranquil, timer.frenzy, true)
 		end
 	end

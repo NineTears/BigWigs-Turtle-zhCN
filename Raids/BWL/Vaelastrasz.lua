@@ -31,7 +31,7 @@ L:RegisterTranslations("enUS", function() return {
     deathyou_trigger = "You die\.",
     deathother_trigger = "(.+) dies\.",
 
-    are = "是",
+    are = "are",
 
     start_cmd = "start",
     start_name = "开始",
@@ -174,7 +174,7 @@ L:RegisterTranslations("zhCN", function() return {
     deathyou_trigger = "You die\.",
     deathother_trigger = "(.+) dies\.",
 
-    are = "是",
+    are = "受到了",
 
     start_cmd = "start",
     start_name = "开始",

@@ -4,6 +4,7 @@
 ----------------------------------
 
 local module, L = BigWigs:ModuleDeclaration("Flamegor", "Blackwing Lair")
+local BC = AceLibrary("Babble-Class-2.2")
 
 
 ----------------------------
@@ -272,7 +273,7 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 	elseif sync == syncName.frenzy and self.db.profile.frenzy then
 		self:Message(L["frenzy_message"], "Important", nil, true, "Alert")
 		self:Bar(L["frenzy_bar"], timer.frenzy, icon.frenzy, true, "red")
-		if playerClass == "HUNTER" then
+		if playerClass == BC["Hunter"] then
 			self:WarningSign(icon.tranquil, timer.frenzy, true)
 		end
 		lastFrenzy = GetTime()

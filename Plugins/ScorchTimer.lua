@@ -9,6 +9,8 @@ assert( BigWigs, "BigWigs not found!")
 -----------------------------------------------------------------------
 local name = "Scorch Timer"
 local L = AceLibrary("AceLocale-2.2"):new("BigWigs"..name)
+local BC = AceLibrary("Babble-Class-2.2")
+local bsimprovedscorch = AceLibrary("Babble-Spell-2.2")["Improved Scorch"]
 local paint = AceLibrary("PaintChips-2.0")
 local minscale, maxscale = 0.25, 2
 local candybar = AceLibrary("CandyBar-2.1")
@@ -87,7 +89,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Timer bars"] = "计时条",
 	["Show anchor"] = "显示锚点",
-	["Grow bars upwards"] = "计时条向上增长",
+	["Grow bars upwards"] = "切换计时条生长方向",
 	["Scale"] = "缩放",
 	["Bar scale"] = "计时条缩放",
 
@@ -135,7 +137,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	["Timer bars"] = "计时条",
 	["Show anchor"] = "显示锚点",
-	["Grow bars upwards"] = "计时条向上增长",
+	["Grow bars upwards"] = "切换计时条生长方向",
 	["Scale"] = "缩放",
 	["Bar scale"] = "计时条缩放",
 
@@ -216,7 +218,7 @@ L:RegisterTranslations("esES", function() return {
 
 local _, englishClass = UnitClass("player");
 local isMage = false;
-if englishClass == "MAGE" then
+if englishClass == BC["Mage"] then
 	isMage = true
 end
 BigWigsScorchTimer = BigWigs:NewModule(name)
@@ -474,7 +476,7 @@ end
 
 function BigWigsScorchTimer:CheckTalents()
 	nameTalent, icon, tier, column, currRank, maxRank= GetTalentInfo(2,10);
-	if nameTalent == "Improved Scorch" and currRank == maxRank then
+	if nameTalent == bsimprovedscorch and currRank == maxRank then
 		--self:DebugMessage(nameTalent .. " - "..currRank .."/"..maxRank)
 		return true
 	end

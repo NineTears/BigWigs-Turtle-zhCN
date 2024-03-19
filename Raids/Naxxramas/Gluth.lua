@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Gluth", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30030
 module.enabletrigger = module.translatedName
@@ -277,7 +278,7 @@ function module:Frenzy()
 	self:Bar(L["bar_frenzyGain"], timer.frenzy, icon.frenzy, true, "red")
 	lastFrenzy = GetTime()
 	
-	if playerClass == "HUNTER" then
+	if playerClass == BC["Hunter"] then
 		self:WarningSign(icon.tranquil, timer.frenzy, true)
 	end
 end

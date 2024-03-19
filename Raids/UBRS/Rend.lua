@@ -1,4 +1,6 @@
 local module, L = BigWigs:ModuleDeclaration("Warchief Rend Blackhand", "Blackrock Spire")
+local BC = AceLibrary("Babble-Class-2.2")
+local bzblackrockstadium = AceLibrary("Babble-Zone-2.2")["Blackrock Stadium"]
 
 local gyth = AceLibrary("Babble-Boss-2.2")["Gyth"]
 local rend = AceLibrary("Babble-Boss-2.2")["Warchief Rend Blackhand"]
@@ -11,7 +13,7 @@ module.zonename = {
 	AceLibrary("Babble-Zone-2.2")["Blackrock Spire"],
 }
 --module.zonename = {
---	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
+--	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
 --	AceLibrary("Babble-Zone-2.2")["Blackrock Spire"],
 --	AceLibrary("Babble-Zone-2.2")["Upper Blackrock Spire"],
 --}
@@ -278,7 +280,7 @@ function module:OnRegister()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Blackrock Stadium" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzblackrockstadium or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 
@@ -382,10 +384,10 @@ end
 function module:Freeze()
 	self:Message(L["msg_freeze"], "Urgent", false, nil, false)
 	
-	if UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.freeze, 1)
 		self:Sound("Info")
-	elseif UnitClass("Player") == "Paladin" then
+	elseif UnitClass("Player") == BC["Paladin"] then
 		self:WarningSign(icon.freeze, 1)
 		self:Sound("Info")
 	end
@@ -397,12 +399,12 @@ function module:Dismount()
 	
 	bwPlayerIsAttacking = nil
 	if IsRaidLeader() or IsRaidOfficer() then
-		if UnitClass("Player") ~= "Rogue" and UnitClass("Player") ~= "Druid" then
+		if UnitClass("Player") ~= BC["Rogue"] and UnitClass("Player") ~= BC["Druid"] then
 			if PlayerFrame.inCombat then
 				bwPlayerIsAttacking = true
 			end
 			
-			TargetByName("Warchief Rend Blackhand",true)
+			TargetByName(rend,true)
 			SetRaidTarget("target",6)
 			TargetLastTarget()
 			if bwPlayerIsAttacking == true then

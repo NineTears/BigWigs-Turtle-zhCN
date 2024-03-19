@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Anubisath Sentinel", "Ahn'Qiraj")
+local bbanubisathsentinel = AceLibrary("Babble-Boss-2.2")["Anubisath Sentinel"]
 
 module.revision = 30051
 module.enabletrigger = module.translatedName
@@ -268,7 +268,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(manaburnicon .. L["manaburnwarn"]), timer.manaburn, timer.manaburn, icon.manaburn, true, color.manaburn)
 				firstmanaburn = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", manaburnraidicon)
 				end
 			end			
@@ -291,7 +291,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(thunderclapicon .. L["thunderclapwarn"]), timer.thunderclap, timer.thunderclap, icon.thunderclap, true, color.thunderclap)
 				firstthunderclap = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", thunderclapraidicon)
 				end
 			end			
@@ -314,7 +314,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(thornsicon .. L["thornswarn"]), timer.thorns, timer.thorns, icon.thorns, true, color.thorns)
 				firstthorns = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", thornsraidicon)
 				end
 			end			
@@ -337,7 +337,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(knockbackicon .. L["knockbackwarn"]), timer.knockback, timer.knockback, icon.knockback, true, color.knockback)
 				firstknockback = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", knockbackraidicon)
 				end
 			end			
@@ -360,7 +360,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(mortalstrikeicon .. L["mortalstrikewarn"]), timer.mortalstrike, timer.mortalstrike, icon.mortalstrike, true, color.mortalstrike)
 				firstmortalstrike = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", mortalstrikeraidicon)
 				end
 			end			
@@ -383,7 +383,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(shadowstormicon .. L["shadowstormwarn"]), timer.shadowstorm, timer.shadowstorm, icon.shadowstorm, true, color.shadowstorm)
 				firstshadowstorm = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", shadowstormraidicon)
 				end
 			end	
@@ -406,7 +406,7 @@ function module:Abilities(msg)
 				self:IntervalBar(string.format(mendicon .. L["mendwarn"]), timer.mend, timer.mend, icon.mend, true, color.mend)
 				firstmend = false
 			elseif UnitName("target")~= nil then
-				if UnitName("target") == "Anubisath Sentinel" then
+				if UnitName("target") == bbanubisathsentinel then
 					SetRaidTarget("target", mendraidicon)
 				end
 			end			
@@ -418,7 +418,7 @@ function module:Abilities(msg)
 	if firstarcref == true then
 		if string.find(msg, L["trigger_arcaneFireReflect1"]) or string.find(msg, L["trigger_arcaneFireReflect2"]) or string.find(msg, L["trigger_arcaneFireReflect3"]) or string.find(msg, L["trigger_arcaneFireReflect4"]) or string.find(msg, L["trigger_arcaneFireReflect5"]) or string.find(msg, L["trigger_arcaneFireReflect6"]) then
 			if UnitName("Target") ~= nil then
-				if UnitName("Target") == "Anubisath Sentinel" then
+				if UnitName("Target") == bbanubisathsentinel then
 					if GetRaidTargetIndex("target")== nil then arcreficon = "No Icon" end
 					if GetRaidTargetIndex("target")==1 then arcreficon = "Star"; end
 					if GetRaidTargetIndex("target")==2 then arcreficon = "Circle"; end
@@ -463,7 +463,7 @@ function module:Abilities(msg)
 	if firstsharef == true then
 		if string.find(msg, L["trigger_shadowFrostReflect1"]) or string.find(msg, L["trigger_shadowFrostReflect2"]) or string.find(msg, L["trigger_shadowFrostReflect3"]) or string.find(msg, L["trigger_shadowFrostReflect4"]) then
 			if UnitName("Target") ~= nil then
-				if UnitName("Target") == "Anubisath Sentinel" then
+				if UnitName("Target") == bbanubisathsentinel then
 					if GetRaidTargetIndex("target")== nil then shareficon = "No Icon" end
 					if GetRaidTargetIndex("target")==1 then shareficon = "Star"; end
 					if GetRaidTargetIndex("target")==2 then shareficon = "Circle"; end

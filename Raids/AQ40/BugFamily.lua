@@ -1,6 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("The Bug Family", "Ahn'Qiraj")
-
+local BC = AceLibrary("Babble-Class-2.2")
 local kri = AceLibrary("Babble-Boss-2.2")["Lord Kri"]
 local yauj = AceLibrary("Babble-Boss-2.2")["Princess Yauj"]
 local vem = AceLibrary("Babble-Boss-2.2")["Vem"]
@@ -310,8 +310,8 @@ function module:Heal()
 	self:Message(L["msg_heal"], "Attention", false, nil, false)
 	self:Sound("Alert")
 	
-	if UnitClass("Player") == "Rogue" or UnitClass("Player") == "Warrior" or UnitClass("Player") == "Mage" then
-		if UnitName("Target") == "Princess Yauj" then
+	if UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Mage"] then
+		if UnitName("Target") == yauj then
 			self:WarningSign(icon.heal, 1)
 			self:Sound("Beware")
 		end

@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Kurinnaxx", "Ruins of Ahn'Qiraj")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 20042
 module.enabletrigger = module.translatedName
@@ -40,6 +41,7 @@ L:RegisterTranslations("enUS", function() return {
 	
 	enrage_trigger = "Kurinnaxx gains Enrage.",
 	enrage_warn = "库林纳克斯进入狂怒状态！",
+	you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -79,6 +81,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	enrage_trigger = "Kurinnaxx gains Enrage.",
 	enrage_warn = "库林纳克斯进入狂怒状态！",
+	you = "你",
 } end )
 
 local timer = {
@@ -127,7 +130,7 @@ end
 function module:Event(msg)
 	local _,_,trapperson = string.find(msg, L["trap_trigger"])
 	local _,_,woundperson = string.find(msg, L["wound_trigger"])
-	if string.find(msg, L["trap_trigger"]) and trapperson ~= "you" then
+	if string.find(msg, L["trap_trigger"]) and trapperson ~= L["you"] then
 		self:Sync(syncName.trap.." "..trapperson)
 	end
 	if string.find(msg, L["wound_trigger"]) then
@@ -177,7 +180,7 @@ function module:Wound(rest)
 			self:WarningSign(icon.stacks, 0.7)
 		end
 	else
-		if playerClass == "WARRIOR" and self.db.profile.taunt then
+		if playerClass == BC["Warrior"] and self.db.profile.taunt then
 			self:WarningSign(icon.taunt, 0.7)
 		end
 	end

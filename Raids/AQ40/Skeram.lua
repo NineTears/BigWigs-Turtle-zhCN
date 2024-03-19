@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("The Prophet Skeram", "Ahn'Qiraj")
+local bbtheprophetskeram = AceLibrary("Babble-Boss-2.2")["The Prophet Skeram"]
 
 module.revision = 30061
 module.enabletrigger = module.translatedName
@@ -30,6 +31,8 @@ L:RegisterTranslations("enUS", function() return {
     
     ["You have slain %s!"] = true,
     ["You have slain %s!"] = "你已经击败了%s！",
+    you = "you",
+    clickme = " >点击我！<",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -56,6 +59,8 @@ L:RegisterTranslations("zhCN", function() return {
     kill_trigger = "You only delay",
     
     ["You have slain %s!"] = "你已经击败了%s！",
+    you = "你",
+    clickme = " >点击我！<",
 } end )
 
 local timer = {
@@ -143,7 +148,7 @@ end
 
 function module:Event(msg)
 	if UnitName("target") ~= nil and (IsRaidLeader() or IsRaidOfficer()) then
-		if UnitName("target") == "The Prophet Skeram" then
+		if UnitName("target") == bbtheprophetskeram then
 			if UnitHealthMax("target") > 350000 then
 				SetRaidTarget("target",6)
 			end
@@ -153,11 +158,11 @@ function module:Event(msg)
 	if msg == L["trigger_mcYou"] then
 		self:Sync(syncName.mc .. " " .. UnitName("player"))
 	elseif string.find(msg, L["trigger_mcOther"]) then
-		local _,_, mcPerson, _ = string.find(msg, L["trigger_mcOther"])
+		local _,_, mcPerson, _ = string.find(msg, L["trigger_mcOther"]) 
 		self:Sync(syncName.mc .. " " .. mcPerson)
 	elseif string.find(msg, L["trigger_mcFade"]) then
 		local _,_, mcFadePerson, _ = string.find(msg, L["trigger_mcFade"])
-		if mcFadePerson == "you" then mcFadePerson = UnitName("Player") end
+		if mcFadePerson == L["you"] then mcFadePerson = UnitName("Player") end
 		self:Sync(syncName.mcFade .. " " .. mcFadePerson)
 	end
 end
@@ -179,13 +184,13 @@ function module:MC(rest)
 		end
 	end
 		
-	self:Bar(rest..L["bar_mc"].. " >Click Me<", timer.mc, icon.mc, true, "White")
-	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mc"].. " >Click Me<", function(name, button, extra) TargetByName(extra, true) end, rest)
+	self:Bar(rest..L["bar_mc"].. L["clickme"], timer.mc, icon.mc, true, "White")
+	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mc"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 	self:Message(rest..L["msg_mc"], "Attention", false, nil, false)
 end
 
 function module:McFade(rest)
-	self:RemoveBar(rest..L["bar_mc"].. " >Click Me<")
+	self:RemoveBar(rest..L["bar_mc"].. L["clickme"])
 	
 	if IsRaidLeader() or IsRaidOfficer() then
 		for i=1,GetNumRaidMembers() do

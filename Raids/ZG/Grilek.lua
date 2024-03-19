@@ -1,5 +1,6 @@
-
 local module, L = BigWigs:ModuleDeclaration("Gri'lek", "Zul'Gurub")
+local BC = AceLibrary("Babble-Class-2.2")
+local bbgrilek = AceLibrary("Babble-Boss-2.2")["Gri'lek"]
 
 module.revision = 30057
 module.enabletrigger = module.translatedName
@@ -58,6 +59,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_sweepingStrikes2 = "Gri'lek is afflicted Sweeping Strikes.", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
     trigger_sweepingStrikesFade = "Sweeping Strikes fades from Gri'lek.", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_sweepingStrikes = "横扫攻击！",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -113,6 +115,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_sweepingStrikes2 = "Gri'lek is afflicted Sweeping Strikes.", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
     trigger_sweepingStrikesFade = "Sweeping Strikes fades from Gri'lek.", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_sweepingStrikes = "横扫攻击！",
+    you = "你",
 } end )
 
 local timer = {
@@ -218,7 +221,7 @@ end
 
 function module:GrilekTarget()
 	if (IsRaidLeader() or IsRaidOfficer()) and UnitName("Target") ~= nil and UnitName("TargetTarget") ~= nil then
-		if UnitName("Target") == "Gri'lek" and UnitName("TargetTarget") ~= nil then
+		if UnitName("Target") == bbgrilek and UnitName("TargetTarget") ~= nil then
 			SetRaidTargetIcon("TargetTarget",8)
 		end
 	end
@@ -250,7 +253,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_rootsFade"]) then
 		local _, _, rootsFadePlayer, _ = string.find(msg, L["trigger_rootsFade"])
-		if rootsFadePlayer == "you" then rootsFadePlayer = UnitName("Player") end
+		if rootsFadePlayer == L["you"] then rootsFadePlayer = UnitName("Player") end
 		self:Sync(syncName.rootsFade .. " " .. rootsFadePlayer)
 	
 	
@@ -326,7 +329,7 @@ end
 function module:Roots(rest)
 	self:Bar(rest..L["bar_roots"], timer.roots, icon.roots, true, color.roots)
 	
-	if UnitClass("Player") == "Paladin" or UnitClass("Player") == "Priest" then
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
 		self:WarningSign(icon.roots, 0.7)
 		self:Sound("Info")
 	end
@@ -339,7 +342,7 @@ end
 function module:SweepingStrikes()
 	self:Bar(L["bar_sweepingStrikes"], timer.sweepingStrikes, icon.sweepingStrikes, true, color.sweepingStrikes)
 	
-	if UnitClass("Player") == "Warrior" or UnitClass("Player") == "Paladin" or UnitClass("Player") == "Rogue" or UnitClass("Player") == "Shaman" or UnitClass("Player") == "Druid" then
+	if UnitClass("Player") == BC["Warrior"] or UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Rogue"] or UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] then
 		self:WarningSign(icon.sweepingStrikes, 1)
 		self:Sound("Beware")
 	end

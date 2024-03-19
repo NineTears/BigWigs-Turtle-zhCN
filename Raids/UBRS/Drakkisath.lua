@@ -1,4 +1,5 @@
 local module, L = BigWigs:ModuleDeclaration("General Drakkisath", "Blackrock Spire")
+local bbchromaticeliteguard = AceLibrary("Babble-Boss-2.2")["Chromatic Elite Guard"]
 
 module.revision = 30025
 module.enabletrigger = module.translatedName
@@ -52,6 +53,8 @@ L:RegisterTranslations("enUS", function() return {
 
     msg_addDead = "/2 增援死亡",
     msg_bringBossBack = "增援死了，把达基萨斯拉回来！",
+    generaldrakkisathdies = "General Drakkisath dies.",
+    you = "you",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
@@ -92,6 +95,8 @@ L:RegisterTranslations("zhCN", function() return {
 
     msg_addDead = "/2 增援死亡",
     msg_bringBossBack = "增援死了，把达基萨斯拉回来！",
+    generaldrakkisathdies = "达基萨斯将军已死。",
+    you = "你",
 } end)
 
 local timer = {
@@ -139,7 +144,7 @@ function module:OnDisengage()
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if msg == string.format(UNITDIESOTHER, "Chromatic Elite Guard") then
+	if msg == string.format(UNITDIESOTHER, bbchromaticeliteguard) then
 		bwDrakAddsDead = bwDrakAddsDead + 1
 		if self.db.profile.adds then
 			self:Message(bwDrakAddsDead..L["msg_addDead"], "Important", false, nil, false)
@@ -148,7 +153,7 @@ function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 			self:Sync(syncName.addsDead)
 		end
 		
-	elseif msg == "General Drakkisath dies." then
+	elseif msg == generaldrakkisathdies then
 		self:SendBossDeathSync()
 	end
 end
@@ -172,7 +177,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_conflagFade"]) then
 		local _,_, conflagFadePlayer, _ = string.find(msg, L["trigger_conflagFade"])
-		if conflagFadePlayer == "you" then conflagFadePlayer = UnitName("Player") end
+		if conflagFadePlayer == L["you"] then conflagFadePlayer = UnitName("Player") end
 		self:Sync(syncName.conflagFade .. " " .. conflagFadePlayer)
 	
 	end

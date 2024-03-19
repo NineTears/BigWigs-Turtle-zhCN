@@ -4,6 +4,7 @@
 ----------------------------------
 
 local module, L = BigWigs:ModuleDeclaration("Shazzrah", "Molten Core")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 20004 -- To be overridden by the module!
 module.enabletrigger = module.translatedName -- string or table {boss, add1, add2}
@@ -323,7 +324,7 @@ function module:Counterspell()
 	if self.db.profile.counterspell then
 		self:Bar(L["cs_bar"], timer.cs, icon.cs, true, "red")
 		self:Message("Go!", nil, false, nil, false)
-		if playerClass ~= "WARRIOR" and playerClass ~= "ROGUE" and playerClass ~= "HUNTER" then
+		if playerClass ~= BC["Warrior"] and playerClass ~= BC["Rogue"] and playerClass ~= BC["Hunter"] then
 			self:WarningSign(icon.cs, 0.7)
 		end
 		if self.db.profile.sound then
@@ -357,7 +358,7 @@ function module:DeadenMagic()
 		self:RemoveBar(L["deaden_bar"])
 		self:Message(L["deaden_warn"], "Important")
 		self:IntervalBar(L["deaden_bar"], timer.earliestDeaden, timer.latestDeaden, icon.deaden, true, "black")
-		if playerClass == "SHAMAN" or playerClass == "PRIEST" then
+		if playerClass == BC["Shaman"] or playerClass == BC["Priest"] then
 			self:WarningSign(icon.deaden, timer.earliestDeaden)
 		end
 	end
@@ -365,7 +366,7 @@ end
 
 function module:DeadenMagicOver()
 	if self.db.profile.deaden then
-		if playerClass == "SHAMAN" or playerClass == "PRIEST" then
+		if playerClass == BC["Shaman"] or playerClass == BC["Priest"] then
 			self:RemoveWarningSign(icon.deaden)
 		end
 	end

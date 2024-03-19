@@ -20,6 +20,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_blindingSandOther = "(.+) is afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_blindingSandFade = "Blinding Sand fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_blindingSand = "致盲",
+    you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -35,6 +36,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_blindingSandOther = "(.+) is afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_blindingSandFade = "Blinding Sand fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_blindingSand = "致盲",
+    you = "你",
 } end )
 
 local timer = {
@@ -87,7 +89,7 @@ function module:Event(msg)
 		
 	elseif string.find(msg, L["trigger_blindingSandFade"]) then
 		local _,_, blindingSandFadePlayer, _ = string.find(msg, L["trigger_blindingSandFade"])
-		if blindingSandFadePlayer == "you" then blindingSandFadePlayer = UnitName("Player") end
+		if blindingSandFadePlayer == L["you"] then blindingSandFadePlayer = UnitName("Player") end
 		self:Sync(syncName.blindingSandFade .. " " .. blindingSandFadePlayer)
 	end
 end

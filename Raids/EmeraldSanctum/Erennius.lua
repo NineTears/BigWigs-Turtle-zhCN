@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Erennius", "Emerald Sanctum")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30020
 module.enabletrigger = module.translatedName
@@ -165,7 +165,7 @@ end
 function module:Volley()
 	self:Bar(L["bar_volley"], timer.volley, icon.volley, true, color.volley)
 	
-	if UnitClass("Player") == "Shaman" then
+	if UnitClass("Player") == BC["Shaman"] then
 		self:WarningSign(icon.volley, 0.7)
 	end
 end

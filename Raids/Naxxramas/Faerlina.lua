@@ -1,5 +1,5 @@
-
 local module, L = BigWigs:ModuleDeclaration("Grand Widow Faerlina", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30038
 module.enabletrigger = module.translatedName
@@ -81,6 +81,7 @@ L:RegisterTranslations("enUS", function() return {
     
     trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
     msg_dispelCast = "驱散了一个信徒！请勿驱散心灵控制！",
+    you = "you",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -194,6 +195,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
     msg_dispelCast = "驱散了一个信徒！请勿驱散心灵控制！",
+    you = "你",
 } end )
 
 local timer = {
@@ -275,10 +277,10 @@ function module:OnEngage()
 		self:Bar(L["bar_enrageCD"], timer.silencedEnrage - 1, icon.enrage, true, "red")
 	end
 	
-	if UnitClass("player") == "Priest" and self.db.profile.bigicon then
+	if UnitClass("player") == BC["Priest"] and self.db.profile.bigicon then
 		self:DelayedWarningSign(timer.silencedEnrage - 12, icon.mc, 0.7)
 	end
-	if UnitClass("player") == "Priest" and self.db.profile.sounds then
+	if UnitClass("player") == BC["Priest"] and self.db.profile.sounds then
 		self:DelayedSound(timer.silencedEnrage - 12, "Info")
 	end
 end
@@ -312,7 +314,7 @@ function module:Event(msg)
 		self:Sync(syncName.mc.." "..mcGainPriest)
 	elseif string.find(msg, L["trigger_mcFade"]) then
 		local _,_, mcEndPriest, _ = string.find(msg, L["trigger_mcFade"])
-		if mcEndPriest == "you" then mcEndPriest = UnitName("Player") end
+		if mcEndPriest == L["you"] then mcEndPriest = UnitName("Player") end
 		self:Sync(syncName.mcEnd.." "..mcEndPriest)
 	
 	elseif string.find(msg, L["trigger_enrage"]) then
@@ -351,7 +353,7 @@ end
 
 
 function module:Poison()
-	if UnitClass("player") == "Shaman" then
+	if UnitClass("player") == BC["Shaman"] then
 		self:WarningSign(icon.poison, 0.7)
 	end
 end
@@ -408,10 +410,10 @@ function module:Embrace()
 			self:Bar(L["bar_enrageCD"], timer.silencedWithoutEnrage, icon.enrage, true, "red")
 			self:DelayedMessage(timer.silencedWithoutEnrage - 10, L["msg_enrageSoon"], "Urgent", nil, nil)
 		end
-		if UnitClass("player") == "Priest" and self.db.profile.bigicon then
+		if UnitClass("player") == BC["Priest"] and self.db.profile.bigicon then
 			self:DelayedWarningSign(timer.silencedWithoutEnrage - 10, icon.mc, 0.7)
 		end
-		if UnitClass("player") == "Priest" and self.db.profile.sounds then
+		if UnitClass("player") == BC["Priest"] and self.db.profile.sounds then
 			self:DelayedSound(timer.silencedWithoutEnrage - 10, "Info")
 		end
 		
@@ -445,10 +447,10 @@ function module:Embrace()
 			self:Bar(L["bar_enrageCD"], timer.silencedWithoutEnrage, icon.enrage, true, "red")
 			self:DelayedMessage(timer.silencedWithoutEnrage - 10, L["msg_enrageSoon"], "Urgent", nil, nil)
 		end
-		if UnitClass("player") == "Priest" and self.db.profile.bigicon then
+		if UnitClass("player") == BC["Priest"] and self.db.profile.bigicon then
 			self:DelayedWarningSign(timer.silencedWithoutEnrage - 10, icon.mc, 0.7)
 		end
-		if UnitClass("player") == "Priest" and self.db.profile.sounds then
+		if UnitClass("player") == BC["Priest"] and self.db.profile.sounds then
 			self:DelayedSound(timer.silencedWithoutEnrage - 10, "Info")
 		end
 	end
@@ -468,10 +470,10 @@ function module:Enrage()
 		self:Message(L["msg_enrageGain"], nil, nil, false)
 		self:Bar(L["bar_enrageGain"], timer.silencedEnrage, icon.enrage, true, "red")
 		
-		if (UnitClass("player") == "Warrior" or UnitClass("player") == "Priest") and self.db.profile.bigicon then
+		if (UnitClass("player") == BC["Warrior"] or UnitClass("player") == BC["Priest"]) and self.db.profile.bigicon then
 			self:WarningSign(icon.enrage, 0.7)
 		end
-		if (UnitClass("player") == "Warrior" or UnitClass("player") == "Priest") and self.db.profile.sounds then
+		if (UnitClass("player") == BC["Warrior"] or UnitClass("player") == BC["Priest"]) and self.db.profile.sounds then
 			self:Sound("Info")
 		end
 	end
@@ -495,10 +497,10 @@ function module:EnrageFade()
 		self:Bar(L["bar_enrageCD"], timer.silencedEnrage, icon.enrage, true, "red")
 		self:DelayedMessage(timer.silencedEnrage - 10, L["msg_enrageSoon"], "Urgent", nil, nil)
 	end
-	if UnitClass("player") == "Priest" and self.db.profile.bigicon then
+	if UnitClass("player") == BC["Priest"] and self.db.profile.bigicon then
 		self:DelayedWarningSign(timer.silencedEnrage - 10, icon.mc, 0.7)
 	end
-	if UnitClass("player") == "Priest" and self.db.profile.sounds then
+	if UnitClass("player") == BC["Priest"] and self.db.profile.sounds then
 		self:DelayedSound(timer.silencedEnrage - 10, "Info")
 	end
 end

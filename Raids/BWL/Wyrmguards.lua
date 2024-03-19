@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Death Talon Wyrmguard", "Blackwing Lair")
+local BST = AceLibrary("Babble-SpellTree-2.2")
 
 module.revision = 20041
 module.enabletrigger = module.translatedName
@@ -142,7 +143,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 	if self.db.profile.vulnerability then
 		local _, _, dmg, school, userspell, partial = string.find(msg, L["vulnerability_dots_test"])
 		if dmg and school and userspell then
-			if school == L["arcane"] then
+			if school == BST["Arcane"] then
 				if partial and partial ~= "" then
 					if tonumber(dmg)+tonumber(partial) >= 250 then
 						self:IdentifyVulnerability(school)
@@ -152,7 +153,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["fire"] and not string.find(userspell, L["ignite"]) then
+			elseif school == BST["Fire"] and not string.find(userspell, L["ignite"]) then
 				if partial and partial ~= "" then
 					if tonumber(dmg)+tonumber(partial) >= 400 then
 						self:IdentifyVulnerability(school)
@@ -162,7 +163,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["nature"] then
+			elseif school == BST["Nature"] then
 				if partial and partial ~= "" then
 					if tonumber(dmg)+tonumber(partial) >= 300 then
 						self:IdentifyVulnerability(school)
@@ -172,7 +173,7 @@ function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["shadow"] then
+			elseif school == BST["Shadow"] then
 				if string.find(userspell, L["curseofdoom"]) then
 					if partial and partial ~= "" then
 						if tonumber(dmg)+tonumber(partial) >= 3000 then
@@ -203,7 +204,7 @@ function module:PlayerDamageEvents(msg)
 	if self.db.profile.vulnerability then
 		local _, _, userspell, stype, dmg, school, partial = string.find(msg, L["vulnerability_direct_test"])
 		if stype and dmg and school then
-			if school == L["arcane"] then
+			if school == BST["Arcane"] then
 				if string.find(userspell, L["starfire"]) then
 					if partial and partial ~= "" then
 						if (tonumber(dmg)+tonumber(partial) >= 800 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 1200 and stype == L["crit"]) then
@@ -225,7 +226,7 @@ function module:PlayerDamageEvents(msg)
 						end
 					end
 				end
-			elseif school == L["fire"] then
+			elseif school == BST["Fire"] then
 				if partial and partial ~= "" then
 					if (tonumber(dmg)+tonumber(partial) >= 1300 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 2600 and stype == L["crit"]) then
 						self:IdentifyVulnerability(school)
@@ -235,7 +236,7 @@ function module:PlayerDamageEvents(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["frost"] then
+			elseif school == BST["Frost"] then
 				if partial and partial ~= "" then
 					if (tonumber(dmg)+tonumber(partial) >= 800 and stype == L["hit"])	or (tonumber(dmg)+tonumber(partial) >= 1600 and stype == L["crit"]) then
 						self:IdentifyVulnerability(school)
@@ -245,7 +246,7 @@ function module:PlayerDamageEvents(msg)
 						self:IdentifyVulnerability(school)
 					end
 				end
-			elseif school == L["nature"] then
+			elseif school == BST["Nature"] then
 				if string.find(userspell, L["thunderfury"]) then
 					if partial and partial ~= "" then
 						if (tonumber(dmg)+tonumber(partial) >= 800 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 1200 and stype == L["crit"]) then
@@ -267,7 +268,7 @@ function module:PlayerDamageEvents(msg)
 						end
 					end
 				end
-			elseif school == L["shadow"] then
+			elseif school == BST["Shadow"] then
 				if partial and partial ~= "" then
 					if (tonumber(dmg)+tonumber(partial) >= 1700 and stype == L["hit"]) or (tonumber(dmg)+tonumber(partial) >= 3400 and stype == L["crit"]) then
 						self:IdentifyVulnerability(school)
@@ -306,23 +307,23 @@ function module:IdentifyVulnerability(school)
 	if not self.db.profile.vulnerability or not type(school) == "string" then return end
 	vulnerability = school
 	
-	if vulnerability == "Nature" and bwWyrmguardsNatureBar == false then
+	if vulnerability == BST["Nature"] and bwWyrmguardsNatureBar == false then
 		self:Bar(format(L["vuln_bar"], school), timer.vulnerability, icon.nature, true, "green")
 		bwWyrmguardsNatureBar = true
 	end
-	if vulnerability == "Frost" and bwWyrmguardsFrostBar == false then
+	if vulnerability == BST["Frost"] and bwWyrmguardsFrostBar == false then
 		self:Bar(format(L["vuln_bar"], school), timer.vulnerability, icon.frost, true, "blue")
 		bwWyrmguardsFrostBar = true
 	end
-	if vulnerability == "Fire" and bwWyrmguardsFireBar == false then
+	if vulnerability == BST["Fire"] and bwWyrmguardsFireBar == false then
 		self:Bar(format(L["vuln_bar"], school), timer.vulnerability, icon.fire, true, "red")
 		bwWyrmguardsFireBar = true
 	end
-	if vulnerability == "Arcane" and bwWyrmguardsArcaneBar == false then
+	if vulnerability == BST["Arcane"] and bwWyrmguardsArcaneBar == false then
 		self:Bar(format(L["vuln_bar"], school), timer.vulnerability, icon.arcane, true, "pink")
 		bwWyrmguardsArcaneBar = true
 	end
-	if vulnerability == "Shadow" and bwWyrmguardsShadowBar == false then
+	if vulnerability == BST["Shadow"] and bwWyrmguardsShadowBar == false then
 		self:Bar(format(L["vuln_bar"], school), timer.vulnerability, icon.shadow, true, "black")
 		bwWyrmguardsShadowBar = true
 	end
