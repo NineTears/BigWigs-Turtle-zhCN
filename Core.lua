@@ -146,7 +146,7 @@ L:RegisterTranslations("enUS", function() return {
 	--["Karazhan"] = "卡拉赞下层大厅",
 	--["Dire Maul"] = "厄运之槌(北)",
 	--["Blackrock Spire"] = "黑石塔上层",
-	--["The Black Morass"] = "时光之穴:黑色沼泽",
+	--["The Black Morass"] = "黑色沼泽",
 	--["Silithus"] = "希利苏斯",
 	--["Outdoor Raid Bosses"] = "世界Boss",
 	--["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
@@ -221,7 +221,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Karazhan"] = "卡拉赞下层大厅",
 	["Dire Maul"] = "厄运之槌(北)",
 	["Blackrock Spire"] = "黑石塔上层",
-	["The Black Morass"] = "时光之穴:黑色沼泽",
+	["The Black Morass"] = "黑色沼泽",
 	["Silithus"] = "希利苏斯",
 	["Outdoor Raid Bosses"] = "世界Boss",
 	["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
@@ -838,7 +838,7 @@ function BigWigs:OnEnable()
 end
 
 function BigWigs:AceEvent_FullyInitialized()
-	if GetNumRaidMembers() > 0 or not self.loading or (GetZoneText() == BZ["The Black Morass"]) or (GetZoneText() == BZ["Dire Maul"]) then
+	if GetNumRaidMembers() > 0 or not self.loading or (GetZoneText() == "The Black Morass") or (GetZoneText() == "Dire Maul") then
 		-- Enable all disabled modules that are not boss modules.
 		for name, module in self:IterateModules() do
 			if type(module.IsBossModule) ~= "function" or not module:IsBossModule() then

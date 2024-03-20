@@ -8,10 +8,10 @@ local bzorgrimmar = AceLibrary("Babble-Zone-2.2")["Orgrimmar"]
 local bzthunderbluff = AceLibrary("Babble-Zone-2.2")["Thunder Bluff"]
 local bzundercity = AceLibrary("Babble-Zone-2.2")["Undercity"]
 local bzstonard = AceLibrary("Babble-Zone-2.2")["Stonard"]
-local bzstormwind = AceLibrary("Babble-Zone-2.2")["Stormwind"]
+local bzstormwind = AceLibrary("Babble-Zone-2.2")["Stormwind City"]
 local bzironforge = AceLibrary("Babble-Zone-2.2")["Ironforge"]
 local bzdarnassus = AceLibrary("Babble-Zone-2.2")["Darnassus"]
-local bztheramore = AceLibrary("Babble-Zone-2.2")["Theramore"]
+local bztheramore = AceLibrary("Babble-Zone-2.2")["Theramore Isle"]
 local bzkarazhan = AceLibrary("Babble-Zone-2.2")["Karazhan"]
 
 local spellStatus = nil
