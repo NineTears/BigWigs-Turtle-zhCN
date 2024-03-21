@@ -2,7 +2,7 @@
 local module, L = BigWigs:ModuleDeclaration("The Prophet Skeram", "Ahn'Qiraj")
 local bbtheprophetskeram = AceLibrary("Babble-Boss-2.2")["The Prophet Skeram"]
 
-module.revision = 30061
+module.revision = 30067
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"mc", "bosskill"}
 
@@ -25,7 +25,6 @@ L:RegisterTranslations("enUS", function() return {
     
     trigger_kill = "You only delay... the inevetable.",--CHAT_MSG_MONSTER_YELL
 
-    splitsoon_message = "即将分裂！准备好！",
     split_message = "分裂！",
     kill_trigger = "You only delay",
     
@@ -54,10 +53,9 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_kill = "You only delay... the inevetable.",--CHAT_MSG_MONSTER_YELL
 
-    splitsoon_message = "即将分裂！准备好！",
     split_message = "分裂！",
     kill_trigger = "You only delay",
-    
+
     ["You have slain %s!"] = "你已经击败了%s！",
     you = "你",
     clickme = " >点击我！<",
@@ -93,9 +91,13 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
+	if self.core:IsModuleActive("Anubisath Sentinel", "Ahn'Qiraj") then self.core:DisableModule("Anubisath Sentinel", "Ahn'Qiraj") end
+	
+	self:ScheduleRepeatingEvent("CheckTrueSkeram", self.CheckTrueSkeram, 0.5, self)
 end
 
 function module:OnDisengage()
+	self:CancelScheduledEvent("CheckTrueSkeram")
 end
 
 function module:CheckForWipe()
@@ -142,24 +144,29 @@ end
 function module:CHAT_MSG_MONSTER_YELL(msg)
 	if string.find(msg, L["kill_trigger"]) then
 		self:SendBossDeathSync()
-		--BigWigs:Debug("yell kill trigger")
+	end
+end
+
+function module:CheckTrueSkeram()
+	if UnitName("Target") == bbtheprophetskeram and (IsRaidLeader() or IsRaidOfficer()) then
+		--hp scaling is supposed to be linear, based on raid members, from 20 to 40 members
+			--doesn't scale below 20
+			--hp at 40 is 454k and max clone hp is 233k, looking for maxhp > 400k giving a leeway of 54k for adjustments
+		if GetNumRaidMembers() >= 20 and GetNumRaidMembers() <= 40 and (UnitHealthMax("Target") > (GetNumRaidMembers() * 10000)) or
+		GetNumRaidMembers() < 20 and UnitHealthMax("Target") > 200000 then
+			SetRaidTarget("target",6)
+		end
 	end
 end
 
 function module:Event(msg)
-	if UnitName("target") ~= nil and (IsRaidLeader() or IsRaidOfficer()) then
-		if UnitName("target") == bbtheprophetskeram then
-			if UnitHealthMax("target") > 350000 then
-				SetRaidTarget("target",6)
-			end
-		end
-	end
-	
 	if msg == L["trigger_mcYou"] then
-		self:Sync(syncName.mc .. " " .. UnitName("player"))
+		self:Sync(syncName.mc .. " " .. UnitName("Player"))
+	
 	elseif string.find(msg, L["trigger_mcOther"]) then
-		local _,_, mcPerson, _ = string.find(msg, L["trigger_mcOther"]) 
+		local _,_, mcPerson, _ = string.find(msg, L["trigger_mcOther"])
 		self:Sync(syncName.mc .. " " .. mcPerson)
+	
 	elseif string.find(msg, L["trigger_mcFade"]) then
 		local _,_, mcFadePerson, _ = string.find(msg, L["trigger_mcFade"])
 		if mcFadePerson == L["you"] then mcFadePerson = UnitName("Player") end

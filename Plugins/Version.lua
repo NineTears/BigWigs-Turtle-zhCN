@@ -66,19 +66,19 @@ L:RegisterTranslations("enUS", function() return {
 	["Close window"] = "关闭窗口",
 	["Showing version for "] = "显示版本：",
 	["Green versions are newer than yours, red are older, and white are the same."] = "绿色版本比您的版本更新，红色版本比您的版本旧，白色版本与您的版本相同。",
-	["Player"] = "玩家",
-	["Version"] = "版本",
-	["Current zone"] = "当前区域",
-	["<zone>"] = "<区域>",
+	--["Player"] = "玩家",
+	--["Version"] = "版本",
+	--["Current zone"] = "当前区域",
+	--["<zone>"] = "<区域>",
 	["Version query done."] = "版本查询完成。",
 	["Runs a version query on your current zone."] = "在当前区域上运行版本查询。",
 	["Closes the version query window."] = "关闭版本查询窗口。",
-	["current"] = "当前",
+	--["current"] = "当前",
 	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
-	["Zone"] = "区域",
-	["zone"] = "区域",
-	["N/A"] = "无",
-	["BigWigs"] = "BigWigs",
+	--["Zone"] = "区域",
+	--["zone"] = "区域",
+	--["N/A"] = "无",
+	--["BigWigs"] = "BigWigs",
 	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",
 	["Nr Replies"] = "回应人数",
 	["Ancient"] = "旧版本",
@@ -170,8 +170,6 @@ L:RegisterTranslations("deDE", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
 	["Commands for querying the raid for Big Wigs versions."] = "用于查询BigWigs版本的命令。",
@@ -215,55 +213,55 @@ L:RegisterTranslations("zhCN", function() return {
 --      Addon Declaration      --
 ---------------------------------
 
--- BigWigsVersionQuery = BigWigs:NewModule("Version Query")
+BigWigsVersionQuery = BigWigs:NewModule("Version Query")
 
--- BigWigsVersionQuery.defaultDB = {
--- 	popup = true,
--- }
--- BigWigsVersionQuery.consoleCmd = L["versionquery"]
--- BigWigsVersionQuery.consoleOptions = {
--- 	type = "group",
--- 	name = L["Version Query"],
--- 	desc = L["Commands for querying the raid for Big Wigs versions."],
--- 	args = {
--- 		[L["BigWigs"]] = {
--- 			type = "execute",
--- 			name = L["BigWigs"],
--- 			order = 1,
--- 			desc = L["Runs a version query on the BigWigs core."],
--- 			func = function() BigWigsVersionQuery:QueryVersion("BigWigs") end,
--- 		},
--- 		[L["current"]] = {
--- 			type = "execute",
--- 			name = L["Current zone"],
--- 			order = 2,
--- 			desc = L["Runs a version query on your current zone."],
--- 			func = function() BigWigsVersionQuery:QueryVersion() end,
--- 		},
--- 		[L["zone"]] = {
--- 			type = "text",
--- 			name = L["Zone"],
--- 			order = 3,
--- 			desc = L["Runs a version query on the given zone."],
--- 			usage = L["<zone>"],
--- 			get = false,
--- 			set = function(zone) BigWigsVersionQuery:QueryVersion(zone) end,
--- 		},
--- 		spacer = {
--- 			type = "header",
--- 			name = " ",
--- 			order = 10,
--- 		},
--- 		popup = {
--- 			type = "toggle",
--- 			name = L["Show popup"],
--- 			desc = L["Show popup warning on out of date version"],
--- 			order = 12,
--- 			get = function() return BigWigsVersionQuery.db.profile.popup end,
--- 			set = function(v) BigWigsVersionQuery.db.profile.popup = v end,
--- 		},
--- 	}
--- }
+BigWigsVersionQuery.defaultDB = {
+	popup = true,
+}
+BigWigsVersionQuery.consoleCmd = L["versionquery"]
+BigWigsVersionQuery.consoleOptions = {
+	type = "group",
+	name = L["Version Query"],
+	desc = L["Commands for querying the raid for Big Wigs versions."],
+	args = {
+		[L["BigWigs"]] = {
+			type = "execute",
+			name = L["BigWigs"],
+			order = 1,
+			desc = L["Runs a version query on the BigWigs core."],
+			func = function() BigWigsVersionQuery:QueryVersion("BigWigs") end,
+		},
+		[L["current"]] = {
+			type = "execute",
+			name = L["Current zone"],
+			order = 2,
+			desc = L["Runs a version query on your current zone."],
+			func = function() BigWigsVersionQuery:QueryVersion() end,
+		},
+		[L["zone"]] = {
+			type = "text",
+			name = L["Zone"],
+			order = 3,
+			desc = L["Runs a version query on the given zone."],
+			usage = L["<zone>"],
+			get = false,
+			set = function(zone) BigWigsVersionQuery:QueryVersion(zone) end,
+		},
+		spacer = {
+			type = "header",
+			name = " ",
+			order = 10,
+		},
+		popup = {
+			type = "toggle",
+			name = L["Show popup"],
+			desc = L["Show popup warning on out of date version"],
+			order = 12,
+			get = function() return BigWigsVersionQuery.db.profile.popup end,
+			set = function(v) BigWigsVersionQuery.db.profile.popup = v end,
+		},
+	}
+}
 
 ------------------------------
 --      Initialization      --

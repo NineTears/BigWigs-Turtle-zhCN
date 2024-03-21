@@ -57,8 +57,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Heigan",
 
     disease_cmd = "disease",
@@ -103,8 +101,6 @@ L:RegisterTranslations("zhCN", function() return {
     
     bar_erruption = "爆发",	
 
-    ["Eye Stalk"] = true,
-    ["Rotting Maggot"] = true,
     ["Eye Stalk"] = "眼柄",
     ["Rotting Maggot"] = "腐烂的蛆虫",
 } end )

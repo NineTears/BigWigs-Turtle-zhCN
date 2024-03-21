@@ -162,12 +162,10 @@ L:RegisterTranslations("enUS", function() return {
 	--["Lieutenant General Andorov"] = "安多洛夫中将",
 
 	["You have slain %s!"] = "你已击败%s!",
-	["you"] = true,
+	you = "you",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",
@@ -237,7 +235,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Lieutenant General Andorov"] = "安多洛夫中将",
 
 	["You have slain %s!"] = "你已击败%s!",
-	["you"] = "你",
+	you = "你",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -387,7 +385,7 @@ BigWigs.cmdtable = {type = "group", handler = BigWigs, args = {
 }}
 BigWigs:RegisterChatCommand({"/bw", "/BigWigs"}, BigWigs.cmdtable)
 BigWigs.debugFrame = ChatFrame1
-BigWigs.revision = 30066
+BigWigs.revision = 30071
 
 
 function BigWigs:DebugMessage(msg, module)
@@ -510,7 +508,7 @@ function BigWigs.modulePrototype:Victory()
 		BigWigsBossRecords:EndBossfight(self)
 
 
-		self:DebugMessage("Boss dead, disabling module ["..self:ToString().."].")
+		self:DebugMessage("Boss已击败，关闭模块 ["..self:ToString().."].")
 		self.core:DisableModule(self:ToString())
 	end
 end
@@ -610,7 +608,7 @@ function BigWigs:CheckForEngage(module)
 		local inCombat = IsBossInCombat()
 		local running = module:IsEventScheduled(module:ToString().."_CheckStart")
 		if inCombat then
-			module:DebugMessage("Scan returned true, engaging ["..module:ToString().."].")
+			module:DebugMessage("扫描结果为真，开始交战 ["..module:ToString().."].")
 			module:CancelScheduledEvent(module:ToString().."_CheckStart")
 			module:Engage()
 			module:SendEngageSync()
@@ -646,7 +644,7 @@ function BigWigs:CheckForWipe(module)
 		-- start wipe check in regular intervals
 		local running = module:IsEventScheduled(module:ToString().."_CheckWipe")
 		if not running then
-			module:DebugMessage("CheckForWipe not running")
+			module:DebugMessage("未运行清除检查")
 			module:ScheduleRepeatingEvent(module:ToString().."_CheckWipe", module.CheckForWipe, 5, module)
 			return
 		end
@@ -669,7 +667,7 @@ function BigWigs:CheckForWipe(module)
 
 		local inCombat = RaidMemberInCombat()
 		if not inCombat then
-			module:DebugMessage("Wipe detected for module ["..module:ToString().."].")
+			module:DebugMessage("检测到模块的全灭 ["..module:ToString().."].")
 			module:CancelScheduledEvent(module:ToString().."_CheckWipe")
 			self:TriggerEvent("BigWigs_RebootModule", module:ToString())
 			--module:SendWipeSync()
@@ -697,7 +695,7 @@ end
 
 -- test function
 function BigWigs.modulePrototype:Test()
-	BigWigs:Print("No tests defined for module " .. self:ToString())
+	BigWigs:Print("模块未定义测试 " .. self:ToString())
 end
 
 ------------------------------

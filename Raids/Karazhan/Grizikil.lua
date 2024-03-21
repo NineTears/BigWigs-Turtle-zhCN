@@ -38,8 +38,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Grizikil",
 
     rainoffire_cmd = "rainoffire",

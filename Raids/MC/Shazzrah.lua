@@ -178,8 +178,6 @@ L:RegisterTranslations("deDE", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     blink_trigger = "casts Gate of Shazzrah",
     deaden_trigger = "Shazzrah gains Deaden Magic",
     curse_trigger = "afflicted by Shazzrah",

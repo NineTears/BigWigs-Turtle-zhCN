@@ -1,13 +1,15 @@
 
 local module, L = BigWigs:ModuleDeclaration("Living Monstrosity", "Naxxramas")
+local BC = AceLibrary("Babble-Class-2.2")
 local bslightningtotem = AceLibrary("Babble-Spell-2.2")["Lightning Totem"]
 
-local BC = AceLibrary("Babble-Class-2.2")
-
-module.revision = 30011
+module.revision = 30067
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"lightningtotem", "autotarget"}
 module.trashMod = true
+module.defaultDB = {
+	bosskill = false,
+}
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Monstrosity",
@@ -28,8 +30,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Monstrosity",
 
     lightningtotem_cmd = "lightningtotem",
@@ -49,11 +49,9 @@ L:RegisterTranslations("zhCN", function() return {
 
 local timer = {
 }
-
 local icon = {
 	lightningTotem = "Spell_Nature_Lightning"
 }
-
 local syncName = {
 }
 
@@ -74,7 +72,7 @@ end
 function module:Event(msg)
 	if msg == L["trigger_totemUp"] then
 		if self.db.profile.lightningtotem then
-			self:Message(L["msg_totemUp"], "Urgent")
+			self:Message(L["msg_totemUp"], "Urgent", false, nil, false)
 			self:WarningSign(icon.lightningTotem, 0.7)
 		end
 		if self.db.profile.autotarget then
@@ -103,6 +101,6 @@ function module:Event(msg)
 			end
 		end
 	elseif msg == L["trigger_totemDead"] and self.db.profile.lightningtotem then
-		self:Message(L["msg_totemDead"], "Urgent")
+		self:Message(L["msg_totemDead"], "Urgent", false, nil, false)
 	end
 end

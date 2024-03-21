@@ -53,13 +53,11 @@ L:RegisterTranslations("enUS", function() return {
     
     trigger_enrage = "Princess Huhuran gains Enrage.",--5min timer, string to be confirmed
     bar_enrage = "狂怒",
-    msg_enrage1min = "狂怒在60秒内",
-    msg_enrage5sec = "狂怒在5秒内",
+    msg_enrage1min = "60秒内狂怒",
+    msg_enrage5sec = "5秒内狂怒",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Huhuran",
 
     wyvernsting_cmd = "wyvernsting",
@@ -106,8 +104,8 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_enrage = "Princess Huhuran gains Enrage.",--5min timer, string to be confirmed
     bar_enrage = "狂怒",
-    msg_enrage1min = "狂怒在60秒内",
-    msg_enrage5sec = "狂怒在5秒内",
+    msg_enrage1min = "60秒内狂怒",
+    msg_enrage5sec = "5秒内狂怒",
 } end )
 
 local timer = {

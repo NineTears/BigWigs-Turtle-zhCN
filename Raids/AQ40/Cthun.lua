@@ -1,7 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("C'Thun", "Ahn'Qiraj")
 
-module.revision = 30055
+module.revision = 30069
 local eyeofcthun = AceLibrary("Babble-Boss-2.2")["Eye of C'Thun"]
 local cthun = AceLibrary("Babble-Boss-2.2")["C'Thun"]
 local bzthescarabwall = AceLibrary("Babble-Zone-2.2")["The Scarab Wall"]
@@ -53,11 +53,11 @@ L:RegisterTranslations("enUS", function() return {
     acid_name = "消化酸液警报",
     acid_desc = "当你有5层消化酸液时显示警告",
     
-    startwarn	= "克苏恩已触发战斗！- 45秒后将出现黑暗凝视和眼棱",
+	
     barStartRandomBeams = "随机眼棱开始！",
 
-    eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
-    eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
+	eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
+	eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
     eyebeam     = "%s 受到眼棱攻击",
     Unknown = "未知", -- Eye Beam on Unknown
     
@@ -81,13 +81,13 @@ L:RegisterTranslations("enUS", function() return {
     GiantEye = "5秒后出现巨眼触须！",
     gedownwarn	= "巨眼已击败！",
 
-    weakenedtrigger = "is weakened!",
+	weakenedtrigger = "is weakened!",
     weakened    = "克苏恩虚弱45秒",
     invulnerable2   = "5秒后派对结束",
     invulnerable1   = "派对结束 - 克苏恩无敌",
     barWeakened = "克苏恩变得虚弱！",
 
-    digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
+	digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
     msgDigestiveAcid = "5层消化酸液",
 
     ["First Tentacle dead"] = "First Tentacle dead",
@@ -95,11 +95,8 @@ L:RegisterTranslations("enUS", function() return {
     ["Second Tentacle"] = "Second Tentacle",
 
     window_bar = "机会窗口",
-    trigger_bigClawDies = "Giant Claw Tentacle dies.",
-    trigger_bigEyeDies = "Giant Eye Tentacle dies.",
-
-    ["Giant Eye Tentacle"] = "Giant Eye Tentacle",
-    ["Flesh Tentacle"] = "Flesh Tentacle",
+	trigger_bigClawDies = "Giant Claw Tentacle dies.",
+	trigger_bigEyeDies = "Giant Eye Tentacle dies.",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -145,11 +142,11 @@ L:RegisterTranslations("zhCN", function() return {
     acid_name = "消化酸液警报",
     acid_desc = "当你有5层消化酸液时显示警告",
     
-    startwarn	= "克苏恩已触发战斗！- 45秒后将出现黑暗凝视和眼棱",
+	
     barStartRandomBeams = "随机眼棱开始！",
 
-    eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
-    eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
+	eye_beam_trigger = "Giant Eye Tentacle begins to cast Eye Beam.",
+	eye_beam_trigger_cthun = "Eye of C'Thun begins to cast Eye Beam.",
     eyebeam     = "%s 受到眼棱攻击",
     Unknown = "未知", -- Eye Beam on Unknown
     
@@ -173,25 +170,22 @@ L:RegisterTranslations("zhCN", function() return {
     GiantEye = "5秒后出现巨眼触须！",
     gedownwarn	= "巨眼已击败！",
 
-    weakenedtrigger = "is weakened!",
+	weakenedtrigger = "is weakened!",
     weakened    = "克苏恩虚弱45秒",
     invulnerable2   = "5秒后派对结束",
     invulnerable1   = "派对结束 - 克苏恩无敌",
     barWeakened = "克苏恩变得虚弱！",
 
-    digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
+	digestiveAcidTrigger = "You are afflicted by Digestive Acid [%s%(]*([%d]*).",
     msgDigestiveAcid = "5层消化酸液",
 
-    ["First Tentacle dead"] = "第一触须死亡",
-    ["First Tentacle"] = "第一触须",
-    ["Second Tentacle"] = "第二触须",
+    ["First Tentacle dead"] = "First Tentacle dead",
+    ["First Tentacle"] = "First Tentacle",
+    ["Second Tentacle"] = "Second Tentacle",
 
     window_bar = "机会窗口",
-    trigger_bigClawDies = "Giant Claw Tentacle dies.",
-    trigger_bigEyeDies = "Giant Eye Tentacle dies.",
-	
-    ["Giant Eye Tentacle"] = "巨眼触须",
-    ["Flesh Tentacle"] = "血肉触须",
+	trigger_bigClawDies = "Giant Claw Tentacle dies.",
+	trigger_bigEyeDies = "Giant Eye Tentacle dies.",
 } end )
 
 module.proximityCheck = function(unit) return CheckInteractDistance(unit, 2) end
@@ -199,7 +193,7 @@ module.proximitySilent = false
 
 local timer = {
 	nextspawn = 28,
-	p1RandomEyeBeams = 6, -- how long does eye of c'thun target the same player at the beginning
+	p1RandomEyeBeams = 8, -- how long does eye of c'thun target the same player at the beginning
 	p1Tentacle = 45,      -- tentacle timers for phase 1
 	p1TentacleStart = 45, -- delay for first tentacles from engage onwards
 	p1GlareStart = 45,    -- delay for first dark glare from engage onwards
@@ -248,8 +242,8 @@ local syncName = {
 	window = "CThunWindow"..module.revision,
 }
 
-local gianteye = L["Giant Eye Tentacle"]
-local fleshtentacle = L["Flesh Tentacle"]
+local gianteye = "Giant Eye Tentacle"
+local fleshtentacle = "Flesh Tentacle"
 
 local cthunstarted = nil
 local phase2started = nil
@@ -270,6 +264,8 @@ function module:OnRegister()
 end
 
 function module:OnEnable()
+	if self.core:IsModuleActive("Qiraji Mindslayer", "Ahn'Qiraj") then self.core:DisableModule("Qiraji Mindslayer", "Ahn'Qiraj") end
+	
 	--self:RegisterEvent("CHAT_MSG_SAY")--Debug
 	
 	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE", "Emote")
@@ -278,6 +274,7 @@ function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE", "CheckEyeBeam")
 
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "CheckDigestiveAcid")
+
 
 	self:ThrottleSync(20, syncName.p2Start)
 	self:ThrottleSync(50, syncName.weaken)
@@ -289,54 +286,6 @@ function module:OnEnable()
 	self:ThrottleSync(25, syncName.tentacleSpawn)
 	self:ThrottleSync(5, syncName.window)
 end
-
---[[
-function module:CHAT_MSG_SAY(msg)
-	if msg == "forceEngage" then
-		self:SendEngageSync()
-	elseif msg == "p2Start" then
-		self:Sync(syncName.p2Start)
-	elseif string.find(msg,"tentHp") then
-		local hp = strsub(msg,8,strlen(msg))
-		DEFAULT_CHAT_FRAME:AddMessage("生命值："..hp)
-		DEFAULT_CHAT_FRAME:AddMessage("长度："..strlen(hp))
-		self:testTentacleHp(hp)
-	elseif msg == "tentDies" then
-		self:Sync(syncName.fleshtentacledead2)
-	elseif msg == "weaken" then
-		self:Sync(syncName.weaken)
-	elseif msg == "weakenOver" then
-		self:Sync(syncName.weakenOver)
-	end
-end
-
-function module:testTentacleHp(hp)
-	local health = tonumber(hp)
-	
-	if not fleshtentacledead then
-		if health and health < self.firstTentacleHP then
-			self.firstTentacleHP = health
-			self:TriggerEvent("BigWigs_SetHPBar", self, L["First Tentacle"], 100-self.firstTentacleHP)
-			self:TriggerEvent("BigWigs_SetHPBar", self, L["Second Tentacle"], 100-self.secondTentacleHP)
-		elseif health and health > self.firstTentacleHP and health < self.secondTentacleHP then
-			self.secondTentacleHP = health
-			self:TriggerEvent("BigWigs_SetHPBar", self, L["First Tentacle"], 100-self.firstTentacleHP)
-			self:TriggerEvent("BigWigs_SetHPBar", self, L["Second Tentacle"], 100-self.secondTentacleHP)
-		end
-	elseif fleshtentacledead then
-		self.firstTentacleHP = 1
-		if health and health < self.secondTentacleHP then
-			self.secondTentacleHP = health
-			self:TriggerEvent("BigWigs_SetHPBar", self, L["First Tentacle"], 100-self.firstTentacleHP)
-			self:TriggerEvent("BigWigs_SetHPBar", self, L["Second Tentacle"], 100-self.secondTentacleHP)
-		end
-		if self.secondTentacleHP < 20 and not secondTentacleLowWarn then
-			self:Message("第二只触手在 "..self.secondTentacleHP.."% HP")
-			secondTentacleLowWarn = true
-		end
-	end
-end
-]]--
 
 function module:OnSetup()
 	self:RegisterEvent("CHAT_MSG_COMBAT_HOSTILE_DEATH")
@@ -394,7 +343,6 @@ end
 
 function module:CheckForWipe(event)
 	if doCheckForWipe then
-		BigWigs:DebugMessage("doCheckForWipe")
 		BigWigs:CheckForWipe(self)
 	end
 end
@@ -407,10 +355,8 @@ end
 
 function module:CheckEyeBeam(msg)
 	if string.find(msg, L["eye_beam_trigger"]) then
-		self:DebugMessage("Eye Beam trigger")
 		self:Sync(syncName.eyeBeam)
 	elseif string.find(msg, L["eye_beam_trigger_cthun"]) then
-		self:DebugMessage("C'Thun Eye Beam trigger")
 		self:Sync(syncName.eyeBeam)
 		if not cthunstarted then
 			self:SendEngageSync()
@@ -422,7 +368,6 @@ function module:CheckDigestiveAcid(msg)
 	local _, _, stacks = string.find(msg, L["digestiveAcidTrigger"])
 
 	if stacks then
-		self:DebugMessage("消化酸液叠加层数：" .. stacks)
 		if tonumber(stacks) == 5 then
 			self:DigestiveAcid()
 		end
@@ -478,21 +423,15 @@ function module:Window()
 end
 
 function module:CThunStart()
-	self:DebugMessage("CThunStart: ")
 	if not cthunstarted then
 		cthunstarted = true
 		doCheckForWipe = true
 		fleshtentacledead = nil
 		secondTentacleLowWarn = nil
-		
-		self:Message(L["startwarn"], "Attention", false, false)
-		--self:Sound("Shakira")
-		self:Bar(L["barStartRandomBeams"], timer.p1RandomEyeBeams, icon.giantEye, true, "Green")
-		--self:Bar("Claw Tentacle", 8, icon.giantClaw)
 
+		self:Bar(L["barStartRandomBeams"], timer.p1RandomEyeBeams, icon.giantEye, true, "Cyan")
 
 		self:P1ClawTentacle()
-
 
 		if self.db.profile.tentacle then
 			self:Bar(self.db.profile.rape and L["barTentacle"] or L["barNoRape"], timer.p1TentacleStart, icon.eyeTentacles, true, "Blue")
@@ -559,7 +498,7 @@ function module:CThunP2Start()
 		end
 
 		if self.db.profile.giant then
-			self:Bar(L["barGiant"], timer.p2FirstGiantEye, icon.giantEye, true, "Green")
+			self:Bar(L["barGiant"], timer.p2FirstGiantEye, icon.giantEye, true, "Cyan")
 			self:DelayedMessage(timer.p2FirstGiantEye - 5, L["GiantEye"], "Urgent", false, nil, true)
 
 			self:Bar(L["barGiantC"], timer.p2FirstGiantClaw, icon.giantClaw, true, "Black")
@@ -634,7 +573,7 @@ function module:CThunWeakenedOver()
 	self:DelayedSync(timer.p2FirstGiantClawAfterWeaken, syncName.giantClawSpawn)
 
 	-- next giant eye 40s after weaken
-	self:Bar(L["barGiant"], timer.p2FirstGiantEyeAfterWeaken, icon.giantEye, true, "Green")
+	self:Bar(L["barGiant"], timer.p2FirstGiantEyeAfterWeaken, icon.giantEye, true, "Cyan")
 	self:DelayedSync(timer.p2FirstGiantEyeAfterWeaken, syncName.giantEyeSpawn)
 	self:DelayedMessage(timer.p2FirstGiantEyeAfterWeaken - 5, L["GiantEye"], "Urgent", false, nil, true)
 
@@ -650,7 +589,7 @@ function module:DelayedEyeBeamCheck()
 	if eyeTarget then
 		name = eyeTarget
 			
-		if self.db.profile.icon then
+		if self.db.profile.icon and (IsRaidLeader() or IsRaidOfficer()) then
 			for i=1,GetNumRaidMembers() do
 				if UnitName("raid"..i) == name then
 					SetRaidTarget("raid"..i, 8)
@@ -660,11 +599,11 @@ function module:DelayedEyeBeamCheck()
 		
 		if name == UnitName("player") then
 			self:WarningSign(icon.eyeBeamSelf, 2 - 0.1)
-			SendChatMessage("眼棱在我身上！", "SAY")
+			SendChatMessage("我受到眼棱攻击！", "SAY")
 		else
 			for i = 1, GetNumRaidMembers(), 1 do
 				if name == UnitName('Raid' .. i) and CheckInteractDistance("Raid" .. i, 3) then
-					self:Message("眼棱开启！ " .. name .. " ! 快离开！", "Important" )
+					self:Message("眼棱即将攻击 " .. name .. " ! 快离开！", "Important" )
 				end
 			end
 		end
@@ -688,15 +627,23 @@ end
 -----------------------
 function module:CheckTentacleHP()
 	local health
-	if UnitName("target") == fleshtentacle then
+	if UnitName("target") == fleshtentacle and not UnitIsDeadOrGhost("target") then
 		health = math.floor(UnitHealth("target")/UnitHealthMax("target")*100)
 	else
 		for i = 1, GetNumRaidMembers(), 1 do
-			if UnitName("Raid"..i.."target") == fleshtentacle then
+			if UnitName("Raid"..i.."target") == fleshtentacle and not UnitIsDeadOrGhost("Raid"..i.."target") then
 				health = math.floor(UnitHealth("Raid"..i.."target")/UnitHealthMax("Raid"..i.."target")*100)
 				break;
 			end
 		end
+	end
+	
+	if secondTentacleLowWarn == true and health and health >= 20 then
+		secondTentacleLowWarn = nil
+		self.firstTentacleHP = 1
+		self.secondTentacleHP = 100
+		self:TriggerEvent("BigWigs_SetHPBar", self, L["First Tentacle"], 100-self.firstTentacleHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, L["Second Tentacle"], 100-self.secondTentacleHP)
 	end
 	
 	if not fleshtentacledead then
@@ -716,7 +663,7 @@ function module:CheckTentacleHP()
 			self:TriggerEvent("BigWigs_SetHPBar", self, L["First Tentacle"], 100-self.firstTentacleHP)
 			self:TriggerEvent("BigWigs_SetHPBar", self, L["Second Tentacle"], 100-self.secondTentacleHP)
 		end
-		if self.secondTentacleHP < 20 and not secondTentacleLowWarn then
+		if self.secondTentacleHP <= 20 and not secondTentacleLowWarn then
 			self:Message("Second Tentacle at "..self.secondTentacleHP.."% HP")
 			secondTentacleLowWarn = true
 		end
@@ -782,7 +729,7 @@ end
 function module:GTentacleRape()
 	self:DelayedSync(timer.p2ETentacle, syncName.giantEyeSpawn)
 	if self.db.profile.giant then
-		self:Bar(L["barGiant"], timer.p2ETentacle, icon.giantEye, true, "Green")
+		self:Bar(L["barGiant"], timer.p2ETentacle, icon.giantEye, true, "Cyan")
 		self:DelayedMessage(timer.p2ETentacle - 5, L["GiantEye"], "Urgent", false, nil, true)
 	end
 end

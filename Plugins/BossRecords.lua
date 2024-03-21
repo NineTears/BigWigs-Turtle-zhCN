@@ -35,10 +35,6 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-    -- Wind汉化修复Turtle-WOW中文数据
-    -- Last update: 2024-02-08
     BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
     BOSS_DOWN		= "%s 击败 %s!",
     BOSS_DOWN_L		= "%s 击败 %s! 上一个是 %s。最快记录是 %s。你共有 %d 次胜利。",

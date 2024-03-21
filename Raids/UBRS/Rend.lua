@@ -1,6 +1,5 @@
 local module, L = BigWigs:ModuleDeclaration("Warchief Rend Blackhand", "Blackrock Spire")
 local BC = AceLibrary("Babble-Class-2.2")
-local bzblackrockstadium = AceLibrary("Babble-Zone-2.2")["Blackrock Stadium"]
 
 local gyth = AceLibrary("Babble-Boss-2.2")["Gyth"]
 local rend = AceLibrary("Babble-Boss-2.2")["Warchief Rend Blackhand"]
@@ -87,8 +86,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Gyth",
 
     flamebreath_cmd = "flamebreath",
@@ -280,7 +277,7 @@ function module:OnRegister()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= bzblackrockstadium or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= "Blackrock Stadium" or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 

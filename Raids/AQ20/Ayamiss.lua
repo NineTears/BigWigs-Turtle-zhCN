@@ -2,7 +2,7 @@
 local module, L = BigWigs:ModuleDeclaration("Ayamiss the Hunter", "Ruins of Ahn'Qiraj")
 local BC = AceLibrary("Babble-Class-2.2")
 
-module.revision = 30027
+module.revision = 30069
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"bigicon", "sacrifice", "bosskill"}
 
@@ -16,6 +16,7 @@ L:RegisterTranslations("enUS", function() return {
 	bigicon_cmd = "bigicons",
 	bigicon_name = "击杀幼虫时显示图标警报",
 	bigicon_desc = "当幼虫产生时显示大图标警告",
+	
 	
 	sacrificeother_trigger = "(.*) is afflicted by Paralyze.",
 	sacrificeyou_trigger = "(.*) are afflicted by Paralyze.",
@@ -31,38 +32,7 @@ L:RegisterTranslations("enUS", function() return {
 	larvaname = "Hive'Zara Larva",	
 } end )
 
-L:RegisterTranslations("enES", function() return {
-	cmd = "Buru",
-
-	watch_cmd = "watch",
-	watch_name = "Watched Alert",
-	watch_desc = "Warns for who is being watched",
-	
-	dismember_cmd = "dismember",
-	dismember_name = "Dismember Alert",
-	dismember_desc = "Warns for Dismember",
-	
-	phase_cmd = "phase",
-	phase_name = "Phase Alert",
-	phase_desc = "Warns for Phases",
-	
-	trigger_watch = "sets eyes on (.+)!",--CHAT_MSG_MONSTER_EMOTE
-	msg_watch = " is being watched!",
-	trigger_watchEnd = "Buru Egg's Explosion hits Buru the Gorger for",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	msg_watchEnd = "Buru stopped following you.",
-	
-	trigger_dismemberYouOne = "You are afflicted by Dismember.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-		trigger_dismemberYouMore = "You are afflicted by Dismember %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_dismemberOtherOne = "(.+) is afflicted by Dismember.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-		trigger_dismemberOtherMore = "(.+) is afflicted by Dismember %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	bar_dismember = " Dismember",
-	
-	msg_phase2 = "Phase2, DPS Buru!",
-} end )
-
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	cmd = "Ayamiss",
 
 	sacrifice_cmd = "sacrifice",
@@ -72,6 +42,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bigicon_cmd = "bigicons",
 	bigicon_name = "击杀幼虫时显示图标警报",
 	bigicon_desc = "当幼虫产生时显示大图标警告",
+	
 	
 	sacrificeother_trigger = "(.*) is afflicted by Paralyze.",
 	sacrificeyou_trigger = "(.*) are afflicted by Paralyze.",
@@ -136,10 +107,11 @@ end
 function module:UNIT_HEALTH(arg1)
 	if UnitName(arg1) == module.translatedName then
 		local health = UnitHealth(arg1)
-		if health > 65 and health <= 70 and not p2 then
+		local maxHealth = UnitHealthMax(arg1)
+		if math.ceil(100*health/maxHealth) > 65 and math.ceil(100*health/maxHealth) <= 70 and not p2 then
 			self:Sync(syncName.p2)
 			p2 = true
-		elseif health > 70 and p2 then
+		elseif math.ceil(100*health/maxHealth) > 70 and p2 then
 			p2 = nil
 		end
 	end

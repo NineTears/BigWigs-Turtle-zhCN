@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Venom Stalker", "Naxxramas")
+local bbvenomstalker = AceLibrary("Babble-Boss-2.2")["Venom Stalker"]
+local bbnecrostalker = AceLibrary("Babble-Boss-2.2")["Necro Stalker"]
 
 module.revision = 20048
 module.enabletrigger = {"Venom Stalker", "Necro Stalker"}
@@ -16,12 +18,10 @@ L:RegisterTranslations("enUS", function() return {
     charge_trigger = "is afflicted by Poison Charge",
     chargeself_trigger = "You are afflicted by Poison Charge",
     chargegone_self = "Poison Charge fades from you",
-    charge_bar = "毒性充能冷却",
+    charge_bar = "毒性充能 CD",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "SpiderTrash",
 
     charge_cmd = "charge",
@@ -31,7 +31,7 @@ L:RegisterTranslations("zhCN", function() return {
     charge_trigger = "is afflicted by Poison Charge",
     chargeself_trigger = "You are afflicted by Poison Charge",
     chargegone_self = "Poison Charge fades from you",
-    charge_bar = "毒性充能冷却",
+    charge_bar = "毒性充能 CD",
 } end )
 
 local timer = {
@@ -75,8 +75,8 @@ function module:CHAT_MSG_SPELL_AURA_GONE_SELF(msg)
 end
 		
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if msg == string.format(UNITDIESOTHER, "Venom Stalker") or
-	msg == string.format(UNITDIESOTHER, "Necro Stalker") then
+	if msg == string.format(UNITDIESOTHER, bbvenomstalker) or
+	msg == string.format(UNITDIESOTHER, bbnecrostalker) then
 		deathCount = deathCount + 1
 		if deathCount == 2 then
 			self:SendBossDeathSync()

@@ -1,7 +1,11 @@
 
 local module, L = BigWigs:ModuleDeclaration("Anubisath Warder", "Ahn'Qiraj")
+local bsfear = AceLibrary("Babble-Spell-2.2")["Fear"]
+local bssilence = AceLibrary("Babble-Spell-2.2")["Silence"]
+local bsroots = AceLibrary("Babble-Spell-2.2")["Roots"]
+local bsdust = AceLibrary("Babble-Spell-2.2")["Dust"]
 
-module.revision = 20044
+module.revision = 30067
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"fear", "silence", "roots", "dust", "warnings"}
 module.trashMod = true
@@ -10,122 +14,119 @@ L:RegisterTranslations("enUS", function() return {
     cmd = "Warder",
 
     fear_cmd = "fear",
-    fear_name = "恐惧计时器",
-    fear_desc = "显示恐惧冷却时间",
+    fear_name = "恐惧警报",
+    fear_desc = "恐惧出现时进行警告",
 
     silence_cmd = "silence",
-    silence_name = "沉默计时器",
-    silence_desc = "显示沉默冷却时间",
+    silence_name = "沉默警报",
+    silence_desc = "沉默出现时进行警告",
 
     roots_cmd = "roots",
-    roots_name = "纠缠根须计时器",
-    roots_desc = "显示纠缠根须冷却时间",
+    roots_name = "缠绕根须警报",
+    roots_desc = "缠绕根须出现时进行警告",
 
     dust_cmd = "dust",
-    dust_name = "尘云计时器",
-    dust_desc = "显示尘云冷却时间",
+    dust_name = "尘雾之云警报",
+    dust_desc = "尘雾之云出现时进行警告",
 
     warnings_cmd = "warnings",
-    warnings_name = "警告消息",
-    warnings_desc = "显示当前怪物拥有的两种技能的警告消息",
+    warnings_name = "第二技能警告",
+    warnings_desc = "警告第二技能可能为何。",
 
-    fearTrigger = "Anubisath Warder begins to cast Fear.",
-    fearWarn = "恐惧",
-    fearWarn2 = "(沉默或尘云)",
-    fearBar = "恐惧！",
-    fearBar_next = "恐惧冷却",
+	
+    trigger_fear = "Anubisath Warder begins to cast Fear.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_fearCast = "恐惧！",
+    bar_fearCd = "恐惧 CD",
 
-    silenceTrigger = "Anubisath Warder begins to cast Silence.",
-    silenceWarn = "沉默",
-    silenceWarn2 = "(纠缠根须或恐惧)",
-    silenceBar = "沉默！",
-    silenceBar_next = "沉默冷却",
+    trigger_silence = "Anubisath Warder begins to cast Silence.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_silenceCast = "沉默！",
+    bar_silenceCd = "沉默 CD",
 
-    rootsTrigger = "Anubisath Warder begins to cast Entangling Roots.",
-    rootsWarn = "纠缠根须",
-    rootsWarn2 = "(沉默或尘云)",
-    rootsBar = "纠缠根须！",
-    rootsBar_next = "纠缠根须冷却",
+    trigger_roots = "Anubisath Warder begins to cast Entangling Roots.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_rootsCast = "缠绕根须！",
+    bar_rootsCd = "缠绕根须 CD",
 
-    dustTrigger = "Anubisath Warder begins to perform Dust Cloud.",
-    dustWarn = "尘云",
-    dustWarn2 = "(纠缠根须或恐惧)",
-    dustBar = "尘云！",
-    dustBar_next = "尘云冷却",
+    trigger_dust = "Anubisath Warder begins to perform Dust Cloud.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_dustCast = "尘雾之云！",
+    bar_dustCd = "尘雾之云 CD",
+    
+    msg_foundFear = "恐惧 - 下一个技能可能是沉默或尘雾之云", --can't be Roots
+    msg_foundSilence = "沉默 - 下一个技能可能是缠绕根须或恐惧", --can't be Dust
+    msg_foundRoots = "缠绕根须 - 下一个技能可能是沉默或尘雾之云", --can't be Fear
+    msg_foundDust = "尘雾之云 - 下一个技能可能是缠绕根须或恐惧", --can't be Silence
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Warder",
 
     fear_cmd = "fear",
-    fear_name = "恐惧计时器",
-    fear_desc = "显示恐惧冷却时间",
+    fear_name = "恐惧警报",
+    fear_desc = "恐惧出现时进行警告",
 
     silence_cmd = "silence",
-    silence_name = "沉默计时器",
-    silence_desc = "显示沉默冷却时间",
+    silence_name = "沉默警报",
+    silence_desc = "沉默出现时进行警告",
 
     roots_cmd = "roots",
-    roots_name = "纠缠根须计时器",
-    roots_desc = "显示纠缠根须冷却时间",
+    roots_name = "缠绕根须警报",
+    roots_desc = "缠绕根须出现时进行警告",
 
     dust_cmd = "dust",
-    dust_name = "尘云计时器",
-    dust_desc = "显示尘云冷却时间",
+    dust_name = "尘雾之云警报",
+    dust_desc = "尘雾之云出现时进行警告",
 
     warnings_cmd = "warnings",
-    warnings_name = "警告消息",
-    warnings_desc = "显示当前怪物拥有的两种技能的警告消息",
+    warnings_name = "第二技能警告",
+    warnings_desc = "警告第二技能可能为何。",
 
-    fearTrigger = "Anubisath Warder begins to cast Fear.",
-    fearWarn = "恐惧",
-    fearWarn2 = "(沉默或尘云)",
-    fearBar = "恐惧！",
-    fearBar_next = "恐惧冷却",
+	
+    trigger_fear = "Anubisath Warder begins to cast Fear.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_fearCast = "恐惧！",
+    bar_fearCd = "恐惧 CD",
 
-    silenceTrigger = "Anubisath Warder begins to cast Silence.",
-    silenceWarn = "沉默",
-    silenceWarn2 = "(纠缠根须或恐惧)",
-    silenceBar = "沉默！",
-    silenceBar_next = "沉默冷却",
+    trigger_silence = "Anubisath Warder begins to cast Silence.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_silenceCast = "沉默！",
+    bar_silenceCd = "沉默 CD",
 
-    rootsTrigger = "Anubisath Warder begins to cast Entangling Roots.",
-    rootsWarn = "纠缠根须",
-    rootsWarn2 = "(沉默或尘云)",
-    rootsBar = "纠缠根须！",
-    rootsBar_next = "纠缠根须冷却",
+    trigger_roots = "Anubisath Warder begins to cast Entangling Roots.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_rootsCast = "缠绕根须！",
+    bar_rootsCd = "缠绕根须 CD",
 
-    dustTrigger = "Anubisath Warder begins to perform Dust Cloud.",
-    dustWarn = "尘云",
-    dustWarn2 = "(纠缠根须或恐惧)",
-    dustBar = "尘云！",
-    dustBar_next = "尘云冷却",
+    trigger_dust = "Anubisath Warder begins to perform Dust Cloud.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_dustCast = "尘雾之云！",
+    bar_dustCd = "尘雾之云 CD",
+    
+    msg_foundFear = "恐惧 - 下一个技能可能是沉默或尘雾之云", --can't be Roots
+    msg_foundSilence = "沉默 - 下一个技能可能是缠绕根须或恐惧", --can't be Dust
+    msg_foundRoots = "缠绕根须 - 下一个技能可能是沉默或尘雾之云", --can't be Fear
+    msg_foundDust = "尘雾之云 - 下一个技能可能是缠绕根须或恐惧", --can't be Silence
 } end )
 
 local timer = {
-	earliestFear = 14,
-	latestFear = 19,
+	fearCd = {15,20}, --saw 15.4, 17.2, 20.5
 	fearCast = 1.5,
-	earliestSilence = 14,
-	latestSilence = 19,
+	
+	silenceCd = {11.5,27.2}, --saw 11.5, 27.2
 	silenceCast = 1.5,
-	earliestRoots = 7,
-	latestRoots = 14,
+	
+	rootsCd = {16,16},--saw 16
 	rootsCast = 1.5,
-	earliestDust = 14,
-	latestDust = 19,
+	
+	dustCd = {15,19}, --saw 16.8
 	dustCast = 1.5,
 }
-
 local icon = {
 	fear = "Spell_Shadow_Possession",
 	silence = "Spell_Holy_Silence",
 	roots = "Spell_Nature_StrangleVines",
 	dust = "Ability_Hibernation",
 }
-
+local color = {
+	fear = "Blue",
+	silence = "Red",
+	roots = "Green",
+	dust = "White",
+}
 local syncName = {
 	fear = "WarderFear"..module.revision,
 	silence = "WarderSilence"..module.revision,
@@ -133,88 +134,112 @@ local syncName = {
 	dust = "WarderDust"..module.revision,
 }
 
-local pull = nil
+local firstAbilityFound = nil
 
 function module:OnEnable()
+	--self:RegisterEvent("CHAT_MSG_SAY", "Event") --debug
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE", "Event")
 
-	if not warnings then
-		warnings = {
-			["dust"] = {L["dustWarn"], L["dustWarn2"]},
-			["roots"] = {L["rootsWarn"], L["rootsWarn2"]},
-			["fear"] = {L["fearWarn"], L["fearWarn2"]},
-			["silence"] = {L["silenceWarn"], L["silenceWarn2"]},
-		}
-	end
-
-	self:ThrottleSync(6, syncName.fear)
-	self:ThrottleSync(6, syncName.silence)
+	self:ThrottleSync(3, syncName.fear)
+	self:ThrottleSync(3, syncName.silence)
 	self:ThrottleSync(3, syncName.roots)
+	self:ThrottleSync(3, syncName.dust)
 end
 
 function module:OnSetup()
 end
 
 function module:OnEngage()
-	self.ability1 = nil
-	self.ability2 = nil
+	 firstAbilityFound = nil
 end
 
 function module:OnDisengage()
 end
 
 function module:Event(msg)
-	if string.find(msg, L["fearTrigger"]) then
+	if msg == L["trigger_fear"] then
 		self:Sync(syncName.fear)
-	elseif string.find(msg, L["silenceTrigger"]) then
+	
+	elseif msg == L["trigger_silence"] then
 		self:Sync(syncName.silence)
-	elseif string.find(msg, L["rootsTrigger"]) then
+	
+	elseif msg == L["trigger_roots"] then
 		self:Sync(syncName.roots)
-	elseif string.find(msg, L["dustTrigger"]) then
+	
+	elseif msg == L["trigger_dust"] then
 		self:Sync(syncName.dust)
 	end
 end
 
+
 function module:BigWigs_RecvSync( sync, rest, nick )
-	if sync == syncName.fear then
-		if self.db.profile.fear then
-			self:RemoveBar(L["fearBar_next"])
-			self:Bar(L["fearBar"], timer.fearCast, icon.fear, true, "blue")
-			self:DelayedIntervalBar(timer.fearCast, L["fearBar_next"], timer.earliestFear-timer.fearCast, timer.latestFear-timer.fearCast, icon.fear, true, "blue")
-		end
-		self:AbilityWarn("fear")
-	elseif sync == syncName.silence then
-		if self.db.profile.silence then
-			self:RemoveBar(L["silenceBar_next"])
-			self:Bar(L["silenceBar"], timer.silenceCast, icon.silence, true, "red")
-			self:DelayedIntervalBar(timer.silenceCast, L["silenceBar_next"], timer.earliestSilence-timer.silenceCast, timer.latestSilence-timer.silenceCast, icon.silence, true, "red")
-		end
-		self:AbilityWarn("silence")
-	elseif sync == syncName.roots then
-		if self.db.profile.roots then
-			self:RemoveBar(L["rootsBar_next"])
-			self:Bar(L["rootsBar"], timer.rootsCast, icon.roots, true, "Green")
-			self:DelayedIntervalBar(timer.rootsCast, L["rootsBar_next"], timer.earliestRoots-timer.rootsCast, timer.latestRoots-timer.rootsCast, icon.roots, true, "Green")
-		end
-		self:AbilityWarn("roots")
-	elseif sync == syncName.dust then
-		if self.db.profile.dust then
-			self:RemoveBar(L["dustBar_next"])
-			self:Bar(L["dustBar"], timer.dustCast, icon.dust, true, "White")
-			self:DelayedIntervalBar(timer.dustCast, L["dustBar_next"], timer.earliestDust-timer.dustCast, timer.latestDust-timer.dustCast, icon.dust, true, "White")
-		end
-		self:AbilityWarn("dust")
+	if sync == syncName.fear and self.db.profile.fear then
+		self:Fear()
+	elseif sync == syncName.silence and self.db.profile.silence then
+		self:Silence()
+	elseif sync == syncName.roots and self.db.profile.roots then
+		self:Roots()
+	elseif sync == syncName.dust and self.db.profile.dust then
+		self:Dust()
 	end
 end
 
-function module:AbilityWarn( ability )
-	if self.db.profile.warnings then
-		if not self.ability1 then
-			self.ability1 = ability
-			self:Message(string.format("%s + %s",warnings[self.ability1][1], warnings[self.ability1][2]), "Core", nil, "Long")
-		elseif not self.ability2 and ability ~= self.ability1 then
-			self.ability2 = ability
-			self:Message(string.format("%s + %s",warnings[self.ability1][1], warnings[self.ability2][1]), "Core", nil, "Long")
-		end
+
+function module:Fear()
+	self:RemoveBar(L["bar_fearCd"])
+	
+	self:Bar(L["bar_fearCast"], timer.fearCast, icon.fear, true, color.fear)
+	self:DelayedIntervalBar(timer.fearCast, L["bar_fearCd"], timer.fearCd[1] - timer.fearCast, timer.fearCd[2] - timer.fearCast, icon.fear, true, color.fear)
+	
+	if firstAbilityFound == nil and self.db.profile.warnings then
+		self:AbilityWarn(bsfear)
+	end
+end
+
+function module:Silence()
+	self:RemoveBar(L["bar_silenceCd"])
+	
+	self:Bar(L["bar_silenceCast"], timer.silenceCast, icon.silence, true, color.silence)
+	self:DelayedIntervalBar(timer.silenceCast, L["bar_silenceCd"], timer.silenceCd[1] - timer.silenceCast, timer.silenceCd[2] - timer.silenceCast, icon.silence, true, color.silence)
+	
+	if firstAbilityFound == nil and self.db.profile.warnings then
+		self:AbilityWarn(bssilence)
+	end
+end
+
+function module:Roots()
+	self:RemoveBar(L["bar_rootsCd"])
+	
+	self:Bar(L["bar_rootsCast"], timer.rootsCast, icon.roots, true, color.roots)
+	self:DelayedIntervalBar(timer.rootsCast, L["bar_rootsCd"], timer.rootsCd[1] - timer.rootsCast, timer.rootsCd[2] - timer.rootsCast, icon.roots, true, color.roots)
+	
+	if firstAbilityFound == nil and self.db.profile.warnings then
+		self:AbilityWarn(bsroots)
+	end
+end
+
+function module:Dust()
+	self:RemoveBar(L["bar_dustCd"])
+	
+	self:Bar(L["bar_dustCast"], timer.dustCast, icon.dust, true, color.dust)
+	self:DelayedIntervalBar(timer.dustCast, L["bar_dustCd"], timer.dustCd[1] - timer.dustCast, timer.dustCd[2] - timer.dustCast, icon.dust, true, color.dust)
+	
+	if firstAbilityFound == nil and self.db.profile.warnings then
+		self:AbilityWarn(bsdust)
+	end
+end
+
+
+function module:AbilityWarn(ability)
+	firstAbilityFound = true
+	if ability == bsfear then
+		self:Message(L["msg_foundFear"], Important, false, nil, false)
+	elseif ability == bssilence then
+		self:Message(L["msg_foundSilence"], Important, false, nil, false)
+	elseif ability == bsroots then
+		self:Message(L["msg_foundRoots"], Important, false, nil, false)
+	elseif ability == bsdust then
+		self:Message(L["msg_foundDust"], Important, false, nil, false)
 	end
 end

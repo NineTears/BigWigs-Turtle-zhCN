@@ -3,12 +3,11 @@
 
 local module, L = BigWigs:ModuleDeclaration("Kel'Thuzad", "Naxxramas")
 local BC = AceLibrary("Babble-Class-2.2")
-local bzkelthuzadchamber = AceLibrary("Babble-Zone-2.2")["Kel'Thuzad Chamber"]
 local bbkelthuzad = AceLibrary("Babble-Boss-2.2")["Kel'Thuzad"]
 local bbunstoppableabomination = AceLibrary("Babble-Boss-2.2")["Unstoppable Abomination"]
 local bbsoulweaver = AceLibrary("Babble-Boss-2.2")["Soul Weaver"]
 
-module.revision = 30065
+module.revision = 30067
 module.enabletrigger = module.translatedName
 module.toggleoptions = {
 	"phase",
@@ -378,12 +377,10 @@ local timer = {
 }
 local icon = {
 	phase = "Spell_Shadow_Raisedead",
-	
-	
+		
 	abomination = "Spell_Shadow_CallOfBone",
 	soulWeaver = "Spell_Shadow_Possession",
-	
-	
+		
 	mc = "Inv_Belt_18",
 	fissure = "spell_shadow_creepingplague",
 	frostBlast = "Spell_Frost_FreezingBreath",
@@ -674,11 +671,14 @@ function module:OnDisengage()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= bzkelthuzadchamber or self.core:IsModuleActive(module.translatedName) then
-		return
+	if GetMinimapZoneText() == "Sapphiron's Lair" and self.core:IsModuleActive(module.translatedName) then
+		self.core:DisableModule(module.translatedName)
+	elseif GetMinimapZoneText() == "Plaguewood" and self.core:IsModuleActive(module.translatedName) then
+		self.core:DisableModule(module.translatedName)
+	
+	elseif GetMinimapZoneText() == "Kel'Thuzad Chamber" and not self.core:IsModuleActive(module.translatedName) then
+		self.core:EnableModule(module.translatedName)
 	end
-
-	self.core:EnableModule(module.translatedName)
 end
 
 function module:UNIT_HEALTH(msg)
@@ -1115,7 +1115,7 @@ function module:Detonate(rest)
 	self:RemoveBar(L["bar_detonateCd"])
 	
 	if rest == UnitName("Player") then
-		SendChatMessage("Detonate on "..UnitName("Player").."!","YELL")
+		SendChatMessage("引爆在 "..UnitName("Player").."!","YELL")
 	end
 	
 	if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.detonateicon then

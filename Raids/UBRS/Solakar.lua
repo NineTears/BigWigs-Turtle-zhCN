@@ -44,12 +44,9 @@ L:RegisterTranslations("enUS", function() return {
 
     trigger_bossSpawn = "I am here! Now, puny little worms, you will pay for your intrusion!",--CHAT_MSG_MONSTER_YELL
     msg_bossSpawn = "索拉卡·火冠出现了！",
-    therookery = "The Rookery",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Solakar",
 
     waves_cmd = "waves",
@@ -82,7 +79,6 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_bossSpawn = "I am here! Now, puny little worms, you will pay for your intrusion!",--CHAT_MSG_MONSTER_YELL
     msg_bossSpawn = "索拉卡·火冠出现了！",
-    therookery = "孵化间",
 } end )
 
 local timer = {
@@ -154,7 +150,7 @@ function module:OnRegister()
 	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
 end
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= therookery or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= "The Rookery" or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 

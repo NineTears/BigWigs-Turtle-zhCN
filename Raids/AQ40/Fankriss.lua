@@ -1,84 +1,51 @@
 
 local module, L = BigWigs:ModuleDeclaration("Fankriss the Unyielding", "Ahn'Qiraj")
 
-module.revision = 30020
+module.revision = 30067
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"wound", "entangle", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Fankriss",
-    
-    wound_cmd = "wound",
+	cmd = "Fankriss",
+	
+	wound_cmd = "wound",
     wound_name = "重伤堆叠5层警报",
     wound_desc = "当重伤达到5层时进行警报",
     
     entangle_cmd = "entangle",
     entangle_name = "纠缠警报",
     entangle_desc = "纠缠出现时进行警告",
-    
-    trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	
+	trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_entangle = " 纠缠持续",
-    
-    trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	
+	trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_wound = " 重伤持续",
 } end )
 
-L:RegisterTranslations("esES", function() return {
-	--cmd = "Fankriss",
-	--worm_cmd = "worm",
-	worm_name = "Alerta de Gusano",
-	worm_desc = "Avisa para Gusanos entrantes",
-
-	wormtrigger = "Fankriss el Implacable lanza Invocar gusano.",
-	wormwarn = "¡Gusano entrante! (%d)",
-	wormbar = "Gusano de arena enfurecido (%d)",
-
-	--entangle_cmd = "entangle",
-	entangle_name = "Alerta de Enredar",
-	entangle_desc = "Avisa para Enredar y insectos entrantes",
-	entangleplayer = "Sufres de Enredar.",
-	entangleplayerother = "(.*) sufre de Enredar.",
-	entanglewarn = "¡Enredado!",
-} end )
-
-L:RegisterTranslations("deDE", function() return {
-	worm_name = "Wurm beschw\195\182ren",
-	worm_desc = "Warnung, wenn Fankriss einen Wurm beschw\195\182rt.",
-
-	wormtrigger = "Fankriss der Unnachgiebige wirkt Wurm beschw\195\182ren.",
-	wormwarn = "Wurm wurde beschworen! (%d)",
-	wormbar = "Wurm ist w\195\188tend (%d)",
-
-	entangle_name = "Umschlingen Warnung",
-	entangle_desc = "Warnt vor Umschlingen und den Käfern",
-	entangleplayer = "Ihr seid von Umschlingen betroffen.",
-	entangleplayerother = "(.*) ist von Umschlingen betroffen.",
-	entanglewarn = "Umschlingen!",
-} end )
-
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-    cmd = "Fankriss",
-    
-    wound_cmd = "wound",
+	cmd = "Fankriss",
+	
+	wound_cmd = "wound",
     wound_name = "重伤堆叠5层警报",
     wound_desc = "当重伤达到5层时进行警报",
     
     entangle_cmd = "entangle",
     entangle_name = "纠缠警报",
     entangle_desc = "纠缠出现时进行警告",
-    
-    trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	
+	trigger_entangleYou = "You are afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_entangleOther = "(.+) is afflicted by Entangle.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_entangleFade = "Entangle fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_entangle = " 纠缠持续",
-    
-    trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%)",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	
+	trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_wound = " 重伤持续",
 } end )
 
@@ -100,10 +67,9 @@ local syncName = {
 	wound = "FankrissWound"..module.revision,
 }
 
-local _, playerClass = UnitClass("player")
-
 function module:OnEnable()
 	--self:RegisterEvent("CHAT_MSG_SAY", "Event")--Debug
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Event")--trigger_entangleYou, trigger_woundYou
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", "Event")--trigger_entangleOther, trigger_woundOther
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", "Event")--trigger_entangleOther, trigger_woundOther
@@ -149,7 +115,6 @@ function module:Event(msg)
 		local _,_,woundPlayer,woundQty = string.find(msg, L["trigger_woundOther"])
 		local woundPlayerAndWoundQty = woundPlayer .. " " .. woundQty
 		self:Sync(syncName.wound.." "..woundPlayerAndWoundQty)
-
 	end
 end
 

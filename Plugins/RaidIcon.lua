@@ -113,8 +113,6 @@ L:RegisterTranslations("koKR", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	["Raid Icons"] = "团队标志",
 
 	["Place"] = "标记",

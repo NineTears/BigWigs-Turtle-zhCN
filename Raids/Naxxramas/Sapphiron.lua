@@ -1,11 +1,9 @@
 
 local module, L = BigWigs:ModuleDeclaration("Sapphiron", "Naxxramas")
 local BC = AceLibrary("Babble-Class-2.2")
-local bzsapphironslair = AceLibrary("Babble-Zone-2.2")["Sapphiron's Lair"]
-local bzkelthuzadchamber = AceLibrary("Babble-Zone-2.2")["Kel'Thuzad Chamber"]
 local bbsapphiron = AceLibrary("Babble-Boss-2.2")["Sapphiron"]
 
-module.revision = 30058
+module.revision = 30071
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"frostbreath", "lifedrain", "block", "enrage", "blizzard", "tailsweep", "phase", -1, "proximity", -1, "parry", "bosskill"}
 
@@ -19,11 +17,11 @@ L:RegisterTranslations("enUS", function() return {
     lifedrain_cmd = "lifedrain",
     lifedrain_name = "生命吸取警报",
     lifedrain_desc = "生命吸取诅咒出现时进行警告",
-
+	
     block_cmd = "block",
     block_name = "冰块警报",
     block_desc = "冰块出现时进行警告",
-
+	
     enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒状态出现时进行警告",
@@ -31,67 +29,68 @@ L:RegisterTranslations("enUS", function() return {
     blizzard_cmd = "blizzard",
     blizzard_name = "暴风雪警报",
     blizzard_desc = "暴风雪出现时进行警告",
-
+	
     tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
     tailsweep_desc = "龙尾扫击出现时进行警告",
-
+	
     phase_cmd = "phase",
     phase_name = "阶段转换警报",
     phase_desc = "警告地面/空中阶段",
-
+	
     proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
-
+	
     parry_cmd = "parry",
     parry_name = "招架警报",
     parry_desc = "招架出现时进行警告",
 	
 	
-    trigger_frostBreath = "begins to cast Frost Breath.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_frostBreath = "begins to cast Frost Breath.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostBreath = "冰霜吐息爆炸！",
     msg_frostBreath = "即将遭受冰霜炸弹 - 躲避！",
 	
-    trigger_lifeDrain = "afflicted by Life Drain", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_lifeDrainResist = "Life Drain was resisted by", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_lifeDrain = "afflicted by Life Drain", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_lifeDrainResist = "Life Drain was resisted by", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     msg_lifeDrain = "生命吸取，快驱散！",
     bar_lifeDrain = "生命吸取",
-
-    trigger_iceboltYou = "You are afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_iceboltOther = "(.+) is afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	
+	trigger_iceboltYou = "You are afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_iceboltOther = "(.+) is afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     msg_iceBlock = "冰冻术在 ",
-
-    --unused
-    trigger_iceboltFade = "Icebolt fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-
-    trigger_iceboltHits = "Icebolt hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_iceBlock1 = "冰块 1",
+	
+		--unused
+	trigger_iceboltFade = "Icebolt fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_iceboltHits = "Icebolt hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    --bar_iceBlock1 = "冰块 1",
     bar_iceBlock2 = "冰块 2",
     bar_iceBlock3 = "冰块 3",
     bar_iceBlock4 = "冰块 4",
     bar_iceBlock5 = "冰块 5",
-
-    trigger_enrage = "Sapphiron gains Enrage", --to be confirmed
+	
+	trigger_enrage = "Sapphiron gains Enrage", --to be confirmed
     bar_enrage = "激怒",
     msg_enrage60 = "距离激怒还有60秒！",
     msg_enrage10 = "距离激怒还有10秒！",
 	
 	
-    trigger_blizzardYou = "You are afflicted by Chill.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_blizzardYouFade = "Chill fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-
-    trigger_tailSweepYou = "Sapphiron's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_blizzardYou = "You are afflicted by Chill.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_blizzardYouFade = "Chill fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	trigger_tailSweepYou = "Sapphiron's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_tailSweep = "尾部横扫在首领后方30码内造成伤害。",
-
-    bar_timeToAirPhase = "下一次空中阶段",
-    msg_airPhase = "空中阶段 - 分散！",
-    bar_timeToGroundPhase = "下一次地面阶段",
+	
+    bar_timeToAirPhase = "下一空中阶段 CD",
+    --msg_airPhase = "空中阶段 - 分散！",
+    msg_airPhaseSoon = "空中阶段即将来临 - 准备分散！",
+    bar_timeToGroundPhase = "下一地面阶段",
     msg_groundPhase = "地面阶段！",
-
+	
     msg_lowHp = "萨菲隆血量低于10% - 不再有空中阶段！",
-
-    trigger_parryYou = "You attack. Sapphiron parries.",
+	
+	trigger_parryYou = "You attack. Sapphiron parries.",
     msg_parryYou = "你的攻击被萨菲隆招架了 - 别再打坦克了，笨蛋！",
 } end )
 
@@ -105,11 +104,11 @@ L:RegisterTranslations("zhCN", function() return {
     lifedrain_cmd = "lifedrain",
     lifedrain_name = "生命吸取警报",
     lifedrain_desc = "生命吸取诅咒出现时进行警告",
-
+	
     block_cmd = "block",
     block_name = "冰块警报",
     block_desc = "冰块出现时进行警告",
-
+	
     enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒状态出现时进行警告",
@@ -117,67 +116,68 @@ L:RegisterTranslations("zhCN", function() return {
     blizzard_cmd = "blizzard",
     blizzard_name = "暴风雪警报",
     blizzard_desc = "暴风雪出现时进行警告",
-
+	
     tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
     tailsweep_desc = "龙尾扫击出现时进行警告",
-
+	
     phase_cmd = "phase",
     phase_name = "阶段转换警报",
     phase_desc = "警告地面/空中阶段",
-
+	
     proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
-
+	
     parry_cmd = "parry",
     parry_name = "招架警报",
     parry_desc = "招架出现时进行警告",
 	
 	
-    trigger_frostBreath = "begins to cast Frost Breath.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_frostBreath = "begins to cast Frost Breath.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostBreath = "冰霜吐息爆炸！",
     msg_frostBreath = "即将遭受冰霜炸弹 - 躲避！",
 	
-    trigger_lifeDrain = "afflicted by Life Drain", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_lifeDrainResist = "Life Drain was resisted by", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_lifeDrain = "afflicted by Life Drain", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_lifeDrainResist = "Life Drain was resisted by", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     msg_lifeDrain = "生命吸取，快驱散！",
     bar_lifeDrain = "生命吸取",
-
-    trigger_iceboltYou = "You are afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_iceboltOther = "(.+) is afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	
+	trigger_iceboltYou = "You are afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_iceboltOther = "(.+) is afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     msg_iceBlock = "冰冻术在 ",
-
-    --unused
-    trigger_iceboltFade = "Icebolt fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-
-    trigger_iceboltHits = "Icebolt hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_iceBlock1 = "冰块 1",
+	
+		--unused
+	trigger_iceboltFade = "Icebolt fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_iceboltHits = "Icebolt hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    --bar_iceBlock1 = "冰块 1",
     bar_iceBlock2 = "冰块 2",
     bar_iceBlock3 = "冰块 3",
     bar_iceBlock4 = "冰块 4",
     bar_iceBlock5 = "冰块 5",
-
-    trigger_enrage = "Sapphiron gains Enrage", --to be confirmed
+	
+	trigger_enrage = "Sapphiron gains Enrage", --to be confirmed
     bar_enrage = "激怒",
     msg_enrage60 = "距离激怒还有60秒！",
     msg_enrage10 = "距离激怒还有10秒！",
 	
 	
-    trigger_blizzardYou = "You are afflicted by Chill.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_blizzardYouFade = "Chill fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-
-    trigger_tailSweepYou = "Sapphiron's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_blizzardYou = "You are afflicted by Chill.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_blizzardYouFade = "Chill fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	trigger_tailSweepYou = "Sapphiron's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_tailSweep = "尾部横扫在首领后方30码内造成伤害。",
-
-    bar_timeToAirPhase = "下一次空中阶段",
-    msg_airPhase = "空中阶段 - 分散！",
-    bar_timeToGroundPhase = "下一次地面阶段",
+	
+    bar_timeToAirPhase = "下一空中阶段 CD",
+    --msg_airPhase = "空中阶段 - 分散！",
+    msg_airPhaseSoon = "空中阶段即将来临 - 准备分散！",
+    bar_timeToGroundPhase = "下一地面阶段",
     msg_groundPhase = "地面阶段！",
-
+	
     msg_lowHp = "萨菲隆血量低于10% - 不再有空中阶段！",
-
-    trigger_parryYou = "You attack. Sapphiron parries.",
+	
+	trigger_parryYou = "You attack. Sapphiron parries.",
     msg_parryYou = "你的攻击被萨菲隆招架了 - 别再打坦克了，笨蛋！",
 } end )
 
@@ -223,9 +223,10 @@ local syncName = {
 	iceBlock = "SapphironIceBlock"..module.revision,
 	enrage = "SapphironEnrage"..module.revision,
 	groundPhase = "SapphironGroundPhase"..module.revision,
-	airPhase = "SapphironAirPhase"..module.revision,
+	--airPhase = "SapphironAirPhase"..module.revision,
 	iceboltHits = "SapphironIceboltHits"..module.revision,
 	lowHp = "SapphironLowHp"..module.revision,
+	enableProximity = "SapphironEnableProximity"..module.revision,
 }
 
 local lastLifeDrainTime = nil
@@ -267,9 +268,10 @@ function module:OnEnable()
 	self:ThrottleSync(3, syncName.iceBlock)
 	self:ThrottleSync(3, syncName.enrage)
 	self:ThrottleSync(3, syncName.groundPhase)
-	self:ThrottleSync(3, syncName.airPhase)
+	--self:ThrottleSync(3, syncName.airPhase)
 	self:ThrottleSync(30, syncName.iceboltHits)
 	self:ThrottleSync(10, syncName.lowHp)
+	self:ThrottleSync(10, syncName.enableProximity)
 end
 
 function module:OnSetup()
@@ -296,32 +298,35 @@ function module:OnEngage()
 	
 	if self.db.profile.phase then
 		self:Bar(L["bar_timeToAirPhase"], timer.firstGroundPhase, icon.phase, true, color.phase)
+		self:DelayedMessage(timer.firstGroundPhase, L["msg_airPhaseSoon"], "Important", false, nil, false)
 	end
 	
-	self:DelayedSync(timer.firstGroundPhase, syncName.airPhase)	
+	self:DelayedSync(timer.firstGroundPhase, syncName.enableProximity)
 end
 
 function module:OnDisengage()
+	self:CancelDelayedSync(syncName.enableProximity)
+	self:CancelDelayedSync(syncName.groundPhase)
 	self:RemoveProximity()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= bzsapphironslair or self.core:IsModuleActive(module.translatedName) then
-		return
-	elseif GetMinimapZoneText() == bzkelthuzadchamber and self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() == "Kel'Thuzad Chamber" and self.core:IsModuleActive(module.translatedName) then
 		self.core:DisableModule(module.translatedName)
-		return
-	elseif GetMinimapZoneText() == bzsapphironslair then
+	elseif GetMinimapZoneText() == "Plaguewood" and self.core:IsModuleActive(module.translatedName) then
+		self.core:DisableModule(module.translatedName)
+	
+	elseif GetMinimapZoneText() == "Sapphiron's Lair" and not self.core:IsModuleActive(module.translatedName) then
 		self.core:EnableModule(module.translatedName)
 	end
 end
 
 function module:UNIT_HEALTH(msg)
 	if UnitName(msg) == module.translatedName then
-		local health = UnitHealth(msg)
-		if health >= 10 and lowHp ~= nil then
+		local healthPct = UnitHealth(msg) * 100 / UnitHealthMax(msg)
+		if healthPct >= 10 and lowHp ~= nil then
 			lowHp = nil
-		elseif health < 10 and lowHp == nil then
+		elseif healthPct < 10 and lowHp == nil then
 			self:Sync(syncName.lowHp)
 		end
 	end
@@ -339,7 +344,7 @@ function module:Event(msg)
 		self:Sync(syncName.iceboltHits)
 	
 	elseif msg == L["trigger_iceboltYou"] then
-		self:Sync(syncName.iceBlock.." "..UnitName("player"))
+		self:Sync(syncName.iceBlock.." "..UnitName("Player"))
 	
 	elseif string.find(msg, L["trigger_iceboltOther"]) then
 		local _,_, iceBlockPerson, _ = string.find(msg, L["trigger_iceboltOther"])
@@ -374,10 +379,12 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 		self:IceBlock(rest)
 	elseif sync == syncName.groundPhase then
 		self:GroundPhase()
-	elseif sync == syncName.airPhase then
-		self:AirPhase()
+	--elseif sync == syncName.airPhase then
+	--	self:AirPhase()
 	elseif sync == syncName.lowHp and lowHp == nil then
 		self:LowHp()
+	elseif sync == syncName.enableProximity and self.db.profile.proximity then
+		self:EnableProximity()
 	end
 end
 
@@ -385,7 +392,7 @@ end
 function module:FrostBreath()
 	self:RemoveBar(L["bar_timeToGroundPhase"])
 	
-	self:RemoveBar(L["bar_iceBlock1"])
+	--self:RemoveBar(L["bar_iceBlock1"])
 	self:RemoveBar(L["bar_iceBlock2"])
 	self:RemoveBar(L["bar_iceBlock3"])
 	self:RemoveBar(L["bar_iceBlock4"])
@@ -430,7 +437,7 @@ function module:IceBlock(rest)
 	end
 	
 	if rest == UnitName("Player") then
-		SendChatMessage("Ice Block on "..UnitName("Player").."!","YELL")
+		SendChatMessage("寒冰屏障在 "..UnitName("Player").."!","YELL")
 	end
 end
 
@@ -441,11 +448,17 @@ function module:Enrage()
 end
 
 function module:IceboltHits()
+	if phase == "ground" then
+		--self:Sync(syncName.airPhase)
+		phase = "air"
+		airPhaseTime = GetTime() - 7
+	end
+	
 	self:RemoveBar(L["bar_timeToGroundPhase"])
 	self:RemoveBar(L["bar_lifeDrain"])
 	self:RemoveBar(L["bar_timeToAirPhase"])
 	
-	self:RemoveBar(L["bar_iceBlock1"])
+	--self:RemoveBar(L["bar_iceBlock1"])
 	
 	if self.db.profile.phase then
 		self:Bar(L["bar_timeToGroundPhase"], timer.airPhase - timer.iceBlock1, icon.phase, true, color.phase)
@@ -478,7 +491,7 @@ function module:GroundPhase()
 	
 	self:RemoveBar(L["bar_timeToGroundPhase"])
 	
-	self:RemoveBar(L["bar_iceBlock1"])
+	--self:RemoveBar(L["bar_iceBlock1"])
 	self:RemoveBar(L["bar_iceBlock2"])
 	self:RemoveBar(L["bar_iceBlock3"])
 	self:RemoveBar(L["bar_iceBlock4"])
@@ -512,35 +525,37 @@ function module:GroundPhase()
 	end
 end
 
-function module:AirPhase()
-	phase = "air"
-	
-	airPhaseTime = GetTime()
-	
-	self:RemoveBar(L["bar_lifeDrain"])
-	self:RemoveBar(L["bar_timeToAirPhase"])
-	self:CancelDelayedSync(syncName.airPhase)
-	
-	if self.db.profile.proximity then
-		self:Proximity()
-	end
-	
-	if self.db.profile.phase then
-		self:Bar(L["bar_timeToGroundPhase"], timer.airPhase, icon.phase, true, color.phase)
-		self:Message(L["msg_airPhase"], "Important", false, nil, false)
-	end
-	
-	if self.db.profile.block then
-		self:Bar(L["bar_iceBlock1"], timer.iceBlock1, icon.iceBlock, true, color.iceBlock)
-	end
+function module:EnableProximity()
+	self:Proximity()
 end
+
+--function module:AirPhase()
+	--phase = "air"
+	
+	--self:RemoveBar(L["bar_lifeDrain"])
+	--self:RemoveBar(L["bar_timeToAirPhase"])
+	--self:CancelDelayedSync(syncName.airPhase)
+	
+	--if self.db.profile.proximity then
+	--	self:Proximity()
+	--end
+	
+	--if self.db.profile.phase then
+		--self:Bar(L["bar_timeToGroundPhase"], timer.airPhase, icon.phase, true, color.phase)
+		--self:Message(L["msg_airPhase"], "Important", false, nil, false)
+	--end
+	
+	--if self.db.profile.block then
+	--	self:Bar(L["bar_iceBlock1"], timer.iceBlock1, icon.iceBlock, true, color.iceBlock)
+	--end
+--end
 
 function module:LowHp()
 	lowHp = true
 	
 	if phase == "ground" then
 		self:RemoveBar(L["bar_timeToAirPhase"])
-		self:CancelDelayedSync(syncName.airPhase)
+		--self:CancelDelayedSync(syncName.airPhase)
 	end
 	
 	self:Message(L["msg_lowHp"], "Important", false, nil, false)

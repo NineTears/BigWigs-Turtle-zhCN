@@ -1,6 +1,5 @@
 
 local module, L = BigWigs:ModuleDeclaration("Alterac Valley", "Alterac Valley")
-local bzalteracvalley = AceLibrary("Babble-Zone-2.2")["Alterac Valley"]
 local bbkorrakthebloodrager = AceLibrary("Babble-Boss-2.2")["Korrak the Bloodrager"]
 local bbdrekthar = AceLibrary("Babble-Boss-2.2")["Drek'Thar"]
 local bbvanndarstormpike = AceLibrary("Babble-Boss-2.2")["Vanndar Stormpike"]
@@ -269,7 +268,7 @@ end
 
 function module:ZONE_CHANGED_NEW_AREA(msg)
 	--if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("here") end
-	if GetZoneText() ~= bzalteracvalley or self.core:IsModuleActive(module.translatedName) then
+	if GetZoneText() ~= "Alterac Valley" or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 

@@ -1,368 +1,233 @@
 
-----------------------------------
---      Module Declaration      --
-----------------------------------
-
 local module, L = BigWigs:ModuleDeclaration("Battleguard Sartura", "Ahn'Qiraj")
 
-
-----------------------------
---      Localization      --
-----------------------------
+module.revision = 30068
+module.enabletrigger = module.translatedName
+module.wipemobs = {"Sartura's Royal Guard"}
+module.toggleoptions = {"whirlwind", "adds", "enrage", "berserk", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Sartura",
 
-    add_name = "Sartura's Royal Guard",
-    starttrigger = "defiling these sacred grounds",
-    endtrigger = "I serve to the last!",
-    startwarn = "萨尔图拉已激活 - 10分钟后狂暴！",
-    enragetrigger = "becomes enraged",
-    enragetrigger2 = "Battleguard Sartura gains Enrage.",
-    berserktrigger = "Battleguard Sartura gains Berserk.",
-    enragewarn = "激怒了！快治疗！",
-    berserkwarn = "狂暴！",
-    berserktext = "狂暴",
-    warn1 = "5分钟后狂暴！",
-    warn2 = "3分钟后狂暴！",
-    warn3 = "90秒后狂暴！",
-    warn4 = "60秒后狂暴！",
-    warn5 = "30秒后狂暴！",
-    warn6 = "10秒后狂暴！",
-    whirlwindon = "Battleguard Sartura gains Whirlwind.",
-    whirlwindoff = "Whirlwind fades from Battleguard Sartura.",
-    whirlwindonwarn = "旋风斩来了！",
-    whirlwindoffwarn = "旋风斩结束！",
-    whirlwindbartext = "旋风斩",
-    whirlwindnextbartext = "可能的旋风斩",
-    whirlwindfirstbartext = "首次旋风斩",
-    whirlwindinctext = "旋风斩即将到来！",
-    deadaddtrigger = "Sartura's Royal Guard dies.",
-    deadbosstrigger = "Battleguard Sartura dies.",
-    addmsg = "%d/3 沙尔图拉皇家卫士已死亡！",
-
     adds_cmd = "adds",
-    adds_name = "死亡的增援计数",
-    adds_desc = "通报沙尔图拉皇家卫士的死亡。",
-
-    enrage_cmd = "enrage",
-    enrage_name = "激怒",
-    enrage_desc = "在Boss血量降到20%时通报激怒。",
-
-    berserk_cmd = "berserk",
-    berserk_name = "狂暴",
-    berserk_desc = "Boss激活10分钟后通报狂暴。",
+    adds_name = "萨特拉的皇家卫兵死亡计数器",
+    adds_desc = "宣布萨特拉的皇家卫兵死亡。",
 
     whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩",
-    whirlwind_desc = "旋风斩的计时器和条。",
-} end )
+    whirlwind_desc = "旋风斩的计时器和计时条。",
 
-L:RegisterTranslations("esES", function() return {
-	--cmd = "Sartura",
+    enrage_cmd = "enrage",
+    enrage_name = "激怒",
+    enrage_desc = "在Boss血量为20%时警告激怒。",
 
-	add_name = "Guardia Real de Sartura",
-	starttrigger = "defiling these sacred grounds",
-	endtrigger = "I serve to the last!",
-	startwarn = "¡Entrando en combate con Sartura - 10 minutos hasta Rabia!",
-	enragetrigger = "becomes enraged",
-	enragetrigger2 = "Guardia de batalla Sartura gana Enfurecer.",
-	berserktrigger = "Guardia de batalla Sartura gana Rabia.",
-	enragewarn = "¡Enfurecer! Cúranse!",
-	berserkwarn = "¡Rabia!",
-	berserktext = "Rabia",
-	warn1 = "¡Rabia en 5 minutos!",
-	warn2 = "¡Rabia en 3 minutos!",
-	warn3 = "¡Rabia en 90 segundos!",
-	warn4 = "¡Rabia en 60 segundos!",
-	warn5 = "¡Rabia en 30 segundos!",
-	warn6 = "¡Rabia en 10 segundos!",
-	whirlwindon = "Guardia de batalla Sartura gana Torbellino.",
-	whirlwindoff = "Torbellino desaparece de Guardia de batalla Sartura.",
-	whirlwindonwarn = "¡Torbellino!",
-	whirlwindoffwarn = "¡Torbellino desaparece!",
-	whirlwindbartext = "Torbellino",
-	whirlwindnextbartext = "Torbellino Posible",
-	whirlwindfirstbartext = "Primer Torbellino",
-	whirlwindinctext = "¡Torbellino entrante!",
-	deadaddtrigger = "Guardia Real de Sartura muere.",
-	deadbosstrigger = "Guardia de batalla Sartura muere.",
-	addmsg = "¡%d/3 Guardia Real de Sartura muertas!",
+    berserk_cmd = "berserk",
+    berserk_name = "狂暴",
+    berserk_desc = "警告Boss在10分钟后获得的狂暴。",
 
-	--adds_cmd = "adds",
-	adds_name = "Contador de Guardias Reales muertas",
-	adds_desc = "Anuncia Guardias Reales de Sartura muertas.",
 
-	--enrage_cmd = "enrage",
-	enrage_name = "Enfurecer",
-	enrage_desc = "Anuncia Enfurecer cuando el jefe tenga 20% salud.",
+    trigger_engage = "You will be judged for defiling these sacred grounds! The laws of the Ancients will not be challenged! Trespassers will be annihilated!", --CHAT_MSG_MONSTER_YELL
+    trigger_bossDead = "I serve to the last!", --CHAT_MSG_MONSTER_YELL
 
-	--berserk_cmd = "berserk",
-	berserk_name = "Rabia",
-	berserk_desc = "Avisa para Rabia después de 10 minutos.",
+    trigger_addDead = "Sartura's Royal Guard dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH
+    msg_addDead = "%d/3 沙尔图拉皇家卫士死亡！",
 
-	--whirlwind_cmd = "whirlwind",
-	whirlwind_name = "Torbellino",
-	whirlwind_desc = "Temporizador y barras para Torbellino.",
-} end )
+    trigger_whirlwind = "Battleguard Sartura gains Whirlwind.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    bar_whirlwind = "旋风斩！",
+    msg_whirlwind = "旋风斩！",
+    bar_whirlwindCd = "旋风斩 CD",
 
-L:RegisterTranslations("deDE", function() return {
-	cmd = "Sartura",
+    trigger_whirlwindFade = "Whirlwind fades from Battleguard Sartura.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_whirlwindFade = "旋风斩结束！",
 
-	add_name = "Sarturas Königswache",
-	starttrigger = "defiling these sacred grounds", -- translation missing
-	endtrigger = "I serve to the last!", -- translation missing
-	startwarn = "Sartura angegriffen! Berserker in 10 Minuten!",
-	enragetrigger = "becomes enraged", -- translation missing
-	enragetrigger2 = "Schlachtwache Sartura bekommt 'Wutanfall'.",
-	berserktrigger = "Schlachtwache Sartura bekommt 'Berserker'.",
-	enragewarn = "Wutanfall! Spam heilung!",
-	berserkwarn = "Berserker!",
-	berserktext = "Berserker",
-	warn1 = "Berserker in 5 Minuten!",
-	warn2 = "Berserker in 3 Minuten!",
-	warn3 = "Berserker in 90 Sekunden!",
-	warn4 = "Berserker in 60 Sekunden!",
-	warn5 = "Berserker in 30 Sekunden!",
-	warn6 = "Berserker in 10 Sekunden!",
-	whirlwindon = "Schlachtwache Sartura bekommt 'Wirbelwind'.",
-	whirlwindoff = "Wirbelwind schwindet von Schlachtwache Sartura.",
-	whirlwindonwarn = "Wirbelwind!",
-	whirlwindoffwarn = "Wirbelwind ist zu Ende!",
-	whirlwindbartext = "Wirbelwind",
-	whirlwindnextbartext = "Möglicher Wirbelwind",
-	whirlwindfirstbartext = "Erster Wirbelwind",
-	whirlwindinctext = "Wirbelwind bald!",
-	deadaddtrigger = "Sarturas Königswache stirbt.",
-	deadbosstrigger = "Schlachtwache Sartura stirbt.",
-	addmsg = "%d/3 Sarturas Königswache tot!",
+    trigger_enrage = "Battleguard Sartura gains Enrage", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrage = "激怒 - 疯狂治疗！",
 
-	adds_cmd = "adds",
-	adds_name = "Z\195\164hler f\195\188r tote Adds",
-	adds_desc = "Verk\195\188ndet Sarturas Königswache Tod.",
-
-	enrage_cmd = "enrage",
-	enrage_name = "Wutanfall",
-	enrage_desc = "Meldet den Wutanfall, wenn der Boss bei 20% HP ist.",
-
-	berserk_cmd = "berserk",
-	berserk_name = "Berserker",
-	berserk_desc = "Warnt vor dem Berserkermodus, in den der Boss nach 10 Minuten geht.",
-
-	whirlwind_cmd = "whirlwind",
-	whirlwind_name = "Wirbelwind",
-	whirlwind_desc = "Timer und Balken f\195\188r Wirbelwinde.",
+    trigger_berserk = "Battleguard Sartura gains Berserk.", --to be confirmed
+    msg_berserk = "狂暴！",
+    bar_berserk = "狂暴",
+    msg_berserk60 = "60秒后狂暴！",
+    msg_berserk10 = "10秒后狂暴！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Sartura",
 
-    add_name = "沙尔图拉皇家卫士",
-    starttrigger = "defiling these sacred grounds",
-    endtrigger = "I serve to the last!",
-    startwarn = "萨尔图拉已激活 - 10分钟后狂暴！",
-    enragetrigger = "becomes enraged",
-    enragetrigger2 = "Battleguard Sartura gains Enrage.",
-    berserktrigger = "Battleguard Sartura gains Berserk.",
-    enragewarn = "激怒了！快治疗！",
-    berserkwarn = "狂暴！",
-    berserktext = "狂暴",
-    warn1 = "5分钟后狂暴！",
-    warn2 = "3分钟后狂暴！",
-    warn3 = "90秒后狂暴！",
-    warn4 = "60秒后狂暴！",
-    warn5 = "30秒后狂暴！",
-    warn6 = "10秒后狂暴！",
-    whirlwindon = "Battleguard Sartura gains Whirlwind.",
-    whirlwindoff = "Whirlwind fades from Battleguard Sartura.",
-    whirlwindonwarn = "旋风斩来了！",
-    whirlwindoffwarn = "旋风斩结束！",
-    whirlwindbartext = "旋风斩",
-    whirlwindnextbartext = "可能的旋风斩",
-    whirlwindfirstbartext = "首次旋风斩",
-    whirlwindinctext = "旋风斩即将到来！",
-    deadaddtrigger = "Sartura's Royal Guard dies.",
-    deadbosstrigger = "Battleguard Sartura dies.",
-    addmsg = "%d/3 沙尔图拉皇家卫士已死亡！",
-
     adds_cmd = "adds",
-    adds_name = "死亡的增援计数",
-    adds_desc = "通报沙尔图拉皇家卫士的死亡。",
-
-    enrage_cmd = "enrage",
-    enrage_name = "激怒",
-    enrage_desc = "在Boss血量降到20%时通报激怒。",
-
-    berserk_cmd = "berserk",
-    berserk_name = "狂暴",
-    berserk_desc = "Boss激活10分钟后通报狂暴。",
+    adds_name = "萨特拉的皇家卫兵死亡计数器",
+    adds_desc = "宣布萨特拉的皇家卫兵死亡。",
 
     whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩",
-    whirlwind_desc = "旋风斩的计时器和条。",
+    whirlwind_desc = "旋风斩的计时器和计时条。",
+
+    enrage_cmd = "enrage",
+    enrage_name = "激怒",
+    enrage_desc = "在Boss血量为20%时警告激怒。",
+
+    berserk_cmd = "berserk",
+    berserk_name = "狂暴",
+    berserk_desc = "警告Boss在10分钟后获得的狂暴。",
+
+
+    trigger_engage = "You will be judged for defiling these sacred grounds! The laws of the Ancients will not be challenged! Trespassers will be annihilated!", --CHAT_MSG_MONSTER_YELL
+    trigger_bossDead = "I serve to the last!", --CHAT_MSG_MONSTER_YELL
+
+    trigger_addDead = "Sartura's Royal Guard dies.", --CHAT_MSG_COMBAT_HOSTILE_DEATH
+    msg_addDead = "%d/3 沙尔图拉皇家卫士死亡！",
+
+    trigger_whirlwind = "Battleguard Sartura gains Whirlwind.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    bar_whirlwind = "旋风斩！",
+    msg_whirlwind = "旋风斩！",
+    bar_whirlwindCd = "旋风斩 CD",
+
+    trigger_whirlwindFade = "Whirlwind fades from Battleguard Sartura.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_whirlwindFade = "旋风斩结束！",
+
+    trigger_enrage = "Battleguard Sartura gains Enrage", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrage = "激怒 - 疯狂治疗！",
+
+    trigger_berserk = "Battleguard Sartura gains Berserk.", --to be confirmed
+    msg_berserk = "狂暴！",
+    bar_berserk = "狂暴",
+    msg_berserk60 = "60秒后狂暴！",
+    msg_berserk10 = "10秒后狂暴！",
 } end )
----------------------------------
---      	Variables 		   --
----------------------------------
 
--- module variables
-module.revision = 20007 -- To be overridden by the module!
-module.enabletrigger = module.translatedName -- string or table {boss, add1, add2}
-module.wipemobs = { L["add_name"] } -- adds which will be considered in CheckForEngage
-module.toggleoptions = {"whirlwind", "adds", "enrage", "berserk", "bosskill"}
-
-
--- locals
 local timer = {
+	firstWhirlwind = {8,12},
+	whirlwindCd = {5,10},
+	whirlwindDur = 15,
+	
 	berserk = 600,
-	earliestFirstWhirlwind = 8,
-	latestFirstWhirlwind = 12,
-	firstWhirlwind = 8,
-	whirlwind = 15,
-	earliestNextWhirlwind = 5,
-	latestNextWhirlwind = 10,
 }
 local icon = {
-	berserk = "Spell_Shadow_UnholyFrenzy",
 	whirlwind = "Ability_Whirlwind",
+	berserk = "Spell_Shadow_UnholyFrenzy",
+}
+local color = {
+	whirlwindCd = "Blue",
+	whirlwindDur = "Red",
+	berserk = "Black",
 }
 local syncName = {
 	whirlwind = "SarturaWhirlwindStart"..module.revision,
-	whirlwindOver = "SarturaWhirlwindEnd"..module.revision,
+	whirlwindFade = "SarturaWhirlwindEnd"..module.revision,
 	enrage = "SarturaEnrage"..module.revision,
 	berserk = "SarturaBerserk"..module.revision,
-	add = "SarturaAddDead"..module.revision,
 }
 
-local guard = 0
+local addDeadCount = 0
 
+module:RegisterYellEngage(L["trigger_engage"])
 
-------------------------------
---      Initialization      --
-------------------------------
-
-module:RegisterYellEngage(L["starttrigger"])
-
--- called after module is enabled
 function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
-	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER")
-	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE")
-	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS")
+	
+	--self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE")
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER", "Event")
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS", "Event")
+
 
 	self:ThrottleSync(3, syncName.whirlwind)
-	self:ThrottleSync(3, syncName.whirlwindOver)
+	self:ThrottleSync(3, syncName.whirlwindFade)
 	self:ThrottleSync(5, syncName.enrage)
 	self:ThrottleSync(5, syncName.berserk)
 end
 
--- called after module is enabled and after each wipe
 function module:OnSetup()
 	self.started = nil
-	guard = 0
 
 	self:RegisterEvent("CHAT_MSG_COMBAT_HOSTILE_DEATH")
 end
 
--- called after boss is engaged
 function module:OnEngage()
+	addDeadCount = 0
+	
 	if self.db.profile.berserk then
-		self:Message(L["startwarn"], "Important")
-		self:Bar(L["berserktext"], timer.berserk, icon.berserk, true, "Black")
-		self:DelayedMessage(timer.berserk - 5 * 60, L["warn1"], "Attention", nil, nil, true)
-		self:DelayedMessage(timer.berserk - 3 * 60, L["warn2"], "Attention", nil, nil, true)
-		self:DelayedMessage(timer.berserk - 90, L["warn3"], "Urgent", nil, nil, true)
-		self:DelayedMessage(timer.berserk - 60, L["warn4"], "Urgent", nil, nil, true)
-		self:DelayedMessage(timer.berserk - 30, L["warn5"], "Important", nil, nil, true)
-		self:DelayedMessage(timer.berserk - 10, L["warn6"], "Important", nil, nil, true)
+		self:Bar(L["bar_berserk"], timer.berserk, icon.berserk, true, color.berserk)
+		self:DelayedMessage(timer.berserk - 60, L["msg_berserk60"], "Urgent", false, nil, false)
+		self:DelayedMessage(timer.berserk - 10, L["msg_berserk10"], "Important", false, nil, false)
 	end
+	
 	if self.db.profile.whirlwind then
-		self:IntervalBar(L["whirlwindfirstbartext"], timer.earliestFirstWhirlwind, timer.latestFirstWhirlwind, icon.whirlwind, true, "Blue")
-		self:DelayedMessage(timer.earliestFirstWhirlwind - 3, L["whirlwindinctext"], "Attention", true, "Alarm")
+		self:IntervalBar(L["bar_whirlwindCd"], timer.firstWhirlwind[1], timer.firstWhirlwind[2], icon.whirlwind, true, color.whirlwindCd)
 	end
 end
 
--- called after boss is disengaged (wipe(retreat) or victory)
 function module:OnDisengage()
-end
-
-
-------------------------------
---      Event Handlers      --
-------------------------------
-
-function module:CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS(msg)
-	if msg == L["whirlwindon"] then
-		self:Sync(syncName.whirlwind)
-	elseif msg == L["enragetrigger2"] then
-		self:Sync(syncName.enrage)
-	elseif msg == L["berserktrigger"] then
-		self:Sync(syncName.berserk)
-	end
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 
-	if msg == L["deadaddtrigger"] then
-		self:Sync(syncName.add.." "..guard+1)
+	if msg == L["trigger_addDead"] and self.db.profile.adds then
+		addDeadCount = addDeadCount + 1
+		self:Message(string.format(L["msg_addDead"], addDeadCount), "Positive", false, nil, false)
 	end
 end
 
 function module:CHAT_MSG_MONSTER_YELL(msg)
-	if msg == L["endtrigger"] then
+	if msg == L["trigger_bossDead"] then
 		self:SendBossDeathSync()
 	end
 end
 
-function module:CHAT_MSG_MONSTER_EMOTE(msg)
-	if string.find(msg, L["enragetrigger"]) then
+function module:Event(msg)
+	if msg == L["trigger_whirlwind"] then
+		self:Sync(syncName.whirlwind)
+	elseif msg == L["trigger_whirlwindFade"] then
+		self:Sync(syncName.whirlwindFade)
+	
+	elseif msg == L["trigger_enrage"] then
 		self:Sync(syncName.enrage)
+	
+	elseif msg == L["trigger_berserk"] then
+		self:Sync(syncName.berserk)
 	end
 end
 
-function module:CHAT_MSG_SPELL_AURA_GONE_OTHER(msg)
-	if msg == L["whirlwindoff"] then
-		self:Sync(syncName.whirlwindOver)
-	end
-end
-
-
-------------------------------
---      Synchronization	    --
-------------------------------
 
 function module:BigWigs_RecvSync(sync, rest, nick)
 	if sync == syncName.whirlwind and self.db.profile.whirlwind then
-		self:Message(L["whirlwindonwarn"], "Important")
-		self:Bar(L["whirlwindbartext"], timer.whirlwind, icon.whirlwind, true, "Red")
-		self:RemoveBar(L["whirlwindnextbartext"])
-		self:DelayedIntervalBar(timer.whirlwind, L["whirlwindnextbartext"], timer.earliestNextWhirlwind, timer.latestNextWhirlwind, icon.whirlwind, true, "Blue")
-		self:DelayedMessage(timer.earliestNextWhirlwind+timer.whirlwind - 3, L["whirlwindinctext"], "Attention", true, "Alarm")
-	elseif sync == syncName.whirlwindOver and self.db.profile.whirlwind then
-		self:RemoveBar(L["whirlwindbartext"])
-		self:Message(L["whirlwindoffwarn"], "Attention")
+		self:Whirlwind()
+	
+	elseif sync == syncName.whirlwindFade and self.db.profile.whirlwind then
+		self:WhirlwindFade()
+	
 	elseif sync == syncName.enrage and self.db.profile.enrage then
-		self:Message(L["enragewarn"], "Attention")
+		self:Enrage()
+		
 	elseif sync == syncName.berserk and self.db.profile.berserk then
-		self:Message(L["berserkwarn"], "Attention")
-		self:RemoveBar(L["berserktext"])
-
-		self:CancelDelayedMessage(L["warn1"])
-		self:CancelDelayedMessage(L["warn2"])
-		self:CancelDelayedMessage(L["warn3"])
-		self:CancelDelayedMessage(L["warn4"])
-		self:CancelDelayedMessage(L["warn5"])
-		self:CancelDelayedMessage(L["warn6"])
-	elseif sync == syncName.add then
-		rest = tonumber(rest)
-		if rest == guard + 1 then
-			guard = guard + 1
-			if self.db.profile.adds then
-				self:Message(string.format(L["addmsg"], guard), "Positive")
-			end
-		end
+		self:Berserk()
 	end
+end
+
+
+function module:Whirlwind()
+	self:RemoveBar(L["bar_whirlwindCd"])
+	
+	self:Bar(L["bar_whirlwind"], timer.whirlwindDur, icon.whirlwind, true, color.whirlwindDur)
+	self:Message(L["msg_whirlwind"], "Important", false, nil, false)
+end
+
+function module:WhirlwindFade()
+	self:RemoveBar(L["bar_whirlwind"])
+	
+	self:DelayedIntervalBar(timer.whirlwindDur, L["bar_whirlwindCd"], timer.whirlwindCd[1], timer.whirlwindCd[2], icon.whirlwind, true, color.whirlwindCd)
+	self:Message(L["msg_whirlwindFade"], "Attention", false, nil, false)
+end
+
+function module:Enrage()
+	self:Message(L["msg_enrage"], "Attention", false, nil, false)
+end
+
+function module:Berserk()
+	self:RemoveBar(L["bar_berserk"])
+	self:CancelDelayedMessage(L["msg_berserk60"])
+	self:CancelDelayedMessage(L["msg_berserk10"])
+	
+	self:Message(L["msg_berserk"], "Attention", false, nil, false)
 end

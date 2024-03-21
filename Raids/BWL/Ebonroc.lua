@@ -112,8 +112,6 @@ L:RegisterTranslations("deDE", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     wingbuffet_trigger = "Ebonroc begins to cast Wing Buffet.",
     shadowflame_trigger = "Ebonroc begins to cast Shadow Flame.",
     shadowcurseyou_trigger = "You are afflicted by Shadow of Ebonroc\.",

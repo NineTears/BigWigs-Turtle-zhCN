@@ -11,12 +11,12 @@ L:RegisterTranslations("enUS", function() return {
     enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒时进行警告",
-    
-    trigger_start1 = "Patchwerk want to play!",
-    trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
-    
-    trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
-    
+	
+	trigger_start1 = "Patchwerk want to play!",
+	trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
+	
+	trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
+	
     bar_enrage = "激怒",
     msg_enrage60 = "60秒后激怒",
     msg_enrage10 = "10秒后激怒",
@@ -46,19 +46,17 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Patchwerk",
 
     enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒时进行警告",
-    
-    trigger_start1 = "Patchwerk want to play!",
-    trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
-    
-    trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
-    
+	
+	trigger_start1 = "Patchwerk want to play!",
+	trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
+	
+	trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
+	
     bar_enrage = "激怒",
     msg_enrage60 = "60秒后激怒",
     msg_enrage10 = "10秒后激怒",

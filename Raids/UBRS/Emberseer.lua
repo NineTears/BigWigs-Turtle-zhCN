@@ -3,7 +3,6 @@ local module, L = BigWigs:ModuleDeclaration("Pyroguard Emberseer", "Blackrock Sp
 local adds = AceLibrary("Babble-Boss-2.2")["Blackhand Incarcerator"]
 local boss = AceLibrary("Babble-Boss-2.2")["Pyroguard Emberseer"]
 local bbblackhandincarcerator = AceLibrary("Babble-Boss-2.2")["Blackhand Incarcerator"]
-local bzhallofbinding = AceLibrary("Babble-Zone-2.2")["Hall of Binding"]
 
 module.revision = 30025
 module.enabletrigger = {adds, boss}
@@ -31,8 +30,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Emberseer",
 
     firenova_cmd = "firenova",
@@ -89,7 +86,7 @@ function module:OnRegister()
 	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
 end
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= bzhallofbinding or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= "Hall of Binding" or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 

@@ -1,14 +1,13 @@
 
 local module, L = BigWigs:ModuleDeclaration("The Twin Emperors", "Ahn'Qiraj")
 
-module.revision = 30038
+module.revision = 30067
 local veklor = AceLibrary("Babble-Boss-2.2")["Emperor Vek'lor"]
 local veknilash = AceLibrary("Babble-Boss-2.2")["Emperor Vek'nilash"]
 local boss = AceLibrary("Babble-Boss-2.2")["The Twin Emperors"]
 local L = AceLibrary("AceLocale-2.2"):new("BigWigs" .. boss)
-
 module.enabletrigger = {veklor, veknilash}
-module.toggleoptions = {"teleport", "enrage", "blizzard", "bug", "heal", "targeticon", "bosskill"}
+module.toggleoptions = {"teleport", "enrage", "blizzard", "heal", "targeticon", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Twins",
@@ -24,10 +23,6 @@ L:RegisterTranslations("enUS", function() return {
     blizzard_cmd = "blizzard",
     blizzard_name = "暴风雪警报",
     blizzard_desc = "暴风雪出现时进行警告",
-    
-    bug_cmd = "bug",
-    bug_name = "爆炸虫警报",
-    bug_desc = "爆炸虫出现时进行警告",
 
     heal_cmd = "heal",
     heal_name = "治疗警报",
@@ -36,7 +31,6 @@ L:RegisterTranslations("enUS", function() return {
     targeticon_cmd = "targeticon",
     targeticon_name = "双子目标团队标志",
     targeticon_desc = "给施法的双子目标标一个星星，给近战的双子目标标一个骷髅",
-    
     
     
     trigger_tp = "gains Twin Teleport.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
@@ -54,9 +48,6 @@ L:RegisterTranslations("enUS", function() return {
     trigger_blizzard = "You are afflicted by Blizzard.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_blizzardFade = "Blizzard fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
     msg_blizzard = "远离暴风雪！",
-    
-    trigger_explode = "is afflicted by Explode Bug.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-    msg_explode = "附近有虫子爆炸！",
     
     trigger_heal = "Heal Brother heals",--??
     msg_heal = "双子在治疗，快分开他们！",
@@ -76,8 +67,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Twins",
     
     teleport_cmd = "teleport",
@@ -91,10 +80,6 @@ L:RegisterTranslations("zhCN", function() return {
     blizzard_cmd = "blizzard",
     blizzard_name = "暴风雪警报",
     blizzard_desc = "暴风雪出现时进行警告",
-    
-    bug_cmd = "bug",
-    bug_name = "爆炸虫警报",
-    bug_desc = "爆炸虫出现时进行警告",
 
     heal_cmd = "heal",
     heal_name = "治疗警报",
@@ -103,7 +88,6 @@ L:RegisterTranslations("zhCN", function() return {
     targeticon_cmd = "targeticon",
     targeticon_name = "双子目标团队标志",
     targeticon_desc = "给施法的双子目标标一个星星，给近战的双子目标标一个骷髅",
-    
     
     
     trigger_tp = "gains Twin Teleport.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
@@ -121,9 +105,6 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_blizzard = "You are afflicted by Blizzard.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_blizzardFade = "Blizzard fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
     msg_blizzard = "远离暴风雪！",
-    
-    trigger_explode = "is afflicted by Explode Bug.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-    msg_explode = "附近有虫子爆炸！",
     
     trigger_heal = "Heal Brother heals",--??
     msg_heal = "双子在治疗，快分开他们！",
@@ -152,7 +133,6 @@ local icon = {
 	tp = "Spell_Arcane_Blink",
 	enrage = "Spell_Shadow_UnholyFrenzy",
 	blizzard = "Spell_Frost_IceStorm",
-	explode = "spell_fire_fire",
 	heal = "spell_nature_healingwavegreater",
 }
 local color = {
@@ -180,12 +160,16 @@ module:RegisterYellEngage(L["pull_trigger10"])
 function module:OnEnable()
 	--self:RegisterEvent("CHAT_MSG_SAY", "Event")--Debug
 	
-	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
+	self:RegisterEvent("CHAT_MSG_MONSTER_YELL") --pull trigger, kill trigger
 	
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Event")--trigger_blizzard
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_SELF", "Event")--trigger_blizzardFade
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS", "Event")--trigger_tp
-	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF", "Event")
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF", "Event") --probably enrage
+
 
 	self:ThrottleSync(28, syncName.tp)
 	self:ThrottleSync(10, syncName.enrage)
@@ -212,6 +196,8 @@ function module:OnEngage()
 end
 
 function module:OnDisengage()
+	self:CancelScheduledEvent("veklorTargetCheck")
+	self:CancelScheduledEvent("veknilashTargetCheck")
 end
 
 function module:CheckForBossDeath(msg)
@@ -243,8 +229,6 @@ function module:CHAT_MSG_MONSTER_YELL(msg)
 end
 
 function module:Event(msg)
-	--if msg == "testEngage" then module:SendEngageSync() end
-
 	if string.find(msg, L["trigger_tp"]) then
 		self:Sync(syncName.tp)
 		
@@ -255,9 +239,6 @@ function module:Event(msg)
 		self:Blizzard()
 	elseif msg == L["trigger_blizzardFade"] and self.db.profile.blizzard then
 		self:BlizzardFade()
-	
-	elseif string.find(msg, L["trigger_explode"]) and self.db.profile.bug then
-		self:Explode()
 	
 	elseif string.find(msg, L["trigger_heal"]) then
 		self:Sync(syncName.heal)
@@ -312,11 +293,6 @@ end
 
 function module:BlizzardFade()
 	self:RemoveWarningSign(icon.blizzard)
-end
-
-function module:Explode()
-	self:Message(L["msg_explode"], "Personal", false, nil, false)
-	self:WarningSign(icon.explode, 0.7)
 end
 
 function module:Heal()

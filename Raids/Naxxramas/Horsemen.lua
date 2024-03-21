@@ -4,11 +4,10 @@ local thane = AceLibrary("Babble-Boss-2.2")["Thane Korth'azz"]
 local mograine = AceLibrary("Babble-Boss-2.2")["Highlord Mograine"]
 local zeliek = AceLibrary("Babble-Boss-2.2")["Sir Zeliek"]
 local blaumeux = AceLibrary("Babble-Boss-2.2")["Lady Blaumeux"]
+local BC = AceLibrary("Babble-Class-2.2")
 local bsimprovedsealofjustice = AceLibrary("Babble-Spell-2.2")["Improved Seal of Justice"]
 local bsdefiance = AceLibrary("Babble-Spell-2.2")["Defiance"]
 local bsferalinstinct = AceLibrary("Babble-Spell-2.2")["Feral Instinct"]
-
-local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30066
 module.enabletrigger = {"Thane Korth'azz", "Highlord Mograine", "Sir Zeliek", "Lady Blaumeux"}

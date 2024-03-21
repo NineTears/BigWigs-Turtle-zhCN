@@ -49,11 +49,11 @@ L:RegisterTranslations("enUS", function() return {
     fear_name = "恐惧",
     fear_desc = "低沉咆哮警告",
 
-    fear_trigger = "Taerar begins to cast Bellowing Roar.",
-    breath_trigger = "afflicted by Noxious Breath",
-    engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
-    shades_trigger = "Children of Madness - I release you upon this world!",
-    shadedies_trigger = "Shade of Taerar dies.",
+	fear_trigger = "Taerar begins to cast Bellowing Roar.",
+	breath_trigger = "afflicted by Noxious Breath",
+	engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
+	shades_trigger = "Children of Madness - I release you upon this world!",
+	shadedies_trigger = "Shade of Taerar dies.",
 
     shades_warn = "泰拉尔被放逐了！击杀暗影！",
     fearCast_warn = "1.5秒后恐惧！",
@@ -97,8 +97,6 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     cmd = "Taerar",
 
     noxious_cmd = "noxious",
@@ -109,11 +107,11 @@ L:RegisterTranslations("zhCN", function() return {
     fear_name = "恐惧",
     fear_desc = "低沉咆哮警告",
 
-    fear_trigger = "Taerar begins to cast Bellowing Roar.",
-    breath_trigger = "afflicted by Noxious Breath",
-    engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
-    shades_trigger = "Children of Madness - I release you upon this world!",
-    shadedies_trigger = "Shade of Taerar dies.",
+	fear_trigger = "Taerar begins to cast Bellowing Roar.",
+	breath_trigger = "afflicted by Noxious Breath",
+	engage_trigger = "Peace is but a fleeting dream! Let the NIGHTMARE reign!",
+	shades_trigger = "Children of Madness - I release you upon this world!",
+	shadedies_trigger = "Shade of Taerar dies.",
 
     shades_warn = "泰拉尔被放逐了！击杀暗影！",
     fearCast_warn = "1.5秒后恐惧！",

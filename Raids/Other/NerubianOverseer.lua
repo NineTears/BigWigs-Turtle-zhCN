@@ -2,7 +2,7 @@ local module, L = BigWigs:ModuleDeclaration("Nerubian Overseer", "Eastern Plague
 local BC = AceLibrary("Babble-Class-2.2")
 local bbnerubianoverseer = AceLibrary("Babble-Boss-2.2")["Nerubian Overseer"]
 
-module.revision = 30058
+module.revision = 30070
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"shadowshock", "venomspit", "poisoncloud", "corrosivepoison", "necroticpoison", "webspray", "explode", "bosskill"}
 module.zonename = {
@@ -11,9 +11,9 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "NerubianOverseer",
+	cmd = "NerubianOverseer",
 
-    shadowshock_cmd = "shadowshock",
+	shadowshock_cmd = "shadowshock",
     shadowshock_name = "暗影震击警报",
     shadowshock_desc = "暗影震击出现时进行警告",
 
@@ -40,46 +40,46 @@ L:RegisterTranslations("enUS", function() return {
     explode_cmd = "explode",
     explode_name = "爆炸警报",
     explode_desc = "爆炸出现时进行警告",
-
-
+	
+	
 		--750 shadow damage, 10sec CD
-    trigger_shadowShock = "Nerubian Overseer's Shadow Shock hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_shadowShock = "Nerubian Overseer's Shadow Shock hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_shadowShock = "暗影震击",
-
+	
 		--poison dot, 30sec flat
-    trigger_venomSpit = "afflicted by Venom Spit",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_venomSpit = "afflicted by Venom Spit",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     bar_venomSpit = "毒液喷吐",
 
-    trigger_poisonCloud = "You are afflicted by Poison Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_poisonCloudFade = "Poison Cloud fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_poisonCloud = "You are afflicted by Poison Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_poisonCloudFade = "Poison Cloud fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
 
 		-- -5k armor, 700dmg/5sec 30sec, poison
-    trigger_corrosivePoison = "(.+) is afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_corrosivePoisonYou = "You are afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_corrosivePoisonFade = "Corrosive Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_corrosivePoison = "(.+) is afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_corrosivePoisonYou = "You are afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_corrosivePoisonFade = "Corrosive Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_corrosivePoison = "腐蚀毒药",
 	
 		-- -90% healing, 30sec, happens on anyone, often, only warn if on tank
-    trigger_necroticPoison = "(.+) is afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_necroticPoisonYou = "You are afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_necroticPoisonFade = "Necrotic Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_necroticPoison = "(.+) is afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_necroticPoisonYou = "You are afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_necroticPoisonFade = "Necrotic Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_necroticPoison = "死灵之毒",
-    
-    trigger_webSpray = "(.+) is afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_webSprayYou = "You are afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	
+	trigger_webSpray = "(.+) is afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_webSprayYou = "You are afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     bar_webSprayCd = "下一次蛛网喷射",
     bar_webSprayAfflic = "蛛网喷射",
 	
-    trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
-    trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
+	trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
+	trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
     msg_explode = " 爆炸了，诞生了4个小蛛魔！",
     you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-    cmd = "NerubianOverseer",
+	cmd = "NerubianOverseer",
 
-    shadowshock_cmd = "shadowshock",
+	shadowshock_cmd = "shadowshock",
     shadowshock_name = "暗影震击警报",
     shadowshock_desc = "暗影震击出现时进行警告",
 
@@ -106,38 +106,38 @@ L:RegisterTranslations("zhCN", function() return {
     explode_cmd = "explode",
     explode_name = "爆炸警报",
     explode_desc = "爆炸出现时进行警告",
-
-
+	
+	
 		--750 shadow damage, 10sec CD
-    trigger_shadowShock = "Nerubian Overseer's Shadow Shock hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_shadowShock = "Nerubian Overseer's Shadow Shock hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_shadowShock = "暗影震击",
-
+	
 		--poison dot, 30sec flat
-    trigger_venomSpit = "afflicted by Venom Spit",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_venomSpit = "afflicted by Venom Spit",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     bar_venomSpit = "毒液喷吐",
 
-    trigger_poisonCloud = "You are afflicted by Poison Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_poisonCloudFade = "Poison Cloud fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_poisonCloud = "You are afflicted by Poison Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_poisonCloudFade = "Poison Cloud fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
 
 		-- -5k armor, 700dmg/5sec 30sec, poison
-    trigger_corrosivePoison = "(.+) is afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_corrosivePoisonYou = "You are afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_corrosivePoisonFade = "Corrosive Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_corrosivePoison = "(.+) is afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_corrosivePoisonYou = "You are afflicted by Corrosive Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_corrosivePoisonFade = "Corrosive Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_corrosivePoison = "腐蚀毒药",
 	
 		-- -90% healing, 30sec, happens on anyone, often, only warn if on tank
-    trigger_necroticPoison = "(.+) is afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_necroticPoisonYou = "You are afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_necroticPoisonFade = "Necrotic Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_necroticPoison = "(.+) is afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_necroticPoisonYou = "You are afflicted by Necrotic Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_necroticPoisonFade = "Necrotic Poison fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_necroticPoison = "死灵之毒",
-    
-    trigger_webSpray = "(.+) is afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_webSprayYou = "You are afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	
+	trigger_webSpray = "(.+) is afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_webSprayYou = "You are afflicted by Web Spray.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     bar_webSprayCd = "下一次蛛网喷射",
     bar_webSprayAfflic = "蛛网喷射",
 	
-    trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
-    trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
+	trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
+	trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
     msg_explode = " 爆炸了，诞生了4个小蛛魔！",
     you = "你",
 } end )
@@ -184,7 +184,7 @@ local syncName = {
 }
 
 function module:OnEnable()
-	self:RegisterEvent("CHAT_MSG_SAY", "Event")--Debug
+	--self:RegisterEvent("CHAT_MSG_SAY", "Event")--Debug
 	
 	self:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")--trigger_explode, trigger_explodeYou
 		
@@ -245,13 +245,6 @@ function module:CHAT_MSG_RAID_BOSS_EMOTE(msg, sender)
 end
 
 function module:Event(msg)
-	if msg == "test" then
-		module:SendEngageSync()
-	end
-	--debug
-	
-	
-	
 	if string.find(msg, L["trigger_shadowShock"]) then
 		self:Sync(syncName.shadowShock)
 		

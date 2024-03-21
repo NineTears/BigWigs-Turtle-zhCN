@@ -129,8 +129,6 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	["Proximity"] = "附近玩家",
 	["Close Players"] = "附近玩家",
 	["Options for the Proximity Display."] = "显示附近玩家显示",

@@ -80,8 +80,6 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	["Pull Timer"] = "开怪计时",
 	
 	["pulltimer"] = "开怪计时",

@@ -6,7 +6,7 @@ local __tinsert = table.insert
 local module, L = BigWigs:ModuleDeclaration("Gothik the Harvester", "Naxxramas")
 local bzeasternplaguelands = AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"]
 
-module.revision = 30055
+module.revision = 30068
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"room", -1, "add", "adddeath", "bosskill"}
 
@@ -56,7 +56,7 @@ L:RegisterTranslations("enUS", function() return {
 
     wave = "%d/22: ", -- 共有 22 波而不是 26 波
 
-    inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
+	inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
     inroomwarn = "他进入了房间！",
     inroombartext = "进入房间",
 } end )
@@ -160,7 +160,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     wave = "%d/22: ", -- 共有 22 波而不是 26 波
 
-    inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
+	inroomtrigger = "I have waited long enough! Now, you face the harvester of souls.",
     inroomwarn = "他进入了房间！",
     inroombartext = "进入房间",
 } end )
@@ -211,6 +211,8 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
+	if self.core:IsModuleActive("Deathknight Cavalier", "Naxxramas") then self.core:DisableModule("Deathknight Cavalier", "Naxxramas") end
+	
 	if self.db.profile.room then
 		self:Message(L["startwarn"], "Important", false, nil, false)
 		self:Bar(L["inroombartext"], timer.inroom, icon.inroom, true, "White")
@@ -314,17 +316,17 @@ SlashCmdList["GOT"] = function(cmd)
 			if ex[1] and ex[2] and ex[3] then
 				if tonumber(ex[2]) then
 					shackles[tonumber(ex[2])] = ex[3]
-					DEFAULT_CHAT_FRAME:AddMessage('Gothik set shackle ' .. ex[2] .. ' to ' .. ex[3])
+					DEFAULT_CHAT_FRAME:AddMessage('戈提克设置束缚 ' .. ex[2] .. ' 给 ' .. ex[3])
 				else
-					DEFAULT_CHAT_FRAME:AddMessage('Syntax: /got set # Name')
+					DEFAULT_CHAT_FRAME:AddMessage('语法：/got set # 名称')
 				end
 			else
-				DEFAULT_CHAT_FRAME:AddMessage('Syntax: /got set # Name')
+				DEFAULT_CHAT_FRAME:AddMessage('语法：/got set # 名称')
 			end
 		end
 		if string.sub(cmd, 1, 4) == 'list' then
 			for i = 1, 8 do
-				DEFAULT_CHAT_FRAME:AddMessage('Shackle ' .. i .. ' = ' .. shackles[i])
+				DEFAULT_CHAT_FRAME:AddMessage('束缚 ' .. i .. ' = ' .. shackles[i])
 			end
 		end
 	end

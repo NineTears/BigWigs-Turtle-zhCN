@@ -36,29 +36,6 @@ L:RegisterTranslations("enUS", function() return {
 		playersAlive_name = "存活的玩家",
 		playersAlive_desc = "允许玩家了解有多少团队成员存活",
 
-
-
-} end )
-
-L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-		-- Wind汉化修复Turtle-WOW中文数据
-		-- Last update: 2024-02-08
-		statusRequest_cmd = "statusRequest",
-		statusRequest_name = "状态请求",
-		statusRequest_desc = "允许查询Boss状态",
-
-		healthStatus_cmd = "healthStatus",
-		healthStatus_name = "生命值状态",
-		healthStatus_desc = "允许玩家了解当前Boss的生命值",
-
-		playersAlive_cmd = "playersAlive",
-		playersAlive_name = "存活的玩家",
-		playersAlive_desc = "允许玩家了解有多少团队成员存活",
-
-		
-
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -74,6 +51,22 @@ L:RegisterTranslations("esES", function() return {
 		--playersAlive_cmd = "playersAlive",
 		playersAlive_name = "Jugadores Vivos",
 		playersAlive_desc = "Permitir a los jugadores saber cuantos miembros de la banda están vivos",
+
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+
+		statusRequest_cmd = "statusRequest",
+		statusRequest_name = "状态请求",
+		statusRequest_desc = "允许查询Boss状态",
+
+		healthStatus_cmd = "healthStatus",
+		healthStatus_name = "生命值状态",
+		healthStatus_desc = "允许玩家了解当前Boss的生命值",
+
+		playersAlive_cmd = "playersAlive",
+		playersAlive_name = "存活的玩家",
+		playersAlive_desc = "允许玩家了解有多少团队成员存活",
 
 } end )
 

@@ -69,102 +69,53 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Scorch Timer"] = true,
 
-	-- firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
-	-- scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
-	-- resist_test = "^Your Fire Vulnerability was resisted by (.+).",
-
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["Bars"] = "计时条",
-
-	["Gives timer for Scorch Fire Vulnerability."] = "提供灼烧火焰易伤的计时器。",
-	["Enable"] = "启用",
-	["Enable timers."] = "启用计时器。",
-	["Target only"] = "仅目标",
-	["Only show timer for the current target."] = "仅显示当前目标的计时器。",
-	["Show the bar anchor frame."] = "显示计时条锚点框架。",
-	["Set the bar scale."] = "设置计时条缩放。",
-	["Group upwards"] = "向上分组",
-	["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
-
-	["Timer bars"] = "计时条",
-	["Show anchor"] = "显示锚点",
-	["Grow bars upwards"] = "切换计时条生长方向",
-	["Scale"] = "缩放",
-	["Bar scale"] = "计时条缩放",
-
-	["Bars now grow %2$s"] = "计时条现在向%2$s增长",
-	["Scale is set to %2$s"] = "缩放设置为%2$s",
-
-	["Up"] = "向上",
-	["Down"] = "向下",
-
-	["Test"] = "测试",
-	["Close"] = "关闭",
-
-	["Texture"] = "纹理",
-	["Set the texture for the timer bars."] = "为计时条设置纹理。",
-
-	["Reset position"] = "重置位置",
-	["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移动到屏幕中央.",
-	["Reverse"] = "颠倒",
-	["Toggles if bars are reversed (fill up instead of emptying)."] = "切换是否反转进度条（填充而不是清空）.",
-
-	["ScorchTimer"] = "灼烧计时器",
-
-	["Scorch Timer"] = "灼烧计时器",
-
 	firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
 	scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
 	resist_test = "^Your Fire Vulnerability was resisted by (.+).",
 
-} end)
-
-L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
+	--汉显，wind
 	["Bars"] = "计时条",
 
-	["Gives timer for Scorch Fire Vulnerability."] = "提供灼烧火焰易伤的计时器。",
-	["Enable"] = "启用",
-	["Enable timers."] = "启用计时器。",
-	["Target only"] = "仅目标",
-	["Only show timer for the current target."] = "仅显示当前目标的计时器。",
-	["Show the bar anchor frame."] = "显示计时条锚点框架。",
-	["Set the bar scale."] = "设置计时条缩放。",
-	["Group upwards"] = "向上分组",
-	["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
+    ["Gives timer for Scorch Fire Vulnerability."] = "为灼烧火焰易伤提供计时器。",
+    ["Enable"] = "启用",
+    ["Enable timers."] = "启用计时器。",
+    ["Target only"] = "仅限目标",
+    ["Only show timer for the current target."] = "仅为当前目标显示计时器。",
+    ["Show the bar anchor frame."] = "显示计时条锚点框架。",
+    ["Set the bar scale."] = "设置计时条规模。",
+    ["Group upwards"] = "向上分组",
+    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
 
-	["Timer bars"] = "计时条",
-	["Show anchor"] = "显示锚点",
-	["Grow bars upwards"] = "切换计时条生长方向",
-	["Scale"] = "缩放",
-	["Bar scale"] = "计时条缩放",
+    ["Timer bars"] = "计时条",
+    ["Show anchor"] = "显示锚点",
+    ["Grow bars upwards"] = "计时条向上增长",
+    ["Scale"] = "规模",
+    ["Bar scale"] = "计时条规模",
 
-	["Bars now grow %2$s"] = "计时条现在向%2$s增长",
-	["Scale is set to %2$s"] = "缩放设置为%2$s",
+    ["Bars now grow %2$s"] = "计时条现在向%2$s增长",
+    ["Scale is set to %2$s"] = "规模被设置为%2$s",
 
-	["Up"] = "向上",
-	["Down"] = "向下",
+    ["Up"] = "上",
+    ["Down"] = "下",
 
-	["Test"] = "测试",
-	["Close"] = "关闭",
+    ["Test"] = "测试",
+    ["Close"] = "关闭",
 
-	["Texture"] = "纹理",
-	["Set the texture for the timer bars."] = "为计时条设置纹理。",
+    ["Texture"] = "纹理",
+    ["Set the texture for the timerbars."] = "设置计时条的纹理。",
 
-	["Reset position"] = "重置位置",
-	["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移动到屏幕中央.",
-	["Reverse"] = "颠倒",
-	["Toggles if bars are reversed (fill up instead of emptying)."] = "切换是否反转进度条（填充而不是清空）.",
+    ["Reset position"] = "重置位置",
+    ["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移至屏幕中央。",
+    ["Reverse"] = "反转",
+    ["Toggles if bars are reversed (fill up instead of emptying)."] = "切换计时条是否反转（填满而非耗尽）。",
 
-	["ScorchTimer"] = "灼烧计时器",
+    ["ScorchTimer"] = "灼烧计时器",
 
-	["Scorch Timer"] = "灼烧计时器",
+    ["Scorch Timer"] = "灼烧计时器",
 
-	firevuln_test = "(.+) 受到火焰抗性影响.",
-	scorch_test	= "^你的灼烧 (%a%a?)伤害了 (.+) ",
-	resist_test = "^你的火焰抗性抵抗了 (.+).",
+	--firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
+	--scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
+	--resist_test = "^Your Fire Vulnerability was resisted by (.+).",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -210,6 +161,51 @@ L:RegisterTranslations("esES", function() return {
 	firevuln_test = "(.+) está afligido por Vulnerabilidad de Fuego.",
 	scorch_test	= "^Tu Chamuscar (%a%a?)\su (.+) para",
 	resist_test = "^Tu Vulnerabilidad de Fuego fue resistida por (.+).",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+    ["Bars"] = "计时条",
+
+    ["Gives timer for Scorch Fire Vulnerability."] = "为灼烧火焰易伤提供计时器。",
+    ["Enable"] = "启用",
+    ["Enable timers."] = "启用计时器。",
+    ["Target only"] = "仅限目标",
+    ["Only show timer for the current target."] = "仅为当前目标显示计时器。",
+    ["Show the bar anchor frame."] = "显示计时条锚点框架。",
+    ["Set the bar scale."] = "设置计时条规模。",
+    ["Group upwards"] = "向上分组",
+    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
+
+    ["Timer bars"] = "计时条",
+    ["Show anchor"] = "显示锚点",
+    ["Grow bars upwards"] = "计时条向上增长",
+    ["Scale"] = "规模",
+    ["Bar scale"] = "计时条规模",
+
+    ["Bars now grow %2$s"] = "计时条现在向%2$s增长",
+    ["Scale is set to %2$s"] = "规模被设置为%2$s",
+
+    ["Up"] = "上",
+    ["Down"] = "下",
+
+    ["Test"] = "测试",
+    ["Close"] = "关闭",
+
+    ["Texture"] = "纹理",
+    ["Set the texture for the timerbars."] = "设置计时条的纹理。",
+
+    ["Reset position"] = "重置位置",
+    ["Reset the anchor position, moving it to the center of your screen."] = "重置锚点位置，将其移至屏幕中央。",
+    ["Reverse"] = "反转",
+    ["Toggles if bars are reversed (fill up instead of emptying)."] = "切换计时条是否反转（填满而非耗尽）。",
+
+    ["ScorchTimer"] = "灼烧计时器",
+
+    ["Scorch Timer"] = "灼烧计时器",
+
+	firevuln_test = "(.+) is afflicted by Fire Vulnerability.",
+	scorch_test	= "^Your Scorch (%a%a?)\its (.+) for",
+	resist_test = "^Your Fire Vulnerability was resisted by (.+).",
 } end)
 
 -----------------------------------------------------------------------

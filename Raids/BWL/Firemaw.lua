@@ -115,8 +115,6 @@ L:RegisterTranslations("deDE", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
     wingbuffet_trigger = "Firemaw begins to cast Wing Buffet.",
     shadowflame_trigger = "Firemaw begins to cast Shadow Flame.",
     flamebuffetafflicted_trigger = "afflicted by Flame Buffet",

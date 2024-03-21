@@ -123,8 +123,6 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
 	["Range"] = "范围",
 	["range"] = "范围",
 	["Options for the combat log's range."] = "设置战斗记录范围",
