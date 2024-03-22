@@ -68,7 +68,7 @@ L:RegisterTranslations("enUS", function() return {
 	--汉显，wind
     ["Show Warnings"] = "显示警告",
     ["Show Warnings from other players even if the frame is hidden."] = "即使框架被隐藏，也显示来自其他玩家的警告。",
-    -- ["Ignite"] = "点燃",
+    ["Ignite"] = "点燃",
     ["Disabled"] = "已禁用",
     ["Options for the ignite Display."] = "点燃显示的选项。",
     ["Show frame"] = "显示框架",
@@ -185,6 +185,8 @@ L:RegisterTranslations("deDE", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
     ["Show Warnings"] = "显示警告",
     ["Show Warnings from other players even if the frame is hidden."] = "即使框架被隐藏，也显示来自其他玩家的警告。",
     ["Ignite"] = "点燃",

@@ -54,6 +54,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 
 	--中文端汉化，wind
 	["|cff00ff00Module running|r"] = "|cff00ff00模块运行|r",

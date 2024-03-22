@@ -5,7 +5,7 @@ module.revision = 30044
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"creatureofnightmare", "soulcorruption", "swellofsouls", "bosskill"}
 module.zonename = {
-	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
+	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Deadwind Pass"],
 }
 
@@ -44,6 +44,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
     cmd = "TwilightCorrupter",
 
     creatureofnightmare_cmd = "creatureofnightmare",

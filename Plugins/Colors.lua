@@ -54,18 +54,18 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
-	-- ["Colors"] = "颜色",
+	["Colors"] = "颜色",
 
-	-- ["Messages"] = "信息",
-	-- ["Bars"] = "计时条",
+	["Messages"] = "信息",
+	["Bars"] = "计时条",
 	["Shortbar"] = "短计时条",
 	["Longbar"] = "长计时条",
 	["Color %s"] = "颜色 %s",
 	["Color%s"] = "颜色%s",
 	["Number of colors"] = "颜色数量",
 	["xColors"] = "x颜色",
-	-- ["Background"] = "背景",
-	-- ["Text"] = "文本",
+	["Background"] = "背景",
+	["Text"] = "文本",
 	["Reset"] = "重置",
 
 	["Colors of messages and bars."] = "信息文字与计时条颜色。",
@@ -179,6 +179,8 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["Colors"] = "颜色",
 
 	["Messages"] = "信息",

@@ -84,6 +84,8 @@ L:RegisterTranslations("deDE", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
     cmd = "Elder-Mottled-Boar",
 
     engage_cmd = "engage",

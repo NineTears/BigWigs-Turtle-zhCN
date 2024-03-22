@@ -108,7 +108,7 @@ L:RegisterTranslations("enUS", function() return {
 	["|cff777777Nobody|r"] = "|cff777777无人|r",
 	["Lock frame"] = "锁定框架",
 	["Lock the proximity frame."] = "锁定附近玩家框架",
-	-- ["Sound"] = "声音",
+	["Sound"] = "声音",
 	["Play sound on proximity."] = "接近时播放声音",
 	["Disabled"] = "禁用",
 	["Disable the proximity display for all modules that use it."] = "禁用使用它的所有模块的接近显示。",
@@ -121,7 +121,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- font = "Fonts\\FZXHLJW.TTF",
 
-	-- ["Test"] = "测试",
+	["Test"] = "测试",
 	["Perform a Proximity test."] = "进行附近测试.",
             
     ["Reset position"] = "重置位置",
@@ -129,6 +129,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["Proximity"] = "附近玩家",
 	["Close Players"] = "附近玩家",
 	["Options for the Proximity Display."] = "显示附近玩家显示",

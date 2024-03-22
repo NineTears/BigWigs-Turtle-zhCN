@@ -144,7 +144,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Toggle broadcasting the messages to the raidwarning channel."] = "切换广播信息到团队警告频道。",
 
 	["Gives timer bars and raid messages about common buffs and debuffs."] = "提供关于常见增益和减益的计时条和团队信息。",
-	-- ["Common Auras"] = "常见的光环",
+	["Common Auras"] = "常见的光环",
 	-- ["commonauras"] = "常见的光环",
 	Dwarf = "Dwarf",
 	Alliance = "Alliance",
@@ -153,6 +153,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	iconPrefix = "Interface\\Icons\\",
 	
 	msg_fearward = " 守护恐惧 ",

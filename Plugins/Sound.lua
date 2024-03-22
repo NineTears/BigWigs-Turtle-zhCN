@@ -56,7 +56,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
-	--["Sounds"] = "声音",
+	["Sounds"] = "声音",
 	--["sounds"] = "声音",
 	["Options for sounds."] = "声音设置.",
 
@@ -69,6 +69,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["Sounds"] = "声音",
 	["sounds"] = "声音",
 	["Options for sounds."] = "声音设置.",

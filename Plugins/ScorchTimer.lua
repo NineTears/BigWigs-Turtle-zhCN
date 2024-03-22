@@ -164,6 +164,8 @@ L:RegisterTranslations("esES", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
     ["Bars"] = "计时条",
 
     ["Gives timer for Scorch Fire Vulnerability."] = "为灼烧火焰易伤提供计时器。",

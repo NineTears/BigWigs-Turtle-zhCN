@@ -53,9 +53,9 @@ L:RegisterTranslations("enUS", function() return {
 	["Show debug messages."] = true,
 	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = true,
 	["%s has requested forced reboot for the %s module."] = true,
-	bosskill_cmd = "kill",
-	bosskill_name = "Boss death",
-	bosskill_desc = "Announce when boss is defeated",
+	-- bosskill_cmd = "kill",
+	-- bosskill_name = "Boss death",
+	-- bosskill_desc = "Announce when boss is defeated",
 
 	["Other"] = true,
 	["Load"] = true,
@@ -166,6 +166,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",

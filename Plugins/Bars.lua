@@ -81,7 +81,7 @@ L:RegisterTranslations("enUS", function() return {
 
     -- Wind汉化修复Turtle-WOW中文数据
     -- Last update: 2024-02-08
-    -- ["Bars"] = "计时条",
+    ["Bars"] = "计时条",
     -- ["bars"] = "计时条",
     ["Options for the timer bars."] = "计时条选项.",
     ["Show the bar anchor frame."] = "显示计时条框体，可以对计时条进行移动.",
@@ -121,6 +121,8 @@ L:RegisterTranslations("enUS", function() return {
 end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
     ["Bars"] = "计时条",
     ["bars"] = "计时条",
     ["Options for the timer bars."] = "计时条选项.",

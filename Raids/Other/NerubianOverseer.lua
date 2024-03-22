@@ -6,7 +6,7 @@ module.revision = 30070
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"shadowshock", "venomspit", "poisoncloud", "corrosivepoison", "necroticpoison", "webspray", "explode", "bosskill"}
 module.zonename = {
-	AceLibrary("Babble-Zone-2.2")["Outdoor Raid Bosses Zone"],
+	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
 	AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"],
 }
 
@@ -77,6 +77,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	cmd = "NerubianOverseer",
 
 	shadowshock_cmd = "shadowshock",

@@ -63,7 +63,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- 汉显，wind
 	-- ["FrostBlast"] = "冰霜冲击",
-	-- ["Frost Blast"] = "冰霜冲击",
+	["Frost Blast"] = "冰霜冲击",
 	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
 	["Lock frame"] = "锁定框架",
 	["Lock the frost blast frame."] = "锁定冰霜冲击的框架",
@@ -78,7 +78,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Color Bars"] = "彩色条",
 	["Class colored bars."] ="职业色彩条",
 
-	-- ["Test"] = "测试",
+	["Test"] = "测试",
 	["Perform a Frost Blast test."] = "测试施展一个冰霜冲击",
 
 	["Reset position"] = "重置位置",
@@ -117,6 +117,8 @@ L:RegisterTranslations("esES", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["FrostBlast"] = "冰霜冲击",
 	["Frost Blast"] = "冰霜冲击",
 	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",

@@ -93,7 +93,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Messages are currently sent to the %2$s"] = "将当前消息设置发送到 %2$s",
 
 	-- ["display"] = "显示",
-	-- ["Display"] = "显示",
+	["Display"] = "显示",
 	["Set where messages are displayed."] = "设置显示消息的位置.",
 	["Display is now set to %2$s"] = "显示现在设置为 %2$s",
 	["Display is currently set to %2$s"] = "显示当前设置为 %2$s",
@@ -107,6 +107,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["Messages"] = "信息提示",
 
 	["msg"] = "消息",

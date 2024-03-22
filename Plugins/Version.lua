@@ -170,6 +170,8 @@ L:RegisterTranslations("deDE", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-03-22
 	["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
 	["Commands for querying the raid for Big Wigs versions."] = "用于查询BigWigs版本的命令。",
