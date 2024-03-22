@@ -49,7 +49,7 @@ end
 local function BuffFireResist()
 	for i=1, GetNumRaidMembers() do
 		if UnitExists("raidpet"..i) then
-			if not FR_FindBuff("Resist Fire","raidpet"..i) and not FR_FindBuff("phase shift","raidpet"..i) then
+			if not FR_FindBuff(L["Resist Fire"],"raidpet"..i) and not FR_FindBuff(L["phase shift"],"raidpet"..i) then
 				if CheckInteractDistance("raidpet"..i, 4) then
 					TargetUnit("raidpet"..i)
 					CastPetAction(3)
@@ -60,7 +60,7 @@ local function BuffFireResist()
 	end
 
 	for i=1, GetNumRaidMembers() do
-		if not FR_FindBuff("Resist Fire", "raid"..i) then
+		if not FR_FindBuff(L["Resist Fire"], "raid"..i) then
 			if CheckInteractDistance("raid"..i, 4) then
 				TargetUnit("raid"..i)
 				CastPetAction(3)

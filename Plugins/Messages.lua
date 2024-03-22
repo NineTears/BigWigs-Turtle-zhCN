@@ -65,8 +65,8 @@ L:RegisterTranslations("enUS", function() return {
 	["msg"] = "消息",
 	["anchor"] = "框体锚点",
 	["rw"] = "团队警报频道",
-	["color"] = "颜色",
-	["scale"] = "大小",
+	-- ["color"] = "颜色",
+	-- ["scale"] = "大小",
 
 	["Options for the message frame."] = "消息显示模式及相关设置.",
 	["Anchor"] = "信息框锚点",
@@ -92,8 +92,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Messages are now sent to the %2$s"] = "将当前消息设置发送到 %2$s",
 	["Messages are currently sent to the %2$s"] = "将当前消息设置发送到 %2$s",
 
-	["display"] = "显示",
-	["Display"] = "显示",
+	-- ["display"] = "显示",
+	-- ["Display"] = "显示",
 	["Set where messages are displayed."] = "设置显示消息的位置.",
 	["Display is now set to %2$s"] = "显示现在设置为 %2$s",
 	["Display is currently set to %2$s"] = "显示当前设置为 %2$s",
@@ -102,7 +102,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Scrolling Combat Text"] = "SCT式战斗信息",
 	["Floating Combat Text"] = "浮动战斗信息",
 
-	["Test"] = "测试",
+	-- ["Test"] = "测试",
 	["Close"] = "退出",
 } end)
 

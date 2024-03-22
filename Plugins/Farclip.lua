@@ -24,20 +24,9 @@ L:RegisterTranslations("enUS", function() return {
 	["Default Value"] = true,
 	["Set the default farclip value."] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["Farclip"] = "远景视野距离",
-	["farclip"] = "远景视野距离",
-	["Reduces the terrain distance to the minimum in Naxxramas to avoid screen freezes."] = "将纳克萨玛斯内的地形距离减小至最小，以避免屏幕卡顿.",
-	["Active"] = "激活",
-	["Activate the plugin."] = "激活插件.",
-	["Default Value"] = "默认值",
-	["Set the default farclip value."] = "设置默认的远景视野距离值.",
-} end)
-
-L:RegisterTranslations("zhCN", function() return {
-	["Farclip"] = "远景视野距离",
-	["farclip"] = "远景视野距离",
+	-- 汉显，wind
+	-- ["Farclip"] = "远景视野距离",
+	-- ["farclip"] = "远景视野距离",
 	["Reduces the terrain distance to the minimum in Naxxramas to avoid screen freezes."] = "将纳克萨玛斯内的地形距离减小至最小，以避免屏幕卡顿.",
 	["Active"] = "激活",
 	["Activate the plugin."] = "激活插件.",
@@ -53,6 +42,16 @@ L:RegisterTranslations("esES", function() return {
 	["Activate the plugin."] = "Activa el plugin",
 	["Default Value"] = "Valor Defecto",
 	["Set the default farclip value."] = "Define el valor farclip por defecto.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	["Farclip"] = "远景视野距离",
+	["farclip"] = "远景视野距离",
+	["Reduces the terrain distance to the minimum in Naxxramas to avoid screen freezes."] = "将纳克萨玛斯内的地形距离减小至最小，以避免屏幕卡顿.",
+	["Active"] = "激活",
+	["Activate the plugin."] = "激活插件.",
+	["Default Value"] = "默认值",
+	["Set the default farclip value."] = "设置默认的远景视野距离值.",
 } end)
 
 --[[L:RegisterTranslations("deDE", function() return {

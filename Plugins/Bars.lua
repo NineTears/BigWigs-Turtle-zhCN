@@ -81,14 +81,14 @@ L:RegisterTranslations("enUS", function() return {
 
     -- Wind汉化修复Turtle-WOW中文数据
     -- Last update: 2024-02-08
-    ["Bars"] = "计时条",
-    ["bars"] = "计时条",
+    -- ["Bars"] = "计时条",
+    -- ["bars"] = "计时条",
     ["Options for the timer bars."] = "计时条选项.",
     ["Show the bar anchor frame."] = "显示计时条框体，可以对计时条进行移动.",
     ["Set the bar scale."] = "调整计时条缩放比例.",
     ["Group upwards"] = "向上排列",
-    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条向上/向下排列.",
-    ["Timer bars"] = "计时条",
+    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条由锚点向上/向下增长。",
+    -- ["Timer bars"] = "计时条",
     ["Show anchor"] = "显示计时条框体",
     ["Grow bars upwards"] = "切换排列",
     ["Scale"] = "大小",
@@ -127,7 +127,7 @@ L:RegisterTranslations("zhCN", function() return {
     ["Show the bar anchor frame."] = "显示计时条框体，可以对计时条进行移动.",
     ["Set the bar scale."] = "调整计时条缩放比例.",
     ["Group upwards"] = "向上排列",
-    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条向上/向下排列.",
+    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条由锚点向上/向下增长。",
     ["Timer bars"] = "计时条",
     ["Show anchor"] = "显示计时条框体",
     ["Grow bars upwards"] = "切换排列",

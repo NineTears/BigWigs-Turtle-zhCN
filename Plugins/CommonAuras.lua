@@ -134,18 +134,18 @@ L:RegisterTranslations("enUS", function() return {
 	bar_shutDown = "服务器关机/重启",
 	
 	["Toggle %s display."] = "切换%s显示。",
-	["Wormhole"] = "虫洞",
-	["Orange"] = "橘子",
-	["Soulwell"] = "灵魂之井",
-	["Portal"] = "传送门",
-	["Shutdown"] = "关机",
-	["broadcast"] = "广播",
-	["Broadcast"] = "广播",
+	-- ["Wormhole"] = "虫洞",
+	-- ["Orange"] = "橘子",
+	-- ["Soulwell"] = "灵魂之井",
+	-- ["Portal"] = "传送门",
+	-- ["Shutdown"] = "关机",
+	-- ["broadcast"] = "广播",
+	-- ["Broadcast"] = "广播",
 	["Toggle broadcasting the messages to the raidwarning channel."] = "切换广播信息到团队警告频道。",
 
 	["Gives timer bars and raid messages about common buffs and debuffs."] = "提供关于常见增益和减益的计时条和团队信息。",
-	["Common Auras"] = "常见的光环",
-	["commonauras"] = "常见的光环",
+	-- ["Common Auras"] = "常见的光环",
+	-- ["commonauras"] = "常见的光环",
 	Dwarf = "Dwarf",
 	Alliance = "Alliance",
 	Horde = "Horde",
@@ -475,7 +475,7 @@ function BigWigsCommonAuras:CHAT_MSG_MONSTER_EMOTE(msg, sender)
 	if string.find(msg, L["trigger_wormhole"]) then
 		
 		--Debug
-		if UnitName("Player") == "Relar" or UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("sender: "..sender) end
+		if UnitName("Player") == "Relar" or UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("发送者： "..sender) end
 		
 		
 		whZone = nil

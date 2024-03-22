@@ -38,19 +38,19 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
-	["RaidWarning"] = "团队警报",
+	--["RaidWarning"] = "团队警报",
 
-	["raidwarn"] = "团队警报",
-	["broadcast"] = "广播",
-	["whisper"] = "密语",
+	--["raidwarn"] = "团队警报",
+	--["broadcast"] = "广播",
+	--["whisper"] = "密语",
 	["showwhispers"] = "显示密语",
 	["useraidchannel"] = "使用团队聊天",
 
 	["Broadcast over RaidWarning"] = "通过团队通知频道发送警报信息",
-	["Broadcast"] = "广播",
+	--["Broadcast"] = "广播",
 	["Toggle broadcasting over Raidwarning."] = "切换是否通过团队通知频道发送信息",
 
-	["Whisper"] = "密语",
+	--["Whisper"] = "密语",
 	["Whisper warnings"] = "密语警报",
 	["Toggle whispering warnings to players."] = "切换是否通过密语向玩家发送信息",
 

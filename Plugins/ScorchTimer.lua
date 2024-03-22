@@ -84,7 +84,7 @@ L:RegisterTranslations("enUS", function() return {
     ["Show the bar anchor frame."] = "显示计时条锚点框架。",
     ["Set the bar scale."] = "设置计时条规模。",
     ["Group upwards"] = "向上分组",
-    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
+    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条由锚点向上/向下增长。",
 
     ["Timer bars"] = "计时条",
     ["Show anchor"] = "显示锚点",
@@ -174,7 +174,7 @@ L:RegisterTranslations("zhCN", function() return {
     ["Show the bar anchor frame."] = "显示计时条锚点框架。",
     ["Set the bar scale."] = "设置计时条规模。",
     ["Group upwards"] = "向上分组",
-    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条从锚点向上/向下增长。",
+    ["Toggle bars grow upwards/downwards from anchor."] = "切换计时条由锚点向上/向下增长。",
 
     ["Timer bars"] = "计时条",
     ["Show anchor"] = "显示锚点",

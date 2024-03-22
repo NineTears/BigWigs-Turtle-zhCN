@@ -66,9 +66,9 @@ L:RegisterTranslations("enUS", function() return {
 	["Pyroblast"] = true,
 
 	--汉显，wind
-	["Show Warnings"] = "显示警告",
+    ["Show Warnings"] = "显示警告",
     ["Show Warnings from other players even if the frame is hidden."] = "即使框架被隐藏，也显示来自其他玩家的警告。",
-    ["Ignite"] = "点燃",
+    -- ["Ignite"] = "点燃",
     ["Disabled"] = "已禁用",
     ["Options for the ignite Display."] = "点燃显示的选项。",
     ["Show frame"] = "显示框架",
@@ -79,7 +79,7 @@ L:RegisterTranslations("enUS", function() return {
     ["Reset the frame position."] = "重置框架位置。",
     ["Send Stop"] = "发送停止",
     ["Send Stop messages to all raid members"] = "向所有团队成员发送停止信息",
-    ["font"] = "字体",
+    -- ["font"] = "Fonts\\FRIZQT__.TTF",
     ["Always show in raid"] = "总是在团队中显示",
     ["Always show in raid after ignite tick"] = "点燃计时之后总是在团队中显示",
 
@@ -89,15 +89,21 @@ L:RegisterTranslations("enUS", function() return {
     ["Threat"] = "仇恨",
     ["n/a"] = "不适用", -- no threat data available
     ["Stop"] = "停止",
-    ["your"] = "你的",
-    ["Your"] = "你的",
+    -- ["your"] = "你的",
+    -- ["Your"] = "你的",
 
-    --["Fireball"] = "火球术",
-    --["Scorch"] = "灼烧",
-    --["Fire Blast"] = "火焰冲击",
-    --["Blastwave"] = "冲击波",
-    --["Flamestrike"] = "烈焰风暴",
-    --["Pyroblast"] = "炎爆术",
+	-- fire_test = "^([%w]+)([%s's]*) (.+) crits (.+) for ([%d]+) ([%w]+) damage.",
+	-- ignite_stack_test = "^(.+) is afflicted by Ignite.[%s%(]*([%d]*)",
+	-- ignite_damage_test = "^(.+) suffers ([%d]+) Fire damage from ([%w]+)([%s's]*) Ignite.",
+	-- ignite_resist = "([%d]+) resisted",
+	-- ignite_fade_test = "^Ignite fades from (.+).",
+
+    -- ["Fireball"] = "火球术",
+    -- ["Scorch"] = "灼烧",
+    -- ["Fire Blast"] = "火焰冲击",
+    -- ["Blastwave"] = "冲击波",
+    -- ["Flamestrike"] = "烈焰风暴",
+    -- ["Pyroblast"] = "炎爆术",
 } end)
 
 L:RegisterTranslations("esES", function() return {

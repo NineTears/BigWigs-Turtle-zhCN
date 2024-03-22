@@ -38,7 +38,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
-	["BossBlock"] = "信息阻止",
+	-- ["BossBlock"] = "信息阻止",
 	["Suppress bossmod chat from other players."] = "阻止来自其他玩家的首领插件发送的信息。",
 
 	["Suppress Raid Chat"] = "阻止团队频道",
@@ -65,8 +65,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Suppressing RaidWarningFrame"] = "正在阻止RaidWarningFrame",
 	["Suppressing CT_RAMessageFrame"] = "正在阻止CT_RAMessageFrame",
 
-	["Suppressed"] = "阻止",
-	["Shown"] = "显示",
+	-- ["Suppressed"] = "阻止",
+	-- ["Shown"] = "显示",
 } end)
 
 L:RegisterTranslations("esES", function() return {

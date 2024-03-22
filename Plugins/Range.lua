@@ -43,28 +43,28 @@ L:RegisterTranslations("enUS", function() return {
 
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-02-08
-	["Range"] = "范围",
-	["range"] = "范围",
+	--["Range"] = "范围",
+	--["range"] = "范围",
 	["Options for the combat log's range."] = "设置战斗记录范围",
 
-	["party"] = "队伍",
-	["Party"] = "队伍",
+	--["party"] = "队伍",
+	--["Party"] = "队伍",
 	["Party combat log range."] = "队伍战斗记录范围",
 
-	["friend"] = "友方",
-	["Friendlies"] = "友方",
+	--["friend"] = "友方",
+	--["Friendlies"] = "友方",
 	["Friendly players combat log range."] = "友方玩家战斗记录范围",
 
-	["hostile"] = "敌对",
-	["Hostiles"] = "敌对",
+	--["hostile"] = "敌对",
+	--["Hostiles"] = "敌对",
 	["Hostile players combat log range."] = "敌对玩家战斗记录范围",
 
-	["mob"] = "怪物",
-	["Creatures"] = "怪物",
+	--["mob"] = "怪物",
+	--["Creatures"] = "怪物",
 	["Creature combat log range."] = "怪物战斗记录范围",
 
-	["death"] = "死亡",
-	["Deaths"] = "死亡",
+	--["death"] = "死亡",
+	--["Deaths"] = "死亡",
 	["Death message range."] = "死亡信息范围",
 
 	["reset"] = "重置",

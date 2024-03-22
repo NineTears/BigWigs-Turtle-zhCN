@@ -45,7 +45,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Disabled"] = true,
 	["Disable the frost blast display."] = true,
 
-	--font = "Fonts\\FRIZQT__.TTF",
+	font = "Fonts\\FRIZQT__.TTF",
 
 	["Color Names"] = true,
 	["Class colored names."] = true,
@@ -61,60 +61,31 @@ L:RegisterTranslations("enUS", function() return {
 	["Offline"] = true,
 	["Dead"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["FrostBlast"] = "冰霜冲击",
-	["Frost Blast"] = "冰霜冲击",
+	-- 汉显，wind
+	-- ["FrostBlast"] = "冰霜冲击",
+	-- ["Frost Blast"] = "冰霜冲击",
 	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
 	["Lock frame"] = "锁定框架",
 	["Lock the frost blast frame."] = "锁定冰霜冲击的框架",
 
 	["Disabled"] = "禁用",
-	["Disable the frost blast display."] = "禁用显示冰霜冲击模块",
+	["Disable the frost blast display."] = "禁用冰霜冲击模块",
 
-	font = "Fonts\\FZXHLJW.TTF",
+	-- font = "Fonts\\FZXHLJW.TTF",
 
 	["Color Names"] = "彩色名字",
 	["Class colored names."] = "职业色彩的名字",
 	["Color Bars"] = "彩色条",
 	["Class colored bars."] ="职业色彩条",
 
-	["Test"] = "测试",
+	-- ["Test"] = "测试",
 	["Perform a Frost Blast test."] = "测试施展一个冰霜冲击",
 
 	["Reset position"] = "重置位置",
 	["Reset the anchor position, moving it to the center of your screen."] = "复位固定的位置，移动到屏幕的中心",
 
-	["Offline"] = "离线",
-	["Dead"] = "死亡",
-
-} end)
-
-L:RegisterTranslations("zhCN", function() return {
-	["FrostBlast"] = "冰霜冲击",
-	["Frost Blast"] = "冰霜冲击",
-	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
-	["Lock frame"] = "锁定框架",
-	["Lock the frost blast frame."] = "锁定冰霜冲击的框架",
-
-	["Disabled"] = "禁用",
-	["Disable the frost blast display."] = "禁用显示冰霜冲击模块",
-
-	font = "Fonts\\FZXHLJW.TTF",
-
-	["Color Names"] = "彩色名字",
-	["Class colored names."] = "职业色彩的名字",
-	["Color Bars"] = "彩色条",
-	["Class colored bars."] ="职业色彩条",
-
-	["Test"] = "测试",
-	["Perform a Frost Blast test."] = "测试施展一个冰霜冲击",
-
-	["Reset position"] = "重置位置",
-	["Reset the anchor position, moving it to the center of your screen."] = "复位固定的位置，移动到屏幕的中心",
-
-	["Offline"] = "离线",
-	["Dead"] = "死亡",
+	-- ["Offline"] = "离线",
+	-- ["Dead"] = "死亡",
 
 } end)
 
@@ -144,6 +115,35 @@ L:RegisterTranslations("esES", function() return {
 	["Offline"] = "Desconectado",
 	["Dead"] = "Muerto",
 } end)
+
+L:RegisterTranslations("zhCN", function() return {
+	["FrostBlast"] = "冰霜冲击",
+	["Frost Blast"] = "冰霜冲击",
+	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
+	["Lock frame"] = "锁定框架",
+	["Lock the frost blast frame."] = "锁定冰霜冲击的框架",
+
+	["Disabled"] = "禁用",
+	["Disable the frost blast display."] = "禁用冰霜冲击模块",
+
+	font = "Fonts\\FZXHLJW.TTF",
+
+	["Color Names"] = "彩色名字",
+	["Class colored names."] = "职业色彩的名字",
+	["Color Bars"] = "彩色条",
+	["Class colored bars."] ="职业色彩条",
+
+	["Test"] = "测试",
+	["Perform a Frost Blast test."] = "测试施展一个冰霜冲击",
+
+	["Reset position"] = "重置位置",
+	["Reset the anchor position, moving it to the center of your screen."] = "复位固定的位置，移动到屏幕的中心",
+
+	["Offline"] = "离线",
+	["Dead"] = "死亡",
+
+} end)
+
 -----------------------------------------------------------------------
 --      Module Declaration
 -----------------------------------------------------------------------

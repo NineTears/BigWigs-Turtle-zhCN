@@ -40,14 +40,14 @@ L:RegisterTranslations("enUS", function() return {
 
 	["pulltimer"] = true,
 	["Options for Pull Timer"] = true,
-	--[[pullstart_message = "Pull in %d sec. (Sent by %s)",
+	pullstart_message = "Pull in %d sec. (Sent by %s)",
 	pullstop_message = "Pull aborted (Sent by %s)",
-	pull1_message = "Pull in 1",
-	pull2_message = "Pull in 2",
-	pull3_message = "Pull in 3",
-	pull4_message = "Pull in 4",
-	pull5_message = "Pull in 5",
-	pull0_message = "Pull!",--]]
+	-- pull1_message = "Pull in 1",
+	-- pull2_message = "Pull in 2",
+	-- pull3_message = "Pull in 3",
+	-- pull4_message = "Pull in 4",
+	-- pull5_message = "Pull in 5",
+	-- pull0_message = "Pull!",
 
 	["Pull"] = true,
 	["pull"] = true,
@@ -62,8 +62,8 @@ L:RegisterTranslations("enUS", function() return {
 	
 	["pulltimer"] = "开怪计时",
 	["Options for Pull Timer"] = "开怪计时设置",
-	pullstart_message = "准备开怪,倒计时开始! %d 秒. (由 %s 发送)",
-	pullstop_message = "开怪停止 (由 %s 发送)",
+	-- pullstart_message = "准备开怪,倒计时开始! %d 秒. (由 %s 发送)",
+	-- pullstop_message = "开怪停止 (由 %s 发送)",
 	pull1_message = "准备开怪 1",
 	pull2_message = "准备开怪 2",
 	pull3_message = "准备开怪 3",
@@ -71,8 +71,8 @@ L:RegisterTranslations("enUS", function() return {
 	pull5_message = "准备开怪 5",
 	pull0_message = "开怪!",
 	
-	["Pull"] = "开怪",
-	["pull"] = "pull",
+	-- ["Pull"] = "开怪",
+	-- ["pull"] = "开怪",
 	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
 	
 	["Enable"] = "启用",
@@ -94,7 +94,7 @@ L:RegisterTranslations("zhCN", function() return {
 	pull0_message = "开怪!",
 	
 	["Pull"] = "开怪",
-	["pull"] = "pull",
+	["pull"] = "开怪",
 	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
 	
 	["Enable"] = "启用",

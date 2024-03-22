@@ -89,10 +89,10 @@ L:RegisterTranslations("enUS", function() return {
 
 	["Has Debuff"] = true,
 
-	proximity = "Proximity display",
-	proximity_desc = "Show the proximity window when appropriate for this encounter, listing players who are standing too close to you.",
+	-- proximity = "Proximity display",
+	-- proximity_desc = "Show the proximity window when appropriate for this encounter, listing players who are standing too close to you.",
 
-	-- font = "Fonts\\FRIZQT__.TTF",
+	font = "Fonts\\FRIZQT__.TTF",
 
 	["Test"] = true,
 	["Perform a Proximity test."] = true,
@@ -108,20 +108,20 @@ L:RegisterTranslations("enUS", function() return {
 	["|cff777777Nobody|r"] = "|cff777777无人|r",
 	["Lock frame"] = "锁定框架",
 	["Lock the proximity frame."] = "锁定附近玩家框架",
-	["Sound"] = "声音",
+	-- ["Sound"] = "声音",
 	["Play sound on proximity."] = "接近时播放声音",
 	["Disabled"] = "禁用",
 	["Disable the proximity display for all modules that use it."] = "禁用使用它的所有模块的接近显示。",
 	["The proximity display has been disabled for %s, please use the boss modules options to enable it again."] = "近距离显示已停用 %s，请使用BOSS模块选项再次启用.",
 
-	["Has Debuff"] = "有Dubff",
+	["Has Debuff"] = "有Debuff",
 
 	proximity = "附近的显示",
 	proximity_desc = "显示附近窗口时，列出玩家谁站得离你太近.",
 
-	font = "Fonts\\FZXHLJW.TTF",
+	-- font = "Fonts\\FZXHLJW.TTF",
 
-	["Test"] = "测试",
+	-- ["Test"] = "测试",
 	["Perform a Proximity test."] = "进行附近测试.",
             
     ["Reset position"] = "重置位置",
@@ -141,7 +141,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["Disable the proximity display for all modules that use it."] = "禁用使用它的所有模块的接近显示。",
 	["The proximity display has been disabled for %s, please use the boss modules options to enable it again."] = "近距离显示已停用 %s，请使用BOSS模块选项再次启用.",
 
-	["Has Debuff"] = "有Dubff",
+	["Has Debuff"] = "有Debuff",
 
 	proximity = "附近的显示",
 	proximity_desc = "显示附近窗口时，列出玩家谁站得离你太近.",
