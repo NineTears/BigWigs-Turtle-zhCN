@@ -143,8 +143,8 @@ L:RegisterTranslations("enUS", function() return {
 	--["Onyxia's Lair"] = "奥妮克希亚的巢穴",
 	--["Naxxramas"] = "纳克萨玛斯",
 	--["Emerald Sanctum"] = "翡翠圣境",
-	--["Karazhan"] = "卡拉赞下层大厅",
-	--["Dire Maul"] = "厄运之槌(北)",
+	--["Karazhan"] = "卡拉赞",
+	--["Dire Maul"] = "厄运之槌",
 	--["Blackrock Spire"] = "黑石塔上层",
 	--["The Black Morass"] = "黑色沼泽",
 	--["Silithus"] = "希利苏斯",
@@ -218,13 +218,13 @@ L:RegisterTranslations("zhCN", function() return {
 	["Onyxia's Lair"] = "奥妮克希亚的巢穴",
 	["Naxxramas"] = "纳克萨玛斯",
 	["Emerald Sanctum"] = "翡翠圣境",
-	["Karazhan"] = "卡拉赞下层大厅",
-	["Dire Maul"] = "厄运之槌(北)",
+	["Karazhan"] = "卡拉赞",
+	["Dire Maul"] = "厄运之槌",
 	["Blackrock Spire"] = "黑石塔上层",
 	["The Black Morass"] = "黑色沼泽",
 	["Silithus"] = "希利苏斯",
 	["Outdoor Raid Bosses"] = "世界Boss",
-	["Outdoor Raid Bosses Zone"] = "世界Boss&战场", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+	["Outdoor Raid Bosses Zone"] = "世界Boss区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 
 	["Battlegrounds"] = "战场",
 	["Alterac Valley"] = "奥特兰克山谷",
