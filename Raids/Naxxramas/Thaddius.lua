@@ -1,7 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Thaddius", "Naxxramas")
-local feugen = AceLibrary("Babble-Boss-2.2")["Feugen"]
-local stalagg = AceLibrary("Babble-Boss-2.2")["Stalagg"]
+local bbfeugen = AceLibrary("Babble-Boss-2.2")["Feugen"]
+local bbstalagg = AceLibrary("Babble-Boss-2.2")["Stalagg"]
 
 module.revision = 30067
 module.enabletrigger = {module.translatedName, feugen, stalagg}
