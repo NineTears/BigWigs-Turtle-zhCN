@@ -51,27 +51,27 @@ L:RegisterTranslations("enUS", function() return {
     engage_trigger = "must leave my lair to feed",
 
     deepbreath_cmd = "deepbreath",
-    deepbreath_name = "深呼吸",
+    deepbreath_name = "深呼吸警报",
     deepbreath_desc = "奥妮克希亚开始施放深呼吸时进行警告",
 
     flamebreath_cmd = "flamebreath",
-    flamebreath_name = "烈焰吐息",
+    flamebreath_name = "烈焰吐息警报",
     flamebreath_desc = "奥妮克希亚开始施放烈焰吐息时进行警告",
 
     wingbuffet_cmd = "wingbuffet",
-    wingbuffet_name = "龙翼打击",
+    wingbuffet_name = "龙翼打击警报",
     wingbuffet_desc = "龙翼打击出现时进行警告",
 
     fireball_cmd = "fireball",
-    fireball_name = "火球术",
+    fireball_name = "火球术警报",
     fireball_desc = "火球术出现时进行警告",
 
     phase_cmd = "phase",
-    phase_name = "阶段",
+    phase_name = "阶段警报",
     phase_desc = "阶段改变时进行警告",
 
     onyfear_cmd = "onyfear",
-    onyfear_name = "低沉咆哮",
+    onyfear_name = "低沉咆哮警报",
     onyfear_desc = "第三阶段低沉咆哮时进行警告",
 
     deepbreath_trigger = "takes in a deep breath",
@@ -93,7 +93,7 @@ L:RegisterTranslations("enUS", function() return {
     deepbreath_cast = "深呼吸",
     flamebreath_cast = "烈焰吐息",
     wingbuffet_cast = "龙翼打击",
-    fireball_cast = "对 %s 释放火球术",
+	fireball_cast = "Fireball on %s",
 } end )
 
 L:RegisterTranslations("esES", function() return {
@@ -203,27 +203,27 @@ L:RegisterTranslations("zhCN", function() return {
     engage_trigger = "must leave my lair to feed",
 
     deepbreath_cmd = "deepbreath",
-    deepbreath_name = "深呼吸",
+    deepbreath_name = "深呼吸警报",
     deepbreath_desc = "奥妮克希亚开始施放深呼吸时进行警告",
 
     flamebreath_cmd = "flamebreath",
-    flamebreath_name = "烈焰吐息",
+    flamebreath_name = "烈焰吐息警报",
     flamebreath_desc = "奥妮克希亚开始施放烈焰吐息时进行警告",
 
     wingbuffet_cmd = "wingbuffet",
-    wingbuffet_name = "龙翼打击",
+    wingbuffet_name = "龙翼打击警报",
     wingbuffet_desc = "龙翼打击出现时进行警告",
 
     fireball_cmd = "fireball",
-    fireball_name = "火球术",
+    fireball_name = "火球术警报",
     fireball_desc = "火球术出现时进行警告",
 
     phase_cmd = "phase",
-    phase_name = "阶段",
+    phase_name = "阶段警报",
     phase_desc = "阶段改变时进行警告",
 
     onyfear_cmd = "onyfear",
-    onyfear_name = "低沉咆哮",
+    onyfear_name = "低沉咆哮警报",
     onyfear_desc = "第三阶段低沉咆哮时进行警告",
 
     deepbreath_trigger = "takes in a deep breath",
@@ -245,7 +245,7 @@ L:RegisterTranslations("zhCN", function() return {
     deepbreath_cast = "深呼吸",
     flamebreath_cast = "烈焰吐息",
     wingbuffet_cast = "龙翼打击",
-    fireball_cast = "对 %s 释放火球术",
+	fireball_cast = "Fireball on %s",
 } end )
 
 local fireballTarget = nil

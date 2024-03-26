@@ -311,13 +311,13 @@ function module:OnDisengage()
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if msg == string.format(UNITDIESOTHER, thane) then
+	if msg == string.format(UNITDIESOTHER, "Thane Korth'azz") then
 		korthAzzDead = true
-	elseif msg == string.format(UNITDIESOTHER, mograine) then
+	elseif msg == string.format(UNITDIESOTHER, "Highlord Mograine") then
 		mograineDead = true
-	elseif msg == string.format(UNITDIESOTHER, zeliek) then
+	elseif msg == string.format(UNITDIESOTHER, "Sir Zeliek") then
 		zeliekDead = true
-	elseif msg == string.format(UNITDIESOTHER, blaumeux) then
+	elseif msg == string.format(UNITDIESOTHER, "Lady Blaumeux") then
 		blaumeuxDead = true
 	end
 	
@@ -352,7 +352,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_shieldWall"]) then
 		local _, _, shieldWallUser = string.find(msg, L["trigger_shieldWall"])
-		if shieldWallUser == thane or shieldWallUser == mograine or shieldWallUser == zeliek or shieldWallUser == blaumeux then
+		if shieldWallUser == "Thane Korth'azz" or shieldWallUser == "Highlord Mograine" or shieldWallUser == "Sir Zeliek" or shieldWallUser == "Lady Blaumeux" then
 			self:Sync(syncName.shieldwall .. " " .. shieldWallUser)
 		end
 	
@@ -371,13 +371,13 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_tauntResist"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_tauntResist"])
-		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
+		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
 			self:TauntResist()
 		end
 	
 	elseif string.find(msg, L["trigger_growlResist"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_growlResist"])
-		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
+		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
 			self:TauntResist()
 		end
 	
@@ -385,13 +385,13 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_tauntSuccess"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_tauntSuccess"])
-		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
+		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
 			self:TauntSuccess()
 		end
 		
 	elseif string.find(msg, L["trigger_growlSuccess"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_growlSuccess"])
-		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
+		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
 			self:TauntSuccess()
 		end
     end
