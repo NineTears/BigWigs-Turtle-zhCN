@@ -153,19 +153,19 @@ L:RegisterTranslations("zhCN", function() return {
     msg_mark4Tank = "身上有4层印记 - 替换我！",
 	
     --trigger_void = "Lady Blaumeux casts Void Zone"
-    trigger_void2 = "Your life is mine!",
+    trigger_void2 = "你的命是我的了！",
     bar_void = "虚空领域",
     msg_voidYou = "虚空领域在你身上！",
     
     --trigger_meteor = "Thane Korth'azz's Meteor hits ",
-    trigger_meteor2 = "I like my meat extra crispy!",
+    trigger_meteor2 = "我最喜欢烤肉了!",
     bar_meteor = "流星 CD",
 
     --trigger_wrath = "Sir Zeliek's Holy Wrath hits ",
-    trigger_wrath2 = "I have no choice but to obey!",
+    trigger_wrath2 = "除了服从，我别无选择！",
     bar_wrath = "神圣之怒 CD",
     
-    trigger_shieldWall = "(.+) gains Shield Wall.",
+    trigger_shieldWall = "(.*)获得了盾墙的效果。",
     bar_shieldWall = " - 盾墙",
     msg_shieldWallUp = " - 盾墙持续20秒",
     msg_shieldWallFade = " - 盾墙结束！",
@@ -311,13 +311,13 @@ function module:OnDisengage()
 end
 
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
-	if msg == string.format(UNITDIESOTHER, "Thane Korth'azz") then
+	if msg == string.format(UNITDIESOTHER, thane) then
 		korthAzzDead = true
-	elseif msg == string.format(UNITDIESOTHER, "Highlord Mograine") then
+	elseif msg == string.format(UNITDIESOTHER, mograine) then
 		mograineDead = true
-	elseif msg == string.format(UNITDIESOTHER, "Sir Zeliek") then
+	elseif msg == string.format(UNITDIESOTHER, zeliek) then
 		zeliekDead = true
-	elseif msg == string.format(UNITDIESOTHER, "Lady Blaumeux") then
+	elseif msg == string.format(UNITDIESOTHER, blaumeux) then
 		blaumeuxDead = true
 	end
 	
@@ -352,7 +352,7 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_shieldWall"]) then
 		local _, _, shieldWallUser = string.find(msg, L["trigger_shieldWall"])
-		if shieldWallUser == "Thane Korth'azz" or shieldWallUser == "Highlord Mograine" or shieldWallUser == "Sir Zeliek" or shieldWallUser == "Lady Blaumeux" then
+		if shieldWallUser == thane or shieldWallUser == mograine or shieldWallUser == zeliek or shieldWallUser == blaumeux then
 			self:Sync(syncName.shieldwall .. " " .. shieldWallUser)
 		end
 	
@@ -371,13 +371,13 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_tauntResist"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_tauntResist"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntResist()
 		end
 	
 	elseif string.find(msg, L["trigger_growlResist"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_growlResist"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntResist()
 		end
 	
@@ -385,13 +385,13 @@ function module:Event(msg)
 	
 	elseif string.find(msg, L["trigger_tauntSuccess"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_tauntSuccess"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntSuccess()
 		end
 		
 	elseif string.find(msg, L["trigger_growlSuccess"]) and self.db.profile.taunt then
 		local _, _, tauntTarget = string.find(msg, L["trigger_growlSuccess"])
-		if tauntTarget == "Thane Korth'azz" or tauntTarget == "Highlord Mograine" or tauntTarget == "Sir Zeliek" or tauntTarget == "Lady Blaumeux" then
+		if tauntTarget == thane or tauntTarget == mograine or tauntTarget == zeliek or tauntTarget == blaumeux then
 			self:TauntSuccess()
 		end
     end
