@@ -13,8 +13,8 @@
 ## X-RelSite-Curse: 4356
 ## X-AceForum: 1222
 ## X-FlySpray: 1
-## Dependencies: !Libs
-## OptionalDeps: !Libs
+
+## OptionalDeps: Ace2, FuBar, FuBarPlugin-2.0, Babble-2.2, CandyBar, CompostLib, DewdropLib, PaintChipsLib, TabletLib, SurfaceLib, Surfaces, MikScrollingBattleText, sct, SpellStatusLib, SpellCacheLib, GratuityLib, Deformat, SpecialEventsEmbed
 ## X-Embeds: Ace2, FuBarPlugin-2.0, Babble-2.2, CandyBar, CompostLib, DewdropLib, PaintChipsLib, TabletLib, SurfaceLib
 
 ## SavedVariables: BigWigsDB, BigWigsFubarDB, BigWigsCommonAurasDB, BigWigsZombieFoodDB, BigWigsRespawnTimersDB, BigWigsContributeFlag
@@ -37,6 +37,7 @@ Plugins\Range.lua
 Plugins\CommonAuras.lua
 Plugins\Version.lua
 Plugins\Test.lua
+Plugins\Threat.lua
 Plugins\CustomBar.lua
 Plugins\Tranq.lua
 Plugins\ZombieFood.lua
@@ -46,9 +47,8 @@ Plugins\BossRecords.lua
 Plugins\RaidOfficer.lua
 Plugins\AutoReply.lua
 Plugins\Proximity.lua
-Plugins\Ignite.lua
 Plugins\WorldBuffTimers.lua
-Plugins\ScorchTimer.lua
+Plugins\MageTools.lua
 Plugins\FRBuffMacro.lua
 Plugins\Farclip.lua
 Plugins\FrostBlast.lua
@@ -117,6 +117,9 @@ Raids\MC\Shazzrah.lua
 Raids\MC\Garr.lua
 Raids\MC\Sulfuron.lua
 Raids\MC\Golemagg.lua
+Raids\MC\AncientCoreHound.lua
+Raids\MC\FlameImp.lua
+Raids\MC\Surger.lua
 Raids\MC\CoreHound.lua
 
 Raids\DireMaul\CaptainKromcrush.lua
@@ -156,6 +159,7 @@ Raids\Naxxramas\Kelthuzad.lua
 Raids\Naxxramas\DeathknightCaptain.lua
 Raids\Naxxramas\LivingMonstrosity.lua
 Raids\Naxxramas\SpiderTrash.lua
+Raids\Naxxramas\DeathknightCavalier.lua
 
 Raids\UBRS\Beast.lua
 Raids\UBRS\Drakkisath.lua

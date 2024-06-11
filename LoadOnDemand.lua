@@ -113,7 +113,7 @@ function BigWigsLoD:InitializeLoD()
 		if not IsAddOnLoaded(i) and IsAddOnLoadOnDemand(i) then
 			local meta = GetAddOnMetadata(i, "X-BigWigs-LoadInZone")
 			if meta then
-				local ignorezone = string.find( meta, BZ["Outdoor Raid Bosses Zone"] )
+				local ignorezone = string.find( meta, LC["Outdoor Raid Bosses Zone"] )
 				for k, v in pairs({Explode(meta, ",")}) do
 					local zone
 					if BZ:HasTranslation(v) then zone = BZ[v] end
@@ -124,8 +124,8 @@ function BigWigsLoD:InitializeLoD()
 						if not ignorezone then
 							zonelist[zone] = true
 						else
-							if not zonelist[BZ["Other"]] then zonelist[BZ["Other"]] = {} end
-							zonelist[BZ["Other"]][zone] = true
+							if not zonelist[LC["Other"]] then zonelist[LC["Other"]] = {} end
+							zonelist[LC["Other"]][zone] = true
 						end
 					end
 				end

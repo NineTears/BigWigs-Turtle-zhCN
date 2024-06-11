@@ -6,7 +6,6 @@ local bbvanndarstormpike = AceLibrary("Babble-Boss-2.2")["Vanndar Stormpike"]
 local bbcaptaingalvangar = AceLibrary("Babble-Boss-2.2")["Captain Galvangar"]
 local bbcaptainbalindastonehearth = AceLibrary("Babble-Boss-2.2")["Captain Balinda Stonehearth"]
 
-
 module.revision = 30062
 module.enabletrigger = {}
 module.toggleoptions = {"towers", "gy", "mine", "rez", "start", "captain", "korrak", "gameend", "lord", "boss"}
@@ -67,28 +66,28 @@ L:RegisterTranslations("enUS", function() return {
 	
 	trigger_mine = "The (.+) has taken the (.+)! Its supplies will now be used for reinforcements!", --CHAT_MSG_MONSTER_YELL
 	
-    msg_DrekHp = "德雷克塔尔血量：",
-    msg_VannHp = "范达尔血量：",
+	msg_DrekHp = "德雷克塔尔血量：",
+	msg_VannHp = "范达尔血量：",
     
-    msg_galvDead = "加尔范上尉阵亡",
-    msg_balindaDead = "巴琳达·斯通赫尔斯上尉阵亡",
-    msg_korrakDead = "科拉克·血怒者阵亡",
+	msg_galvDead = "加尔范上尉阵亡",
+	msg_balindaDead = "巴琳达·斯通赫尔斯上尉阵亡",
+	msg_korrakDead = "科拉克·血怒者阵亡",
     
 	trigger_gameStart = "(.+) (.+) until the battle for Alterac Valley begins.",
 	trigger_gameHasStarted = "The battle for Alterac Valley has begun!",
-    bar_gameStart = "比赛开始",
+	bar_gameStart = "比赛开始",
     
 	--msg to be confirmed once it gets below 2 minutes
 	trigger_gameEnd = "Not enough players. This game will close in (.+) (.+).",
-    bar_gameEnd = "比赛结束",
-    Alliance = "Alliance",
-    Horde = "Horde",
+	bar_gameEnd = "比赛结束",
+	Alliance = "Alliance",
+	Horde = "Horde",
     }
 end)
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
     cmd = "Alterac",
     
     towers_cmd = "towers",
@@ -144,22 +143,22 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	trigger_mine = "The (.+) has taken the (.+)! Its supplies will now be used for reinforcements!", --CHAT_MSG_MONSTER_YELL
 	
-    msg_DrekHp = "德雷克塔尔血量：",
-    msg_VannHp = "范达尔血量：",
+	msg_DrekHp = "德雷克塔尔血量：",
+	msg_VannHp = "范达尔血量：",
     
-    msg_galvDead = "加尔范上尉阵亡",
-    msg_balindaDead = "巴琳达·斯通赫尔斯上尉阵亡",
-    msg_korrakDead = "科拉克·血怒者阵亡",
+	msg_galvDead = "加尔范上尉阵亡",
+	msg_balindaDead = "巴琳达·斯通赫尔斯上尉阵亡",
+	msg_korrakDead = "科拉克·血怒者阵亡",
     
 	trigger_gameStart = "(.+) (.+) until the battle for Alterac Valley begins.",
 	trigger_gameHasStarted = "The battle for Alterac Valley has begun!",
-    bar_gameStart = "比赛开始",
+	bar_gameStart = "比赛开始",
     
 	--msg to be confirmed once it gets below 2 minutes
 	trigger_gameEnd = "Not enough players. This game will close in (.+) (.+).",
-    bar_gameEnd = "比赛结束",
-    Alliance = "联盟",
-    Horde = "部落",
+	bar_gameEnd = "比赛结束",
+	Alliance = "联盟",
+	Horde = "部落",
     }
 end)
 
