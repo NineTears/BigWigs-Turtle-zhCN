@@ -34,20 +34,20 @@ L:RegisterTranslations("enUS", function() return {
     BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有 %d 次胜利。",
 } end)
 
-L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
-    BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
-    BOSS_DOWN		= "%s 击败 %s!",
-    BOSS_DOWN_L		= "%s 击败 %s! 上一个是 %s。最快记录是 %s。你共有 %d 次胜利。",
-    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有 %d 次胜利。",
-} end)
-
 L:RegisterTranslations("esES", function() return {
 	BOSS_ENGAGED    = "Entrando en combate con %s. ¡Buena suerte!",
 	BOSS_DOWN		= "¡%s matado después de %s!",
 	BOSS_DOWN_L		= "¡%s matado después de %s! La última vez estuvo %s y tu muerte más rápida estuvo %s. Lo has matado %d veces.",
 	BOSS_DOWN_NR	= "%s matado después de %s! Es un nuevo récord! (El récord pasado estuvo %s). Lo has matado %d veces.",
+} end)
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-11
+    BOSS_ENGAGED    = "%s 相遇!祝你好运! :)",
+    BOSS_DOWN		= "%s 击败 %s!",
+    BOSS_DOWN_L		= "%s 击败 %s! 上一个是 %s。最快记录是 %s。你共有 %d 次胜利。",
+    BOSS_DOWN_NR	= "%s 击败 %s! 这是一个新记录! (旧纪录是 %s). 你共有 %d 次胜利。",
 } end)
 ----------------------------------
 --      Module Declaration      --

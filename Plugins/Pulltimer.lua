@@ -40,8 +40,8 @@ L:RegisterTranslations("enUS", function() return {
 
 	["pulltimer"] = true,
 	["Options for Pull Timer"] = true,
-	pullstart_message = "Pull in %d sec. (Sent by %s)",
-	pullstop_message = "Pull aborted (Sent by %s)",
+	-- pullstart_message = "Pull in %d sec. (Sent by %s)",
+	-- pullstop_message = "Pull aborted (Sent by %s)",
 	-- pull1_message = "Pull in 1",
 	-- pull2_message = "Pull in 2",
 	-- pull3_message = "Pull in 3",
@@ -57,31 +57,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Enable pulltimer."] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["Pull Timer"] = "开怪计时",
-	
-	["pulltimer"] = "开怪计时",
-	["Options for Pull Timer"] = "开怪计时设置",
-	-- pullstart_message = "准备开怪,倒计时开始! %d 秒. (由 %s 发送)",
-	-- pullstop_message = "开怪停止 (由 %s 发送)",
-	pull1_message = "准备开怪 1",
-	pull2_message = "准备开怪 2",
-	pull3_message = "准备开怪 3",
-	pull4_message = "准备开怪 4",
-	pull5_message = "准备开怪 5",
-	pull0_message = "开怪!",
-	
-	-- ["Pull"] = "开怪",
-	-- ["pull"] = "开怪",
-	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
-	
-	["Enable"] = "启用",
-	["Enable pulltimer."] = "启用开怪计时",
-} end )
-
-L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
 	["Pull Timer"] = "开怪计时",
 	
 	["pulltimer"] = "开怪计时",
@@ -95,8 +71,8 @@ L:RegisterTranslations("zhCN", function() return {
 	pull5_message = "准备开怪 5",
 	pull0_message = "开怪!",
 	
-	["Pull"] = "开怪",
-	["pull"] = "开怪",
+	-- ["Pull"] = "开怪",
+	-- ["pull"] = "开怪",
 	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
 	
 	["Enable"] = "启用",
@@ -123,6 +99,30 @@ L:RegisterTranslations("esES", function() return {
 
 	["Enable"] = "Activar",
 	["Enable pulltimer."] = "Activar Temporizador de Tirar",
+} end )
+
+L:RegisterTranslations("zhCN", function() return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-11
+	["Pull Timer"] = "开怪计时",
+	
+	["pulltimer"] = "开怪计时",
+	["Options for Pull Timer"] = "开怪计时设置",
+	pullstart_message = "准备开怪,倒计时开始! %d 秒. (由 %s 发送)",
+	pullstop_message = "开怪停止 (由 %s 发送)",
+	pull1_message = "准备开怪 1",
+	pull2_message = "准备开怪 2",
+	pull3_message = "准备开怪 3",
+	pull4_message = "准备开怪 4",
+	pull5_message = "准备开怪 5",
+	pull0_message = "开怪!",
+	
+	["Pull"] = "开怪",
+	["pull"] = "开怪",
+	["You have to be the raid leader or an assistant"] = "需要助理或更高权限",
+	
+	["Enable"] = "启用",
+	["Enable pulltimer."] = "启用开怪计时",
 } end )
 
 -----------------------------------------------------------------------
@@ -243,9 +243,6 @@ function BigWigsPulltimer:BigWigs_PullCommand(msg)
 			return
 		end
 
-		self:Sync("BWCustomBar "..timer.pulltimer.." ".."bwPullTimer")	--[[This triggers a pull timer for older versions of bigwigs.
-		Modified CustomBar.lua RecvSync to ignore sync calls with "bwPullTimer" string in them.
-		--]]
 		self:Sync(syncName.pulltimer.." "..timer.pulltimer)
 	else
 		self:Print(L["You have to be the raid leader or an assistant"])

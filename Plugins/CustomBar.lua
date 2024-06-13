@@ -21,7 +21,7 @@ L:RegisterTranslations("enUS", function() return {
 	["%s: %s"] = true,
 	["%s: Timer [%s] finished."] = true,
 
-	-- 汉显，wind
+	-- 英文端汉化，wind
 	-- ["bwcb"] = "bwcb",
 	-- ["bwlcb"] = "bwlcb",
 	["custombar"] = "自制时间条",
@@ -62,7 +62,7 @@ L:RegisterTranslations("esES", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
 	["bwcb"] = "bwcb",
 	["bwlcb"] = "bwlcb",
 	["custombar"] = "自制时间条",

@@ -38,8 +38,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Enable"] = true,
 	["Enable timers"] = true,
 
-	--汉显，wind
-	["worldbuffs"] = "世界Buff",
+	--英文端汉化，wind
+	-- ["worldbuffs"] = "世界Buff",
 	["World Buff Timers"] = "世界Buff计时器",
 	["Gives timer bars to see when world buffs are going out."] = "提供计时条以查看世界Buff何时生效。",
 
@@ -71,7 +71,7 @@ L:RegisterTranslations("esES", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
 	onyHeadHorde_trigger = "People of the Horde, citizens of Orgrimmar, come, gather round and celebrate a hero of the Horde. On this day",
 	nefHeadHorde_trigger = "NEFARIAN IS SLAIN! People of Orgrimmar, bow down before the might of",
 
@@ -81,16 +81,16 @@ L:RegisterTranslations("zhCN", function() return {
 	zgHeart_trigger = "Now, only one step remains to rid us of the Soulflayer's threat...",
 	rendHead_trigger = "Honor your heroes! On this day, they have dealt a great blow against one of our most hated enemies! The false Warchief, Rend Blackhand, has fallen!",
 
-    dragonslayer = "屠龙者的咆哮",
-    zandalar = "赞达拉之魂",
-    blessing = "酋长的祝福",
+	dragonslayer = "屠龙者的咆哮",
+	zandalar = "赞达拉之魂",
+	blessing = "酋长的祝福",
 
-    ["worldbuffs"] = "世界Buff",
-    ["World Buff Timers"] = "世界Buff计时器",
-    ["Gives timer bars to see when world buffs are going out."] = "提供计时条以查看世界Buff何时生效。",
+	-- ["worldbuffs"] = "世界Buff",
+	["World Buff Timers"] = "世界Buff计时器",
+	["Gives timer bars to see when world buffs are going out."] = "提供计时条以查看世界Buff何时生效。",
 
-    ["Enable"] = "启用",
-    ["Enable timers"] = "启用计时器",
+	["Enable"] = "启用",
+	["Enable timers"] = "启用计时器",
 } end )
 
 ------------------------------

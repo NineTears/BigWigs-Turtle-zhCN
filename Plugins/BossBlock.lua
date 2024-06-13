@@ -37,36 +37,36 @@ L:RegisterTranslations("enUS", function() return {
 	["Shown"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["BossBlock"] = "信息阻止",
-	["Suppress bossmod chat from other players."] = "阻止来自其他玩家的首领插件发送的信息。",
+	-- Last update: 2024-06-11
+	["BossBlock"] = "信息屏蔽",
+	["Suppress bossmod chat from other players."] = "屏蔽来自其他玩家的首领插件发送的信息。",
 
-	["Suppress Raid Chat"] = "阻止团队频道",
-	["Suppress messages in the raid channel."] = "阻止来自于团队频道的信息.",
+	["Suppress Raid Chat"] = "屏蔽团队频道",
+	["Suppress messages in the raid channel."] = "屏蔽来自于团队频道的信息.",
 
-	["Suppress RaidWarn Chat"] = "阻止团队警告频道",
-	["Suppress RaidWarn messages in the chat frames."] = "禁止在聊天框中显示团队通知信息",
+	["Suppress RaidWarn Chat"] = "屏蔽团队警告频道",
+	["Suppress RaidWarn messages in the chat frames."] = "禁止在聊天框中显示团队警告信息",
 
-	["Suppress RaidWarn"] = "阻止团队通知",
-	["Suppress RaidWarn popup messages."] = "阻止团队通知的RW消息",
+	["Suppress RaidWarn"] = "屏蔽团队通知",
+	["Suppress RaidWarn popup messages."] = "屏蔽团队通知的RW消息",
 
-	["Suppress RaidSay"] = "阻止CTRA_RS消息",
-	["Suppress CTRA RaidSay popup messages."] = "阻止团队助手(CTRA)的RS信息",
-	["Suppress oRA RaidSay popup messages."] = "阻止oRA团队通告弹出消息.",
-	["Suppress oRA2 RaidSay popup messages."] = "阻止oRA2团队通告弹出消息.",
+	["Suppress RaidSay"] = "屏蔽CTRA_RS消息",
+	["Suppress CTRA RaidSay popup messages."] = "屏蔽团队助手(CTRA)的RS信息",
+	["Suppress oRA RaidSay popup messages."] = "屏蔽oRA团队通告弹出消息.",
+	["Suppress oRA2 RaidSay popup messages."] = "屏蔽oRA2团队通告弹出消息.",
 
-	["Suppress Tells"] = "阻止密语",
-	["Suppress Tell messages."] = "阻止密语中的信息",
+	["Suppress Tells"] = "屏蔽密语",
+	["Suppress Tell messages."] = "屏蔽密语中的信息",
 
 	["Debugging"] = "调试",
 	["Show debug messages."] = "显示调试信息",
 
-	["Suppressing Chatframe"] = "正在阻止Chatframe",
-	["Suppressing RaidWarningFrame"] = "正在阻止RaidWarningFrame",
-	["Suppressing CT_RAMessageFrame"] = "正在阻止CT_RAMessageFrame",
+	["Suppressing Chatframe"] = "正在屏蔽聊天框",
+	["Suppressing RaidWarningFrame"] = "正在屏蔽团队警告框架",
+	["Suppressing CT_RAMessageFrame"] = "正在屏蔽CT_RAMessageFrame",
 
-	-- ["Suppressed"] = "阻止",
-	-- ["Shown"] = "显示",
+	["Suppressed"] = "屏蔽",
+	["Shown"] = "显示",
 } end)
 
 L:RegisterTranslations("esES", function() return {
@@ -136,37 +136,38 @@ L:RegisterTranslations("koKR", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
-	["BossBlock"] = "信息阻止",
-	["Suppress bossmod chat from other players."] = "阻止来自其他玩家的首领插件发送的信息。",
+	-- Last update: 2024-06-11
+	["BossBlock"] = "信息屏蔽",
+	["Suppress bossmod chat from other players."] = "屏蔽来自其他玩家的首领插件发送的信息。",
 
-	["Suppress Raid Chat"] = "阻止团队频道",
-	["Suppress messages in the raid channel."] = "阻止来自于团队频道的信息.",
+	["Suppress Raid Chat"] = "屏蔽团队频道",
+	["Suppress messages in the raid channel."] = "屏蔽来自于团队频道的信息.",
 
-	["Suppress RaidWarn Chat"] = "阻止团队警告频道",
-	["Suppress RaidWarn messages in the chat frames."] = "禁止在聊天框中显示团队通知信息",
+	["Suppress RaidWarn Chat"] = "屏蔽团队警告频道",
+	["Suppress RaidWarn messages in the chat frames."] = "禁止在聊天框中显示团队警告信息",
 
-	["Suppress RaidWarn"] = "阻止团队通知",
-	["Suppress RaidWarn popup messages."] = "阻止团队通知的RW消息",
+	["Suppress RaidWarn"] = "屏蔽团队通知",
+	["Suppress RaidWarn popup messages."] = "屏蔽团队通知的RW消息",
 
-	["Suppress RaidSay"] = "阻止CTRA_RS消息",
-	["Suppress CTRA RaidSay popup messages."] = "阻止团队助手(CTRA)的RS信息",
-	["Suppress oRA RaidSay popup messages."] = "阻止oRA团队通告弹出消息.",
-	["Suppress oRA2 RaidSay popup messages."] = "阻止oRA2团队通告弹出消息.",
+	["Suppress RaidSay"] = "屏蔽CTRA_RS消息",
+	["Suppress CTRA RaidSay popup messages."] = "屏蔽团队助手(CTRA)的RS信息",
+	["Suppress oRA RaidSay popup messages."] = "屏蔽oRA团队通告弹出消息.",
+	["Suppress oRA2 RaidSay popup messages."] = "屏蔽oRA2团队通告弹出消息.",
 
-	["Suppress Tells"] = "阻止密语",
-	["Suppress Tell messages."] = "阻止密语中的信息",
+	["Suppress Tells"] = "屏蔽密语",
+	["Suppress Tell messages."] = "屏蔽密语中的信息",
 
 	["Debugging"] = "调试",
 	["Show debug messages."] = "显示调试信息",
 
-	["Suppressing Chatframe"] = "正在阻止Chatframe",
-	["Suppressing RaidWarningFrame"] = "正在阻止RaidWarningFrame",
-	["Suppressing CT_RAMessageFrame"] = "正在阻止CT_RAMessageFrame",
+	["Suppressing Chatframe"] = "正在屏蔽聊天框",
+	["Suppressing RaidWarningFrame"] = "正在屏蔽团队警告框架",
+	["Suppressing CT_RAMessageFrame"] = "正在屏蔽CT_RAMessageFrame",
 
-	["Suppressed"] = "阻止",
+	["Suppressed"] = "屏蔽",
 	["Shown"] = "显示",
 } end)
+
 
 L:RegisterTranslations("zhTW", function() return {
 	["BossBlock"] = "訊息阻擋",

@@ -68,7 +68,7 @@ end
 
 
 function BigWigsComm:BigWigs_ThrottleSync(msg, time)
-	assert(msg, "No message passed")
+	assert(msg, "没有传递消息")
 	throt[msg] = time
 end
 

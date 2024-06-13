@@ -56,8 +56,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Show popup warning on out of date version"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-02-08
-	["versionquery"] = "版本查询",
+	-- Last update: 2024-06-11
+	-- ["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
 	["Commands for querying the raid for Big Wigs versions."] = "用于查询BigWigs版本的命令。",
 	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
@@ -75,7 +75,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Closes the version query window."] = "关闭版本查询窗口。",
 	--["current"] = "当前",
 	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
-	--["Zone"] = "区域",
+	["Zone"] = "区域",
 	--["zone"] = "区域",
 	--["N/A"] = "无",
 	--["BigWigs"] = "BigWigs",
@@ -171,8 +171,8 @@ L:RegisterTranslations("deDE", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
-	["versionquery"] = "版本查询",
+	-- Last update: 2024-06-11
+	-- ["versionquery"] = "版本查询",
 	["Version Query"] = "版本查询",
 	["Commands for querying the raid for Big Wigs versions."] = "用于查询BigWigs版本的命令。",
 	["Query already running, please wait 5 seconds before trying again."] = "查询已在运行，请等待5秒后再试。",
@@ -191,7 +191,7 @@ L:RegisterTranslations("zhCN", function() return {
 	["current"] = "当前",
 	["Runs a version query on the given zone."] = "在指定的区域上运行版本查询。",
 	["Zone"] = "区域",
-	["zone"] = "区域",
+	-- ["zone"] = "区域",
 	["N/A"] = "无",
 	["BigWigs"] = "BigWigs",
 	["Runs a version query on the BigWigs core."] = "在BigWigs核心上运行版本查询。",

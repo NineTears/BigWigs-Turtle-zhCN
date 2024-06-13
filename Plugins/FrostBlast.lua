@@ -61,7 +61,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Offline"] = true,
 	["Dead"] = true,
 
-	-- 汉显，wind
+	-- 英文端汉化，wind
 	-- ["FrostBlast"] = "冰霜冲击",
 	["Frost Blast"] = "冰霜冲击",
 	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
@@ -118,7 +118,7 @@ L:RegisterTranslations("esES", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
 	["FrostBlast"] = "冰霜冲击",
 	["Frost Blast"] = "冰霜冲击",
 	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
@@ -305,7 +305,7 @@ end
 function BigWigsFrostBlast:TestFBFrame()
 	if not anchor then self:SetupFrames() end
 	anchor:Show()
-	for i=1,5 do
+	for i=1,10 do
 		anchor.bar[i].unit="player"
 		anchor.bar[i].status:SetScript("OnUpdate", self.OnUpdate)
 		anchor.bar[i]:Show()
@@ -351,7 +351,7 @@ function BigWigsFrostBlast:FrostBlastUpdate()
 	if not BigWigsFrostBlast.db.profile.disabled then
 		if not anchor then self:SetupFrames() anchor:Show() end
 		local numEntries = getn(FrostblastTargets)
-		for i=1,5 do
+		for i=1,10 do
 			if i<=numEntries then
 				anchor.bar[i].unit=FrostblastTargets[i];
 				anchor.bar[i].status:SetScript("OnUpdate", self.OnUpdate)
@@ -367,7 +367,7 @@ end
 
 function BigWigsFrostBlast:StopFrostBlastUpdate()
 	if anchor then
-		for i=1,5 do
+		for i=1,10 do
 			anchor.bar[i].unit=nil;
 			anchor.bar[i].status:SetScript("OnUpdate", nil)
 			anchor.bar[i]:Hide()
@@ -416,7 +416,7 @@ function BigWigsFrostBlast:SetupFrames()
 	frame:Hide()
 
 	frame:SetWidth(200)
-	frame:SetHeight(120)
+	frame:SetHeight(32)
 
 	frame:SetBackdrop({
 		bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16,
@@ -457,7 +457,7 @@ function BigWigsFrostBlast:SetupFrames()
 
 	--Bar1
 	frame.bar = {}
-	for i=1, 5 do
+	for i=1, 10 do
 		local bar = CreateFrame("Button", "FBTargetBar_"..i, UIParent)
 		bar:ClearAllPoints()
 		if i==1 then

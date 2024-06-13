@@ -24,7 +24,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Default Value"] = true,
 	["Set the default farclip value."] = true,
 
-	-- 汉显，wind
+	-- 英文端汉化，wind
 	["Farclip"] = "远景视野距离",
 	-- ["farclip"] = "远景视野距离",
 	["Reduces the terrain distance to the minimum in Naxxramas to avoid screen freezes."] = "将纳克萨玛斯内的地形距离减小至最小，以避免屏幕卡顿.",
@@ -46,7 +46,7 @@ L:RegisterTranslations("esES", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
 	["Farclip"] = "远景视野距离",
 	["farclip"] = "远景视野距离",
 	["Reduces the terrain distance to the minimum in Naxxramas to avoid screen freezes."] = "将纳克萨玛斯内的地形距离减小至最小，以避免屏幕卡顿.",

@@ -9,6 +9,7 @@ assert(BigWigs, "BigWigs not found!")
 -----------------------------------------------------------------------
 local name = "MageTools"
 local L = AceLibrary("AceLocale-2.2"):new("BigWigs" .. name)
+local BC = AceLibrary("Babble-Class-2.2")
 local paint = AceLibrary("PaintChips-2.0")
 local candybar = AceLibrary("CandyBar-2.2")
 local surface = AceLibrary("Surface-1.0")
@@ -58,81 +59,184 @@ local ticksForSelfWarning = 5 -- if current player owns the ignite
 
 L:RegisterTranslations("enUS", function()
 	return {
-		-- general settings
-		["MageToolsCmd"] = "magetools",
-		["MageTools"] = "Mage Tools",
-		["MageToolsDesc"] = "Scorch/Ignite tools for mages",
-		["Enable"] = "Enable",
-		["Debug"] = "Debug",
-		["EnableDesc"] = "Enable Mage tools",
+        ["MageToolsCmd"] = "magetools",
+        ["MageTools"] = "法师工具",
+        ["MageToolsDesc"] = "法师灼烧/点燃工具",
+        ["Enable"] = "启用",
+        ["Debug"] = "调试",
+        ["EnableDesc"] = "启用法师工具",
 
-		["AnchorTitle"] = "Extras -> Mage Tools",
-		["ShowAnchor"] = "Show anchor frame",
-		["ShowAnchorDesc"] = "Show the anchor frame for controlling where the mage tools appear.",
+        ["AnchorTitle"] = "额外 -> 法师工具",
+        ["ShowAnchor"] = "显示锚点框架",
+        ["ShowAnchorDesc"] = "显示法师工具所在位置的锚点框架。",
 
-		["Texture"] = "Texture",
-		["TextureDesc"] = "Set the texture for the bars.",
+        ["Texture"] = "材质",
+        ["TextureDesc"] = "设置计时条的材质。",
 
-		["BarSpacing"] = "Bar Spacing",
-		["BarSpacingDesc"] = "Vertical space between bars.",
+        ["BarSpacing"] = "计时条间距",
+        ["BarSpacingDesc"] = "计时条之间的垂直间距。",
 
-		["ResetPosition"] = "Reset Anchor Position",
-		["ResetPositionDesc"] = "Reset the anchor position, moving it to the center of your screen.",
+        ["ResetPosition"] = "重置锚点位置",
+        ["ResetPositionDesc"] = "重置锚点位置，使其移动到屏幕中心。",
 
-		["Test"] = "Start Test",
-		["Close"] = "Close",
+        ["Test"] = "开始测试",
+        ["Close"] = "关闭",
 
 		-- scorch settings
-		["ScorchBarOptions"] = "Scorch Bar Options",
-		["ScorchEnable"] = "Enable",
-		["ScorchEnableTimer"] = "Enable scorch timer",
-		["ScorchEnableTimerDesc"] = "Displays a timer for Scorch Fire Vulnerability.",
-		["ScorchWarningSound"] = "Warning Sound",
-		["ScorchWarningSoundDesc"] = "Says 'Scorch' when there are 5 seconds left before it falls off",
-		["ScorchResistSound"] = "Resist Sound",
-		["ScorchResistSoundDesc"] = "Says 'Scorch Resist' if any Scorch or Fire Vulnerability gets resisted",
-		["ScorchWarningSign"] = "Warning Sign",
-		["ScorchWarningSignDesc"] = "Show a warning sign when there are 5 seconds left before it falls off",
-		["ScorchBarWidth"] = "Scorch bar width",
-		["ScorchBarWidthDesc"] = "Sets the width of the scorch bar",
-		["ScorchBarHeight"] = "Scorch bar height",
-		["ScorchBarHeightDesc"] = "Sets the height of the scorch bar",
+        ["ScorchBarOptions"] = "灼烧条选项",
+        ["ScorchEnable"] = "启用",
+        ["ScorchEnableTimer"] = "启用灼烧计时器",
+        ["ScorchEnableTimerDesc"] = "显示灼烧火焰易伤的计时器。",
+        ["ScorchWarningSound"] = "警告音",
+        ["ScorchWarningSoundDesc"] = "在灼烧效果消失前5秒发出'灼烧'警告。",
+        ["ScorchResistSound"] = "抵抗音效",
+        ["ScorchResistSoundDesc"] = "当任何灼烧或火焰易伤被抵抗时发出'灼烧抵抗'音效。",
+        ["ScorchWarningSign"] = "警告标志",
+        ["ScorchWarningSignDesc"] = "在灼烧效果消失前5秒显示警告标志。",
+        ["ScorchBarWidth"] = "灼烧条宽度",
+        ["ScorchBarWidthDesc"] = "设置灼烧条的宽度。",
+        ["ScorchBarHeight"] = "灼烧条高度",
+        ["ScorchBarHeightDesc"] = "设置灼烧条的高度。",
 
 		-- ignite settings
-		["IgniteBarOptions"] = "Ignite Bar Options",
-		["IgniteEnable"] = "Enable",
-		["IgniteTimerMode"] = "Ignite timer mode",
-		["IgniteTimerModeDesc"] = "In timer mode bar size will indicate remaining time in ignite window.  Otherwise bar will grow with ignite stacks.",
-		["IgniteBarWidth"] = "Ignite bar width",
-		["IgniteBarWidthDesc"] = "Sets the width of the ignite bar at 5 stacks",
-		["IgniteBarHeight"] = "Ignite bar height",
-		["IgniteBarHeightDesc"] = "Sets the height of the ignite bar",
+        ["IgniteBarOptions"] = "点燃条选项",
+        ["IgniteEnable"] = "启用",
+        ["IgniteTimerMode"] = "点燃计时模式",
+        ["IgniteTimerModeDesc"] = "在计时模式下，条的大小将指示点燃窗口剩余时间。否则，条会随着点燃层数增加。",
+        ["IgniteBarWidth"] = "点燃条宽度",
+        ["IgniteBarWidthDesc"] = "设置在5层点燃时的条宽度。",
+        ["IgniteBarHeight"] = "点燃条高度",
+        ["IgniteBarHeightDesc"] = "设置点燃条的高度。",
 
-		["IgniteThreatBarOptions"] = "Ignite Threat Bar Options",
-		["IgniteThreatEnable"] = "Show ignite threat bar",
-		["IgniteThreatEnableDesc"] = "Show the ignite owner's percent threat",
-		["IgniteThreatThreshold"] = "Ignite threat threshold",
-		["IgniteThreatThresholdDesc"] = "Percentage of top threat at which to turn red",
-		["IgniteThreatBarWidth"] = "Ignite threat bar width",
-		["IgniteThreatBarWidthDesc"] = "Sets the width of the ignite threat bar at 100% threat",
-		["IgniteThreatBarHeight"] = "Ignite threat bar height",
-		["IgniteThreatBarHeightDesc"] = "Sets the height of the ignite threat bar",
+        ["IgniteThreatBarOptions"] = "点燃威胁条选项",
+        ["IgniteThreatEnable"] = "显示点燃威胁条",
+        ["IgniteThreatEnableDesc"] = "显示点燃拥有者的威胁百分比。",
+        ["IgniteThreatThreshold"] = "点燃威胁阈值",
+        ["IgniteThreatThresholdDesc"] = "威胁条变红的威胁百分比。",
+        ["IgniteThreatBarWidth"] = "点燃威胁条宽度",
+        ["IgniteThreatBarWidthDesc"] = "设置在100%威胁时的点燃威胁条宽度。",
+        ["IgniteThreatBarHeight"] = "点燃威胁条高度",
+        ["IgniteThreatBarHeightDesc"] = "设置点燃威胁条的高度。",
 
-		["IgniteAutoWarning"] = "Automated ignite warning",
-		["IgniteAutoWarningDesc"] = "Warning message when small number of ignite ticks will pull aggro for the ignite owner",
+        ["IgniteAutoWarning"] = "自动点燃警告",
+        ["IgniteAutoWarningDesc"] = "当少量点燃跳数会拉仇恨时的警告信息。",
 
-		["ThreatTrinketAlerts"] = "Threat Trinket Alerts",
-		["ThreatTrinketAlertsDesc"] = "Notify when other mages use Fetish or Eye of Diminution",
+        ["ThreatTrinketAlerts"] = "威胁饰品警报",
+        ["ThreatTrinketAlertsDesc"] = "当其他法师使用雕像或减效之眼时通知",
 
-		["IgnitePlayerWarning"] = "Ignite player warnings",
-		["IgnitePlayerWarningDesc"] = "Whether to display + play sounds for manual player warnings",
-		["IgnitePlayerWarningTrigger"] = "Trigger ignite warning",
-		["IgnitePlayerWarningTriggerDesc"] = "/bw extra magetools ignitewarningtrigger",
+        ["IgnitePlayerWarning"] = "点燃玩家警告",
+        ["IgnitePlayerWarningDesc"] = "是否显示和播放手动玩家警告的声音",
+        ["IgnitePlayerWarningTrigger"] = "触发点燃警告",
+        ["IgnitePlayerWarningTriggerDesc"] = "/bw 额外->法师工具->触发点燃警告",
 
-		["IgnitePyroRequest"] = "Pyro sync requests",
-		["IgnitePyroRequestDesc"] = "Whether to display + play sounds for manual player pryo requests",
-		["IgnitePyroRequestTrigger"] = "Trigger pyro request",
-		["IgnitePyroRequestTriggerDesc"] = "/bw extra magetools ignitepyrotrigger",
+        ["IgnitePyroRequest"] = "火焰同步请求",
+        ["IgnitePyroRequestDesc"] = "是否显示和播放手动玩家火焰请求的声音",
+        ["IgnitePyroRequestTrigger"] = "触发火焰请求",
+        ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师工具->触发火焰请求",
+
+		scorch_afflict_test = "^(.+) is afflicted by Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
+		scorch_gains_test = "^(.+) gains Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
+		scorch_test = ".+ Scorch (.+)s (.+) for",
+		scorch_fades_test = "Fire Vulnerability fades from (.+).",
+		scorch_resist_test = "(.+) Scorch was resisted by (.+).",
+		fire_vuln_resist_test = "(.+) Fire Vulnerability was resisted by (.+).", -- Scorch can hit but fire vulnerability can resist independently
+
+		ignite_afflict_test = "^(.+) is afflicted by Ignite(.*)", -- for stacks 2-5 will be "Ignite (2)".
+		ignite_gains_test = "^(.+) gains Ignite(.*)", -- for stacks 2-5 will be "Ignite (2)".
+		ignite_crit_test = "^(.+) (.+) crits (.+) for .+ Fire damage",
+		ignite_dmg = "^(.+) suffers (.+) Fire damage from (.+) Ignite",
+		ignite_fades_test = "Ignite fades from (.+).",
+
+		arcane_shroud_test = "You gain Arcane Shroud", -- Fetish of the sand reaver
+		arcane_shroud_fades_test = "Arcane Shroud fades from you",
+		eye_of_diminution_test = "You gain The Eye of Diminution", -- Eye of Diminution
+		eye_of_diminution_fades_test = "The Eye of Diminution fades from you",
+
+		slain_test = "(.+) is slain by (.+)",
+		self_slain_test = "You have slain (.+)",
+		death_test = "(.+) dies.",
+	}
+end)
+
+L:RegisterTranslations("zhCN", function()
+	return {
+		-- Wind汉化修复Turtle-WOW中文数据
+		-- Last update: 2024-06-11
+		-- general settings
+        ["MageToolsCmd"] = "magetools",
+        ["MageTools"] = "法师工具",
+        ["MageToolsDesc"] = "法师灼烧/点燃工具",
+        ["Enable"] = "启用",
+        ["Debug"] = "调试",
+        ["EnableDesc"] = "启用法师工具",
+
+        ["AnchorTitle"] = "额外 -> 法师工具",
+        ["ShowAnchor"] = "显示锚点框架",
+        ["ShowAnchorDesc"] = "显示法师工具所在位置的锚点框架。",
+
+        ["Texture"] = "材质",
+        ["TextureDesc"] = "设置计时条的材质。",
+
+        ["BarSpacing"] = "计时条间距",
+        ["BarSpacingDesc"] = "计时条之间的垂直间距。",
+
+        ["ResetPosition"] = "重置锚点位置",
+        ["ResetPositionDesc"] = "重置锚点位置，使其移动到屏幕中心。",
+
+        ["Test"] = "开始测试",
+        ["Close"] = "关闭",
+
+		-- scorch settings
+        ["ScorchBarOptions"] = "灼烧条选项",
+        ["ScorchEnable"] = "启用",
+        ["ScorchEnableTimer"] = "启用灼烧计时器",
+        ["ScorchEnableTimerDesc"] = "显示灼烧火焰易伤的计时器。",
+        ["ScorchWarningSound"] = "警告音",
+        ["ScorchWarningSoundDesc"] = "在灼烧效果消失前5秒发出'灼烧'警告。",
+        ["ScorchResistSound"] = "抵抗音效",
+        ["ScorchResistSoundDesc"] = "当任何灼烧或火焰易伤被抵抗时发出'灼烧抵抗'音效。",
+        ["ScorchWarningSign"] = "警告标志",
+        ["ScorchWarningSignDesc"] = "在灼烧效果消失前5秒显示警告标志。",
+        ["ScorchBarWidth"] = "灼烧条宽度",
+        ["ScorchBarWidthDesc"] = "设置灼烧条的宽度。",
+        ["ScorchBarHeight"] = "灼烧条高度",
+        ["ScorchBarHeightDesc"] = "设置灼烧条的高度。",
+
+		-- ignite settings
+        ["IgniteBarOptions"] = "点燃条选项",
+        ["IgniteEnable"] = "启用",
+        ["IgniteTimerMode"] = "点燃计时模式",
+        ["IgniteTimerModeDesc"] = "在计时模式下，条的大小将指示点燃窗口剩余时间。否则，条会随着点燃层数增加。",
+        ["IgniteBarWidth"] = "点燃条宽度",
+        ["IgniteBarWidthDesc"] = "设置在5层点燃时的条宽度。",
+        ["IgniteBarHeight"] = "点燃条高度",
+        ["IgniteBarHeightDesc"] = "设置点燃条的高度。",
+
+        ["IgniteThreatBarOptions"] = "点燃威胁条选项",
+        ["IgniteThreatEnable"] = "显示点燃威胁条",
+        ["IgniteThreatEnableDesc"] = "显示点燃拥有者的威胁百分比。",
+        ["IgniteThreatThreshold"] = "点燃威胁阈值",
+        ["IgniteThreatThresholdDesc"] = "威胁条变红的威胁百分比。",
+        ["IgniteThreatBarWidth"] = "点燃威胁条宽度",
+        ["IgniteThreatBarWidthDesc"] = "设置在100%威胁时的点燃威胁条宽度。",
+        ["IgniteThreatBarHeight"] = "点燃威胁条高度",
+        ["IgniteThreatBarHeightDesc"] = "设置点燃威胁条的高度。",
+
+        ["IgniteAutoWarning"] = "自动点燃警告",
+        ["IgniteAutoWarningDesc"] = "当少量点燃跳数会拉仇恨时的警告信息。",
+
+        ["ThreatTrinketAlerts"] = "威胁饰品警报",
+        ["ThreatTrinketAlertsDesc"] = "当其他法师使用雕像或减效之眼时通知",
+
+        ["IgnitePlayerWarning"] = "点燃玩家警告",
+        ["IgnitePlayerWarningDesc"] = "是否显示和播放手动玩家警告的声音",
+        ["IgnitePlayerWarningTrigger"] = "触发点燃警告",
+        ["IgnitePlayerWarningTriggerDesc"] = "/bw 额外->法师工具->触发点燃警告",
+
+        ["IgnitePyroRequest"] = "火焰同步请求",
+        ["IgnitePyroRequestDesc"] = "是否显示和播放手动玩家火焰请求的声音",
+        ["IgnitePyroRequestTrigger"] = "触发火焰请求",
+        ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师工具->触发火焰请求",
 
 		scorch_afflict_test = "^(.+) is afflicted by Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
 		scorch_gains_test = "^(.+) gains Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".

@@ -40,7 +40,7 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-03-22
+	-- Last update: 2024-06-11
 	cmd = "Berserker",
 	
 	fear_cmd = "fear",
