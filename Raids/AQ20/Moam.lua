@@ -1,119 +1,61 @@
 
-----------------------------------
---      Module Declaration      --
-----------------------------------
-
 local module, L = BigWigs:ModuleDeclaration("Moam", "Ruins of Ahn'Qiraj")
-
-
-----------------------------
---      Localization      --
-----------------------------
+module.revision = 30076
+module.enabletrigger = module.translatedName
+module.toggleoptions = {"adds", "paralyze", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Moam",
 
 	adds_cmd = "adds",
-	adds_name = "法力恶魔警报",
-	adds_desc = "警告法力恶魔的出现",
+    adds_name = "法力恶魔警报",
+    adds_desc = "法力恶魔出现时进行警告",
 
 	paralyze_cmd = "paralyze",
-	paralyze_name = "麻痹警报",
-	paralyze_desc = "警告麻痹状态",
+    paralyze_name = "麻痹警报",
+    paralyze_desc = "麻痹出现时进行警告",
 
-	starttrigger = "%s senses your fear.",
-	startwarn = "开始战斗！90秒后出现法力恶魔！",
-	addsbar = "法力恶魔",
-	addsincoming = "还有%s秒出现法力恶魔！",
-	addstrigger = "drains your mana and turns to stone.",
-	addswarn = "法力恶魔出现！莫阿姆麻痹90秒！",
-	paralyzebar = "麻痹",
-	returnincoming = "莫阿姆还有%s秒解除麻痹！",
-	returntrigger = "Energize fades from Moam.",
-	returntrigger2 = "bristles with energy",
-	returnwarn = "莫阿姆解除麻痹！90秒后出现法力恶魔！",
-} end )
 
-L:RegisterTranslations("esES", function() return {
-	--cmd = "Moam",
-
-	--adds_cmd = "adds",
-	adds_name = "Alerta de Maligno de maná",
-	adds_desc = "Avisa para Malignos de maná",
-
-	--paralyze_cmd = "paralyze",
-	paralyze_name = "Alerta de Paralizar",
-	paralyze_desc = "Avisa para Paralizar",
-
-	starttrigger = "%s senses your fear.",
-	startwarn = "¡Moam Efurecido! 90 Segundos hasta que aparecen los adds!",
-	addsbar = "Adds",
-	addsincoming = "¡Malignos de maná entrantes en %s segundos!",
-	addstrigger = "drains your mana and turns to stone.",
-	addswarn = "¡Aparecen los Malignos de maná! Moam Paralizado por 90 segundos!",
-	paralyzebar = "Paralizar",
-	returnincoming = "¡Moam no estará paralizado en %s segundos!",
-	returntrigger = "Energize fades from Moam.",
-	returntrigger2 = "bristles with energy",
-	returnwarn = "¡Moam no está paralizado! 90 segundos hasta que aparecen los Malignos de maná!",
-} end )
-
-L:RegisterTranslations("deDE", function() return {
-	adds_name = "Elementare",
-	adds_desc = "Warnung, wenn Elementare erscheinen.",
-
-	paralyze_name = "Steinform",
-	paralyze_desc = "Warnung, wenn Moam in Steinform.",
-
-	starttrigger = "%s sp\195\188rt Eure Angst.",
-	startwarn = "Moam angegriffen! Elementare in 90 Sekunden!",
-
-	addsbar = "Elementare",
-	addsincoming = "Elementare in %s Sekunden!",
-	addstrigger = "entzieht Euch Euer Mana und versteinert Euch.",
-	addswarn = "Elementare! Moam in Steinform f\195\188r 90 Sekunden.",
-
-	paralyzebar = "Steinform",
-	returnincoming = "Moam erwacht in %s Sekunden!",
-	returntrigger = "Energiezufuhr schwindet von Moam.",
-	returnwarn = "Moam erwacht! Elementare in 90 Sekunden!",
+	trigger_start = "%s senses your fear.",
+	
+	trigger_adds = "drains your mana and turns to stone.",
+    bar_adds = "小怪",
+    msg_incoming = "法力恶魔即将在 %s 秒内到来！",
+    msg_adds = "法力恶魔已出现！莫阿姆麻痹 90 秒！",
+	
+	trigger_energyzeFade = "Energize fades from Moam.",
+	trigger_energyzeFade2 = "bristles with energy",
+    bar_paralyse = "麻痹",
+    msg_energizeFadeSoon = "莫阿姆在 %s 秒后解除麻痹！",
+    msg_energizeFade = "莫阿姆解除麻痹！90 秒后出现法力恶魔！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
 	cmd = "Moam",
 
 	adds_cmd = "adds",
-	adds_name = "法力恶魔警报",
-	adds_desc = "警告法力恶魔的出现",
+    adds_name = "法力恶魔警报",
+    adds_desc = "法力恶魔出现时进行警告",
 
 	paralyze_cmd = "paralyze",
-	paralyze_name = "麻痹警报",
-	paralyze_desc = "警告麻痹状态",
+    paralyze_name = "麻痹警报",
+    paralyze_desc = "麻痹出现时进行警告",
 
-	starttrigger = "%s senses your fear.",
-	startwarn = "开始战斗！90秒后出现法力恶魔！",
-	addsbar = "法力恶魔",
-	addsincoming = "还有%s秒出现法力恶魔！",
-	addstrigger = "drains your mana and turns to stone.",
-	addswarn = "法力恶魔出现！莫阿姆麻痹90秒！",
-	paralyzebar = "麻痹",
-	returnincoming = "莫阿姆还有%s秒解除麻痹！",
-	returntrigger = "Energize fades from Moam.",
-	returntrigger2 = "bristles with energy",
-	returnwarn = "莫阿姆解除麻痹！90秒后出现法力恶魔！",
+
+	trigger_start = "%s senses your fear.",
+	
+	trigger_adds = "drains your mana and turns to stone.",
+    bar_adds = "小怪",
+    msg_incoming = "法力恶魔即将在 %s 秒内到来！",
+    msg_adds = "法力恶魔已出现！莫阿姆麻痹 90 秒！",
+	
+	trigger_energyzeFade = "Energize fades from Moam.",
+	trigger_energyzeFade2 = "bristles with energy",
+    bar_paralyse = "麻痹",
+    msg_energizeFadeSoon = "莫阿姆在 %s 秒后解除麻痹！",
+    msg_energizeFade = "莫阿姆解除麻痹！90 秒后出现法力恶魔！",
 } end )
----------------------------------
---      	Variables 		   --
----------------------------------
 
--- module variables
-module.revision = 20006 -- To be overridden by the module!
-module.enabletrigger = module.translatedName -- string or table {boss, add1, add2}
-module.toggleoptions = {"adds", "paralyze", "bosskill"}
-
--- locals
 local timer = {
 	paralyze = 90,
 	unparalyze = 90,
@@ -122,6 +64,9 @@ local icon = {
 	paralyze = "Spell_Shadow_CurseOfTounges",
 	unparalyze = "Spell_Shadow_CurseOfTounges"
 }
+local color = {
+
+}
 local syncName = {
 	paralyze = "MoamParalyze"..module.revision,
 	unparalyze = "MoamUnparalyze"..module.revision,
@@ -129,60 +74,35 @@ local syncName = {
 
 local firstunparalyze = nil
 
-
-------------------------------
---      Initialization      --
-------------------------------
-
--- called after module is enabled
 function module:OnEnable()
-	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE", "Emote")
-	self:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE", "Emote")
-	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER")
+	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE", "Event")
+	self:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE", "Event")
+	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER", "Event")
 
 	self:ThrottleSync(10, syncName.paralyze)
 	self:ThrottleSync(10, syncName.unparalyze)
 end
 
--- called after module is enabled and after each wipe
 function module:OnSetup()
 	firstunparalyze = true
 end
 
--- called after boss is engaged
 function module:OnEngage()
-	if self.db.profile.adds then
-		self:Message(L["startwarn"], "Important")
-	end
 	self:Unparalyze()
 end
 
--- called after boss is disengaged (wipe(retreat) or victory)
 function module:OnDisengage()
 end
 
-
-------------------------------
---      Event Handlers	    --
-------------------------------
-
-function module:Emote(msg)
-	self:DebugMessage("moam raid boss emote: " .. msg)
-	if string.find(msg, L["addstrigger"]) then -- alternative trigger: Moam gains Energize.
+function module:Event(msg)
+	if string.find(msg, L["trigger_adds"]) then
 		self:Sync(syncName.paralyze)
-	end
-end
-
-function module:CHAT_MSG_SPELL_AURA_GONE_OTHER(msg)
-	if string.find( msg, L["returntrigger"]) then
+	
+	elseif string.find( msg, L["trigger_energyzeFade"]) then
 		self:Sync(syncName.unparalyze)
 	end
 end
 
-
-------------------------------
---      Synchronization	    --
-------------------------------
 
 function module:BigWigs_RecvSync(sync, rest, nick)
 	if sync == syncName.paralyze then
@@ -192,39 +112,39 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 	end
 end
 
-------------------------------
---      Sync Handlers	    --
-------------------------------
 
 function module:Paralyze()
-	self:RemoveBar(L["paralyzebar"])
-	self:RemoveBar(L["addsbar"])
+	self:RemoveBar(L["bar_paralyse"])
+	self:RemoveBar(L["bar_adds"])
+	
 	if self.db.profile.adds then
-		self:Message(L["addswarn"], "Important")
+		self:Message(L["msg_adds"], "Important")
 	end
+	
 	if self.db.profile.paralyze then
-		self:DelayedMessage(timer.paralyze - 60, format(L["returnincoming"], 60), "Attention", nil, nil, true)
-		self:DelayedMessage(timer.paralyze - 30, format(L["returnincoming"], 30), "Attention", nil, nil, true)
-		self:DelayedMessage(timer.paralyze - 15, format(L["returnincoming"], 15), "Urgent", nil, nil, true)
-		self:DelayedMessage(timer.paralyze - 5, format(L["returnincoming"], 5), "Important", nil, nil, true)
-		self:Bar(L["paralyzebar"], timer.paralyze, icon.paralyze)
+		self:DelayedMessage(timer.paralyze - 60, format(L["msg_energizeFadeSoon"], 60), "Attention", nil, nil, true)
+		self:DelayedMessage(timer.paralyze - 30, format(L["msg_energizeFadeSoon"], 30), "Attention", nil, nil, true)
+		self:DelayedMessage(timer.paralyze - 15, format(L["msg_energizeFadeSoon"], 15), "Urgent", nil, nil, true)
+		self:DelayedMessage(timer.paralyze - 5, format(L["msg_energizeFadeSoon"], 5), "Important", nil, nil, true)
+		self:Bar(L["bar_paralyse"], timer.paralyze, icon.paralyze)
 	end
 end
 
 function module:Unparalyze()
-	self:RemoveBar(L["paralyzebar"])
-	self:RemoveBar(L["addsbar"])
+	self:RemoveBar(L["bar_paralyse"])
+	self:RemoveBar(L["bar_adds"])
+	
 	if firstunparalyze then
 		firstunparalyze = false
 	elseif self.db.profile.paralyze then
-		self:Message(L["returnwarn"], "Important")
+		self:Message(L["msg_energizeFade"], "Important")
 	end
 
 	if self.db.profile.adds then
-		self:DelayedMessage(timer.unparalyze - 60, format(L["addsincoming"], 60), "Attention", nil, nil, true)
-		self:DelayedMessage(timer.unparalyze - 30, format(L["addsincoming"], 30), "Attention", nil, nil, true)
-		self:DelayedMessage(timer.unparalyze - 15, format(L["addsincoming"], 15), "Urgent", nil, nil, true)
-		self:DelayedMessage(timer.unparalyze - 5, format(L["addsincoming"], 5), "Important", nil, nil, true)
-		self:Bar(L["addsbar"], timer.unparalyze, icon.unparalyze)
+		self:DelayedMessage(timer.unparalyze - 60, format(L["msg_incoming"], 60), "Attention", nil, nil, true)
+		self:DelayedMessage(timer.unparalyze - 30, format(L["msg_incoming"], 30), "Attention", nil, nil, true)
+		self:DelayedMessage(timer.unparalyze - 15, format(L["msg_incoming"], 15), "Urgent", nil, nil, true)
+		self:DelayedMessage(timer.unparalyze - 5, format(L["msg_incoming"], 5), "Important", nil, nil, true)
+		self:Bar(L["bar_adds"], timer.unparalyze, icon.unparalyze)
 	end
 end
