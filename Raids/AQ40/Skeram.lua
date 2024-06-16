@@ -69,6 +69,9 @@ local timer = {
 local icon = {
 	mc = "Spell_Shadow_Charm",
 }
+local color = {
+	mc = "White",
+}
 local syncName = {
 	mc = "SkeramMC"..module.revision,
 	mcFade = "SkeramMcFade"..module.revision,
@@ -193,7 +196,7 @@ function module:MC(rest)
 		end
 	end
 		
-	self:Bar(rest..L["bar_mc"].. L["clickme"], timer.mc, icon.mc, true, "White")
+	self:Bar(rest..L["bar_mc"].. L["clickme"], timer.mc, icon.mc, true, color.mc)
 	self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mc"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
 	self:Message(rest..L["msg_mc"], "Attention", false, nil, false)
 end

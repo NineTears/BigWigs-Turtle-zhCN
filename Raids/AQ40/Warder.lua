@@ -5,7 +5,7 @@ local bssilence = AceLibrary("Babble-Spell-2.2")["Silence"]
 local bsroots = AceLibrary("Babble-Spell-2.2")["Entangling Roots"]
 local bsdust = AceLibrary("Babble-Spell-2.2")["Dust Cloud"]
 
-module.revision = 30067
+module.revision = 30075
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"fear", "silence", "roots", "dust", "warnings"}
 module.trashMod = true
