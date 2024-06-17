@@ -624,7 +624,7 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 	
-	if string.find(msg, " "..L["Drakonid"].."死了") then
+	if string.find(msg, L["Drakonid"].."死亡了") then
 		drakonidsSelfCount = drakonidsSelfCount + 1
 		if drakonidsSelfCount <= 46 then
 			self:Sync(syncName.addDead .. " " .. drakonidsSelfCount)
@@ -661,23 +661,23 @@ function module:CHAT_MSG_MONSTER_YELL(msg)
 		self:Sync(syncName.landingNow)
 	
 	elseif string.find(msg, L["trigger_classCall_Druid"]) then
-		self:Sync(syncName.classCall.." ".."Druid")
+		self:Sync(syncName.classCall.." "..BC["Druid"])
 	elseif string.find(msg, L["trigger_classCall_Hunter"]) then
-		self:Sync(syncName.classCall.." ".."Hunter")
+		self:Sync(syncName.classCall.." "..BC["Hunter"])
 	elseif string.find(msg, L["trigger_classCall_Mage"]) then
-		self:Sync(syncName.classCall.." ".."Mage")
+		self:Sync(syncName.classCall.." "..BC["Mage"])
 	elseif string.find(msg, L["trigger_classCall_Paladin"]) then
-		self:Sync(syncName.classCall.." ".."Paladin")
+		self:Sync(syncName.classCall.." "..BC["Paladin"])
 	elseif string.find(msg, L["trigger_classCall_Priest"]) then
-		self:Sync(syncName.classCall.." ".."Priest")
+		self:Sync(syncName.classCall.." "..BC["Priest"])
 	elseif string.find(msg, L["trigger_classCall_Rogue"]) then
-		self:Sync(syncName.classCall.." ".."Rogue")
+		self:Sync(syncName.classCall.." "..BC["Rogue"])
 	elseif string.find(msg, L["trigger_classCall_Shaman"]) then
-		self:Sync(syncName.classCall.." ".."Shaman")
+		self:Sync(syncName.classCall.." "..BC["Shaman"])
 	elseif string.find(msg, L["trigger_classCall_Warlock"]) then
-		self:Sync(syncName.classCall.." ".."Warlock")
+		self:Sync(syncName.classCall.." "..BC["Warlock"])
 	elseif string.find(msg, L["trigger_classCall_Warrior"]) then
-		self:Sync(syncName.classCall.." ".."Warrior")
+		self:Sync(syncName.classCall.." "..BC["Warrior"])
 		
 	elseif msg == L["trigger_boneConstructs"] then
 		self:Sync(syncName.boneConstructs)
@@ -686,7 +686,7 @@ end
 
 function module:PLAYER_TARGET_CHANGED()
 	if phase == "phase1" and UnitName("Target") ~= nil then
-		if string.find(UnitName("Target"), " "..L["Drakonid"]) then
+		if string.find(UnitName("Target"), L["Drakonid"]) then
 			if string.find(UnitName("Target"), L["Red"]) and not redFound then
 				self:Sync(syncName.drakonidColor .. " " .. "Red")
 			elseif string.find(UnitName("Target"), L["Blue"]) and not blueFound then
