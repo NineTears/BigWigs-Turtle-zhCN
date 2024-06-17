@@ -200,6 +200,9 @@ L:RegisterTranslations("enUS", function()
 	Dwarf = "Dwarf",
 	Alliance = "Alliance",
 	Horde = "Horde",
+	inminutesseconds = " in (.+) Minutes (.+) Seconds.",
+	in_plus = " in (.+) (.+)",
+	inute = "inute",
 	}
 end)
 
@@ -292,6 +295,9 @@ L:RegisterTranslations("zhCN", function()
 	Dwarf = "矮人",
 	Alliance = "联盟",
 	Horde = "部落",
+	inminutesseconds = "在 (.+) 分钟 (.+) 秒。",
+	in_plus = "在 (.+) (.+)",
+	inute = "分",
 	}
 end)
 
@@ -753,7 +759,7 @@ end
 
 function BigWigsCommonAuras:CHAT_MSG_SYSTEM(msg)
 	if string.find(msg, L["trigger_restartMinSec"]) or string.find(msg, L["trigger_shutdownMinSec"]) then
-		local _, _, minutes, seconds = string.find(msg, " in (.+) Minutes (.+) Seconds.")
+		local _, _, minutes, seconds = string.find(msg, L["inminutesseconds"])
 		timeToShutdown = tonumber(minutes) * 60 + tonumber(seconds)
 
 		if self.db.profile.shutdown then
@@ -771,8 +777,8 @@ function BigWigsCommonAuras:CHAT_MSG_SYSTEM(msg)
 
 
 	elseif string.find(msg, L["trigger_restart"]) or string.find(msg, L["trigger_shutdown"]) then
-		local _, _, digits, minSec = string.find(msg, " in (.+) (.+)")
-		if string.find(minSec, "inute") then
+		local _, _, digits, minSec = string.find(msg, L["in_plus"])
+		if string.find(minSec, L["inute"]) then
 			timeToShutdown = tonumber(digits) * 60
 		else
 			timeToShutdown = tonumber(digits)

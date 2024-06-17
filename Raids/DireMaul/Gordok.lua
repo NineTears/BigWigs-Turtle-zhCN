@@ -4,6 +4,9 @@
 ----------------------------------
 
 local module, L = BigWigs:ModuleDeclaration("King Gordok", "Dire Maul")
+local bswarstomp = AceLibrary("Babble-Spell-2.2")["War Stomp"]
+local bsmortalstrike = AceLibrary("Babble-Spell-2.2")["Mortal Strike"]
+local bscharge = AceLibrary("Babble-Spell-2.2")["Charge"]
 
 module.revision = 20002
 module.enabletrigger = module.translatedName
@@ -188,11 +191,11 @@ end
 ------------------------------
 
 function module:Event(msg)
-	if string.find(msg, "War Stomp") then
+	if string.find(msg, bswarstomp) then
 		self:Sync(syncName.warStomp)
-	elseif string.find(msg, "Mortal Strike") then
+	elseif string.find(msg, bsmortalstrike) then
 		self:Sync(syncName.mortalStrike)
-	elseif string.find(msg, "Charge") then
+	elseif string.find(msg, bscharge) then
 		self:Sync(syncName.charge)
 	end
 end
