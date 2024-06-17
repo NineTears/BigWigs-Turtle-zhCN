@@ -1,11 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Chromaggus", "Blackwing Lair")
 local BC = AceLibrary("Babble-Class-2.2")
-local BST = AceLibrary("Babble-SpellTree-2.2")
-local bsignite = AceLibrary("Babble-Spell-2.2")["Ignite"]
-local bscurseofdoom = AceLibrary("Babble-Spell-2.2")["Curse of Doom"]
-local bsstarfire = AceLibrary("Babble-Spell-2.2")["Starfire"]
-local bsthunderfury = AceLibrary("Babble-Spell-2.2")["Thunderfury"]
 local bscorrosiveacid = AceLibrary("Babble-Spell-2.2")["Corrosive Acid"]
 local bsfrostburn = AceLibrary("Babble-Spell-2.2")["Frost Burn"]
 local bsigniteflesh = AceLibrary("Babble-Spell-2.2")["Ignite Flesh"]
@@ -103,6 +98,17 @@ L:RegisterTranslations("enUS", function() return {
 			
 	trigger_bronzeYou = "You are afflicted by Brood Affliction: Bronze.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_bronzeYou = "龙血之痛：青铜 - 考虑使用沙漏之沙",
+    
+    fire = "Fire",
+	frost = "Frost",
+	shadow = "Shadow",
+	nature = "Nature",
+	arcane = "Arcane",
+	
+	curseofdoom = "Curse of Doom",
+	ignite = "Ignite",
+	starfire = "Starfire",
+	thunderfury = "Thunderfury",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -192,6 +198,17 @@ L:RegisterTranslations("zhCN", function() return {
 			
 	trigger_bronzeYou = "You are afflicted by Brood Affliction: Bronze.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_bronzeYou = "龙血之痛：青铜 - 考虑使用沙漏之沙",
+    
+    fire = "火焰",
+	frost = "冰霜",
+	shadow = "暗影",
+	nature = "自然",
+	arcane = "奥术",
+	
+	curseofdoom = "厄运诅咒",
+	ignite = "点燃",
+	starfire = "星火术",
+	thunderfury = "雷霆之怒",
 } end )
 
 local timer = {
@@ -393,23 +410,23 @@ function module:Event(msg)
 		dmg = tonumber(dmg)
 		if partial and partial ~= "" then dmg = tonumber(dmg) + tonumber(partial) end
 		
-		if school == BST["Arcane"] then
+		if school == L["arcane"] then
 			if dmg >= 250 then
 				self:Sync(syncName.vulnerability .. " " ..school)
 			end
 			
-		elseif school == BST["Fire"] and not string.find(spellName, bsignite) then
+		elseif school == L["fire"] and not string.find(spellName, L["ignite"]) then
 			if dmg >= 400 then
 				self:Sync(syncName.vulnerability .. " " ..school)
 			end
 			
-		elseif school == BST["Nature"] then
+		elseif school == L["nature"] then
 			if dmg >= 300 then
 				self:Sync(syncName.vulnerability .. " " ..school)
 			end
 		
-		elseif school == BST["Shadow"] then
-			if string.find(spellName, bscurseofdoom) then
+		elseif school == L["shadow"] then
+			if string.find(spellName, L["curseofdoom"]) then
 				if dmg >= 3000 then
 					self:Sync(syncName.vulnerability .. " " ..school)
 				end
@@ -432,8 +449,8 @@ function module:Event(msg)
 		dmg = tonumber(dmg)
 		if partial and partial ~= "" then dmg = tonumber(dmg) + tonumber(partial) end
 		
-		if school == BST["Arcane"] then
-			if string.find(spellName, bsstarfire) then
+		if school == L["arcane"] then
+			if string.find(spellName, L["starfire"]) then
 				if (hit and dmg >= 800) or (crit and dmg >= 1200) then 
 					self:Sync(syncName.vulnerability .. " " ..school)
 				end
@@ -443,18 +460,18 @@ function module:Event(msg)
 				end
 			end
 			
-		elseif school == BST["Fire"] then
+		elseif school == L["fire"] then
 			if (hit and dmg >= 1300) or (crit and dmg >= 2600) then 
 				self:Sync(syncName.vulnerability .. " " ..school)
 			end
 		
-		elseif school == BST["Frost"] then
+		elseif school == L["frost"] then
 			if (hit and dmg >= 800) or (crit and dmg >= 1600) then 
 				self:Sync(syncName.vulnerability .. " " ..school)
 			end
 		
-		elseif school == BST["Nature"] then
-			if string.find(spellName, bsthunderfury) then
+		elseif school == L["nature"] then
+			if string.find(spellName, L["thunderfury"]) then
 				if (hit and dmg >= 800) or (crit and dmg >= 1200) then 
 					self:Sync(syncName.vulnerability .. " " ..school)
 				end
@@ -464,7 +481,7 @@ function module:Event(msg)
 				end
 			end
 		
-		elseif school == BST["Shadow"] then
+		elseif school == L["shadow"] then
 			if (hit and dmg >= 1700) or (crit and dmg >= 3400) then 
 				self:Sync(syncName.vulnerability .. " " ..school)
 			end
@@ -617,35 +634,35 @@ function module:Vulnerability(rest)
 	if rest == "???" then
 		vulnerabilityResetTime = GetTime()
 	elseif (GetTime() > (vulnerabilityResetTime + 3)) then
-		if currentVulnerability == BST["Arcane"] then
+		if currentVulnerability == L["arcane"] then
 			icon.vulnerability = icon.vulnerability_arcane
 			color.vulnerability = color.vulnerability_arcane
 			if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Druid"] then
 				self:WarningSign(icon.vulnerability, 1)
 			end
 		
-		elseif currentVulnerability == BST["Fire"] then
+		elseif currentVulnerability == L["fire"] then
 			icon.vulnerability = icon.vulnerability_fire
 			color.vulnerability = color.vulnerability_fire
 			if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Warlock"] then
 				self:WarningSign(icon.vulnerability, 1)
 			end
 			
-		elseif currentVulnerability == BST["Frost"] then
+		elseif currentVulnerability == L["frost"] then
 			icon.vulnerability = icon.vulnerability_frost
 			color.vulnerability = color.vulnerability_frost
 			if UnitClass("Player") == BC["Mage"] then
 				self:WarningSign(icon.vulnerability, 1)
 			end
 			
-		elseif currentVulnerability == BST["Nature"] then
+		elseif currentVulnerability == L["nature"] then
 			icon.vulnerability = icon.vulnerability_nature
 			color.vulnerability = color.vulnerability_nature
 			if UnitClass("Player") == BC["Shaman"] or UnitClass("Player") == BC["Druid"] then
 				self:WarningSign(icon.vulnerability, 1)
 			end
 			
-		elseif currentVulnerability == BST["Shadow"] then
+		elseif currentVulnerability == L["shadow"] then
 			icon.vulnerability = icon.vulnerability_shadow
 			color.vulnerability = color.vulnerability_shadow
 			if UnitClass("Player") == BC["Warlock"] or UnitClass("Player") == BC["Priest"] then
