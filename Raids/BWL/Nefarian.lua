@@ -196,7 +196,9 @@ L:RegisterTranslations("enUS", function() return {
 	
     trigger_parryYou = "You attack. Nefarian parries.", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "奈法利安招架了你的攻击 - 别再害坦克了，笨蛋！",
-    Drakonid = "Drakonid",
+    
+    ndrakoniddies = " Drakonid dies.",
+    drakonid = "Drakonid",
     Red = "Red",
     Blue = "Blue",
     Green = "Green",
@@ -372,7 +374,9 @@ L:RegisterTranslations("zhCN", function() return {
 	
     trigger_parryYou = "You attack. Nefarian parries.", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "奈法利安招架了你的攻击 - 别再害坦克了，笨蛋！",
-    Drakonid = "龙兽",
+    
+    ndrakoniddies = "龙兽死亡了",
+    drakonid = "龙兽",
     Red = "红色",
     Blue = "蓝色",
     Green = "绿色",
@@ -624,7 +628,7 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 	
-	if string.find(msg, L["Drakonid"].."死亡了") then
+	if string.find(msg, L["ndrakoniddies"]) then
 		drakonidsSelfCount = drakonidsSelfCount + 1
 		if drakonidsSelfCount <= 46 then
 			self:Sync(syncName.addDead .. " " .. drakonidsSelfCount)
@@ -686,7 +690,7 @@ end
 
 function module:PLAYER_TARGET_CHANGED()
 	if phase == "phase1" and UnitName("Target") ~= nil then
-		if string.find(UnitName("Target"), L["Drakonid"]) then
+		if string.find(UnitName("Target"), L["drakonid"]) then
 			if string.find(UnitName("Target"), L["Red"]) and not redFound then
 				self:Sync(syncName.drakonidColor .. " " .. "Red")
 			elseif string.find(UnitName("Target"), L["Blue"]) and not blueFound then
