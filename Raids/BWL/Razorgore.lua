@@ -260,7 +260,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_warStomp = "Razorgore the Untamed's War Stomp", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_warStompDur = "战争践踏",
     bar_warStompCd = "战争践踏冷却",
-    you = "你",
+    you = "you",
 } end)
 
 local timer = {

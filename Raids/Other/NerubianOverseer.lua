@@ -141,7 +141,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_explode = "(.+) explodes.",--CHAT_MSG_RAID_BOSS_EMOTE
 	trigger_explodeYou = "You explode.",--CHAT_MSG_RAID_BOSS_EMOTE
     msg_explode = " 爆炸了，诞生了4个小蛛魔！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

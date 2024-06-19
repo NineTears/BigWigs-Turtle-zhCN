@@ -36,7 +36,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_blindingSandOther = "(.+) is afflicted by Blinding Sand.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_blindingSandFade = "Blinding Sand fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_blindingSand = "致盲",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

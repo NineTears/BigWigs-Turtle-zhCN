@@ -74,7 +74,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_shadowOfEbonroc = " 受到了埃博诺克之影 - 嘲讽！",
     bar_shadowOfEbonrocDur = " 埃博诺克之影",
     bar_shadowOfEbonrocCd = "埃博诺克之影冷却",
-    you = "你",
+    you = "you",
 } end)
 
 local timer = {

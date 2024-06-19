@@ -59,7 +59,7 @@ L:RegisterTranslations("zhCN", function() return {
     kill_trigger = "You only delay",
 
     ["You have slain %s!"] = "你已经击败了%s！",
-    you = "你",
+    you = "you",
     clickme = " >点击我！<",
 } end )
 

@@ -307,7 +307,7 @@ L:RegisterTranslations("zhCN", function() return {
 	The yells?
 	Gate Construct, there is 8, do they spawn at the same time?
 	]]--
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

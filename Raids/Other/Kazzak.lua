@@ -141,7 +141,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_deadYou = "You die.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	trigger_deadOther = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
     msg_corruptSoul = " 死亡治疗了魔王卡扎克！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

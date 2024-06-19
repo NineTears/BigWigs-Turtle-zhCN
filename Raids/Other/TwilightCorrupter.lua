@@ -76,7 +76,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     subStringDead = "(.+) dies.",
     clickme = " >点击我！<",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

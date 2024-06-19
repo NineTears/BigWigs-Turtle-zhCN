@@ -96,7 +96,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_addDead = "/2 增援死亡",
     msg_bringBossBack = "增援死了，把达基萨斯拉回来！",
     generaldrakkisathdies = "达基萨斯将军已死。",
-    you = "你",
+    you = "you",
 } end)
 
 local timer = {

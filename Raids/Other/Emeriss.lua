@@ -147,7 +147,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_corruption = "大地的堕落",
     msg_corruption = "大地的堕落 - 每2秒伤害提高20% - 补充治疗！",
     msg_corruptionSoon = "大地的堕落即将来临",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

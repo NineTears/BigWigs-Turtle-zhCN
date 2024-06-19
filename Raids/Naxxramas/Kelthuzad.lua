@@ -341,7 +341,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
     clickme = " >点击我！<",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

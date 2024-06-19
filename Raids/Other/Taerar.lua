@@ -157,7 +157,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_poisonCloud = "You are afflicted by Poison Cloud.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_poisonCloudFade = "Poison Cloud fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     msg_poisonCloud = "远离毒云！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

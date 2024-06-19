@@ -100,7 +100,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_dismember = " 斩杀",
 	
 	msg_phase2 = "第二阶段，DPS全力输出布鲁!",
-	you = "你",
+	you = "you",
 } end )
 
 local timer = {

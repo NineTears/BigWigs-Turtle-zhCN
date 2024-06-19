@@ -156,7 +156,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_engage = "You desecrate the Master's lands with your filthy footsteps!",--CHAT_MSG_MONSTER_YELL
     clickme = " >点击我！<",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

@@ -220,7 +220,7 @@ L:RegisterTranslations("zhCN", function() return {
     sporebar = "下一个孢子 %d",
     sporebar_group = "下一孢子 - 分组 %d",
 
-    you = "你",
+    you = "you",
     are = "受到了",
     fungalBloom = "蘑菇花",	--“蘑菇花”技能
 

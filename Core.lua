@@ -365,7 +365,7 @@ L:RegisterTranslations("zhCN", function()
 	["Lieutenant General Andorov"] = "安多洛夫中将",
 
 	["You have slain %s!"] = "你已击败%s!",
-	you = "你",
+	you = "you",
 	}
 end)
 

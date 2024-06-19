@@ -89,7 +89,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_knock = "Broodlord Lashlayer's Knock Away", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_knockCd = "击飞冷却",
     bar_knockSoon = "即将击飞...",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

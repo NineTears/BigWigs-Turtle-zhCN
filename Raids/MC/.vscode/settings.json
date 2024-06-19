@@ -1,0 +1,7 @@
+{
+    "Lua.diagnostics.globals": [
+        "SetRaidTargetIcon",
+        "DEFAULT_CHAT_FRAME",
+        "YOU"
+    ]
+}

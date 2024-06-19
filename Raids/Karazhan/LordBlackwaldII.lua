@@ -95,7 +95,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_engage = "You dare disturb the Dark Rider Lord?",--CHAT_MSG_MONSTER_YELL
     clickme = " >点击我！<",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

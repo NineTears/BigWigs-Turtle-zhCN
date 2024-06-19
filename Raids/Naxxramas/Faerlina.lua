@@ -195,7 +195,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
     msg_dispelCast = "驱散了一个信徒！请勿驱散心灵控制！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

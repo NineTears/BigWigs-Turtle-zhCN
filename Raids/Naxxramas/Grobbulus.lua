@@ -100,7 +100,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
 	msg_lowHp = "格罗布鲁斯血量<30% - 更频繁注射",
-	you = "你",
+	you = "you",
 } end )
 
 local timer = {

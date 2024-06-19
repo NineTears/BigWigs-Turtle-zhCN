@@ -190,7 +190,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_thundercrash = "Thundercrash",
 	bar_thundercrash = "雷霆冲击 CD",
 	clickme = " >点击我！<",
-	you = "你",
+	you = "you",
 } end )
 
 local timer = {

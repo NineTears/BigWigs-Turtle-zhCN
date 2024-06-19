@@ -1,20 +1,13 @@
 
 local module, L = BigWigs:ModuleDeclaration("Gehennas", "Molten Core")
 
-module.revision = 30012
+module.revision = 30075
 module.enabletrigger = module.translatedName
-module.toggleoptions = {"adds", "curse", "rain", "bosskill"}
-
-module.defaultDB = {
-	adds = false,
-}
+module.toggleoptions = {"curse", "rain", "adds", "bosskill"}
+module.wipemobs = {"Flamewaker"}
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Gehennas",
-
-    adds_cmd = "adds",
-    adds_name = "死亡增援计数器",
-    adds_desc = "通报烈焰行者死亡",
+	cmd = "Gehennas",
 
     curse_cmd = "curse",
     curse_name = "基赫纳斯的诅咒警报",
@@ -22,31 +15,27 @@ L:RegisterTranslations("enUS", function() return {
 
     rain_cmd = "rain",
     rain_name = "火焰之雨警报",
-    rain_desc = "火焰之雨出现时显示警告信号",
-    
-    curse_trigger = "afflicted by Gehennas' Curse.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    curse_trigger2 = "Gehennas' Curse was resisted",
-    curse_warn_soon = "基赫纳斯的诅咒5秒后到来！",
-    curse_bar = "基赫纳斯的诅咒",
-    
-    rain_run_trigger = "You suffer (.*) Fire damage from Gehennas's Rain of Fire.",--You suffer 958 Fire damage from Gehennas's Rain of Fire. CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    
-    dead1 = "Flamewaker dies",
-    addmsg = "%d/2烈焰行者死亡！",
-    flamewaker_name = "Flamewaker",
+    rain_desc = "火焰之雨出现时进行警告",
 
-    ["Rain of Fire"] = true,
-    ["Rain of Fire"] = "火焰之雨",
+    adds_cmd = "adds",
+    adds_name = "小怪死亡警报",
+    adds_desc = "小怪死亡时进行警告",
+	
+	
+	trigger_curse = "afflicted by Gehennas' Curse.", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_curse2 = "Gehennas' Curse was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_curseCd = "基赫纳斯的诅咒冷却",
+    msg_curse = "基赫纳斯的诅咒 - 解除诅咒！",
+
+    trigger_rainOfFire = "You are afflicted by Rain of Fire.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_rainOfFireFade = "Rain of Fire fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    msg_addDead = "/2 烈焰行者死亡",
+    c_flamewaker = "Flamewaker",
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
-    cmd = "Gehennas",
-
-    adds_cmd = "adds",
-    adds_name = "死亡增援计数器",
-    adds_desc = "通报烈焰行者死亡",
+	cmd = "Gehennas",
 
     curse_cmd = "curse",
     curse_name = "基赫纳斯的诅咒警报",
@@ -54,102 +43,132 @@ L:RegisterTranslations("zhCN", function() return {
 
     rain_cmd = "rain",
     rain_name = "火焰之雨警报",
-    rain_desc = "火焰之雨出现时显示警告信号",
-    
-    curse_trigger = "afflicted by Gehennas' Curse.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    curse_trigger2 = "Gehennas' Curse was resisted",
-    curse_warn_soon = "基赫纳斯的诅咒5秒后到来！",
-    curse_bar = "基赫纳斯的诅咒",
-    
-    rain_run_trigger = "You suffer (.*) Fire damage from Gehennas's Rain of Fire.",--You suffer 958 Fire damage from Gehennas's Rain of Fire. CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    
-    dead1 = "Flamewaker dies",
-    addmsg = "%d/2烈焰行者死亡！",
-    flamewaker_name = "烈焰行者祭司",
+    rain_desc = "火焰之雨出现时进行警告",
 
-    ["Rain of Fire"] = "火焰之雨",
+    adds_cmd = "adds",
+    adds_name = "小怪死亡警报",
+    adds_desc = "小怪死亡时进行警告",
+	
+	
+	trigger_curse = "afflicted by Gehennas' Curse.", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_curse2 = "Gehennas' Curse was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_curseCd = "基赫纳斯的诅咒冷却",
+    msg_curse = "基赫纳斯的诅咒 - 解除诅咒！",
+
+    trigger_rainOfFire = "You are afflicted by Rain of Fire.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_rainOfFireFade = "Rain of Fire fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+
+    msg_addDead = "/2 烈焰行者死亡",
+    c_flamewaker = "烈焰行者",
 } end)
 
 local timer = {
-	firstCurse = 8,
-	firstRain = 7,
-	rainTick = 2,
-	rainDuration = 6,
-	nextRain = 19, -- 12, 18
-	earliestCurse = 22,
-	latestCurse = 30,
+	curseFirstCd = 8,
+	curseCd = {22,30},
+	
+	rainOfFire = 10,
 }
 local icon = {
 	curse = "Spell_Shadow_BlackPlague",
-	rain = "Spell_Shadow_RainOfFire",
+	rainOfFire = "Spell_Shadow_RainOfFire",
+}
+local color = {
+	curseCd = "Blue",
 }
 local syncName = {
 	curse = "GehennasCurse"..module.revision,
-	add = "GehennasAddDead"
+	addDead = "GehennasAddDead"..module.revision,
 }
 
-local flamewaker = 0
-
-module.wipemobs = { L["flamewaker_name"] }
+local addDead = 0
 
 function module:OnEnable()
-	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Event")--Curse, RainOfFire
-	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", "Event")--Curse, RainOfFire
-	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", "Event")--Curse, RainOfFire
+	--self:RegisterEvent("CHAT_MSG_SAY", "Event") --Debug
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Event") --trigger_curse, trigger_rainOfFire
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", "Event") --trigger_curse
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", "Event") --trigger_curse
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE", "Event") --trigger_curse2
+	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE", "Event") --trigger_curse2
+	
+	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_SELF", "Event") --trigger_rainOfFireFade
+	
 
 	self:ThrottleSync(10, syncName.curse)
+	self:ThrottleSync(0.5, syncName.addDead)
 end
 
 function module:OnSetup()
 	self.started = false
-	flamewaker = 0
 
 	self:RegisterEvent("CHAT_MSG_COMBAT_HOSTILE_DEATH")
 end
 
 function module:OnEngage()
+	if self.core:IsModuleActive("Flame Imp", "Molten Core") then self:TriggerEvent("BigWigs_RebootModule", "Flame Imp", "Molten Core") end
+	
+	addDead = 0
+	
 	if self.db.profile.curse then
-		self:DelayedMessage(timer.firstCurse - 5, L["curse_warn_soon"], "Urgent", nil, nil, true)
-		self:Bar(L["curse_bar"], timer.firstCurse, icon.curse, true, "Blue")
+		self:Bar(L["bar_curseCd"], timer.curseFirstCd, icon.curse, true, color.curseCd)
 	end
 end
 
 function module:OnDisengage()
 end
 
-function module:Event(msg)
-	if string.find(msg, L["rain_run_trigger"]) and self.db.profile.rain then
-		self:WarningSign(icon.rain, 0.7)
-	elseif ((string.find(msg, L["curse_trigger"])) or (string.find(msg, L["curse_trigger2"]))) then
-		self:Sync(syncName.curse)
-	end
-end
-
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 
-	if string.find(msg, L["dead1"]) then
-		self:Sync(syncName.add .. " " .. tostring(flamewaker + 1))
+	if (msg == string.format(UNITDIESOTHER, L["c_flamewaker"])) then
+		addDead = addDead + 1
+		if addDead <= 2 then
+			self:Sync(syncName.addDead .. " " .. addDead)
+		end
 	end
 end
+
+function module:Event(msg)
+	if string.find(msg, L["trigger_curse"]) or string.find(msg, L["trigger_curse2"]) then
+		self:Sync(syncName.curse)
+	
+	elseif msg == L["trigger_rainOfFire"] and self.db.profile.rain then
+		self:RainOfFire()
+	elseif msg == L["trigger_rainOfFireFade"] and self.db.profile.rain then
+		self:RainOfFireFade()
+	end
+end
+
 
 function module:BigWigs_RecvSync(sync, rest, nick)
 	if sync == syncName.curse and self.db.profile.curse then
 		self:Curse()
-	elseif sync == syncName.add and rest and rest ~= "" and self.db.profile.adds then
-		self:AddsDead(rest)
+	elseif sync == syncName.addDead and rest and self.db.profile.adds then
+		self:AddDead(rest)
 	end
 end
+
 
 function module:Curse()
-	self:DelayedMessage(timer.earliestCurse - 5, L["curse_warn_soon"], "Urgent", nil, nil, true)
-	self:IntervalBar(L["curse_bar"], timer.earliestCurse, timer.latestCurse, icon.curse, true, "Blue")
+	self:IntervalBar(L["bar_curseCd"], timer.curseCd[1], timer.curseCd[2], icon.curse, true, color.curseCd)
+	
+	if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Druid"] then
+		self:Message(L["msg_curse"], "Urgent", false, nil, false)
+		self:WarningSign(icon.curse, 0.7)
+		self:Sound("Beware")
+	end
 end
 
-function module:AddsDead(rest)
-	rest = tonumber(rest)
-	if rest <= 2 and flamewaker < rest then
-		flamewaker = rest
-		self:Message(string.format(L["addmsg"], flamewaker), "Positive")
-	end
+function module:RainOfFire()
+	self:WarningSign(icon.rainOfFire, timer.rainOfFire)
+	self:Sound("Info")
+end
+
+function module:RainOfFireFade()
+	self:RemoveWarningSign(icon.rainOfFire)
+end
+
+function module:AddDead(rest)
+	self:Message(rest..L["msg_addDead"], "Positive", false, nil, false)
 end

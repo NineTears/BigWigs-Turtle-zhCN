@@ -134,7 +134,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_drawSpiritStun = "afflicted by Draw Spirit.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_drawSpiritStun = "眩晕",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

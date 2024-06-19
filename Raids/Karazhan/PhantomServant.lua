@@ -46,7 +46,7 @@ L:RegisterTranslations("zhCN", function() return {
     --bar_phantomScreamAfflicted = " Silenced",
 
     ["You have slain %s!"] = "你杀死了%s！",
-    you = "你",
+    you = "you",
 } end )
 
 module.defaultDB = {

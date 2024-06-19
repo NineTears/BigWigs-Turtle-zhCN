@@ -59,7 +59,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_mcFade = "Mental Domination fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mc = " 精神控制",
     clickme = " >点击我！<",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

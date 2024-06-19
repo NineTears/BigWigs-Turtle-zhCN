@@ -43,7 +43,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_deathCoil = " 死亡缠绕",
 
     ["You have slain %s!"] = "你已经击败了 %s！",
-    you = "你",
+    you = "you",
 } end )
 
 module.defaultDB = {

@@ -44,7 +44,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_wyrmkinsVenom = " 毒液",
     
     ["You have slain %s!"] = "你已击败了%s！",
-    you = "你",
+    you = "you",
 } end )
 
 module.defaultDB = {

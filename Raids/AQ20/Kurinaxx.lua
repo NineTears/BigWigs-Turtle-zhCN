@@ -62,7 +62,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_enrage = "Kurinnaxx gains Enrage.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_enrage = "库林纳克斯激怒了！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

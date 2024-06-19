@@ -127,7 +127,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_dust = " 中了闪光尘",
     
     trigger_yellSmt = "Most impressive, it would appear your skills do match your bravery.",-- CHAT_MSG_MONSTER_YELL
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

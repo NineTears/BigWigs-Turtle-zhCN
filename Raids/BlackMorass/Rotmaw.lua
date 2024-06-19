@@ -56,7 +56,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_consumeOther = "(.+) is afflicted by Consume.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_consumeFade = "Consume fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_consume = "被吞噬",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

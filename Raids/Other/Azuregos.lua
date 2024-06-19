@@ -152,7 +152,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_frostBreath = "冰霜吐息 = 法力燃烧... 不要站在前面！",
 
     ["You have slain %s!"] = "你杀死了 %s！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

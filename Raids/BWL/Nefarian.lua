@@ -382,7 +382,7 @@ L:RegisterTranslations("zhCN", function() return {
     Green = "绿色",
     Black = "黑色",
     Bronze = "青铜",
-    you = "你",
+    you = "you",
 } end)
 
 local timer = {

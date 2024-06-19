@@ -120,7 +120,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_deathCoil = "死亡缠绕",
     
     --Lady Vashj -> Thunderstorm Cloud -> CLOG
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

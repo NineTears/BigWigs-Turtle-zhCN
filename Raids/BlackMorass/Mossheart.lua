@@ -88,7 +88,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_rejuvenationFade = "Rejuvenation fades from Mossheart.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_rejuvenation = "回春术",
     msg_rejuvenation = "莫斯哈特获得回春术，快驱散！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

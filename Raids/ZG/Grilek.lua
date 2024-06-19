@@ -117,7 +117,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_sweepingStrikes2 = "Gri'lek is afflicted Sweeping Strikes.", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
     trigger_sweepingStrikesFade = "Sweeping Strikes fades from Gri'lek.", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_sweepingStrikes = "横扫攻击！",
-    you = "你",
+    you = "you",
 } end )
 
 local timer = {

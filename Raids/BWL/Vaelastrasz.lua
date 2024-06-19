@@ -155,7 +155,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_parryYou = "You attack. Vaelastrasz the Corrupt parries.", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "堕落的瓦拉斯塔兹招架了你的攻击 - 别再害坦克了，笨蛋！",
-    you = "你",
+    you = "you",
 } end)
 
 local timer = {

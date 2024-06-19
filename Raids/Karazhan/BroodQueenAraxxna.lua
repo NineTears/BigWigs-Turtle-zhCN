@@ -75,7 +75,7 @@ L:RegisterTranslations("zhCN", function() return {
 	msg_eggSpawn = "2个卵即将孵化！",
 	
 	trigger_engage = "What goes there, new prey to be entangled?",--CHAT_MSG_MONSTER_YELL
-	you = "你",
+	you = "you",
 } end )
 
 local timer = {
@@ -99,8 +99,6 @@ local syncName = {
 	leechingBiteFade = "BroodQueenAraxxnaLeechingBiteFade"..module.revision,
 	eggSpawn = "BroodQueenAraxxnaEggSpawn"..module.revision,
 }
-
---module:RegisterYellEngage(L["trigger_engage"])
 
 function module:OnEnable()
 	--self:RegisterEvent("CHAT_MSG_SAY", "Event")--Debug
