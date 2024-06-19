@@ -167,7 +167,7 @@ L:RegisterTranslations("enUS", function()
 	--["Solnius"] = "索尔纽斯",
 	--["Lieutenant General Andorov"] = "安多洛夫中将",
 
-	["You have slain %s!"] = "你已击败%s!",
+	["You have slain %s!"] = "You have slain %s!",
 	you = "you",
 	}
 end)
