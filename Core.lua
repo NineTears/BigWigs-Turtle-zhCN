@@ -1,4 +1,3 @@
-
 ------------------------------
 --      Are you local?      --
 ------------------------------
@@ -174,119 +173,119 @@ end)
 
 L:RegisterTranslations("esES", function()
 	return {
-	["%s mod enabled"] = "Módulo de %s activado",
-	["Target monitoring enabled"] = "Monitorización del objetivo activado",
-	["Target monitoring disabled"] = "Monitorización del objetivo desactivado",
-	["%s engaged!"] = "¡Entrando en combate con %s!",
-	["%s has been defeated"] = "%s fue derrotado",     -- "<boss> has been defeated"
-	["%s have been defeated"] = "%s fueron derrotados",    -- "<bosses> have been defeated"
+		["%s mod enabled"] = "Módulo de %s activado",
+		["Target monitoring enabled"] = "Monitorización del objetivo activado",
+		["Target monitoring disabled"] = "Monitorización del objetivo desactivado",
+		["%s engaged!"] = "¡Entrando en combate con %s!",
+		["%s has been defeated"] = "%s fue derrotado", -- "<boss> has been defeated"
+		["%s have been defeated"] = "%s fueron derrotados", -- "<bosses> have been defeated"
 
-	-- AceConsole strings
-	--["boss"] = "jefe",
-	["Bosses"] = "Jefes",
-	["Options for boss modules."] = "Opciones para módulos del jefe",
-	["Options for bosses in %s."] = "Opciones para jefes en %s", -- "Options for bosses in <zone>"
-	["Options for %s (r%s)."] = "Opciones para %s (r%s).",     -- "Options for <boss> (<revision>)"
-	--["plugin"] = "plugin",
-	["Plugins"] = "Plugins",
-	["Options for plugins."] = "Opciones para plugins",
-	--["extra"] = "extra",
-	["Extras"] = "Extras",
-	["Options for extras."] = "Opciones para extras",
-	--["toggle"] = "alternar",
-	["Active"] = "Activo",
-	["Activate or deactivate this module."] = "Activa o desactiva este módulo",
-	--["reboot"] = "reiniciar",
-	--["rebootall"] = "reiniciartodos",
-	["Reboot"] = "Reiniciar",
-	["Reboot All"] = "Reiniciar Todos",
-	["Reboot this module."] = "Reinicia este módulo",
-	--["debug"] = "depurar",
-	["Debugging"] = "Depurando",
-	["Show debug messages."] = "Muestra mensajes de depura",
-	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "Obliga al módulo que se reinicia para todos en la banda.\n\n(Requiere que seas asistente o líder)",
-	["%s has requested forced reboot for the %s module."] = "%s solicita un reinicio para el módulo %s",
-	--bosskill_cmd = "kill",
-	bosskill_name = "Muerte del Jefe",
-	bosskill_desc = "Anuncia cuando sea derrotado el jefe",
+		-- AceConsole strings
+		--["boss"] = "jefe",
+		["Bosses"] = "Jefes",
+		["Options for boss modules."] = "Opciones para módulos del jefe",
+		["Options for bosses in %s."] = "Opciones para jefes en %s", -- "Options for bosses in <zone>"
+		["Options for %s (r%s)."] = "Opciones para %s (r%s).", -- "Options for <boss> (<revision>)"
+		--["plugin"] = "plugin",
+		["Plugins"] = "Plugins",
+		["Options for plugins."] = "Opciones para plugins",
+		--["extra"] = "extra",
+		["Extras"] = "Extras",
+		["Options for extras."] = "Opciones para extras",
+		--["toggle"] = "alternar",
+		["Active"] = "Activo",
+		["Activate or deactivate this module."] = "Activa o desactiva este módulo",
+		--["reboot"] = "reiniciar",
+		--["rebootall"] = "reiniciartodos",
+		["Reboot"] = "Reiniciar",
+		["Reboot All"] = "Reiniciar Todos",
+		["Reboot this module."] = "Reinicia este módulo",
+		--["debug"] = "depurar",
+		["Debugging"] = "Depurando",
+		["Show debug messages."] = "Muestra mensajes de depura",
+		["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "Obliga al módulo que se reinicia para todos en la banda.\n\n(Requiere que seas asistente o líder)",
+		["%s has requested forced reboot for the %s module."] = "%s solicita un reinicio para el módulo %s",
+		--bosskill_cmd = "kill",
+		bosskill_name = "Muerte del Jefe",
+		bosskill_desc = "Anuncia cuando sea derrotado el jefe",
 
-	["Other"] = "Otro",
-	["Load"] = "Cargar",
-	["Load All"] = "Cargar todos",
-	["Load all %s modules."] = "Carga todos los módulos %s",
+		["Other"] = "Otro",
+		["Load"] = "Cargar",
+		["Load All"] = "Cargar todos",
+		["Load all %s modules."] = "Carga todos los módulos %s",
 
-	-- AceConsole zone commands
-	["Zul'Gurub"] = "ZG",
-	["Molten Core"] = "NM",
-	["Blackwing Lair"] = "GAN",
-	["Ahn'Qiraj"] = "AQ40",
-	["Ruins of Ahn'Qiraj"] = "AQ20",
-	["Onyxia's Lair"] = "Onyxia",
-	["Naxxramas"] = "Naxxramas",
-	["Emerald Sanctum"] = "EmeraldSanctum",
-	["Silithus"] = "Silithus",
-	["Outdoor Raid Bosses"] = "Afuera",
-	-- ["Outdoor Raid Bosses Zone"] = "Outdoor Raid Bosses", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+		-- AceConsole zone commands
+		["Zul'Gurub"] = "ZG",
+		["Molten Core"] = "NM",
+		["Blackwing Lair"] = "GAN",
+		["Ahn'Qiraj"] = "AQ40",
+		["Ruins of Ahn'Qiraj"] = "AQ20",
+		["Onyxia's Lair"] = "Onyxia",
+		["Naxxramas"] = "Naxxramas",
+		["Emerald Sanctum"] = "EmeraldSanctum",
+		["Silithus"] = "Silithus",
+		["Outdoor Raid Bosses"] = "Afuera",
+		-- ["Outdoor Raid Bosses Zone"] = "Outdoor Raid Bosses", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 
-	--Name for exception bosses (neutrals that enable modules)
-	["Vaelastrasz the Corrupt"] = "Vaelastrasz el Corrupto",
-	["Lord Victor Nefarius"] = "Lord Victor Nefarius",
+		--Name for exception bosses (neutrals that enable modules)
+		["Vaelastrasz the Corrupt"] = "Vaelastrasz el Corrupto",
+		["Lord Victor Nefarius"] = "Lord Victor Nefarius",
 
-	["You have slain %s!"] = "¡Has matado %s!",
+		["You have slain %s!"] = "¡Has matado %s!",
 	}
 end)
 
 L:RegisterTranslations("deDE", function()
 	return {
-	["%s mod enabled"] = "%s Modul aktiviert",
-	["Target monitoring enabled"] = "Zielüberwachung aktiviert",
-	["Target monitoring disabled"] = "Zielüberwachung deaktiviert",
-	["%s engaged!"] = "%s angegriffen!",
-	["%s has been defeated"] = "%s wurde besiegt",     -- "<boss> has been defeated"
-	["%s have been defeated"] = "%s wurden besiegt",    -- "<bosses> have been defeated"
+		["%s mod enabled"] = "%s Modul aktiviert",
+		["Target monitoring enabled"] = "Zielüberwachung aktiviert",
+		["Target monitoring disabled"] = "Zielüberwachung deaktiviert",
+		["%s engaged!"] = "%s angegriffen!",
+		["%s has been defeated"] = "%s wurde besiegt", -- "<boss> has been defeated"
+		["%s have been defeated"] = "%s wurden besiegt", -- "<bosses> have been defeated"
 
-	-- AceConsole strings
-	-- ["boss"] = true,
-	["Bosses"] = "Bosse",
-	["Options for boss modules."] = "Optionen für Boss Module.",
-	["Options for bosses in %s."] = "Optionen für Bosse in %s.", -- "Options for bosses in <zone>"
-	["Options for %s (r%s)."] = "Optionen für %s (r%s).",     -- "Options for <boss> (<revision>)"
-	-- ["plugin"] = true,
-	["Plugins"] = "Plugins",
-	["Options for plugins."] = "Optionen für Plugins.",
-	-- ["extra"] = true,
-	["Extras"] = "Extras",
-	["Options for extras."] = "Optionen für Extras.",
-	-- ["toggle"] = true,
-	["Active"] = "Aktivieren",
-	["Activate or deactivate this module."] = "Aktiviert oder deaktiviert dieses Modul.",
-	-- ["reboot"] = true,
-	["Reboot"] = "Neustarten",
-	["Reboot All"] = "Alles Neustarten",
-	["Reboot this module."] = "Startet dieses Modul neu.",
-	-- ["debug"] = true,
-	["Debugging"] = "Debugging",
-	["Show debug messages."] = "Zeige Debug Nachrichten.",
-	["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "Erzwingt dass das Modul für jeden im Raid zurückgesetzt wird.\n\n(Benötigt Schlachtzugleiter oder Assistent)",
-	["%s has requested forced reboot for the %s module."] = "%s hat einen Zwangsneustart für das %s-Modul beantragt.",
-	-- bosskill_cmd = "kill",
-	bosskill_name = "Boss besiegt",
-	bosskill_desc = "Melde, wenn ein Boss besiegt wurde.",
+		-- AceConsole strings
+		-- ["boss"] = true,
+		["Bosses"] = "Bosse",
+		["Options for boss modules."] = "Optionen für Boss Module.",
+		["Options for bosses in %s."] = "Optionen für Bosse in %s.", -- "Options for bosses in <zone>"
+		["Options for %s (r%s)."] = "Optionen für %s (r%s).", -- "Options for <boss> (<revision>)"
+		-- ["plugin"] = true,
+		["Plugins"] = "Plugins",
+		["Options for plugins."] = "Optionen für Plugins.",
+		-- ["extra"] = true,
+		["Extras"] = "Extras",
+		["Options for extras."] = "Optionen für Extras.",
+		-- ["toggle"] = true,
+		["Active"] = "Aktivieren",
+		["Activate or deactivate this module."] = "Aktiviert oder deaktiviert dieses Modul.",
+		-- ["reboot"] = true,
+		["Reboot"] = "Neustarten",
+		["Reboot All"] = "Alles Neustarten",
+		["Reboot this module."] = "Startet dieses Modul neu.",
+		-- ["debug"] = true,
+		["Debugging"] = "Debugging",
+		["Show debug messages."] = "Zeige Debug Nachrichten.",
+		["Forces the module to reset for everyone in the raid.\n\n(Requires assistant or higher)"] = "Erzwingt dass das Modul für jeden im Raid zurückgesetzt wird.\n\n(Benötigt Schlachtzugleiter oder Assistent)",
+		["%s has requested forced reboot for the %s module."] = "%s hat einen Zwangsneustart für das %s-Modul beantragt.",
+		-- bosskill_cmd = "kill",
+		bosskill_name = "Boss besiegt",
+		bosskill_desc = "Melde, wenn ein Boss besiegt wurde.",
 
-	-- AceConsole zone commands
-	["Zul'Gurub"] = "ZG",
-	["Molten Core"] = "MC",
-	["Blackwing Lair"] = "BWL",
-	["Ahn'Qiraj"] = "AQ40",
-	["Ruins of Ahn'Qiraj"] = "AQ20",
-	["Onyxia's Lair"] = "Onyxia",
-	["Naxxramas"] = "Naxxramas",
-	["Emerald Sanctum"] = "EmeraldSanctum",
-	-- ["Silithus"] = true,
-	["Outdoor Raid Bosses"] = "Outdoor",
-	-- ["Outdoor Raid Bosses Zone"] = "Outdoor Raid Bosses", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+		-- AceConsole zone commands
+		["Zul'Gurub"] = "ZG",
+		["Molten Core"] = "MC",
+		["Blackwing Lair"] = "BWL",
+		["Ahn'Qiraj"] = "AQ40",
+		["Ruins of Ahn'Qiraj"] = "AQ20",
+		["Onyxia's Lair"] = "Onyxia",
+		["Naxxramas"] = "Naxxramas",
+		["Emerald Sanctum"] = "EmeraldSanctum",
+		-- ["Silithus"] = true,
+		["Outdoor Raid Bosses"] = "Outdoor",
+		-- ["Outdoor Raid Bosses Zone"] = "Outdoor Raid Bosses", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 
-	["You have slain %s!"] = "Ihr habt %s getötet!",
+		["You have slain %s!"] = "Ihr habt %s getötet!",
 	}
 end)
 
