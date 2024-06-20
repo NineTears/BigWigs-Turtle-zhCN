@@ -3,154 +3,152 @@ local module, L = BigWigs:ModuleDeclaration("Thaddius", "Naxxramas")
 local bbfeugen = AceLibrary("Babble-Boss-2.2")["Feugen"]
 local bbstalagg = AceLibrary("Babble-Boss-2.2")["Stalagg"]
 
-module.revision = 30067
+module.revision = 30090
 module.enabletrigger = {module.translatedName, feugen, stalagg}
 module.toggleoptions = {"power", "magneticPull", "manaburn", -1, "phase", -1, "enrage", "selfcharge", "polarity", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Thaddius",
-
-    power_cmd = "power",
+	cmd = "Thaddius",
+	
+	power_cmd = "power",
     power_name = "能量涌动警报",
-    power_desc = "斯塔拉格能量涌动出现时进行警告",
-
-    magneticPull_cmd = "magneticPull",
+    power_desc = "斯塔拉格能量涌动时进行警告",
+	
+	magneticPull_cmd = "magneticPull",
     magneticPull_name = "磁性吸引警报",
-    magneticPull_desc = "磁性吸引出现时进行警告",
-
-    manaburn_cmd = "manaburn",
+    magneticPull_desc = "磁性吸引时进行警告",
+	
+	manaburn_cmd = "manaburn",
     manaburn_name = "法力燃烧警报",
-    manaburn_desc = "法力燃烧出现时进行警告",
-
-    phase_cmd = "phase",
-    phase_name = "阶段转换警报",
+    manaburn_desc = "法力燃烧时进行警告",
+	
+	phase_cmd = "phase",
+    phase_name = "阶段警报",
     phase_desc = "阶段转换时进行警告",
-
-    enrage_cmd = "enrage",
+	
+	enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒出现时进行警告",
 
-    polarity_cmd = "polarity",
+	polarity_cmd = "polarity",
     polarity_name = "极性转换警报",
-    polarity_desc = "极性转换出现时进行警告",
+    polarity_desc = "极性转换时进行警告",
 
     selfcharge_cmd = "selfcharge",
-    selfcharge_name = "电荷变换警报",
-    selfcharge_desc = "当你的正/负电荷变化时进行警告。",
+    selfcharge_name = "电荷变化警报",
+    selfcharge_desc = "你的正/负电荷变化时进行警告。",
 
-    
-    trigger_engage = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
-    trigger_engage1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
-    
-    trigger_powerSurge = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	
+	trigger_engage = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
+	
+	trigger_powerSurge = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_powerSurge = "能量涌动",
     msg_powerSurge = "斯塔拉格获得能量涌动！",
-    
+	
     bar_magneticPull = "磁性吸引",
-    
-    trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    msg_manaBurn = "伏晨(费尔根)法力燃烧了您！30码范围AoE",
-    
-    trigger_feugenDeadYell = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL
-    trigger_stalaggDeadYell = "Master save me...",--CHAT_MSG_MONSTER_YELL
-    
-    trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
+	
+	trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_manaBurn = "费尔根法力燃烧你了！30码范围AOE",
+	
+	trigger_feugenDeadYell = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL
+	trigger_stalaggDeadYell = "Master save me...",--CHAT_MSG_MONSTER_YELL
+	
+	trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
     bar_phase2 = "塔迪乌斯激活",
     msg_phase2 = "第二阶段",
     msg_positionReminder = "- - - - -  塔迪乌斯  + + + + +",
 	
-    trigger_enrage = "%s goes into a berserker rage!", --to confirm
+	trigger_enrage = "Thaddius gains Berserk.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_enrage = "激怒",
     msg_enrage = "激怒！",
     msg_enrage60 = "60秒后激怒",
     msg_enrage10 = "10秒后激怒",
-    
-    trigger_polarityShiftCast = "Thaddius begins to cast Polarity Shift.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_polarityShiftCast = "正在施放极性转换",
+	
+	trigger_polarityShiftCast = "Thaddius begins to cast Polarity Shift.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_polarityShiftCast = "极性转换施法",
     msg_polarityShift = "正在施放极性转换！",
-    
-    trigger_polarityShiftAfflic = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
-    bar_polarityShiftCd = "极性转换 CD",
-    
-    msg_noChange = "你的减益效果没有变化！",
+	
+	trigger_polarityShiftAfflic = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
+    bar_polarityShiftCd = "极性转换冷却",
+	
+    msg_noChange = "你的增益效果没有变化！",
     msg_changeToPositive = "你变成了正电荷！",
     msg_changeToNegative = "你变成了负电荷！",
-    bar_polarityTick = "极性转换滴答",
+    bar_polarityTick = "极性跳动",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
-    cmd = "Thaddius",
-
-    power_cmd = "power",
+	cmd = "Thaddius",
+	
+	power_cmd = "power",
     power_name = "能量涌动警报",
-    power_desc = "斯塔拉格能量涌动出现时进行警告",
-
-    magneticPull_cmd = "magneticPull",
+    power_desc = "斯塔拉格能量涌动时进行警告",
+	
+	magneticPull_cmd = "magneticPull",
     magneticPull_name = "磁性吸引警报",
-    magneticPull_desc = "磁性吸引出现时进行警告",
-
-    manaburn_cmd = "manaburn",
+    magneticPull_desc = "磁性吸引时进行警告",
+	
+	manaburn_cmd = "manaburn",
     manaburn_name = "法力燃烧警报",
-    manaburn_desc = "法力燃烧出现时进行警告",
-
-    phase_cmd = "phase",
-    phase_name = "阶段转换警报",
+    manaburn_desc = "法力燃烧时进行警告",
+	
+	phase_cmd = "phase",
+    phase_name = "阶段警报",
     phase_desc = "阶段转换时进行警告",
-
-    enrage_cmd = "enrage",
+	
+	enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒出现时进行警告",
 
-    polarity_cmd = "polarity",
+	polarity_cmd = "polarity",
     polarity_name = "极性转换警报",
-    polarity_desc = "极性转换出现时进行警告",
+    polarity_desc = "极性转换时进行警告",
 
     selfcharge_cmd = "selfcharge",
-    selfcharge_name = "电荷变换警报",
-    selfcharge_desc = "当你的正/负电荷变化时进行警告。",
+    selfcharge_name = "电荷变化警报",
+    selfcharge_desc = "你的正/负电荷变化时进行警告。",
 
-    
-    trigger_engage = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
-    trigger_engage1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
-    
-    trigger_powerSurge = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	
+	trigger_engage = "Stalagg crush you!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage1 = "Feed you to master!", --CHAT_MSG_MONSTER_YELL
+	
+	trigger_powerSurge = "Stalagg gains Power Surge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_powerSurge = "能量涌动",
     msg_powerSurge = "斯塔拉格获得能量涌动！",
-    
+	
     bar_magneticPull = "磁性吸引",
-    
-    trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    msg_manaBurn = "伏晨(费尔根)法力燃烧了您！30码范围AoE",
-    
-    trigger_feugenDeadYell = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL
-    trigger_stalaggDeadYell = "Master save me...",--CHAT_MSG_MONSTER_YELL
-    
-    trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
+	
+	trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_manaBurn = "费尔根法力燃烧你了！30码范围AOE",
+	
+	trigger_feugenDeadYell = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL
+	trigger_stalaggDeadYell = "Master save me...",--CHAT_MSG_MONSTER_YELL
+	
+	trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
     bar_phase2 = "塔迪乌斯激活",
     msg_phase2 = "第二阶段",
     msg_positionReminder = "- - - - -  塔迪乌斯  + + + + +",
 	
-    trigger_enrage = "%s goes into a berserker rage!", --to confirm
+	trigger_enrage = "Thaddius gains Berserk.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_enrage = "激怒",
     msg_enrage = "激怒！",
     msg_enrage60 = "60秒后激怒",
     msg_enrage10 = "10秒后激怒",
-    
-    trigger_polarityShiftCast = "Thaddius begins to cast Polarity Shift.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_polarityShiftCast = "正在施放极性转换",
+	
+	trigger_polarityShiftCast = "Thaddius begins to cast Polarity Shift.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_polarityShiftCast = "极性转换施法",
     msg_polarityShift = "正在施放极性转换！",
-    
-    trigger_polarityShiftAfflic = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
-    bar_polarityShiftCd = "极性转换 CD",
-    
-    msg_noChange = "你的减益效果没有变化！",
+	
+	trigger_polarityShiftAfflic = "Now YOU feel pain!", --CHAT_MSG_MONSTER_YELL
+    bar_polarityShiftCd = "极性转换冷却",
+	
+    msg_noChange = "你的增益效果没有变化！",
     msg_changeToPositive = "你变成了正电荷！",
     msg_changeToNegative = "你变成了负电荷！",
-    bar_polarityTick = "极性转换滴答",
+    bar_polarityTick = "极性跳动",
 } end )
 
 local timer = {
@@ -179,6 +177,8 @@ local icon = {
 	negative = "Spell_ChargeNegative",
 	
 	manaBurn = "Spell_Shadow_ManaBurn",
+	
+	hpBar = "spell_shadow_raisedead",
 }
 local color = {
 	powerSurge = "Red",
@@ -193,6 +193,8 @@ local color = {
 	
 	positive = "Blue",
 	negative = "Red",
+	
+	hpBar = "Magenta"
 }
 local syncName = {
 	powerSurge = "StalaggPower"..module.revision,
@@ -221,7 +223,7 @@ function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE", "Event") --trigger_polarityShiftCast
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE", "Event") --trigger_manaBurn, trigger_manaBurn2
 	
-	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS", "Event") --trigger_powerSurge
+	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS", "Event") --trigger_powerSurge, trigger_enrage
 	
 	self:ThrottleSync(4, syncName.powerSurge)
 	
@@ -250,9 +252,9 @@ function module:OnEngage()
 	
 	self.feugenHP = 100
 	self.stalaggHP = 100
-	self:TriggerEvent("BigWigs_StartHPBar", self, "Feugen", 100)
+	self:TriggerEvent("BigWigs_StartHPBar", self, "Feugen", 100, "Interface\\Icons\\"..icon.hpBar, true, color.hpBar)
 	self:TriggerEvent("BigWigs_SetHPBar", self, "Feugen", 0)
-	self:TriggerEvent("BigWigs_StartHPBar", self, "Stalagg", 100)
+	self:TriggerEvent("BigWigs_StartHPBar", self, "Stalagg", 100, "Interface\\Icons\\"..icon.hpBar, true, color.hpBar)
 	self:TriggerEvent("BigWigs_SetHPBar", self, "Stalagg", 0)
 	
 	self:ScheduleRepeatingEvent("CheckAddHP", self.CheckAddHP, 0.5, self)
@@ -269,13 +271,13 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 
-	if (msg == string.format(UNITDIESOTHER, bbfeugen)) then    -- 如果消息等于格式化后的"UNITDIESOTHER"和"Feugen"的组合
+	if (msg == string.format(UNITDIESOTHER, bbfeugen)) then
 		feugenDead = true
 	elseif (msg == string.format(UNITDIESOTHER, bbstalagg)) then
 		stalaggDead = true
 	end
 	
-	if feugenDead == true and stalaggDead == true then
+	if feugenDead == true and feugenDead == true then
 		self:Sync(syncName.phase2)
 	end
 end
@@ -283,14 +285,16 @@ end
 function module:CHAT_MSG_MONSTER_YELL(msg)
 	if msg == L["trigger_feugenDeadYell"] then
 		feugenDead = true
+		if feugenDead == true and feugenDead == true then
+			self:Sync(syncName.phase2)
+		end
 	elseif msg == L["trigger_stalaggDeadYell"] then
 		stalaggDead = true
+		if feugenDead == true and feugenDead == true then
+			self:Sync(syncName.phase2)
+		end
 	elseif msg == L["trigger_polarityShiftAfflic"] then
 		self:Sync(syncName.polarity)
-	end
-	
-	if feugenDead == true and stalaggDead == true then
-		self:Sync(syncName.phase2)
 	end
 end
 
@@ -333,7 +337,7 @@ function module:Event(msg)
 	elseif string.find(msg, L["trigger_manaBurn"]) or string.find(msg, L["trigger_manaBurn2"]) then
 		self:ManaBurn()
 	
-	elseif string.find(msg, L["trigger_enrage"]) then
+	elseif msg == L["trigger_enrage"] then
 		self:Sync(syncName.enrage)
 		
 	elseif msg == L["trigger_polarityShiftCast"] then

@@ -26,7 +26,6 @@ L:RegisterTranslations("enUS", function() return {
     msg_reflect = "龙人法术反射",
     
     ["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {

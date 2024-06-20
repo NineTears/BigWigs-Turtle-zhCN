@@ -69,7 +69,6 @@ L:RegisterTranslations("enUS", function() return {
     msg_selfReflect = "停止自残！",
     
     ["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你已经击败了 %s！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -130,7 +129,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_selfReflect = "Your (.*) is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_SELF_DAMAGE
     msg_selfReflect = "停止自残！",
     
-    ["You have slain %s!"] = "你已经击败了 %s！",
+    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 local timer = {

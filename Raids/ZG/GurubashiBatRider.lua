@@ -23,7 +23,6 @@ L:RegisterTranslations("enUS", function() return {
     explodingMsg = "即将爆炸！",
 
     ["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {

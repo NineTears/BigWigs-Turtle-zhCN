@@ -79,7 +79,6 @@ L:RegisterTranslations("enUS", function() return {
     msg_frostBreath = "冰霜吐息 = 法力燃烧... 不要站在前面！",
 
 	["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你杀死了 %s！",
     you = "you",
 } end )
 
@@ -151,7 +150,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_frostBreathCast = "施放冰霜吐息！",
     msg_frostBreath = "冰霜吐息 = 法力燃烧... 不要站在前面！",
 
-    ["You have slain %s!"] = "你杀死了 %s！",
+    ["You have slain %s!"] = "你杀死了%s！",
     you = "you",
 } end )
 

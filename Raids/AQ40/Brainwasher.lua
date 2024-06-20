@@ -32,7 +32,6 @@ L:RegisterTranslations("enUS", function() return {
     bar_mindFlay = " 心灵震爆",
 
     ["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你已经击败了 %s！",
     clickme = " >点击我<",
     you = "you",
 } end )
@@ -61,7 +60,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_mindFlayFade = "Mind Flay fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mindFlay = " 心灵震爆",
 
-    ["You have slain %s!"] = "你已经击败了 %s！",
+    ["You have slain %s!"] = "你已经击败了%s！",
     clickme = " >点击我<",
     you = "you",
 } end )

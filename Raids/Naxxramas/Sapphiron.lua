@@ -1,48 +1,51 @@
 
 local module, L = BigWigs:ModuleDeclaration("Sapphiron", "Naxxramas")
 local BC = AceLibrary("Babble-Class-2.2")
+local bzkelthuzadchamber = AceLibrary("Babble-Zone-2.2")["Kel'Thuzad Chamber"]
+local bzeasternplaguelands = AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"]
+local bzsapphironslair = AceLibrary("Babble-Zone-2.2")["Sapphiron's Lair"]
 local bbsapphiron = AceLibrary("Babble-Boss-2.2")["Sapphiron"]
 
-module.revision = 30071
+module.revision = 30085
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"frostbreath", "lifedrain", "block", "enrage", "blizzard", "tailsweep", "phase", -1, "proximity", -1, "parry", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Sapphiron",
 
-    frostbreath_cmd = "frostbreath",
+	frostbreath_cmd = "frostbreath",
     frostbreath_name = "深呼吸警报",
     frostbreath_desc = "当萨菲隆开始施放深呼吸时进行警告。",
 
-    lifedrain_cmd = "lifedrain",
+	lifedrain_cmd = "lifedrain",
     lifedrain_name = "生命吸取警报",
     lifedrain_desc = "生命吸取诅咒出现时进行警告",
 	
-    block_cmd = "block",
+	block_cmd = "block",
     block_name = "冰块警报",
     block_desc = "冰块出现时进行警告",
 	
-    enrage_cmd = "enrage",
+	enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒状态出现时进行警告",
 
-    blizzard_cmd = "blizzard",
+	blizzard_cmd = "blizzard",
     blizzard_name = "暴风雪警报",
     blizzard_desc = "暴风雪出现时进行警告",
 	
-    tailsweep_cmd = "tailsweep",
+	tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
     tailsweep_desc = "龙尾扫击出现时进行警告",
 	
-    phase_cmd = "phase",
+	phase_cmd = "phase",
     phase_name = "阶段转换警报",
     phase_desc = "警告地面/空中阶段",
 	
-    proximity_cmd = "proximity",
+	proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
 	
-    parry_cmd = "parry",
+	parry_cmd = "parry",
     parry_name = "招架警报",
     parry_desc = "招架出现时进行警告",
 	
@@ -90,48 +93,46 @@ L:RegisterTranslations("enUS", function() return {
 	
     msg_lowHp = "萨菲隆血量低于10% - 不再有空中阶段！",
 	
-	trigger_parryYou = "You attack. Sapphiron parries.",
+	trigger_parryYou = "You attack. Sapphiron parries.", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "你的攻击被萨菲隆招架了 - 别再打坦克了，笨蛋！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
 	cmd = "Sapphiron",
 
-    frostbreath_cmd = "frostbreath",
+	frostbreath_cmd = "frostbreath",
     frostbreath_name = "深呼吸警报",
     frostbreath_desc = "当萨菲隆开始施放深呼吸时进行警告。",
 
-    lifedrain_cmd = "lifedrain",
+	lifedrain_cmd = "lifedrain",
     lifedrain_name = "生命吸取警报",
     lifedrain_desc = "生命吸取诅咒出现时进行警告",
 	
-    block_cmd = "block",
+	block_cmd = "block",
     block_name = "冰块警报",
     block_desc = "冰块出现时进行警告",
 	
-    enrage_cmd = "enrage",
+	enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒状态出现时进行警告",
 
-    blizzard_cmd = "blizzard",
+	blizzard_cmd = "blizzard",
     blizzard_name = "暴风雪警报",
     blizzard_desc = "暴风雪出现时进行警告",
 	
-    tailsweep_cmd = "tailsweep",
+	tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
     tailsweep_desc = "龙尾扫击出现时进行警告",
 	
-    phase_cmd = "phase",
+	phase_cmd = "phase",
     phase_name = "阶段转换警报",
     phase_desc = "警告地面/空中阶段",
 	
-    proximity_cmd = "proximity",
+	proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
 	
-    parry_cmd = "parry",
+	parry_cmd = "parry",
     parry_name = "招架警报",
     parry_desc = "招架出现时进行警告",
 	
@@ -179,7 +180,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
     msg_lowHp = "萨菲隆血量低于10% - 不再有空中阶段！",
 	
-	trigger_parryYou = "You attack. Sapphiron parries.",
+	trigger_parryYou = "You attack. Sapphiron parries.", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "你的攻击被萨菲隆招架了 - 别再打坦克了，笨蛋！",
 } end )
 
@@ -231,8 +232,8 @@ local syncName = {
 	enableProximity = "SapphironEnableProximity"..module.revision,
 }
 
-local lastLifeDrainTime = nil
-local airPhaseTime = nil
+--local lastLifeDrainTime = nil
+--local airPhaseTime = nil
 local remainingLifeDrainTimer = nil
 
 local lowHp = nil
@@ -262,7 +263,7 @@ function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_PARTY", "Event") --trigger_iceboltFade
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER", "Event") --trigger_iceboltFade
 	
-	self:RegisterEvent("CHAT_MSG_COMBAT_FRIENDLYPLAYER_MISSES", "Event") --trigger_parryYou
+	self:RegisterEvent("CHAT_MSG_COMBAT_SELF_MISSES", "Event") --trigger_parryYou
 	
 	
 	self:ThrottleSync(3, syncName.frostBreath)
@@ -281,8 +282,8 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	lastLifeDrainTime = GetTime()
-	airPhaseTime = GetTime()
+	--lastLifeDrainTime = GetTime()
+	--airPhaseTime = GetTime()
 	remainingLifeDrainTimer = 60
 	
 	lowHp = nil
@@ -313,14 +314,30 @@ function module:OnDisengage()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() == "Kel'Thuzad Chamber" and self.core:IsModuleActive(module.translatedName) then
-		self.core:DisableModule(module.translatedName)
-	elseif GetMinimapZoneText() == "Plaguewood" and self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() == bzkelthuzadchamber and self.core:IsModuleActive(module.translatedName) then
 		self.core:DisableModule(module.translatedName)
 	
-	elseif GetMinimapZoneText() == "Sapphiron's Lair" and not self.core:IsModuleActive(module.translatedName) then
+	elseif GetMinimapZoneText() == bzeasternplaguelands and self.core:IsModuleActive(module.translatedName) then
+		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
+		self:ResetModule()
+		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块："..module.translatedName)
+			
+	elseif GetMinimapZoneText() == bzsapphironslair and not self.core:IsModuleActive(module.translatedName) then
 		self.core:EnableModule(module.translatedName)
 	end
+end
+
+function module:ResetModule()
+	--lastLifeDrainTime = GetTime()
+	--airPhaseTime = GetTime()
+	remainingLifeDrainTimer = 60
+	
+	lowHp = nil
+	phase = "ground"
+	
+	self:CancelDelayedSync(syncName.enableProximity)
+	self:CancelDelayedSync(syncName.groundPhase)
+	self:RemoveProximity()
 end
 
 function module:UNIT_HEALTH(msg)
@@ -423,7 +440,7 @@ function module:FrostBreath()
 end
 
 function module:LifeDrain()
-	lastLifeDrainTime = GetTime()
+	--lastLifeDrainTime = GetTime()
 	self:Bar(L["bar_lifeDrain"], timer.lifeDrain, icon.lifeDrain, true, color.lifeDrain)
 	
 	if UnitClass("Player") == BC["Mage"] or UnitClass("Player") == BC["Druid"] then
@@ -451,16 +468,17 @@ end
 
 function module:IceboltHits()
 	if phase == "ground" then
-		--self:Sync(syncName.airPhase)
 		phase = "air"
-		airPhaseTime = GetTime() - 7
+		--airPhaseTime = GetTime() - 7
 	end
 	
 	self:RemoveBar(L["bar_timeToGroundPhase"])
 	self:RemoveBar(L["bar_lifeDrain"])
 	self:RemoveBar(L["bar_timeToAirPhase"])
 	
-	--self:RemoveBar(L["bar_iceBlock1"])
+	if self.db.profile.proximity then
+		self:TriggerEvent("BigWigs_ShowProximity")
+	end
 	
 	if self.db.profile.phase then
 		self:Bar(L["bar_timeToGroundPhase"], timer.airPhase - timer.iceBlock1, icon.phase, true, color.phase)
@@ -508,13 +526,14 @@ function module:GroundPhase()
 	
 	if self.db.profile.proximity then
 		self:RemoveProximity()
+		self:DelayedSync(timer.groundPhase, syncName.enableProximity)
 	end
 	
 	self:CancelDelayedSync(syncName.groundPhase)
 	
 	if self.db.profile.lifedrain then
-		remainingLifeDrainTimer = timer.lifeDrain - (airPhaseTime - lastLifeDrainTime)
-		self:Bar(L["bar_lifeDrain"], remainingLifeDrainTimer, icon.lifeDrain, true, color.lifeDrain)
+		--remainingLifeDrainTimer = timer.lifeDrain - (airPhaseTime - lastLifeDrainTime)
+		self:Bar(L["bar_lifeDrain"], 6, icon.lifeDrain, true, color.lifeDrain)
 	end
 	
 	if lowHp == nil then
@@ -522,42 +541,22 @@ function module:GroundPhase()
 			self:Bar(L["bar_timeToAirPhase"], timer.groundPhase, icon.phase, true, color.phase)
 			self:Message(L["msg_groundPhase"], "Important", false, nil, false)
 		end
-		
-		self:DelayedSync(timer.groundPhase, syncName.airPhase)
 	end
 end
 
 function module:EnableProximity()
-	self:Proximity()
+	self:TriggerEvent("BigWigs_ShowProximity")
 end
 
---function module:AirPhase()
-	--phase = "air"
-	
-	--self:RemoveBar(L["bar_lifeDrain"])
-	--self:RemoveBar(L["bar_timeToAirPhase"])
-	--self:CancelDelayedSync(syncName.airPhase)
-	
-	--if self.db.profile.proximity then
-	--	self:Proximity()
-	--end
-	
-	--if self.db.profile.phase then
-		--self:Bar(L["bar_timeToGroundPhase"], timer.airPhase, icon.phase, true, color.phase)
-		--self:Message(L["msg_airPhase"], "Important", false, nil, false)
-	--end
-	
-	--if self.db.profile.block then
-	--	self:Bar(L["bar_iceBlock1"], timer.iceBlock1, icon.iceBlock, true, color.iceBlock)
-	--end
---end
+function module:RemoveProximity()
+	self:TriggerEvent("BigWigs_HideProximity")
+end
 
 function module:LowHp()
 	lowHp = true
 	
 	if phase == "ground" then
 		self:RemoveBar(L["bar_timeToAirPhase"])
-		--self:CancelDelayedSync(syncName.airPhase)
 	end
 	
 	self:Message(L["msg_lowHp"], "Important", false, nil, false)
@@ -566,4 +565,5 @@ end
 function module:ParryYou()
 	self:WarningSign(icon.parry, 0.7)
 	self:Message(L["msg_parryYou"], "Personal", false, nil, false)
+	self:Sound("Info")
 end

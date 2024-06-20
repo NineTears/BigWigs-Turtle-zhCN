@@ -27,7 +27,6 @@ L:RegisterTranslations("enUS", function() return {
     bar_whirlwindCd2 = "旋风斩 CD 2",
 
     ["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你已经击败了 %s！",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -47,7 +46,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_whirlwindCd1 = "旋风斩 CD 1",
     bar_whirlwindCd2 = "旋风斩 CD 2",
 
-    ["You have slain %s!"] = "你已经击败了 %s！",
+    ["You have slain %s!"] = "你已经击败了%s！",
 } end )
 
 local timer = {

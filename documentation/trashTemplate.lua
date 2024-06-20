@@ -74,7 +74,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	trigger_person1 = "(.+) is afflicted by Living Bomb.",--CHAT_MSG_
 	
-	["You have slain %s!"] = "你已经击败了 %s！",
+	["You have slain %s!"] = "你已经击败了%s！",
 	clickme = " >点击我！<",
 } end )
 

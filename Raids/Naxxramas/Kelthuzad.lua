@@ -6,8 +6,11 @@ local BC = AceLibrary("Babble-Class-2.2")
 local bbkelthuzad = AceLibrary("Babble-Boss-2.2")["Kel'Thuzad"]
 local bbunstoppableabomination = AceLibrary("Babble-Boss-2.2")["Unstoppable Abomination"]
 local bbsoulweaver = AceLibrary("Babble-Boss-2.2")["Soul Weaver"]
+local bzsapphironslair = AceLibrary("Babble-Zone-2.2")["Sapphiron's Lair"]
+local bzeasternplaguelands = AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"]
+local bzkelthuzadchamber = AceLibrary("Babble-Zone-2.2")["Kel'Thuzad Chamber"]
 
-module.revision = 30067
+module.revision = 30086
 module.enabletrigger = module.translatedName
 module.toggleoptions = {
 	"phase",
@@ -35,122 +38,122 @@ module.toggleoptions = {
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Kelthuzad",
 
-    phase_cmd = "phase",
+	phase_cmd = "phase",
     phase_name = "阶段警报",
     phase_desc = "阶段变化时进行警告。",
-
-    p1adds_cmd = "p1adds",
+	
+	p1adds_cmd = "p1adds",
     p1adds_name = "第一阶段增援警报",
     p1adds_desc = "第一阶段增援出现时进行提醒。",
-
-    mc_cmd = "mc",
+	
+	mc_cmd = "mc",
     mc_name = "精神控制警报",
     mc_desc = "精神控制发生时进行警告。",
 
-    mcicon_cmd = "mcicon",
+	--mcicon_cmd = "mcicon",
     mcicon_name = "精神控制标记",
     mcicon_desc = "在被精神控制的目标上标记团队标记。",
 
-    fissure_cmd = "fissure",
+	fissure_cmd = "fissure",
     fissure_name = "暗影裂隙警报",
     fissure_desc = "暗影裂隙出现时进行警告。",
 
-    frostblast_cmd = "frostblast",
+	frostblast_cmd = "frostblast",
     frostblast_name = "冰霜冲击警报",
     frostblast_desc = "冰霜冲击施放时进行警告。",
 	
-    frostblastframe_cmd = "frostblastframe",
+	frostblastframe_cmd = "frostblastframe",
     frostblastframe_name = "冰霜冲击目标框架",
     frostblastframe_desc = "显示一个包含冰霜冲击目标及其血量条的框架。",
-
-    detonate_cmd = "detonate",
+	
+	detonate_cmd = "detonate",
     detonate_name = "自爆法力警报",
     detonate_desc = "自爆法力施放时进行警告。",
 
-    detonateicon_cmd = "detonateicon",
+	detonateicon_cmd = "detonateicon",
     detonateicon_name = "自爆法力标记",
     detonateicon_desc = "在自爆法力的目标上标记团队标记。",
-
-    frostbolt_cmd = "frostbolt",
+	
+	frostbolt_cmd = "frostbolt",
     frostbolt_name = "单体寒冰箭警报",
     frostbolt_desc = "单体寒冰箭施放时进行警告。",
 
-    volley_cmd = "volley",
+	volley_cmd = "volley",
     volley_name = "寒冰箭雨警报",
     volley_desc = "寒冰箭雨施放时进行警告。",
 
-    guardian_cmd = "guardian",
+	guardian_cmd = "guardian",
     guardian_name = "守护者出现警报",
     guardian_desc = "第三阶段守护者出现时进行警告。",
 
-    shackle_cmd = "shackle",
+	shackle_cmd = "shackle",
     shackle_name = "束缚亡灵计数",
     shackle_desc = "统计对守护者施放的束缚亡灵次数。",
 	
-    bloodtap_cmd = "bloodtap",
+	bloodtap_cmd = "bloodtap",
     bloodtap_name = "血液分流计数",
     bloodtap_desc = "统计守护者身上的血液分流增益次数。",
 
-    proximity_cmd = "proximity",
+	proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
 	
 	
 	--Mortal Wound from Unstoppable Abomination, stacking, -10% healing, 15sec
 	
-    trigger_engage = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!", --CHAT_MSG_MONSTER_YELL
     bar_phase1 = "第一阶段",
-
-    trigger_phase2_1 = "Pray for mercy!", --CHAT_MSG_MONSTER_YELL
-    trigger_phase2_2 = "Scream your dying breath!", --CHAT_MSG_MONSTER_YELL
-    trigger_phase2_3 = "The end is upon you!", --CHAT_MSG_MONSTER_YELL
+	
+	trigger_phase2_1 = "Pray for mercy!", --CHAT_MSG_MONSTER_YELL
+	trigger_phase2_2 = "Scream your dying breath!", --CHAT_MSG_MONSTER_YELL
+	trigger_phase2_3 = "The end is upon you!", --CHAT_MSG_MONSTER_YELL
     bar_phase2 = "克尔苏加德激活",
-    msg_phase2 = "第二阶段 - 克尔苏加德 15 秒后进入！",
-
-    msg_phase3soon = "第三阶段即将到来 - 40% 血量时发生",
-
-    trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
+    msg_phase2 = "第二阶段 - 15秒后克尔苏加德激活！",
+	
+    msg_phase3soon = "即将进入第三阶段 - 在40%血量时开始",
+	
+	trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
     msg_phase3 = "第三阶段 - 5 个守护者即将到来 - 最多束缚 3 个！",
 	
 	--supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
     bar_abom = "/14 憎恶死亡",
     bar_weaver = "/14 编织者死亡",
-
+	
     msg_abom = "憎恶已刷新 ",
     msg_weaver = "织魂者已刷新 ",
-
-    trigger_mcYell1 = "Your soul, is bound to me now!",
-    trigger_mcYell2 = "There will be no escape!",
+		
+	trigger_mcYell1 = "Your soul, is bound to me now!",
+	trigger_mcYell2 = "There will be no escape!",
     msg_mc = "精神控制！",
-
-    trigger_mcYou = "You are afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_mcOther = "(.+) is afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_mcFade = "Chains of Kel'Thuzad fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_mcYou = "You are afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.+) is afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_mcFade = "Chains of Kel'Thuzad fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mcAfflic = " 精神控制",
     bar_mcCd = "精神控制 CD",
-    trigger_friendlyDead = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
-
-    trigger_fissure = "Kel'Thuzad casts Shadow Fissure.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_friendlyDead = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	
+	trigger_fissure = "Kel'Thuzad casts Shadow Fissure.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_fissure = "离开裂隙！",
     msg_fissure = "暗影裂隙！",
-
-    trigger_frostBlastYell = "I will freeze the blood in your veins!", --CHAT_MSG_MONSTER_YELL
-    trigger_frostBlastYou = "You are afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_frostBlastOther = "(.+) is afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	
+	trigger_frostBlastYell = "I will freeze the blood in your veins!", --CHAT_MSG_MONSTER_YELL
+	trigger_frostBlastYou = "You are afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_frostBlastOther = "(.+) is afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_frostBlastCd = "冰霜冲击 CD",
     bar_frostBlastAfflic = "冰霜冲击",
     msg_frostBlast = "冰霜冲击！",
 		--unused
-    trigger_frostBlastFade = "Frost Blast fades from (.+)", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-
-    trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_detonateOther = "(.+) is afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-    trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_frostBlastFade = "Frost Blast fades from (.+)", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_detonateOther = "(.+) is afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_detonateAfflic = " 自爆法力",
     bar_detonateCd = "自爆法力 CD",
     msg_detonate = "自爆法力在 ",
-
-    trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	
+	trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbolt = "寒冰箭",
     msg_frostbolt = "寒冰箭 - 打断！",
 	
@@ -170,17 +173,17 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_earthShock1 = "Earth Shock hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
 	trigger_earthShock2 = "Earth Shock crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
 	
-    trigger_volley = "afflicted by Frostbolt", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_volley = "afflicted by Frostbolt", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_volley = "魔法飞弹 CD",
-
+	
     bar_guardian = "守护者 %d",
-
-    trigger_shackle = "Guardian of Icecrown is afflicted by Shackle Undead.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-    trigger_shackleFade = "Shackle Undead fades from Guardian of Icecrown.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_shackle = "Guardian of Icecrown is afflicted by Shackle Undead.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+	trigger_shackleFade = "Shackle Undead fades from Guardian of Icecrown.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_shackle = "束缚亡灵（最多3个）",
     msg_shackle = "%s/3",
-
-    trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	
+	trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
     clickme = " >点击我！<",
@@ -188,156 +191,154 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
-    cmd = "Kelthuzad",
+	cmd = "Kelthuzad",
 
-    phase_cmd = "phase",
+	phase_cmd = "phase",
     phase_name = "阶段警报",
     phase_desc = "阶段变化时进行警告。",
-
-    p1adds_cmd = "p1adds",
+	
+	p1adds_cmd = "p1adds",
     p1adds_name = "第一阶段增援警报",
     p1adds_desc = "第一阶段增援出现时进行提醒。",
-
-    mc_cmd = "mc",
+	
+	mc_cmd = "mc",
     mc_name = "精神控制警报",
     mc_desc = "精神控制发生时进行警告。",
 
-    mcicon_cmd = "mcicon",
+	--mcicon_cmd = "mcicon",
     mcicon_name = "精神控制标记",
     mcicon_desc = "在被精神控制的目标上标记团队标记。",
 
-    fissure_cmd = "fissure",
+	fissure_cmd = "fissure",
     fissure_name = "暗影裂隙警报",
     fissure_desc = "暗影裂隙出现时进行警告。",
 
-    frostblast_cmd = "frostblast",
+	frostblast_cmd = "frostblast",
     frostblast_name = "冰霜冲击警报",
     frostblast_desc = "冰霜冲击施放时进行警告。",
-    
-    frostblastframe_cmd = "frostblastframe",
+	
+	frostblastframe_cmd = "frostblastframe",
     frostblastframe_name = "冰霜冲击目标框架",
     frostblastframe_desc = "显示一个包含冰霜冲击目标及其血量条的框架。",
-
-    detonate_cmd = "detonate",
+	
+	detonate_cmd = "detonate",
     detonate_name = "自爆法力警报",
     detonate_desc = "自爆法力施放时进行警告。",
 
-    detonateicon_cmd = "detonateicon",
+	detonateicon_cmd = "detonateicon",
     detonateicon_name = "自爆法力标记",
     detonateicon_desc = "在自爆法力的目标上标记团队标记。",
-
-    frostbolt_cmd = "frostbolt",
+	
+	frostbolt_cmd = "frostbolt",
     frostbolt_name = "单体寒冰箭警报",
     frostbolt_desc = "单体寒冰箭施放时进行警告。",
 
-    volley_cmd = "volley",
+	volley_cmd = "volley",
     volley_name = "寒冰箭雨警报",
     volley_desc = "寒冰箭雨施放时进行警告。",
 
-    guardian_cmd = "guardian",
+	guardian_cmd = "guardian",
     guardian_name = "守护者出现警报",
     guardian_desc = "第三阶段守护者出现时进行警告。",
 
-    shackle_cmd = "shackle",
+	shackle_cmd = "shackle",
     shackle_name = "束缚亡灵计数",
     shackle_desc = "统计对守护者施放的束缚亡灵次数。",
-    
-    bloodtap_cmd = "bloodtap",
+	
+	bloodtap_cmd = "bloodtap",
     bloodtap_name = "血液分流计数",
     bloodtap_desc = "统计守护者身上的血液分流增益次数。",
 
-    proximity_cmd = "proximity",
+	proximity_cmd = "proximity",
     proximity_name = "近距离警告",
     proximity_desc = "显示近距离警告框架",
-    
-    
-    --Mortal Wound from Unstoppable Abomination, stacking, -10% healing, 15sec
-    
-    trigger_engage = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!", --CHAT_MSG_MONSTER_YELL
+	
+	
+	--Mortal Wound from Unstoppable Abomination, stacking, -10% healing, 15sec
+	
+	trigger_engage = "Minions, servants, soldiers of the cold dark, obey the call of Kel'Thuzad!", --CHAT_MSG_MONSTER_YELL
     bar_phase1 = "第一阶段",
-
-    trigger_phase2_1 = "Pray for mercy!", --CHAT_MSG_MONSTER_YELL
-    trigger_phase2_2 = "Scream your dying breath!", --CHAT_MSG_MONSTER_YELL
-    trigger_phase2_3 = "The end is upon you!", --CHAT_MSG_MONSTER_YELL
+	
+	trigger_phase2_1 = "Pray for mercy!", --CHAT_MSG_MONSTER_YELL
+	trigger_phase2_2 = "Scream your dying breath!", --CHAT_MSG_MONSTER_YELL
+	trigger_phase2_3 = "The end is upon you!", --CHAT_MSG_MONSTER_YELL
     bar_phase2 = "克尔苏加德激活",
-    msg_phase2 = "第二阶段 - 克尔苏加德 15 秒后进入！",
-
-    msg_phase3soon = "第三阶段即将到来 - 40% 血量时发生",
-
-    trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
+    msg_phase2 = "第二阶段 - 15秒后克尔苏加德激活！",
+	
+    msg_phase3soon = "即将进入第三阶段 - 在40%血量时开始",
+	
+	trigger_phase3 = "Master! I require aid!", --CHAT_MSG_MONSTER_YELL
     msg_phase3 = "第三阶段 - 5 个守护者即将到来 - 最多束缚 3 个！",
-    
-    --supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
+	
+	--supposedly 14 of each, saw 13 weaver in logs. Also 117 Soldier of the Frozen Wastes, useful?
     bar_abom = "/14 憎恶死亡",
     bar_weaver = "/14 编织者死亡",
-
+	
     msg_abom = "憎恶已刷新 ",
     msg_weaver = "织魂者已刷新 ",
-
-    trigger_mcYell1 = "Your soul, is bound to me now!",
-    trigger_mcYell2 = "There will be no escape!",
+		
+	trigger_mcYell1 = "Your soul, is bound to me now!",
+	trigger_mcYell2 = "There will be no escape!",
     msg_mc = "精神控制！",
-
-    trigger_mcYou = "You are afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_mcOther = "(.+) is afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_mcFade = "Chains of Kel'Thuzad fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_mcYou = "You are afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.+) is afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_mcFade = "Chains of Kel'Thuzad fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mcAfflic = " 精神控制",
     bar_mcCd = "精神控制 CD",
-    trigger_friendlyDead = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
-
-    trigger_fissure = "Kel'Thuzad casts Shadow Fissure.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_friendlyDead = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	
+	trigger_fissure = "Kel'Thuzad casts Shadow Fissure.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_fissure = "离开裂隙！",
     msg_fissure = "暗影裂隙！",
-
-    trigger_frostBlastYell = "I will freeze the blood in your veins!", --CHAT_MSG_MONSTER_YELL
-    trigger_frostBlastYou = "You are afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_frostBlastOther = "(.+) is afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	
+	trigger_frostBlastYell = "I will freeze the blood in your veins!", --CHAT_MSG_MONSTER_YELL
+	trigger_frostBlastYou = "You are afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_frostBlastOther = "(.+) is afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_frostBlastCd = "冰霜冲击 CD",
     bar_frostBlastAfflic = "冰霜冲击",
     msg_frostBlast = "冰霜冲击！",
-        --unused
-    trigger_frostBlastFade = "Frost Blast fades from (.+)", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-
-    trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_detonateOther = "(.+) is afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-    trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+		--unused
+	trigger_frostBlastFade = "Frost Blast fades from (.+)", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_detonateYou = "You are afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_detonateOther = "(.+) is afflicted by Detonate Mana.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_detonateAfflic = " 自爆法力",
     bar_detonateCd = "自爆法力 CD",
     msg_detonate = "自爆法力在 ",
-
-    trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	
+	trigger_frostbolt = "Kel'Thuzad begins to cast Frostbolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_frostbolt = "寒冰箭",
     msg_frostbolt = "寒冰箭 - 打断！",
-    
-    trigger_attack1 = "Kel'Thuzad attacks", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
-    trigger_attack2 = "Kel'Thuzad misses", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
-    trigger_attack3 = "Kel'Thuzad hits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
-    trigger_attack4 = "Kel'Thuzad crits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
-    trigger_kick1 = "Kick hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_kick2 = "Kick crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_kick3 = "Kick was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_pummel1 = "Pummel hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_pummel2 = "Pummel crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_pummel3 = "Pummel was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_shieldBash1 = "Shield Bash hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_shieldBash2 = "Shield Bash crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_shieldBash3 = "Shield Bash was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_earthShock1 = "Earth Shock hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    trigger_earthShock2 = "Earth Shock crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
-    
-    trigger_volley = "afflicted by Frostbolt", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	
+	trigger_attack1 = "Kel'Thuzad attacks", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
+	trigger_attack2 = "Kel'Thuzad misses", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES
+	trigger_attack3 = "Kel'Thuzad hits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
+	trigger_attack4 = "Kel'Thuzad crits", --CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS // CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS // CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS
+	trigger_kick1 = "Kick hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_kick2 = "Kick crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_kick3 = "Kick was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_pummel1 = "Pummel hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_pummel2 = "Pummel crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_pummel3 = "Pummel was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_shieldBash1 = "Shield Bash hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_shieldBash2 = "Shield Bash crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_shieldBash3 = "Shield Bash was blocked by Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_earthShock1 = "Earth Shock hits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	trigger_earthShock2 = "Earth Shock crits Kel'Thuzad", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
+	
+	trigger_volley = "afflicted by Frostbolt", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_volley = "魔法飞弹 CD",
-
+	
     bar_guardian = "守护者 %d",
-
-    trigger_shackle = "Guardian of Icecrown is afflicted by Shackle Undead.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-    trigger_shackleFade = "Shackle Undead fades from Guardian of Icecrown.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	
+	trigger_shackle = "Guardian of Icecrown is afflicted by Shackle Undead.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+	trigger_shackleFade = "Shackle Undead fades from Guardian of Icecrown.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_shackle = "束缚亡灵（最多3个）",
     msg_shackle = "%s/3",
-
-    trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	
+	trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_bloodTapA = "血液分流 +",
     bar_bloodTapB = "% 伤害",
     clickme = " >点击我！<",
@@ -468,7 +469,7 @@ function module:OnRegister()
 end
 
 function module:OnEnable()
-	--self:RegisterEvent("CHAT_MSG_SAY", "Event")--Debug
+	--self:RegisterEvent("CHAT_MSG_SAY", "Event") --Debug
 	
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL") --trigger_engage, trigger_phase2_1,2,3, trigger_phase3, trigger_frostBlastYell
 	
@@ -604,9 +605,37 @@ function module:OnEngage()
 		self:ScheduleEvent("weaver13", self.WeaverSpawns, 294, self, "13")
 		self:ScheduleEvent("weaver14", self.WeaverSpawns, 300, self, "14")
 	end
+	
+	self:ScheduleRepeatingEvent("Kelthuzad_CheckForRaidWipe", self.CheckForRaidWipe, 60, self)
 end
 
-function module:RefreshP1()
+function module:OnDisengage()
+	if self.db.profile.proximity then
+		self:TriggerEvent("BigWigs_HideProximity")
+	end
+	
+	if self.db.profile.frostblastframe then
+		BigWigsFrostBlast:FBClose()
+	end
+end
+
+function module:MINIMAP_ZONE_CHANGED(msg)
+	if GetMinimapZoneText() == bzsapphironslair and self.core:IsModuleActive(module.translatedName) then
+		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
+		self:ResetModule()
+		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块："..module.translatedName)
+	
+	elseif GetMinimapZoneText() == bzeasternplaguelands and self.core:IsModuleActive(module.translatedName) then
+		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
+		self:ResetModule()
+		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块："..module.translatedName)
+	
+	elseif GetMinimapZoneText() == bzkelthuzadchamber and not self.core:IsModuleActive(module.translatedName) then
+		self.core:EnableModule(module.translatedName)
+	end
+end
+
+function module:ResetModule()
 	p3warn = nil
 	mcYellTime = GetTime()
 	frostBlastYellTime = GetTime()
@@ -622,75 +651,47 @@ function module:RefreshP1()
 	numWeaverDead = 0
 	bloodTapCounter = 0
 	
-	if self.db.profile.phase then
-		self:Bar(L["bar_phase1"], timer.phase1, icon.phase, true, color.phase)
-	end
-	
-	if self.db.profile.p1adds then
-		self:Bar(numAbomDead..L["bar_abom"], timer.p1adds, icon.abomination, true, color.abomination)
-		self:Bar(numWeaverDead..L["bar_weaver"], timer.p1adds, icon.soulWeaver, true, color.soulWeaver)
-		
-		self:ScheduleEvent("abom1", self.AbominationSpawns, 44, self, "1")
-		self:ScheduleEvent("abom2", self.AbominationSpawns, 72, self, "2")
-		self:ScheduleEvent("abom3", self.AbominationSpawns, 100, self, "3")
-		self:ScheduleEvent("abom4", self.AbominationSpawns, 130, self, "4")
-		self:ScheduleEvent("abom5", self.AbominationSpawns, 153, self, "5")
-		self:ScheduleEvent("abom6", self.AbominationSpawns, 176, self, "6")
-		self:ScheduleEvent("abom7", self.AbominationSpawns, 193, self, "7")
-		self:ScheduleEvent("abom8", self.AbominationSpawns, 212, self, "8")
-		self:ScheduleEvent("abom9", self.AbominationSpawns, 232, self, "9")
-		self:ScheduleEvent("abom10", self.AbominationSpawns, 252, self, "10")
-		self:ScheduleEvent("abom11", self.AbominationSpawns, 268, self, "11")
-		self:ScheduleEvent("abom12", self.AbominationSpawns, 285, self, "12")
-		self:ScheduleEvent("abom13", self.AbominationSpawns, 300, self, "13")
-		self:ScheduleEvent("abom14", self.AbominationSpawns, 318, self, "14")
-		
-		self:ScheduleEvent("weaver1", self.WeaverSpawns, 44, self, "1")
-		self:ScheduleEvent("weaver2", self.WeaverSpawns, 68, self, "2")
-		self:ScheduleEvent("weaver3", self.WeaverSpawns, 97, self, "3")
-		self:ScheduleEvent("weaver4", self.WeaverSpawns, 130, self, "4")
-		self:ScheduleEvent("weaver5", self.WeaverSpawns, 155, self, "5")
-		self:ScheduleEvent("weaver6", self.WeaverSpawns, 170, self, "6")
-		self:ScheduleEvent("weaver7", self.WeaverSpawns, 190, self, "7")
-		self:ScheduleEvent("weaver8", self.WeaverSpawns, 213, self, "8")
-		self:ScheduleEvent("weaver9", self.WeaverSpawns, 235, self, "9")
-		self:ScheduleEvent("weaver10", self.WeaverSpawns, 256, self, "10")
-		self:ScheduleEvent("weaver11", self.WeaverSpawns, 271, self, "11")
-		self:ScheduleEvent("weaver12", self.WeaverSpawns, 285, self, "12")
-		self:ScheduleEvent("weaver13", self.WeaverSpawns, 294, self, "13")
-		self:ScheduleEvent("weaver14", self.WeaverSpawns, 300, self, "14")
-	end
-end
-
-function module:OnDisengage()
 	if self.db.profile.proximity then
-		self:RemoveProximity()
+		self:TriggerEvent("BigWigs_HideProximity")
 	end
 	
 	if self.db.profile.frostblastframe then
 		BigWigsFrostBlast:FBClose()
 	end
+	
+	if self.db.profile.bloodtap then
+		for i=10, 1000, 10 do
+			self:RemoveBar(L["bar_bloodTapA"]..i..L["bar_bloodTapB"])
+		end
+	end
+	
+	self:CancelScheduledEvent("Kelthuzad_CheckForRaidWipe")
 end
 
-function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() == "Sapphiron's Lair" and self.core:IsModuleActive(module.translatedName) then
-		self.core:DisableModule(module.translatedName)
-	elseif GetMinimapZoneText() == "Plaguewood" and self.core:IsModuleActive(module.translatedName) then
-		self.core:DisableModule(module.translatedName)
-	
-	elseif GetMinimapZoneText() == "Kel'Thuzad Chamber" and not self.core:IsModuleActive(module.translatedName) then
-		self.core:EnableModule(module.translatedName)
+function module:CheckForRaidWipe()
+	local raidWiped = true
+	for i=1,GetNumRaidMembers() do
+		if UnitIsConnected("Raid"..i) and UnitAffectingCombat("Raid"..i) and not UnitIsDeadOrGhost("Raid"..i) then
+			raidWiped = nil
+			break
+		end
+	end
+
+	if raidWiped == true then
+		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
+		self:ResetModule()
+		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块："..module.translatedName)
 	end
 end
 
 function module:UNIT_HEALTH(msg)
 	if UnitName(msg) == module.translatedName then
-		local health = UnitHealth(msg)
-		if health > 40 and health <= 45 and p3warn == nil then
+		local healthPct = UnitHealth(msg) * 100 / UnitHealthMax(msg)
+		if healthPct > 40 and healthPct <= 45 and p3warn == nil then
 			self:Sync(syncName.phase3soon)
-		elseif health > 45 and p3warn == true then
+		elseif healthPct > 45 and p3warn == true then
 			p3warn = nil
-		elseif health <= 40 and p3warn == nil then
+		elseif healthPct <= 40 and p3warn == nil then
 			p3warn = true
 		end
 	end
@@ -699,9 +700,6 @@ end
 function module:CHAT_MSG_MONSTER_YELL(msg)
 	if msg == L["trigger_engage"] then
 		module:SendEngageSync()
-		if phase ~= "p1" then
-			self:RefreshP1()
-		end
 	
 	elseif msg == L["trigger_phase2_1"] or msg == L["trigger_phase2_2"] or msg == L["trigger_phase2_3"] then
 		self:Sync(syncName.phase2)
@@ -930,7 +928,7 @@ function module:Phase2()
 	end
 
 	if self.db.profile.proximity then
-		self:ScheduleEvent("bwShowProximity", self.Proximity, timer.phase2, self)
+		self:ScheduleEvent("KtShowProximity", self.EnableProximity, timer.phase2, self)
 	end
 	
 	if self.db.profile.frostblastframe then
@@ -1023,59 +1021,23 @@ function module:Mc(rest)
 		mc1 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
-		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
-			for i=1,GetNumRaidMembers() do
-				if UnitName("raid"..i) == rest then
-					SetRaidTargetIcon("raid"..i, 1)
-				end
-			end
-		end]]--
 	elseif mc2 == nil then
 		mc2 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
-		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
-			for i=1,GetNumRaidMembers() do
-				if UnitName("raid"..i) == rest then
-					SetRaidTargetIcon("raid"..i, 2)
-				end
-			end
-		end]]--
 	elseif mc3 == nil then
 		mc3 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
-		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
-			for i=1,GetNumRaidMembers() do
-				if UnitName("raid"..i) == rest then
-					SetRaidTargetIcon("raid"..i, 3)
-				end
-			end
-		end]]--
 	elseif mc4 == nil then
 		mc4 = rest
 		self:Bar(rest..L["bar_mcAfflic"].. L["clickme"], timer.mcAfflic, icon.mc, true, color.mc)
 		self:SetCandyBarOnClick("BigWigsBar "..rest..L["bar_mcAfflic"].. L["clickme"], function(name, button, extra) TargetByName(extra, true) end, rest)
-		--[[if (IsRaidLeader() or IsRaidOfficer()) and self.db.profile.mcicon then
-			for i=1,GetNumRaidMembers() do
-				if UnitName("raid"..i) == rest then
-					SetRaidTargetIcon("raid"..i, 4)
-				end
-			end
-		end]]--
 	end
 end
 
 function module:McFade(rest)
 	self:RemoveBar(rest..L["bar_mcAfflic"].. L["clickme"])
-	
-	--[[if IsRaidLeader() or IsRaidOfficer() then
-		for i=1,GetNumRaidMembers() do
-			if UnitName("raid"..i) == rest then
-				SetRaidTargetIcon("raid"..i, 0)
-			end
-		end
-	end]]--
 	
 	if mc1 ~= nil and mc2 ~= nil and mc3 ~= nil and mc4 ~= nil then
 		mc1 = nil
@@ -1094,6 +1056,8 @@ end
 
 function module:FrostBlastYell()
 	frostBlastYellTime = GetTime()
+	
+	self:RemoveBar(L["bar_frostBlastCd"])
 	
 	self:Bar(L["bar_frostBlastAfflic"], timer.frostBlastAfflic, icon.frostBlast, true, color.frostBlast)
 	self:DelayedIntervalBar(timer.frostBlastAfflic, L["bar_frostBlastCd"], timer.frostBlastCd[1], timer.frostBlastCd[2], icon.frostBlast, true, color.frostBlast)
@@ -1199,9 +1163,13 @@ end
 
 function module:BloodTap(rest)
 	if (tonumber(rest) * 10) > bloodTapCounter then
-		self:RemoveBar(L["bar_bloodTapA"]..bloodTapCounter..L["bar_bloodTapB"], timer.bloodTap, icon.bloodTap, true, color.bloodTap)
+		self:RemoveBar(L["bar_bloodTapA"]..bloodTapCounter..L["bar_bloodTapB"])
 		
 		bloodTapCounter = tonumber(rest) * 10
 		self:Bar(L["bar_bloodTapA"]..bloodTapCounter..L["bar_bloodTapB"], timer.bloodTap, icon.bloodTap, true, color.bloodTap)
 	end
+end
+
+function module:EnableProximity()
+	self:TriggerEvent("BigWigs_ShowProximity")
 end

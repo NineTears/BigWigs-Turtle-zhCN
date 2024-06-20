@@ -42,7 +42,6 @@ L:RegisterTranslations("enUS", function() return {
     msg_disorientSoon = "其拉斩灵者血量 < 20% HP - 即将出现30码范围法力燃烧&迷惑！",
 
     ["You have slain %s!"] = true,
-    ["You have slain %s!"] = "你已经击败了 %s！",
     clickme = " >点击我！<",
     you = "you",
 } end )
@@ -80,7 +79,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_disorient = "法力燃烧&迷惑",
     msg_disorientSoon = "其拉斩灵者血量 < 20% HP - 即将出现30码范围法力燃烧&迷惑！",
 
-    ["You have slain %s!"] = "你已经击败了 %s！",
+    ["You have slain %s!"] = "你已经击败了%s！",
     clickme = " >点击我！<",
     you = "you",
 } end )

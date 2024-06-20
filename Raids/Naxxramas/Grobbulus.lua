@@ -1,7 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Grobbulus", "Naxxramas")
 
-module.revision = 30071
+module.revision = 30090
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"slimespray", "inject", "cloud", "icon",  -1, "enrage", "bosskill"}
 
@@ -9,97 +9,95 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Grobbulus",
 
 	enrage_cmd = "enrage",
-	enrage_name = "激怒警报",
-	enrage_desc = "激怒时进行警告",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
 	
 	slimespray_cmd = "slimespray",
-	slimespray_name = "软泥喷射",
-	slimespray_desc = "显示软泥喷射的计时器",
+    slimespray_name = "软泥喷射",
+    slimespray_desc = "显示软泥喷射的计时条",
 	
 	inject_cmd = "inject",
-	inject_name = "变异注射警报",
-	inject_desc = "当有人被注射时进行警告",
+    inject_name = "变异注射警报",
+    inject_desc = "当有人被注射时进行警告",
 
-	icon_cmd = "icon",
-	icon_name = "放置图标",
-	icon_desc = "在被注射的人身上放置骷髅标记。（需要助理或更高权限）",
+    icon_cmd = "icon",
+    icon_name = "标记图标",
+    icon_desc = "在被注射的人员身上放置一个骷髅图标。(需要是助理或更高权限)",
 
-	cloud_cmd = "cloud",
-	cloud_name = "毒云",
-	cloud_desc = "毒云出现时进行警告",
+    cloud_cmd = "cloud",
+    cloud_name = "毒云术",
+    cloud_desc = "毒云术出现时进行警告",
 		
 		
 	trigger_enrage = "%s becomes enraged!",--to be confirmed
-	bar_enrage = "激怒",
-	msg_enrage60 = "1分钟后激怒",
-	msg_enrage10 = "10秒后激怒",
-	msg_enrage = "激怒！",
+    bar_enrage = "激怒",
+    msg_enrage60 = "1分钟后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
 	
 	trigger_slimeSpray = "Slime Spray",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_slimeSprayCD = "软泥喷射 CD",
+    bar_slimeSprayCD = "毒液喷射冷却",
 	
-	trigger_injectOther = "(.+) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
 	trigger_injectYou = "You are afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_injectFade = "Mutating Injection fades from (.+).,",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_injected = " 被注射",
-	msg_inject = " 被注射",
+	trigger_injectOther = "(.+) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_injectFade = "Mutating Injection fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_injected = " 注射",
+    msg_inject = " 注射",
 	
 	trigger_cloudCast = "Grobbulus casts Poison Cloud.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	bar_cloudCD = "毒云冷却",
-	msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
+    bar_cloudCD = "毒云术冷却",
+    msg_cloudCast = "毒云术 -- 移动格罗布鲁斯！",
 	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
-	msg_lowHp = "格罗布鲁斯血量<30% - 更频繁注射",
+    msg_lowHp = "格罗布鲁斯生命值低于30% - 更频繁注射",
 	you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
 	cmd = "Grobbulus",
 
 	enrage_cmd = "enrage",
-	enrage_name = "激怒警报",
-	enrage_desc = "激怒时进行警告",
+    enrage_name = "激怒警报",
+    enrage_desc = "激怒出现时进行警告",
 	
 	slimespray_cmd = "slimespray",
-	slimespray_name = "软泥喷射",
-	slimespray_desc = "显示软泥喷射的计时器",
+    slimespray_name = "软泥喷射",
+    slimespray_desc = "显示软泥喷射的计时条",
 	
 	inject_cmd = "inject",
-	inject_name = "变异注射警报",
-	inject_desc = "当有人被注射时进行警告",
+    inject_name = "变异注射警报",
+    inject_desc = "当有人被注射时进行警告",
 
-	icon_cmd = "icon",
-	icon_name = "放置图标",
-	icon_desc = "在被注射的人身上放置骷髅标记。（需要助理或更高权限）",
+    icon_cmd = "icon",
+    icon_name = "标记图标",
+    icon_desc = "在被注射的人员身上放置一个骷髅图标。(需要是助理或更高权限)",
 
-	cloud_cmd = "cloud",
-	cloud_name = "毒云",
-	cloud_desc = "毒云出现时进行警告",
+    cloud_cmd = "cloud",
+    cloud_name = "毒云术",
+    cloud_desc = "毒云术出现时进行警告",
 		
 		
 	trigger_enrage = "%s becomes enraged!",--to be confirmed
-	bar_enrage = "激怒",
-	msg_enrage60 = "1分钟后激怒",
-	msg_enrage10 = "10秒后激怒",
-	msg_enrage = "激怒！",
+    bar_enrage = "激怒",
+    msg_enrage60 = "1分钟后激怒",
+    msg_enrage10 = "10秒后激怒",
+    msg_enrage = "激怒！",
 	
 	trigger_slimeSpray = "Slime Spray",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	bar_slimeSprayCD = "软泥喷射 CD",
+    bar_slimeSprayCD = "毒液喷射冷却",
 	
-	trigger_injectOther = "(.+) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
 	trigger_injectYou = "You are afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_injectFade = "Mutating Injection fades from (.+).,",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	bar_injected = " 被注射",
-	msg_inject = " 被注射",
+	trigger_injectOther = "(.+) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_injectFade = "Mutating Injection fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_injected = " 注射",
+    msg_inject = " 注射",
 	
 	trigger_cloudCast = "Grobbulus casts Poison Cloud.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-	bar_cloudCD = "毒云冷却",
-	msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
+    bar_cloudCD = "毒云术冷却",
+    msg_cloudCast = "毒云术 -- 移动格罗布鲁斯！",
 	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
-	msg_lowHp = "格罗布鲁斯血量<30% - 更频繁注射",
+    msg_lowHp = "格罗布鲁斯生命值低于30% - 更频繁注射",
 	you = "you",
 } end )
 
@@ -127,12 +125,13 @@ local syncName = {
 	enrage = "GrobbulusEnrage"..module.revision,
 	slimeSpray = "GrobbulusSlimeSpray"..module.revision,
 	inject = "GrobbulusInject"..module.revision,
-	injectFade = "GrobbulusInjectFade"..module.revision,
+	injectFade = "GrobbulusInjectFade2"..module.revision,
 	cloud = "GrobbulusCloud"..module.revision,
 	lowHp = "GrobbulusLowHp"..module.revision,
 }
 
 local lowHp = nil
+local amInjected = nil
 
 function module:OnEnable()
 	self:RegisterEvent("UNIT_HEALTH")
@@ -165,6 +164,7 @@ end
 
 function module:OnEngage()
 	lowHp = nil
+	amInjected = nil
 	
 	if self.db.profile.enrage then
 		self:Bar(L["bar_enrage"], timer.enrage, icon.enrage, true, color.enrage)
@@ -214,7 +214,6 @@ function module:Event(msg)
 		local _,_, injectFadePerson, _ = string.find(msg, L["trigger_injectFade"])
 		if injectFadePerson == L["you"] then injectFadePerson = UnitName("Player") end
 		self:Sync(syncName.injectFade.." "..injectFadePerson)
-
 	
 	elseif msg == L["trigger_cloudCast"] then
 		self:Sync(syncName.cloud)
@@ -271,9 +270,10 @@ function module:Inject(rest)
 	end
 	
 	if rest == UnitName("Player") then
-		SendChatMessage("注射在 "..UnitName("Player").."!","SAY")
+		SendChatMessage("注射于 "..UnitName("Player").."!","SAY")
 		self:Sound("Beware")
 		self:WarningSign(icon.inject, 3)
+		amInjected = true
 	end
 end
 
@@ -288,10 +288,12 @@ function module:InjectFade(rest)
 		end
 	end
 	
-	if rest == UnitName("Player") then
-		SendChatMessage("我脚下的毒云！","SAY")
+	if rest == UnitName("Player") and amInjected then
+		self:RemoveWarningSign(icon.inject)
+		SendChatMessage("我脚下有毒云！","SAY")
 		self:WarningSign(icon.cleanse, 1)
 		self:Sound("Long")
+		amInjected = nil
 	end
 end
 
