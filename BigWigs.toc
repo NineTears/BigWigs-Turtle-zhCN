@@ -2,10 +2,10 @@
 
 ## Title: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星1.28]|R
 ## Title-zhCN: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星1.28]|R
-## Notes: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星]|R团队首领警报插件，预警、提示BOSS技能并显示计时条，由|cff33ffccNineTears(Wind)|R汉化修复。|N命令：/BigWigs
-## Notes-zhCN: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星]|R团队首领警报插件，预警、提示BOSS技能并显示计时条，由|cff33ffccNineTears(Wind)|R汉化修复。|N命令：/BigWigs
+## Notes: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星]|R团队首领警报插件，预警、提示BOSS技能并显示计时条，由|cff33ffccWind&sunelegy|R汉化修复。|N命令：/BigWigs
+## Notes-zhCN: |CFFEE7600BigWigs-|RTurtle |cffff1450[红星]|R团队首领警报插件，预警、提示BOSS技能并显示计时条，由|cff33ffccWind&sunelegy|R汉化修复。|N命令：/BigWigs
 ## X-Repple: 团队
-## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq, NineTears(Wind)
+## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq, Wind, sunelegy
 ## Version: 2.0.0
 ## X-Website: https://github.com/madScripting
 ## X-Category: Raid

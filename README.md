@@ -16,4 +16,4 @@ The adjustments were originally made by <a href="https://github.com/MOUZU"><b>LY
 Adjustments for Elysium made by <b>Hosq</b>.<br>
 Adjustments for Turtle-WoW made by <b>CosminPOP</b>.<br>
 Modifications for Turtle-WoW made by <b>Relar</b>.<br>
-Translated and modified by wind for the zhCN version of Bigwigs Turtle-WoW.
+Translated and modified by Wind&sunelegy for the zhCN version of Bigwigs Turtle-WoW.
