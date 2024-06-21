@@ -111,7 +111,7 @@ L:RegisterTranslations("enUS", function()
 	["Floating Combat Text"] = "浮动战斗信息",
 
 	["Test"] = "测试",
-	["Close"] = "退出",
+	["Close"] = "关闭",
 	}
 end)
 
@@ -272,7 +272,7 @@ L:RegisterTranslations("zhCN", function()
 	["Floating Combat Text"] = "浮动战斗信息",
 
 	["Test"] = "测试",
-	["Close"] = "退出",
+	["Close"] = "关闭",
 	}
 end)
 
