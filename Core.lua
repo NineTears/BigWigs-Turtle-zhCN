@@ -437,7 +437,7 @@ function BigWigs:EditLayout()
 
 	-- if mage show mage tools anchor
 	local _, englishClass = UnitClass("player");
-	if englishClass == BC["MAGE"] then
+	if englishClass == BC["Mage"] then
 		BigWigsMageTools:ShowAnchors()
 	end
 end

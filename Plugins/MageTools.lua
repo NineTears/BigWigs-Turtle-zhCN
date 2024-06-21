@@ -270,7 +270,7 @@ end)
 
 local _, englishClass = UnitClass("player");
 local isMage = false;
-if englishClass == "MAGE" then
+if englishClass == "Mage" then
 	isMage = true
 end
 BigWigsMageTools = BigWigs:NewModule(name)
