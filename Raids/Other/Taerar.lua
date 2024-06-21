@@ -3,7 +3,7 @@ local module, L = BigWigs:ModuleDeclaration("Taerar", "Ashenvale")
 local bbshadeoftaerar = AceLibrary("Babble-Boss-2.2")["Shade of Taerar"]
 local bbtaerar = AceLibrary("Babble-Boss-2.2")["Taerar"]
 
-module.revision = 30072
+module.revision = 30087
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"tailsweep", "dreamfog", "noxiousbreath", -1, "fear", "arcaneblast", "summon", -1, "poisoncloud", "bosskill"}
 module.zonename = {
@@ -15,33 +15,33 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Taerar",
+	cmd = "Taerar",
 
-    tailsweep_cmd = "tailsweep",
+	tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
     tailsweep_desc = "龙尾扫击出现时进行警告",
-
-    dreamfog_cmd = "dreamfog",
+	
+	dreamfog_cmd = "dreamfog",
     dreamfog_name = "梦境迷雾昏睡警报",
     dreamfog_desc = "梦境迷雾昏睡出现时进行警告",
-
-    noxiousbreath_cmd = "noxiousbreath",
+	
+	noxiousbreath_cmd = "noxiousbreath",
     noxiousbreath_name = "毒性吐息警报",
     noxiousbreath_desc = "毒性吐息出现时进行警告",
-
-    fear_cmd = "fear",
+	
+	fear_cmd = "fear",
     fear_name = "恐惧警报",
     fear_desc = "恐惧出现时进行警告",
-
-    arcaneblast_cmd = "arcaneblast",
+	
+	arcaneblast_cmd = "arcaneblast",
     arcaneblast_name = "奥术冲击警报",
     arcaneblast_desc = "奥术冲击出现时进行警告",
-
-    summon_cmd = "summon",
+	
+	summon_cmd = "summon",
     summon_name = "召唤警报",
     summon_desc = "召唤出现时进行警告",
-
-    poisoncloud_cmd = "poisoncloud",
+	
+	poisoncloud_cmd = "poisoncloud",
     poisoncloud_name = "毒性云雾警报",
     poisoncloud_desc = "毒性云雾出现时进行警告",
 
@@ -88,33 +88,33 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-    cmd = "Taerar",
+	cmd = "Taerar",
 
-    tailsweep_cmd = "tailsweep",
+	tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
     tailsweep_desc = "龙尾扫击出现时进行警告",
-
-    dreamfog_cmd = "dreamfog",
+	
+	dreamfog_cmd = "dreamfog",
     dreamfog_name = "梦境迷雾昏睡警报",
     dreamfog_desc = "梦境迷雾昏睡出现时进行警告",
-
-    noxiousbreath_cmd = "noxiousbreath",
+	
+	noxiousbreath_cmd = "noxiousbreath",
     noxiousbreath_name = "毒性吐息警报",
     noxiousbreath_desc = "毒性吐息出现时进行警告",
-
-    fear_cmd = "fear",
+	
+	fear_cmd = "fear",
     fear_name = "恐惧警报",
     fear_desc = "恐惧出现时进行警告",
-
-    arcaneblast_cmd = "arcaneblast",
+	
+	arcaneblast_cmd = "arcaneblast",
     arcaneblast_name = "奥术冲击警报",
     arcaneblast_desc = "奥术冲击出现时进行警告",
-
-    summon_cmd = "summon",
+	
+	summon_cmd = "summon",
     summon_name = "召唤警报",
     summon_desc = "召唤出现时进行警告",
-
-    poisoncloud_cmd = "poisoncloud",
+	
+	poisoncloud_cmd = "poisoncloud",
     poisoncloud_name = "毒性云雾警报",
     poisoncloud_desc = "毒性云雾出现时进行警告",
 
@@ -396,7 +396,7 @@ function module:NoxiousBreath(rest)
 	
 	if rest == UnitName("Player") then
 		for i=1,GetNumRaidMembers() do
-			if UnitName("raid"..i.."Target") == btaerar then
+			if UnitName("raid"..i.."Target") == bbtaerar then
 				if UnitName("raid"..i.."TargetTarget") ~= UnitName("Player") then
 					self:Message(L["msg_noxiousBreathYou"], "Urgent", false, nil, false)
 					self:Sound("Beware")
@@ -412,17 +412,30 @@ function module:NoxiousBreathStacks(rest)
 	local stacksPlayer = strsub(rest,0,strfind(rest," ") - 1)
 	local stacksQty = tonumber(strsub(rest,strfind(rest," "),strlen(rest)))
 	
-	if stacksQty >= 3 then
-		self:RemoveBar(stacksPlayer.." ".."3"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."4"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."5"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."6"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."7"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."8"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."9"..L["bar_noxiousBreath"])
-		self:RemoveBar(stacksPlayer.." ".."10"..L["bar_noxiousBreath"])
+	if type(stacksQty) == "number" then
+		if stacksQty >= 3 then
+			for i=1,GetNumRaidMembers() do
+				if UnitName("raid"..i) == stacksPlayer then
+					self:RemoveBar(stacksPlayer.." ".."3"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."4"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."5"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."6"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."7"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."8"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."9"..L["bar_noxiousBreath"])
+					self:RemoveBar(stacksPlayer.." ".."10"..L["bar_noxiousBreath"])
 
-		self:Bar(stacksPlayer.." "..stacksQty..L["bar_noxiousBreath"], timer.noxiousBreathDur, icon.noxiousBreath, true, color.noxiousBreathDur)
+					self:Bar(stacksPlayer.." "..stacksQty..L["bar_noxiousBreath"], timer.noxiousBreathDur, icon.noxiousBreath, true, color.noxiousBreathDur)
+					break
+				end
+			end
+		end
+	end
+	
+	if UnitName("Player") == "Relar" or UnitName("Player") == "Dreadsome" or UnitName("Player") == "Vakos" then
+		if type(stacksQty) ~= "number" then
+			DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8080[BigWigs]|r Send this Screenshot to Relar: "..rest)
+		end
 	end
 end
 

@@ -6,116 +6,108 @@ local bspowerfulhealingward = AceLibrary("Babble-Spell-2.2")["Powerful Healing W
 local bbjindothegexxer = AceLibrary("Babble-Boss-2.2")["Jin'do the Hexxer"]
 local bbshadeofjindo = AceLibrary("Babble-Boss-2.2")["Shade of Jin'do"]
 
-module.revision = 30041
+module.revision = 30077
 module.enabletrigger = module.translatedName
-module.toggleoptions = {"curse", "hex", "brainwash", "healingward", "puticon", "autotarget", "bosskill"}
+module.toggleoptions = {"curse", "hex", "brainwash", "healingward", "autotarget", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Jindo",
-
-    brainwash_cmd = "brainwash",
-    brainwash_name = "洗脑图腾警报",
-    brainwash_desc = "金度召唤洗脑图腾时进行警告",
-
-    healingward_cmd = "healingward",
-    healingward_name = "治疗图腾警报",
-    healingward_desc = "金度召唤强效治疗结界时进行警告",
-
-    curse_cmd = "curse",
+	cmd = "Jindo",
+	
+	curse_cmd = "curse",
     curse_name = "诅咒警报",
-    curse_desc = "玩家中了金度的妄想时进行警告",
+    curse_desc = "当玩家受到金度的欺骗时进行警告。",
 
-    hex_cmd = "hex",
+	hex_cmd = "hex",
     hex_name = "妖术警报",
-    hex_desc = "玩家中了妖术时进行警告",
+    hex_desc = "当玩家受到妖术时进行警告。",
+	
+	brainwash_cmd = "brainwash",
+    brainwash_name = "洗脑图腾警报",
+    brainwash_desc = "当金度召唤洗脑图腾时进行警告。",
 
-    puticon_cmd = "puticon",
-    puticon_name = "标记中了诅咒的玩家",
-    puticon_desc = "在中了金度的妄想的玩家身上放置团队标志。\n\n(需要助理或更高权限)",
+	healingward_cmd = "healingward",
+    healingward_name = "治疗图腾警报",
+    healingward_desc = "当金度召唤强力治疗图腾时进行警告。",
 
-    autotarget_cmd = "autotarget",
-    autotarget_name = "图腾自动目标",
-    autotarget_desc = "图腾自动目标",
-
-    trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
-
-    trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_hexFades = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	autotarget_cmd = "autotarget",
+    autotarget_name = "自动标记图腾",
+    autotarget_desc = "自动标记图腾",
+	
+	
+	trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
+	
+	trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_hexFade = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_hex = " 妖术",
-    msg_hex = " 被妖术变形了！驱散它！",
-
-    trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    msg_curseYou = "你被诅咒了！击杀幻影！",
-    trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    bar_curse = " 受到诅咒",
-    trigger_curseFade = "Delusions of Jin'do fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-
-    trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
-    msg_curseDispel = "金度的妄想被解除了！",
-
-    trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_hex = " 被妖术 - 驱散！",
+	
+	trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_curseYou = "你被诅咒了！杀死阴影！",
+	trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_curse = " 被诅咒",
+	trigger_curseFade = "Delusions of Jin'do fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
+    msg_curseDispel = "金度的欺骗被驱散了！",
+	
+	trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_brainWash = "洗脑图腾！",
-    --trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-
-    trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	--trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	
+	trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_healingWard = "治疗图腾！",
-    --trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	--trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
-    cmd = "Jindo",
-
-    brainwash_cmd = "brainwash",
-    brainwash_name = "洗脑图腾警报",
-    brainwash_desc = "金度召唤洗脑图腾时进行警告",
-
-    healingward_cmd = "healingward",
-    healingward_name = "治疗图腾警报",
-    healingward_desc = "金度召唤强效治疗结界时进行警告",
-
-    curse_cmd = "curse",
+	cmd = "Jindo",
+	
+	curse_cmd = "curse",
     curse_name = "诅咒警报",
-    curse_desc = "玩家中了金度的妄想时进行警告",
+    curse_desc = "当玩家受到金度的欺骗时进行警告。",
 
-    hex_cmd = "hex",
+	hex_cmd = "hex",
     hex_name = "妖术警报",
-    hex_desc = "玩家中了妖术时进行警告",
+    hex_desc = "当玩家受到妖术时进行警告。",
+	
+	brainwash_cmd = "brainwash",
+    brainwash_name = "洗脑图腾警报",
+    brainwash_desc = "当金度召唤洗脑图腾时进行警告。",
 
-    puticon_cmd = "puticon",
-    puticon_name = "标记中了诅咒的玩家",
-    puticon_desc = "在中了金度的妄想的玩家身上放置团队标志。\n\n(需要助理或更高权限)",
+	healingward_cmd = "healingward",
+    healingward_name = "治疗图腾警报",
+    healingward_desc = "当金度召唤强力治疗图腾时进行警告。",
 
-    autotarget_cmd = "autotarget",
-    autotarget_name = "图腾自动目标",
-    autotarget_desc = "图腾自动目标",
-
-    trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
-
-    trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_hexFades = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	autotarget_cmd = "autotarget",
+    autotarget_name = "自动标记图腾",
+    autotarget_desc = "自动标记图腾",
+	
+	
+	trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
+	
+	trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_hexFade = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_hex = " 妖术",
-    msg_hex = " 被妖术变形了！驱散它！",
-
-    trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    msg_curseYou = "你被诅咒了！击杀幻影！",
-    trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    bar_curse = " 受到诅咒",
-    trigger_curseFade = "Delusions of Jin'do fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-
-    trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
-    msg_curseDispel = "金度的妄想被解除了！",
-
-    trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_hex = " 被妖术 - 驱散！",
+	
+	trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_curseYou = "你被诅咒了！杀死阴影！",
+	trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    bar_curse = " 被诅咒",
+	trigger_curseFade = "Delusions of Jin'do fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	
+	trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
+    msg_curseDispel = "金度的欺骗被驱散了！",
+	
+	trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_brainWash = "洗脑图腾！",
-    --trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
-
-    trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	--trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	
+	trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_healingWard = "治疗图腾！",
-    --trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	--trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
 local timer = {
@@ -127,6 +119,10 @@ local icon = {
 	curse = "Spell_Shadow_UnholyFrenzy",
 	brainWash = "Spell_Totem_WardOfDraining",
 	healingWard = "Spell_Holy_LayOnHands",
+}
+local color = {
+	hex = "Green",
+	curse = "Blue",
 }
 local syncName = {
 	hex = "JindoHexStart"..module.revision,
@@ -142,14 +138,19 @@ module:RegisterYellEngage(L["trigger_engage"])
 
 function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF", "Event")--summon totems
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE", "Event")--hexYou
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_SELF", "Event")--hexFade, curseFade
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_PARTY", "Event")--hexFade, curseFade
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER", "Event")--hexFade, curseFade
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE", "Event")--curseYou
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE", "Event")--curseOther, hexOther
 	self:RegisterEvent("CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE", "Event")--curseOther, hexOther
+	
 	self:RegisterEvent("CHAT_MSG_SPELL_BREAK_AURA", "Event")--curseDispel
+
 
 	self:ThrottleSync(3, syncName.hex)
 	self:ThrottleSync(3, syncName.hexFade)
@@ -177,8 +178,8 @@ function module:Event(msg)
 		local _, _, hexPlayer = string.find(msg, L["trigger_hexOther"])
 		self:Sync(syncName.hex.." "..hexPlayer)
 	
-	elseif string.find(msg, L["trigger_hexFades"]) then
-		local _, _, hexFadePlayer = string.find(msg, L["trigger_hexFades"])
+	elseif string.find(msg, L["trigger_hexFade"]) then
+		local _, _, hexFadePlayer = string.find(msg, L["trigger_hexFade"])
 		self:Sync(syncName.hexFade.." "..hexFadePlayer)
 		
 		
@@ -231,16 +232,13 @@ end
 
 
 function module:Curse(rest)
-	if rest == UnitName("player") then
+	if rest == UnitName("Player") then
 		self:WarningSign(icon.curse, 1)
-		self:Message(L["msg_curseYou"], "Personal", true, "Beware")
+		self:Message(L["msg_curseYou"], "Personal", false, nil, false)
+		self:Sound("Beware")
 	end
 	
-	if self.db.profile.puticon then
-		self:Icon(rest)
-	end
-	
-	self:Bar(rest..L["bar_curse"], timer.curseDuration, icon.curse, true, "Blue")
+	self:Bar(rest..L["bar_curse"], timer.curseDuration, icon.curse, true, color.curse)
 end
 
 function module:CurseFade(rest)
@@ -248,18 +246,17 @@ function module:CurseFade(rest)
 end
 
 function module:CurseDispel()
-	self:Message(L["msg_curseDispel"], "Urgent")
+	self:Message(L["msg_curseDispel"], "Urgent", false, nil, false)
 end
 
 function module:Hex(rest)
-	if UnitClass("Player") == BC["Paladin"] then
-		self:WarningSign(icon.hex, 0.7)
-	elseif UnitClass("Player") == BC["Priest"] then
+	self:Bar(rest..L["bar_hex"], timer.hexDuration, icon.hex, true, color.hex)
+	
+	if UnitClass("Player") == BC["Paladin"] or UnitClass("Player") == BC["Priest"] then
+		self:Message(rest..L["msg_hex"], "Important", false, nil, false)
+		self:Sound("Info")
 		self:WarningSign(icon.hex, 0.7)
 	end
-	
-	self:Bar(rest..L["bar_hex"], timer.hexDuration, icon.hex, true, "Green")
-	self:Message(rest..L["msg_hex"], "Important")
 end
 
 function module:HexFade(rest)
@@ -268,7 +265,8 @@ end
 
 function module:BrainWash()
 	self:WarningSign(icon.brainWash, 0.7)
-	self:Message(L["msg_brainWash"], "Attention", true, "Alarm")
+	self:Message(L["msg_brainWash"], "Attention", false, nil, false)
+	self:Sound("Alarm")
 	
 	if UnitName("Target") == bbjindothegexxer and UnitName("TargetTarget") == UnitName("Player") then return end
 	
@@ -291,7 +289,8 @@ end
 
 function module:HealingWard()
 	self:WarningSign(icon.healingWard, 0.7)
-	self:Message(L["msg_healingWard"], "Attention", true, "Alarm")
+	self:Message(L["msg_healingWard"], "Attention", false, nil, false)
+	self:Sound("Alarm")
 	
 	if UnitName("Target") == bsbrainwashtotem then return end
 	if UnitName("Target") == bbjindothegexxer and UnitName("TargetTarget") == UnitName("Player") then return end

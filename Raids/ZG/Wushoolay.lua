@@ -11,19 +11,19 @@ local module, L = BigWigs:ModuleDeclaration("Wushoolay", "Zul'Gurub")
 ----------------------------
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Wushoolay",
+	cmd = "Wushoolay",
 
-    chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
+	chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
     chainlightning_bar = "闪电链",
     chainlightning_message = "闪电链！打断它！",
-    lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
+	lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
     lightningcloud_message = "离开闪电云！",
 
-    chainlightning_cmd = "chainlightning",
+	chainlightning_cmd = "chainlightning",
     chainlightning_name = "闪电链警报",
     chainlightning_desc = "当Boss施放闪电链时进行警告",
 
-    lightningcloud_cmd = "lightningcloud",
+	lightningcloud_cmd = "lightningcloud",
     lightningcloud_name = "闪电云警告",
     lightningcloud_desc = "当你站在闪电云中时进行警告",
 } end )
@@ -65,25 +65,22 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
-    cmd = "Wushoolay",
+	cmd = "Wushoolay",
 
-    chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
+	chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
     chainlightning_bar = "闪电链",
     chainlightning_message = "闪电链！打断它！",
-    lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
+	lightningcloud_trigger = "You are afflicted by Lightning Cloud\.",
     lightningcloud_message = "离开闪电云！",
 
-    chainlightning_cmd = "chainlightning",
+	chainlightning_cmd = "chainlightning",
     chainlightning_name = "闪电链警报",
     chainlightning_desc = "当Boss施放闪电链时进行警告",
 
-    lightningcloud_cmd = "lightningcloud",
+	lightningcloud_cmd = "lightningcloud",
     lightningcloud_name = "闪电云警告",
     lightningcloud_desc = "当你站在闪电云中时进行警告",
 } end )
-
 ---------------------------------
 --      	Variables 		   --
 ---------------------------------

@@ -1,5 +1,7 @@
 local module, L = BigWigs:ModuleDeclaration("Warchief Rend Blackhand", "Blackrock Spire")
 local BC = AceLibrary("Babble-Class-2.2")
+local bzblackrockstadium = AceLibrary("Babble-Zone-2.2")["Blackrock Stadium"]
+local bbwarchiefrendblackhand = AceLibrary("Babble-Boss-2.2")["Warchief Rend Blackhand"]
 
 local gyth = AceLibrary("Babble-Boss-2.2")["Gyth"]
 local rend = AceLibrary("Babble-Boss-2.2")["Warchief Rend Blackhand"]
@@ -18,55 +20,55 @@ module.zonename = {
 --}
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Gyth",
-
-    flamebreath_cmd = "flamebreath",
+	cmd = "Gyth",
+	
+	flamebreath_cmd = "flamebreath",
     flamebreath_name = "烈焰吐息",
     flamebreath_desc = "烈焰吐息出现时进行警告",
-
-    freeze_cmd = "freeze",
+	
+	freeze_cmd = "freeze",
     freeze_name = "冰冻",
     freeze_desc = "提示团队驱散你的冰冻效果。",
-
-    dismount_cmd = "dismount",
+	
+	dismount_cmd = "dismount",
     dismount_name = "下马",
     dismount_desc = "当雷德下马时进行警告",
-
-    whirlwind_cmd = "whirlwind",
+	
+	whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩",
     whirlwind_desc = "雷德旋风斩的计时器。",
-
-    enrage_cmd = "enrage",
+	
+	enrage_cmd = "enrage",
     enrage_name = "激怒",
     enrage_desc = "激怒提示。",
-
-    waves_cmd = "waves",
+	
+	waves_cmd = "waves",
     waves_name = "波次",
     waves_desc = "波次警告。",
-
-
-
-    trigger_flamebreath = "Gyth begins to cast Flame Breath.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	
+	
+	
+	trigger_flamebreath = "Gyth begins to cast Flame Breath.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_flamebreathCd = "烈焰吐息冷却",
     bar_flamebreathCast = "烈焰吐息",
-
-    trigger_freezeYou = "You are afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_freezeOther = "(.+) is afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	
+	trigger_freezeYou = "You are afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_freezeOther = "(.+) is afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     msg_freeze = "驱散冰冻！",
-
-    trigger_dismount = "Gyth casts Summon Rend Blackhand.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	
+	trigger_dismount = "Gyth casts Summon Rend Blackhand.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_dismount = "雷德已经下马！",
-
-    trigger_whirlwind = "Warchief Rend Blackhand gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	
+	trigger_whirlwind = "Warchief Rend Blackhand gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_whirlwindCd = "旋风斩冷却",
     bar_whirlwindCast = "旋风斩！",
-
-    trigger_enrage = "Warchief Rend Blackhand gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
+	
+	trigger_enrage = "Warchief Rend Blackhand gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
     msg_enrage = "雷德激怒了！",
-
-    trigger_engage = "Excellent... it would appear as if the meddlesome insects have arrived just in time to feed my legion. Welcome, mortals!",--CHAT_MSG_MONSTER_YELL
-    trigger_bossNext = "THIS CANNOT BE!!! Rend, deal with these insects.",--CHAT_MSG_MONSTER_YELL
-
+	
+	trigger_engage = "Excellent... it would appear as if the meddlesome insects have arrived just in time to feed my legion. Welcome, mortals!",--CHAT_MSG_MONSTER_YELL
+	trigger_bossNext = "THIS CANNOT BE!!! Rend, deal with these insects.",--CHAT_MSG_MONSTER_YELL
+	
     bar_beforeWave1 = "波次开始",
     bar_beforeWave2 = "波次 2/7 开始",
     bar_beforeWave3 = "波次 3/7 开始",
@@ -83,60 +85,63 @@ L:RegisterTranslations("enUS", function() return {
     bar_waves5 = "波次 5/7",
     bar_waves6 = "波次 6/7",
     bar_waves7 = "波次 7/7 - 下一个是Boss！",
+    c_chromaticwhelp = "Chromatic Whelp",
+    c_chromaticdragonspawn = "Chromatic Dragonspawn",
+    c_blackhanddragonhandler = "Blackhand Dragon Handler",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-06-11
-    cmd = "Gyth",
-
-    flamebreath_cmd = "flamebreath",
+	cmd = "Gyth",
+	
+	flamebreath_cmd = "flamebreath",
     flamebreath_name = "烈焰吐息",
     flamebreath_desc = "烈焰吐息出现时进行警告",
-
-    freeze_cmd = "freeze",
+	
+	freeze_cmd = "freeze",
     freeze_name = "冰冻",
     freeze_desc = "提示团队驱散你的冰冻效果。",
-
-    dismount_cmd = "dismount",
+	
+	dismount_cmd = "dismount",
     dismount_name = "下马",
     dismount_desc = "当雷德下马时进行警告",
-
-    whirlwind_cmd = "whirlwind",
+	
+	whirlwind_cmd = "whirlwind",
     whirlwind_name = "旋风斩",
     whirlwind_desc = "雷德旋风斩的计时器。",
-
-    enrage_cmd = "enrage",
+	
+	enrage_cmd = "enrage",
     enrage_name = "激怒",
     enrage_desc = "激怒提示。",
-
-    waves_cmd = "waves",
+	
+	waves_cmd = "waves",
     waves_name = "波次",
     waves_desc = "波次警告。",
-
-
-
-    trigger_flamebreath = "Gyth begins to cast Flame Breath.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	
+	
+	
+	trigger_flamebreath = "Gyth begins to cast Flame Breath.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_flamebreathCd = "烈焰吐息冷却",
     bar_flamebreathCast = "烈焰吐息",
-
-    trigger_freezeYou = "You are afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_freezeOther = "(.+) is afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	
+	trigger_freezeYou = "You are afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_freezeOther = "(.+) is afflicted by Freeze.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     msg_freeze = "驱散冰冻！",
-
-    trigger_dismount = "Gyth casts Summon Rend Blackhand.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	
+	trigger_dismount = "Gyth casts Summon Rend Blackhand.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_dismount = "雷德已经下马！",
-
-    trigger_whirlwind = "Warchief Rend Blackhand gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	
+	trigger_whirlwind = "Warchief Rend Blackhand gains Whirlwind.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_whirlwindCd = "旋风斩冷却",
     bar_whirlwindCast = "旋风斩！",
-
-    trigger_enrage = "Warchief Rend Blackhand gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
+	
+	trigger_enrage = "Warchief Rend Blackhand gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS",
     msg_enrage = "雷德激怒了！",
-
-    trigger_engage = "Excellent... it would appear as if the meddlesome insects have arrived just in time to feed my legion. Welcome, mortals!",--CHAT_MSG_MONSTER_YELL
-    trigger_bossNext = "THIS CANNOT BE!!! Rend, deal with these insects.",--CHAT_MSG_MONSTER_YELL
-
+	
+	trigger_engage = "Excellent... it would appear as if the meddlesome insects have arrived just in time to feed my legion. Welcome, mortals!",--CHAT_MSG_MONSTER_YELL
+	trigger_bossNext = "THIS CANNOT BE!!! Rend, deal with these insects.",--CHAT_MSG_MONSTER_YELL
+	
     bar_beforeWave1 = "波次开始",
     bar_beforeWave2 = "波次 2/7 开始",
     bar_beforeWave3 = "波次 3/7 开始",
@@ -153,6 +158,9 @@ L:RegisterTranslations("zhCN", function() return {
     bar_waves5 = "波次 5/7",
     bar_waves6 = "波次 6/7",
     bar_waves7 = "波次 7/7 - 下一个是Boss！",
+    c_chromaticwhelp = "多彩雏龙",
+    c_chromaticdragonspawn = "多彩龙人",
+    c_blackhanddragonhandler = "黑手驭龙者",
 } end )
 
 local bwRendWaves = 0
@@ -279,7 +287,7 @@ function module:OnRegister()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Blackrock Stadium" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzblackrockstadium or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 
@@ -304,21 +312,21 @@ function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	elseif msg == string.format(UNITDIESOTHER, rend) then
 		self:Sync(syncName.rendDead)
 		
-	elseif msg == string.format(UNITDIESOTHER, "Chromatic Whelp") then
+	elseif msg == string.format(UNITDIESOTHER, L["c_chromaticwhelp"]) then
 		if self.db.profile.waves then
 			bwWhelpDead = bwWhelpDead + 1
 			if bwWhelpDead == bwWaveWhelpTotal and bwSpawnDead == bwWaveSpawnTotal and bwHandlerDead == bwWaveHandlerTotal then
 				self:Sync(syncName.waves)
 			end
 		end
-	elseif msg == string.format(UNITDIESOTHER, "Chromatic Dragonspawn") then
+	elseif msg == string.format(UNITDIESOTHER, L["c_chromaticdragonspawn"]) then
 		if self.db.profile.waves then
 			bwSpawnDead = bwSpawnDead + 1
 			if bwWhelpDead == bwWaveWhelpTotal and bwSpawnDead == bwWaveSpawnTotal and bwHandlerDead == bwWaveHandlerTotal then
 				self:Sync(syncName.waves)
 			end
 		end
-	elseif msg == string.format(UNITDIESOTHER, "Blackhand Dragon Handler") then
+	elseif msg == string.format(UNITDIESOTHER, L["c_blackhanddragonhandler"]) then
 		if self.db.profile.waves then
 			bwHandlerDead = bwHandlerDead + 1
 			if bwWhelpDead == bwWaveWhelpTotal and bwSpawnDead == bwWaveSpawnTotal and bwHandlerDead == bwWaveHandlerTotal then
@@ -403,7 +411,7 @@ function module:Dismount()
 				bwPlayerIsAttacking = true
 			end
 			
-			TargetByName(rend,true)
+			TargetByName(bbwarchiefrendblackhand,true)
 			SetRaidTarget("target",6)
 			TargetLastTarget()
 			if bwPlayerIsAttacking == true then

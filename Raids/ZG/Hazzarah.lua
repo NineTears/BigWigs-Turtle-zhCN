@@ -35,6 +35,7 @@ L:RegisterTranslations("enUS", function() return {
     trigger_chainBurn = "Chain Burn hit", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_chainBurn = "AoE法力燃烧 CD",
     msg_chainBurn = "AoE法力燃烧 - 抽干他的法力！",
+    c_nightmareillusion = "Nightmare Illusion",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
@@ -69,6 +70,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_chainBurn = "Chain Burn hit", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_chainBurn = "AoE法力燃烧 CD",
     msg_chainBurn = "AoE法力燃烧 - 抽干他的法力！",
+    c_nightmareillusion = "梦魇幻象",
 } end )
 
 local timer = {
@@ -153,7 +155,7 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 	
-	if (msg == string.format(UNITDIESOTHER, "Nightmare Illusion")) and self.db.profile.adds then
+	if (msg == string.format(UNITDIESOTHER, L["c_nightmareillusion"])) and self.db.profile.adds then
 		self:OneAddDead()
 	end
 end

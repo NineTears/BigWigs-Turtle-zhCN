@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Mad Servant", "Zul'Gurub")
+local bzedgeofmadness = AceLibrary("Babble-Zone-2.2")["Edge of Madness"]
 
 module.revision = 30059
 module.enabletrigger = {}--module.translatedName
@@ -79,9 +80,9 @@ function module:CheckForWipe(event)
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Edge of Madness" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzedgeofmadness or self.core:IsModuleActive(module.translatedName) then
 		return
-	elseif GetMinimapZoneText() == "Edge of Madness" then
+	elseif GetMinimapZoneText() == bzedgeofmadness then
 		self.core:EnableModule(module.translatedName)
 	end
 end

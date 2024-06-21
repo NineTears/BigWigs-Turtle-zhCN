@@ -2,6 +2,7 @@ local module, L = BigWigs:ModuleDeclaration("Pyroguard Emberseer", "Blackrock Sp
 
 local adds = AceLibrary("Babble-Boss-2.2")["Blackhand Incarcerator"]
 local boss = AceLibrary("Babble-Boss-2.2")["Pyroguard Emberseer"]
+local bzhallofbinding = AceLibrary("Babble-Zone-2.2")["Hall of Binding"]
 local bbblackhandincarcerator = AceLibrary("Babble-Boss-2.2")["Blackhand Incarcerator"]
 
 module.revision = 30025
@@ -13,39 +14,39 @@ module.zonename = {
 }
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "Emberseer",
+	cmd = "Emberseer",
 
-    firenova_cmd = "firenova",
+	firenova_cmd = "firenova",
     firenova_name = "火焰新星计时器",
     firenova_desc = "显示下一次火焰新星的剩余时间。",
 
-    trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
+	trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
 
-    trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_firenova = "火焰新星",
-    
+	
     msg_addDead = "/7 监禁者死亡",
-    
-    trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	
+	trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-06-11
-    cmd = "Emberseer",
+	cmd = "Emberseer",
 
-    firenova_cmd = "firenova",
+	firenova_cmd = "firenova",
     firenova_name = "火焰新星计时器",
     firenova_desc = "显示下一次火焰新星的剩余时间。",
 
-    trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
+	trigger_engage = "Ha! Ha! Ha! Thank you for freeing me, fools. Now let me repay you by charring the flesh from your bones.",--CHAT_MSG_MONSTER_SAY
 
-    trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_firenova = "Fire Nova",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_firenova = "火焰新星",
-    
+	
     msg_addDead = "/7 监禁者死亡",
-    
-    trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	
+	trigger_bossDead = "Pyroguard Emberseer dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
 local timer = {
@@ -88,7 +89,7 @@ function module:OnRegister()
 	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
 end
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() ~= "Hall of Binding" or self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() ~= bzhallofbinding or self.core:IsModuleActive(module.translatedName) then
 		return
 	end
 

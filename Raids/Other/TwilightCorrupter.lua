@@ -1,79 +1,79 @@
 
 local module, L = BigWigs:ModuleDeclaration("Twilight Corrupter", "Duskwood")
 
-module.revision = 30044
+module.revision = 30087
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"creatureofnightmare", "soulcorruption", "swellofsouls", "bosskill"}
 module.zonename = {
 	AceLibrary("AceLocale-2.2"):new("BigWigs")["Outdoor Raid Bosses Zone"],
-	AceLibrary("Babble-Zone-2.2")["Deadwind Pass"],
+	AceLibrary("Babble-Zone-2.2")["Duskwood"],
 }
 
 L:RegisterTranslations("enUS", function() return {
-    cmd = "TwilightCorrupter",
+	cmd = "TwilightCorrupter",
 
-    creatureofnightmare_cmd = "creatureofnightmare",
+	creatureofnightmare_cmd = "creatureofnightmare",
     creatureofnightmare_name = "精神控制警报",
     creatureofnightmare_desc = "精神控制出现时进行警告",
 
-    soulcorruption_cmd = "soulcorruption",
+	soulcorruption_cmd = "soulcorruption",
     soulcorruption_name = "灵魂腐蚀警报",
     soulcorruption_desc = "灵魂腐蚀出现时进行警告",
-
-    swellofsouls_cmd = "swellofsouls",
+	
+	swellofsouls_cmd = "swellofsouls",
     swellofsouls_name = "死亡增加攻击力警报",
     swellofsouls_desc = "当前死亡增加攻击力时进行警告",
-
+	
+	
 		--MC, 1 person, 30sec duration, then 8sec CD
-    trigger_creatureOfNightmare = "(.+) is afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-    trigger_creatureOfNightmareYou = "You are afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_creatureOfNightmareFade = "Creature of Nightmare fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_creatureOfNightmare = "(.+) is afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_creatureOfNightmareYou = "You are afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_creatureOfNightmareFade = "Creature of Nightmare fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_creatureOfNightmareAfflic = " 精神控制",
     bar_creatureOfNightmareCd = "精神控制 CD",
-
+	
 		--AoE, 40yd, 15sec DoT + knockback, cd is min20 max30sec
-    trigger_soulCorruption = "afflicted by Soul Corruption.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_soulCorruption = "afflicted by Soul Corruption.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_soulCorruptionCd = "灵魂腐蚀 CD",
     bar_soulCorruptionSoon = "灵魂腐蚀 即将到来...",
-
+	
     bar_swellOfSouls = " 攻击力增益",
-
+	
     subStringDead = "(.+) dies.",
     clickme = " >点击我！<",
     you = "you",
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
-    cmd = "TwilightCorrupter",
+	cmd = "TwilightCorrupter",
 
-    creatureofnightmare_cmd = "creatureofnightmare",
+	creatureofnightmare_cmd = "creatureofnightmare",
     creatureofnightmare_name = "精神控制警报",
     creatureofnightmare_desc = "精神控制出现时进行警告",
 
-    soulcorruption_cmd = "soulcorruption",
+	soulcorruption_cmd = "soulcorruption",
     soulcorruption_name = "灵魂腐蚀警报",
     soulcorruption_desc = "灵魂腐蚀出现时进行警告",
-
-    swellofsouls_cmd = "swellofsouls",
+	
+	swellofsouls_cmd = "swellofsouls",
     swellofsouls_name = "死亡增加攻击力警报",
     swellofsouls_desc = "当前死亡增加攻击力时进行警告",
-
+	
+	
 		--MC, 1 person, 30sec duration, then 8sec CD
-    trigger_creatureOfNightmare = "(.+) is afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-    trigger_creatureOfNightmareYou = "You are afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_creatureOfNightmareFade = "Creature of Nightmare fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_creatureOfNightmare = "(.+) is afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_creatureOfNightmareYou = "You are afflicted by Creature of Nightmare.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_creatureOfNightmareFade = "Creature of Nightmare fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_creatureOfNightmareAfflic = " 精神控制",
     bar_creatureOfNightmareCd = "精神控制 CD",
-
+	
 		--AoE, 40yd, 15sec DoT + knockback, cd is min20 max30sec
-    trigger_soulCorruption = "afflicted by Soul Corruption.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_soulCorruption = "afflicted by Soul Corruption.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_soulCorruptionCd = "灵魂腐蚀 CD",
     bar_soulCorruptionSoon = "灵魂腐蚀 即将到来...",
-
+	
     bar_swellOfSouls = " 攻击力增益",
-
+	
     subStringDead = "(.+) dies.",
     clickme = " >点击我！<",
     you = "you",
@@ -120,7 +120,8 @@ function module:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_SELF", "Event")--trigger_creatureOfNightmareFade
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_PARTY", "Event")--trigger_creatureOfNightmareFade
 	self:RegisterEvent("CHAT_MSG_SPELL_AURA_GONE_OTHER", "Event")--trigger_creatureOfNightmareFade
-		
+	
+	
 	self:ThrottleSync(5, syncName.creatureOfNightmare)
 	self:ThrottleSync(5, syncName.creatureOfNightmareFade)
 	self:ThrottleSync(5, syncName.soulCorruption)
@@ -149,24 +150,28 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 	
-	--this is for removing MC bar if someone dies
-	local _,_, deadPlayer, _ = string.find(msg, L["subStringDead"])
-	self:Sync(syncName.creatureOfNightmareFade .. " " .. deadPlayer)
-	
-	--this is for counting deads for AP buff
-	if GetNumRaidMembers() > 0 then
-		self:CountDeads()
+	if string.find(msg, L["subStringDead"]) then
+		--this is for removing MC bar if someone dies
+		local _,_, deadPlayer, _ = string.find(msg, L["subStringDead"])
+		self:Sync(syncName.creatureOfNightmareFade .. " " .. deadPlayer)
+		
+		--this is for counting deads for AP buff
+		if GetNumRaidMembers() > 0 then
+			self:CountDeads()
+		end
 	end
 end
 
 function module:CHAT_MSG_COMBAT_FRIENDLY_DEATH(msg)
-	--this is for removing MC bar if someone dies
-	local _,_, deadPlayer, _ = string.find(msg, L["subStringDead"])
-	self:Sync(syncName.creatureOfNightmareFade .. " " .. deadPlayer)
-	
-	--this is for counting deads for AP buff
-	if GetNumRaidMembers() > 0 then
-		self:CountDeads()
+	if string.find(msg, L["subStringDead"]) then
+		--this is for removing MC bar if someone dies
+		local _,_, deadPlayer, _ = string.find(msg, L["subStringDead"])
+		self:Sync(syncName.creatureOfNightmareFade .. " " .. deadPlayer)
+		
+		--this is for counting deads for AP buff
+		if GetNumRaidMembers() > 0 then
+			self:CountDeads()
+		end
 	end
 end
 
@@ -227,7 +232,7 @@ function module:CreatureOfNightmare(rest)
 	self:DelayedBar(timer.creatureOfNightmareAfflic, L["bar_creatureOfNightmareCd"], timer.creatureOfNightmareCd, icon.creatureOfNightmare, true, color.creatureOfNightmareCd)
 	
 	if rest == UnitName("Player") then
-		SendChatMessage(UnitName("player").." will eat you alive!","SAY")
+		SendChatMessage(UnitName("player").." 活活吃掉你！","SAY")
 	end
 	
 	if IsRaidLeader() or IsRaidOfficer() then
@@ -265,7 +270,7 @@ end
 
 function module:SwellOfSouls(rest)
 	if tonumber(rest) > deadPlayers then
-		self:RemoveBar(deadPlayers..L["bar_swellOfSouls"])
+		self:RemoveBar(swellOfSoulsAmount..L["bar_swellOfSouls"])
 		
 		deadPlayers = tonumber(rest)
 		swellOfSoulsAmount = deadPlayers * 75

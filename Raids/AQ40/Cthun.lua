@@ -477,7 +477,7 @@ function module:MINIMAP_ZONE_CHANGED(msg)
 	if (GetMinimapZoneText() == bzthescarabwall or GetMinimapZoneText() == bzgatesofahnqiraj) and self.core:IsModuleActive(module.translatedName) then
 		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
 		self:ResetModule()
-		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - Auto-Rebooting Module: "..module.translatedName)
+		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块："..module.translatedName)
 	end
 end
 
