@@ -55,7 +55,7 @@ L:RegisterTranslations("enUS", function()
 	["Show the anchor frame."] = "显示锚点框架.",
 	["Reset"] = "复位",
 	["Reset the frame."] = "复位框架.",
-	["Test"] = "开始/停止 测试",
+	["Test"] = "测试",
 	["Close"] = "关闭",
             
 	["Disabled"] = "禁用",
@@ -120,7 +120,7 @@ L:RegisterTranslations("zhCN", function()
 	["Show the anchor frame."] = "显示锚点框架.",
 	["Reset"] = "复位",
 	["Reset the frame."] = "复位框架.",
-	["Test"] = "开始/停止 测试",
+	["Test"] = "测试",
 	["Close"] = "关闭",
             
 	["Disabled"] = "禁用",
@@ -454,7 +454,7 @@ function BigWigsWarningSign:CreateAnchor()
 	self.frames.middlebutton:SetHighlightTexture(t)
 	self.frames.middlebuttontext = self.frames.middlebutton:CreateFontString(nil, "OVERLAY")
 	self.frames.middlebuttontext:SetFontObject(GameFontHighlight)
-	self.frames.middlebuttontext:SetText("Edit")
+	self.frames.middlebuttontext:SetText("编辑")
 	self.frames.middlebuttontext:SetAllPoints(self.frames.middlebutton)
 
 	self.frames.rightbutton = CreateFrame("Button", nil, self.frames.anchor)

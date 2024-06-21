@@ -100,7 +100,7 @@ L:RegisterTranslations("enUS", function()
     ["Scale is set to %2$s"] = "缩放比例设置为 %2$s",
     ["Up"] = "向上",
     ["Down"] = "向下",
-    ["Test"] = "开始/停止 测试",
+    ["Test"] = "测试",
     ["Close"] = "关闭",
     ["Texture"] = "材质",
     ["Set the texture for the timerbars."] = "为计时条设置材质.",
@@ -224,7 +224,7 @@ L:RegisterTranslations("zhCN", function() return {
     ["Scale is set to %2$s"] = "缩放比例设置为 %2$s",
     ["Up"] = "向上",
     ["Down"] = "向下",
-    ["Test"] = "开始/停止 测试",
+    ["Test"] = "测试",
     ["Close"] = "关闭",
     ["Texture"] = "材质",
     ["Set the texture for the timerbars."] = "为计时条设置材质.",
@@ -1129,7 +1129,7 @@ function BigWigsBars:SetupFrames(emphasize)
 	local cheader = frame:CreateFontString(nil, "OVERLAY")
 	cheader:SetFont(f, 14)
 	cheader:SetWidth(150)
-	cheader:SetText("Plugins -> Bars")
+	cheader:SetText("插件 -> 计时条")
 	cheader:SetTextColor(1, .8, 0)
 	cheader:ClearAllPoints()
 	cheader:SetPoint("TOP", frame, "TOP", 0, -10)
@@ -1202,7 +1202,7 @@ function BigWigsBars:SetupFrames(emphasize)
 	middlebutton:SetHighlightTexture(t)
 	middlebuttontext = middlebutton:CreateFontString(nil, "OVERLAY")
 	middlebuttontext:SetFontObject(GameFontHighlight)
-	middlebuttontext:SetText("Edit")
+	middlebuttontext:SetText("编辑")
 	middlebuttontext:SetAllPoints(middlebutton)
 	frame.middlebutton = middlebutton
 

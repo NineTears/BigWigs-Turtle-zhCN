@@ -79,7 +79,7 @@ L:RegisterTranslations("enUS", function()
         ["ResetPosition"] = "重置锚点位置",
         ["ResetPositionDesc"] = "重置锚点位置，使其移动到屏幕中心。",
 
-        ["Test"] = "开始测试",
+        ["Test"] = "测试",
         ["Close"] = "关闭",
 
 		-- scorch settings
@@ -185,7 +185,7 @@ L:RegisterTranslations("zhCN", function()
         ["ResetPosition"] = "重置锚点位置",
         ["ResetPositionDesc"] = "重置锚点位置，使其移动到屏幕中心。",
 
-        ["Test"] = "开始测试",
+        ["Test"] = "测试",
         ["Close"] = "关闭",
 
 		-- scorch settings
@@ -1377,7 +1377,7 @@ function BigWigsMageTools:SetupFrames()
 	middlebutton:SetHighlightTexture(t)
 	middlebuttontext = middlebutton:CreateFontString(nil, "OVERLAY")
 	middlebuttontext:SetFontObject(GameFontHighlight)
-	middlebuttontext:SetText("Edit")
+	middlebuttontext:SetText("编辑")
 	middlebuttontext:SetAllPoints(middlebutton)
 	frame.middlebutton = middlebutton
 

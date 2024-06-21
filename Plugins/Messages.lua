@@ -110,7 +110,7 @@ L:RegisterTranslations("enUS", function()
 	["Scrolling Combat Text"] = "SCT式战斗信息",
 	["Floating Combat Text"] = "浮动战斗信息",
 
-	["Test"] = "开始/停止 测试",
+	["Test"] = "测试",
 	["Close"] = "退出",
 	}
 end)
@@ -271,7 +271,7 @@ L:RegisterTranslations("zhCN", function()
 	["Scrolling Combat Text"] = "SCT式战斗信息",
 	["Floating Combat Text"] = "浮动战斗信息",
 
-	["Test"] = "开始/停止 测试",
+	["Test"] = "测试",
 	["Close"] = "退出",
 	}
 end)
@@ -520,7 +520,7 @@ function BigWigsMessages:SetupFrames()
 	self.frames.miks:SetJustifyH("LEFT")
 	self.frames.miks:SetFont(f, 9)
 	self.frames.miks:SetWidth(150)
-	self.frames.miks:SetText("If using Mik's Scrolling Battle Text to display, messages will display there instead")
+	self.frames.miks:SetText("如果使用Mik的滚动战斗文本来显示，消息将显示在那里")
 	self.frames.miks:SetTextColor(1, .8, 0)
 	self.frames.miks:ClearAllPoints()
 	self.frames.miks:SetPoint("TOP", self.frames.anchor, "TOP", 0, -30)
@@ -590,7 +590,7 @@ function BigWigsMessages:SetupFrames()
 	self.frames.middlebutton:SetHighlightTexture(t)
 	self.frames.middlebuttontext = self.frames.middlebutton:CreateFontString(nil, "OVERLAY")
 	self.frames.middlebuttontext:SetFontObject(GameFontHighlight)
-	self.frames.middlebuttontext:SetText("Edit")
+	self.frames.middlebuttontext:SetText("编辑")
 	self.frames.middlebuttontext:SetAllPoints(self.frames.middlebutton)
 
 	self.frames.rightbutton = CreateFrame("Button", nil, self.frames.anchor)
