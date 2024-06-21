@@ -195,7 +195,7 @@ L:RegisterTranslations("enUS", function()
 		["lip_fades"] = "Invulnerability fades",
 		["bop_fades"] = "Blessing of Protection fades",
 		["powerinfusion_fades"] = "Power Infusion fades",
-		["deepwoodpipe_fades"] = "Stealth fades"
+		["deepwoodpipe_fades"] = "Stealth fades",
 
 	Dwarf = "Dwarf",
 	Alliance = "Alliance",
