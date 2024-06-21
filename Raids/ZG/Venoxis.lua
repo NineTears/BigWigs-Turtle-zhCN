@@ -94,7 +94,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Venoxis",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Venoxis",
 
 	renew_cmd = "renew",
     renew_name = "恢复警报",

@@ -54,7 +54,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Grobbulus",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Grobbulus",
 
 	enrage_cmd = "enrage",
     enrage_name = "激怒警报",

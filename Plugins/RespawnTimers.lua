@@ -201,7 +201,7 @@ L:RegisterTranslations("deDE", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	-- ["respawntimers"] = "复活计时器",
 	["Respawn Timers"] = "复活计时器",
 	["Respawn timer bars and warnings for trash mobs."] = "小怪复活计时条和警告。",

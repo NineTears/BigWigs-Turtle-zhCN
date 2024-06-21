@@ -110,7 +110,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Hakkar",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Hakkar",
 
 	mc_cmd = "mc",
     mc_name = "心控警报",

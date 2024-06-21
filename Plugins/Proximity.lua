@@ -104,7 +104,7 @@ L:RegisterTranslations("enUS", function()
 		["Reset the anchor position, moving it to the center of your screen."] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	["Proximity"] = "附近玩家",
 	["Close Players"] = "附近玩家",
 	["Options for the Proximity Display."] = "显示附近玩家显示",
@@ -188,7 +188,7 @@ end)
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	["Proximity"] = "附近玩家",
 	["Close Players"] = "附近玩家",
 	["Options for the Proximity Display."] = "显示附近玩家显示",

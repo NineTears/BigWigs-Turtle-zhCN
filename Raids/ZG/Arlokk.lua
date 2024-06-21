@@ -74,7 +74,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Arlokk",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Arlokk",
 	
 	phase_cmd = "phase",
     phase_name = "阶段变化警报",

@@ -47,7 +47,7 @@ L:RegisterTranslations("enUS", function()
 		["Set the warning sign alpha value (0.1 to 1.0: transparent to opaque)."] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	["WarningSign"] = "WarningSign", -- console cmd
 	["Warning Sign"] = "警告标志", -- module name
 	["Options for the Warning Sign."] = "警告标志的选项.", 
@@ -112,7 +112,7 @@ end)
 L:RegisterTranslations("zhCN", function()
 	return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	["WarningSign"] = "WarningSign", -- console cmd
 	["Warning Sign"] = "警告标志", -- module name
 	["Options for the Warning Sign."] = "警告标志的选项.", 

@@ -138,7 +138,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Razorgore",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Razorgore",
 
 	--Phase 1
 	polymorph_cmd = "polymorph",

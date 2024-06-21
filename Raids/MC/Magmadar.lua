@@ -39,7 +39,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Magmadar",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Magmadar",
 
     panic_cmd = "panic",
     panic_name = "恐惧警报",

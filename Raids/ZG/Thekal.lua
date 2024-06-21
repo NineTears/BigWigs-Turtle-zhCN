@@ -179,7 +179,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Thekal",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Thekal",
 	
 	heal_cmd = "heal",
     heal_name = "强效治疗警报",

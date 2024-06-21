@@ -160,7 +160,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Ostarius",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Ostarius",
 
     conflagbar_cmd = "conflagbar",
     conflagbar_name = "燃烧计时",

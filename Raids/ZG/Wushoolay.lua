@@ -65,7 +65,9 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Wushoolay",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Wushoolay",
 
 	chainlightning_trigger = "Wushoolay begins to cast Chain Lightning\.",
     chainlightning_bar = "闪电链",

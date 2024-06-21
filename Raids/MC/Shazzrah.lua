@@ -53,7 +53,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Shazzrah",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Shazzrah",
 
 	counterspell_cmd = "counterspell",
     counterspell_name = "法术反制警报",

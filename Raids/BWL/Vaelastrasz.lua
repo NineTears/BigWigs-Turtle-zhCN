@@ -83,7 +83,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Vaelastrasz",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Vaelastrasz",
 	
     start_cmd = "start",
     start_name = "战斗警报",

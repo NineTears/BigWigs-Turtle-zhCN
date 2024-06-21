@@ -145,7 +145,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Cthun",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Cthun",
 	
 	cthuneyebeam_cmd = "cthuneyebeam",
     cthuneyebeam_name = "克苏恩的眼棱警报",

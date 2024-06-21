@@ -44,7 +44,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Garr",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Garr",
 	
     pulse_cmd = "pulse",
     pulse_name = "反魔法脉冲警报",

@@ -95,7 +95,7 @@ L:RegisterTranslations("enUS", function()
 	["You have slain %s!"] = true,
 
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",
@@ -292,7 +292,7 @@ end)
 L:RegisterTranslations("zhCN", function()
 	return {
 	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-11
+	-- Last update: 2024-06-21
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",

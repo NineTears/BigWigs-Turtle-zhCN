@@ -80,7 +80,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Thaddius",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Thaddius",
 	
 	power_cmd = "power",
     power_name = "能量涌动警报",

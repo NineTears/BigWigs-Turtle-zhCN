@@ -68,7 +68,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Lucifron",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Lucifron",
 	
     curse_cmd = "curse",
     curse_name = "鲁西弗隆的诅咒警报",

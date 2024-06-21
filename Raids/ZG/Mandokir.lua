@@ -72,7 +72,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Mandokir",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Mandokir",
 	
 	gaze_cmd = "gaze",
     gaze_name = "威慑凝视警报",

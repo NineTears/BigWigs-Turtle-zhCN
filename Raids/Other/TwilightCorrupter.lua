@@ -45,7 +45,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "TwilightCorrupter",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "TwilightCorrupter",
 
 	creatureofnightmare_cmd = "creatureofnightmare",
     creatureofnightmare_name = "精神控制警报",

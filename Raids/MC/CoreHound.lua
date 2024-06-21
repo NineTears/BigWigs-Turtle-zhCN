@@ -30,7 +30,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "CoreHound",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "CoreHound",
 
 	respawn_cmd = "respawn",
     respawn_name = "重生警报",

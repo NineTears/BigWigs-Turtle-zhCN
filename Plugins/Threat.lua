@@ -33,6 +33,8 @@ end)
 
 L:RegisterTranslations("zhCN", function()
 	return {
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
 		["Threat"] = "威胁",
 		["ThreatDesc"] = "解析来自TWThreat的消息以用于BigWigs插件。",
 		["Active"] = "启用",

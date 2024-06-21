@@ -66,7 +66,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Sulfuron",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Sulfuron",
 
 	knockback_cmd = "knockback",
     knockback_name = "拉格纳罗斯之手警报",

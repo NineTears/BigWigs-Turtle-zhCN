@@ -165,7 +165,9 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Loatheb",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Loatheb",
 
 	doom_cmd = "doom",
     doom_name = "必然厄运警报",

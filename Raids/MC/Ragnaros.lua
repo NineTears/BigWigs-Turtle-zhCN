@@ -90,7 +90,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Ragnaros",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Ragnaros",
 
 	emerge_cmd = "emerge",
     emerge_name = "出现/消失警报",

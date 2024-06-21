@@ -35,7 +35,9 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Gehennas",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Gehennas",
 
     curse_cmd = "curse",
     curse_name = "基赫纳斯的诅咒警报",

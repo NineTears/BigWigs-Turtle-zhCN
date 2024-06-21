@@ -88,7 +88,9 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	cmd = "Taerar",
+	-- Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-21
+    cmd = "Taerar",
 
 	tailsweep_cmd = "tailsweep",
     tailsweep_name = "龙尾扫击警报",
