@@ -38,8 +38,8 @@ L:RegisterTranslations("enUS", function()
 		["cross"] = true,
 		["skull"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Raid Icons"] = "团队标志",
 
 	--["Place"] = "标记",
@@ -120,8 +120,8 @@ end)
 
 L:RegisterTranslations("zhCN", function()
 	return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Raid Icons"] = "团队标志",
 
 	["Place"] = "标记",

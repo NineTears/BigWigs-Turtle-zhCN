@@ -39,8 +39,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Magmadar",
 
     panic_cmd = "panic",
@@ -56,15 +56,15 @@ L:RegisterTranslations("zhCN", function() return {
     conflagration_desc = "燃烧出现时进行警告",
 	
 	
-	trigger_panic = "afflicted by Panic.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_panic2 = "Magmadar's Panic fails.", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	trigger_panic3 = "Magmadar's Panic was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_panic = "受到了恐慌", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_panic2 = "恐慌施放失败。", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_panic3 = "玛格曼达的恐慌被抵抗了。", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_panicCd = "恐惧冷却",
     bar_panicSoon = "即将恐惧...",
     msg_panic = "恐惧 - 驱散！",
 	
-	trigger_frenzy = "Magmadar gains Frenzy.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_frenzyFade = "Frenzy fades from Magmadar.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_frenzy = "变得极为狂暴！", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_frenzyFade = "狂乱效果从玛格曼达身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_frenzyCd = "狂暴冷却",
     bar_frenzyDur = "狂暴！",
     msg_frenzy = "狂暴 - 立即宁神！",

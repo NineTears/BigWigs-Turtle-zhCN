@@ -36,8 +36,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Suppressed"] = true,
 	["Shown"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["BossBlock"] = "信息屏蔽",
 	["Suppress bossmod chat from other players."] = "屏蔽来自其他玩家的首领插件发送的信息。",
 
@@ -135,8 +135,8 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["BossBlock"] = "信息屏蔽",
 	["Suppress bossmod chat from other players."] = "屏蔽来自其他玩家的首领插件发送的信息。",
 

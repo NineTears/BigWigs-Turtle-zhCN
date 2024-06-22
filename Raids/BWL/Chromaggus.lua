@@ -112,8 +112,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Chromaggus",
 
     frenzy_cmd = "frenzy",
@@ -137,8 +137,8 @@ L:RegisterTranslations("zhCN", function() return {
     affliction_desc = "负面效果出现时进行警告",
 
 
-	trigger_frenzy = "Chromaggus gains Frenzy.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_frenzyFade = "Frenzy fades from Chromaggus.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_frenzy = "克洛玛古斯获得了疯狂的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_frenzyFade = "疯狂效果从克洛玛古斯身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_frenzyCd = "狂暴冷却",
     bar_frenzyDur = "狂暴！",
     msg_frenzy = "狂暴 - 立即宁神！",
@@ -161,14 +161,14 @@ L:RegisterTranslations("zhCN", function() return {
 		--Time Lapse
 			--Stunned and loses aggro, 8sec (or 6?)
 			
-	trigger_breath = "Chromaggus begins to cast (.+).", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_breath = "克洛玛古斯开始施放(.+)。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_breathCast = "正在施放 ",
     bar_breathCd = " 冷却",
     msg_breathSoon5 = " 在5秒内",
     msg_breathCast = "正在施放 ",
 
 
-	trigger_vulnerabilityChanged = "flinches as its skin shimmers.", --CHAT_MSG_MONSTER_EMOTE
+	trigger_vulnerabilityChanged = "%s的皮肤闪闪发光，他退缩了。", --CHAT_MSG_MONSTER_EMOTE
     msg_vulnerability = "当前弱点 - ",
     bar_vulnerability = " 弱点",
 	
@@ -176,8 +176,8 @@ L:RegisterTranslations("zhCN", function() return {
 		-- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
 		-- spellName: Firebolt; hitOrCrit: hits; dmg: 44; school: Fire; partial: 14
 		-- Kan's Life Steal crits Battleguard Sartura for 45 Shadow damage. (15 resisted)
-	trigger_directDamage = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Chromaggus for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
-	trigger_dotDamage = "^Chromaggus suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
+	trigger_directDamage = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+)对克洛玛古斯造成了([%d]+)点([%w]+)伤害.)",
+	trigger_dotDamage = "^[%w]+[%s's]* ([%w%s:]+)使克洛玛古斯受到([%d]+)点([%w]+)伤害.)",
 	
 	
 	--5 afflictions
@@ -198,7 +198,7 @@ L:RegisterTranslations("zhCN", function() return {
 			--inv_misc_head_dragon_01
 			--Disease, 50dmg/3sec, Heals Chromag 150k on death, 10min
 			
-	trigger_bronzeYou = "You are afflicted by Brood Affliction: Bronze.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_bronzeYou = "你受到了龙血之痛：青铜的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_bronzeYou = "龙血之痛：青铜 - 考虑使用沙漏之沙",
     
     fire = "火焰",

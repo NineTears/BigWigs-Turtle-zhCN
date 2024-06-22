@@ -30,8 +30,8 @@ L:RegisterTranslations("enUS", function()
 	["Perform a sync test of BigWigs."] = true,
 	["Testing Sync"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	-- ["test"] = "测试",
 	["Test"] = "测试",
 	["Test Bar"] = "测试计时条",
@@ -101,8 +101,8 @@ end)
 
 L:RegisterTranslations("zhCN", function()
 	return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	-- ["test"] = "测试",
 	["Test"] = "测试",
 	["Test Bar"] = "测试计时条",

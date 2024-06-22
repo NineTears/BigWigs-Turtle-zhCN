@@ -208,8 +208,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Nefarian",
 
 --Phase 1
@@ -276,11 +276,11 @@ L:RegisterTranslations("zhCN", function() return {
 	
 
 --Phase 1
-    trigger_engage = "Let the games begin!", --CHAT_MSG_MONSTER_YELL
+    trigger_engage = "让游戏开始！", --CHAT_MSG_MONSTER_YELL
     bar_mobsSpawn = "龙人刷新",
 	
-	trigger_mcYou = "You are afflicted by Shadow Command.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_mcOther = "(.+) is afflicted by Shadow Command.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_mcYou = "你受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.+)受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
 	trigger_mcFade = "Shadow Command fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mc = " 精神控制",
     msg_mc = " 精神控制 - 变羊！",
@@ -297,7 +297,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 --Phase 2
 --there are 46 drakonids total
-	trigger_landingStart = "Well done, my minions. The mortals' courage begins to wane! Now, let's see how they contend with the true Lord of Blackrock Spire!!!", --CHAT_MSG_MONSTER_YELL
+	trigger_landingStart = "够了", --CHAT_MSG_MONSTER_YELL
     bar_landingShadowFlame = "群体暗影烈焰", --doesn't do damage on twow, not showing this bar
     bar_landingStart = "奈法利安降落",
     msg_landingStart = "奈法利安正在降落！",
@@ -305,12 +305,12 @@ L:RegisterTranslations("zhCN", function() return {
 		--ShadowFlame 12.5sec after landingStart, lands 0.5-1sec after
 	trigger_landingNow = "BURN! You wretches! BURN!", --CHAT_MSG_MONSTER_YELL 22:14:23.782
 	
-	trigger_shadowFlame = "Nefarian begins to cast Shadow Flame.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_shadowFlame = "奈法利安开始施放暗影烈焰。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_shadowFlameCd = "暗影烈焰冷却",
     bar_shadowFlameCast = "正在施放暗影烈焰",
     msg_shadowFlameCast = "正在施放暗影烈焰！",
 	
-    trigger_fear = "Nefarian begins to cast Bellowing Roar.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_fear = "奈法利安开始施放低沉咆哮。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_fearCd = "恐惧冷却",
     bar_fearSoon = "即将恐惧...",
     bar_fearCast = "正在施放恐惧！",
@@ -328,15 +328,15 @@ L:RegisterTranslations("zhCN", function() return {
     bar_curseDur = " 暗影迷雾",
     msg_curse = " 暗影迷雾 - 快解除诅咒！",
 
-	trigger_classCall_Druid = "Druids and your silly shapeshifting. Lets see it in action!", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Hunter = "Hunters and your annoying pea%-shooters!", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Mage = "Mages too%?", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Paladin = "Paladins... I've heard you have many lives. Show me.", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Priest = "Priests! If you're going to keep", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Rogue = "Rogues%? Stop hiding and face me!", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Shaman = "Shamans, show me", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Warlock = "Warlocks, you shouldn't be playing with magic you don't understand. See what happens%?", --CHAT_MSG_MONSTER_YELL
-	trigger_classCall_Warrior = "Warriors, I know you can hit harder than that! Lets see it!", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Druid = "德鲁伊和你们愚蠢的变形法术", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Hunter = "猎人们，还有你们那讨厌的玩具", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Mage = "你们也是法师？", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Paladin = "听说你们有无数条命", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Priest = "牧师们！如果你们要继续这么治疗", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Rogue = "潜行者？不要躲躲藏藏了", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Shaman = "萨满祭司，让我看看你们的图腾", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Warlock = "术士们，不要随便去尝试那些", --CHAT_MSG_MONSTER_YELL
+	trigger_classCall_Warrior = "战士们，我知道你们可以更加勇猛", --CHAT_MSG_MONSTER_YELL
 	
     bar_classCall = "职业点名",
 	
@@ -368,7 +368,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
     msg_lowHp = "奈法利安血量低于25% - 即将出现白骨魔像（20%时）！",
 	
-    trigger_boneConstructs = "Impossible! Rise my minions! Serve your master once more!", --CHAT_MSG_MONSTER_YELL
+    trigger_boneConstructs = "不可能！出现吧，我的仆人！", --CHAT_MSG_MONSTER_YELL
     msg_boneConstructs = "白骨魔像即将到来 - 快使用AOE技能！",
 	
     trigger_tailLash = "Nefarian's Tail Lash hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
@@ -384,7 +384,7 @@ L:RegisterTranslations("zhCN", function() return {
     Green = "绿色",
     Black = "黑色",
     Bronze = "青铜",
-    you = "you",
+    you = "你",
 } end)
 
 local timer = {

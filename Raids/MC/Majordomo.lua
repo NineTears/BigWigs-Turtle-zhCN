@@ -53,8 +53,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Majordomo",
 
 	magicreflect_cmd = "magicreflect",
@@ -74,20 +74,20 @@ L:RegisterTranslations("zhCN", function() return {
     firepit_desc = "火焰喷射伤害出现时进行警告",
 	
 	
-	trigger_engage = "Reckless mortals, none may challenge the sons of the living flame!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "狂妄的凡人，没有人可以挑战生命之焰的儿子！", --CHAT_MSG_MONSTER_YELL
 	
 	--is MUCH longer than that
 	trigger_bossDeath = "Impossible! Stay your attack, mortals... I submit! I submit!", --CHAT_MSG_MONSTER_YELL
 	
     bar_reflectCd = "反射冷却",
 	
-	trigger_magicReflect = "gains Magic Reflection.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS"
-	trigger_magicReflectFade = "Magic Reflection fades", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_magicReflect = "获得了魔法反射的效果", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS"
+	trigger_magicReflectFade = "魔法反射效果从", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_magicReflect = "魔法反射",
     msg_magicReflect = "魔法反射 - 停止施法！",
 	
-	trigger_physicalReflect = "gains Damage Shield.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_physicalReflectFade = "Damage Shield fades", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_physicalReflect = "获得了伤害反射护盾的效果", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_physicalReflectFade = "伤害反射护盾效果从", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_physicalReflect = "物理反射",
     msg_physicalReflect = "物理反射 - 停止攻击！",
 	

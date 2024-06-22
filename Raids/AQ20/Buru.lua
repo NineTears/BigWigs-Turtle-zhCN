@@ -72,8 +72,8 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	cmd = "Buru",
 
 	watch_cmd = "watch",
@@ -100,7 +100,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_dismember = " 斩杀",
 	
 	msg_phase2 = "第二阶段，DPS全力输出布鲁!",
-	you = "you",
+	you = "你",
 } end )
 
 local timer = {

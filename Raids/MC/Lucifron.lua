@@ -68,8 +68,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Lucifron",
 	
     curse_cmd = "curse",
@@ -93,40 +93,40 @@ L:RegisterTranslations("zhCN", function() return {
     adds_desc = "小怪死亡时进行警告",
 
 
-	trigger_curse = "afflicted by Lucifron's Curse.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_curse2 = "Lucifron's Curse was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_curse = "受到了鲁西弗隆", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_curse2 = "鲁西弗隆的诅咒被抵抗", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_curseCd = "下一次鲁西弗隆的诅咒",
     msg_curse = "鲁西弗隆的诅咒 - 解除诅咒！",
 	
-	trigger_doom = "afflicted by Impending Doom.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_doom2 = "Impending Doom was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_doom = "受到了末日降临", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_doom2 = "末日降临被抵抗", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_doomCd = "下一次末日降临",
     bar_doomDmg = "末日降临！",
     msg_doom = "末日降临 - 驱散！",
 	
-	trigger_shadowShock = "Lucifron's Shadow Shock", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_shadowShock = "鲁西弗隆的暗影震击", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_shadowShockCd = "暗影震击冷却",
 	
-	trigger_mcYou = "You are afflicted by Dominate Mind.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_mcOther = "(.+) is afflicted by Dominate Mind.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_mcYou = "你受到了统御意志效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.*)受到了统御意志效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
 	trigger_mcFade = "Dominate Mind fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mcCd = "统御意志冷却",
     bar_mc = " 统御意志 ",
     msg_mc = " 统御意志 - 驱散！",
 	
-	trigger_mcCast = "Flamewaker Protector begins to cast Dominate Mind.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_mcCast = "开始施放统御意志", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_mcCast = "施放统御意志！",
     msg_mcCast = "施放统御意志 - 打断！",
 	
     msg_addDead = "/2 烈焰行者护卫死亡",
 
-	trigger_deadYou = "You die.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
-	trigger_deadOther = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	trigger_deadYou = "你死了。", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	trigger_deadOther = "(.*)死亡了。", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	
 	c_flamewakerprotector = "烈焰行者护卫",
 	c_lucifron = "鲁西弗隆",
 	clickme = ">点击我<",
-	you = "you",
+	you = "你",
 } end)
 
 local timer = {

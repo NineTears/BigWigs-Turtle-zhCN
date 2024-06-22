@@ -51,8 +51,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Firemaw",
 
     wingbuffet_cmd = "wingbuffet",
@@ -72,18 +72,18 @@ L:RegisterTranslations("zhCN", function() return {
     stacks_desc = "烈焰打击层数过高时进行警告",
 
 
-    trigger_wingBuffet = "Firemaw begins to cast Wing Buffet.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_wingBuffet = "费尔默开始施放龙翼打击。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_wingBuffetCast = "正在施放龙翼打击！",
     bar_wingBuffetCd = "龙翼打击冷却",
     msg_wingBuffetCast = "正在施放龙翼打击！",
     msg_wingBuffetSoon = "2秒后龙翼打击 - 现在嘲讽！",
 
-    trigger_shadowFlame = "Firemaw begins to cast Shadow Flame.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_shadowFlame = "费尔默开始施放暗影烈焰。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_shadowFlameCast = "正在施放暗影烈焰！",
     bar_shadowFlameCd = "暗影烈焰冷却",
     msg_shadowFlameCast = "正在施放暗影烈焰！",
 	
-	trigger_flameBuffet = "Firemaw's Flame Buffet", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_flameBuffet = "费尔默的烈焰打击", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 		--Firemaw's Flame Buffet fails. (.+) is immune.
 		--Firemaw's Flame Buffet was resisted by (.+).
 		--Firemaw's Flame Buffet was resisted.

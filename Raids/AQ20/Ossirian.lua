@@ -66,8 +66,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	cmd = "Ossirian",
 	
     bigicon_cmd = "bigicon",
@@ -98,13 +98,13 @@ L:RegisterTranslations("zhCN", function() return {
 	clickit_name = "现在点击水晶",
 	clickit_desc = "计时器，如果在此计时器后点击，他将变为无敌状态",
 
-	supreme_trigger = "Ossirian the Unscarred gains Strength of Ossirian.",
+	supreme_trigger = "无疤者奥斯里安获得了奥斯里安之力的效果。",
 	supreme_trigger2 = "Ossirian the Unscarred is afflicted by Strength of Ossirian.",
 	supreme_bar = "无敌模式",
 	supremewarn = "无疤者奥斯里安无敌模式!",
 	supremedelaywarn = "无敌模式 %d 秒",
 
-	debuff_trigger = "Ossirian the Unscarred is afflicted by (.+) Weakness.",
+	debuff_trigger = "无疤者奥斯里安受到了(.+)虚弱效果的影响。",
 	debuff_trigger2 = "Ossirian the Unscarred gains (.+) Weakness.",
 	debuffwarn = "奥斯里安现在弱点 %s!",
 
@@ -112,9 +112,9 @@ L:RegisterTranslations("zhCN", function() return {
 
 	expose = "Expose",
 	
-	cyclone_trigger = "Enveloping Winds",
+	cyclone_trigger = "包围之风",
 	cyclone_bar = "飓风术",
-	warstomp_trigger = "War Stomp",
+	warstomp_trigger = "战争践踏",
 	warstomp_bar = "战争践踏",
 	
 	sandstorm_trigger = "Sand Vortex's Harsh Winds hits you for",

@@ -52,8 +52,8 @@ L:RegisterTranslations("enUS", function() return {
 	["3rd"] = true,
 	["4th"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Colors"] = "颜色",
 
 	["Messages"] = "信息",
@@ -179,8 +179,8 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Colors"] = "颜色",
 
 	["Messages"] = "信息",

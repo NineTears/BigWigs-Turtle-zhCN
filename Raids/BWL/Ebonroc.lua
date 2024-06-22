@@ -42,8 +42,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Ebonroc",
 
     wingbuffet_cmd = "wingbuffet",
@@ -59,19 +59,19 @@ L:RegisterTranslations("zhCN", function() return {
     curse_desc = "埃博诺克之影出现时进行警告",
 
 
-    trigger_wingBuffet = "Ebonroc begins to cast Wing Buffet.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_wingBuffet = "埃博诺克开始施放龙翼打击。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_wingBuffetCast = "正在施放龙翼打击！",
     bar_wingBuffetCd = "龙翼打击冷却",
     msg_wingBuffetCast = "正在施放龙翼打击！",
     msg_wingBuffetSoon = "2秒后龙翼打击 - 现在嘲讽！",
 
-    trigger_shadowFlame = "Ebonroc begins to cast Shadow Flame.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_shadowFlame = "埃博诺克开始施放暗影烈焰。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_shadowFlameCast = "正在施放暗影烈焰！",
     bar_shadowFlameCd = "暗影烈焰冷却",
     msg_shadowFlameCast = "正在施放暗影烈焰！",
 
-    trigger_shadowOfEbonrocYou = "You are afflicted by Shadow of Ebonroc.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_shadowOfEbonrocOther = "(.+) is afflicted by Shadow of Ebonroc.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_shadowOfEbonrocYou = "你受到了埃博诺克之影效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_shadowOfEbonrocOther = "(.+)受到了埃博诺克之影效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     trigger_shadowOfEbonrocFade = "Shadow of Ebonroc fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     msg_shadowOfEbonroc = " 受到了埃博诺克之影 - 嘲讽！",
     bar_shadowOfEbonrocDur = " 埃博诺克之影",

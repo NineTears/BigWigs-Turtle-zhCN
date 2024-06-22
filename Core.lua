@@ -97,8 +97,8 @@ L:RegisterTranslations("enUS", function()
 		["Close"] = true,
 		you = "you",
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",
@@ -296,8 +296,8 @@ end)
 
 L:RegisterTranslations("zhCN", function()
 	return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["%s mod enabled"] = "%s 模块开启",
 	["Target monitoring enabled"] = "启用目标监视",
 	["Target monitoring disabled"] = "禁用目标监视",

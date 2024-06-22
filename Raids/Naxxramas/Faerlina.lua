@@ -85,8 +85,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Faerlina",
 
     silence_cmd = "silence",
@@ -94,17 +94,17 @@ L:RegisterTranslations("zhCN", function() return {
     silence_desc = "沉默出现时进行警告",
 
     bigicon_cmd = "bigicon",
-    bigicon_name = "大型图标心控和激怒警报",
-    bigicon_desc = "当牧师需要心控或首领激怒时用大型图标进行警报",
+    bigicon_name = "心灵控制和激怒大图标警报",
+    bigicon_desc = "当牧师必须进行心灵控制和Boss进入激怒时显示大图标警报",
 
     sounds_cmd = "sounds",
-    sounds_name = "声音心控和激怒警报",
-    sounds_desc = "当牧师需要心控或首领激怒时用声音进行警报",
-
+    sounds_name = "心灵控制和激怒声音警报",
+    sounds_desc = "当牧师必须进行心灵控制和Boss进入激怒时发出声音警报",
+    
     mc_cmd = "mc",
-    mc_name = "心控计时条",
-    mc_desc = "崇拜者心控的计时条",
-
+    mc_name = "心灵控制计时条",
+    mc_desc = "信徒心灵控制的计时条",
+    
     enrage_cmd = "enrage",
     enrage_name = "激怒警报",
     enrage_desc = "激怒出现时进行警告",
@@ -112,57 +112,57 @@ L:RegisterTranslations("zhCN", function() return {
     rain_cmd = "rain",
     rain_name = "火焰之雨警报",
     rain_desc = "当你站在火焰之雨中时进行警告",
-
+    
     raidSilence_cmd = "raidSilence",
     raidSilence_name = "团队成员沉默警报",
-    raidSilence_desc = "团队成员被沉默时进行警告",
+    raidSilence_desc = "当团队成员被沉默时进行警告",
 
     poison_cmd = "poison",
-    poison_name = "毒性箭雨警报",
-    poison_desc = "萨满的毒性箭雨警报",
-	
-	trigger_start1 = "Kneel before me, worm!",
-	trigger_start2 = "Slay them in the master's name!",
-	trigger_start3 = "You cannot hide from me!",
-	trigger_start4 = "Run while you still can!",
+    poison_name = "毒箭之雨警报",
+    poison_desc = "对萨满进行毒箭之雨的警告",
+    
+	trigger_start1 = "跪下求饶吧，懦夫！",
+	trigger_start2 = "以主人之名，杀了他们！",
+	trigger_start3 = "休想从我面前逃掉！",
+	trigger_start4 = "逃啊！有本事就逃啊！",
 
-	trigger_rain = "You are afflicted by Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_rainFade = "Rain of Fire fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-	
-	trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	
-	trigger_raidSilence = "afflicted by Silence.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_rain = "You suffer (.+) Fire damage from Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
+    trigger_rain2 = "你受到了火焰之雨效果的影响",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    
+    trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    
+    trigger_raidSilence = "黑女巫法琳娜受到了黑女巫的拥抱",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_raidSilence = "团队成员沉默",
-	
-	trigger_mcGain = "(.+) gains Mind Control.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
-	trigger_mcGainYou = "You gain Mind Control.",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
-	--trigger_mcGain = "Naxxramas Worshipper is afflicted by Mind Control",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    mc_bar = " 心控",
-	
-	trigger_worshipperDies = "Naxxramas Worshipper dies.",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
+    
+    trigger_mcGain = "(.+) gains Mind Control.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
+    trigger_mcGainYou = "You gain Mind Control.",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    --trigger_mcGain = "Naxxramas Worshipper is afflicted by Mind Control",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    mc_bar = " 心灵控制",
+    
+    trigger_worshipperDies = "Naxxramas Worshipper dies.",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
 
-	trigger_mcFade = "Mind Control fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
-	--trigger_mcFade = "Naxxramas Worshipper begins to perform Widow's Embrace",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
-	--trigger_mcSuccess = "Widow's Embrace fades from Naxxramas Worshipper.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-	--trigger_embrace = "Grand Widow Faerlina gains Widow's Embrace.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    msg_silencedHalf = "激怒前被沉默！下次在30秒后",
-    msg_silenceZero = "被沉默得太早！激怒没有延迟",
-    bar_silence = "首领被沉默",
-	
-	trigger_enrage = "Grand Widow Faerlina gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_mcFade = "Mind Control fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    --trigger_mcFade = "Naxxramas Worshipper begins to perform Widow's Embrace",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+    --trigger_mcSuccess = "Widow's Embrace fades from Naxxramas Worshipper.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    --trigger_embrace = "Grand Widow Faerlina gains Widow's Embrace.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_silencedHalf = "在激怒前沉默！下一个沉默在30秒后",
+    msg_silenceZero = "过早沉默！激怒无延迟",
+    bar_silence = "Boss沉默",
+    
+    trigger_enrage = "黑女巫法琳娜获得了激怒的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_enrageGain = "激怒！",
-    bar_enrageGain = "首领激怒！",
-	
-	trigger_enrageFade = "Enrage fades from Grand Widow Faerlina.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-    msg_silencedEnrageFull = "激怒被沉默！下次在61秒后",
-	
-    msg_enrageSoon = "10秒后激怒",
-	
+    bar_enrageGain = "Boss激怒！",
+    
+    trigger_enrageFade = "Enrage fades from Grand Widow Faerlina.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_silencedEnrageFull = "激怒被沉默！下一个激怒在61秒后",
+    
+    msg_enrageSoon = "激怒将在10秒后到来",
+    
     bar_enrageCD = "激怒冷却",
-	
-	trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
-    msg_dispelCast = " 驱散了一个纳克萨玛斯信奉者！不要驱散心控！",
-    you = "you",
+    
+    trigger_dispel = "(.+) casts Dispel Magic on Naxxramas Worshipper.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+    msg_dispelCast = "驱散了一个信徒！请勿驱散心灵控制！",
+    you = "你",
 } end )
 
 local timer = {

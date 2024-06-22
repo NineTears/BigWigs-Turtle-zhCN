@@ -56,8 +56,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Enable"] = true,
 	["Enable pulltimer."] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Pull Timer"] = "开怪计时",
 	
 	["pulltimer"] = "开怪计时",
@@ -102,8 +102,8 @@ L:RegisterTranslations("esES", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Pull Timer"] = "开怪计时",
 	
 	["pulltimer"] = "开怪计时",

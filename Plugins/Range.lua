@@ -41,8 +41,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Reset to defaults"] = true,
 	["Resets all ranges to defaults."] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Range"] = "范围",
 	-- ["range"] = "范围",
 	["Options for the combat log's range."] = "设置战斗记录范围",
@@ -123,8 +123,8 @@ L:RegisterTranslations("koKR", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Range"] = "范围",
 	-- ["range"] = "范围",
 	["Options for the combat log's range."] = "设置战斗记录范围",

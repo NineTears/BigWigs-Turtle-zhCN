@@ -90,8 +90,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Ragnaros",
 
 	emerge_cmd = "emerge",
@@ -126,16 +126,16 @@ L:RegisterTranslations("zhCN", function() return {
 		--58.792
 	trigger_domoStart2 = "Behold Ragnaros, the Firelord! He who was ancient when this world was young! Bow before him, mortals! Bow before your ending!", --CHAT_MSG_MONSTER_YELL
 		--45.457
-	trigger_domoStart3 = "TOO SOON! YOU HAVE AWAKENED ME TOO SOON, EXECUTUS! WHAT IS THE MEANING OF THIS INTRUSION???", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart3 = "太早了！你太早唤醒了我", --CHAT_MSG_MONSTER_YELL
 		--32.144
 	trigger_domoStart4 = "These mortal infidels, my lord! They have invaded your sanctum and seek to steal your secrets!", --CHAT_MSG_MONSTER_YELL
 		--23.9
-	trigger_domoStart5 = "FOOL! YOU ALLOWED THESE INSECTS TO RUN RAMPANT THROUGH THE HALLOWED CORE, AND NOW YOU LEAD THEM TO MY VERY LAIR? YOU HAVE FAILED ME, EXECUTUS! JUSTICE SHALL BE MET, INDEED!", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart5 = "你让这些虫子", --CHAT_MSG_MONSTER_YELL
 		--19:44:21.439
-	trigger_engage = "NOW FOR YOU, INSECTS! BOLDLY, YOU SOUGHT THE POWER OF RAGNAROS. NOW YOU SHALL SEE IT FIRSTHAND!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "^现在轮到你们", --CHAT_MSG_MONSTER_YELL
 	
-	trigger_submerge = "COME FORTH, MY SERVANTS! DEFEND YOUR MASTER!", --CHAT_MSG_MONSTER_YELL (to be confirmed)
-	trigger_submerge2 = "YOU CANNOT DEFEAT THE LIVING FLAME! COME YOU MINIONS OF FIRE! COME FORTH YOU CREATURES OF HATE! YOUR MASTER CALLS!", --CHAT_MSG_MONSTER_YELL (to be confirmed)
+	trigger_submerge = "^现身吧", --CHAT_MSG_MONSTER_YELL (to be confirmed)
+	trigger_submerge2 = "^你们无法击败生命之焰", --CHAT_MSG_MONSTER_YELL (to be confirmed)
     bar_nextEmerge = "出现",
     msg_submerge = "拉格纳罗斯已消失 - 烈焰之子即将出现！",
 	
@@ -145,7 +145,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_submergeSoon = "10秒后消失！",
 	
 		--melee knockback
-	trigger_knockback = "TASTE THE FLAMES OF SULFURON!", --CHAT_MSG_MONSTER_YELL
+	trigger_knockback = "^品尝", --CHAT_MSG_MONSTER_YELL
     bar_knockbackCd = "击退冷却",
     bar_knockbackSoon = "即将击退...",
     msg_knockbackSoon = "即将击退 - 近战撤退！",

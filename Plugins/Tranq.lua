@@ -18,8 +18,8 @@ L:RegisterTranslations("enUS", function()
 		["Toggle tranq bars on or off."] = true,
 		["Bars"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	--["Tranq - %s"] = "宁神射击 - %s",
 	["%s's Tranq failed!"] = "%s 的宁神射击失败了！",
 	["Tranq"] = "宁神射击",
@@ -59,8 +59,8 @@ end)
 
 L:RegisterTranslations("zhCN", function()
 	return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	CHAT_MSG_SPELL_SELF_BUFF = "You fail to dispel (.+)'s Frenzy.",
 	CHAT_MSG_SPELL_SELF_DAMAGE = "You cast Tranquilizing Shot on (.+).",
 

@@ -58,8 +58,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Anubrekhan",
 
     locust_cmd = "locust",
@@ -79,18 +79,18 @@ L:RegisterTranslations("zhCN", function() return {
     web_desc = "地穴卫士放网时进行警告。",
 	
 	
-	trigger_engage1 = "Just a little taste...",
-	trigger_engage2 = "Yes, run! It makes the blood pump faster!",
-	trigger_engage3 = "There is no way out.",
+	trigger_engage1 = "一些小点心",
+	trigger_engage2 = "对，跑吧！那样伤口出血就更多了！",
+	trigger_engage3 = "你们逃不掉的。",
 	
-    trigger_locustSwarmCast = "Anub'Rekhan begins to cast Locust Swarm.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    trigger_locustSwarmCast = "阿努布雷坎开始施放虫群风暴。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_locustSwarmCasting = "正在施放蝗虫群！",
     bar_locustSwarmCasting = "正在施放蝗虫群！",
 
-    trigger_locustSwarmGain = "Anub'Rekhan gains Locust Swarm.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_locustSwarmGain = "阿努布雷坎受到了虫群风暴效果的影响。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_locustSwarmIsUp = "蝗虫群！",
 
-    trigger_locustSwarmEnds = "Locust Swarm fades from Anub'Rekhan.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_locustSwarmEnds = "虫群风暴效果从阿努布雷坎身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_locustSwarmCd = "蝗虫群 CD",
     bar_locustSwarmOffCd = "蝗虫群准备完毕...",
 	
@@ -98,10 +98,10 @@ L:RegisterTranslations("zhCN", function() return {
     msg_locustYou = "远离Boss！",
     trigger_locustSwarmYouFade = "Locust Swarm fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     
-    trigger_impale = "Anub'Rekhan's Impale hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_impale = "阿努布雷坎的穿刺击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_impale = "穿刺 CD",
     
-    trigger_enrage = "Crypt Guard gains Enrage.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_enrage = "地穴卫士变得愤怒了", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_enrage = "地穴卫士激怒 - 使用眩晕和陷阱！",
     
     trigger_web = "afflicted by Web.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE

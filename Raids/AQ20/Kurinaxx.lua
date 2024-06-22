@@ -35,8 +35,8 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Kurinnaxx",
 
     wound_cmd = "wound",
@@ -62,7 +62,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_enrage = "Kurinnaxx gains Enrage.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_enrage = "库林纳克斯激怒了！",
-    you = "you",
+    you = "你",
 } end )
 
 local timer = {

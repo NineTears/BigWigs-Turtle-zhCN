@@ -10,7 +10,7 @@ local bsdefiance = AceLibrary("Babble-Spell-2.2")["Defiance"]
 local bsferalinstinct = AceLibrary("Babble-Spell-2.2")["Feral Instinct"]
 
 module.revision = 30066
-module.enabletrigger = {"Thane Korth'azz", "Highlord Mograine", "Sir Zeliek", "Lady Blaumeux"}
+module.enabletrigger = {"库尔塔兹领主", "大领主莫格莱尼", "札里克爵士", "女公爵布洛莫斯"}
 module.toggleoptions = {"mark", "shieldwall", -1, "meteor", "void", "wrath", -1, "taunt", "tankswarn", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
@@ -65,7 +65,7 @@ L:RegisterTranslations("enUS", function() return {
     msg_doubleMark = "你被超过一个印记命中 - 注意你的位置！",
     
     trigger_mark4 = "You are afflicted by Mark of (.+) %(4%).",
-    msg_mark4 = "你身上有4层印记 - 快跑开/用暗影药水",
+    msg_mark4 = "你身上有4层印记 - 快跑开/吃暗抗！",
     msg_mark4Tank = "身上有4层印记 - 替换我！",
 	
     --trigger_void = "Lady Blaumeux casts Void Zone"
@@ -96,8 +96,7 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+
     cmd = "Horsemen",
 
     mark_cmd = "mark",
@@ -131,10 +130,10 @@ L:RegisterTranslations("zhCN", function() return {
 	
     bar_markCount = "印记 ",
     msg_markCount = "印记 ",
-    trigger_markZeliek = "afflicted by Mark of Zeliek",
-    trigger_markKorthAzz = "afflicted by Mark of Korth'azz",
-    trigger_markBlaumeux = "afflicted by Mark of Blaumeux",
-    trigger_markMograine = "afflicted by Mark of Mograine",
+    trigger_markZeliek = "受到了札里克爵士印记效果的影响",
+    trigger_markKorthAzz = "受到了库尔塔兹领主印记效果的影响",
+    trigger_markBlaumeux = "受到了女公爵布洛莫斯印记效果的影响",
+    trigger_markMograine = "受到了大领主莫格莱尼印记效果的影响",
     
     trigger_markZeliekFade = "Mark of Zeliek fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     trigger_markKorthAzzFade = "Mark of Korth'azz fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
@@ -149,7 +148,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_doubleMark = "你被超过一个印记命中 - 注意你的位置！",
     
     trigger_mark4 = "You are afflicted by Mark of (.+) %(4%).",
-    msg_mark4 = "你身上有4层印记 - 快跑开/用暗影药水",
+    msg_mark4 = "你身上有4层印记 - 快跑开/吃暗抗！",
     msg_mark4Tank = "身上有4层印记 - 替换我！",
 	
     --trigger_void = "Lady Blaumeux casts Void Zone"
@@ -170,12 +169,12 @@ L:RegisterTranslations("zhCN", function() return {
     msg_shieldWallUp = " - 盾墙持续20秒",
     msg_shieldWallFade = " - 盾墙结束！",
     
-    trigger_tauntResist = "Your Taunt was resisted by (.+).", --CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_growlResist = "Your Growl was resisted by (.+).", --CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_tauntResist = "你的嘲讽被(.+)抵抗了。", --CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_growlResist = "你的低吼被(.+)抵抗了。", --CHAT_MSG_SPELL_SELF_DAMAGE
     msg_tauntResist = "嘲讽被抵抗",
     
-    trigger_tauntSuccess = "You perform Taunt on (.+).", --CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_growlSuccess = "You perform Growl on (.+).", --CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_tauntSuccess = "你对(.+)使用嘲讽。", --CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_growlSuccess = "你对(.+)使用低吼。", --CHAT_MSG_SPELL_SELF_DAMAGE
     msg_tauntSuccess = "嘲讽成功",
 } end )
 
@@ -800,3 +799,4 @@ function horsemenIsRL()
     return false
 end
 ]]--
+

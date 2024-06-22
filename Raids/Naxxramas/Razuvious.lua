@@ -44,13 +44,13 @@ L:RegisterTranslations("enUS", function() return {
 } end )
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Razuvious",
 
     shout_cmd = "shout",
     shout_name = "怒吼警报",
-    shout_desc = "打断怒吼时进行警告",
+    shout_desc = "瓦解怒吼时进行警告",
 
     mc_cmd = "mc",
     mc_name = "精神控制计时条",
@@ -65,9 +65,9 @@ L:RegisterTranslations("zhCN", function() return {
     shieldwall_desc = "显示盾墙计时器",
 
 
-	trigger_shout = "%s lets loose a triumphant shout.", --CHAT_MSG_RAID_BOSS_EMOTE
-    bar_shout = "打断怒吼",
-    msg_shout = "打断怒吼！",
+	trigger_shout = "发出胜利的呼喊。", --CHAT_MSG_RAID_BOSS_EMOTE
+    bar_shout = "瓦解怒吼",
+    msg_shout = "瓦解怒吼！",
 	
 	trigger_mcYou = "You gain Mind Control.", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
 	trigger_mcFadeYou = "Mind Control fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
@@ -78,7 +78,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_unbalance2 = "Instructor Razuvious's Unbalancing Strike", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_unbalance = "重压打击",
 	
-	trigger_shieldWall = "Deathknight Understudy gains Shield Wall.", --CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS
+	trigger_shieldWall = "死亡骑士实习者获得了盾墙的效果。", --CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS
     bar_shieldWall = "盾墙",
 } end )
 

@@ -53,8 +53,8 @@ L:RegisterTranslations("enUS", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
     cmd = "Shazzrah",
 
 	counterspell_cmd = "counterspell",
@@ -74,20 +74,20 @@ L:RegisterTranslations("zhCN", function() return {
     blink_desc = "闪现出现时进行警告",
 	
 	
-	trigger_counterspell = "Shazzrah's Counterspell", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-	trigger_counterspell2 = "Shazzrah interrupt", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_counterspell = "沙斯拉尔施放了法术反制", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_counterspell2 = "沙斯拉尔的法术反制被(.+)抵抗了。", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_counterspellCd = "法术反制冷却",
     bar_counterspellSoon = "即将法术反制...",
     msg_counterspellSoon = "即将法术反制 - 停止施法！",
     msg_counterspell = "法术反制完毕 - 开始施法！",
 	
-	trigger_curse = "afflicted by Shazzrah's Curse.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_curse2 = "Shazzrah's Curse was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_curse = "受到了沙斯拉尔的诅咒", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_curse2 = "沙斯拉尔的诅咒被(.+)抵抗了。", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_curseCd = "沙斯拉尔的诅咒冷却",
     msg_curse = "沙斯拉尔的诅咒 - 解除诅咒！",
 	
-	trigger_deaden = "Shazzrah gains Deaden Magic.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_deadenFade = "Deaden Magic fades from Shazzrah.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_deaden = "沙斯拉尔获得了衰减魔法的效果", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_deadenFade = "效果从沙斯拉尔", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_deadenCd = "衰减魔法冷却",
     bar_deadenDur = "衰减魔法已开启！",
     msg_deaden = "衰减魔法 - 驱散它！",

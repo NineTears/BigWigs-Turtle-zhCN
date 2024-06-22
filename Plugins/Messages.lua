@@ -62,8 +62,8 @@ L:RegisterTranslations("enUS", function()
 		["Test"] = true,
 		["Close"] = true,
 
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Messages"] = "信息提示",
 
 	["msg"] = "消息",
@@ -223,8 +223,8 @@ end)
 
 L:RegisterTranslations("zhCN", function()
 	return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["Messages"] = "信息提示",
 
 	["msg"] = "消息",

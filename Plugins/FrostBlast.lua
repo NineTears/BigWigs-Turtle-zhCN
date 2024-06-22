@@ -117,8 +117,8 @@ L:RegisterTranslations("esES", function() return {
 } end)
 
 L:RegisterTranslations("zhCN", function() return {
-	-- Wind汉化修复Turtle-WOW中文数据
-	-- Last update: 2024-06-21
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
 	["FrostBlast"] = "冰霜冲击",
 	["Frost Blast"] = "冰霜冲击",
 	["Options for the Frost Blast frame."] = "冰霜冲击框架设置",
