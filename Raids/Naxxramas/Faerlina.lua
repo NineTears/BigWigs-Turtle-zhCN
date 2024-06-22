@@ -126,8 +126,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_start3 = "休想从我面前逃掉！",
 	trigger_start4 = "逃啊！有本事就逃啊！",
 
-    trigger_rain = "You suffer (.+) Fire damage from Grand Widow Faerlina's Rain of Fire.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
-    trigger_rain2 = "你受到了火焰之雨效果的影响",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_rain = "你受到了火焰之雨效果的影响",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
     
     trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     
