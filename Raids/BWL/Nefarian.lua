@@ -42,12 +42,12 @@ L:RegisterTranslations("enUS", function() return {
     icon_desc = "在精神控制目标上标记团队图标",
 	
     drakonidcolor_cmd = "drakonidcolor",
-    drakonidcolor_name = "龙人颜色警报",
-    drakonidcolor_desc = "根据龙人的颜色进行警告",
+    drakonidcolor_name = "龙兽颜色警报",
+    drakonidcolor_desc = "根据龙兽的颜色进行警告",
 	
     drakonidcounter_cmd = "drakonidcounter",
-    drakonidcounter_name = "龙人计数器",
-    drakonidcounter_desc = "记录已击杀的龙人数量",
+    drakonidcounter_name = "龙兽计数器",
+    drakonidcounter_desc = "记录已击杀的龙兽数量",
 	
     landingparty_cmd = "landingparty",
     landingparty_name = "登陆小队警报",
@@ -97,7 +97,7 @@ L:RegisterTranslations("enUS", function() return {
 
 --Phase 1
     trigger_engage = "Let the games begin!", --CHAT_MSG_MONSTER_YELL
-    bar_mobsSpawn = "龙人刷新",
+    bar_mobsSpawn = "龙兽刷新",
 	
 	trigger_mcYou = "You are afflicted by Shadow Command.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_mcOther = "(.+) is afflicted by Shadow Command.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
@@ -106,12 +106,12 @@ L:RegisterTranslations("enUS", function() return {
     msg_mc = " 精神控制 - 变羊！",
     trigger_deadOther = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	
-    bar_addCounter = "剩余龙人",
-    msg_red = "红色龙人 - 造成：火焰锥形堆叠DOT - 抵抗：火焰",
-    msg_blue = "蓝色龙人 - 造成：法力吸取和减速 - 抵抗：冰霜和奥术",
-    msg_green = "绿色龙人 - 造成：眩晕 - 抵抗：自然",
-    msg_black = "黑色龙人 - 造成：火焰攻击 - 抵抗：暗影和火焰",
-    msg_bronze = "青铜龙人 - 造成：减速攻击和施法速度 - 抵抗：奥术",
+    bar_addCounter = "剩余龙兽",
+    msg_red = "红色龙兽 - 造成：火焰锥形堆叠DOT - 抵抗：火焰",
+    msg_blue = "蓝色龙兽 - 造成：法力吸取和减速 - 抵抗：冰霜和奥术",
+    msg_green = "绿色龙兽 - 造成：眩晕 - 抵抗：自然",
+    msg_black = "黑色龙兽 - 造成：火焰攻击 - 抵抗：暗影和火焰",
+    msg_bronze = "青铜龙兽 - 造成：减速攻击和施法速度 - 抵抗：奥术",
 	
     msg_landingParty = "奈法利安将在20秒内降落 - 登陆小队，准备就位！",
 	
@@ -222,12 +222,12 @@ L:RegisterTranslations("zhCN", function() return {
     icon_desc = "在精神控制目标上标记团队图标",
 	
     drakonidcolor_cmd = "drakonidcolor",
-    drakonidcolor_name = "龙人颜色警报",
-    drakonidcolor_desc = "根据龙人的颜色进行警告",
+    drakonidcolor_name = "龙兽颜色警报",
+    drakonidcolor_desc = "根据龙兽的颜色进行警告",
 	
     drakonidcounter_cmd = "drakonidcounter",
-    drakonidcounter_name = "龙人计数器",
-    drakonidcounter_desc = "记录已击杀的龙人数量",
+    drakonidcounter_name = "龙兽计数器",
+    drakonidcounter_desc = "记录已击杀的龙兽数量",
 	
     landingparty_cmd = "landingparty",
     landingparty_name = "登陆小队警报",
@@ -277,7 +277,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 --Phase 1
     trigger_engage = "让游戏开始！", --CHAT_MSG_MONSTER_YELL
-    bar_mobsSpawn = "龙人刷新",
+    bar_mobsSpawn = "龙兽刷新",
 	
 	trigger_mcYou = "你受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_mcOther = "(.+)受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
@@ -286,12 +286,12 @@ L:RegisterTranslations("zhCN", function() return {
     msg_mc = " 精神控制 - 变羊！",
     trigger_deadOther = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	
-    bar_addCounter = "剩余龙人",
-    msg_red = "红色龙人 - 造成：火焰锥形堆叠DOT - 抵抗：火焰",
-    msg_blue = "蓝色龙人 - 造成：法力吸取和减速 - 抵抗：冰霜和奥术",
-    msg_green = "绿色龙人 - 造成：眩晕 - 抵抗：自然",
-    msg_black = "黑色龙人 - 造成：火焰攻击 - 抵抗：暗影和火焰",
-    msg_bronze = "青铜龙人 - 造成：减速攻击和施法速度 - 抵抗：奥术",
+    bar_addCounter = "剩余龙兽",
+    msg_red = "红色龙兽 - 造成：火焰锥形堆叠DOT - 抵抗：火焰",
+    msg_blue = "蓝色龙兽 - 造成：法力吸取和减速 - 抵抗：冰霜和奥术",
+    msg_green = "绿色龙兽 - 造成：眩晕 - 抵抗：自然",
+    msg_black = "黑色龙兽 - 造成：火焰攻击 - 抵抗：暗影和火焰",
+    msg_bronze = "青铜龙兽 - 造成：减速攻击和施法速度 - 抵抗：奥术",
 	
     msg_landingParty = "奈法利安将在20秒内降落 - 登陆小队，准备就位！",
 	
