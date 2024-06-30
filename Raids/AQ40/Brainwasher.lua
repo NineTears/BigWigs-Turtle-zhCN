@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Qiraji Brainwasher", "Ahn'Qiraj")
+local bbanubisathsentinel = AceLibrary("Babble-Boss-2.2")["Anubisath Sentinel"]
 
 module.revision = 30075
 module.enabletrigger = module.translatedName
@@ -62,7 +63,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     ["You have slain %s!"] = "你已经击败了%s！",
     clickme = " >点击我<",
-    you = "you",
+    you = "你",
 } end )
 
 local timer = {
@@ -109,7 +110,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("阿努比萨斯哨兵", "Ahn'Qiraj") then self.core:DisableModule("阿努比萨斯哨兵", "Ahn'Qiraj") end
+	if self.core:IsModuleActive(bbanubisathsentinel, "Ahn'Qiraj") then self.core:DisableModule(bbanubisathsentinel, "Ahn'Qiraj") end
 end
 
 function module:OnDisengage()

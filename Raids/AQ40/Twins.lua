@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("The Twin Emperors", "Ahn'Qiraj")
+local bbanubisathdefender = AceLibrary("Babble-Boss-2.2")["Anubisath Defender"]
 
 module.revision = 30075
 local veklor = AceLibrary("Babble-Boss-2.2")["Emperor Vek'lor"]
@@ -183,7 +184,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("阿努比萨斯防御者", "Ahn'Qiraj") then self:TriggerEvent("BigWigs_RebootModule", "阿努比萨斯防御者", "Ahn'Qiraj") end
+	if self.core:IsModuleActive(bbanubisathdefender, "Ahn'Qiraj") then self:TriggerEvent("BigWigs_RebootModule", bbanubisathdefender, "Ahn'Qiraj") end
 		
 	self:Sync(syncName.tp)
 

@@ -1,6 +1,8 @@
 
 local module, L = BigWigs:ModuleDeclaration("Qiraji Mindslayer", "Ahn'Qiraj")
 local BC = AceLibrary("Babble-Class-2.2")
+local bbqirajibrainwasher = AceLibrary("Babble-Boss-2.2")["Qiraji Brainwasher"]
+local bbtheprophetskeram = AceLibrary("Babble-Boss-2.2")["The Prophet Skeram"]
 
 module.revision = 30075
 module.enabletrigger = module.translatedName
@@ -141,8 +143,8 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("其拉洗脑者", "Ahn'Qiraj") then self.core:DisableModule("其拉洗脑者", "Ahn'Qiraj") end
-	if self.core:IsModuleActive("预言者斯克拉姆", "Ahn'Qiraj") then self.core:DisableModule("预言者斯克拉姆", "Ahn'Qiraj") end
+	if self.core:IsModuleActive(bbqirajibrainwasher, "Ahn'Qiraj") then self.core:DisableModule(bbqirajibrainwasher, "Ahn'Qiraj") end
+	if self.core:IsModuleActive(bbtheprophetskeram, "Ahn'Qiraj") then self.core:DisableModule(bbtheprophetskeram, "Ahn'Qiraj") end
 	
 	disorientSoonCheck = true
 end

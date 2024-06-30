@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("C'Thun", "Ahn'Qiraj")
+local bbqirajimindslayer = AceLibrary("Babble-Boss-2.2")["Qiraji Mindslayer"]
 
 module.revision = 30078
 local eyeofcthun = AceLibrary("Babble-Boss-2.2")["Eye of C'Thun"]
@@ -419,7 +420,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("其拉斩灵者", "Ahn'Qiraj") then self.core:DisableModule("其拉斩灵者", "Ahn'Qiraj") end
+	if self.core:IsModuleActive(bbqirajimindslayer, "Ahn'Qiraj") then self.core:DisableModule(bbqirajimindslayer, "Ahn'Qiraj") end
 	
 	doCheckForWipe = false
 	cthunStarted = nil

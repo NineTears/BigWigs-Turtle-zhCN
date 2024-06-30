@@ -1,6 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("The Prophet Skeram", "Ahn'Qiraj")
 local bbtheprophetskeram = AceLibrary("Babble-Boss-2.2")["The Prophet Skeram"]
+local bbanubisathsentinel = AceLibrary("Babble-Boss-2.2")["Anubisath Sentinel"]
 
 module.revision = 30067
 module.enabletrigger = module.translatedName
@@ -95,7 +96,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("阿努比萨斯哨兵", "Ahn'Qiraj") then self.core:DisableModule("阿努比萨斯哨兵", "Ahn'Qiraj") end
+	if self.core:IsModuleActive(bbanubisathsentinel, "Ahn'Qiraj") then self.core:DisableModule(bbanubisathsentinel, "Ahn'Qiraj") end
 	
 	self:ScheduleRepeatingEvent("CheckTrueSkeram", self.CheckTrueSkeram, 0.5, self)
 end

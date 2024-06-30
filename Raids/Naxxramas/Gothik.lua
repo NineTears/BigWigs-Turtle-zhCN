@@ -1,6 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Gothik the Harvester", "Naxxramas")
 local bzeasternplaguelands = AceLibrary("Babble-Zone-2.2")["Eastern Plaguelands"]
+local bbdeathknightcavalier = AceLibrary("Babble-Boss-2.2")["Deathknight Cavalier"]
 
 module.revision = 30084
 module.enabletrigger = module.translatedName
@@ -164,7 +165,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("死亡骑士队长", "Naxxramas") then self.core:DisableModule("死亡骑士队长", "Naxxramas") end
+	if self.core:IsModuleActive(bbdeathknightcavalier, "Naxxramas") then self.core:DisableModule(bbdeathknightcavalier, "Naxxramas") end
 	
 	numTrainees = 1
 	numDeathknights = 1
