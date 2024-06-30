@@ -5,7 +5,7 @@ local victor = AceLibrary("Babble-Boss-2.2")["Lord Victor Nefarius"]
 local bbnefarian = AceLibrary("Babble-Boss-2.2")["Nefarian"]
 
 module.revision = 30085
-module.enabletrigger = {"Nefarian", "Lord Victor Nefarius"}
+module.enabletrigger = {bbnefarian, victor}
 module.toggleoptions = {
 	"mc",
 	"icon",

@@ -84,29 +84,29 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_engage3 = "你们逃不掉的。",
 	
     trigger_locustSwarmCast = "阿努布雷坎开始施放虫群风暴。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-    msg_locustSwarmCasting = "正在施放蝗虫群！",
-    bar_locustSwarmCasting = "正在施放蝗虫群！",
+    msg_locustSwarmCasting = "正在施放虫群风暴！",
+    bar_locustSwarmCasting = "正在施放虫群风暴！",
 
     trigger_locustSwarmGain = "阿努布雷坎受到了虫群风暴效果的影响。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    bar_locustSwarmIsUp = "蝗虫群！",
+    bar_locustSwarmIsUp = "虫群风暴！",
 
     trigger_locustSwarmEnds = "虫群风暴效果从阿努布雷坎身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
-    bar_locustSwarmCd = "蝗虫群 CD",
-    bar_locustSwarmOffCd = "蝗虫群准备完毕...",
+    bar_locustSwarmCd = "虫群风暴 CD",
+    bar_locustSwarmOffCd = "虫群风暴随时可能开始！",
 	
-    trigger_locustSwarmYou = "You are afflicted by Locust Swarm", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_locustSwarmYou = "你受到了虫群风暴效果的影响", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_locustYou = "远离Boss！",
-    trigger_locustSwarmYouFade = "Locust Swarm fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+    trigger_locustSwarmYouFade = "虫群风暴效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
     
     trigger_impale = "阿努布雷坎的穿刺击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_impale = "穿刺 CD",
     
-    trigger_enrage = "地穴卫士变得愤怒了", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_enrage = "地穴卫士变得愤怒了！", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_enrage = "地穴卫士激怒 - 使用眩晕和陷阱！",
     
-    trigger_web = "afflicted by Web.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_web2 = "Web fails.", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_webCd = "网 CD",
+    trigger_web = "受到了蛛网效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_web2 = "蛛网效果从", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_webCd = "蛛网 CD",
     bar_webDur = "被网住了！",
 } end )
 

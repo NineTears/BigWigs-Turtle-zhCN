@@ -141,8 +141,8 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("Qiraji Brainwasher", "Ahn'Qiraj") then self.core:DisableModule("Qiraji Brainwasher", "Ahn'Qiraj") end
-	if self.core:IsModuleActive("The Prophet Skeram", "Ahn'Qiraj") then self.core:DisableModule("The Prophet Skeram", "Ahn'Qiraj") end
+	if self.core:IsModuleActive("其拉洗脑者", "Ahn'Qiraj") then self.core:DisableModule("其拉洗脑者", "Ahn'Qiraj") end
+	if self.core:IsModuleActive("预言者斯克拉姆", "Ahn'Qiraj") then self.core:DisableModule("预言者斯克拉姆", "Ahn'Qiraj") end
 	
 	disorientSoonCheck = true
 end

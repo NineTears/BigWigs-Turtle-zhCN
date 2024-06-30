@@ -283,29 +283,29 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_mcYell2 = "将无处可逃！",
     msg_mc = "精神控制！",
 	
-	trigger_mcYou = "You are afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_mcOther = "(.+) is afflicted by Chains of Kel'Thuzad.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_mcFade = "Chains of Kel'Thuzad fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_mcYou = "你受到了克尔苏加德的锁链效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.+)受到了克尔苏加德的锁链效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_mcFade = "克尔苏加德的锁链效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mcAfflic = " 精神控制",
     bar_mcCd = "精神控制 CD",
-	trigger_friendlyDead = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	trigger_friendlyDead = "(.+)死亡了。", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	
-	trigger_fissure = "克尔苏加德开始施放暗影裂隙。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_fissure = "克尔苏加德施放了暗影裂隙。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_fissure = "离开红圈！",
     msg_fissure = "红圈！",
 	
-	trigger_frostBlastYell = "I will freeze the blood in your veins!", --CHAT_MSG_MONSTER_YELL
-	trigger_frostBlastYou = "You are afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_frostBlastOther = "(.+) is afflicted by Frost Blast.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_frostBlastYell = "我要冻结你血管里的血液！", --CHAT_MSG_MONSTER_YELL
+	trigger_frostBlastYou = "克尔苏加德的冰霜冲击击中你", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_frostBlastOther = "克尔苏加德的冰霜冲击击中(.+)", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_frostBlastCd = "冰墓 CD",
     bar_frostBlastAfflic = "冰墓",
     msg_frostBlast = "冰墓！",
 		--unused
-	trigger_frostBlastFade = "Frost Blast fades from (.+)", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_frostBlastFade = "冰霜冲击效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
 
 	trigger_detonateYou = "你受到了自爆法力效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_detonateOther = "(.+)受到了自爆法力效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_detonateFade = "Detonate Mana fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_detonateFade = "自爆法力效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
 	bar_detonateAfflic = " 法力爆炸",
 	bar_detonateCd = "法力爆炸 CD",
 	msg_detonate = "法力爆炸在 ",
@@ -330,17 +330,17 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_earthShock1 = "地震术击中克尔苏加德", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
 	trigger_earthShock2 = "地震术致命一击对克尔苏加德", --CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_HOSTILEPLAYER_DAMAGE
 	
-	trigger_volley = "受到了群体寒冰箭效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_volley = "克尔苏加德的群体寒冰箭击中", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
 	bar_volley = "群体寒冰箭 CD",
 
 	bar_guardian = "小强 %d",
 
 	trigger_shackle = "寒冰皇冠卫士受到了束缚亡灵效果的影响。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-	trigger_shackleFade = "Shackle Undead fades from Guardian of Icecrown.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_shackleFade = "束缚亡灵效果从寒冰皇冠卫士身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
 	bar_shackle = "束缚亡灵（最多3个）",
 	msg_shackle = "%s/3",
 
-	trigger_bloodTap = "Guardian of Icecrown gains Blood Tap %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_bloodTap = "寒冰皇冠卫士获得了", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_bloodTapA = "血液分流 +",
 	bar_bloodTapB = "% 伤害",
 	clickme = " >点击我！<",

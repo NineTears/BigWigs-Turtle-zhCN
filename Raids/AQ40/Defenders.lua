@@ -129,47 +129,47 @@ L:RegisterTranslations("zhCN", function() return {
     enrage_desc = "激怒出现时进行警告",
 	
 	
-	trigger_arcaneFireReflect1 = "Moonfire is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_arcaneFireReflect2 = "Scorch is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_arcaneFireReflect3 = "Flame Shock is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_arcaneFireReflect4 = "Fireball is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_arcaneFireReflect5 = "Flame Lash is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_arcaneFireReflect6 = "Detect Magic is reflected",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect1 = "月火术被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect2 = "灼烧被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect3 = "烈焰震击被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect4 = "火球术被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect5 = "烈焰鞭笞被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_arcaneFireReflect6 = "侦测魔法被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
     bar_fireArcaneReflect = "火焰 & 奥术反射",
 	
-	trigger_shadowFrostReflect1 = "Shadow Word: Pain is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_shadowFrostReflect2 = "Corruption is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_shadowFrostReflect3 = "Frostbolt is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_shadowFrostReflect4 = "Frost Shock is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
-	trigger_shadowFrostReflect5 = "Anubisath Defender is afflicted by Detect Magic.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
+	trigger_shadowFrostReflect1 = "暗言术：痛被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect2 = "腐蚀术被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect3 = "寒冰箭被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect4 = "冰霜震击被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_shadowFrostReflect5 = "阿努比萨斯防御者受到了侦测魔法效果的影响。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
     bar_shadowFrostReflect = "暗影 & 冰霜反射",
 	
-	trigger_selfReflect = "Your (.*) is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_selfReflect = "你的(.*)被阿努比萨斯防御者反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
     msg_selfReflect = "法术反射 - 停止自残！",
 	
-	trigger_plagueYou = "You are afflicted by Plague.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_plagueOther = "(.+) is afflicted by Plague.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_plagueYou = "你受到了瘟疫效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_plagueOther = "(.+)受到了瘟疫效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_plague = "瘟疫",
     msg_plague = "瘟疫在 ",
 	
-	trigger_thunderClap = "Anubisath Defender's Thunderclap hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_thunderClap = "阿努比萨斯防御者的雷霆震击", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_thunderClap = "雷霆一击",
     msg_thunderClap = "雷霆一击 - 远程远离！",
 
-	trigger_shadowStorm = "Anubisath Defender's Shadow Storm hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_shadowStorm = "阿努比萨斯防御者的暗影风暴", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_shadowStorm = "暗影风暴",
     msg_shadowStorm = "暗影风暴 - 远程靠近！",
 
-	trigger_meteor = "Anubisath Defender's Meteor hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_meteor = "阿努比萨斯防御者的流星", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_meteor = "流星",
     msg_meteor = "流星！",
 	
-	trigger_explode = "Anubisath Defender gains Explode.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_explode = "阿努比萨斯防御者获得了爆炸的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_explode = "即将爆炸！",
-    msg_explode = "即将爆炸！",
+    msg_explode = "即将爆炸！快跑！！！",
 
-	trigger_enrage = "Anubisath Defender gains Enrage.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    msg_enrage = "激怒了！",
+	trigger_enrage = "阿努比萨斯防御者获得了狂怒的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrage = "狂暴！加大治疗！",
 } end )
 
 local timer = {

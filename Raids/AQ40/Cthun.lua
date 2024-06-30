@@ -10,7 +10,7 @@ local eyetentacle = AceLibrary("Babble-Boss-2.2")["Eye Tentacle"]
 local cthun = AceLibrary("Babble-Boss-2.2")["C'Thun"]
 local bzthescarabwall = AceLibrary("Babble-Zone-2.2")["The Scarab Wall"]
 local bzgatesofahnqiraj = AceLibrary("Babble-Zone-2.2")["Gates of Ahn'Qiraj"]
-module.enabletrigger = {"Eye of C'Thun", "C'Thun"}
+module.enabletrigger = {eyeofcthun, cthun}
 module.toggleoptions = {
 	"cthuneyebeam",
 	"darkglare",
@@ -208,47 +208,47 @@ L:RegisterTranslations("zhCN", function() return {
 	
     bar_startRandomBeams = "随机眼棱开始！",
 
-	trigger_cthun_eyeBeam = "Eye of C'Thun begins to cast Eye Beam.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_cthun_eyeBeam = "克苏恩之眼开始施放眼棱。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_eyeBeam = "眼棱即将攻击 ",
 	
 	--no dark glare trigger
-    bar_darkGlareCd = "下一次黑暗闪耀",
+    bar_darkGlareCd = "下一次黑暗闪耀（红光）",
     bar_darkGlareCasting = "正在施放黑暗闪耀！",
     bar_darkGlareDur = "黑暗闪耀！",
     msg_darkGlareCasting = "黑暗闪耀！",
     msg_darkGlareEndsSoon = "黑暗闪耀将在5秒内结束",
 	
-	trigger_smallEyeTentacles = "Eye Tentacle begins to cast Birth.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	trigger_smallEyeTentacles = "眼球触须开始施放出生。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     msg_smallEyeTentaclesSoon = "小眼触须将在3秒内出现",
 	bar_smallEyeTentacles = "小眼触须",
 	bar_smallEyesDead = "/8 小眼触须已死",
 	
-	trigger_smallClaw = "Claw Tentacle begins to cast Birth.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	trigger_smallClaw = "利爪触须开始施放出生。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     bar_smallClaw = "小爪刷新",
 
     msg_phase2 = "眼睛已死 - 本体即将出现！",
 	
-	trigger_giantClaw = "Giant Claw Tentacle begins to cast Birth.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	trigger_giantClaw = "巨型利爪触须开始施放出生。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     bar_giantClaw = "巨型利爪触须刷新",
 	
-	trigger_giantEye = "Giant Eye Tentacle begins to cast Birth.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	trigger_giantEye = "巨眼触须开始施放出生。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     bar_giantEye = "巨眼触须刷新",
 	
-	trigger_giantEye_eyeBeam = "Giant Eye Tentacle begins to cast Eye Beam.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_giantEye_eyeBeam = "巨眼触须开始施放眼棱。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 	--bar_eyeBeam = "Eye Beam on ",
 	
-	trigger_groundTremor = "afflicted by Ground Tremor.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_groundTremor = "受到了大地震颤效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_groundTremorDur = "大地震颤昏迷",
 	
     bar_windowOfOpportunity = "机会窗口",
 	
 		--must be a string.find
-	trigger_weakened = "is weakened!", --CHAT_MSG_MONSTER_EMOTE
-    bar_weakened = "克苏恩虚弱了！",
+	trigger_weakened = "克苏恩被削弱了！", --CHAT_MSG_MONSTER_EMOTE
+    bar_weakened = "虚弱时间，快输出！",
     msg_weakened = "克苏恩虚弱了！",
     msg_weakenedFade = "虚弱结束",
 	
-	trigger_digestiveAcid = "You are afflicted by Digestive Acid %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_digestiveAcid = "你受到了消化酸液效果的影响%（(.+)%）。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_digestiveAcid = " 消化酸层数过高 - 考虑离开胃部",
 	
     hpBar_firstTentacle = "第一个触须",
@@ -419,7 +419,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("Qiraji Mindslayer", "Ahn'Qiraj") then self.core:DisableModule("Qiraji Mindslayer", "Ahn'Qiraj") end
+	if self.core:IsModuleActive("其拉斩灵者", "Ahn'Qiraj") then self.core:DisableModule("其拉斩灵者", "Ahn'Qiraj") end
 	
 	doCheckForWipe = false
 	cthunStarted = nil

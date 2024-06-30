@@ -55,10 +55,10 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_mcFade = "Cause Insanity fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mc = " 精神控制",
 
-    trigger_mindFlayYou = "You are afflicted by Mind Flay.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_mindFlayOther = "(.+) is afflicted by Mind Flay.",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-    trigger_mindFlayFade = "Mind Flay fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-    bar_mindFlay = " 心灵震爆",
+    trigger_mindFlayYou = "你受到了精神鞭笞效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_mindFlayOther = "(.+)受到了精神鞭笞效果的影响。",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+    trigger_mindFlayFade = "精神鞭笞效果从(.+)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_mindFlay = " 精神鞭笞（死缠效果）",
 
     ["You have slain %s!"] = "你已经击败了%s！",
     clickme = " >点击我<",
@@ -109,7 +109,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("Anubisath Sentinel", "Ahn'Qiraj") then self.core:DisableModule("Anubisath Sentinel", "Ahn'Qiraj") end
+	if self.core:IsModuleActive("阿努比萨斯哨兵", "Ahn'Qiraj") then self.core:DisableModule("阿努比萨斯哨兵", "Ahn'Qiraj") end
 end
 
 function module:OnDisengage()

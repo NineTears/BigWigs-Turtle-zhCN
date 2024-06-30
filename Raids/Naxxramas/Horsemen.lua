@@ -10,7 +10,7 @@ local bsdefiance = AceLibrary("Babble-Spell-2.2")["Defiance"]
 local bsferalinstinct = AceLibrary("Babble-Spell-2.2")["Feral Instinct"]
 
 module.revision = 30066
-module.enabletrigger = {"库尔塔兹领主", "大领主莫格莱尼", "札里克爵士", "女公爵布洛莫斯"}
+module.enabletrigger = {thane, mograine, zeliek, blaumeux}
 module.toggleoptions = {"mark", "shieldwall", -1, "meteor", "void", "wrath", -1, "taunt", "tankswarn", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {
@@ -130,10 +130,10 @@ L:RegisterTranslations("zhCN", function() return {
 	
     bar_markCount = "印记 ",
     msg_markCount = "印记 ",
-    trigger_markZeliek = "受到了札里克爵士印记效果的影响",
-    trigger_markKorthAzz = "受到了库尔塔兹领主印记效果的影响",
-    trigger_markBlaumeux = "受到了女公爵布洛莫斯印记效果的影响",
-    trigger_markMograine = "受到了大领主莫格莱尼印记效果的影响",
+    trigger_markZeliek = "受到了瑟里耶克印记效果的影响",
+    trigger_markKorthAzz = "受到了库尔塔兹印记效果的影响",
+    trigger_markBlaumeux = "受到了布劳缪克丝印记效果的影响",
+    trigger_markMograine = "受到了莫格莱尼印记效果的影响",
     
     trigger_markZeliekFade = "Mark of Zeliek fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     trigger_markKorthAzzFade = "Mark of Korth'azz fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
@@ -144,24 +144,24 @@ L:RegisterTranslations("zhCN", function() return {
     msg_blaumeuxTankReady = "准备好对女公爵布洛莫斯进行坦克",
     msg_mograineTankReady = "准备好对大领主莫格莱尼进行坦克",
     
-    trigger_markYou = "You are afflicted by Mark of ",
-    msg_doubleMark = "你被超过一个印记命中 - 注意你的位置！",
+    trigger_markYou = "你受到了(.+)印记效果的影响",
+    msg_doubleMark = "你被超过一个印记命中 - 注意位置！",
     
-    trigger_mark4 = "You are afflicted by Mark of (.+) %(4%).",
+    trigger_mark4 = "你受到了(.+)印记效果的影响%（4%）",
     msg_mark4 = "你身上有4层印记 - 快跑开/吃暗抗！",
     msg_mark4Tank = "身上有4层印记 - 替换我！",
 	
     --trigger_void = "Lady Blaumeux casts Void Zone"
-    trigger_void2 = "你的命是我的了！",
+    trigger_void2 = "你的命就是我的了！",
     bar_void = "虚空领域",
     msg_voidYou = "虚空领域在你身上！",
     
     --trigger_meteor = "Thane Korth'azz's Meteor hits ",
-    trigger_meteor2 = "我最喜欢烤肉了!",
+    trigger_meteor2 = "我喜欢我的肉特别脆!",
     bar_meteor = "流星 CD",
 
     --trigger_wrath = "Sir Zeliek's Holy Wrath hits ",
-    trigger_wrath2 = "除了服从，我别无选择！",
+    trigger_wrath2 = "我别无选择，只能服从！",
     bar_wrath = "神圣之怒 CD",
     
     trigger_shieldWall = "(.*)获得了盾墙的效果。",

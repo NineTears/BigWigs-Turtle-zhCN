@@ -83,28 +83,28 @@ L:RegisterTranslations("zhCN", function() return {
     enrage_desc = "定时狂怒出现时进行警告",
     
     
-    trigger_wyvernSting = "afflicted by Wyvern Sting",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_wyvernStingYou = "You are afflicted by Wyvern Sting.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_wyvernStingYouFade = "Wyvern Sting fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
-    bar_wyvernStingDuration = "飞龙钉刺效果",
-    bar_wyvernStingCd = "飞龙钉刺冷却",
+    trigger_wyvernSting = "受到了翼龙钉刺效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_wyvernStingYou = "受到了翼龙钉刺效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_wyvernStingYouFade = "翼龙钉刺效果从你身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    bar_wyvernStingDuration = "翼龙钉刺效果",
+    bar_wyvernStingCd = "翼龙钉刺冷却",
     
-    trigger_frenzyGain = "Princess Huhuran gains Frenzy.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    trigger_frenzyFade = "Frenzy fades from Princess Huhuran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_frenzyGain = "哈霍兰公主获得了疯狂的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_frenzyFade = "疯狂效果从哈霍兰公主身上消失。",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_frenzyDuration = "狂乱！",
     bar_frenzyCd = "狂乱冷却",
-    msg_frenzy = "狂乱 - 安抚射击！",
+    msg_frenzy = "狂乱 - 宁神射击！",
 
-    trigger_noxiousPoison = "afflicted by Noxious Poison",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_noxiousPoisonYou = "You are afflicted by Noxious Poison.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_noxiousPoisonYouFade = "Noxious Poison fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+    trigger_noxiousPoison = "受到了致命剧毒效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_noxiousPoisonYou = "你受到了致命剧毒效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_noxiousPoisonYouFade = "致命剧毒效果从你身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_noxiousPoisonDuration = "沉默效果",
     bar_noxiousPoisonCd = "剧毒冷却",
     
-    trigger_berserk = "Princess Huhuran gains Berserk.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    msg_berserk = "狂暴！吸收毒素！",
+    trigger_berserk = "哈霍兰公主获得了狂暴的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_berserk = "狂暴！开管家铃！召唤各种小弟！",
     
-    trigger_enrage = "Princess Huhuran gains Enrage.",--5min timer, string to be confirmed
+    trigger_enrage = "哈霍兰公主获得了狂怒的效果。",--5min timer, string to be confirmed
     bar_enrage = "狂怒",
     msg_enrage1min = "60秒内狂怒",
     msg_enrage5sec = "5秒内狂怒",

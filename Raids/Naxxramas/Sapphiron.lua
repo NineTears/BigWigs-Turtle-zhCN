@@ -79,8 +79,8 @@ L:RegisterTranslations("enUS", function() return {
     msg_enrage10 = "距离激怒还有10秒！",
 	
 	
-	trigger_blizzardYou = "You are afflicted by Chill.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_blizzardYouFade = "Chill fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_blizzardYou = "你受到了寒冷效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_blizzardYouFade = "寒冷效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
 	
 	trigger_tailSweepYou = "Sapphiron's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_tailSweep = "尾部横扫在首领后方30码内造成伤害。",
@@ -139,40 +139,40 @@ L:RegisterTranslations("zhCN", function() return {
     parry_desc = "招架出现时进行警告",
 	
 	
-	trigger_frostBreath = "begins to cast Frost Breath.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_frostBreath = "冰霜吐息爆炸！",
-    msg_frostBreath = "即将遭受冰霜炸弹 - 躲避！",
+	trigger_frostBreath = "萨菲隆开始施放冰霜吐息。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    bar_frostBreath = "核弹爆炸！",
+    msg_frostBreath = "即将遭受冰霜核弹 - 躲避！",
 	
-	trigger_lifeDrain = "afflicted by Life Drain", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_lifeDrain = "受到了生命吸取效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
 	trigger_lifeDrainResist = "Life Drain was resisted by", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     msg_lifeDrain = "生命吸取，快驱散！",
     bar_lifeDrain = "生命吸取",
 	
-	trigger_iceboltYou = "You are afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_iceboltOther = "(.+) is afflicted by Icebolt.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_iceboltYou = "你受到了寒冰箭效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_iceboltOther = "(.+)受到了寒冰箭效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     msg_iceBlock = "冰冻术在 ",
 	
 		--unused
-	trigger_iceboltFade = "Icebolt fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_iceboltFade = "寒冰箭效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
 	
-	trigger_iceboltHits = "Icebolt hits", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_iceboltHits = "萨菲隆的寒冰箭击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     --bar_iceBlock1 = "冰块 1",
     bar_iceBlock2 = "冰块 2",
     bar_iceBlock3 = "冰块 3",
     bar_iceBlock4 = "冰块 4",
     bar_iceBlock5 = "冰块 5",
 	
-	trigger_enrage = "Sapphiron gains Enrage", --to be confirmed
-    bar_enrage = "激怒",
-    msg_enrage60 = "距离激怒还有60秒！",
-    msg_enrage10 = "距离激怒还有10秒！",
+	trigger_enrage = "萨菲隆获得了狂暴的效果。", --to be confirmed
+    bar_enrage = "狂暴",
+    msg_enrage60 = "距离狂暴还有60秒！",
+    msg_enrage10 = "距离狂暴还有10秒！",
 	
 	
-	trigger_blizzardYou = "You are afflicted by Chill.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_blizzardYouFade = "Chill fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_blizzardYou = "你受到了寒冷效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_blizzardYouFade = "寒冷效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
 	
-	trigger_tailSweepYou = "Sapphiron's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    msg_tailSweep = "尾部横扫在首领后方30码内造成伤害。",
+	trigger_tailSweepYou = "萨菲隆的龙尾扫击击中你", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_tailSweep = "离开尾部的30码区域！",
 	
     bar_timeToAirPhase = "下一空中阶段 CD",
     --msg_airPhase = "空中阶段 - 分散！",
@@ -182,7 +182,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
     msg_lowHp = "萨菲隆血量低于10% - 不再有空中阶段！",
 	
-	trigger_parryYou = "You attack. Sapphiron parries.", --CHAT_MSG_COMBAT_SELF_MISSES
+	trigger_parryYou = "你发起了攻击。萨菲隆招架住了。", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "你的攻击被萨菲隆招架了 - 别再打坦克了，笨蛋！",
 } end )
 

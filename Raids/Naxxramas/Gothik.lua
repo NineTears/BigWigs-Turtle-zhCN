@@ -78,8 +78,8 @@ L:RegisterTranslations("zhCN", function() return {
     adddeath_desc = "小怪死亡时进行警告",
 
 
-    trigger_engage = "Brazenly you have disregarded powers beyond your understanding.",
-    trigger_bossDead = "I... am... undone.",
+    trigger_engage = "你公然无视超出你理解范围的力量",
+    trigger_bossDead = "完蛋了！",
     
     name_trainee = "无情的训练师",
     name_traineeSpectral = "鬼灵训练师",
@@ -98,7 +98,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_riderSoon = "3秒后出现4个骑兵",
     msg_riderDead = "骑兵已死！",
     
-    trigger_inRoom = "I have waited long enough! Now, you face the harvester of souls!",
+    trigger_inRoom = "我已经等够久了",
     bar_inRoom = "进入房间",
     msg_inRoom = "收割者戈提克传送到战场中！",
     msg_inRoom10 = "10秒后戈提克即将到来",
@@ -164,7 +164,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("Deathknight Cavalier", "Naxxramas") then self.core:DisableModule("Deathknight Cavalier", "Naxxramas") end
+	if self.core:IsModuleActive("死亡骑士队长", "Naxxramas") then self.core:DisableModule("死亡骑士队长", "Naxxramas") end
 	
 	numTrainees = 1
 	numDeathknights = 1

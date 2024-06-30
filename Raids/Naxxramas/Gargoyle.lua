@@ -1,8 +1,10 @@
 
 local module, L = BigWigs:ModuleDeclaration("Gargoyle", "Naxxramas")
+local bbStoneskinGargoyle = AceLibrary("Babble-Boss-2.2")["Stoneskin Gargoyle"]
+local bbPlaguedGargoyle = AceLibrary("Babble-Boss-2.2")["Plagued Gargoyle"]
 
 module.revision = 20004
-module.enabletrigger = { "Stoneskin Gargoyle", "Plagued Gargoyle" }
+module.enabletrigger = { bbStoneskinGargoyle, bbPlaguedGargoyle }
 
 L:RegisterTranslations("enUS", function() return {
     cmd = "Stoneskin",
@@ -44,7 +46,7 @@ L:RegisterTranslations("zhCN", function() return {
     stoneskin_name = "石肤术警报",
     stoneskin_desc = "石肤术出现时进行警告",
 
-    stoneskintrigger = "%s emits a strange noise.",
+    stoneskintrigger = "%s发出奇怪的声音。",
     stoneskinwarn = "正在施放石肤术！",
 } end )
 

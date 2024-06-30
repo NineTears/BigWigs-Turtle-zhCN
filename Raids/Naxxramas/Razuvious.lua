@@ -69,13 +69,13 @@ L:RegisterTranslations("zhCN", function() return {
     bar_shout = "瓦解怒吼",
     msg_shout = "瓦解怒吼！",
 	
-	trigger_mcYou = "You gain Mind Control.", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
-	trigger_mcFadeYou = "Mind Control fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_mcYou = "你获得了精神控制的效果。", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+	trigger_mcFadeYou = "精神控制效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
     mc_bar = " 精神控制",
     mcLocked_bar = "无法精神控制 ",
 	
-	trigger_unbalance = "afflicted by Unbalancing Strike.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_unbalance2 = "Instructor Razuvious's Unbalancing Strike", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_unbalance = "受到了重压打击效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_unbalance2 = "教官拉苏维奥斯的重压打击", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_unbalance = "重压打击",
 	
 	trigger_shieldWall = "死亡骑士实习者获得了盾墙的效果。", --CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS

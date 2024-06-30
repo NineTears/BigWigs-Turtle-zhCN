@@ -49,7 +49,7 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_mcYou = "You are afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE (unconfirmed)
     trigger_mcOther = "(.+) is afflicted by True Fulfillment.",--CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     trigger_mcFade = "True Fulfillment fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-    msg_mc = " 被精神控制",
+    msg_mc = " 被精神控制，快羊他！",
     bar_mc = " 精神控制",
     
     trigger_kill = "You only delay... the inevetable.",--CHAT_MSG_MONSTER_YELL
@@ -58,7 +58,7 @@ L:RegisterTranslations("zhCN", function() return {
     kill_trigger = "You only delay",
 
     ["You have slain %s!"] = "你已经击败了%s！",
-    you = "you",
+    you = "你",
     clickme = " >点击我！<",
 } end )
 
@@ -95,7 +95,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("Anubisath Sentinel", "Ahn'Qiraj") then self.core:DisableModule("Anubisath Sentinel", "Ahn'Qiraj") end
+	if self.core:IsModuleActive("阿努比萨斯哨兵", "Ahn'Qiraj") then self.core:DisableModule("阿努比萨斯哨兵", "Ahn'Qiraj") end
 	
 	self:ScheduleRepeatingEvent("CheckTrueSkeram", self.CheckTrueSkeram, 0.5, self)
 end

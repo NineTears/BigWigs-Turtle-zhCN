@@ -77,23 +77,23 @@ L:RegisterTranslations("zhCN", function() return {
     erruption_name = "爆发警报",
     erruption_desc = "爆发出现时进行警告",
 
-    trigger_engage1 = "You are mine now!",--CHAT_MSG_MONSTER_YELL
-    trigger_engage2 = "You...are next!",--CHAT_MSG_MONSTER_YELL
-    trigger_engage3 = "I see you!",--CHAT_MSG_MONSTER_YELL
+    trigger_engage1 = "你现在是我的了！",--CHAT_MSG_MONSTER_YELL
+    trigger_engage2 = "你是下一个！",--CHAT_MSG_MONSTER_YELL
+    trigger_engage3 = "我看见你！",--CHAT_MSG_MONSTER_YELL
     
     trigger_die = "takes his last breath.",--to be confirmed
     
-    trigger_disease = "afflicted by Decrepit Fever.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_disease = "受到了衰弱瘟疫效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     bar_disease = "衰弱瘟疫冷却",
     msg_disease = "衰弱瘟疫",
     
-    trigger_manaBurn = "Heigan the Unclean's Mana Burn",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_manaBurn = "肮脏者海根的法力燃烧",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_manaBurn = "法力燃烧冷却",
     
-    trigger_manaBurnYou = "Heigan the Unclean's Mana Burn hits you for",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_manaBurnYou = "肮脏者海根的法力燃烧击中你",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_manaBurnYou = "法力燃烧命中你！",
 
-    trigger_danceStart = "The end is upon you.",--CHAT_MSG_MONSTER_YELL
+    trigger_danceStart = "末日就在你身上。",--CHAT_MSG_MONSTER_YELL
     msg_danceStart = "传送！",
     bar_dancing = "跳舞结束",
     bar_dancingSoon = "即将跳舞",

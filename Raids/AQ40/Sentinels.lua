@@ -106,30 +106,30 @@ L:RegisterTranslations("zhCN", function() return {
     bar_thunderClap = " 有雷霆一击",
     buffIcon_thunderClap = "Interface\\Icons\\Ability_ThunderClap",
 
-    trigger_fireArcaneReflect1 = "Your Moonfire is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_fireArcaneReflect2 = "Your Scorch is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_fireArcaneReflect3 = "Your Flame Shock is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_fireArcaneReflect4 = "Your Fireball is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_fireArcaneReflect5 = "Your Flame Lash is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_fireArcaneReflect6 = "Your Detect Magic is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_fireArcaneReflectOther = "(.+)'s Detect Magic is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE
+    trigger_fireArcaneReflect1 = "你的月火术被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_fireArcaneReflect2 = "你的灼烧被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_fireArcaneReflect3 = "你的烈焰震击被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_fireArcaneReflect4 = "你的火球术被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_fireArcaneReflect5 = "你的烈焰鞭笞被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_fireArcaneReflect6 = "你的侦测魔法被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_fireArcaneReflectOther = "(.+)的侦测魔法被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE
     bar_fireArcaneReflect = " 反射火焰 & 奥术",
         --not used for TurtleWoW
     --buffIcon_fireArcaneReflect = "nil",
     
-    trigger_shadowFrostReflect1 = "Your Shadow Word: Pain is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_shadowFrostReflect2 = "Your Corruption is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_shadowFrostReflect3 = "Your Frostbolt is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_shadowFrostReflect4 = "Your Frost Shock is reflected back by Anubisath Defender.",--CHAT_MSG_SPELL_SELF_DAMAGE
-    trigger_shadowFrostReflectOther = "(.+)'s Corruption is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE
+    trigger_shadowFrostReflect1 = "你的暗言术：痛被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_shadowFrostReflect2 = "你的腐蚀术被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_shadowFrostReflect3 = "你的寒冰箭被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_shadowFrostReflect4 = "你的冰霜震击被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_shadowFrostReflectOther = "(.+)的腐蚀术被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE
     bar_shadowFrostReflect = " 反射暗影 & 冰霜",
         --not used for TurtleWoW
     --buffIcon_shadowFrostReflect = "Interface\\Icons\\Spell_Arcane_Blink",
     
-    trigger_selfReflect = "Your (.*) is reflected back by Anubisath Sentinel.",--CHAT_MSG_SPELL_SELF_DAMAGE
+    trigger_selfReflect = "你的(.*)被阿努比萨斯哨兵反弹回来。",--CHAT_MSG_SPELL_SELF_DAMAGE
     msg_selfReflect = "停止自残！",
     
-    ["You have slain %s!"] = "你已经击败了%s！",
+    ["You have slain %s!"] = "你杀死了%s！",
 } end )
 
 local timer = {

@@ -4,7 +4,7 @@ local bbvenomstalker = AceLibrary("Babble-Boss-2.2")["Venom Stalker"]
 local bbnecrostalker = AceLibrary("Babble-Boss-2.2")["Necro Stalker"]
 
 module.revision = 20048
-module.enabletrigger = {"Venom Stalker", "Necro Stalker"}
+module.enabletrigger = { bbvenomstalker, bbnecrostalker }
 module.toggleoptions = {"charge"}
 module.trashMod = true
 
@@ -30,9 +30,9 @@ L:RegisterTranslations("zhCN", function() return {
     charge_name = "毒性充能",
     charge_desc = "显示毒性充能的冷却时间和图标。",
     
-    charge_trigger = "is afflicted by Poison Charge",
-    chargeself_trigger = "You are afflicted by Poison Charge",
-    chargegone_self = "Poison Charge fades from you",
+    charge_trigger = "受到了毒性充能效果的影响。",
+    chargeself_trigger = "你受到了毒性充能效果的影响。",
+    chargegone_self = "毒性充能效果从你身上消失",
     charge_bar = "毒性充能 CD",
 } end )
 

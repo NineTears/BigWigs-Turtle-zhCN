@@ -80,28 +80,28 @@ L:RegisterTranslations("zhCN", function() return {
     cripple_desc = "残废术生效时进行警告",
     
     wave_cmd = "wave",
-    wave_name = "波浪警报",
-    wave_desc = "波浪来袭时进行警告",
+    wave_name = "小怪警报",
+    wave_desc = "小怪来袭时进行警告",
 
 	trigger_start1 = "Die, trespasser!",
 	trigger_start2 = "Glory to the master!",
 	trigger_start3 = "Your life is forfeit!",
 	
-	trigger_curse1 = "afflicted by Curse of the Plaguebringer",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_curse2 = "Curse of the Plaguebringer was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_curse1 = "受到了瘟疫使者的诅咒效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_curse2 = "瘟疫使者的诅咒效果从你身上消失了。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_curse = "诅咒！",
     bar_curse = "诅咒冷却",
 	
-	trigger_cripple1 = "is afflicted by Cripple",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_cripple2 = "Cripple was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_cripple1 = "受到了残废术效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_cripple2 = "残废术效果从你身上消失了。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_cripple = "残废术！",
     bar_cripple = "残废术冷却",
 	
-	trigger_blink = "Noth the Plaguebringer gains Blink.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_blink = "瘟疫者诺斯获得了闪现术的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_blink = "闪现！",
     bar_blink = "闪现冷却",
 	
-	trigger_add = "Rise, my soldiers! Rise and fight once more!",
+	trigger_add = "起来吧，我的士兵们！奋起再战！",
     bar_roomWave = "3个被感染的战士",
 	
     bar_wave1 = "第1波",

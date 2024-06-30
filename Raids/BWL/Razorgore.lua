@@ -8,7 +8,7 @@ local bbrazorgoretheuntamed = AceLibrary("Babble-Boss-2.2")["Razorgore the Untam
 local bzblackwinglair = AceLibrary("Babble-Zone-2.2")["Blackwing Lair"]
 
 module.revision = 30085
-module.enabletrigger = {"Razorgore the Untamed", "Grethok the Controller"}
+module.enabletrigger = {bbrazorgoretheuntamed, bbgrethokthecontroller}
 module.toggleoptions = {"polymorph", "dominatemind", "icon", "slow", -1, "phase", "eggs", "orb", "mindexhaustion", -1, "volley", "conflagration", "warstomp", "bosskill"}
 
 L:RegisterTranslations("enUS", function() return {

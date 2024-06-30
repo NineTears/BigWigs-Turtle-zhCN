@@ -174,54 +174,54 @@ L:RegisterTranslations("zhCN", function() return {
     doom_desc = "必然厄运出现时进行警告",
 
     curse_cmd = "curse",
-    curse_name = "移除诅咒警报",
-    curse_desc = "洛欧塞布身上的诅咒被移除时进行警告",
+    curse_name = "厄运爆炸警报",
+    curse_desc = "必然厄运爆炸时进行警告",
 
 	spore_cmd = "spore",
     spore_name = "孢子警报",
     spore_desc = "孢子生成时进行警告",
 
 	debuff_cmd = "debuff",
-    debuff_name = "孢子减益效果",
-    debuff_desc = "当你的孢子减益效果即将消失时显示图标",
+    debuff_name = "孢子效果",
+    debuff_desc = "当你的孢子效果即将消失时显示图标",
 
 	groups_cmd = "groups",
     groups_name = "孢子分组",
     groups_desc = "关闭以在孢子计时器上显示分组编号（7组战术）",
 	
-	corruptedmind_cmd = "corruptedmind",
+	corruptedmind_cmd = "堕落心灵开始",
     corruptedmind_name = "个人堕落心灵计时器",
     corruptedmind_desc = "你的堕落心灵减益效果的计时器",
 	
 	
     doombar = "必然厄运 %d",
-    doomwarn = "必然厄运 %d！距下一次 %d 秒！",
-    doomwarn5sec = "5秒后必然厄运 %d！",
-    doomtrigger = "受到了必然厄运的影响。",
+    doomwarn = "必然厄运%d！距下一次%d秒！",
+    doomwarn5sec = "5秒后必然厄运%d！",
+    doomtrigger = "受到了必然的厄运效果的影响。",
 
-	cursewarn = "Curses removed! RENEW CURSES",
-    cursebar = "移除诅咒",
-    cursetrigger  = "Loatheb's Curse (.+) is removed.",
+	cursewarn = "下一次喷毒！",
+    cursebar = "毒性光环",
+    cursetrigger  = "受到了毒性光环效果的影响。",
 
-	doomtimerbar = "Doom every 15sec",
+	doomtimerbar = "每15秒一次厄运（狂暴）",
     doomtimerwarn = "厄运计时器在 %s 秒后改变！",
     doomtimerwarnnow = "必然厄运现在每15秒发生一次！",
 
-    cursetimerbar = "移除诅咒计时器",
-    cursetimerwarn = "诅咒被移除，下一次在 %s 秒后！",
+    cursetimerbar = "必然厄运计时器",
+    cursetimerwarn = "厄运爆炸，下一次在 %s 秒后！",
 
     startwarn = "洛欧塞布已激活，2分钟后将出现必然厄运！",
 	
-	trigger_corruptedMind = "You are afflicted by Corrupted Mind.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    bar_corruptedMind = "你的堕落心灵",
-	trigger_corruptedMindFade = "Corrupted Mind fades from you.",--CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_corruptedMind = "你受到了堕落心灵效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    bar_corruptedMind = "你的堕落心灵倒计时",
+	trigger_corruptedMindFade = "堕落心灵效果从你身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF
 	
 	--sporewarn = "Spore spawned",
     sporebar = "下一个孢子 %d",
     sporebar_group = "下一孢子 - 分组 %d",
 
-    you = "you",
-    are = "are",
+    you = "你",
+    are = "受到了",
 	fungalBloom = "蘑菇花",
 
 	--LoathebTactical
@@ -351,7 +351,7 @@ function module:OnEngage()
 		self:DelayedMessage(timer.softEnrage - 10, string.format(L["doomtimerwarn"], 10), "Urgent")
 		self:DelayedMessage(timer.softEnrage - 5, string.format(L["doomtimerwarn"], 5), "Important")
 		self:DelayedMessage(timer.softEnrage, L["doomtimerwarnnow"], "Important")
-		self:Bar("Corrupted Mind", 5, "spell_shadow_curseoftounges", true, "Black")
+		self:Bar("堕落心灵开始", 5, "spell_shadow_curseoftounges", true, "Black")
 
 		-- soft enrage after 5min: Doom every 15s instead of every 30s
 		--self:ScheduleEvent("bwloathebdoomtimerreduce", function() module.doomTime = 15 end, 300)

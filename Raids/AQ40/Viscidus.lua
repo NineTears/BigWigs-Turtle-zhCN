@@ -98,29 +98,29 @@ L:RegisterTranslations("zhCN", function() return {
     glob_desc = "计数水珠的死亡次数",
 
 
-    trigger_volley = "afflicted by Poison Bolt Volley.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_volley = "受到了毒箭之雨效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_volley = "毒箭齐射",
     
-    trigger_toxin = "You are afflicted by Toxin.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_toxin = "你受到了剧毒效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_toxin = "远离毒云！",
-    trigger_toxinFade = "Toxin fades from you.",--CHAT_MSG_SPELL_AURA_GONE_OTHER",
+    trigger_toxinFade = "剧毒效果从你身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_OTHER",
 
-    trigger_frostDmg = "Frost damage",--CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE
-    trigger_chilledDmg = "gains Chilled",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    trigger_wintersChill = "gains Winter's Chill",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_frostDmg = "冰霜伤害",--CHAT_MSG_SPELL_SELF_DAMAGE // CHAT_MSG_SPELL_PARTY_DAMAGE // CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE
+    trigger_chilledDmg = "获得冰冻",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_wintersChill = "获得深冬之寒",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_frostDmg = "剩余冰霜击中次数",
     
-    trigger_pokeYou = "hit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
-    trigger_pokeOther = "hits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
-    trigger_pokeCritYou = "crit Viscidus for",--CHAT_MSG_COMBAT_SELF_HITS
-    trigger_pokeCritOther = "crits Viscidus for",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
+    trigger_pokeYou = "击中维希度斯",--CHAT_MSG_COMBAT_SELF_HITS
+    trigger_pokeOther = "击中维希度斯",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
+    trigger_pokeCritYou = "击中维希度斯",--CHAT_MSG_COMBAT_SELF_HITS
+    trigger_pokeCritOther = "击中维希度斯",--CHAT_MSG_COMBAT_PARTY_HITS // CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS
     bar_poke = "剩余戳击次数",
     
-    trigger_slow = " begins to slow!",--CHAT_MSG_RAID_BOSS_EMOTE
-    trigger_freezing = " is freezing up!",--CHAT_MSG_RAID_BOSS_EMOTE
-    trigger_frozen = " is frozen solid!",--CHAT_MSG_RAID_BOSS_EMOTE
-    trigger_crack = " begins to crack!",--CHAT_MSG_RAID_BOSS_EMOTE
-    trigger_shatter = " looks ready to shatter!",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_slow = "开始变慢！",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_freezing = "冻僵了！",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_frozen = "冻成固体了！",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_crack = "开始破裂！",--CHAT_MSG_RAID_BOSS_EMOTE
+    trigger_shatter = "看起来就要崩溃了！",--CHAT_MSG_RAID_BOSS_EMOTE
     
     msg_slow = "冻结计数：100 / 200",
     msg_freezing = "冻结计数：150 / 200",

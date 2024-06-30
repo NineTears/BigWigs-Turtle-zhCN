@@ -94,19 +94,19 @@ L:RegisterTranslations("zhCN", function() return {
     targeticon_desc = "在奥罗的目标头上标记骷髅团队标志",
 	
 	
-    trigger_engage = "Ouro begins to cast Birth.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    trigger_engage = "奥罗开始施放出生。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     
-    trigger_sweep = "Ouro begins to cast Sweep.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_sweep = "奥罗开始施放横扫。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_sweepCd = "横扫 CD",
     bar_sweepCast = "横扫！",
     msg_sweep = "正在施放横扫！",
     
-    trigger_sandBlast = "Ouro begins to perform Sand Blast.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_sandBlast = "奥罗开始施展沙尘爆裂。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_sandBlastCd = "沙尘爆裂 CD",
-    bar_sandBlastCast = "沙尘爆裂！",
+    bar_sandBlastCast = "沙尘爆裂！快跑！",
     msg_sandBlast = "正在施放沙尘爆裂！",
 
-    trigger_emerge = "Ground Rupture", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_emerge = "大地破裂", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_submergePossible = "可能下潜",
     msg_emerge = "奥罗已浮现！",
     
@@ -115,13 +115,13 @@ L:RegisterTranslations("zhCN", function() return {
     msg_submerge = "奥罗已下潜！",
     msg_collapse = "10秒后奥罗浮现 - 向中部集合！",
     
-    trigger_berserk = "Ouro gains Berserk.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_berserk = "奥罗获得了狂暴的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_berserk = "奥罗进入狂暴状态 - 不再下潜",
     msg_berserkSoon = "即将狂暴 - 准备！",
     
     bar_berserkPopcorn = "新的爆裂物出现", --10sec after enrage, should be 1 per 10sec afterwards
 
-    trigger_popcornHitsYou = "Dirt Mound's Quake hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_popcornHitsYou = "土堆的地震击中你", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 } end )
 
 local timer = {

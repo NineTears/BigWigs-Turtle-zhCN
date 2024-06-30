@@ -42,10 +42,10 @@ L:RegisterTranslations("zhCN", function() return {
     autotarget_name = "自动目标闪电图腾",
     autotarget_desc = "召唤图腾时自动选择为目标",
 
-    trigger_totemUp = "Living Monstrosity casts Lightning Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-    msg_totemUp = "闪电图腾！",
+    trigger_totemUp = "畸形妖开始施放闪电图腾。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_totemUp = "转火闪电图腾！",
 
-    trigger_totemDead = "Lightning Totem dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+    trigger_totemDead = "闪电图腾死亡了。",--CHAT_MSG_COMBAT_HOSTILE_DEATH
     msg_totemDead = "图腾死了 =)",
 } end )
 

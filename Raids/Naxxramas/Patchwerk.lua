@@ -54,10 +54,10 @@ L:RegisterTranslations("zhCN", function() return {
     enrage_name = "激怒警报",
     enrage_desc = "激怒时进行警告",
 	
-	trigger_start1 = "Patchwerk want to play!",
-	trigger_start2 = "Kel'Thuzad make Patchwerk his Avatar of War!",
+	trigger_start1 = "帕奇维克想玩！",
+	trigger_start2 = "克尔苏加德让帕奇维克成为他的战争化身！",
 	
-	trigger_enrage = "%s becomes enraged!",--CHAT_MSG_MONSTER_EMOTE
+	trigger_enrage = "帕奇维克陷入狂暴状态！",--CHAT_MSG_MONSTER_EMOTE
 	
     bar_enrage = "激怒",
     msg_enrage60 = "60秒后激怒",

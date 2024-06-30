@@ -75,32 +75,32 @@ L:RegisterTranslations("zhCN", function() return {
     icon_desc = "在被注射的人员身上放置一个骷髅图标。(需要是助理或更高权限)",
 
     cloud_cmd = "cloud",
-    cloud_name = "毒云术",
-    cloud_desc = "毒云术出现时进行警告",
+    cloud_name = "毒云",
+    cloud_desc = "毒云出现时进行警告",
 		
 		
-	trigger_enrage = "%s becomes enraged!",--to be confirmed
+	trigger_enrage = "葛罗巴斯陷入狂暴状态！",--to be confirmed
     bar_enrage = "激怒",
     msg_enrage60 = "1分钟后激怒",
     msg_enrage10 = "10秒后激怒",
     msg_enrage = "激怒！",
 	
-	trigger_slimeSpray = "Slime Spray",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    bar_slimeSprayCD = "毒液喷射冷却",
+	trigger_slimeSpray = "软泥喷射",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_slimeSprayCD = "软泥喷射冷却",
 	
-	trigger_injectYou = "You are afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_injectOther = "(.+) is afflicted by Mutating Injection.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_injectFade = "Mutating Injection fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_injectYou = "你受到了变异注射效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_injectOther = "(.+)受到了变异注射效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_injectFade = "变异注射效果从(.+)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_injected = " 注射",
     msg_inject = " 注射",
 	
-	trigger_cloudCast = "Grobbulus casts Poison Cloud.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-    bar_cloudCD = "毒云术冷却",
-    msg_cloudCast = "毒云术 -- 移动格罗布鲁斯！",
-	trigger_cloudHitsYou = "Grobbulus Cloud's Poison hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_cloudCast = "葛罗巴斯施放了毒性云雾。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    bar_cloudCD = "毒云冷却",
+    msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
+	trigger_cloudHitsYou = "瘟疫毒云的中毒击中你",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
     msg_lowHp = "格罗布鲁斯生命值低于30% - 更频繁注射",
-	you = "you",
+	you = "你",
 } end )
 
 local timer = {
@@ -272,7 +272,7 @@ function module:Inject(rest)
 	end
 	
 	if rest == UnitName("Player") then
-		SendChatMessage("注射于 "..UnitName("Player").."!","SAY")
+		SendChatMessage(""..UnitName("Player").." 中了变异注射!","SAY")
 		self:Sound("Beware")
 		self:WarningSign(icon.inject, 3)
 		amInjected = true

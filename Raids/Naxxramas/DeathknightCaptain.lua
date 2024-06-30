@@ -39,14 +39,14 @@ L:RegisterTranslations("zhCN", function() return {
     whirlwind_desc = "旋风斩出现时进行警告",
 	
 	
-	trigger_whirlwind = "Deathknight Captain gains Whirlwind.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_whirlwindFade = "Whirlwind fades from Deathknight Captain.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_whirlwind = "死亡骑士队长获得了旋风斩的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_whirlwindFade = "旋风斩效果从", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_whirlwind1 = "旋风斩 1",
     bar_whirlwind2 = "旋风斩 2",
     bar_whirlwindCd1 = "旋风斩 CD 1",
     bar_whirlwindCd2 = "旋风斩 CD 2",
 
-    ["You have slain %s!"] = "你已经击败了%s！",
+    ["You have slain %s!"] = "你杀死了%s！",
 } end )
 
 local timer = {

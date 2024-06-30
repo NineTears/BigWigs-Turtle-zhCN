@@ -122,25 +122,29 @@ L:RegisterTranslations("zhCN", function() return {
     poison_desc = "对萨满进行毒箭之雨的警告",
     
 	trigger_start1 = "跪下求饶吧，懦夫！",
-	trigger_start2 = "以主人之名，杀了他们！",
+	trigger_start2 = "以主人之名杀掉他们！",
 	trigger_start3 = "休想从我面前逃掉！",
 	trigger_start4 = "逃啊！有本事就逃啊！",
 
+<<<<<<< Updated upstream
     trigger_rain = "你受到了火焰之雨效果的影响",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
+=======
+    trigger_rain = "你受到了火焰之雨效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --string find cause could be a partial absorb
+>>>>>>> Stashed changes
     
-    trigger_poison = "is afflicted by Poison Bolt Volley",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_poison = "受到了毒箭之雨效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     
-    trigger_raidSilence = "黑女巫法琳娜受到了黑女巫的拥抱",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_raidSilence = "受到了沉默效果的影响。",--CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_raidSilence = "团队成员沉默",
     
-    trigger_mcGain = "(.+) gains Mind Control.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
-    trigger_mcGainYou = "You gain Mind Control.",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    trigger_mcGain = "(.+)受到了精神控制效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS // CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS
+    trigger_mcGainYou = "你获得了精神控制的效果。",--CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
     --trigger_mcGain = "Naxxramas Worshipper is afflicted by Mind Control",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    mc_bar = " 心灵控制",
+    mc_bar = "精神控制",
     
-    trigger_worshipperDies = "Naxxramas Worshipper dies.",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
+    trigger_worshipperDies = "纳克萨玛斯信奉者死亡了。",--CHAT_MSG_COMBAT_FRIENDLY_DEATH
 
-    trigger_mcFade = "Mind Control fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+    trigger_mcFade = "精神控制效果从(.+)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     --trigger_mcFade = "Naxxramas Worshipper begins to perform Widow's Embrace",--CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
     --trigger_mcSuccess = "Widow's Embrace fades from Naxxramas Worshipper.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     --trigger_embrace = "Grand Widow Faerlina gains Widow's Embrace.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
@@ -152,7 +156,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_enrageGain = "激怒！",
     bar_enrageGain = "Boss激怒！",
     
-    trigger_enrageFade = "Enrage fades from Grand Widow Faerlina.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_enrageFade = "激怒效果从黑女巫法琳娜身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     msg_silencedEnrageFull = "激怒被沉默！下一个激怒在61秒后",
     
     msg_enrageSoon = "激怒将在10秒后到来",

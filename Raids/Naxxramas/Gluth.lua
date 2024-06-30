@@ -72,12 +72,12 @@ L:RegisterTranslations("zhCN", function() return {
     fear_desc = "恐惧出现时进行警告",
 
     frenzy_cmd = "frenzy",
-    frenzy_name = "狂乱警报",
-    frenzy_desc = "狂乱出现时进行警告",
+    frenzy_name = "疯狂警报",
+    frenzy_desc = "疯狂出现时进行警告",
 
     enrage_cmd = "enrage",
-    enrage_name = "激怒计时器",
-    enrage_desc = "激怒出现时进行警告",
+    enrage_name = "狂暴计时器",
+    enrage_desc = "狂暴出现时进行警告",
 
     decimate_cmd = "decimate",
     decimate_name = "屠杀警报",
@@ -92,31 +92,31 @@ L:RegisterTranslations("zhCN", function() return {
     wound_desc = "重伤出现时进行警告",
 	
 	
-	trigger_frenzyGain = "Gluth gains Frenzy.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_frenzyFade = "Frenzy fades from Gluth.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
-    msg_frenzy = "狂乱 - 使用宁神射击！",
-    bar_frenzyGain = "狂乱 - 宁神射击！",
-    bar_frenzyCD = "狂乱 CD",
+	trigger_frenzyGain = "古鲁斯获得了疯狂的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_frenzyFade = "疯狂效果从古鲁斯身上消失。",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    msg_frenzy = "疯狂 - 使用宁神射击！",
+    bar_frenzyGain = "疯狂 - 宁神射击！",
+    bar_frenzyCD = "疯狂 CD",
 	
-	trigger_enrage = "Gluth gains Berserk.",--to be confirmed
-    msg_enrage60 = "60秒后激怒",
-    msg_enrage10 = "10秒后激怒",
-    msg_enrage = "激怒！",
-    bar_enrage = "激怒",
+	trigger_enrage = "古鲁斯获得了狂暴的效果。",--to be confirmed
+    msg_enrage60 = "60秒后狂暴",
+    msg_enrage10 = "10秒后狂暴",
+    msg_enrage = "狂暴！",
+    bar_enrage = "狂暴",
 		
-	trigger_decimate = "Decimate hits",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    msg_decimate = "屠杀！",
-    msg_decimate5 = "5秒后屠杀",
-    bar_decimate = "屠杀",
+	trigger_decimate = "残杀击中",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    msg_decimate = "残杀！",
+    msg_decimate5 = "5秒后残杀",
+    bar_decimate = "残杀",
 	
     bar_zombies = "下一个僵尸 - %d",
 		
-	trigger_fear = "Terrifying Roar",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_fear = "恐惧怒吼效果的影响",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_fearCD = "恐惧 CD",
     msg_fear = "恐惧！",
 	
-	trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_woundYou = "你受到了重伤效果的影响%（(.+)%）。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_woundOther = "(.+)受到了重伤效果的影响%（(.+)%）。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_wound = " 重伤",
 } end )
 

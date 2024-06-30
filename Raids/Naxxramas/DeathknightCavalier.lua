@@ -4,7 +4,7 @@ local bbdeathknightcavalier = AceLibrary("Babble-Boss-2.2")["Deathknight Cavalie
 local bbdeathlord = AceLibrary("Babble-Boss-2.2")["Death Lord"]
 
 module.revision = 30067
-module.enabletrigger = {"Deathknight Cavalier", "Death Lord"}
+module.enabletrigger = {bbdeathknightcavalier, bbdeathlord}
 module.toggleoptions = {"deathcoil"}
 module.trashMod = true
 module.defaultDB = {
@@ -38,13 +38,13 @@ L:RegisterTranslations("zhCN", function() return {
     deathcoil_desc = "死亡缠绕出现时进行警告",
     
     
-    trigger_deathCoilYou = "You are afflicted by Death Coil.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_deathCoilOther = "(.+) is afflicted by Death Coil.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_deathCoilFade = "Death Coil fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_PARTY_OTHER // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_deathCoilYou = "你受到了死亡缠绕效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_deathCoilOther = "(.+)受到了死亡缠绕效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_deathCoilFade = "死亡缠绕效果从(.+)身上消失。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_PARTY_OTHER // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_deathCoil = " 死亡缠绕",
 
-    ["You have slain %s!"] = "你已经击败了%s！",
-    you = "you",
+    ["You have slain %s!"] = "你杀死了%s！",
+    you = "你",
 } end )
 
 module.defaultDB = {
