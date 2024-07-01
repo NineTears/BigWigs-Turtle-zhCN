@@ -340,7 +340,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_shackle = "束缚亡灵（最多3个）",
 	msg_shackle = "%s/3",
 
-	trigger_bloodTap = "寒冰皇冠卫士获得了", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_bloodTap = "寒冰皇冠卫士获得了鲜血分流的效果%（(.+)%）。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_bloodTapA = "血液分流 +",
 	bar_bloodTapB = "% 伤害",
 	clickme = " >点击我！<",

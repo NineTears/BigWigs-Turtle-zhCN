@@ -40,7 +40,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     trigger_deathCoilYou = "你受到了死亡缠绕效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_deathCoilOther = "(.+)受到了死亡缠绕效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_deathCoilFade = "死亡缠绕效果从(.+)身上消失。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_PARTY_OTHER // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_deathCoilFade = "死亡缠绕效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_PARTY_OTHER // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_deathCoil = " 死亡缠绕",
 
     ["You have slain %s!"] = "你杀死了%s！",

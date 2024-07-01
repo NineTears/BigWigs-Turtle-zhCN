@@ -65,7 +65,7 @@ L:RegisterTranslations("zhCN", function() return {
     shieldwall_desc = "显示盾墙计时器",
 
 
-	trigger_shout = "发出胜利的呼喊。", --CHAT_MSG_RAID_BOSS_EMOTE
+	trigger_shout = "%s发出胜利的呼喊。", --CHAT_MSG_RAID_BOSS_EMOTE
     bar_shout = "瓦解怒吼",
     msg_shout = "瓦解怒吼！",
 	
