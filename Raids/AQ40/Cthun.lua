@@ -1,17 +1,17 @@
 
 local module, L = BigWigs:ModuleDeclaration("C'Thun", "Ahn'Qiraj")
 local bbqirajimindslayer = AceLibrary("Babble-Boss-2.2")["Qiraji Mindslayer"]
-
-module.revision = 30078
-local eyeofcthun = AceLibrary("Babble-Boss-2.2")["Eye of C'Thun"]
-local giantclawtentacle = AceLibrary("Babble-Boss-2.2")["Giant Claw Tentacle"]
-local gianteyetentacle = AceLibrary("Babble-Boss-2.2")["Giant Eye Tentacle"]
-local fleshtentacle = AceLibrary("Babble-Boss-2.2")["Flesh Tentacle"]
-local eyetentacle = AceLibrary("Babble-Boss-2.2")["Eye Tentacle"]
-local cthun = AceLibrary("Babble-Boss-2.2")["C'Thun"]
+local bbeyeofcthun = AceLibrary("Babble-Boss-2.2")["Eye of C'Thun"]
+local bbgiantclawtentacle = AceLibrary("Babble-Boss-2.2")["Giant Claw Tentacle"]
+local bbgianteyetentacle = AceLibrary("Babble-Boss-2.2")["Giant Eye Tentacle"]
+local bbfleshtentacle = AceLibrary("Babble-Boss-2.2")["Flesh Tentacle"]
+local bbeyetentacle = AceLibrary("Babble-Boss-2.2")["Eye Tentacle"]
+local bbcthun = AceLibrary("Babble-Boss-2.2")["C'Thun"]
 local bzthescarabwall = AceLibrary("Babble-Zone-2.2")["The Scarab Wall"]
 local bzgatesofahnqiraj = AceLibrary("Babble-Zone-2.2")["Gates of Ahn'Qiraj"]
-module.enabletrigger = {eyeofcthun, cthun}
+
+module.revision = 30078
+module.enabletrigger = {bbeyeofcthun, bbcthun}
 module.toggleoptions = {
 	"cthuneyebeam",
 	"darkglare",
@@ -513,19 +513,19 @@ end
 function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	BigWigs:CheckForBossDeath(msg, self)
 
-	if (msg == string.format(UNITDIESOTHER, eyeofcthun)) then
+	if (msg == string.format(UNITDIESOTHER, bbeyeofcthun)) then
 		self:Sync(syncName.phase2)
 	
-	elseif (msg == string.format(UNITDIESOTHER, giantclawtentacle)) then
+	elseif (msg == string.format(UNITDIESOTHER, bbgiantclawtentacle)) then
 		self:Sync(syncName.window)
 	
-	elseif (msg == string.format(UNITDIESOTHER, gianteyetentacle)) then
+	elseif (msg == string.format(UNITDIESOTHER, bbgianteyetentacle)) then
 		self:Sync(syncName.window)
 	
-	elseif (msg == string.format(UNITDIESOTHER, fleshtentacle)) and not firstStomachTentacleDead then
+	elseif (msg == string.format(UNITDIESOTHER, bbfleshtentacle)) and not firstStomachTentacleDead then
 		self:Sync(syncName.firstStomachTentacleDead)
 		
-	elseif (msg == string.format(UNITDIESOTHER, eyetentacle)) then
+	elseif (msg == string.format(UNITDIESOTHER, bbeyetentacle)) then
 		smallEyeDead = smallEyeDead + 1
 		smallEyeDeadCounter = 8 - smallEyeDead
 		self:TriggerEvent("BigWigs_SetCounterBar", self, L["bar_smallEyesDead"], smallEyeDeadCounter)
@@ -549,7 +549,7 @@ end
 
 --[[
 function module:UNIT_HEALTH(msg)
-	if UnitName(msg) == fleshtentacle then
+	if UnitName(msg) == bbfleshtentacle then
 		local healthPct = UnitHealth(msg) * 100 / UnitHealthMax(msg)
 		
 		if secondTentacleLowWarn == true and healthPct >= 20 then
@@ -698,10 +698,10 @@ end
 	end
 	function module:CheckTarget()
 		local newtarget = nil
-		local enemy = eyeofcthun
+		local enemy = bbeyeofcthun
 
 		if phase == "phase2" then
-			enemy = gianteyetentacle
+			enemy = bbgianteyetentacle
 		end
 		if UnitName("Target") == enemy then
 			newtarget = UnitName("TargetTarget")
@@ -924,11 +924,11 @@ end
 
 function module:CheckTentacleHP()
 	local health
-	if UnitName("Target") == fleshtentacle and not UnitIsDeadOrGhost("Target") then
+	if UnitName("Target") == bbfleshtentacle and not UnitIsDeadOrGhost("Target") then
 		health = math.floor(UnitHealth("Target")/UnitHealthMax("Target")*100)
 	else
 		for i=1,GetNumRaidMembers() do
-			if UnitName("Raid"..i.."Target") == fleshtentacle and not UnitIsDeadOrGhost("Raid"..i.."Target") then
+			if UnitName("Raid"..i.."Target") == bbfleshtentacle and not UnitIsDeadOrGhost("Raid"..i.."Target") then
 				health = math.floor(UnitHealth("Raid"..i.."Target")/UnitHealthMax("Raid"..i.."Target")*100)
 				break
 			end
