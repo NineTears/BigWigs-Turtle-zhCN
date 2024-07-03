@@ -1017,7 +1017,7 @@ function module:ClassCall(rest)
 		self:Sound("Beware")
 	end
 	
-	if rest == BC["Paladin"] then
+	if rest == "Paladin" then
 		self:ThrottleSync(1, syncName.bopNef)
 		bopNefFadeCheck = nil
 		self:CancelScheduledEvent("Nefarian_BopNef_EnableFadeCheck")
