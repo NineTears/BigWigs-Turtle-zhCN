@@ -1,11 +1,11 @@
 
 local module, L = BigWigs:ModuleDeclaration("Nefarian", "Blackwing Lair")
 local BC = AceLibrary("Babble-Class-2.2")
-local victor = AceLibrary("Babble-Boss-2.2")["Lord Victor Nefarius"]
+local bbvictor = AceLibrary("Babble-Boss-2.2")["Lord Victor Nefarius"]
 local bbnefarian = AceLibrary("Babble-Boss-2.2")["Nefarian"]
 
 module.revision = 30085
-module.enabletrigger = {bbnefarian, victor}
+module.enabletrigger = {bbnefarian, bbvictor}
 module.toggleoptions = {
 	"mc",
 	"icon",
@@ -667,23 +667,23 @@ function module:CHAT_MSG_MONSTER_YELL(msg)
 		self:Sync(syncName.landingNow)
 	
 	elseif string.find(msg, L["trigger_classCall_Druid"]) then
-		self:Sync(syncName.classCall.." "..BC["Druid"])
+		self:Sync(syncName.classCall.." ".."Druid")
 	elseif string.find(msg, L["trigger_classCall_Hunter"]) then
-		self:Sync(syncName.classCall.." "..BC["Hunter"])
+		self:Sync(syncName.classCall.." ".."Hunter")
 	elseif string.find(msg, L["trigger_classCall_Mage"]) then
-		self:Sync(syncName.classCall.." "..BC["Mage"])
+		self:Sync(syncName.classCall.." ".."Mage")
 	elseif string.find(msg, L["trigger_classCall_Paladin"]) then
-		self:Sync(syncName.classCall.." "..BC["Paladin"])
+		self:Sync(syncName.classCall.." ".."Paladin")
 	elseif string.find(msg, L["trigger_classCall_Priest"]) then
-		self:Sync(syncName.classCall.." "..BC["Priest"])
+		self:Sync(syncName.classCall.." ".."Priest")
 	elseif string.find(msg, L["trigger_classCall_Rogue"]) then
-		self:Sync(syncName.classCall.." "..BC["Rogue"])
+		self:Sync(syncName.classCall.." ".."Rogue")
 	elseif string.find(msg, L["trigger_classCall_Shaman"]) then
-		self:Sync(syncName.classCall.." "..BC["Shaman"])
+		self:Sync(syncName.classCall.." ".."Shaman")
 	elseif string.find(msg, L["trigger_classCall_Warlock"]) then
-		self:Sync(syncName.classCall.." "..BC["Warlock"])
+		self:Sync(syncName.classCall.." ".."Warlock")
 	elseif string.find(msg, L["trigger_classCall_Warrior"]) then
-		self:Sync(syncName.classCall.." "..BC["Warrior"])
+		self:Sync(syncName.classCall.." ".."Warrior")
 		
 	elseif msg == L["trigger_boneConstructs"] then
 		self:Sync(syncName.boneConstructs)
