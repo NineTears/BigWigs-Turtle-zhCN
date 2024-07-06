@@ -37,14 +37,14 @@ L:RegisterTranslations("zhCN", function() return {
     wyrmkinsvenom_name = "龙族毒液警报",
     wyrmkinsvenom_desc = "龙族毒液出现时进行警告",
 
-    trigger_wyrmkinsVenomYou = "You are afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_wyrmkinsVenomFade = "Wyrmkins Venom fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
-    trigger_wyrmkinsVenomOther = "(.+) is afflicted by Wyrmkins Venom.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_wyrmkinsVenomYou = "你受到了龙族毒液效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_wyrmkinsVenomFade = "龙族毒液效果从(.+)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
+    trigger_wyrmkinsVenomOther = "(.+)受到了龙族毒液效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     
-    bar_wyrmkinsVenom = " 毒液",
+    bar_wyrmkinsVenom = " 中了毒液（驱毒）！！！",
     
     ["You have slain %s!"] = "你已击败了%s！",
-    you = "you",
+    you = "你",
 } end )
 
 module.defaultDB = {

@@ -120,21 +120,21 @@ L:RegisterTranslations("zhCN", function() return {
 	
 
 		--74.137
-	trigger_domoStart1 = "Imprudent whelps! You've rushed headlong to your own deaths! See now, the master stirs!", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart1 = "不谨慎的小崽子们！你已经一头扎进了自己的死里逃生！瞧瞧，主人动起来了！", --CHAT_MSG_MONSTER_YELL
     bar_domoStart = "拉格纳罗斯战斗开始",
     msg_domoStart = "拉格纳罗斯剧情已经开始 - 坦克们，装备你的火焰抗性装备！",
 		--58.792
-	trigger_domoStart2 = "Behold Ragnaros, the Firelord! He who was ancient when this world was young! Bow before him, mortals! Bow before your ending!", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart2 = "看哪，炎魔之王拉格纳罗斯！当这个世界还年轻的时候，他就已经远古了！凡人，在他面前鞠躬吧！在你的结局面前鞠躬！", --CHAT_MSG_MONSTER_YELL
 		--45.457
-	trigger_domoStart3 = "太早了！你太早唤醒了我", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart3 = "太快了！你太早把我吵醒了，长官！这次入侵的意义是什么？？？", --CHAT_MSG_MONSTER_YELL
 		--32.144
-	trigger_domoStart4 = "These mortal infidels, my lord! They have invaded your sanctum and seek to steal your secrets!", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart4 = "这些凡人的异教徒，陛下！他们入侵了你的圣所并试图窃取你的秘密！", --CHAT_MSG_MONSTER_YELL
 		--23.9
-	trigger_domoStart5 = "你让这些虫子", --CHAT_MSG_MONSTER_YELL
+	trigger_domoStart5 = "傻子！你让这些昆虫在神圣核心中肆虐", --CHAT_MSG_MONSTER_YELL
 		--19:44:21.439
-	trigger_engage = "^现在轮到你们", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "现在，昆虫们！大胆地，你寻求拉格纳罗斯的力量。现在您将亲眼目睹！", --CHAT_MSG_MONSTER_YELL
 	
-	trigger_submerge = "^现身吧", --CHAT_MSG_MONSTER_YELL (to be confirmed)
+	trigger_submerge = "出来吧，我的仆人们！保卫你的主人！", --CHAT_MSG_MONSTER_YELL (to be confirmed)
 	trigger_submerge2 = "^你们无法击败生命之焰", --CHAT_MSG_MONSTER_YELL (to be confirmed)
     bar_nextEmerge = "出现",
     msg_submerge = "拉格纳罗斯已消失 - 烈焰之子即将出现！",
@@ -145,23 +145,23 @@ L:RegisterTranslations("zhCN", function() return {
     msg_submergeSoon = "10秒后消失！",
 	
 		--melee knockback
-	trigger_knockback = "^品尝", --CHAT_MSG_MONSTER_YELL
+	trigger_knockback = "品尝萨弗隆的火焰！", --CHAT_MSG_MONSTER_YELL
     bar_knockbackCd = "击退冷却",
     bar_knockbackSoon = "即将击退...",
     msg_knockbackSoon = "即将击退 - 近战撤退！",
     msg_knockback = "击退 - 近战进场！",
 	
-	trigger_lavaYou = "You lose (.+) health for swimming in lava.", --CHAT_MSG_COMBAT_SELF_HITS
+	trigger_lavaYou = "你泡在岩浆中，损失了(.+)点生命值。", --CHAT_MSG_COMBAT_SELF_HITS
     msg_lavaYou = "你站在岩浆里！",
 
     msg_addDead = "/8 烈焰之子死亡",
 	
-	trigger_meltWeapon = "Ragnaros casts Melt Weapon on you: (.+) damaged.", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_meltWeapon = "拉格纳罗斯对你施放了熔化武器，造成(.+)点伤害。", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_melt = "熔化伤害：",
 	
-	trigger_elementalFireYou = "You are afflicted by Elemental Fire.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_elementalFireOther = "(.+) is afflicted by Elemental Fire.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE //CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_elementalFireFade = "Elemental Fire fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHERà
+	trigger_elementalFireYou = "你受到了元素火焰效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_elementalFireOther = "(.+)受到了元素火焰效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE //CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_elementalFireFade = "元素火焰效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHERà
     bar_elementalFire = "元素火焰",
     
     c_sonofflame = "烈焰之子",

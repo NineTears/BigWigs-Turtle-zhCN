@@ -30,12 +30,12 @@ L:RegisterTranslations("enUS", function() return {
 
     --[[
     wailoferennius_cmd = "wailoferennius",
-    wailoferennius_name = "艾雷纽斯之嚎警报",
-    wailoferennius_desc = "艾雷纽斯之嚎出现时进行警告",
+    wailoferennius_name = "埃伦纽斯之嚎警报",
+    wailoferennius_desc = "埃伦纽斯之嚎出现时进行警告",
 
     howloferennius_cmd = "howloferennius",
-    howloferennius_name = "艾雷纽斯之吼警报",
-    howloferennius_desc = "艾雷纽斯之吼出现时进行警告",
+    howloferennius_name = "埃伦纽斯之吼警报",
+    howloferennius_desc = "埃伦纽斯之吼出现时进行警告",
     
     volley_cmd = "volley",
     volley_name = "毒箭齐射警报",
@@ -53,9 +53,9 @@ L:RegisterTranslations("enUS", function() return {
 
     --[[Erennius vv
     trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_wailOfErenniusCast = "正在施放艾雷纽斯之嚎",
-    bar_wailOfErenniusAfflicted = "艾雷纽斯之嚎效果",
-    bar_wailOfErenniusCd = "艾雷纽斯之嚎冷却",
+    bar_wailOfErenniusCast = "正在施放埃伦纽斯之嚎",
+    bar_wailOfErenniusAfflicted = "埃伦纽斯之嚎效果",
+    bar_wailOfErenniusCd = "埃伦纽斯之嚎冷却",
     
     trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
@@ -69,8 +69,8 @@ L:RegisterTranslations("enUS", function() return {
     trigger_engage = "You think you can interfere with my eternal duty? The awakening has been fortold long before your kind has existed mortals, you shall regret setting foot on our hallowed ground!",--CHAT_MSG_MONSTER_YELL
     
     trigger_hardMode = "You will not disturb the Awakener...",--CHAT_MSG_MONSTER_YELL
-    msg_hardModeOn = "艾雷纽斯加入战斗；困难模式开启 - 祝你好运！",
-    msg_hardModeOff = "艾雷纽斯在索尔纽斯之前死亡；困难模式取消 - *胆小鬼*",
+    msg_hardModeOn = "埃伦纽斯加入战斗；困难模式开启 - 祝你好运！",
+    msg_hardModeOff = "埃伦纽斯在索尔纽斯之前死亡；困难模式取消 - *胆小鬼*",
     
     --trigger_yellSmt = "The dream beckons us all, you shall remain here forever...",
 } end )
@@ -86,12 +86,12 @@ L:RegisterTranslations("zhCN", function() return {
 
     --[[
     wailoferennius_cmd = "wailoferennius",
-    wailoferennius_name = "艾雷纽斯之嚎警报",
-    wailoferennius_desc = "艾雷纽斯之嚎出现时进行警告",
+    wailoferennius_name = "埃伦纽斯之嚎警报",
+    wailoferennius_desc = "埃伦纽斯之嚎出现时进行警告",
 
     howloferennius_cmd = "howloferennius",
-    howloferennius_name = "艾雷纽斯之吼警报",
-    howloferennius_desc = "艾雷纽斯之吼出现时进行警告",
+    howloferennius_name = "埃伦纽斯之吼警报",
+    howloferennius_desc = "埃伦纽斯之吼出现时进行警告",
     
     volley_cmd = "volley",
     volley_name = "毒箭齐射警报",
@@ -101,17 +101,17 @@ L:RegisterTranslations("zhCN", function() return {
     bar_isImmune = "索尔纽斯免疫",
     msg_isImmune = "索尔纽斯免疫",
     
-    trigger_solniusSleep = "Solnius gains Sleep Visual DND.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    trigger_solniusSleepFade = "Sleep Visual DND fades from Solnius.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_solniusSleep = "索尔纽斯获得了Sleep Visual DND的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_solniusSleepFade = "Sleep Visual DND效果从索尔纽斯身上消失。",--CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_isSleeping = "索尔纽斯正在沉睡",
     msg_isSleeping = "小怪来袭！45秒内击杀",
     msg_isSleepingFade = "索尔纽斯醒来了！",
 
     --[[Erennius vv
     trigger_wailOfErenniusCast = "Erennius begins to cast Wail of Erennius.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    bar_wailOfErenniusCast = "正在施放艾雷纽斯之嚎",
-    bar_wailOfErenniusAfflicted = "艾雷纽斯之嚎效果",
-    bar_wailOfErenniusCd = "艾雷纽斯之嚎冷却",
+    bar_wailOfErenniusCast = "正在施放埃伦纽斯之嚎",
+    bar_wailOfErenniusAfflicted = "埃伦纽斯之嚎效果",
+    bar_wailOfErenniusCd = "埃伦纽斯之嚎冷却",
     
     trigger_howlOfErennius = "afflicted by Howl of Erennius",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     trigger_howlOfErenniusResist = "Howl of Erennius was resisted",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
@@ -125,8 +125,8 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_engage = "You think you can interfere with my eternal duty? The awakening has been fortold long before your kind has existed mortals, you shall regret setting foot on our hallowed ground!",--CHAT_MSG_MONSTER_YELL
     
     trigger_hardMode = "You will not disturb the Awakener...",--CHAT_MSG_MONSTER_YELL
-    msg_hardModeOn = "艾雷纽斯加入战斗；困难模式开启 - 祝你好运！",
-    msg_hardModeOff = "艾雷纽斯在索尔纽斯之前死亡；困难模式取消 - *胆小鬼*",
+    msg_hardModeOn = "埃伦纽斯加入战斗；困难模式开启 - 祝你好运！",
+    msg_hardModeOff = "埃伦纽斯在索尔纽斯之前死亡；困难模式取消 - *胆小鬼*",
     
     --trigger_yellSmt = "The dream beckons us all, you shall remain here forever...",
 } end )

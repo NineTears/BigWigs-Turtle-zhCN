@@ -37,14 +37,14 @@ L:RegisterTranslations("zhCN", function() return {
     emeraldsupression_name = "翡翠镇压警报",
     emeraldsupression_desc = "翡翠镇压出现时进行警告",
     
-    trigger_emeraldSupressionYou = "You are afflicted by Emerald Supression.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_emeraldSupressionOther = "(.+) is afflicted by Emerald Supression.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-    trigger_emeraldSupressionFade = "Emerald Supression fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
+    trigger_emeraldSupressionYou = "你受到了翡翠镇压效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_emeraldSupressionOther = "(.+)受到了翡翠镇压效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_emeraldSupressionFade = "翡翠镇压效果从(.+)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY
     
-    bar_emeraldSupression = " 镇压",
+    bar_emeraldSupression = " 被镇压（驱散魔法）！！",
     
     ["You have slain %s!"] = "你已击败了%s！",
-    you = "you",
+    you = "你",
 } end )
 
 module.defaultDB = {

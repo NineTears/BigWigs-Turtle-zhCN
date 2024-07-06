@@ -35,10 +35,10 @@ L:RegisterTranslations("zhCN", function() return {
 
     reflect_cmd = "reflect",
     reflect_name = "反射警报",
-    reflect_desc = "圣殿龙人获得反射时进行警告",
+    reflect_desc = "圣所龙人获得反射时进行警告",
 
-    trigger_reflect = "Sanctum Dragonkin gains Reflection.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    trigger_reflectFade = "Reflection fades from Sanctum Dragonkin.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_reflect = "圣所龙人获得了反射的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_reflectFade = "反射效果从圣所龙人身上消失。",--CHAT_MSG_SPELL_AURA_GONE_OTHER
         
     bar_reflect = "龙人法术反射",
     msg_reflect = "龙人法术反射",

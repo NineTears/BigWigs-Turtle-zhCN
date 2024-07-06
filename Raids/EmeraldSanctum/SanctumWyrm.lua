@@ -37,10 +37,10 @@ L:RegisterTranslations("zhCN", function() return {
     volley_name = "毒箭齐射警报",
     volley_desc = "毒箭齐射出现时进行警告",
 
-    trigger_volley = "Sanctum Wyrm's Poison Bolt Volley",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-    bar_volley = "毒箭齐射",
+    trigger_volley = "圣所巨龙的毒箭之雨",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    bar_volley = "毒箭齐射（清毒）",
     
-    trigger_volleyYou = "Sanctum Wyrm's Poison Bolt Volley hits you",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_volleyYou = "圣所巨龙的毒箭之雨击中你造成",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_volley = "保持最远距离以躲避毒箭齐射！",
     
     ["You have slain %s!"] = "你已击败了%s！",

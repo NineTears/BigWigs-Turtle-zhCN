@@ -244,8 +244,8 @@ L:RegisterTranslations("zhCN", function() return {
     bar_windowOfOpportunity = "机会窗口",
 	
 		--must be a string.find
-	trigger_weakened = "克苏恩被削弱了！", --CHAT_MSG_MONSTER_EMOTE
-    bar_weakened = "虚弱时间，快输出！",
+	trigger_weakened = "被削弱了！", --CHAT_MSG_MONSTER_EMOTE
+    bar_weakened = "虚弱时间，全力输出！",
     msg_weakened = "克苏恩虚弱了！",
     msg_weakenedFade = "虚弱结束",
 	
