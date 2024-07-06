@@ -166,7 +166,7 @@ L:RegisterTranslations("zhCN", function() return {
     
     c_sonofflame = "烈焰之子",
     c_majordomoexecutus = "管理者埃克索图斯",
-	you = "you",
+	you = "你",
 } end)
 
 local timer = {

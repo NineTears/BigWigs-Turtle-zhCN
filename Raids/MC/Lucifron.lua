@@ -93,12 +93,12 @@ L:RegisterTranslations("zhCN", function() return {
     adds_desc = "小怪死亡时进行警告",
 
 
-	trigger_curse = "受到了鲁西弗隆", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_curse = "受到了鲁西弗隆的诅咒效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
 	trigger_curse2 = "鲁西弗隆的诅咒被抵抗", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_curseCd = "下一次鲁西弗隆的诅咒",
     msg_curse = "鲁西弗隆的诅咒 - 解除诅咒！",
 	
-	trigger_doom = "受到了末日降临", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_doom = "受到了末日降临效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
 	trigger_doom2 = "末日降临被抵抗", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_doomCd = "下一次末日降临",
     bar_doomDmg = "末日降临！",
@@ -109,7 +109,7 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	trigger_mcYou = "你受到了统御意志效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_mcOther = "(.*)受到了统御意志效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_mcFade = "Dominate Mind fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_mcFade = "统御意志效果从(.+)身上消失", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mcCd = "统御意志冷却",
     bar_mc = " 统御意志 ",
     msg_mc = " 统御意志 - 驱散！",

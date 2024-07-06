@@ -83,7 +83,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     ["You have slain %s!"] = "你已经击败了%s！",
     clickme = " >点击我！<",
-    you = "you",
+    you = "你",
 } end )
 
 local timer = {

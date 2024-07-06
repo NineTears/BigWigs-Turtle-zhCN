@@ -38,10 +38,10 @@ L:RegisterTranslations("zhCN", function() return {
     surge_desc = "汹涌出现时进行警告",
 	
 	
-	trigger_surge = "Lava Surger's Surge hits (.+) for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
-    msg_surge = " 未能堆叠在熔岩奔腾者身上",
-    msg_surgeYou = "堆叠在熔岩奔腾者身上",
-    you = "you",
+	trigger_surge = "熔岩奔腾者的汹涌击中(.+)造成", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    msg_surge = " 离石头人太远！",
+    msg_surgeYou = "快和石头人重叠站位！",
+    you = "你",
 } end )
 
 local timer = {

@@ -94,12 +94,12 @@ L:RegisterTranslations("zhCN", function() return {
     msg_bomb = " 是炸弹！",
 	
 	trigger_inferno = "迦顿男爵获得了地狱火的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_infernoFade = "Inferno fades from Baron Geddon.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_infernoFade = "地狱火效果从迦顿男爵身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_infernoCd = "地狱火冷却",
     bar_infernoSoon = "即将地狱火...",
     bar_infernoChannel = "地狱火！",
 	
-	trigger_infernoYou = "Baron Geddon's Inferno hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_infernoYou = "迦顿男爵的地狱火击中你造成", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_infernoYou = "远离地狱火！",
 	
 	trigger_armageddon = "Baron Geddon is afflicted by Armageddon.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE

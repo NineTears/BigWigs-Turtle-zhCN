@@ -56,20 +56,20 @@ L:RegisterTranslations("zhCN", function() return {
     conflagration_desc = "燃烧出现时进行警告",
 	
 	
-	trigger_panic = "受到了恐慌", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_panic = "受到了恐慌效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
 	trigger_panic2 = "恐慌施放失败。", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 	trigger_panic3 = "玛格曼达的恐慌被抵抗了。", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_panicCd = "恐惧冷却",
     bar_panicSoon = "即将恐惧...",
     msg_panic = "恐惧 - 驱散！",
 	
-	trigger_frenzy = "变得极为狂暴！", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_frenzy = "玛格曼达获得了狂乱的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	trigger_frenzyFade = "狂乱效果从玛格曼达身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_frenzyCd = "狂暴冷却",
     bar_frenzyDur = "狂暴！",
     msg_frenzy = "狂暴 - 立即宁神！",
 	
-	trigger_conflagYou = "You are afflicted by Conflagration.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_conflagYou = "你受到了燃烧效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 } end)
 
 local timer = {

@@ -1,5 +1,6 @@
 
 local module, L = BigWigs:ModuleDeclaration("Garr", "Molten Core")
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30078
 module.enabletrigger = module.translatedName
@@ -65,17 +66,17 @@ L:RegisterTranslations("zhCN", function() return {
     immolate_desc = "献祭出现时进行警告",
 	
 	
-	trigger_antimagicPulse = "Garr performs Antimagic Pulse", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_antimagicPulse = "加尔对你使用反魔法脉冲。", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_antimagicPulse = "反魔法脉冲",
 
-    trigger_remove = "Your (.+) is removed.", --CHAT_MSG_SPELL_BREAK_AURA
+    trigger_remove = "你的(.+)被移除了。", --CHAT_MSG_SPELL_BREAK_AURA
     msg_remove = "反魔法脉冲移除了你的",
 
     msg_addDead = "/8 火誓者死亡",
 	
 	--not tracking the afflicted since many mobs do immolate, may cause conflict
 		--instead only showing the message once to remind dispels on Garr
-	trigger_immolate = "Fire damage from Firesworn's Immolate.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_immolate = "点火焰伤害（火誓者的献祭）。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     msg_immolate = "献祭 - 驱散！",
     c_firesworn = "火誓者",
     c_garr = "加尔",

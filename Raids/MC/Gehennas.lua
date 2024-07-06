@@ -1,5 +1,7 @@
 
 local module, L = BigWigs:ModuleDeclaration("Gehennas", "Molten Core")
+local bbFlameImp = AceLibrary("Babble-Boss-2.2")["Flame Imp"]
+local BC = AceLibrary("Babble-Class-2.2")
 
 module.revision = 30075
 module.enabletrigger = module.translatedName
@@ -52,13 +54,13 @@ L:RegisterTranslations("zhCN", function() return {
     adds_desc = "小怪死亡时进行警告",
 	
 	
-	trigger_curse = "afflicted by Gehennas' Curse.", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_curse2 = "Gehennas' Curse was resisted", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_curse = "受到了基赫纳斯的诅咒效果的影响。", --CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_curse2 = "基赫纳斯的诅咒被", --CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_curseCd = "基赫纳斯的诅咒冷却",
     msg_curse = "基赫纳斯的诅咒 - 解除诅咒！",
 
-    trigger_rainOfFire = "You are afflicted by Rain of Fire.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_rainOfFireFade = "Rain of Fire fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+    trigger_rainOfFire = "你受到了火焰之雨效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_rainOfFireFade = "火焰之雨效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
 
     msg_addDead = "/2 烈焰行者死亡",
     c_flamewaker = "烈焰行者",
@@ -108,7 +110,7 @@ function module:OnSetup()
 end
 
 function module:OnEngage()
-	if self.core:IsModuleActive("Flame Imp", "Molten Core") then self:TriggerEvent("BigWigs_RebootModule", "Flame Imp", "Molten Core") end
+	if self.core:IsModuleActive(bbFlameImp, "Molten Core") then self:TriggerEvent("BigWigs_RebootModule", bbFlameImp, "Molten Core") end
 	
 	addDead = 0
 	
