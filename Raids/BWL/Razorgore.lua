@@ -191,21 +191,21 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	
 --Phase 1
-	trigger_engage = "Intruders have breached the hatchery!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "入侵者闯入了孵化间！", --CHAT_MSG_MONSTER_YELL
 	
-	trigger_polyYou = "You are afflicted by Greater Polymorph.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_polyOther = "(.+) is afflicted by Greater Polymorph.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_polyFade = "Greater Polymorph fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_polyYou = "你受到了强效变形术效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_polyOther = "(.+)受到了强效变形术效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_polyFade = "强效变形术效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_poly = " 变形",
     msg_poly = " 变形 - 驱散！",
 	
-	trigger_mcYou =  "You are afflicted by Dominate Mind.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --guessing
-	trigger_mcOther = "(.+) is afflicted by Dominate Mind.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE --guessing
-	trigger_mcFade = "Dominate Mind fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER --guessing
+	trigger_mcYou =  "你受到了统御意志效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --guessing
+	trigger_mcOther = "(.+)受到了统御意志效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE --guessing
+	trigger_mcFade = "统御意志效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER --guessing
     bar_mc = " 精神控制",
     msg_mc = " 精神控制 - 驱散！",
 	
-	trigger_slow = "afflicted by Slow.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_slow = "受到了减速术效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
     bar_slow = "减速",
     msg_slow = "减速 - 驱散！",
 	
@@ -227,9 +227,9 @@ L:RegisterTranslations("zhCN", function() return {
     bar_eggsCounter = "剩余龙蛋",
     msg_eggCounter = "/30 已摧毁龙蛋",
 	
-	trigger_mindExhaustionYou = "You are afflicted by Mind Exhaustion.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_mindExhaustionOther = "(.+) is afflicted by Mind Exhaustion.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_mindExhaustionFade = "Mind Exhaustion fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_mindExhaustionYou = "你受到了心灵疲惫效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mindExhaustionOther = "(.+)受到了心灵疲惫效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_mindExhaustionFade = "心灵疲惫效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mindExhaustion = " 心灵疲惫",
 	
 		--there is no orb control trigger, aside from gain mind exhaustion
@@ -241,25 +241,25 @@ L:RegisterTranslations("zhCN", function() return {
     msg_orbFade = "拉佐格尔失控了！",
 	
 --Phase 3
-	trigger_phase3 = "troops flee as the power of the controlling power of the orb is drained.", --CHAT_MSG_MONSTER_EMOTE
-    msg_phase3 = "所有龙蛋已被摧毁 - 第三阶段 - 拉佐格尔自由了！",
+	trigger_phase3 = "当球体的控制力耗尽时，奈法利安的军队四散奔逃。", --CHAT_MSG_MONSTER_EMOTE
+    msg_phase3 = "所有龙蛋已被摧毁 - 第三阶段 - 击杀BOSS！",
 	
-	trigger_volleyCast = "Razorgore the Untamed begins to cast Fireball Volley.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_volleyCast = "狂野的拉佐格尔开始施放连珠火球。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_volleyCd = "连珠火球冷却",
     bar_volleyCast = "正在施放连珠火球",
     msg_volley = "连珠火球 - 躲避！",
 	
-	trigger_conflagrationYou = "You are afflicted by Conflagration.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_conflagrationOther = "(.+) is afflicted by Conflagration.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_conflagrationFade = "Conflagration fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_conflagrationYou = "你受到了燃烧效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_conflagrationOther = "(.+)受到了燃烧效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_conflagrationFade = "燃烧效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY //CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_conflagrationCd = "燃烧冷却",
     bar_conflagrationDur = " 燃烧",
     msg_conflagration = " 燃烧",
 	
-	trigger_conflagHitYou = "Conflagration hits you for", --CHAT_MSG_SPELL_SELF_DAMAGE
+	trigger_conflagHitYou = "燃烧击中你造成", --CHAT_MSG_SPELL_SELF_DAMAGE
     msg_conflagHitYou = "远离被燃烧的人，笨蛋！！！",
 	
-	trigger_warStomp = "Razorgore the Untamed's War Stomp", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_warStomp = "狂野的拉佐格尔的战争践踏", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_warStompDur = "战争践踏",
     bar_warStompCd = "战争践踏冷却",
     you = "你",

@@ -161,7 +161,7 @@ L:RegisterTranslations("zhCN", function() return {
 		--Time Lapse
 			--Stunned and loses aggro, 8sec (or 6?)
 			
-	trigger_breath = "克洛玛古斯开始施放(.+)。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_breath = "克洛玛古斯开始施放(.+)", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_breathCast = "正在施放 ",
     bar_breathCd = " 冷却",
     msg_breathSoon5 = " 在5秒内",
@@ -176,7 +176,7 @@ L:RegisterTranslations("zhCN", function() return {
 		-- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
 		-- spellName: Firebolt; hitOrCrit: hits; dmg: 44; school: Fire; partial: 14
 		-- Kan's Life Steal crits Battleguard Sartura for 45 Shadow damage. (15 resisted)
-	trigger_directDamage = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+)对克洛玛古斯造成了([%d]+)点([%w]+)伤害.)",
+	trigger_directDamage = "^[%w]+[%s's]*([%w%s:]+)([%w]+)击中克洛玛古斯造成([%d]+)点([%w]+)伤害.)",
 	trigger_dotDamage = "^[%w]+[%s's]* ([%w%s:]+)使克洛玛古斯受到([%d]+)点([%w]+)伤害.)",
 	
 	

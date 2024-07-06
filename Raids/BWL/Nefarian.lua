@@ -116,7 +116,7 @@ L:RegisterTranslations("enUS", function() return {
     msg_landingParty = "奈法利安将在20秒内降落 - 登陆小队，准备就位！",
 	
 --Phase 2
---there are 46 drakonids total
+--there are 44 drakonids total
 	trigger_landingStart = "Well done, my minions. The mortals' courage begins to wane! Now, let's see how they contend with the true Lord of Blackrock Spire!!!", --CHAT_MSG_MONSTER_YELL
     bar_landingShadowFlame = "群体暗影烈焰", --doesn't do damage on twow, not showing this bar
     bar_landingStart = "奈法利安降落",
@@ -279,12 +279,12 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_engage = "让游戏开始！", --CHAT_MSG_MONSTER_YELL
     bar_mobsSpawn = "龙兽刷新",
 	
-	trigger_mcYou = "你受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_mcOther = "(.+)受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_mcFade = "Shadow Command fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_mcYou = "你受到了暗影命令效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.+)受到了暗影命令效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_mcFade = "暗影命令效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mc = " 精神控制",
     msg_mc = " 精神控制 - 变羊！",
-    trigger_deadOther = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+    trigger_deadOther = "(.+)死亡了。", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	
     bar_addCounter = "剩余龙兽",
     msg_red = "红色龙兽 - 造成：火焰锥形堆叠DOT - 抵抗：火焰",
@@ -293,17 +293,17 @@ L:RegisterTranslations("zhCN", function() return {
     msg_black = "黑色龙兽 - 造成：火焰攻击 - 抵抗：暗影和火焰",
     msg_bronze = "青铜龙兽 - 造成：减速攻击和施法速度 - 抵抗：奥术",
 	
-    msg_landingParty = "奈法利安将在20秒内降落 - 登陆小队，准备就位！",
+    msg_landingParty = "奈法利安将在20秒内降落 - T和治疗就位！",
 	
 --Phase 2
---there are 46 drakonids total
+--there are 44 drakonids total
 	trigger_landingStart = "够了", --CHAT_MSG_MONSTER_YELL
     bar_landingShadowFlame = "群体暗影烈焰", --doesn't do damage on twow, not showing this bar
     bar_landingStart = "奈法利安降落",
     msg_landingStart = "奈法利安正在降落！",
 	
 		--ShadowFlame 12.5sec after landingStart, lands 0.5-1sec after
-	trigger_landingNow = "BURN! You wretches! BURN!", --CHAT_MSG_MONSTER_YELL 22:14:23.782
+	trigger_landingNow = "燃烧吧！你们这些悲惨的家伙！燃烧吧！", --CHAT_MSG_MONSTER_YELL 22:14:23.782
 	
 	trigger_shadowFlame = "奈法利安开始施放暗影烈焰。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_shadowFlameCd = "暗影烈焰冷却",
@@ -316,14 +316,14 @@ L:RegisterTranslations("zhCN", function() return {
     bar_fearCast = "正在施放恐惧！",
     msg_fearCast = "正在施放恐惧！",
 	
-    trigger_fearWard = "You gain Fear Ward.", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
-    trigger_fearWardFade = "Fear Ward fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
+    trigger_fearWard = "你获得了防护恐惧结界的效果。", --CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS
+    trigger_fearWardFade = "防护恐惧结界效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
     msg_fearWard = "你获得了防护恐惧结界！",
     msg_fearWardFade = "防护恐惧结界消失",
 	
-	trigger_curseYou = "You are afflicted by Veil of Shadow.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_curseOther = "(.+) is afflicted by Veil of Shadow.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_curseFade = "Veil of Shadow fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_curseYou = "你受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_curseOther = "(.+)受到了暗影迷雾效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_curseFade = "暗影迷雾效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_curseCd = "暗影迷雾冷却",
     bar_curseDur = " 暗影迷雾",
     msg_curse = " 暗影迷雾 - 快解除诅咒！",
@@ -350,11 +350,11 @@ L:RegisterTranslations("zhCN", function() return {
     msg_classCall_Warlock = "术士职业点名 - 消灭地狱火！",
     msg_classCall_Warrior = "战士职业点名 - 被困在狂暴姿态！",
 	
-    msg_classCall_soon3 = "3秒后职业点名 - 猎人，切换远程武器！",
+    msg_classCall_soon3 = "3秒后职业点名！！！",
 	
-	trigger_wildPolymorphYou = "You are afflicted by Wild Polymorph.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --guessing
-	trigger_wildPolymorphOther = "(.+) is afflicted by Wild Polymorph.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE --guessing
-	trigger_wildPolymorphFade = "Wild Polymorph fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER --guessing
+	trigger_wildPolymorphYou = "你受到了狂野变形效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE --guessing
+	trigger_wildPolymorphOther = "(.+)受到了狂野变形效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE --guessing
+	trigger_wildPolymorphFade = "狂野变形效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER --guessing
     bar_wildPolymorph = " 变羊",
     msg_wildPolymorph = " 变羊 - 快驱散！",
 	
@@ -619,7 +619,7 @@ function module:OnEngage()
 	end
 	
 	if self.db.profile.drakonidcounter then
-		self:TriggerEvent("BigWigs_StartCounterBar", self, L["bar_addCounter"], 46, "Interface\\Icons\\"..icon.addCounter, true, color.addCounter)
+		self:TriggerEvent("BigWigs_StartCounterBar", self, L["bar_addCounter"], 44, "Interface\\Icons\\"..icon.addCounter, true, color.addCounter)
 		self:TriggerEvent("BigWigs_SetCounterBar", self, L["bar_addCounter"], drakonidsDead)
 	end
 end
@@ -632,7 +632,7 @@ function module:CHAT_MSG_COMBAT_HOSTILE_DEATH(msg)
 	
 	if string.find(msg, L["ndrakoniddies"]) then
 		drakonidsSelfCount = drakonidsSelfCount + 1
-		if drakonidsSelfCount <= 46 then
+		if drakonidsSelfCount <= 44 then
 			self:Sync(syncName.addDead .. " " .. drakonidsSelfCount)
 		end
 	end
@@ -873,7 +873,7 @@ function module:DrakonidCounter(rest)
 		drakonidsDead = tonumber(rest)
 		self:TriggerEvent("BigWigs_SetCounterBar", self, L["bar_addCounter"], drakonidsDead)
 	end
-	if tonumber(rest) >= 46 then
+	if tonumber(rest) >= 44 then
 		self:TriggerEvent("BigWigs_StopCounterBar", self, L["bar_addCounter"])
 	end
 end

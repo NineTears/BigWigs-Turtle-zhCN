@@ -60,7 +60,7 @@ L:RegisterTranslations("zhCN", function() return {
 	warstomp_trigger = "黑翼龙人护卫的战争践踏",
     warstomp_bar = "战争践踏 CD",
 	
-	vulnerability_direct_test = "^[%w]+[%s's]*([%w%s:]+)([%w]+)使黑翼龙人护卫受到了%.[%s%(]*([%d]*)点([%d]+)([%w]+)伤害",
+	vulnerability_direct_test = "^[%w]+[%s's]*([%w%s:]+)的([%w]+)击中黑翼龙人护卫造成([%d]+)点([%w]+)%.[%s%(]*([%d]*)伤害",
 	vulnerability_dots_test = "^Death Talon Wyrmguard suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
     vulnerability_message = "弱点：%s！",
     
