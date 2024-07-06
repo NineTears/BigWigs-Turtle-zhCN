@@ -120,27 +120,27 @@ L:RegisterTranslations("zhCN", function() return {
     parry_desc = "招架出现时进行警告",
 	
 	
-	trigger_gossip1 = "Too late, friends", --CHAT_MSG_MONSTER_YELL
-	trigger_gossip2 = "I beg you, mortals", --CHAT_MSG_MONSTER_YELL
-	trigger_gossip3 = "FLAME! DEATH! DESTRUCTION!", --CHAT_MSG_MONSTER_YELL
+	trigger_gossip1 = "太晚了，朋友们！奈法留斯的腐败已经蔓延", --CHAT_MSG_MONSTER_YELL
+	trigger_gossip2 = "我求求你们，凡人", --CHAT_MSG_MONSTER_YELL
+	trigger_gossip3 = "火焰！死亡！毁灭！", --CHAT_MSG_MONSTER_YELL
     bar_gossip = "战斗开始",
     msg_gossip = "瓦拉斯塔兹事件开始了！",
 	
-	trigger_engage = "afflicted by Essence of the Red.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_engage = "受到了红龙精华效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
 	
 	--burning adrenaline on mana user every 15sec, every 45s on the tank ALSO
 		-- -5% hp per second
-	trigger_adrenalineYou = "You are afflicted by Burning Adrenaline.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_adrenalineOther = "(.+) is afflicted by Burning Adrenaline.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_adrenalineFade = "Burning Adrenaline fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER --guessing
+	trigger_adrenalineYou = "你受到了燃烧刺激效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_adrenalineOther = "(.+)受到了燃烧刺激效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_adrenalineFade = "燃烧刺激效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER --guessing
     bar_adrenalineCd = "燃烧刺激冷却",
-    bar_adrenalineDur = " 燃烧中！",
+    bar_adrenalineDur = " 即将爆炸！",
     msg_adrenaline = " 受到了燃烧刺激",
 	
-	trigger_dieYou = "You die.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
-	trigger_dieOther = "(.+) dies.", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	trigger_dieYou = "你死亡了。", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
+	trigger_dieOther = "(.+)死亡了。", --CHAT_MSG_COMBAT_FRIENDLY_DEATH
 	
-	trigger_flameBreath = "Vaelastrasz the Corrupt begins to cast Flame Breath.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_flameBreath = "堕落的瓦拉斯塔兹开始施放火息术。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_flameBreathCd = "火息术冷却",
     bar_flameBreathCast = "正在施放火息术！",
 
@@ -149,15 +149,15 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_flameBreathDotFade = "Flame Breath fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_flameBreathDot = " 火息术DoT",
 
-    trigger_fireNova = "Vaelastrasz the Corrupt's Fire Nova", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_fireNova = "堕落的瓦拉斯塔兹的火焰新星击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_fireNova = "火焰新星冷却",
 
     trigger_tailSweepYou = "Vaelastrasz the Corrupt's Tail Sweep hits you", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_tailSweep = "龙尾扫击击中BOSS后方30码范围内。",
 
-    trigger_parryYou = "You attack. Vaelastrasz the Corrupt parries.", --CHAT_MSG_COMBAT_SELF_MISSES
+    trigger_parryYou = "你发起了攻击。堕落的瓦拉斯塔兹招架住了。", --CHAT_MSG_COMBAT_SELF_MISSES
     msg_parryYou = "堕落的瓦拉斯塔兹招架了你的攻击 - 别再害坦克了，笨蛋！",
-    you = "you",
+    you = "你",
 } end)
 
 local timer = {

@@ -92,7 +92,7 @@ L:RegisterTranslations("zhCN", function() return {
 		--You absorb Firemaw's Flame Buffet.
     bar_flameBuffet = "烈焰打击",
 
-    trigger_flameBuffetYou = "You are afflicted by Flame Buffet %((.+)%).", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_flameBuffetYou = "你受到了烈焰打击效果的影响%（(.+)%）。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
     msg_flameBuffetYou = " 烈焰打击层数 - 考虑清除你的层数",
 } end)
 

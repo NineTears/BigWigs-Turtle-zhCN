@@ -67,31 +67,31 @@ L:RegisterTranslations("zhCN", function() return {
     knock_desc = "击飞出现时进行警告",
 
     targeticon_cmd = "targeticon",
-    targeticon_name = "在血领主的目标上标记骷髅",
-    targeticon_desc = "在血领主的目标上标记骷髅团队图标",
+    targeticon_name = "在BOSS的目标上标记骷髅",
+    targeticon_desc = "在BOSS的目标上标记骷髅团队图标",
 
 
     trigger_engage = "你们这种人都不应该出现在这里！",
 	
-	trigger_msEvade = "Broodlord Lashlayer's Mortal Strike was", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_msEvade = "勒西雷尔的致死打击被", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     msg_msEvade = "致死打击被闪避了！",
 
-    trigger_msYou = "You are afflicted by Mortal Strike.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_msOther = "^(.+)(.+)致死打击效果的影响", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-    trigger_msFade = "Mortal Strike fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    trigger_msYou = "你受到了致死打击效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_msOther = "^(.+)(.+)致死打击效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+    trigger_msFade = "致死打击效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_msCd = "致死打击冷却",
     bar_msSoon = "即将致死打击...",
     bar_msDur = " 致死打击",
     msg_ms = " 致死打击",
 
-    trigger_bw = "^(.+)(.+)冲击波效果的影响", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_bw = "^(.+)(.+)冲击波效果的影响。", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_bwCd = "冲击波冷却",
     bar_bwSoon = "即将冲击波...",
 
-    trigger_knock = "Broodlord Lashlayer's Knock Away", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_knock = "勒西雷尔的击退击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_knockCd = "击飞冷却",
     bar_knockSoon = "即将击飞...",
-    you = "you",
+    you = "你",
 } end )
 
 local timer = {
