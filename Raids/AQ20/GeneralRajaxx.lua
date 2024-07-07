@@ -75,7 +75,7 @@ L:RegisterTranslations("enUS", function() return {
 	bar_shockwave = "震荡波冷却",
 	
 	trigger_wave5 = "Fear is for the enemy! Fear and death!",--CHAT_MSG_MONSTER_YELL
-	msg_wave5 = "第5/8波 -- 2名战士，4名钉刺者，耶吉斯少校 -> 护盾",
+	msg_wave5 = "第5/8波 -- 2名战士，4名钉刺者，叶吉斯少校 -> 护盾",
 	trigger_shield = "Major Yeggeth gains Shield of Rajaxx",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_shield = "免疫魔法",
 	
@@ -85,7 +85,7 @@ L:RegisterTranslations("enUS", function() return {
 	bar_slam = "重击冷却",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
 	trigger_wave7 = "Fandral! Your time has come! Go and hide in the Emerald Dream and pray we never find you!",--??\n?? CHAT_MSG_MONSTER_YELL
-	msg_wave7 = "第7/8波 -- 3名战士，3名钉刺者，泽兰上校 -> 扩大",
+	msg_wave7 = "第7/8波 -- 3名战士，3名钉刺者，泽朗上校 -> 扩大",
 	trigger_enlarge = "Colonel Zerran gains Enlarge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_enlarge = "扩大，驱散！",
 	msg_enlarge = "扩大，驱散！",
@@ -141,53 +141,53 @@ L:RegisterTranslations("zhCN", function() return {
 	thundercrash_desc = "雷霆冲击出现时进行警告",
 	
 	
-	trigger_eventStarted = "Remember, Rajaxx, when I said I'd kill you last?",--CHAT_MSG_MONSTER_YELL
+	trigger_eventStarted = "拉贾克斯，还记得我说过要杀光其他虫子之后再干掉你么？",--CHAT_MSG_MONSTER_YELL
 	bar_eventStart = "战斗开始",
 	
 	--not using trigger_wave1 -> bc if you body pull, will cause the trigger to happen at wave 2
 	--trigger_wave1 = "Kill first, ask questions later... Incoming!",--CHAT_MSG_MONSTER_YELL
 	msg_wave1 = "第1/8波 -- 4名战士，2名钉刺者，奎兹上尉 -> 恐惧",
-	trigger_fear = "afflicted by Intimidating Shout.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_fear = "受到了破胆怒吼效果的影响。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	bar_fear = "恐惧冷却",
 	
-	trigger_wave2 = "Captain Qeez dies.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
+	trigger_wave2 = "奎兹上尉死亡了。",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 	msg_wave2 = "第2/8波 -- 3名战士，3名钉刺者，图比德上尉 -> 标记",
-	trigger_attackOrder = "(.*) is afflicted by Attack Order.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_attackOrderYou = "You are afflicted by Attack Order.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	bar_attackOrder = " 已标记",
-	trigger_attackOrderFade = "Attack Order fades from (.*).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_attackOrder = "(.*)受到了攻击命令效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_attackOrderYou = "你受到了攻击命令效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	bar_attackOrder = " 被标记",
+	trigger_attackOrderFade = "攻击命令效果从(.*)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
 	
-	trigger_wave3 = "The time of our retribution is at hand! Let darkness reign in the hearts of our enemies!",--CHAT_MSG_MONSTER_YELL
+	trigger_wave3 = "我们复仇的时刻到了！让敌人的内心被黑暗吞噬吧!",--CHAT_MSG_MONSTER_YELL
 	msg_wave3 = "第3/8波 -- 1名战士，5名钉刺者，德雷恩上尉 -> 闪电云",
-	trigger_lightningCloud = "You are afflicted by Lightning Cloud.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_lightningCloud = "你受到了闪电之云效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	msg_lightningCloud = "闪电云，快躲开！",
-	trigger_lightningCloudFade = "Lightning Cloud fades from you",--CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_lightningCloudFade = "闪电之云效果从你身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_SELF
 	
-	trigger_wave4 = "No longer will we wait behind barred doors and walls of stone! No longer will our vengeance be denied! The dragons themselves will tremble before our wrath!",--??\n?? CHAT_MSG_MONSTER_YELL
+	trigger_wave4 = "我们不用再呆在这座石墙里面了！我们很快就能报仇了！在我们的怒火面前，就连那些龙也会战栗！",--??\n?? CHAT_MSG_MONSTER_YELL
 	msg_wave4 = "第4/8波 -- 2名战士，4名钉刺者，库雷姆上尉 -> 范围伤害",
-	trigger_shockwave = "Captain Xurrem's Shockwave",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_shockwave = "瑟瑞姆上尉的震荡波",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	bar_shockwave = "震荡波冷却",
 	
-	trigger_wave5 = "Fear is for the enemy! Fear and death!",--CHAT_MSG_MONSTER_YELL
-	msg_wave5 = "第5/8波 -- 2名战士，4名钉刺者，耶吉斯少校 -> 护盾",
-	trigger_shield = "Major Yeggeth gains Shield of Rajaxx",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_wave5 = "让敌人胆战心惊吧！让他们在恐惧中死去！",--CHAT_MSG_MONSTER_YELL
+	msg_wave5 = "第5/8波 -- 2名战士，4名钉刺者，叶吉斯少校 -> 护盾",
+	trigger_shield = "叶吉斯少校获得了拉贾克斯之盾的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_shield = "免疫魔法",
 	
-	trigger_wave6 = "Staghelm will whimper and beg for his life, just as his whelp of a son did! One thousand years of injustice will end this day!",--??\n?? CHAT_MSG_MONSTER_YELL
+	trigger_wave6 = "鹿盔将会呜咽着哀求我绕他一命，就像他那懦弱的儿子一样！一千来的屈辱会在今天洗清！",--??\n?? CHAT_MSG_MONSTER_YELL
 	msg_wave6 = "第6/8波 -- 4名战士，2名钉刺者，帕库少校 -> 击退",
-	trigger_slam = "Major Pakkon's Sweeping Slam",--
-	bar_slam = "重击冷却",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_slam = "帕库少校的横扫猛击",--
+	bar_slam = "猛击冷却",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	
-	trigger_wave7 = "Fandral! Your time has come! Go and hide in the Emerald Dream and pray we never find you!",--??\n?? CHAT_MSG_MONSTER_YELL
-	msg_wave7 = "第7/8波 -- 3名战士，3名钉刺者，泽兰上校 -> 扩大",
-	trigger_enlarge = "Colonel Zerran gains Enlarge.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_wave7 = "范达尔！你的死期到了！藏到翡翠梦境里去吧，祈祷我们永远都找不到你！",--??\n?? CHAT_MSG_MONSTER_YELL
+	msg_wave7 = "第7/8波 -- 3名战士，3名钉刺者，泽朗上校 -> 扩大",
+	trigger_enlarge = "泽朗上校获得了放大的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_enlarge = "扩大，驱散！",
 	msg_enlarge = "扩大，驱散！",
-	trigger_enlargeFade = "Enlarge fades from Colonel Zerran.",--CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_enlargeFade = "放大效果从泽朗上校身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_OTHER
 	
-	trigger_wave8 = "Impudent fool! I will kill you myself!",--CHAT_MSG_MONSTER_YELL
+	trigger_wave8 = "无礼的蠢货！我会亲自要了你们的命！",--CHAT_MSG_MONSTER_YELL
 	msg_wave8 = "第8/8波 -- 拉贾克斯将军",
-	trigger_thundercrash = "Thundercrash",
+	trigger_thundercrash = "雷霆碰撞",
 	bar_thundercrash = "雷霆冲击 CD",
 	clickme = " >点击我！<",
 	you = "你",

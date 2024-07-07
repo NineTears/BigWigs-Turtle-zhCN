@@ -44,15 +44,15 @@ L:RegisterTranslations("zhCN", function() return {
     paralyze_desc = "麻痹出现时进行警告",
 
 
-	trigger_start = "%s senses your fear.",
+	trigger_start = "%s感觉到了你的恐惧。",
 	
-	trigger_adds = "drains your mana and turns to stone.",
+	trigger_adds = " 耗尽你的法力并变成石头。",
     bar_adds = "小怪",
     msg_incoming = "法力恶魔即将在 %s 秒内到来！",
     msg_adds = "法力恶魔已出现！莫阿姆麻痹 90 秒！",
 	
-	trigger_energyzeFade = "Energize fades from Moam.",
-	trigger_energyzeFade2 = "bristles with energy",
+	trigger_energyzeFade = "充能效果从莫阿姆身上消失",
+	trigger_energyzeFade2 = "充满了能量！",
     bar_paralyse = "麻痹",
     msg_energizeFadeSoon = "莫阿姆在 %s 秒后解除麻痹！",
     msg_energizeFade = "莫阿姆解除麻痹！90 秒后出现法力恶魔！",

@@ -105,36 +105,36 @@ L:RegisterTranslations("zhCN", function() return {
     levelup_desc = "升级时进行警告",
 	
 	
-	trigger_engage = "I'll feed your souls to Hakkar himself!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "我会把你们的灵魂喂给哈卡本人！", --CHAT_MSG_MONSTER_YELL
 	
-	trigger_gaze = "(.+)! I'm watching you!", --CHAT_MSG_MONSTER_YELL
-	trigger_gazeFade = "Threatening Gaze fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_gaze = "(.+)！我在看着你！", --CHAT_MSG_MONSTER_YELL
+	trigger_gazeFade = "威慑凝视效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_gazeCd = "威慑凝视冷却",
     bar_gazeDur = " 凝视！",
     msg_gaze = "威慑凝视 - 停止所有动作",
 	
-	trigger_whirlwind = "Bloodlord Mandokir gains Whirlwind.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_whirlwind = "血领主曼多基尔获得了旋风斩的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     bar_whirlwindCd = "旋风斩冷却",
     bar_whirlwindCast = "施放旋风斩！",
 	
-	trigger_charge = "Bloodlord Mandokir's Charge", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_charge = "血领主曼多基尔的冲锋击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_chargeCd = "冲锋冷却",
 	
 	
-	trigger_enrage = "Bloodlord Mandokir gains Enrage.", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_enrageFade = "Enrage fades from Bloodlord Mandokir.", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_enrage = "血领主曼多基尔获得了激怒的效果。", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_enrageFade = "激怒效果从血领主曼多基尔身上消失。", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
     msg_enrage = "你杀死了奥根 - 血领主曼多基尔激怒了！",
     msg_enrageFade = "血领主曼多基尔不再激怒！",
 	
-	trigger_sunderYou = "You are afflicted by Sunder Armor %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_sunderOther = "(.+) is afflicted by Sunder Armor %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_sunderYou = "你受到了破甲效果的影响%（(.+)%）。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_sunderOther = "(.+)受到了破甲效果的影响%（(.+)%）。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_sunder = " 破甲",
-    msg_sunderHigh = " 破甲层数高 - 寻找替代者！",
+    msg_sunderHigh = " 破甲层数高 - 换坦！",
 	
-	trigger_levelUp = "DING!", --CHAT_MSG_MONSTER_YELL
+	trigger_levelUp = "叮！", --CHAT_MSG_MONSTER_YELL
     msg_levelUp = "血领主曼多基尔通过杀人升级 - 他现在是等级 ",
     c_ohgan = "奥根",
-    you = "you",
+    you = "你",
 } end )
 
 local timer = {

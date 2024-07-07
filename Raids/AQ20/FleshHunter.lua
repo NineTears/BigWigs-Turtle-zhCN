@@ -17,8 +17,8 @@ L:RegisterTranslations("zhCN", function() return {
 	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-06-22
 	cmd = "FleshHunter",
-	consumeother_trigger = "(.*) is afflicted by Consume",
-	consume_bar = " 已吞噬!",
+	consumeother_trigger = "(.*)受到了吞噬效果的影响。",
+	consume_bar = " 被吞噬!",
 	clickme = " >点击我！<",
 } end )
 

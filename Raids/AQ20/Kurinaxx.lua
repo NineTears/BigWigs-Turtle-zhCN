@@ -52,15 +52,15 @@ L:RegisterTranslations("zhCN", function() return {
     enrage_desc = "激怒出现时进行警告",
     
     
-    trigger_trap = "Sand Trap hits (.+) for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_trap = "流沙陷阱的沙漠陷阱击中(.+)造成", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     msg_sandTrap = "沙尘陷阱",
     bar_trap = " 沙尘陷阱",
     
-    trigger_woundYou = "You are afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    trigger_woundOther = "(.+) is afflicted by Mortal Wound %((.+)%).",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+    trigger_woundYou = "你受到了重伤效果的影响%（(.+)%）。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    trigger_woundOther = "(.+)受到了重伤效果的影响%（(.+)%）。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_wound = " 重伤",
 
-    trigger_enrage = "Kurinnaxx gains Enrage.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    trigger_enrage = "库林纳克斯获得了狂怒的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_enrage = "库林纳克斯激怒了！",
     you = "你",
 } end )

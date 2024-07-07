@@ -86,29 +86,29 @@ L:RegisterTranslations("zhCN", function() return {
     autotarget_desc = "自动标记图腾",
 	
 	
-	trigger_engage = "Welcome to the great show, friends. Step right up to die!",--CHAT_MSG_MONSTER_YELL
+	trigger_engage = "朋友，欢迎参加这场盛宴。来吧，狂欢至死吧！",--CHAT_MSG_MONSTER_YELL
 	
-	trigger_hexYou = "You are afflicted by Hex.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	trigger_hexOther = "(.+) is afflicted by Hex.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
-	trigger_hexFade = "Hex fades from (.+).",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_hexYou = "你受到了妖术效果的影响。",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_hexOther = "(.+)受到了妖术效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_hexFade = "妖术效果从(.+)身上消失了。",----CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
     bar_hex = " 妖术",
     msg_hex = " 被妖术 - 驱散！",
 	
-	trigger_curseYou = "You are afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-    msg_curseYou = "你被诅咒了！杀死阴影！",
-	trigger_curseOther = "(.+) is afflicted by Delusions of Jin'do.",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
+	trigger_curseYou = "你受到了金度的欺骗效果的影响。",--CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+    msg_curseYou = "你被诅咒了！转火影子！",
+	trigger_curseOther = "(.+)受到了金度的欺骗效果的影响。",--CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE
     bar_curse = " 被诅咒",
-	trigger_curseFade = "Delusions of Jin'do fades from (.+).",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_curseFade = "金度的欺骗效果从(.+)身上消失了。",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
 	
-	trigger_curseDispel = "Delusions of Jin'do is removed.",--CHAT_MSG_SPELL_BREAK_AURA
+	trigger_curseDispel = "金度的欺骗被移除了。",--CHAT_MSG_SPELL_BREAK_AURA
     msg_curseDispel = "金度的欺骗被驱散了！",
 	
-	trigger_brainWash = "Jin'do the Hexxer casts Summon Brain Wash Totem.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-    msg_brainWash = "洗脑图腾！",
+	trigger_brainWash = "妖术师金度施放了召唤洗脑图腾。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_brainWash = "快打洗脑图腾！",
 	--trigger_brainWashDeath = "Brain Wash Totem is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 	
-	trigger_healingWard = "Jin'do the Hexxer casts Powerful Healing Ward.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
-    msg_healingWard = "治疗图腾！",
+	trigger_healingWard = "妖术师金度施放了强力治疗结界。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+    msg_healingWard = "快打治疗图腾！",
 	--trigger_healingWardDeath = "Powerful Healing Ward is destroyed.",--CHAT_MSG_COMBAT_HOSTILE_DEATH
 } end )
 
