@@ -57,7 +57,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_start1 = "帕奇维克想玩！",
 	trigger_start2 = "克尔苏加德让帕奇维克成为他的战争化身！",
 	
-	trigger_enrage = "帕奇维克陷入狂暴状态！",--CHAT_MSG_MONSTER_EMOTE
+	trigger_enrage = "陷入狂暴状态！",--CHAT_MSG_MONSTER_EMOTE
 	
     bar_enrage = "激怒",
     msg_enrage60 = "60秒后激怒",
