@@ -14,8 +14,8 @@ local sounds = {
 	Alarm = "Interface\\AddOns\\BigWigs\\Sounds\\Alarm.mp3",
 	Victory = "Interface\\AddOns\\BigWigs\\Sounds\\Victory.mp3",
 
-	Beware = "Interface\\AddOns\\BigWigs\\Sounds\\Beware.wav",
-	RunAway = "Interface\\AddOns\\BigWigs\\Sounds\\RunAway.wav",
+	Beware = "Interface\\AddOns\\BigWigs\\Sounds\\Beware.ogg",
+	RunAway = "Interface\\AddOns\\BigWigs\\Sounds\\RunAway.ogg",
 
 	One = "Interface\\AddOns\\BigWigs\\Sounds\\1.ogg",
 	Two = "Interface\\AddOns\\BigWigs\\Sounds\\2.ogg",
@@ -37,7 +37,7 @@ local sounds = {
 
 	Scorch = "Interface\\AddOns\\BigWigs\\Sounds\\Scorch.mp3",
 	ScorchResist = "Interface\\AddOns\\BigWigs\\Sounds\\ScorchResist.mp3",
-	stopcasting = "Interface\\AddOns\\BigWigs\\Sounds\\stopcasting.mp3",
+	stopcasting = "Interface\\AddOns\\BigWigs\\Sounds\\stopcasting.ogg",
 	IgniteDanger = "Interface\\AddOns\\BigWigs\\Sounds\\IgniteDanger.mp3",
 	Pyro = "Interface\\AddOns\\BigWigs\\Sounds\\Pyro.mp3",
 }
