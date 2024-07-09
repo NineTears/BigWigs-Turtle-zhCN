@@ -595,7 +595,7 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 			self:Message(L["frenzy_message"], "Attention")
 			self:Bar(L["frenzy_bar"], timer.frenzy, icon.frenzy, true, "red")
 
-			if playerClass == BC["HUNTER"] then
+			if playerClass == BC["Hunter"] then
 				self:WarningSign(icon.tranquil, timer.frenzy, true)
 			end
 		end
