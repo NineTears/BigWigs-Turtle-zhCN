@@ -1,5 +1,83 @@
 local module, L = BigWigs:ModuleDeclaration("Chromaggus", "Blackwing Lair")
+local BC = AceLibrary("Babble-Class-2.2")
 
+L:RegisterTranslations("enUS", function() return {
+	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
+	-- Last update: 2024-06-22
+	cmd = "Chromaggus",
+
+	enrage_cmd = "enrage",
+	enrage_name = "激怒",
+	enrage_desc = "20%生命激怒前发出警报.",
+
+	frenzy_cmd = "frenzy",
+	frenzy_name = "狂暴",
+	frenzy_desc = "狂暴警报.",
+
+	breath_cmd = "breath",
+	breath_name = "吐息",
+	breath_desc = "提醒，吐息.",
+
+    breathcd_cmd = "breathcd",
+    breathcd_name = "吐息倒计时",
+    breathcd_desc = "吐息语音警告.",
+
+	vulnerability_cmd = "vulnerability",
+	vulnerability_name = "弱点警报",
+	vulnerability_desc = "克洛玛古斯弱点改变时发出警报.",
+
+	breath_trigger = "Chromaggus begins to cast (.+).",
+	trigger_vulnerability_direct_crit = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Chromaggus for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)", -- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
+ 	trigger_vulnerability_direct_hit = "^[%w]+[%s's]* ([%w%s:]+) ([%w]+) Chromaggus for ([%d]+) ([%w]+) damage%.[%s%(]*([%d]*)",
+	vulnerability_dots_test = "^Chromaggus suffers ([%d]+) ([%w]+) damage from [%w]+[%s's]* ([%w%s:]+)%.[%s%(]*([%d]*)",
+	frenzy_trigger = "Chromaggus gains Frenzy.",
+	frenzyfade_trigger = "Frenzy fades from Chromaggus.",
+	vulnerability_trigger = "flinches as its skin shimmers.",
+
+	firstbreaths_warning = "5秒吐息!",
+	breath_warning = "%s 5秒!",
+	breath_message = "%s 正在施放!",
+	vulnerability_message = "弱点: %s!",
+	vulnerability_warning = "克洛玛古斯弱点改变!",
+	frenzy_message = "狂暴! 立刻宁神!",
+	enrage_warning = "马上激怒!",
+
+	breath1 = "Time Lapse",
+	breath2 = "Corrosive Acid",
+	breath3 = "Ignite Flesh",
+	breath4 = "Incinerate",
+	breath5 = "Frost Burn",
+
+	breathcolor1 = "Black",
+	breathcolor2 = "Green",
+	breathcolor3 = "Magenta",
+	breathcolor4 = "Red",
+	breathcolor5 = "Blue",
+
+	icon1 = "Spell_Arcane_PortalOrgrimmar",
+	icon2 = "Spell_Nature_Acid_01",
+	icon3 = "Spell_Fire_Fire",
+	icon4 = "Spell_Shadow_ChillTouch",
+	icon5 = "Spell_Frost_ChillingBlast",
+
+	castingbar = "施放%s",
+	frenzy_bar = "狂暴(立刻宁神)",
+    frenzy_Nextbar = "下次狂暴(准备宁神)",
+	first_bar = "第一次吐息",
+	second_bar = "第二次吐息",
+    vuln_bar = "%s 弱点",
+
+	fire = "Fire",
+	frost = "Frost",
+	shadow = "Shadow",
+	nature = "Nature",
+	arcane = "Arcane",
+
+	curseofdoom = "Curse of Doom",
+	ignite = "Ignite",
+	starfire = "Starfire",
+	thunderfury = "Thunderfury",
+} end )
 
 L:RegisterTranslations("zhCN", function() return {
 	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
@@ -27,15 +105,12 @@ L:RegisterTranslations("zhCN", function() return {
 	vulnerability_desc = "克洛玛古斯弱点改变时发出警报.",
 
 	breath_trigger = "克洛玛古斯开始施放(.+)。",
-	trigger_vulnerability_direct_crit = "^[^%s]+的([^%s]+)致命一击对克洛玛古斯造成(%d+)点([^%s]+)伤害。", -- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
- 	trigger_vulnerability_direct_hit = "^[^%s]+的([^%s]+)击中克洛玛古斯造成(%d+)点([^%s]+)伤害。",
-	vulnerability_dots_test = "^[^%s]+的([^%s]+)使克洛玛古斯受到了(%d+)点([^%s]+)伤害。",
+	trigger_vulnerability_direct_crit = "^[^%s]+的([^%s]+)致命一击对克洛玛古斯造成(%d+)点([^%s]+)伤害。[%（]*([%d]*)", -- [Fashu's] [Firebolt] [hits] Battleguard Sartura for [44] [Fire] damage. ([14] resisted)
+ 	trigger_vulnerability_direct_hit = "^[^%s]+的([^%s]+)击中克洛玛古斯造成(%d+)点([^%s]+)伤害。[%（]*([%d]*)",
+	vulnerability_dots_test = "^[^%s]+的([^%s]+)使克洛玛古斯受到了(%d+)点([^%s]+)伤害。[%（]*([%d]*)",
 	frenzy_trigger = "变得极为狂暴！",
 	frenzyfade_trigger = "疯狂效果从克洛玛古斯身上消失。",
 	vulnerability_trigger = "%s的皮肤闪闪发光，他退缩了。",
-
-	hit = "击中",
-	crit = "致命一击对",
 
 	firstbreaths_warning = "5秒吐息!",
 	breath_warning = "%s 5秒!",
@@ -520,7 +595,7 @@ function module:BigWigs_RecvSync(sync, rest, nick)
 			self:Message(L["frenzy_message"], "Attention")
 			self:Bar(L["frenzy_bar"], timer.frenzy, icon.frenzy, true, "red")
 
-			if playerClass == "HUNTER" then
+			if playerClass == BC["HUNTER"] then
 				self:WarningSign(icon.tranquil, timer.frenzy, true)
 			end
 		end
