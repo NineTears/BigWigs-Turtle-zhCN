@@ -254,10 +254,10 @@ function module:OnEngage()
 	
 	self.feugenHP = 100
 	self.stalaggHP = 100
-	self:TriggerEvent("BigWigs_StartHPBar", self, "Feugen", 100, "Interface\\Icons\\"..icon.hpBar, true, color.hpBar)
-	self:TriggerEvent("BigWigs_SetHPBar", self, "Feugen", 0)
-	self:TriggerEvent("BigWigs_StartHPBar", self, "Stalagg", 100, "Interface\\Icons\\"..icon.hpBar, true, color.hpBar)
-	self:TriggerEvent("BigWigs_SetHPBar", self, "Stalagg", 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, bbfeugen, 100, "Interface\\Icons\\"..icon.hpBar, true, color.hpBar)
+	self:TriggerEvent("BigWigs_SetHPBar", self, bbfeugen, 0)
+	self:TriggerEvent("BigWigs_StartHPBar", self, bbstalagg, 100, "Interface\\Icons\\"..icon.hpBar, true, color.hpBar)
+	self:TriggerEvent("BigWigs_SetHPBar", self, bbstalagg, 0)
 	
 	self:ScheduleRepeatingEvent("CheckAddHP", self.CheckAddHP, 0.5, self)
 	
@@ -323,12 +323,12 @@ function module:CheckAddHP()
 	
 	if feugenHealth then
 		self.feugenHP = feugenHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, "Feugen", 100-self.feugenHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, bbfeugen, 100-self.feugenHP)
 	end
 	
 	if stalaggHealth then
 		self.stalaggHP = stalaggHealth
-		self:TriggerEvent("BigWigs_SetHPBar", self, "Stalagg", 100-self.stalaggHP)
+		self:TriggerEvent("BigWigs_SetHPBar", self, bbstalagg, 100-self.stalaggHP)
 	end
 end
 
@@ -387,8 +387,8 @@ end
 function module:Phase2()
 	phase2started = true
 	
-	self:TriggerEvent("BigWigs_StopHPBar", self, "Feugen")
-	self:TriggerEvent("BigWigs_StopHPBar", self, "Stalagg")
+	self:TriggerEvent("BigWigs_StopHPBar", self, bbfeugen)
+	self:TriggerEvent("BigWigs_StopHPBar", self, bbstalagg)
 	self:CancelScheduledEvent("CheckAddHP")
 	self:CancelScheduledEvent("MagneticPull")
 	self:RemoveBar(L["bar_magneticPull"])

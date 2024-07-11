@@ -76,10 +76,10 @@ L:RegisterTranslations("enUS", function() return {
     consumable_name = "不警告团队使用消耗品（A）",
     consumable_desc = "选中后不通过团队警告来提示使用消耗品。需要助理权限（A）",
 
-    shadowpot = "-- 喝下暗影防护药水！ --",
-    bandage = "-- 使用你的绷带！ --",
-    wrtorhs = "-- 使用治疗石或者鞭笞者根茎！ --",
-    shadowpotandbandage = "-- 喝下暗影防护药水并用绷带！ --",
+    shadowpot = "-- 喝暗抗！ --",
+    bandage = "-- 使用绷带！ --",
+    wrtorhs = "-- 喝糖水茶/吃糖！ --",
+    shadowpotandbandage = "-- 喝暗抗并用绷带！ --",
     noconsumable = "-- 现在不用消耗品！ --",
 
 	soundshadowpot = "Interface\\Addons\\BigWigs\\Sounds\\potion.wav",
@@ -237,10 +237,10 @@ L:RegisterTranslations("zhCN", function() return {
     consumable_name = "不警告团队使用消耗品（A）",
     consumable_desc = "选中后不通过团队警告来提示使用消耗品。需要助理权限（A）",
 
-    shadowpot = "-- 喝下暗影防护药水！ --",
-    bandage = "-- 使用你的绷带！ --",
-    wrtorhs = "-- 使用治疗石或者鞭笞者根茎！ --",
-    shadowpotandbandage = "-- 喝下暗影防护药水并用绷带！ --",
+    shadowpot = "-- 喝暗抗！ --",
+    bandage = "-- 使用绷带！ --",
+    wrtorhs = "-- 喝糖水茶/吃糖！ --",
+    shadowpotandbandage = "-- 喝暗抗并用绷带！ --",
     noconsumable = "-- 现在不用消耗品！ --",
 
 	soundshadowpot = "Interface\\Addons\\BigWigs\\Sounds\\potion.wav",
@@ -486,7 +486,7 @@ function module:ConsumableWarning()
 				self.frameTexture:SetTexture("Interface\\Icons\\INV_Misc_Bandage_12") -- heavy runecloth
 				self.frameTexture2:SetTexture(nil)
 			elseif consumableslist[self.consumableseq] == L["wrtorhs"] then
-				self.frameTexture:SetTexture("Interface\\Icons\\INV_Stone_04") -- healthstone
+				self.frameTexture:SetTexture("Interface\\Icons\\INV_Drink_Milk_05") -- healthstone
 				--self.frameTexture2:SetTexture("Interface\\Icons\\INV_Misc_Food_55") -- whipper root
 			elseif consumableslist[self.consumableseq] == L["shadowpotandbandage"] then
 				self.frameTexture:SetTexture("Interface\\Icons\\INV_Potion_23") --greater shadow protection
