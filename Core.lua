@@ -428,7 +428,7 @@ BigWigs.cmdtable = { type = "group", handler = BigWigs, args = {
 } }
 BigWigs:RegisterChatCommand({ "/bw", "/BigWigs" }, BigWigs.cmdtable)
 BigWigs.debugFrame = ChatFrame1
-BigWigs.revision = 30090
+BigWigs.revision = 30091
 
 function BigWigs:EditLayout()
 	BigWigsBars:BigWigs_ShowAnchors()
@@ -919,7 +919,7 @@ function BigWigs:OnEnable()
 end
 
 function BigWigs:AceEvent_FullyInitialized()
-	if GetNumRaidMembers() > 0 or not self.loading or (GetZoneText() == "The Black Morass") or (GetZoneText() == "Dire Maul") then
+	if (GetNumRaidMembers() > 0) or ((GetZoneText() == BZ["The Black Morass"]) or (GetZoneText() == BZ["Dire Maul"]) or (GetZoneText() == BZ["Stratholme"])) or not self.loading then
 		-- Enable all disabled modules that are not boss modules.
 		for name, module in self:IterateModules() do
 			if type(module.IsBossModule) ~= "function" or not module:IsBossModule() then

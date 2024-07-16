@@ -82,7 +82,7 @@ end
 function BigWigsLoD:ZONE_CHANGED_NEW_AREA()
 	self:LoadZone( GetRealZoneText() )
 	
-	if GetZoneText() == BZ["The Black Morass"] or GetZoneText() == BZ["Dire Maul"] then
+	if GetZoneText() == BZ["The Black Morass"] or GetZoneText() == BZ["Dire Maul"] or GetZoneText() == BZ["Stratholme"] then
 		BigWigs:ToggleActive(true)
 	end
 end
