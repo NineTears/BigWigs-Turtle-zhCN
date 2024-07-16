@@ -74,29 +74,29 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	
 	--is engage trigger, aura hits every 2 sec
-	trigger_gainAura = "Atiesh gains Unholy Aura (1).", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_gainAura = "埃提耶什获得了邪恶光环的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	
 	--every 2sec
-	trigger_auraHits = "Atiesh's Unholy Aura hits",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+	trigger_auraHits = "埃提耶什的邪恶光环击中",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
 	bar_unholyAura = "邪恶光环",
 	
-	trigger_shadowBolt = "Atiesh begins to cast Shadow Bolt.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_shadowBolt = "埃提耶什开始施放暗影箭。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 	bar_shadowBoltCd = "暗影箭冷却",
 	bar_shadowBoltCast = "施放暗影箭！",
 	
-	trigger_breathOfSargerasCast = "Atiesh begins to perform Breath of Sargeras.", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_breathOfSargerasCast = "埃提耶什开始施展萨格拉斯之息。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 	bar_breathOfSargerasCd = "萨格拉斯之息冷却",
 	bar_breathOfSargerasCast = "施放萨格拉斯之息",
 	msg_breathOfSargeras = "萨格拉斯之息 - 驱散（仅近战和猎人）",
 	
-	trigger_breathOfSargerasYou = "You are afflicted by Breath of Sargeras", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE   You are afflicted by Breath of Sargeras(1)...
+	trigger_breathOfSargerasYou = "你受到了萨格拉斯之息效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE   You are afflicted by Breath of Sargeras(1)...
 	bar_breathOfSargerasAfflic = " 被诅咒",
 	
-	trigger_breathOfSargerasFadeYou = "Breath of Sargeras fades from You.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-	trigger_breathOfSargerasFadeOther = "Breath of Sargeras fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_PARTY
+	trigger_breathOfSargerasFadeYou = "萨格拉斯之息效果从你身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF
+	trigger_breathOfSargerasFadeOther = "萨格拉斯之息效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_PARTY
 	
 	
-	trigger_eyeOfNaxx = "The living are here!", --CHAT_MSG_MONSTER_YELL
+	trigger_eyeOfNaxx = "这儿有活人！", --CHAT_MSG_MONSTER_YELL
 	bar_eyeOfNaxx = "纳克萨玛斯之眼！",
 	--trigger_eyeOfNaxxDead = "Eye of Naxxramas dies." --CHAT_MSG_COMBAT_HOSTILE_DEATH
 	EyeofNaxxramas = "纳克萨玛斯之眼",
