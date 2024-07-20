@@ -72,14 +72,14 @@ L:RegisterTranslations("esES", function() return {
 L:RegisterTranslations("zhCN", function() return {
 	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-06-22
-	onyHeadHorde_trigger = "People of the Horde, citizens of Orgrimmar, come, gather round and celebrate a hero of the Horde. On this day",
-	nefHeadHorde_trigger = "NEFARIAN IS SLAIN! People of Orgrimmar, bow down before the might of",
+	onyHeadHorde_trigger = "部落的人民，奥格瑞玛的居民，来吧，聚集在一起，欢庆部落英雄的诞生！今天",
+	nefHeadHorde_trigger = "奈法利安被杀掉了！奥格瑞玛的居民，在强大的",
 
-	onyHeadAlliance_trigger = "Citizens and allies of Stormwind, on this day, history has been made.",
-	nefHeadAlliance_trigger = "Citizens of the Alliance, the Lord of Blackrock is slain! Nefarian has been subdued by the combined might of",
+	onyHeadAlliance_trigger = "暴风城的城民和盟友们，今天，有人创造了历史。",
+	nefHeadAlliance_trigger = "联盟的人民们，黑石领主已经被干掉了！奈法利安已经被强大的",
 
-	zgHeart_trigger = "Now, only one step remains to rid us of the Soulflayer's threat...",
-	rendHead_trigger = "Honor your heroes! On this day, they have dealt a great blow against one of our most hated enemies! The false Warchief, Rend Blackhand, has fallen!",
+	zgHeart_trigger = "我们就要摆脱夺灵者的威胁了，只差最后一步……",
+	rendHead_trigger = "为你们的英雄而欢庆！就在今天，他们给了我们最可恨的一个敌人一次重击！那个假的酋长，雷德·黑手，已经倒下了！",
 
 	dragonslayer = "屠龙者的咆哮",
 	zandalar = "赞达拉之魂",

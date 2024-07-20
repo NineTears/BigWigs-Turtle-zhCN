@@ -157,7 +157,7 @@ L:RegisterTranslations("zhCN", function() return {
     msg_voidYou = "虚空领域在你身上！",
     
     --trigger_meteor = "Thane Korth'azz's Meteor hits ",
-    trigger_meteor2 = "我喜欢我的肉特别脆!",
+    trigger_meteor2 = "我喜欢我的肉特别脆",
     bar_meteor = "流星 CD",
 
     --trigger_wrath = "Sir Zeliek's Holy Wrath hits ",

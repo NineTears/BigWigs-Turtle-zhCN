@@ -155,6 +155,8 @@ L:RegisterTranslations("enUS", function()
 		slain_test = "(.+) is slain by (.+)",
 		self_slain_test = "You have slain (.+)",
 		death_test = "(.+) dies.",
+		hit = "hit",
+		crit = "crit",
 	}
 end)
 
@@ -238,27 +240,29 @@ L:RegisterTranslations("zhCN", function()
         ["IgnitePyroRequestTrigger"] = "触发火焰请求",
         ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师工具->触发火焰请求",
 
-		scorch_afflict_test = "^(.+) is afflicted by Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
-		scorch_gains_test = "^(.+) gains Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
-		scorch_test = ".+ Scorch (.+)s (.+) for",
-		scorch_fades_test = "Fire Vulnerability fades from (.+).",
-		scorch_resist_test = "(.+) Scorch was resisted by (.+).",
-		fire_vuln_resist_test = "(.+) Fire Vulnerability was resisted by (.+).", -- Scorch can hit but fire vulnerability can resist independently
+		scorch_afflict_test = "^(.+)受到了痛苦诅咒效果的影响(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
+		scorch_gains_test = "^(.+)获得了痛苦诅咒效果(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
+		scorch_test = ".+的灼烧(.+)(.+)造成", --.+ Scorch (.+)s (.+) for
+		scorch_fades_test = "痛苦诅咒效果从(.+)身上消失。",
+		scorch_resist_test = "(.+)的灼烧被(.+)抵抗了。",
+		fire_vuln_resist_test = "(.+)的痛苦诅咒被(.+)抵抗了。", -- Scorch can hit but fire vulnerability can resist independently
 
-		ignite_afflict_test = "^(.+) is afflicted by Ignite(.*)", -- for stacks 2-5 will be "Ignite (2)".
-		ignite_gains_test = "^(.+) gains Ignite(.*)", -- for stacks 2-5 will be "Ignite (2)".
-		ignite_crit_test = "^(.+) (.+) crits (.+) for .+ Fire damage",
-		ignite_dmg = "^(.+) suffers (.+) Fire damage from (.+) Ignite",
-		ignite_fades_test = "Ignite fades from (.+).",
+		ignite_afflict_test = "^(.+)受到了点燃效果的影响(.*)", -- for stacks 2-5 will be "Ignite (2)".
+		ignite_gains_test = "^(.+)获得了点燃效果(.*)", -- for stacks 2-5 will be "Ignite (2)".
+		ignite_crit_test = "^(.+)的(.+)致命一击对(.+)造成.+点火焰伤害。",
+		ignite_dmg = "^(.+)的点燃使(.+)受到了(.+)点火焰伤害。",
+		ignite_fades_test = "点燃效果从(.+)身上消失。",
 
-		arcane_shroud_test = "You gain Arcane Shroud", -- Fetish of the sand reaver
-		arcane_shroud_fades_test = "Arcane Shroud fades from you",
-		eye_of_diminution_test = "You gain The Eye of Diminution", -- Eye of Diminution
-		eye_of_diminution_fades_test = "The Eye of Diminution fades from you",
+		arcane_shroud_test = "你获得了奥术环绕的效果。", -- Fetish of the sand reaver
+		arcane_shroud_fades_test = "奥术环绕效果从你身上消失了。",
+		eye_of_diminution_test = "你获得了衰落之眼的效果。", -- Eye of Diminution
+		eye_of_diminution_fades_test = "衰落之眼效果从你身上消失了。",
 
-		slain_test = "(.+) is slain by (.+)",
-		self_slain_test = "You have slain (.+)",
-		death_test = "(.+) dies.",
+		slain_test = "(.+)杀死了(.+)",
+		self_slain_test = "你杀死了(.+)",
+		death_test = "(.+)死亡了。",
+		hit = "击中",
+		crit = "致命一击对",
 	}
 end)
 
@@ -812,11 +816,11 @@ function BigWigsMageTools:ScorchEvent(msg)
 		self:ScheduleEvent(scorchTimerUpdateEvent .. scorchTarget, self.UpdateScorchTimer, 0.2, self, scorchTarget, GetTime())
 
 		--check if scorch crit got into the ignite
-		if hitType == "crit" and self.igniteStacks[scorchTarget] or 1 < 5 then
+		if hitType == L["crit"] and self.igniteStacks[scorchTarget] or 1 < 5 then
 			self.igniteHasScorch[scorchTarget] = true
 		end
 
-		return true, hitType == "crit", scorchTarget  -- handled, crit, target
+		return true, hitType == L["crit"], scorchTarget  -- handled, crit, target
 	end
 
 	-- otherwise check for scorch resists
@@ -830,7 +834,7 @@ function BigWigsMageTools:ScorchEvent(msg)
 		if self:IsEventScheduled(scorchTimerUpdateEvent .. resistTarget) then
 			self:CancelScheduledEvent(scorchTimerUpdateEvent .. resistTarget)
 		end
-		self:Message(resistTarget .. " resisted " .. caster .. " scorch", "Attention", false)
+		self:Message(resistTarget .. "抵抗了" .. caster .. "的灼烧", "注意", false)
 		if self.db.profile.scorchresistsound then
 			self:Sound("ScorchResist")
 		end
@@ -858,7 +862,7 @@ end
 function BigWigsMageTools:UpdateIgniteOwner(playername, target)
 	local playerName = ""
 	-- playername can be "your" or "name 's"
-	if string.lower(playername) == "your" then
+	if string.lower(playername) == "你的" then
 		playerName = self.playerName        -- add ignite owner if it's not already set
 	else
 		--	strip the 's and the space that is currently inserted after the player name
@@ -1222,7 +1226,7 @@ function BigWigsMageTools:GetTargetIgniteTimeLeft(target)
 end
 
 function BigWigsMageTools:GetTargetIgniteText(target)
-	local igniteText = "Ignite"
+	local igniteText = "点燃"
 	if self.igniteDamage[target] then
 		igniteText = self.igniteDamage[target]
 	end
