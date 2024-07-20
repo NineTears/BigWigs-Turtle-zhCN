@@ -203,9 +203,9 @@ function module:OnDisengage()
 end
 
 function module:Event(msg)
-	-- if msg == L["ossiLostSupreme"] then
+	if msg == L["ossiLostSupreme"] then
 		bwOssiSupreme = false
-	-- end
+	end
 	
 	if ((bwOssiWeaknessTime + 46) < GetTime()) and bwOssiSupreme == false then
 		self:RemoveBar(L["supreme_bar"])
