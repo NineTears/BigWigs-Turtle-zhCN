@@ -1,7 +1,7 @@
 ## Interface: 11200
-## Title: |cff33ffcc团队工具|cffffffffBOSS技能预警|cffff1450[2.07]|R
+## Title: |cff33ffcc团队工具|cffffffffBOSS技能预警|cffff1450[2.06]|R
 ## Notes:|CFFDD66DDBigWigs|R 预警并提示BOSS技能
-## Title-zhCN: |cff33ffcc团队工具|cffffffffBOSS技能预警|cffff1450[2.07]|R
+## Title-zhCN: |cff33ffcc团队工具|cffffffffBOSS技能预警|cffff1450[2.06]|R
 ## Notes-zhCN:|CFFDD66DDBigWigs|R 预警并提示BOSS技能
 ## X-Repple: 团队
 ## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq, Wind, sunelegy
