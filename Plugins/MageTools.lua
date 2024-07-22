@@ -157,6 +157,15 @@ L:RegisterTranslations("enUS", function()
 		death_test = "(.+) dies.",
 		hit = "hit",
 		crit = "crit",
+		you = "you",
+		fireball = "Fireball",
+		pyroblast = "Pyroblast",
+		scorch = "Scorch",
+		fireblast = "Fire Blast",
+		flamestrike = "Flamestrike",
+		blastwave = "Blast Wave",
+		ignite = "Ignite",
+		improvedscorch = "Improved Scorch",
 	}
 end)
 
@@ -263,6 +272,15 @@ L:RegisterTranslations("zhCN", function()
 		death_test = "(.+)死亡了。",
 		hit = "击中",
 		crit = "致命一击对",
+		you = "你的",
+		fireball = "火球术",
+		pyroblast = "炎爆术",
+		scorch = "灼烧",
+		fireblast = "火焰冲击",
+		flamestrike = "烈焰风暴",
+		blastwave = "冲击波",
+		ignite = "点燃",
+		improvedscorch = "强化灼烧",
 	}
 end)
 
@@ -272,7 +290,7 @@ end)
 
 local _, englishClass = UnitClass("player");
 local isMage = false;
-if englishClass == "Mage" then
+if englishClass == BC["Mage"] then
 	isMage = true
 end
 BigWigsMageTools = BigWigs:NewModule(name)
@@ -850,19 +868,19 @@ function BigWigsMageTools:UpdateScorchTimer(target, time)
 end
 
 function BigWigsMageTools:IsMageFireSpell(spellName)
-	return spellName == "Fireball" or
-			spellName == "Pyroblast" or
-			spellName == "Scorch" or
-			spellName == "Fire Blast" or
-			spellName == "Flamestrike" or
-			spellName == "Blast Wave"
+	return spellName == L["fireball"] or
+			spellName == L["pyroblast"] or
+			spellName == L["scorch"] or
+			spellName == L["fireblast"] or
+			spellName == L["flamestrike"] or
+			spellName == L["blastwave"]
 
 end
 
 function BigWigsMageTools:UpdateIgniteOwner(playername, target)
 	local playerName = ""
 	-- playername can be "your" or "name 's"
-	if string.lower(playername) == "你的" then
+	if string.lower(playername) == L["you"] then
 		playerName = self.playerName        -- add ignite owner if it's not already set
 	else
 		--	strip the 's and the space that is currently inserted after the player name
@@ -1226,7 +1244,7 @@ function BigWigsMageTools:GetTargetIgniteTimeLeft(target)
 end
 
 function BigWigsMageTools:GetTargetIgniteText(target)
-	local igniteText = "点燃"
+	local igniteText = L["ignite"]
 	if self.igniteDamage[target] then
 		igniteText = self.igniteDamage[target]
 	end
@@ -1238,7 +1256,7 @@ end
 
 function BigWigsMageTools:CheckTalents()
 	nameTalent, icon, tier, column, currRank, maxRank = GetTalentInfo(2, 10);
-	if nameTalent == "Improved Scorch" and currRank == maxRank then
+	if nameTalent == L["improvedscorch"] and currRank == maxRank then
 		return true
 	end
 	return false
