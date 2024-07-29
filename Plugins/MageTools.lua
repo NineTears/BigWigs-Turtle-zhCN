@@ -60,15 +60,15 @@ local ticksForSelfWarning = 5 -- if current player owns the ignite
 L:RegisterTranslations("enUS", function()
 	return {
         ["MageToolsCmd"] = "magetools",
-        ["MageTools"] = "法师工具",
+        ["MageTools"] = "法师助手",
         ["MageToolsDesc"] = "法师灼烧/点燃工具",
         ["Enable"] = "启用",
         ["Debug"] = "调试",
-        ["EnableDesc"] = "启用法师工具",
+        ["EnableDesc"] = "启用法师助手",
 
-        ["AnchorTitle"] = "额外 -> 法师工具",
+        ["AnchorTitle"] = "额外 -> 法师助手",
         ["ShowAnchor"] = "显示锚点框架",
-        ["ShowAnchorDesc"] = "显示法师工具所在位置的锚点框架。",
+        ["ShowAnchorDesc"] = "显示法师助手所在位置的锚点框架。",
 
         ["Texture"] = "材质",
         ["TextureDesc"] = "设置计时条的材质。",
@@ -127,12 +127,12 @@ L:RegisterTranslations("enUS", function()
         ["IgnitePlayerWarning"] = "点燃玩家警告",
         ["IgnitePlayerWarningDesc"] = "是否显示和播放手动玩家警告的声音",
         ["IgnitePlayerWarningTrigger"] = "触发点燃警告",
-        ["IgnitePlayerWarningTriggerDesc"] = "/bw 额外->法师工具->触发点燃警告",
+        ["IgnitePlayerWarningTriggerDesc"] = "/bw 额外->法师助手->触发点燃警告",
 
         ["IgnitePyroRequest"] = "火焰同步请求",
         ["IgnitePyroRequestDesc"] = "是否显示和播放手动玩家火焰请求的声音",
         ["IgnitePyroRequestTrigger"] = "触发火焰请求",
-        ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师工具->触发火焰请求",
+        ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师助手->触发火焰请求",
 
 		scorch_afflict_test = "^(.+) is afflicted by Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
 		scorch_gains_test = "^(.+) gains Fire Vulnerability(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
@@ -175,15 +175,15 @@ L:RegisterTranslations("zhCN", function()
 	-- Last update: 2024-06-22
 		-- general settings
         ["MageToolsCmd"] = "magetools",
-        ["MageTools"] = "法师工具",
+        ["MageTools"] = "法师助手",
         ["MageToolsDesc"] = "法师灼烧/点燃工具",
         ["Enable"] = "启用",
         ["Debug"] = "调试",
-        ["EnableDesc"] = "启用法师工具",
+        ["EnableDesc"] = "启用法师助手",
 
-        ["AnchorTitle"] = "额外 -> 法师工具",
+        ["AnchorTitle"] = "额外 -> 法师助手",
         ["ShowAnchor"] = "显示锚点框架",
-        ["ShowAnchorDesc"] = "显示法师工具所在位置的锚点框架。",
+        ["ShowAnchorDesc"] = "显示法师助手所在位置的锚点框架。",
 
         ["Texture"] = "材质",
         ["TextureDesc"] = "设置计时条的材质。",
@@ -242,12 +242,12 @@ L:RegisterTranslations("zhCN", function()
         ["IgnitePlayerWarning"] = "点燃玩家警告",
         ["IgnitePlayerWarningDesc"] = "是否显示和播放手动玩家警告的声音",
         ["IgnitePlayerWarningTrigger"] = "触发点燃警告",
-        ["IgnitePlayerWarningTriggerDesc"] = "/bw 额外->法师工具->触发点燃警告",
+        ["IgnitePlayerWarningTriggerDesc"] = "/bw 额外->法师助手->触发点燃警告",
 
         ["IgnitePyroRequest"] = "火焰同步请求",
         ["IgnitePyroRequestDesc"] = "是否显示和播放手动玩家火焰请求的声音",
         ["IgnitePyroRequestTrigger"] = "触发火焰请求",
-        ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师工具->触发火焰请求",
+        ["IgnitePyroRequestTriggerDesc"] = "/bw 额外->法师助手->触发火焰请求",
 
 		scorch_afflict_test = "^(.+)受到了痛苦诅咒效果的影响(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
 		scorch_gains_test = "^(.+)获得了痛苦诅咒效果(.*)", -- for stacks 2-5 will be "Fire Vulnerability (2)".
