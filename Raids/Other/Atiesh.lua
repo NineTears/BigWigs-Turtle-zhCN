@@ -3,7 +3,7 @@ local module, L = BigWigs:ModuleDeclaration("Atiesh", "Stratholme")
 local BZ = AceLibrary("Babble-Zone-2.2")
 local BC = AceLibrary("Babble-Class-2.2")
 
-module.revision = 30091
+module.revision = 30092
 module.enabletrigger = module.translatedName
 module.toggleoptions = {"unholyaura", "shadowbolt", "breathofsargeras", "bosskill"}
 module.zonename = {
@@ -198,15 +198,7 @@ function module:OnDisengage()
 end
 
 function module:MINIMAP_ZONE_CHANGED(msg)
-	if GetMinimapZoneText() == BZ["Stratholme"] and self.core:IsModuleActive(module.translatedName) then
-		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
-		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块: "..module.translatedName)
-	
-	elseif GetMinimapZoneText() == BZ["Eastern Plaguelands"] and self.core:IsModuleActive(module.translatedName) then
-		self:TriggerEvent("BigWigs_RebootModule", module.translatedName)
-		DEFAULT_CHAT_FRAME:AddMessage("|cff7fff7f   [BigWigs]|r - 自动重启模块: "..module.translatedName)
-	
-	elseif GetMinimapZoneText() == BZ["Elders' Square"] and not self.core:IsModuleActive(module.translatedName) then
+	if GetMinimapZoneText() == BZ["Elders' Square"] and not self.core:IsModuleActive(module.translatedName) then
 		self.core:EnableModule(module.translatedName)
 	end
 end
