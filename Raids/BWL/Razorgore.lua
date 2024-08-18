@@ -214,7 +214,7 @@ L:RegisterTranslations("zhCN", function() return {
 		--timer for mobs spawn starts when?
     bar_mobsSpawn = "小怪刷新",
 	
-	trigger_destroyEggCast = "Razorgore the Untamed begins to cast Destroy Egg.", --CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
+	trigger_destroyEggCast = "Razorgore the Untamed begins to cast Destroy Egg\.", --CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF
     bar_destroyEggCast = "正在摧毁龙蛋",
     bar_destroyEggCd = "摧毁龙蛋冷却",
 	
