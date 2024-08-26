@@ -416,7 +416,7 @@ function BigWigsFrostBlast:SetupFrames()
 	frame:Hide()
 
 	frame:SetWidth(200)
-	frame:SetHeight(32)
+	frame:SetHeight(120)
 
 	frame:SetBackdrop({
 		bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16,
@@ -450,7 +450,7 @@ function BigWigsFrostBlast:SetupFrames()
 	cheader:SetPoint("TOP", frame, "TOP", 0, -14)
 	cheader:SetFont(L["font"], 12)
 	cheader:SetJustifyH("LEFT")
-	cheader:SetText("Frost Blast")
+	cheader:SetText(L["Frost Blast"])
 	cheader:SetShadowOffset(.8, -.8)
 	cheader:SetShadowColor(0, 0, 0, 1)
 	frame.cheader = cheader

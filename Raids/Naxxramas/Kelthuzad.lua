@@ -283,8 +283,8 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_mcYell2 = "将无处可逃！",
     msg_mc = "精神控制！",
 	
-	trigger_mcYou = "你受到了克尔苏加德的锁链效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_mcOther = "(.+)受到了克尔苏加德的锁链效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_mcYou = "你受到了克尔苏加德锁链效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_mcOther = "(.+)受到了克尔苏加德锁链效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
 	trigger_mcFade = "克尔苏加德的锁链效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_mcAfflic = " 精神控制",
     bar_mcCd = "精神控制 CD",
@@ -295,17 +295,17 @@ L:RegisterTranslations("zhCN", function() return {
     msg_fissure = "红圈！",
 	
 	trigger_frostBlastYell = "我要冻结你血管里的血液！", --CHAT_MSG_MONSTER_YELL
-	trigger_frostBlastYou = "克尔苏加德的冰霜冲击击中你", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_frostBlastOther = "克尔苏加德的冰霜冲击击中(.+)", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_frostBlastYou = "你受到了冰霜冲击效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_frostBlastOther = "(.+)受到了冰霜冲击效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE, CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
     bar_frostBlastCd = "冰墓 CD",
     bar_frostBlastAfflic = "冰墓",
     msg_frostBlast = "冰墓！",
 		--unused
-	trigger_frostBlastFade = "冰霜冲击效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_frostBlastFade = "冰霜冲击效果从(.+)身上消失。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
 
 	trigger_detonateYou = "你受到了自爆法力效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
 	trigger_detonateOther = "(.+)受到了自爆法力效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_detonateFade = "自爆法力效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_detonateFade = "自爆法力效果从(.+)身上消失。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
 	bar_detonateAfflic = " 法力爆炸",
 	bar_detonateCd = "法力爆炸 CD",
 	msg_detonate = "法力爆炸在 ",
@@ -336,7 +336,7 @@ L:RegisterTranslations("zhCN", function() return {
 	bar_guardian = "小强 %d",
 
 	trigger_shackle = "寒冰皇冠卫士受到了束缚亡灵效果的影响。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE
-	trigger_shackleFade = "束缚亡灵效果从寒冰皇冠卫士身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_shackleFade = "束缚亡灵效果从寒冰皇冠卫士身上消失。", --CHAT_MSG_SPELL_AURA_GONE_OTHER
 	bar_shackle = "束缚亡灵（最多3个）",
 	msg_shackle = "%s/3",
 

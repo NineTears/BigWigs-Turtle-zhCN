@@ -147,23 +147,23 @@ L:RegisterTranslations("zhCN", function() return {
     aspectarlokk_desc = "娅尔罗变形出现时进行警告",
 	
 	
-	trigger_engage = "PRIDE HERALDS THE END OF YOUR WORLD. COME, MORTALS! FACE THE WRATH OF THE SOULFLAYER!", --CHAT_MSG_MONSTER_YELL
+	trigger_engage = "骄傲预示着你的世界的终结。来吧，凡人！面对夺魂者的愤怒！", --CHAT_MSG_MONSTER_YELL
 	
-	trigger_enrage = "FACE THE WRATH OF THE SOULFLAYER!", --to be confirmed
-    bar_enrage = "激怒",
-    msg_enrage = "哈卡激怒了！",
-    msg_enrage60 = "1分钟后激怒！",
-    msg_enrage10 = "10秒后激怒！",
+	trigger_enrage = "面对夺魂者的愤怒！", --to be confirmed
+    bar_enrage = "狂暴",
+    msg_enrage = "哈卡狂暴了！",
+    msg_enrage60 = "1分钟后狂暴！",
+    msg_enrage10 = "10秒后狂暴！",
 	
-	trigger_causeInsanityYou = "You are afflicted by Cause Insanity.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_causeInsanityOther = "(.+) is afflicted by Cause Insanity.", --CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
-	trigger_causeInsanityFade = "Cause Insanity fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-	trigger_causeInsanityTotem = "Hakkar's Cause Insanity fails. Grounding Totem is immune.",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
-    msg_causeInsanity = " 心控",
-    bar_causeInsanity = " 心控",
+	trigger_causeInsanityYou = "你受到了疯狂效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_causeInsanityOther = "(.+)受到了疯狂效果的影响。", --CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE
+	trigger_causeInsanityFade = "疯狂效果从(.+)身上消失。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_causeInsanityTotem = "哈卡的疯狂施放失败。根基图腾对此免疫。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE
+    msg_causeInsanity = "心控",
+    bar_causeInsanity = "心控",
     bar_causeInsanityCd = "心控冷却",
 	
-	trigger_bloodSiphon = "Hakkar gains Blood Siphon.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_bloodSiphon = "哈卡获得了血液虹吸的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
     msg_bloodSiphon30 = "30秒后吸血！",
     bar_bloodSiphonDur = "吸血！",
     bar_bloodSiphonCd = "下一次吸血",
@@ -171,33 +171,33 @@ L:RegisterTranslations("zhCN", function() return {
 	--unreliable, as if someone dies this will trigger
 	--trigger_bloodSiphonFade = "Blood Siphon fades from Hakkar.", --CHAT_MSG_SPELL_AURA_GONE_OTHER
 	
-	trigger_poisonousBloodYou = "You are afflicted by Poisonous Blood.", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_poisonousBloodOther = "(.+) is afflicted by Poisonous Blood.", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_poisonousBloodFade = "Poisonous Blood fades from (.+).", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_poisonousBloodYou = "你受到了酸性血液效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_poisonousBloodOther = "(.+)受到了酸性血液效果的影响。", --CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_poisonousBloodFade = "酸性血液效果从(.+)身上消失了。", --CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_poisonousBlood = " 毒血",
 	
 	--1.5k dmg + silence 5sec, 45yard
-	trigger_aspectOfJeklik = "afflicted by Aspect of Jeklik.", --guessing CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_aspectOfJeklikResist = "Hakkar's Aspect of Jeklik", --guessing ???
+	trigger_aspectOfJeklik = "受到了耶克里克的守护效果的影响。", --guessing CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE // CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_aspectOfJeklikResist = "哈卡的耶克里克的守护", --guessing ???
     bar_aspectOfJeklikCd = "沉默冷却 - 耶克里克",
     bar_aspectOfJeklikDur = "沉默！ - 耶克里克",
 	
 	--30yard, poison volley, 10sec dot, 438dmg + 236 per 2sec, 1.6k dmg total
-	trigger_aspectOfVenoxis = "Hakkar's Aspect of Venoxis hit", --guessing ???
-	trigger_aspectOfVenoxisResist = "Hakkar's Aspect of Venoxis was resisted", --guessing ???
+	trigger_aspectOfVenoxis = "哈卡的温诺希斯的守护击中", --guessing ???
+	trigger_aspectOfVenoxisResist = "哈卡的温诺希斯的守护被", --guessing ???
     bar_aspectOfVenoxisCd = "毒性冷却 - 温诺希斯",
 	
 	--6sec stun, single target
-	trigger_aspectOfMarliYou = "You are afflicted by Aspect of Mar'li.", --guessing CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
-	trigger_aspectOfMarliOther = "(.+) is afflicted by Aspect of Mar'li.", --guessing CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
-	trigger_aspectOfMarliResist = "Hakkar's Aspect of Mar'li", --guessing ???
-	trigger_aspectOfMarliFade = "Aspect of Mar'li fades from (.+).", --guessing CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-    bar_aspectOfMarliCd = "昏迷和仇恨降低冷却 - 玛尔里",
-    bar_aspectOfMarliDur = " 昏迷 - 玛尔里",
+	trigger_aspectOfMarliYou = "你受到了玛尔里的守护效果的影响。", --guessing CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
+	trigger_aspectOfMarliOther = "(.+)受到了玛尔里的守护效果的影响。", --guessing CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
+	trigger_aspectOfMarliResist = "哈卡的玛尔里的守护", --guessing ???
+	trigger_aspectOfMarliFade = "玛尔里的守护效果从(.+)身上消失了。", --guessing CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
+    bar_aspectOfMarliCd = "昏迷冷却 - 玛尔里",
+    bar_aspectOfMarliDur = "昏迷 - 玛尔里",
 	
 	--frenzy, 150% attack speed
-	trigger_aspectOfThekal = "Hakkar gains Aspect of Thekal.", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-	trigger_aspectOfThekalFade = "Aspect of Thekal fades from Hakkar.", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
+	trigger_aspectOfThekal = "哈卡获得了塞卡尔的守护的效果。", --guessing CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_aspectOfThekalFade = "塞卡尔的守护效果从哈卡身上消失。", --guessing CHAT_MSG_SPELL_AURA_GONE_OTHER
     bar_aspectOfThekalCd = "狂暴冷却 - 塞卡尔",
     bar_aspectOfThekalDur = "狂暴！ - 塞卡尔",
     msg_aspectOfThekal = "狂暴 - 宁神射击！",
@@ -207,10 +207,10 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_aspectOfArlokkOther = "(.+) is afflicted by Aspect of Arlokk.", --guessing CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE //CHAT_MSG_SPELL_PERIODIC_HOSTILEPLAYER_DAMAGE
 	trigger_aspectOfArlokkResist = "Hakkar's Aspect of Arlokk", --guessing ???
 	trigger_aspectOfArlokkFade = "Aspect of Arlokk fades from (.+).", --guessing CHAT_MSG_SPELL_AURA_GONE_SELF // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_OTHER
-    bar_aspectOfArlokkCd = "昏迷和仇恨降低冷却 - 阿洛克",
-    bar_aspectOfArlokkDur = " 昏迷 - 阿洛克",
+    bar_aspectOfArlokkCd = "哈卡隐身冷却 - 娅尔罗",
+    bar_aspectOfArlokkDur = "隐身 - 娅尔罗",
     c_sonofhakkar = "哈卡之子",
-    you = "you",
+    you = "你",
     clickme = " >点击我<",
 } end)
 
