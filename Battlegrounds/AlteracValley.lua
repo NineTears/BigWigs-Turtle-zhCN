@@ -6,7 +6,7 @@ local bbvanndarstormpike = AceLibrary("Babble-Boss-2.2")["Vanndar Stormpike"]
 local bbcaptaingalvangar = AceLibrary("Babble-Boss-2.2")["Captain Galvangar"]
 local bbcaptainbalindastonehearth = AceLibrary("Babble-Boss-2.2")["Captain Balinda Stonehearth"]
 
-module.revision = 30062
+module.revision = 30094
 module.enabletrigger = {}
 module.toggleoptions = {"towers", "gy", "mine", "rez", "start", "captain", "korrak", "gameend", "lord", "boss"}
 
@@ -153,7 +153,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_gameStart = "(.+) (.+) until the battle for Alterac Valley begins.",
 	trigger_gameHasStarted = "The battle for Alterac Valley has begun!",
 	bar_gameStart = "比赛开始",
-    
+	
 	--msg to be confirmed once it gets below 2 minutes
 	trigger_gameEnd = "Not enough players. This game will close in (.+) (.+).",
 	bar_gameEnd = "比赛结束",
@@ -208,9 +208,11 @@ local syncName = {
 	countPlayers = "AV_CountPlayers"..module.revision,
 }
 
+local mustRebootModule = nil
+
 function module:OnRegister()
-	self:RegisterEvent("ZONE_CHANGED_NEW_AREA")
-	self:RegisterEvent("MINIMAP_ZONE_CHANGED")
+	--self:RegisterEvent("ZONE_CHANGED_NEW_AREA")
+	--self:RegisterEvent("MINIMAP_ZONE_CHANGED")
 end
 
 function module:OnEnable()
@@ -265,28 +267,6 @@ function module:OnDisengage()
 end
 
 function module:CheckForWipe(event)
-end
-
-function module:ZONE_CHANGED_NEW_AREA(msg)
-	--if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("here") end
-	if GetZoneText() ~= "Alterac Valley" or self.core:IsModuleActive(module.translatedName) then
-		return
-	end
-
-	self.core:EnableModule(module.translatedName)
-end
-
-function module:MINIMAP_ZONE_CHANGED(msg)
-	self:ZONE_CHANGED_NEW_AREA()
-end
-
-function module:CHAT_MSG_SAY(msg)
-	--debug
-	if UnitName("Player") == "Dreadsome" then
-		if msg == "test" then
-			self:Sync(syncName.gameEnd .. " " .. 68)
-		end
-	end
 end
 
 function module:CHAT_MSG_MONSTER_YELL(msg)
@@ -352,7 +332,6 @@ function module:CHAT_MSG_BG_SYSTEM_NEUTRAL(msg)
 	end
 end
 
-
 function module:CHAT_MSG_SYSTEM(msg)
 	if string.find(msg, L["trigger_gameEnd"]) then
 		local _, _, endTime, minSec = string.find(msg, L["trigger_gameEnd"])
@@ -367,31 +346,32 @@ end
 
 function module:UNIT_HEALTH(msg)
 	if UnitName(msg) == bbdrekthar then
-		local health = UnitHealth(msg)
-		if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("德雷克塔尔: "..health) end
-		if health >= 48 and health <= 52 then
+		local healthPct = UnitHealth(msg) * 100 / UnitHealthMax(msg)
+		
+		if healthPct >= 48 and healthPct <= 52 then
 			self:Sync(syncName.drek50)
-		elseif health >= 38 and health <= 42 then
+		elseif healthPct >= 38 and healthPct <= 42 then
 			self:Sync(syncName.drek40)
-		elseif health >= 28 and health <= 32 then
+		elseif healthPct >= 28 and healthPct <= 32 then
 			self:Sync(syncName.drek30)
-		elseif health >= 18 and health <= 22 then
+		elseif healthPct >= 18 and healthPct <= 22 then
 			self:Sync(syncName.drek20)
-		elseif health >= 8 and health <= 12 then
+		elseif healthPct >= 8 and healthPct <= 12 then
 			self:Sync(syncName.drek10)
 		end
+	
 	elseif UnitName(msg) == bbvanndarstormpike then
-		local health = UnitHealth(msg)
-		if UnitName("Player") == "Dreadsome" then DEFAULT_CHAT_FRAME:AddMessage("范达尔·雷矛: "..health) end
-		if health >= 48 and health <= 52 then
+		local healthPct = UnitHealth(msg) * 100 / UnitHealthMax(msg)
+		
+		if healthPct >= 48 and healthPct <= 52 then
 			self:Sync(syncName.vann50)
-		elseif health >= 38 and health <= 42 then
+		elseif healthPct >= 38 and healthPct <= 42 then
 			self:Sync(syncName.vann40)
-		elseif health >= 28 and health <= 32 then
+		elseif healthPct >= 28 and healthPct <= 32 then
 			self:Sync(syncName.vann30)
-		elseif health >= 18 and health <= 22 then
+		elseif healthPct >= 18 and healthPct <= 22 then
 			self:Sync(syncName.vann20)
-		elseif health >= 8 and health <= 12 then
+		elseif healthPct >= 8 and healthPct <= 12 then
 			self:Sync(syncName.vann10)
 		end
 	end
