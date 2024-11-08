@@ -78,7 +78,7 @@ L:RegisterTranslations("zhCN", function() return {
 	trigger_unbalance2 = "教官拉苏维奥斯的重压打击", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_unbalance = "重压打击",
 	
-	trigger_shieldWall = "死亡骑士实习者获得了盾墙的效果。", --CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS
+	trigger_shieldWall = "死亡骑士学员获得了盾墙的效果。", --CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS // CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS
     bar_shieldWall = "盾墙",
 } end )
 

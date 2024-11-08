@@ -48,8 +48,8 @@ L:RegisterTranslations("enUS", function() return {
 	trigger_poisonFade = "Necrotic Poison fades",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
 	
 	trigger_enrageGain = "Maexxna gains Enrage.",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    msg_enrageGain = "梅克丝娜激怒了！",
-    msg_enrageSoon = "梅克丝娜血量低于35% - 30%时会激怒！",
+    msg_enrageGain = "迈克斯纳激怒了！",
+    msg_enrageSoon = "迈克斯纳血量低于35% - 30%时会激怒！",
 	
     bar_spiderlings = "小蜘蛛",
 	
@@ -103,9 +103,9 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	trigger_poisonFade = "死灵之毒效果从",--CHAT_MSG_SPELL_AURA_GONE_OTHER // CHAT_MSG_SPELL_AURA_GONE_PARTY // CHAT_MSG_SPELL_AURA_GONE_SELF
 	
-	trigger_enrageGain = "梅克丝娜获得了激怒的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    msg_enrageGain = "梅克丝娜激怒了！",
-    msg_enrageSoon = "梅克丝娜血量低于35% - 30%时会激怒！",
+	trigger_enrageGain = "迈克斯纳获得了激怒的效果。",--CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+    msg_enrageGain = "迈克斯纳激怒了！",
+    msg_enrageSoon = "迈克斯纳血量低于35% - 30%时会激怒！",
 	
     bar_spiderlings = "小蜘蛛",
 	

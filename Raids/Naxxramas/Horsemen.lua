@@ -26,11 +26,11 @@ L:RegisterTranslations("enUS", function() return {
     
     wrath_cmd = "wrath",
     wrath_name = "神圣之怒警报",
-    wrath_desc = "札里克爵士施放神圣之怒时进行警告。",
+    wrath_desc = "瑟里耶克爵士施放神圣之怒时进行警告。",
     
     void_cmd = "void",
     void_name = "虚空领域警报",
-    void_desc = "女公爵布洛莫斯施放虚空领域时进行警告。",
+    void_desc = "女公爵布劳缪克丝施放虚空领域时进行警告。",
     
     shieldwall_cmd = "shieldwall",
     shieldwall_name = "盾墙警报",
@@ -56,9 +56,9 @@ L:RegisterTranslations("enUS", function() return {
     trigger_markKorthAzzFade = "Mark of Korth'azz fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     trigger_markBlaumeuxFade = "Mark of Blaumeux fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     trigger_markMograineFade = "Mark of Mograine fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-    msg_zeliekTankReady = "准备好对札里克爵士进行坦克",
+    msg_zeliekTankReady = "准备好对瑟里耶克爵士进行坦克",
     msg_korthAzzTankReady = "准备好对库尔塔兹领主进行坦克",
-    msg_blaumeuxTankReady = "准备好对女公爵布洛莫斯进行坦克",
+    msg_blaumeuxTankReady = "准备好对女公爵布劳缪克丝进行坦克",
     msg_mograineTankReady = "准备好对大领主莫格莱尼进行坦克",
     
     trigger_markYou = "You are afflicted by Mark of ",
@@ -109,11 +109,11 @@ L:RegisterTranslations("zhCN", function() return {
     
     wrath_cmd = "wrath",
     wrath_name = "神圣之怒警报",
-    wrath_desc = "札里克爵士施放神圣之怒时进行警告。",
+    wrath_desc = "瑟里耶克爵士施放神圣之怒时进行警告。",
     
     void_cmd = "void",
     void_name = "虚空领域警报",
-    void_desc = "女公爵布洛莫斯施放虚空领域时进行警告。",
+    void_desc = "女公爵布劳缪克丝施放虚空领域时进行警告。",
     
     shieldwall_cmd = "shieldwall",
     shieldwall_name = "盾墙警报",
@@ -139,9 +139,9 @@ L:RegisterTranslations("zhCN", function() return {
     trigger_markKorthAzzFade = "Mark of Korth'azz fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     trigger_markBlaumeuxFade = "Mark of Blaumeux fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
     trigger_markMograineFade = "Mark of Mograine fades from you.", --CHAT_MSG_SPELL_AURA_GONE_SELF
-    msg_zeliekTankReady = "准备好对札里克爵士进行坦克",
+    msg_zeliekTankReady = "准备好对瑟里耶克爵士进行坦克",
     msg_korthAzzTankReady = "准备好对库尔塔兹领主进行坦克",
-    msg_blaumeuxTankReady = "准备好对女公爵布洛莫斯进行坦克",
+    msg_blaumeuxTankReady = "准备好对女公爵布劳缪克丝进行坦克",
     msg_mograineTankReady = "准备好对大领主莫格莱尼进行坦克",
     
     trigger_markYou = "你受到了(.+)印记效果的影响",

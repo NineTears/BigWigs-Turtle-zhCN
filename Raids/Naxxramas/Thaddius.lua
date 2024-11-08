@@ -50,15 +50,15 @@ L:RegisterTranslations("enUS", function() return {
 	
 	trigger_manaBurn = "Feugen's Static Field hits you for", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_manaBurn = "伏晨法力燃烧你了！30码范围AOE",
+	msg_manaBurn = "费尔根法力燃烧你了！30码范围AOE",
 	
 	trigger_feugenDeadYell = "No... more... Feugen...",--CHAT_MSG_MONSTER_YELL
 	trigger_stalaggDeadYell = "Master save me...",--CHAT_MSG_MONSTER_YELL
 	
 	trigger_3sec = "%s overloads!",--CHAT_MSG_RAID_BOSS_EMOTE
-	bar_phase2 = "泰迪斯激活",
+	bar_phase2 = "塔迪乌斯激活",
 	msg_phase2 = "第二阶段",
-	msg_positionReminder = "- - - - -  泰迪斯  + + + + +",
+	msg_positionReminder = "- - - - -  塔迪乌斯  + + + + +",
 	
 	trigger_enrage = "Thaddius gains Berserk.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_enrage = "激怒",
@@ -122,25 +122,25 @@ L:RegisterTranslations("zhCN", function() return {
 	
 	bar_magneticPull = "磁性吸引",
 	
-	trigger_manaBurn = "伏晨的静止力场击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+	trigger_manaBurn = "费尔根的静止力场击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
 	trigger_manaBurn2 = "You absorb Feugen's Static Field.",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
-	msg_manaBurn = "伏晨的静止力场！30码范围AOE",
+	msg_manaBurn = "费尔根的静止力场！30码范围AOE",
 	
 	trigger_feugenDeadYell = "不...更多...费根...",--CHAT_MSG_MONSTER_YELL
 	trigger_stalaggDeadYell = "主宰救救我吧...",--CHAT_MSG_MONSTER_YELL
 	
 	trigger_3sec = "%s 超载！",--CHAT_MSG_RAID_BOSS_EMOTE
-	bar_phase2 = "泰迪斯激活",
+	bar_phase2 = "塔迪乌斯激活",
 	msg_phase2 = "第二阶段",
-	msg_positionReminder = "- - - - -  泰迪斯  + + + + +",
+	msg_positionReminder = "- - - - -  塔迪乌斯  + + + + +",
 	
-	trigger_enrage = "泰迪斯获得了狂暴的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
+	trigger_enrage = "塔迪乌斯获得了狂暴的效果。", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
 	bar_enrage = "狂暴",
 	msg_enrage = "狂暴！",
 	msg_enrage60 = "60秒后狂暴",
 	msg_enrage10 = "10秒后狂暴",
 	
-	trigger_polarityShiftCast = "泰迪斯开始施放极性转化。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_polarityShiftCast = "塔迪乌斯开始施放极性转化。", --CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
 	bar_polarityShiftCast = "开始极性转换",
 	msg_polarityShift = "正在施放极性转换！",
 	

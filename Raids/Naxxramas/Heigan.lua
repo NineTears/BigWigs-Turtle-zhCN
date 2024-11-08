@@ -87,10 +87,10 @@ L:RegisterTranslations("zhCN", function() return {
     bar_disease = "衰弱瘟疫冷却",
     msg_disease = "衰弱瘟疫",
     
-    trigger_manaBurn = "肮脏者海根的法力燃烧",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_manaBurn = "肮脏的希尔盖的法力燃烧",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     bar_manaBurn = "法力燃烧冷却",
     
-    trigger_manaBurnYou = "肮脏者海根的法力燃烧击中你",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
+    trigger_manaBurnYou = "肮脏的希尔盖的法力燃烧击中你",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE
     msg_manaBurnYou = "法力燃烧命中你！",
 
     trigger_danceStart = "末日就在你身上。",--CHAT_MSG_MONSTER_YELL

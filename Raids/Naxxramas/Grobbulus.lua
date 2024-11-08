@@ -79,7 +79,7 @@ L:RegisterTranslations("zhCN", function() return {
     cloud_desc = "毒云出现时进行警告",
 		
 		
-	trigger_enrage = "葛罗巴斯陷入狂暴状态！",--to be confirmed
+	trigger_enrage = "格罗布鲁斯陷入狂暴状态！",--to be confirmed
     bar_enrage = "激怒",
     msg_enrage60 = "1分钟后激怒",
     msg_enrage10 = "10秒后激怒",
@@ -94,7 +94,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_injected = " 注射",
     msg_inject = " 注射",
 	
-	trigger_cloudCast = "葛罗巴斯施放了毒性云雾。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
+	trigger_cloudCast = "格罗布鲁斯施放了毒性云雾。",--CHAT_MSG_SPELL_CREATURE_VS_CREATURE_BUFF
     bar_cloudCD = "毒云冷却",
     msg_cloudCast = "毒云 -- 移动格罗布鲁斯！",
 	trigger_cloudHitsYou = "瘟疫毒云的中毒击中你",--CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE

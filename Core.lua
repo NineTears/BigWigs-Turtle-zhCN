@@ -163,7 +163,7 @@ L:RegisterTranslations("enUS", function()
 
 	--Name for exception bosses (neutrals that enable modules)
 	-- ["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
-	-- ["Lord Victor Nefarius"] = "维克多·奈法里奥斯",
+	-- ["Lord Victor Nefarius"] = "维克多·奈法里奥斯领主",
 	-- ["Solnius"] = "索尔纽斯",
 	-- ["Lieutenant General Andorov"] = "安多洛夫中将",
 
@@ -362,7 +362,7 @@ L:RegisterTranslations("zhCN", function()
 
 	--Name for exception bosses (neutrals that enable modules)
 	["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
-	["Lord Victor Nefarius"] = "维克多·奈法里奥斯",
+	["Lord Victor Nefarius"] = "维克多·奈法里奥斯领主",
 	["Solnius"] = "索尔纽斯",
 	["Lieutenant General Andorov"] = "安多洛夫中将",
 
