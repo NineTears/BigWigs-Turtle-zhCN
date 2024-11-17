@@ -82,7 +82,7 @@ L:RegisterTranslations("enUS", function()
     ["Enable IntervalBars"] = true,
     ["Keep timers visible untill the timed event happens"] = true,
 
-    -- Wind汉化修复Turtle-WOW中文数据
+    -- Sunelegy，Wind汉化修复Turtle-WOW中文数据
     -- Last update: 2024-06-21
     ["Bars"] = "计时条",
     -- ["bars"] = "计时条",
@@ -206,8 +206,6 @@ end)
 L:RegisterTranslations("zhCN", function() return {
 	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-06-22
-    -- Wind汉化修复Turtle-WOW中文数据
-    -- Last update: 2024-06-21
     ["Bars"] = "计时条",
     ["bars"] = "计时条",
     ["Options for the timer bars."] = "计时条选项.",

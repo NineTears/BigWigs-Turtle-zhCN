@@ -4,7 +4,7 @@
 ## Title-zhCN: |cff33ffcc团队工具|cffffffffBOSS技能预警|cffff1450[2.09]|R
 ## Notes-zhCN:|CFFDD66DDBigWigs|R 预警并提示BOSS技能
 ## X-Repple: 团队
-## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq, Wind, sunelegy
+## Author: Relar, Bethy, Tekkub Stoutwrithe, Ammo, Shyva, Rabbit, LYQ, Dorann, Hosq, Wind, Sunelegy
 ## Version: 2.0.0
 ## X-Website: https://github.com/madScripting
 ## X-Category: Raid

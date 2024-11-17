@@ -165,7 +165,7 @@ L:RegisterTranslations("enUS", function() return {
     bar_frenzy = "狂暴",
 	
 	trigger_enrage = "High Priest Thekal gains Enrage.", --CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS
-    msg_enrage = "高阶祭司塞卡尔激怒了！",
+    msg_enrage = "古拉巴什食腐者激怒了！",
 	
 	--no trigger_tigers
     bar_tigersCd = "猛虎生成冷却",

@@ -73,7 +73,7 @@ L:RegisterTranslations("zhCN", function() return {
 
     trigger_engage = "你们这种人都不应该出现在这里！",
 	
-	trigger_msEvade = "勒西雷尔的致死打击被", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+	trigger_msEvade = "勒什雷尔的致死打击被", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     msg_msEvade = "致死打击被闪避了！",
 
     trigger_msYou = "你受到了致死打击效果的影响。", --CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE
@@ -88,7 +88,7 @@ L:RegisterTranslations("zhCN", function() return {
     bar_bwCd = "冲击波冷却",
     bar_bwSoon = "即将冲击波...",
 
-    trigger_knock = "勒西雷尔的击退击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
+    trigger_knock = "勒什雷尔的击退击中", --CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_PARTY_DAMAGE // CHAT_MSG_SPELL_CREATURE_VS_CREATURE_DAMAGE
     bar_knockCd = "击飞冷却",
     bar_knockSoon = "即将击飞...",
     you = "你",
