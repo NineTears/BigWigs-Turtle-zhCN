@@ -34,7 +34,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	--英文端汉化，wind
 	["|cff00ff00Module running|r"] = "|cff00ff00模块运行|r",
-	["|cffeda55fClick|r to reset all running modules. |cffeda55fCtrl+Click|r to force reboot for everyone (Requires assistant or higher). |cffeda55fAlt+Click|r to disable them. |cffeda55fCtrl+Alt+Click|r to disable Big Wigs completely."] = "|cffeda55f点击|r 重置所有模块. |cffeda55fCtrl+点击|r 强制重新启动 (需要L或A). |cffeda55fAlt+点击|r 禁用. |cffeda55fCtrl+Alt+点击|r 完全禁用 BigWigs.",
+	["|cffeda55fClick|r to reset all running modules. |cffeda55fCtrl+Click|r to force reboot for everyone (Requires assistant or higher). |cffeda55fAlt+Click|r to disable them. |cffeda55fCtrl+Alt+Click|r to disable Big Wigs completely."] = "\n|cffeda55f点击|r 重置Bigwigs模块. \n|cffeda55fCtrl+点击|r 重置团队所有人. \n|cffeda55fAlt+点击|r 禁用Bigwigs. \n|cffeda55fCtrl+Alt+点击|r 完全禁用BigWigs.",
 	["|cffeda55fClick|r to enable."] = "|cffeda55f点击|r 开启.",
 	["Big Wigs is currently disabled."] = "BigWigs 当前被禁用.",
 	["Active boss modules"] = "激活的BOSS模块",
@@ -98,7 +98,7 @@ L:RegisterTranslations("zhCN", function() return {
 	-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
 	-- Last update: 2024-06-22
 	["|cff00ff00Module running|r"] = "|cff00ff00模块运行|r",
-	["|cffeda55fClick|r to reset all running modules. |cffeda55fCtrl+Click|r to force reboot for everyone (Requires assistant or higher). |cffeda55fAlt+Click|r to disable them. |cffeda55fCtrl+Alt+Click|r to disable Big Wigs completely."] = "|cffeda55f点击|r 重置所有模块. |cffeda55fCtrl+点击|r 强制重新启动 (需要L或A). |cffeda55fAlt+点击|r 禁用. |cffeda55fCtrl+Alt+点击|r 完全禁用 BigWigs.",
+	["|cffeda55fClick|r to reset all running modules. |cffeda55fCtrl+Click|r to force reboot for everyone (Requires assistant or higher). |cffeda55fAlt+Click|r to disable them. |cffeda55fCtrl+Alt+Click|r to disable Big Wigs completely."] = "\n|cffeda55f点击|r 重置Bigwigs模块. \n|cffeda55fCtrl+点击|r 重置团队所有人. \n|cffeda55fAlt+点击|r 禁用Bigwigs. \n|cffeda55fCtrl+Alt+点击|r 完全禁用BigWigs.",
 	["|cffeda55fClick|r to enable."] = "|cffeda55f点击|r 开启.",
 	["Big Wigs is currently disabled."] = "BigWigs 当前被禁用.",
 	["Active boss modules"] = "激活的BOSS模块",

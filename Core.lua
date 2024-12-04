@@ -966,7 +966,7 @@ function BigWigs:ShowFirstTimePopup()
 		hideOnEscape = true,
 		preferredIndex = 3, -- avoid some UI taint, see http://www.wowace.com/announcements/how-to-avoid-some-ui-taint/
 	}
-	StaticPopup_Show("BigWigsFirstTimeDialog")
+	StaticPopup_Hide("BigWigsFirstTimeDialog")
 end
 
 function BigWigs:OnDisable()
