@@ -121,7 +121,7 @@ function module:OnEngage()
 		self:Sound("Beware")
 	end
 	self:Bar(L["fearBar"], timer.fear, icon.fear, true, "white")
-	if UnitName("target") == bbcaptainkromcrush and (IsRaidLeader() or IsRaidOfficer()) then
+	if klhtm and UnitName("target") == bbcaptainkromcrush and (IsRaidLeader() or IsRaidOfficer()) then
 		klhtm.net.sendmessage("target " .. bbcaptainkromcrush)
 	end
 end
