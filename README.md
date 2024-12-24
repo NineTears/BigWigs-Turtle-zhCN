@@ -1,19 +1,20 @@
 # BigWigs
-BigWigs is a World of Warcraft AddOn to predict certain AI behaviour to improve the players performance.<br>
-This Modification is built for Patch 1.12.1 and its content for use on the <b>Turtle WoW</b> private Server.
+BigWigs是《魔兽世界》的一款插件，用于预警特定的Boss行为以提升玩家游戏体验。
+此修改版本适用于1.17.2补丁及其内容，专为在Turtle WoW服务器上使用而设计。
 
-## How to install
-Either clone the repository to your WoW/Interface/Addons folder, or download manually via github (click on Clone or Download -> Download ZIP. Do not forget to rename the directory to "BigWigs" afterwards.
+## 如何安装
+您可以将仓库克隆到您的WoW/Interface/AddOns文件夹中，或者通过github手动下载（点击Clone或Download -> Download ZIP。请记得之后要将目录重命名为“BigWigs”。
+本插件需要配合Wind&sunelegy修改的Libs来确保在中文端正常使用。（https://github.com/TurtleWoWCN/Libs）
 
-## Contributing
-If you would like to contribute, just open a pull request.
+## 贡献代码
+如果您想贡献代码，请联系作者。
 
-## Language support
-Currently, only english clients are supported. In general, the Addon can work with other languages, but this support is only provided on a best-effort basis. It is much effort to support those languages. Feel free to contribute if you would like to have support for other languages.
+## 语言支持
+目前，仅支持中文和英文客户端。通常来说，该插件可以与其他语言一起工作，但其他语言的支持仅基于尽力而为的原则提供。支持其他语言需要付出很多努力。如果您希望添加对其他语言的支持，请随时贡献您的力量。
 
-## License
-The adjustments were originally made by <a href="https://github.com/MOUZU"><b>LYQ</b></a> and <a href="https://github.com/xorann/BigWigs"><b>Dorann</b></a><br>
-Adjustments for Elysium made by <b>Hosq</b>.<br>
-Adjustments for Turtle-WoW made by <b>CosminPOP</b>.<br>
-Modifications for Turtle-WoW made by <b>Relar</b>.<br>
-Translated and modified by Wind&sunelegy for the zhCN version of Bigwigs Turtle-WoW.
+## 许可证
+最初的修改由LYQ和Dorann完成。
+为Elysium所做的调整由Hosq完成。
+为Turtle-WoW所做的调整由CosminPOP完成。
+为Turtle-WoW所做的修改由Relar完成。
+简体中文由Wind&sunelegy完善修改，适用于Turtle-WoW中文版/英文版客户端。
