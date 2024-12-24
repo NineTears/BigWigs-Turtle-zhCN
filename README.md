@@ -4,7 +4,8 @@ BigWigs是《魔兽世界》的一款插件，用于预警特定的Boss行为以
 
 ## 如何安装
 您可以将仓库克隆到您的WoW/Interface/AddOns文件夹中，或者通过github手动下载（点击Clone或Download -> Download ZIP。请记得之后要将目录重命名为“BigWigs”。
-本插件需要配合Wind&sunelegy修改的Libs来确保在中文端正常使用。（https://github.com/TurtleWoWCN/Libs）
+
+注意：本插件需要配合Wind&sunelegy修改的Libs来确保在中文端正常使用。（https://github.com/TurtleWoWCN/Libs）
 
 ## 贡献代码
 如果您想贡献代码，请联系作者。
